@@ -16,46 +16,81 @@ from .api.primitives.data import Query
 from .api.primitives.descriptors import exact_query_descriptors
 from .api.primitives.filters import evaluate_filter
 from .errors import AgentError
+from .store import canonical
 
 
 class Tools:
     def __init__(self, study, budget):
         self.study, self.budget = study, budget
 
+    def _inspection(self):
+        s = self.study
+        registry = {
+            "definitions": {
+                n: f.model_dump(mode="json") for n, f in s.backend.runtime_profile.features.items()
+            },
+            "feature_profile": s.backend.runtime_profile.name,
+            "registry_hash": s.backend.runtime_profile.fingerprint,
+        }
+        full = s.store.put("feature_registry", registry, scope="development")
+        capabilities = asdict(s.backend.describe_capabilities())
+        supported = set(capabilities["runtime_features"])
+        compact = {
+            name: {
+                key: value[key] for key in ("kind", "group", "population", "scope", "description")
+            }
+            for name, value in registry["definitions"].items()
+            if name in supported
+        }
+        return {
+            "target": s.backend.inspect_target(),
+            "capabilities": capabilities,
+            "features": {
+                "profile": registry["feature_profile"],
+                "registry_hash": registry["registry_hash"],
+                "runtime": compact,
+                "full_registry_artifact": full,
+            },
+            "budget": self.budget.summary(),
+        }
+
+    def startup_context(self):
+        """Collect model-visible context on the host before a fresh conversation."""
+        inspection = self._inspection()
+        target = inspection["target"]
+        if not isinstance(target, dict):
+            raise AgentError("backend inspection must be a dictionary")
+        if "startup_summary" in target:
+            summary = target["startup_summary"]
+            if not isinstance(summary, dict):
+                raise AgentError("backend startup_summary must be a dictionary")
+        else:
+            summary = {k: target[k] for k in ("settings", "guidance") if k in target}
+        context = {
+            "backend": inspection["capabilities"]["backend"],
+            "capabilities": {
+                k: v for k, v in inspection["capabilities"].items() if k != "runtime_features"
+            },
+            "dataset": self.study.snapshot.description(),
+            "target": summary,
+            "budget": {k: v for k, v in inspection["budget"].items() if k != "calls"},
+            "feature_registry_artifact": inspection["features"]["full_registry_artifact"],
+        }
+        try:
+            canonical(context)
+            context["inspection_artifact"] = self.study.store.put(
+                "backend_inspection", inspection, scope="development"
+            )
+        except (TypeError, ValueError) as exc:
+            raise AgentError("backend startup context must be JSON serializable") from exc
+        return context
+
     def call(self, operation, args):
         s = self.study
         if s.store.get("frozen"):
             raise AgentError("development tools are closed")
         if operation == "inspect":
-            registry = {
-                "definitions": {
-                    n: f.model_dump(mode="json")
-                    for n, f in s.backend.runtime_profile.features.items()
-                },
-                "feature_profile": s.backend.runtime_profile.name,
-                "registry_hash": s.backend.runtime_profile.fingerprint,
-            }
-            full = s.store.put("feature_registry", registry, scope="development")
-            supported = set(s.backend.describe_capabilities().runtime_features)
-            compact = {
-                name: {
-                    key: value[key]
-                    for key in ("kind", "group", "population", "scope", "description")
-                }
-                for name, value in registry["definitions"].items()
-                if name in supported
-            }
-            return {
-                "target": s.backend.inspect_target(),
-                "capabilities": asdict(s.backend.describe_capabilities()),
-                "features": {
-                    "profile": registry["feature_profile"],
-                    "registry_hash": registry["registry_hash"],
-                    "runtime": compact,
-                    "full_registry_artifact": full,
-                },
-                "budget": self.budget.summary(),
-            }
+            return self._inspection()
         if operation == "queries":
             start = max(0, int(args.get("offset", 0)))
             limit = min(100, max(1, int(args.get("limit", 20))))

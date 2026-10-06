@@ -30,7 +30,8 @@ Expressions are {feature: name}, {int: n}, {float: x}, or {op: operator, args: [
 Checkpoint, scope and work-unit semantics are specified by the selected runtime profile.
 Missing observations and interpreter errors continue search. A policy may stop only where the
 backend supplies and qualifies stopping. Initial searches may have no executor feedback yet.
-Inspect backend guidance first. Preserve default search settings. Choose your own experiments.
+Use the supplied backend context and guidance. Inspect or fetch artifacts for additional detail.
+Preserve default search settings. Choose your own experiments.
 Calibration returns aggregates only. Submit a candidate only after passing calibration.
 There is no online LLM. Spending is enforced externally and every attempt is accounted.
 If no candidate works, end with a shell tool call containing command 'exit 0'.
@@ -113,8 +114,16 @@ def explore(config, store, backend, *, resume=False, step_limit=1000):
     with store.lease("run"):
         budget = Budget(store, config.model)
         budget.recover()
+        saved = store.get("trajectory") if resume else None
+        trajectory = store.read(saved) if saved else None
         study = Study(config, store, backend)
         tools = Tools(study, budget)
+        initial_context = tools.startup_context() if trajectory is None else None
+        startup_metadata = (
+            {"startup_context_version": 1}
+            if trajectory is None
+            else {k: trajectory[k] for k in ("startup_context_version",) if k in trajectory}
+        )
         scripted = config.model.model == "scripted"
         if scripted:
             first = study.development[0]["query"]
@@ -122,15 +131,15 @@ def explore(config, store, backend, *, resume=False, step_limit=1000):
             good = backend.runtime_profile.scripted_policy
             if good is None:
                 raise AgentError("selected profile supplies no scripted simulation candidate")
-            model = ScriptedModel(
-                [
-                    command("inspect", {}),
-                    command("probe", {"query": first}),
-                    command("calibrate", {"policy": bad}),
-                    command("calibrate", {"policy": good}),
-                    command("submit", {"policy": good}),
-                ]
-            )
+            actions = [
+                command("probe", {"query": first}),
+                command("calibrate", {"policy": bad}),
+                command("calibrate", {"policy": good}),
+                command("submit", {"policy": good}),
+            ]
+            if trajectory is not None and "startup_context_version" not in trajectory:
+                actions.insert(0, command("inspect", {}))
+            model = ScriptedModel(actions)
             context = nullcontext()
         else:
             model = BudgetedModel(config.model, budget)
@@ -151,9 +160,7 @@ def explore(config, store, backend, *, resume=False, step_limit=1000):
                 cost_limit=0,
                 step_limit=step_limit,
             )
-            saved = store.get("trajectory") if resume else None
-            if saved:
-                trajectory = store.read(saved)
+            if trajectory is not None:
                 agent.messages = trajectory["messages"]
                 agent.n_calls = trajectory["info"]["model_stats"]["api_calls"]
                 agent.cost = trajectory["info"]["model_stats"]["instance_cost"]
@@ -163,11 +170,21 @@ def explore(config, store, backend, *, resume=False, step_limit=1000):
                 agent.add_messages(
                     model.format_message(role="system", content=system),
                     model.format_message(
-                        role="user", content="Inspect this target and generate a policy."
+                        role="user",
+                        content=(
+                            "Generate a policy using the supplied prepared-run context. "
+                            "Inspect or fetch artifacts when additional detail is needed.\n"
+                            "Initial backend context:\n"
+                            + json.dumps(initial_context, sort_keys=True, allow_nan=False)
+                        ),
                     ),
                 )
             status = "interrupted"
             try:
+                if trajectory is None:
+                    store.set(
+                        "trajectory", store.put("trajectory", agent.serialize(startup_metadata))
+                    )
                 while agent.n_calls < step_limit:
                     try:
                         agent.step()
@@ -178,7 +195,9 @@ def explore(config, store, backend, *, resume=False, step_limit=1000):
                         status = "no_recommendation"
                         break
                     finally:
-                        store.set("trajectory", store.put("trajectory", agent.serialize()))
+                        store.set(
+                            "trajectory", store.put("trajectory", agent.serialize(startup_metadata))
+                        )
                     if store.get("frozen"):
                         status = "frozen"
                         break

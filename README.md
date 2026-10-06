@@ -27,6 +27,10 @@ fannagent clean --run runs/demo
 
 Simulation uses its own features, eight-batch checkpoints and synthetic latency. It establishes no database performance result. Paid models retain the existing verified rate-card, token-bound and monetary ceiling contract. Preparation and required capabilities are checked before model spending. Resume cannot change the monetary contract.
 
+Fresh conversations receive compact backend context before their first model call: backend identity, capabilities, dataset dimensions and metadata field mappings, budget totals, and extension-provided target details. Full inspection and feature definitions are available through referenced development artifacts; `fannagent-tool inspect '{}'` remains available for additional detail. Initialization inspection runs on the host without an agent tool action or model request. Fresh scripted runs start with `probe`.
+
+The initialized conversation is saved before the first model call and new trajectories record `startup_context_version=1`. Resume retains saved messages and counters without adding or refreshing startup context. Older scripted conversations retain their original inspect-first action sequence. No run-schema or policy migration is required.
+
 ## Pgvector
 
 See `../agent-pgvector/README.md` and its schema-v2 example. The extension owns physical restore, native execution, exact SQL, source identifiers and cleanup. Build the self-contained image with `fannagent-pgvector-build`; the source recipe and patches ship in its wheel. Build the development sandbox with `fannagent-workspace-build`. No sibling harness checkout is needed for either installed package.

@@ -11,8 +11,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 UV = str(Path.home() / ".local/bin/uv")
-CORE = ROOT / "agent/dist/fannagent-0.2.0-py3-none-any.whl"
-PG = ROOT / "agent-pgvector/dist/fannagent_pgvector-0.1.0-py3-none-any.whl"
+CORE = Path(os.environ.get("FANNAGENT_VERIFY_CORE_WHEEL", ROOT / "agent/dist/fannagent-0.2.0-py3-none-any.whl"))
+PG = Path(os.environ.get("FANNAGENT_VERIFY_PGVECTOR_WHEEL", ROOT / "agent-pgvector/dist/fannagent_pgvector-0.1.0-py3-none-any.whl"))
 TEST = (
     ROOT / "agent/tests/extensions/independent/dist/fannagent_test_extension-0.1.0-py3-none-any.whl"
 )
@@ -116,7 +116,21 @@ config,store,backend=open_run(root,config)
 check_descriptor(extension({name!r}).manifest(),backend)
 store.set("prepared",backend.prepare_copy().serialize())
 assert explore(config,store,backend,step_limit=2)["status"]=="interrupted"
+import json
+initial=store.read(store.get("trajectory"))
+assert initial["startup_context_version"]==1
+assert initial["scripted_index"]==2
+context=json.loads(initial["messages"][1]["content"].split("Initial backend context:\\n")[1])
+assert context["backend"]=={name!r}
+assert context["dataset"]["fields"][0]["logical"]=="m_000000"
+assert context["target"]=={{"settings":{{}}}}
+inspection=store.read(context["inspection_artifact"],agent=True)
+assert inspection["target"]["backend"]=={name!r}
+assert inspection["features"]["full_registry_artifact"]==context["feature_registry_artifact"]
 assert explore(config,store,backend,resume=True,step_limit=10)["status"]=="frozen"
+resumed=store.read(store.get("trajectory"))
+assert resumed["messages"][:len(initial["messages"])]==initial["messages"]
+assert resumed["scripted_index"]==4
 study=Study(config,store,backend)
 assert study.final()["status"]=="accepted"
 session=open_session(root)

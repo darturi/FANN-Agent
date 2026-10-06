@@ -29,6 +29,12 @@ class BudgetedModel(LitellmModel):
             dispatch = litellm.completion
         self.dispatch = dispatch
 
+    def format_observation_messages(self, message, outputs, template_vars=None):
+        # Mini's template expects exception_info; our shell environments return exit/output only.
+        return super().format_observation_messages(
+            message, [{"exception_info": None, **output} for output in outputs], template_vars
+        )
+
     def query(self, messages, **kwargs):
         if kwargs:
             raise AgentError("unaccounted model parameter overrides are forbidden")
