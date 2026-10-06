@@ -1,0 +1,12 @@
+schema_version: 2
+backend:
+  name: fake
+  options: {}
+model:
+  model: scripted
+  ceiling_usd: 1
+workload:
+  count: 1000
+  seed: 1
+  warmups: 0
+  passes: 2

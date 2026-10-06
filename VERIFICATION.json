@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "core_wheel_sha256": "d77167df5db3d017d73dfacbb54443597a7bc4e93fff6d6dc02684ef93451382",
+  "environments": [
+    "core",
+    "pgvector",
+    "independent"
+  ],
+  "native_qualification": "ARM64: 18 passed across two backup methods",
+  "native_results_reference": "/Users/danielarturi/Developer/JinyangLiWork/agent-pgvector/.qualification/769392a820/results.json",
+  "core_extension_tests": 40,
+  "harness_regression_tests": 76,
+  "container_integration_tests": 1,
+  "sdk_typing_modules": 17,
+  "pgvector_wheel_sha256": "506754f496141039d2a363fb80a4c196eb6d2f82500153f6da716d6c8e5ea6fa"
+}
