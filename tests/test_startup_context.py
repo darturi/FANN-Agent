@@ -149,7 +149,14 @@ def test_first_provider_request_has_context_and_can_probe(tmp_path, monkeypatch)
     assert registry["definitions"]
     current = tools.call("inspect", {})
     assert current["target"] == inspection
-    assert set(current) == {"target", "capabilities", "features", "budget"}
+    assert set(current) == {
+        "target",
+        "capabilities",
+        "features",
+        "budget",
+        "checkpoint_policy_hash",
+    }
+    assert current["checkpoint_policy_hash"] is None
 
 
 def test_fallback_summary_and_inspection_artifact(tmp_path, monkeypatch):

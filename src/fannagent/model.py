@@ -10,6 +10,66 @@ from minisweagent.models.utils.actions_toolcall import BASH_TOOL
 
 from .errors import AgentError
 from .store import canonical
+from .submission import InvalidSubmission, validate_action
+
+
+def parse_response(raw):
+    choices = raw.get("choices")
+    if not isinstance(choices, list) or not choices or not isinstance(choices[0], dict):
+        raise InvalidSubmission("invalid_tool_call", "response must contain a message choice")
+    message = choices[0].get("message")
+    if not isinstance(message, dict) or message.get("role") != "assistant":
+        raise InvalidSubmission("invalid_tool_call", "response must contain an assistant message")
+    content = message.get("content")
+    if content is not None and (
+        not isinstance(content, (str, list))
+        or isinstance(content, list)
+        and any(not isinstance(item, dict) for item in content)
+    ):
+        raise InvalidSubmission(
+            "invalid_tool_call",
+            "assistant content must be text, content blocks, or null",
+            path="message.content",
+        )
+    calls = message.get("tool_calls")
+    if not isinstance(calls, list) or not calls:
+        raise InvalidSubmission(
+            "invalid_tool_call", "every response must include at least one bash tool call"
+        )
+    actions, identities = [], set()
+    for index, call in enumerate(calls):
+        path = f"tool_calls[{index}]"
+        if not isinstance(call, dict) or call.get("type") != "function":
+            raise InvalidSubmission("invalid_tool_call", "expected a function tool call", path=path)
+        identity = call.get("id")
+        if not isinstance(identity, str) or not identity or identity in identities:
+            raise InvalidSubmission(
+                "invalid_tool_call", "tool call IDs must be distinct strings", path=path
+            )
+        function = call.get("function")
+        if not isinstance(function, dict) or function.get("name") != "bash":
+            raise InvalidSubmission("invalid_tool_call", "the supported tool is bash", path=path)
+        arguments = function.get("arguments")
+        if not isinstance(arguments, str):
+            raise InvalidSubmission(
+                "invalid_tool_call", "arguments must be encoded JSON", path=path
+            )
+        try:
+            args = json.loads(arguments)
+        except json.JSONDecodeError as exc:
+            raise InvalidSubmission(
+                "invalid_tool_call",
+                f"invalid tool JSON at line {exc.lineno}, column {exc.colno}: {exc.msg}",
+                path=path,
+                hint='Use {"command": "SHELL_COMMAND"} as the bash arguments.',
+            ) from None
+        except RecursionError:
+            raise InvalidSubmission(
+                "invalid_tool_call", "tool JSON is too deeply nested", path=path
+            ) from None
+        actions.append({"command": validate_action(args), "tool_call_id": identity})
+        identities.add(identity)
+    return message, actions
 
 
 class BudgetedModel(LitellmModel):
@@ -92,13 +152,20 @@ class BudgetedModel(LitellmModel):
                 raise AgentError("provider violated the verified token limit")
             # Response and billing are durable before parsing shell actions.
             try:
-                actions = self._parse_actions(response)
-            except FormatError as exc:
-                exc.messages[0]["extra"].update(
-                    {"cost": float(charge), "response_artifact": artifact}
-                )
-                raise
-            message = response.choices[0].message.model_dump(mode="json")
+                message, actions = parse_response(raw)
+            except InvalidSubmission as exc:
+                raise FormatError(
+                    {
+                        "role": "user",
+                        "content": json.dumps(exc.response()),
+                        "extra": {
+                            "interrupt_type": "FormatError",
+                            "error_info": exc.info,
+                            "cost": float(charge),
+                            "response_artifact": artifact,
+                        },
+                    }
+                ) from None
             message["extra"] = {
                 "actions": actions,
                 "cost": float(charge),

@@ -27,6 +27,10 @@ class EvidenceConfig(Strict):
     trace_max_bytes: int = Field(default=64 * 1024**2, gt=0, le=64 * 1024**2)
 
 
+class ResearchConfig(Strict):
+    mode: Literal["baseline", "protocol_only", "guided"] = "guided"
+
+
 class ModelConfig(Strict):
     model: str = "scripted"
     ceiling_usd: Decimal
@@ -82,11 +86,15 @@ class RunConfig(Strict):
     resources: ResourcesConfig = Field(default_factory=ResourcesConfig)
     evidence: EvidenceConfig = Field(default_factory=EvidenceConfig)
     workload: WorkloadConfig = Field(default_factory=WorkloadConfig)
+    research: ResearchConfig | None = None
     query_timeout_seconds: float = Field(default=30, gt=0)
     _origin: Path = PrivateAttr(default_factory=Path.cwd)
 
     def public(self) -> dict:
-        return self.model_dump(mode="json")
+        value = self.model_dump(mode="json")
+        if self.research is None:
+            value.pop("research")
+        return value
 
     @property
     def configuration_origin(self):

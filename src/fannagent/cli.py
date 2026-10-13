@@ -23,12 +23,41 @@ def output(value):
     typer.echo(json.dumps(value, indent=2, default=str))
 
 
+@app.command("init")
+def init_config(
+    backend: str = typer.Option("fake"),
+    output_path: Path = typer.Option(Path("fannagent.yaml"), "--output"),
+):
+    """Create a private configuration without replacing an existing file."""
+    from .onboarding import initialize
+
+    output(initialize(backend, output_path))
+
+
+@app.command()
+def doctor(config: Path, check_source: bool = False):
+    """Check installation readiness without creating a run or spending model money."""
+    from .onboarding import diagnose
+
+    result = diagnose(config, check_source=check_source)
+    output(result)
+    if not result["ready"]:
+        raise typer.Exit(1)
+
+
 @app.command()
 def inspect(config: Path, run: Path = Path("runs/default")):
     """Inspect an existing target without loading or rebuilding data."""
-    _, _, backend = open_run(run, load_config(config))
+    _, store, backend = open_run(run, load_config(config))
     try:
-        output(backend.inspect_target())
+        output(
+            {
+                **backend.inspect_target(),
+                "checkpoint_policy_hash": (store.get("candidate_checkpoint") or {}).get(
+                    "policy_hash"
+                ),
+            }
+        )
     finally:
         backend.close()
 
@@ -80,6 +109,8 @@ def evaluate(run: Path = Path("runs/default")):
 
 @app.command()
 def status(run: Path = Path("runs/default")):
+    from .experiments import ExperimentJournal
+
     store = ReadOnlyStore(run)
     config = ModelConfig.model_validate(store.get("config")["model"])
     output(
@@ -89,6 +120,10 @@ def status(run: Path = Path("runs/default")):
             "frozen": store.get("frozen"),
             "test_entitlement": store.get("test_entitlement"),
             "budget": Budget(store, config, readonly=True).summary(),
+            "checkpoint_policy_hash": (store.get("candidate_checkpoint") or {}).get("policy_hash"),
+            "submission_recovery": store.get("submission_recovery"),
+            "research": ExperimentJournal(store).summary(),
+            **(store.get("finalization") or {}),
         }
     )
 
@@ -98,14 +133,23 @@ def report(run: Path = Path("runs/default")):
     """Render results locally, without another model call."""
     store = ReadOnlyStore(run)
     identity = store.get("report")
-    if not identity:
+    from .experiments import ExperimentJournal
+
+    fallback = (
+        store.get("budget_exhaustion_report") or store.get("invalid_submission_report")
+        if not store.get("test_entitlement")
+        else None
+    )
+    if not identity and not fallback:
         raise AgentError("no completed evaluation report")
-    value = store.read(identity)
+    value = fallback or store.read(identity)
+    value.update(store.get("finalization") or {})
     config = store.get("config")
     value["budget"] = Budget(
         store, ModelConfig.model_validate(config["model"]), readonly=True
     ).summary()
     value["copy_manifest"] = store.get("prepared")
+    value["research"] = ExperimentJournal(store).summary()
     text = f"# Filtered ANN policy study\n\nOutcome: **{value['status']}**\n\n"
     if value.get("simulated"):
         text += "This run used simulated latency. It provides no database performance claim.\n\n"
@@ -118,6 +162,23 @@ def report(run: Path = Path("runs/default")):
     path = store.root / "REPORT.md"
     path.write_text(text)
     output({"report": str(path), "result": value})
+
+
+@app.command()
+def experiments(
+    run: Path = Path("runs/default"),
+    experiment_id: str | None = None,
+    offset: int = 0,
+    limit: int = 20,
+):
+    """Inspect experiment plans and recorded outcomes without model or database calls."""
+    from .experiments import ExperimentJournal
+
+    journal = ExperimentJournal(ReadOnlyStore(run))
+    args = {"action": "get" if experiment_id else "list", "offset": offset, "limit": limit}
+    if experiment_id:
+        args["experiment_id"] = experiment_id
+    output({"research": journal.summary(), "journal": journal.call(args)})
 
 
 @app.command()
@@ -182,6 +243,9 @@ def clean(run: Path = Path("runs/default")):
     _, store, backend = open_run(run)
     try:
         with store.lease("run"), store.lease("prepare"):
+            from .environment import clean_sandboxes
+
+            clean_sandboxes(store)
             require_capabilities(backend, preparation=True)
             result = backend.cleanup()
             store.set("cleaned", True)

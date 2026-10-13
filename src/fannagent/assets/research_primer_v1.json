@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "sources": {
+    "E2E_V2": {
+      "title": "E2E: Efficient Filtered AKNN Search via Adaptive Termination",
+      "authors": ["Wenxuan Xia", "Mingyu Yang", "Wentao Li", "Wei Wang"],
+      "version": "arXiv 2602.06721v2",
+      "url": "https://arxiv.org/html/2602.06721v2",
+      "verified_date": "2026-10-09"
+    },
+    "GLS_V1": {
+      "title": "Filtered Approximate Nearest Neighbor Search in Vector Databases: System Design and Performance Analysis",
+      "authors": ["Abylay Amanbayev", "Brian Tsan", "Tri Dang", "Florin Rusu"],
+      "version": "arXiv 2602.11443v1",
+      "url": "https://arxiv.org/html/2602.11443v1",
+      "verified_date": "2026-10-09"
+    }
+  },
+  "introduction": "Research primer v1. Use the following findings to propose falsifiable experiments on this prepared dataset. Published observations motivate investigations; their applicability depends on the engine, traversal, filters and workload. Your output is a compact stopping rule, not a reproduction of either paper's complete method. Preserve ordinary default search settings and compare quality against that default. The goal is lower complete latency for easy queries with recall noninferiority at the configured tolerance, even when the default's absolute recall is below 95 percent.",
+  "principles": [
+    {
+      "id": "E2E_QUERY_EFFORT",
+      "classification": "literature_finding",
+      "claim": "Different filtered queries can need different amounts of search. E2E uses a lightweight predictor of search cost to adapt termination from early observations.",
+      "citations": [{"source_id": "E2E_V2", "sections": "Sections 3 and 4"}],
+      "limit": "This motivates query-dependent stopping; it does not supply a verified threshold for this copy or justify continuing beyond the fixed traversal's default termination.",
+      "investigation": "Compare actual stopping labels and runtime progress on development queries. Identify unnecessary continuation and premature stopping separately before proposing a rule."
+    },
+    {
+      "id": "E2E_FILTER_SIGNALS",
+      "classification": "literature_finding",
+      "claim": "Filter observations can complement distance signals when predicting filtered-search cost. Geometrically close vectors may fail the predicate.",
+      "citations": [{"source_id": "E2E_V2", "sections": "Sections 3.2 and 4.2"}],
+      "limit": "The paper's visited and queued filter ratios are not automatically available live in another engine. Their usefulness and cost must be measured here.",
+      "investigation": "Compare available filter observations with distance and progress statistics. Use offline membership reconstructions only to diagnose why a runtime signal succeeds or fails."
+    },
+    {
+      "id": "GLS_LOCAL_ALIGNMENT",
+      "classification": "literature_finding",
+      "claim": "The GLS metric describes how global predicate selectivity differs from selectivity near the query in vector space.",
+      "citations": [{"source_id": "GLS_V1", "sections": "Section 4"}],
+      "limit": "Exact neighborhood GLS is an offline descriptor, not a runtime observation. Similar global selectivity does not establish similar difficulty, and an observed association is not causal proof.",
+      "investigation": "Compare development queries with similar global match fractions but different local fractions. Check whether actual stopping work or recall losses differ before using the relationship to motivate a candidate."
+    },
+    {
+      "id": "PROJECT_RECALL",
+      "classification": "project_rule",
+      "claim": "Finding k qualifying records establishes result count, not nearest-neighbor recall. Use exact filtered references, the configured tie convention and default recall as the comparison target.",
+      "citations": [],
+      "limit": "A long approximate run is not exact ground truth. An early stop cannot recover a neighbor that the underlying traversal never visits.",
+      "investigation": "Inspect actual stop labels and per-query failures. Separate errors from short result sets, empty eligible sets and traversal limitations; do not reinterpret failures as fast successful queries."
+    },
+    {
+      "id": "PROJECT_RUNTIME",
+      "classification": "project_rule",
+      "claim": "A deployable policy uses only approved runtime features at the backend's qualified checkpoints and stopping scope. Missing observations and interpreter errors continue search.",
+      "citations": [],
+      "limit": "Exact neighborhood descriptors, future progress and ground-truth labels cannot be inserted into the runtime policy. Initial executor feedback may be absent; some execution routes have no stopping opportunity.",
+      "investigation": "Read the feature registry before proposing inputs. Check feature populations and availability, exercise missing-input behavior, and preserve the original search settings and physical index."
+    },
+    {
+      "id": "PROJECT_LATENCY",
+      "classification": "project_rule",
+      "claim": "Measure complete deployed query latency against ordinary execution. Feature collection, policy interpretation, initialization and transport contribute to the policy's cost.",
+      "citations": [],
+      "limit": "Fewer distance computations alone do not establish a faster query. Instrumentation and analysis can change overhead; stock, observed and policy execution must be distinguished.",
+      "investigation": "Use paired measured executions and inspect both recall and latency. Report workload groups and failures as well as overall summaries, so a mean improvement does not hide a harmful subgroup."
+    },
+    {
+      "id": "PROJECT_SPLITS",
+      "classification": "project_rule",
+      "claim": "Develop hypotheses and candidates on permitted development queries. Calibration exposes aggregates; a frozen candidate's final test is evaluator-only and consumed once.",
+      "citations": [],
+      "limit": "Repeated aggregate calibration during selection is part of the existing protocol, not a universal future-query recall guarantee. Multiple checkpoints and repeated executions of one query are correlated evidence.",
+      "investigation": "Record calibration rounds and distinct queries. Keep near-duplicate and protected query groups out of development acquisition. Treat inconclusive evidence and valid abstention as possible outcomes."
+    }
+  ],
+  "example": "Worked example: hypothesize that locally sparse qualifying neighborhoods make a rule based only on k qualifying results stop too early. Compare permitted queries with comparable global match fractions, use offline local descriptors to diagnose variation, and inspect actual stopping labels. If locally sparse cases show late recall improvements, investigate an available runtime filter or progress signal; if they do not, challenge the explanation. Exact GLS remains outside the deployed rule.",
+  "interpretation": "An experiment should say what observation would change your next decision. A paper citation is a prior reason to investigate, and a tool result is evidence from this workload. Record observations that oppose the hypothesis, including absent stopping opportunities and unavailable features. Prefer a simple rule whose inputs and costs are understood. Avoid a universal claim from one dataset or a causal claim from an uncontrolled comparison. Measure the chosen rule on the existing calibration protocol and leave final acceptance to the evaluator."
+}

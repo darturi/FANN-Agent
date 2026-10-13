@@ -6,12 +6,16 @@ from pathlib import Path
 import numpy as np
 import pyarrow as pa
 import pyarrow.parquet as pq
+from pydantic import ValidationError as ModelValidationError
 
+from .api.primitives.contracts import MAX_FILTER_DEPTH
 from .api.primitives.data import DatasetManifest, LoadedDataset, MetadataField, Query
+from .api.primitives.errors import ValidationError
 from .api.primitives.filters import validate_filter
 from .api.profiles import DataProfile
 from .errors import AgentError
 from .store import digest
+from .submission import InvalidSubmission
 
 
 class Snapshot:
@@ -103,27 +107,76 @@ class Snapshot:
         return self._typed_source_to_id[self.identifier_key(value)]
 
     def query(self, raw: dict) -> dict:
-        def translate(node):
+        if not isinstance(raw, dict):
+            raise InvalidSubmission("invalid_query", "query must be a JSON object", path="query")
+
+        def translate(node, depth=0):
+            if depth > MAX_FILTER_DEPTH:
+                raise InvalidSubmission(
+                    "invalid_filter",
+                    f"filter exceeds maximum depth {MAX_FILTER_DEPTH}",
+                    path="filter",
+                )
             if isinstance(node, dict):
-                value = {k: translate(v) for k, v in node.items()}
-                if "field" in value:
+                value = dict(node)
+                if isinstance(value.get("field"), str):
                     value["field"] = self.reverse_fields.get(value["field"], value["field"])
+                for op in ("and", "or"):
+                    if isinstance(value.get(op), list):
+                        value[op] = [translate(v, depth + 1) for v in value[op]]
+                if "not" in value:
+                    value["not"] = translate(value["not"], depth + 1)
                 return value
-            if isinstance(node, list):
-                return [translate(v) for v in node]
             return node
 
-        query = Query.model_validate(
-            {"schema_version": 2, **raw, "filter": translate(raw.get("filter"))}
-        )
-        vector = np.asarray(query.vector, dtype=np.float32)
+        try:
+            query = Query.model_validate(
+                {"schema_version": 2, **raw, "filter": translate(raw.get("filter"))}
+            )
+        except ModelValidationError as exc:
+            raise InvalidSubmission(
+                "invalid_query",
+                "query fields failed validation",
+                details=[
+                    {"path": "query." + ".".join(map(str, e["loc"])), "message": e["msg"]}
+                    for e in exc.errors(
+                        include_input=False, include_context=False, include_url=False
+                    )
+                ],
+                hint="Supply id, an inline numeric vector, k, and an optional filter object.",
+            ) from None
+        with np.errstate(over="ignore", invalid="ignore"):
+            vector = np.asarray(query.vector, dtype=np.float32)
         if vector.shape != (self.data.manifest.dimension,) or not np.isfinite(vector).all():
-            raise AgentError("query dimension or numeric values are invalid")
+            raise InvalidSubmission(
+                "invalid_query",
+                "query dimension or numeric values are invalid",
+                path="query.vector",
+                hint=f"Supply exactly {self.data.manifest.dimension} finite float32 values.",
+            )
         if not np.isclose(np.linalg.norm(vector), 1, atol=1e-5):
-            raise AgentError("query vector must be normalized")
+            raise InvalidSubmission(
+                "invalid_query",
+                "query vector must be normalized",
+                path="query.vector",
+                hint="Supply a vector with Euclidean norm 1; normalization is not automatic.",
+            )
         if query.k > self.profile.max_k:
-            raise AgentError("k is outside the selected data profile")
-        validate_filter(query.filter, self.data.manifest)
+            raise InvalidSubmission(
+                "invalid_query",
+                "k is outside the selected data profile",
+                path="query.k",
+                hint=f"Use k between 1 and {self.profile.max_k}.",
+            )
+        try:
+            validate_filter(query.filter, self.data.manifest)
+        except ValidationError as exc:
+            raise InvalidSubmission(
+                "invalid_filter",
+                str(exc),
+                path="query." + exc.path,
+                hint="Use declared fields and supported operators with matching value types.",
+            ) from None
 
         def check(node):
             if not isinstance(node, dict):
@@ -131,7 +184,12 @@ class Snapshot:
             if "field" in node:
                 field = next(f for f in self.fields if f["logical"] == node["field"])
                 if field.get("allowed_ops") and node["op"] not in field["allowed_ops"]:
-                    raise AgentError("predicate operator is outside the qualified field semantics")
+                    raise InvalidSubmission(
+                        "invalid_filter",
+                        "predicate operator is outside the qualified field semantics",
+                        path="query.filter",
+                        hint="Use an operator listed in this field's allowed_ops.",
+                    )
             for child in node.values():
                 if isinstance(child, list):
                     for member in child:

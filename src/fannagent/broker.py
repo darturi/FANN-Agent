@@ -12,16 +12,111 @@ from dataclasses import asdict
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
+from .api.policy import validate_policy
 from .api.primitives.data import Query
 from .api.primitives.descriptors import exact_query_descriptors
 from .api.primitives.filters import evaluate_filter
+from .config import RunConfig
 from .errors import AgentError
+from .evaluation_jobs import EvaluationJobs
+from .experiments import ExperimentJournal
+from .guidance import prepare_guidance
 from .store import canonical
+from .submission import InvalidSubmission, SubmissionTracker, decode_request, error_response
+from .workflow import workflow_plan
+
+
+def dispatch_request(tools, data):
+    turn_id = data.get("turn_id") if isinstance(data, dict) else None
+    try:
+        operation, args = decode_request(data)
+        if isinstance(tools, Tools) and data.get("request_id"):
+            value = tools.call(operation, args, request_id=data.get("request_id"))
+        else:
+            value = tools.call(operation, args)
+        result = {"ok": True, "result": value}
+    except Exception as exc:
+        result = error_response(exc)
+    tracker = getattr(tools, "submissions", None)
+    if tracker is not None:
+        tracker.record(turn_id, error=result.get("error_info"), success=result["ok"])
+    return result
 
 
 class Tools:
-    def __init__(self, study, budget):
+    def __init__(self, study, budget, *, turn_limit=None):
         self.study, self.budget = study, budget
+        self.turn_limit = turn_limit
+        self.submissions = SubmissionTracker()
+        config = getattr(study, "config", None) or RunConfig.model_validate(
+            study.store.get("config")
+        )
+        self.guidance = prepare_guidance(config, study.store, study.backend)
+        self.experiments = ExperimentJournal(study.store)
+        self.evaluation_jobs = EvaluationJobs(study.store)
+
+    def _validate_arguments(self, operation, args):
+        query_ops = {"count", "descriptors", "probe", "screen", "audit", "labels"}
+        policy_ops = {"development_evaluate", "validate", "calibrate", "submit", "screen"}
+        supported = (
+            query_ops
+            | policy_ops
+            | {"inspect", "queries", "sample", "artifact", "experiment", "evaluation_status"}
+        )
+        if not isinstance(operation, str) or operation not in supported:
+            raise InvalidSubmission(
+                "invalid_arguments",
+                "unknown development tool",
+                path="operation",
+                hint="Available operations: " + ", ".join(sorted(supported)),
+            )
+        if not isinstance(args, dict):
+            raise InvalidSubmission("invalid_arguments", "args must be a JSON object", path="args")
+        if operation in query_ops and not isinstance(args.get("query"), dict):
+            raise InvalidSubmission(
+                "invalid_query",
+                "query must be a JSON object",
+                path="query",
+                hint="Supply query with id, vector, k, and an optional filter.",
+            )
+        if operation in policy_ops or (
+            operation in {"probe", "audit"} and args.get("policy") is not None
+        ):
+            if not isinstance(args.get("policy"), dict):
+                raise InvalidSubmission(
+                    "invalid_policy", "policy must be a JSON object", path="policy"
+                )
+            # This is an explicit input-validation boundary. Execution exceptions are not
+            # classified by their Python type or by matching their message text.
+            try:
+                validate_policy(args["policy"], self.study.backend.runtime_profile)
+            except AgentError as exc:
+                raise InvalidSubmission(
+                    "invalid_policy",
+                    str(exc),
+                    path="policy",
+                    hint="Supply name and a bounded root using supported runtime features.",
+                ) from None
+        if operation in {"validate", "calibrate"} and "checkpoint" in args:
+            if type(args["checkpoint"]) is not bool:
+                raise InvalidSubmission(
+                    "invalid_arguments", "checkpoint must be Boolean", path="checkpoint"
+                )
+        if operation in {"queries", "sample"}:
+            for name in ("offset", "limit"):
+                if name in args:
+                    try:
+                        int(args[name])
+                    except (ValueError, TypeError, OverflowError):
+                        raise InvalidSubmission(
+                            "invalid_arguments",
+                            f"{name} must be convertible to an integer",
+                            path=name,
+                        ) from None
+        if operation == "artifact" and (not isinstance(args.get("hash"), str) or not args["hash"]):
+            raise InvalidSubmission(
+                "invalid_arguments", "hash must be a nonempty string", path="hash"
+            )
 
     def _inspection(self):
         s = self.study
@@ -52,6 +147,7 @@ class Tools:
                 "full_registry_artifact": full,
             },
             "budget": self.budget.summary(),
+            "checkpoint_policy_hash": s.checkpoint_policy_hash(),
         }
 
     def startup_context(self):
@@ -75,7 +171,54 @@ class Tools:
             "target": summary,
             "budget": {k: v for k, v in inspection["budget"].items() if k != "calls"},
             "feature_registry_artifact": inspection["features"]["full_registry_artifact"],
+            "checkpoint_policy_hash": inspection["checkpoint_policy_hash"],
         }
+        # Export only the development slice, never the private split manifest or anchors.
+        items = [
+            {"query": item["query"], "group": item["group"]} for item in self.study.development
+        ]
+        catalog = self.study.store.put(
+            "development_query_catalog",
+            {"items": items},
+            scope="development",
+            limit=self.study.config.evidence.max_bytes,
+        )
+        representatives = {}
+        for item in items:
+            representatives.setdefault(item["group"], []).append(item["query"]["id"])
+        groups = list(representatives)
+        # Spread orientation IDs through the catalog instead of presenting an adjacent prefix.
+        selected = (
+            [
+                groups[i * (len(groups) - 1) // min(5, len(groups) - 1)]
+                for i in range(min(6, len(groups)))
+            ]
+            if len(groups) > 1
+            else groups
+        )
+        context["development_queries"] = {
+            "count": len(items),
+            "independent_vector_groups": len(groups),
+            "catalog_artifact": catalog,
+            "catalog_path": f"/workspace/artifacts/{catalog}.json",
+            "catalog_shape": "items: list of {query: query object, group: vector group}",
+            "representative_groups": [
+                {"group": group, "query_ids": representatives[group]} for group in selected
+            ],
+            "pagination": {"default_limit": 20, "maximum_limit": 100, "argument": "offset"},
+        }
+        allowed = (summary.get("reviews_trial") or {}).get("allowed_collection_groups")
+        context["runtime_feature_groups"] = {}
+        for name, feature in inspection["features"]["runtime"].items():
+            if allowed is None or feature["group"] in allowed:
+                context["runtime_feature_groups"].setdefault(feature["group"], []).append(name)
+        if self.experiments.required:
+            context["research"] = {
+                key: self.guidance[key]
+                for key in ("mode", "research_protocol_version", "primer_hash", "artifact")
+            }
+            if self.turn_limit is not None:
+                context["workflow"] = workflow_plan(self.turn_limit)
         try:
             canonical(context)
             context["inspection_artifact"] = self.study.store.put(
@@ -85,10 +228,42 @@ class Tools:
             raise AgentError("backend startup context must be JSON serializable") from exc
         return context
 
-    def call(self, operation, args):
-        s = self.study
-        if s.store.get("frozen"):
+    def call(self, operation, args, *, request_id=None):
+        if self.study.store.get("frozen") and operation != "evaluation_status":
             raise AgentError("development tools are closed")
+        self._validate_arguments(operation, args)
+        if operation == "experiment":
+            return self.experiments.call(args)
+        if operation == "evaluation_status":
+            return self.evaluation_jobs.status(args.get("job_id"))
+        identity = None
+        if operation in {"development_evaluate", "calibrate"}:
+            identity, cached = self.evaluation_jobs.begin(operation, args, request_id)
+            if cached is not None:
+                return cached
+            self.study.evaluation_progress = self.evaluation_jobs.progress
+        pending = None
+        try:
+            pending = self.experiments.before(self.study, operation, args)
+            result = self._call(operation, args)
+        except Exception as exc:
+            self.experiments.after(pending, error=exc)
+            if identity:
+                self.evaluation_jobs.fail(identity, error_response(exc))
+                self.study.evaluation_progress = None
+            raise
+        event_id = self.experiments.after(pending, result=result)
+        if self.experiments.required and event_id and isinstance(result, dict):
+            result = {**result, "experiment_event_id": event_id}
+        if identity:
+            result = self.evaluation_jobs.complete(identity, result)
+            self.study.evaluation_progress = None
+        return result
+
+    def _call(self, operation, args):
+        s = self.study
+        if operation == "screen":
+            return s.screen(args["query"], args["policy"])
         if operation == "inspect":
             return self._inspection()
         if operation == "queries":
@@ -146,7 +321,11 @@ class Tools:
         if operation == "artifact":
             return s.store.read(args["hash"], agent=True)
         if operation in {"validate", "calibrate"}:
-            return s.validate(args["policy"], calibration=operation == "calibrate")
+            return s.validate(
+                args["policy"],
+                calibration=operation == "calibrate",
+                checkpoint=args.get("checkpoint", False),
+            )
         if operation == "submit":
             return s.submit(args["policy"])
         raise AgentError("unknown development tool")
@@ -167,22 +346,24 @@ class Broker:
                 ):
                     self.send_error(403)
                     return
-                length = int(self.headers.get("Content-Length", "0"))
+                try:
+                    length = int(self.headers.get("Content-Length", "0"))
+                except ValueError:
+                    self.send_error(400)
+                    return
                 if not 0 < length <= 1024**2:
                     self.send_error(413)
                     return
                 try:
                     data = json.loads(self.rfile.read(length))
                     with lock:
-                        result = {
-                            "ok": True,
-                            "result": tools.call(data["operation"], data.get("args", {})),
-                        }
+                        result = dispatch_request(tools, data)
+                except (json.JSONDecodeError, UnicodeDecodeError, RecursionError):
+                    result = InvalidSubmission(
+                        "invalid_arguments", "request must contain valid JSON"
+                    ).response()
                 except Exception as exc:
-                    result = {
-                        "ok": False,
-                        "error": str(exc) if isinstance(exc, AgentError) else type(exc).__name__,
-                    }
+                    result = error_response(exc)
                 body = json.dumps(result, allow_nan=False).encode()
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json")
@@ -247,18 +428,19 @@ class FileBroker:
                         raw = handle.read(1024**2 + 1)
                     if len(raw) > 1024**2:
                         raise AgentError("request too large")
-                    request = json.loads(raw)
-                    if not hmac.compare_digest(request.get("token", ""), self.token):
+                    try:
+                        request = json.loads(raw)
+                    except (json.JSONDecodeError, UnicodeDecodeError, RecursionError):
+                        raise InvalidSubmission(
+                            "invalid_arguments", "request must contain valid JSON"
+                        ) from None
+                    token = request.get("token", "") if isinstance(request, dict) else ""
+                    if not isinstance(token, str) or not hmac.compare_digest(token, self.token):
                         raise AgentError("unauthorized request")
-                    result = {
-                        "ok": True,
-                        "result": self.tools.call(request["operation"], request.get("args", {})),
-                    }
+                    request["request_id"] = name.split(".")[0]
+                    result = dispatch_request(self.tools, request)
                 except Exception as exc:
-                    result = {
-                        "ok": False,
-                        "error": str(exc) if isinstance(exc, AgentError) else type(exc).__name__,
-                    }
+                    result = error_response(exc)
                 response_name = name.replace(".request", ".response")
                 try:
                     fd = os.open(

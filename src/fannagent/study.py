@@ -85,6 +85,70 @@ class Study:
             "checkpoint_count": len(evidence.checkpoints),
         }
 
+    def screen(self, raw, raw_policy):
+        """Small production-mode comparison; never a statistical acceptance result."""
+        query = self.permitted(raw)
+        policy = self.backend.validate_policy(raw_policy)
+        control = self.backend.validate_policy(
+            {
+                "name": "screen-continue-control",
+                "root": "continue",
+                "feature_groups": list(policy.feature_groups),
+            }
+        )
+        truth = self.backend.exact_reference(query)
+        candidates = {"native": None, "policy": policy, "continue": control}
+        results = {name: [] for name in candidates}
+        rng = np.random.default_rng(self.config.workload.seed)
+        for repetition in range(4):  # One warmup and three small paired repetitions.
+            for name in rng.permutation(list(candidates)):
+                candidate = candidates[name]
+                result = self.backend.execute_probe(
+                    ProbeRequest(
+                        query,
+                        mode="policy" if candidate else "native",
+                        policy=candidate,
+                        trace=False,
+                    )
+                )
+                if repetition:
+                    results[name].append(
+                        {
+                            "latency_ms": result.latency_ms,
+                            "score": score(truth, result),
+                            "stop_reason": result.metadata.get("stop_reason"),
+                        }
+                    )
+        view = {
+            name: {
+                "median_ms": float(np.median([r["latency_ms"] for r in rows])),
+                "mean_recall": float(np.mean([r["score"]["recall"] for r in rows]))
+                if all(r["score"]["recall"] is not None for r in rows)
+                else None,
+                "valid": all(r["score"]["valid"] for r in rows),
+                "stop_reasons": [r["stop_reason"] for r in rows],
+            }
+            for name, rows in results.items()
+        }
+        return {
+            "artifact": self.store.put(
+                "development_screen",
+                {
+                    "query": query,
+                    "policy_hash": policy.policy_hash,
+                    "results": results,
+                },
+                scope="development",
+                limit=self.config.evidence.max_bytes,
+            ),
+            "modes": view,
+            "warmups": 1,
+            "paired_passes": 3,
+            "timing_metric": "unchanged ProbeResult.latency_ms",
+            "trace": False,
+            "statistical_acceptance": False,
+        }
+
     def stop_labels(self, query):
         """Real reruns; native-default recall is the query-specific target."""
         cache_key = "stop_labels:" + digest({"query": query, "compatibility": self.compatibility})
@@ -180,11 +244,12 @@ class Study:
             return existing
         costs = []
         diagnostics = []
-        for item in self.development:
+        for position, item in enumerate(self.development, 1):
             label = self.stop_labels(item["query"])
             diagnostics.append({"id": item["query"]["id"], **label})
             if label["cost"] is not None:
                 costs.append(label["cost"])
+            self._evaluation_progress("development_labels", position, len(self.development))
         values = np.quantile(costs, [1 / 3, 2 / 3]).tolist() if costs else [None, None]
         result = {
             "lower": values[0],
@@ -207,12 +272,13 @@ class Study:
         return "medium"
 
     def measure(self, policy, split):
+        self._evaluation_progress("identity_check")
         compatibility = self.backend.compatibility()
         bounds = self.boundaries()
         items = [i for i in self.manifest["items"] if i["split"] == split]
         rng = np.random.default_rng(self.config.workload.seed)
         rows, diagnostics = [], []
-        for item in items:
+        for position, item in enumerate(items, 1):
             query = item["query"]
             truth = self.backend.exact_reference(query)
             label = self.stop_labels(query)
@@ -255,9 +321,13 @@ class Study:
                         "test_progress",
                         {"pairs": len(rows), "last_query": query["id"], "last_pair": pair},
                     )
+            # Progress is recorded between query batches, outside ProbeResult timing.
+            self._evaluation_progress("paired_measurements", position, len(items))
         wc = self.config.workload
+        self._evaluation_progress("final_identity_check")
         if self.backend.compatibility() != compatibility:
             raise AgentError("backend identity changed during evaluation")
+        self._evaluation_progress("statistical_summary")
         summary = summarize(
             rows,
             seed=wc.seed,
@@ -291,7 +361,31 @@ class Study:
         )
         return summary
 
-    def validate(self, raw, *, calibration=False):
+    def _evaluation_progress(self, phase, completed=0, total=None):
+        callback = getattr(self, "evaluation_progress", None)
+        if callback:
+            callback(phase, completed, total)
+
+    def checkpoint_policy_hash(self):
+        return (self.store.get("candidate_checkpoint") or {}).get("policy_hash")
+
+    def _envelope(self, policy):
+        return {
+            "policy": policy.model_dump(mode="json"),
+            "policy_hash": policy.policy_hash,
+            "study_hash": self.manifest["workload_hash"],
+            "dataset_hash": self.snapshot.identity,
+            "copy_hash": digest(self.store.get("prepared")),
+            "compatibility": self.backend.compatibility(),
+            "backend": self.config.backend.name,
+            "evaluation_config": self.config.workload.model_dump(mode="json"),
+        }
+
+    def validate(self, raw, *, calibration=False, checkpoint=False):
+        if type(checkpoint) is not bool:
+            raise AgentError("checkpoint must be a Boolean")
+        if checkpoint and not calibration:
+            raise AgentError("checkpoint requires calibration")
         if self.store.get("frozen"):
             raise ProtectedEvidence("candidate selection is closed")
         policy = self.backend.validate_policy(raw)
@@ -302,31 +396,115 @@ class Study:
             limit=self.config.evidence.max_bytes,
         )
         if calibration:
+            envelope = self._envelope(policy) if checkpoint else None
             report = self.measure(policy, "calibration")
-            self.store.set(f"calibration:{policy.policy_hash}", report)
-            return {k: report[k] for k in ("status", "valid", "groups", "latencies")}
+            updates = {f"calibration:{policy.policy_hash}": report}
+            if checkpoint and report["status"] == "accepted" and report["valid"] is True:
+                if (
+                    envelope != self._envelope(policy)
+                    or report["policy_hash"] != policy.policy_hash
+                    or report["compatibility"] != envelope["compatibility"]
+                ):
+                    raise AgentError("checkpoint identity changed during calibration")
+                boundaries = self.store.get("hardness_boundaries")
+                if boundaries is None:
+                    raise AgentError("checkpoint requires cached hardness boundaries")
+                identity = self.store.put(
+                    "candidate_checkpoint",
+                    {
+                        "envelope": envelope,
+                        "calibration": report,
+                        "study_artifact": self.store.get("study"),
+                        "hardness_boundaries": boundaries,
+                    },
+                )
+                updates["candidate_checkpoint"] = {
+                    "artifact": identity,
+                    "policy_hash": policy.policy_hash,
+                }
+            self.store.set_many(updates)
+            return {
+                **{k: report[k] for k in ("status", "valid", "groups", "latencies")},
+                "checkpoint_policy_hash": self.checkpoint_policy_hash(),
+            }
         return {"policy_hash": policy.policy_hash, "feature_groups": policy.feature_groups}
 
-    def submit(self, raw):
+    def _eligible_policy(self, raw):
+        if self.store.get("frozen") or self.store.get("test_entitlement"):
+            raise ProtectedEvidence("candidate selection is closed")
         policy = self.backend.validate_policy(raw)
-        self.validate(raw)
         calibration = self.store.get(f"calibration:{policy.policy_hash}")
-        if not calibration or calibration["status"] != "accepted":
+        if (
+            not calibration
+            or calibration["status"] != "accepted"
+            or calibration.get("valid") is not True
+        ):
             raise AgentError("candidate must pass aggregate calibration before submission")
-        self.boundaries()
-        envelope = {
-            "policy": policy.model_dump(mode="json"),
-            "policy_hash": policy.policy_hash,
-            "study_hash": self.manifest["workload_hash"],
-            "dataset_hash": self.snapshot.identity,
-            "copy_hash": digest(self.store.get("prepared")),
-            "compatibility": self.backend.compatibility(),
-            "backend": self.config.backend.name,
-            "evaluation_config": self.config.workload.model_dump(mode="json"),
-        }
+        return policy, calibration
+
+    def _freeze(self, envelope, *, finalization=None):
         frozen = self.store.put("frozen_policy", envelope)
-        self.store.set("frozen", frozen)
-        return {"frozen": frozen, "policy_hash": policy.policy_hash}
+        updates = {"frozen": frozen, "status": "frozen"}
+        delete = ()
+        if finalization:
+            updates["finalization"] = finalization
+            delete = ("budget_exhaustion_report",)
+            previous = self.store.get("report")
+            if previous and not self.store.get("test_entitlement"):
+                report = self.store.read(previous)
+                if report.get("run_status") == "budget_exhausted" and report.get("split") != "test":
+                    delete += ("report",)
+        self.store.set_many(updates, delete=delete)
+        return {"frozen": frozen, "policy_hash": envelope["policy_hash"]}
+
+    def submit(self, raw):
+        policy, _ = self._eligible_policy(raw)
+        from .experiments import ExperimentJournal
+        from .guidance import prepare_guidance
+
+        prepare_guidance(self.config, self.store, self.backend)
+        ExperimentJournal(self.store).require_candidate(policy.policy_hash)
+        self.validate(raw)
+        self.boundaries()
+        return self._freeze(self._envelope(policy))
+
+    def finalize_checkpoint(self):
+        """Freeze the agent's choice using cached evidence, never new measurements."""
+        if self.store.get("frozen"):
+            return {
+                "status": "frozen",
+                "policy_hash": self.frozen_policy().policy_hash,
+                **(self.store.get("finalization") or {}),
+            }
+        selected = self.store.get("candidate_checkpoint")
+        if not selected:
+            return no_checkpoint_outcome()
+        policy_hash = selected.get("policy_hash")
+        try:
+            record = self.store.read(selected["artifact"])
+            envelope = record["envelope"]
+            policy, calibration = self._eligible_policy(envelope["policy"])
+            if (
+                policy.policy_hash != policy_hash
+                or envelope != self._envelope(policy)
+                or calibration != record["calibration"]
+                or record["study_artifact"] != self.store.get("study")
+                or record["hardness_boundaries"] is None
+                or record["hardness_boundaries"] != self.store.get("hardness_boundaries")
+            ):
+                raise AgentError("checkpoint evidence or environment identity changed")
+        except Exception as exc:
+            return checkpoint_failure("checkpoint_ineligible", policy_hash, exc)
+        finalization = {
+            "termination_reason": "budget_exhausted",
+            "finalization_source": "checkpoint",
+            "checkpoint_policy_hash": policy_hash,
+        }
+        try:
+            frozen = self._freeze(envelope, finalization=finalization)
+        except Exception as exc:
+            return checkpoint_failure("checkpoint_finalization_failed", policy_hash, exc)
+        return {"status": "frozen", **frozen, **finalization}
 
     def frozen_policy(self):
         identity = self.store.get("frozen")
@@ -366,5 +544,26 @@ class Study:
                 "policy_hash": policy.policy_hash,
                 "partial_progress": self.store.get("test_progress"),
             }
+        report.update(self.store.get("finalization") or {})
         self.store.set("report", self.store.put("report", report))
         return report
+
+
+def checkpoint_failure(reason_code, policy_hash, exc):
+    return {
+        "status": "no_recommendation",
+        "valid": False,
+        "reason_code": reason_code,
+        "policy_hash": policy_hash,
+        "failure": type(exc).__name__,
+        "failure_message": str(exc),
+    }
+
+
+def no_checkpoint_outcome():
+    return {
+        "status": "no_recommendation",
+        "valid": True,
+        "reason_code": "no_eligible_checkpoint",
+        "reason": "monetary ceiling reached without an agent-selected checkpoint",
+    }

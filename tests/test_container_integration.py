@@ -23,9 +23,26 @@ def test_container_broker_has_only_development_access(tmp_path):
     ) as broker:
         env = ContainerEnvironment(store.root / "workspace", broker)
         try:
+            env.turn_id = broker.tools.submissions.begin_turn()
+            malformed = env.execute({"command": "fannagent-tool probe '{' >/dev/null || true"})
+            assert malformed["returncode"] == 0
+            assert malformed["extra"]["error_info"]["code"] == "invalid_arguments"
+            assert "invalid_arguments" in malformed["output"]
+            assert broker.tools.submissions.finish_turn()[0]["code"] == "invalid_arguments"
+            env.turn_id = broker.tools.submissions.begin_turn()
             result = env.execute({"command": "fannagent-tool queries '{\"limit\":1}'"})
             assert result["returncode"] == 0, result
             assert "generated-" in result["output"]
+            assert broker.tools.submissions.finish_turn() == (None, True)
+            env.turn_id = broker.tools.submissions.begin_turn()
+            piped = env.execute(
+                {"command": "for i in 1 2 3; do fannagent-tool queries '{\"limit\":10}' "
+                 "| head -c 1 >/dev/null; done; fannagent-tool queries '{\"limit\":1}'"}
+            )
+            assert piped["returncode"] == 0, piped
+            assert "generated-" in piped["output"]
+            assert "Traceback" not in piped["output"]
+            assert broker.tools.submissions.finish_turn() == (None, True)
             denied = env.execute({"command": "ls /workspace/../private /var/run/docker.sock"})
             assert denied["returncode"] != 0
         finally:

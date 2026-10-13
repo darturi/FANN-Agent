@@ -1,4 +1,6 @@
 schema_version: 2
+research:
+  mode: guided
 backend:
   name: fake
   options: {}

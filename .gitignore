@@ -26,8 +26,13 @@ dist/
 *.egg-info/
 .eggs/
 
-# Generated agent runs
+# Generated agent runs and local installations
 /runs/
+/.fannagent-install/
+
+# Generated release bundles and qualification output
+/release/
+.qualification/
 
 # Internal agent planning documents and feature specifications
 IMPLEMENTATION_PLAN*.md
@@ -42,6 +47,9 @@ implementation_status*.md
 feature_spec*.md
 
 # Local configuration and secrets
+/fannagent.yaml
+/fake.yaml
+/pgvector.yaml
 .env
 .env.*
 !.env.example

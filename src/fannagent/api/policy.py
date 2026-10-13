@@ -4,6 +4,7 @@ import json
 from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import ValidationError as ModelValidationError
 
 from .errors import AgentError
 from .primitives.hashing import stable_hash
@@ -57,10 +58,20 @@ class PolicyArtifact(BaseModel):
 
 
 def validate_policy(raw: dict | PolicyArtifact, profile: RuntimeProfile) -> PolicyArtifact:
+    if not isinstance(raw, (dict, PolicyArtifact)):
+        raise AgentError("invalid policy: policy must be an object")
     raw = raw.model_dump(mode="python") if isinstance(raw, PolicyArtifact) else dict(raw)
     if raw.get("runtime_profile_hash", profile.fingerprint) != profile.fingerprint:
         raise AgentError("policy runtime profile is incompatible")
     features = profile.runtime_features
+    try:
+        # Bound and validate the tree before recursive feature discovery or hashing.
+        root = raw.get("root")
+        if not isinstance(root, (dict, str)):
+            raise ValueError("policy root is required")
+        validate_node(root, feature_kinds={n: f.kind for n, f in features.items()})
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise AgentError(f"invalid policy: {exc}") from None
 
     def referenced(node):
         if isinstance(node, dict):
@@ -78,6 +89,8 @@ def validate_policy(raw: dict | PolicyArtifact, profile: RuntimeProfile) -> Poli
             f"policy references unsupported runtime inputs: {sorted(names.difference(features))}"
         )
     groups = raw.get("feature_groups", sorted({features[name].group for name in names}))
+    if not isinstance(groups, list) or any(not isinstance(group, str) for group in groups):
+        raise AgentError("invalid policy: feature_groups must be a list of strings")
     if len(groups) != len(set(groups)) or set(groups).difference(
         profile.available_collection_groups
     ):
@@ -96,7 +109,15 @@ def validate_policy(raw: dict | PolicyArtifact, profile: RuntimeProfile) -> Poli
         json.dumps(artifact.serialize(), allow_nan=False, sort_keys=True, separators=(",", ":"))
         if len(json.dumps(artifact.shape_model).encode()) > MAX_SHAPE_MODEL_BYTES:
             raise ValueError("shape model exceeds bounded payload")
-    except (TypeError, ValueError) as exc:
+    except ModelValidationError as exc:
+        messages = [
+            ".".join(map(str, e["loc"])) + ": " + e["msg"]
+            for e in exc.errors(include_input=False, include_context=False, include_url=False)[:5]
+        ]
+        raise AgentError("invalid policy: " + "; ".join(messages)) from None
+    except RecursionError:
+        raise AgentError("invalid policy: payload is too deeply nested") from None
+    except (TypeError, ValueError, OverflowError) as exc:
         raise AgentError(f"invalid policy: {exc}") from None
     return artifact
 

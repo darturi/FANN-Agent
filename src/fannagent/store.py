@@ -3,14 +3,62 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import platform
 import sqlite3
 import stat
+import subprocess
 import time
 import uuid
 from contextlib import contextmanager
 from pathlib import Path
 
 from .errors import AgentError
+
+
+def lock_owner_alive(owner):
+    """Unknown namespaces fail closed; a host command can reclaim its dead host owner."""
+    if owner.get("controller"):
+        result = subprocess.run(["docker", "container", "inspect", owner["controller"]],
+                                capture_output=True, text=True, timeout=15)
+        if result.returncode:
+            missing = "no such container: " + owner["controller"].lower()
+            if missing in result.stderr.lower():
+                return False
+            raise AgentError("cannot verify operation owner; check the Docker daemon")
+        return bool(json.loads(result.stdout)[0]["State"]["Running"])
+    if owner.get("machine") != platform.node():
+        return True
+    try:
+        os.kill(owner["pid"], 0)
+    except ProcessLookupError:
+        return False
+    return True
+
+
+def read_lock(path):
+    fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    with os.fdopen(fd) as handle:
+        return json.load(handle)
+
+
+@contextmanager
+def lock_guard(directory, name, candidate):
+    # Hard-link creation is atomic across host and Docker Desktop kernels. Unlike
+    # flock/lockf it also arbitrates metadata updates on Desktop's shared filesystem.
+    guard = directory / (name + ".guard")
+    for attempt in range(20):
+        try:
+            os.link(candidate, guard)
+            break
+        except FileExistsError:
+            if attempt == 19:
+                raise AgentError("operation lock update is busy or was interrupted; "
+                                 "verify its .locks guard owner before recovery") from None
+            time.sleep(0.02)
+    try:
+        yield
+    finally:
+        guard.unlink()
 
 
 def canonical(value) -> bytes:
@@ -28,6 +76,13 @@ class Store:
             self.root.mkdir(parents=True, mode=0o700, exist_ok=True)
         if not self.root.exists():
             raise AgentError(f"run directory does not exist: {root}")
+        # Reopening a busy run must not execute schema/configuration writes before
+        # the caller reaches its operation lease. ReadOnlyStore remains available.
+        for operation in ("run", "prepare"):
+            path = self.root / ".locks" / (operation + ".owner")
+            if path.exists() and lock_owner_alive(read_lock(path)):
+                raise AgentError(f"operation already owns {operation}; "
+                                 "use status/report or reclaim a dead host owner from that host")
         self.path = self.root / "state.sqlite3"
         with self.connect() as db:
             db.executescript("""
@@ -58,10 +113,17 @@ class Store:
         return json.loads(row[0]) if row else default
 
     def set(self, key: str, value):
+        self.set_many({key: value})
+
+    def set_many(self, values: dict, *, delete: tuple[str, ...] = ()):
+        """Publish related state pointers after their artifacts are durable."""
         with self.connect() as db:
-            db.execute(
-                "INSERT OR REPLACE INTO state VALUES (?,?)", (key, canonical(value).decode())
+            db.execute("BEGIN IMMEDIATE")
+            db.executemany(
+                "INSERT OR REPLACE INTO state VALUES (?,?)",
+                [(key, canonical(value).decode()) for key, value in values.items()],
             )
+            db.executemany("DELETE FROM state WHERE key=?", [(key,) for key in delete])
 
     @contextmanager
     def _artifact_directory(self, scope):
@@ -153,25 +215,56 @@ class Store:
 
     @contextmanager
     def lease(self, name: str):
-        owner = uuid.uuid4().hex
-        with self.connect() as db:
-            db.execute("BEGIN IMMEDIATE")
-            old = db.execute("SELECT * FROM leases WHERE name=?", (name,)).fetchone()
-            if old:
-                try:
-                    os.kill(old["pid"], 0)
-                except ProcessLookupError:
-                    db.execute("DELETE FROM leases WHERE name=?", (name,))
-                else:
-                    raise AgentError(f"operation already owns {name}")
-            db.execute(
-                "INSERT INTO leases VALUES (?,?,?,?)", (name, owner, os.getpid(), time.time())
-            )
+        if name not in {"run", "prepare"}:
+            raise AgentError("unknown operation lock")
+        directory = self.root / ".locks"
+        directory.mkdir(mode=0o700, exist_ok=True)
+        owner = "atomic-v1:" + uuid.uuid4().hex
+        candidate = directory / (uuid.uuid4().hex + ".pending")
+        fd = os.open(candidate, os.O_CREAT | os.O_WRONLY | os.O_EXCL, 0o600)
+        record = {"owner": owner, "pid": os.getpid(), "machine": platform.node(),
+                  "controller": os.environ.get("FANNAGENT_CONTROLLER")}
+        with os.fdopen(fd, "w") as handle:
+            json.dump(record, handle)
+            handle.flush()
+            os.fsync(handle.fileno())
+        path = directory / (name + ".owner")
+        acquired = False
         try:
+            with lock_guard(directory, name, candidate):
+                if path.exists():
+                    previous = read_lock(path)
+                    if lock_owner_alive(previous):
+                        raise AgentError(f"operation already owns {name}; "
+                                         "dead host owners must be reclaimed from that host")
+                    path.unlink()
+                with self.connect() as db:
+                    db.execute("BEGIN IMMEDIATE")
+                    old = db.execute("SELECT * FROM leases WHERE name=?", (name,)).fetchone()
+                    if old and not old["owner"].startswith("atomic-v1:"):
+                        try:
+                            os.kill(old["pid"], 0)
+                        except ProcessLookupError:
+                            pass
+                        else:
+                            raise AgentError(f"legacy operation already owns {name}")
+                    os.link(candidate, path)
+                    acquired = True
+                    db.execute("DELETE FROM leases WHERE name=?", (name,))
+                    db.execute("INSERT INTO leases VALUES (?,?,?,?)",
+                               (name, owner, os.getpid(), time.time()))
             yield
         finally:
-            with self.connect() as db:
-                db.execute("DELETE FROM leases WHERE name=? AND owner=?", (name, owner))
+            try:
+                if acquired:
+                    with lock_guard(directory, name, candidate):
+                        if read_lock(path)["owner"] != owner:
+                            raise AgentError("operation lock ownership changed")
+                        with self.connect() as db:
+                            db.execute("DELETE FROM leases WHERE name=? AND owner=?", (name, owner))
+                        path.unlink()
+            finally:
+                candidate.unlink()
 
     def secret(self, key: str, value: str | None = None):
         path = self.root / "secrets.json"
@@ -207,6 +300,9 @@ class ReadOnlyStore(Store):
             db.close()
 
     def set(self, key, value):
+        raise AgentError("inspection state is read-only")
+
+    def set_many(self, values, *, delete=()):
         raise AgentError("inspection state is read-only")
 
     @contextmanager

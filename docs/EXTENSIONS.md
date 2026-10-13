@@ -58,7 +58,18 @@ Record resource ownership in `context.journal` **before** external creation. Pre
 
 The core verifies acceptance, frozen policy and deployment compatibility before opening the extension's `PolicySession`. Sessions implement `query(..., fallback=True)` and `close()`. Mark fallback outcomes and surface execution failures when fallback is disabled.
 
-## Conformance
+## Optional setup hooks
+
+Extensions may provide `configuration_template() -> str` with a complete schema-v2
+YAML configuration and `installation_checks(options, config, *, check_source=False)`
+returning dictionaries with `name`, `status` (`ok`, `fail`, `warning`) and `detail`.
+These hooks support `fannagent init` and `doctor`; they are optional and do not change
+API v1's required protocol. Templates reference credential variable names and contain
+no credential values. Diagnostics never create study state or make paid model calls.
+Source checks require explicit `--check-source`. Docker filesystem diagnostics may
+use an ephemeral networkless, read-only utility container; they create no database copy.
+
+## Conformance checks
 
 Use `fannagent.api.conformance.check_descriptor` and `check_observation`. Test unsupported capabilities, changed semantic/native profiles, changed data/index/settings identity, partial preparation recovery, foreign-resource refusal, repeated cleanup, source ID preservation and fallback behavior. Run the independent example's complete study workflow against a built core wheel from an unrelated working directory. Do not use private controller/store modules from an extension; the test driver may use core application entry points.
 

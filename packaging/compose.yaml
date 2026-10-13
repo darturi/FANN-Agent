@@ -1,0 +1,20 @@
+# Optional controller service. The agent journals and manages its study resources.
+services:
+  controller:
+    image: ${FANNAGENT_CONTROLLER_IMAGE:?set a built controller image ID}
+    user: "${FANNAGENT_UID:?set host UID}:${FANNAGENT_GID:?set host GID}"
+    group_add: ["${FANNAGENT_SOCKET_GID:?set Docker socket GID}"]
+    init: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp]
+    working_dir: ${FANNAGENT_WORKSPACE:?set a canonical host workspace path}
+    volumes:
+      - "${FANNAGENT_WORKSPACE}:${FANNAGENT_WORKSPACE}"
+      - "${FANNAGENT_DOCKER_SOCKET:?set local socket}:/var/run/docker.sock"
+    labels:
+      io.fannagent.controller: "1"
+    environment:
+      FANNAGENT_CONTROLLER: ${FANNAGENT_CONTROLLER_NAME:?set the Compose container name}
+    container_name: ${FANNAGENT_CONTROLLER_NAME}

@@ -11,11 +11,22 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 UV = str(Path.home() / ".local/bin/uv")
-CORE = Path(os.environ.get("FANNAGENT_VERIFY_CORE_WHEEL", ROOT / "agent/dist/fannagent-0.2.0-py3-none-any.whl"))
-PG = Path(os.environ.get("FANNAGENT_VERIFY_PGVECTOR_WHEEL", ROOT / "agent-pgvector/dist/fannagent_pgvector-0.1.0-py3-none-any.whl"))
+CORE = Path(
+    os.environ.get(
+        "FANNAGENT_VERIFY_CORE_WHEEL", ROOT / "agent/dist/fannagent-0.2.0-py3-none-any.whl"
+    )
+)
+PG = Path(
+    os.environ.get(
+        "FANNAGENT_VERIFY_PGVECTOR_WHEEL",
+        ROOT / "agent-pgvector/dist/fannagent_pgvector-0.1.0-py3-none-any.whl",
+    )
+)
 TEST = (
     ROOT / "agent/tests/extensions/independent/dist/fannagent_test_extension-0.1.0-py3-none-any.whl"
 )
+RESEARCH_MODE = os.environ.get("FANNAGENT_VERIFY_RESEARCH_MODE", "baseline")
+assert RESEARCH_MODE in {"baseline", "protocol_only", "guided"}
 WORK = Path(tempfile.mkdtemp(prefix="fannagent-wheel-acceptance-"))
 ENV = {
     **os.environ,
@@ -58,11 +69,15 @@ subprocess.run(
 before = hashlib.sha256(CORE.read_bytes()).hexdigest()
 with zipfile.ZipFile(CORE) as z:
     assert not any("pgvector" in n or "http_backends" in n for n in z.namelist())
+    assert "fannagent/assets/research_primer_v1.json" in z.namelist()
 with zipfile.ZipFile(PG) as z:
     for suffix in (
         "engine/postgresql-17.11-executor.patch",
         "engine/patches/0004-existing-target-binding.patch",
         "engine/build.sh",
+        "engine/copy-entrypoint.sh",
+        "engine/copy.nft",
+        "engine/proxy.nft",
         "native/registry.json",
     ):
         assert any(n.endswith(suffix) for n in z.namelist()), suffix
@@ -110,7 +125,7 @@ from fannagent.client import open_session
 from fannagent.cli import status, report, clean
 from fannagent.api.conformance import check_descriptor, check_observation
 from fannagent.backends import extension
-config=RunConfig(backend={{"name": {name!r}}}, model={{"ceiling_usd":"1"}}, workload={{"count":1000,"seed":1,"warmups":0,"passes":1}})
+config=RunConfig(backend={{"name": {name!r}}}, model={{"ceiling_usd":"1"}}, workload={{"count":1000,"seed":1,"warmups":0,"passes":1}}, research={None if RESEARCH_MODE == "baseline" else {"mode": RESEARCH_MODE}!r})
 root=Path({str(WORK / (kind + "-run"))!r})
 config,store,backend=open_run(root,config)
 check_descriptor(extension({name!r}).manifest(),backend)
@@ -130,7 +145,11 @@ assert inspection["features"]["full_registry_artifact"]==context["feature_regist
 assert explore(config,store,backend,resume=True,step_limit=10)["status"]=="frozen"
 resumed=store.read(store.get("trajectory"))
 assert resumed["messages"][:len(initial["messages"])]==initial["messages"]
-assert resumed["scripted_index"]==4
+assert resumed["scripted_index"]=={4 if RESEARCH_MODE == "baseline" else 10}
+if {RESEARCH_MODE!r} != "baseline":
+    assert resumed["research_mode"] == {RESEARCH_MODE!r}
+    from fannagent.experiments import ExperimentJournal
+    assert ExperimentJournal(store).summary()["experiments"]["completed"] == 3
 study=Study(config,store,backend)
 assert study.final()["status"]=="accepted"
 session=open_session(root)
@@ -163,6 +182,7 @@ assert hashlib.sha256(CORE.read_bytes()).hexdigest() == before
             "status": "passed",
             "core_wheel_sha256": before,
             "environments": ["core", "pgvector", "independent"],
+            "research_mode": RESEARCH_MODE,
         }
     )
 )

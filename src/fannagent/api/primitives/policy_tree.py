@@ -59,6 +59,8 @@ def validate_node(
             raise ValueError("decision positions require an action or if/then/else node")
         if keys == {"feature"}:
             feature = node["feature"]
+            if not isinstance(feature, str):
+                raise ValueError("policy feature must be a string")
             if feature not in feature_kinds:
                 raise ValueError(f"unknown policy feature: {feature!r}")
             return feature_kinds[feature]
@@ -83,6 +85,8 @@ def validate_node(
         if keys == {"op", "args"}:
             op = node["op"]
             args = node["args"]
+            if not isinstance(op, str):
+                raise ValueError("policy operator must be a string")
             if op not in UNARY_OPERATORS | BINARY_OPERATORS:
                 raise ValueError(f"unknown policy operator: {op!r}")
             expected = 1 if op in UNARY_OPERATORS else 2

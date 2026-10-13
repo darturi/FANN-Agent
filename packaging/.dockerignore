@@ -1,0 +1,6 @@
+*
+!controller.Dockerfile
+!core-requirements.txt
+!pgvector-requirements.txt
+!wheels/
+!wheels/**

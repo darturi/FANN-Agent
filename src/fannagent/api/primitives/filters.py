@@ -29,8 +29,27 @@ def _validate_filter(
     *,
     depth: int,
     leaves: list[int],
+    path: str = "filter",
+) -> None:
+    try:
+        _validate_filter_node(expr, manifest, depth=depth, leaves=leaves, path=path)
+    except ValidationError as exc:
+        if not exc.path:
+            exc.path = path
+        raise
+
+
+def _validate_filter_node(
+    expr: dict[str, Any] | None,
+    manifest: DatasetManifest,
+    *,
+    depth: int,
+    leaves: list[int],
+    path: str,
 ) -> None:
     if expr is None:
+        if depth:
+            raise ValidationError("nested filters must be objects")
         return
     if depth > MAX_FILTER_DEPTH:
         raise ValidationError(f"filter exceeds maximum depth {MAX_FILTER_DEPTH}")
@@ -46,13 +65,19 @@ def _validate_filter(
         if op == "not":
             if not isinstance(children, dict):
                 raise ValidationError("not requires one filter object")
-            _validate_filter(children, manifest, depth=depth + 1, leaves=leaves)
+            _validate_filter(children, manifest, depth=depth + 1, leaves=leaves, path=f"{path}.not")
             return
         if not isinstance(children, list) or not children:
             raise ValidationError(f"{op} requires a nonempty list")
-        for child in children:
-            _validate_filter(child, manifest, depth=depth + 1, leaves=leaves)
+        for index, child in enumerate(children):
+            _validate_filter(
+                child, manifest, depth=depth + 1, leaves=leaves, path=f"{path}.{op}[{index}]"
+            )
         return
+    if not isinstance(expr.get("op"), str):
+        raise ValidationError("comparison op must be a string", path=f"{path}.op")
+    if not isinstance(expr.get("field"), str):
+        raise ValidationError("comparison field must be a string", path=f"{path}.field")
     null_test = expr.get("op") in NULL_TESTS
     if keys != ({"field", "op"} if null_test else {"field", "op", "value"}):
         raise ValidationError(
@@ -90,7 +115,7 @@ def _validate_filter(
         if isinstance(candidate, float) and not np.isfinite(candidate):
             raise ValidationError("numeric filter values must be finite")
         if not _matches_type(candidate, field_type):
-            raise ValidationError(f"value {candidate!r} does not match {field_type.value}")
+            raise ValidationError(f"filter value does not match {field_type.value}")
         if (
             field_type == FieldType.INTEGER
             and not np.iinfo(np.int64).min <= candidate <= np.iinfo(np.int64).max

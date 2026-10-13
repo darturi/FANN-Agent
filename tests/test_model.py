@@ -2,6 +2,7 @@ from decimal import Decimal
 from types import SimpleNamespace
 
 import pytest
+from minisweagent.exceptions import FormatError
 
 from fannagent.budget import Budget
 from fannagent.config import ModelConfig
@@ -54,7 +55,7 @@ def test_response_is_billed_before_parse_failure(tmp_path):
         choices=[],
     )
     model = BudgetedModel(config, budget, lambda **kw: response)
-    with pytest.raises(IndexError):
+    with pytest.raises(FormatError):
         model.query([{"role": "user", "content": "hi"}])
     assert Decimal(budget.summary()["committed_usd"]) == Decimal(".0002")
 
