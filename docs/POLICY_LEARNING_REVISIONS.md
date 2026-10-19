@@ -1,6 +1,6 @@
 # Policy learning and evaluation revision plan
 
-Prepared October 19, 2026. Status: planned; implementation has not started.
+Prepared October 19, 2026. Status: Stage 1 implemented and verified on `feat/measured-policy-feedback`; Stage 2 awaits verified feedback from the running experiment. See [offline policy learning tools](OFFLINE_LEARNING.md) for usage and the [verification record](verification/offline-learning-v1.json) for checks and evidence identities.
 
 The next revision should give FANNAgent reliable tools for learning inexpensive filtered ANN stopping policies from measured feedback. The first milestone is a candidate with measured training latency savings at the declared recall tolerance, followed by a frozen evaluation on the existing confirmation split. Prepare the learning tools alongside the current Torch batch and use its returned measurements to choose subsequent changes.
 
@@ -48,6 +48,10 @@ Report measured safe and failing stops, unmeasured stops, continued queries, per
 Keep fitting and scoring separately callable so both an agent and conventional methods can use them. Include a deterministic fitter over the same bounded policy language. Keep the permitted features and policy complexity fixed for the initial comparison. Evaluate generalization with vector groups held apart, with all filter variants of a vector in the same fold.
 
 **Completion criterion:** the offline tool reproduces decisions from the actual interpreter on fixtures and existing training exports, preserves unknown labels, enforces feature qualification and emits reproducible reports without confirmation access.
+
+**Completed October 19:** added the versioned training corpus, data-only source importer, shared-interpreter evaluator, explicit missing-label requests, measured timing assessor, deterministic tree fitter with vector-group validation, information-conflict diagnostics and a separate content-addressed candidate archive. The full non-integration suite passed 193 tests; lint and the new module's type checks passed. All six original trees reproduced their recorded first decisions on 300 queries each, with zero disagreements. All 52 protected package and archive files remained unchanged.
+
+The saved evidence contains 2,397 actual stopping outcomes, but it does not cover every proposed stop. The offline fit remains provisional; no measured latency benefit or acceptance has been established. Generated local corpus, fit, assessment and archive artifacts are retained under the ignored `agent/runs/learning-v1/` directory. Raw-result and receipt verification for the returned batch remains Stage 2 work.
 
 ### Stage 2 Incorporate the returned Torch measurements
 

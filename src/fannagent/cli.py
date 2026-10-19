@@ -13,6 +13,7 @@ from .budget import Budget
 from .config import ModelConfig, load_config
 from .controller import explore, open_run
 from .errors import AgentError
+from .learning.cli import app as learning_app
 from .store import ReadOnlyStore
 from .study import Study
 
@@ -256,6 +257,8 @@ def clean(run: Path = Path("runs/default")):
 
 backends_app = typer.Typer(no_args_is_help=True)
 app.add_typer(backends_app, name="backends")
+
+app.add_typer(learning_app, name="learning")
 
 
 @backends_app.command("list")

@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "scope": "Stage 1 offline learning implementation",
+  "branch": "feat/measured-policy-feedback",
+  "source_checkpoint": "eb6da8e",
+  "checks": {
+    "pytest": {
+      "command": ".venv/bin/python -m pytest tests -m 'not integration' -q",
+      "passed": 193,
+      "deselected": 1,
+      "warnings": 1,
+      "local_sockets_required": true
+    },
+    "ruff": {
+      "command": ".venv/bin/ruff check src/fannagent/learning src/fannagent/cli.py tests/learning_cases.py tests/test_learning.py tests/test_learning_import.py",
+      "status": "passed"
+    },
+    "mypy": {
+      "command": ".venv/bin/mypy src/fannagent/learning --check-untyped-defs --follow-imports=silent --ignore-missing-imports",
+      "source_files": 11,
+      "status": "passed"
+    },
+    "diff_check": "passed"
+  },
+  "source_evidence": {
+    "package_manifest_sha256": "c4e92f5e5a0f99cfb9e8926f4bc43540950e6bd7b9ae739b2a4d05a368b86ae0",
+    "training_export_sha256": "8d11d2dc27087c96b9fbded006712b8a7426b39ef6bfec570a4c9a306dec89d5",
+    "normalized_evidence_hash": "e3d44fb51f92bf0b3616afc7d1305ab253f7d52bc516dce415a74d86d624f173",
+    "runtime_profile_hash": "3d869e5b919b231f913209fe33ec6b829e7b990cf4666a632d092556ff51958d",
+    "queries": 300,
+    "independent_groups": 100,
+    "actual_stopping_outcomes": 2397
+  },
+  "existing_candidate_replay": [
+    {
+      "candidate": "tree-d2-r5",
+      "policy_hash": "4198321646a2a75ea8311ce0c7e28006298d8a21857f003fd7223a4d143757b7",
+      "queries": 300,
+      "first_stop_disagreements": 0,
+      "statuses": {
+        "measured_preserving": 49,
+        "measured_recall_loss": 38,
+        "unknown_stop": 213
+      },
+      "assessment_hash": "3923e1c44f773034c162d9dd6f5d64780c0475fe0d3532f26a9354db56b1ca1f"
+    },
+    {
+      "candidate": "tree-d2-r20",
+      "policy_hash": "8e1e374cbd2a910993682a06de89557226c60b4bce100de01c18adc0d967fee3",
+      "queries": 300,
+      "first_stop_disagreements": 0,
+      "statuses": {
+        "continued": 200,
+        "measured_preserving": 24,
+        "measured_recall_loss": 5,
+        "unknown_stop": 71
+      },
+      "assessment_hash": "0585bad98b3d98654ebc6019224d8d4b3bb4c8a6be641a52d1d1b13af2e05837"
+    },
+    {
+      "candidate": "tree-d2-r80",
+      "policy_hash": "87a88fb7c88fa9601d63429baaac7af67f760bdaf00d645c308e67345741ea67",
+      "queries": 300,
+      "first_stop_disagreements": 0,
+      "statuses": {
+        "measured_preserving": 12,
+        "unknown_stop": 288
+      },
+      "assessment_hash": "1a1705743f74653dcbcad3164c052d472e41359a50eb7306a9741d41a8d589b5"
+    },
+    {
+      "candidate": "tree-d3-r5",
+      "policy_hash": "fb905860c9231165b2c1293012a18d2a7acb8e3a85a859333d3f1a763a70f5b0",
+      "queries": 300,
+      "first_stop_disagreements": 0,
+      "statuses": {
+        "invalid_result": 5,
+        "measured_preserving": 61,
+        "measured_recall_loss": 36,
+        "unknown_stop": 198
+      },
+      "assessment_hash": "9e4e6da28908be1505bcfaef7868829037b742d3ca7866443ea7a3b6d7977f4a"
+    },
+    {
+      "candidate": "tree-d3-r20",
+      "policy_hash": "e151f170d3492b35e848ff338e7082c0438c5ba760d1a5a6b15fd83422ec7d8d",
+      "queries": 300,
+      "first_stop_disagreements": 0,
+      "statuses": {
+        "measured_preserving": 32,
+        "measured_recall_loss": 5,
+        "unknown_stop": 263
+      },
+      "assessment_hash": "f3073e1ede7ca74ad24876e56b6f0f89a382e9f7bbe523658551bb8d3a93041c"
+    },
+    {
+      "candidate": "tree-d3-r80",
+      "policy_hash": "19e40a0b404919d70cfa9cf2fcd5e1ee4f444c20c09a9689275609a6598e9c83",
+      "queries": 300,
+      "first_stop_disagreements": 0,
+      "statuses": {
+        "continued": 54,
+        "measured_preserving": 12,
+        "unknown_stop": 234
+      },
+      "assessment_hash": "a9db21b7cb186cdf3ba2ad9aebeb8d07e9d09a9b6bed856aba7be65662550332"
+    }
+  ],
+  "offline_fit": {
+    "configuration": {
+      "depth": 2,
+      "folds": 5,
+      "minimum_leaf_groups": 8,
+      "risk_weight": 20.0,
+      "seed": 20261019
+    },
+    "policy_hash": "03a21918265581bdd349c1451578aa921515b4a7f0196b3771e78a288a9545f1",
+    "actual_labels_used": 2397,
+    "group_folds": 5,
+    "overall": {
+      "counts": {
+        "continued": 200,
+        "measured_preserving": 24,
+        "measured_recall_loss": 5,
+        "unknown_stop": 71
+      },
+      "independent_groups": 100,
+      "mean_observed_recall_delta": -0.0039301310043668115,
+      "mean_predicted_work": 7034.583333333333,
+      "observed_quality_queries": 229,
+      "quality_coverage_complete": false,
+      "queries": 300,
+      "work_is_latency": false
+    },
+    "timings": {
+      "activation-cold": {
+        "pairs": 0,
+        "status": "unmeasured",
+        "training_feasible": null
+      },
+      "reused-warm": {
+        "pairs": 0,
+        "status": "unmeasured",
+        "training_feasible": null
+      }
+    },
+    "canonical_acceptance_established": false
+  },
+  "archive_smoke": {
+    "receipt": "6852d2ed0f54a947db987e020880599cb581ff6b3aef55b598b8411d4e6b0c28",
+    "published": true,
+    "namespace": "separate learning archive"
+  },
+  "preservation": {
+    "protected_source_files": 52,
+    "source_inventory_digest": "9b5e9f7819f8ec13c5592daad0e8add5e234629b3ee2bfc4383b8fe561923827",
+    "changed_files": [],
+    "submitted_package_unchanged": true,
+    "other_repositories_clean": true,
+    "new_model_calls": 0,
+    "new_database_queries": 0,
+    "new_torch_jobs": 0,
+    "canonical_acceptance_changed": false
+  },
+  "local_generated_artifacts": "agent/runs/learning-v1 (ignored by Git)",
+  "pending": "Stage 2: verify returned raw results and receipts, then normalize additional actual outcomes and cold/reused timing pairs. No performance or acceptance claim follows from this offline check."
+}

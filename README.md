@@ -69,6 +69,9 @@ change the default-relative recall objective or final acceptance criteria.
 The [policy learning and evaluation revision plan](docs/POLICY_LEARNING_REVISIONS.md) describes
 the next measured-feedback tools, evidence accounting, candidate archive, and comparison stages.
 It preserves the current Torch experiment and introduces changes through a separate version.
+The experimental [offline learning tools](docs/OFFLINE_LEARNING.md) provide measured-label fitting,
+runtime-interpreter replay, structured feedback and a separate candidate archive without model or
+database calls.
 
 Malformed model tool calls, shell syntax, tool arguments, queries, filters, and policies receive bounded `error_info` feedback with field details and a correction hint. Rejected inputs are not rewritten or replayed. The next model turn can issue a corrected request. Three consecutive invalid turns end exploration with `invalid_submission_limit` and a `no_recommendation` report. A fully successful turn resets the streak; other execution failures do not change it. Resume preserves the streak, and reaching the limit is terminal for that run. Model attempts remain billed, including malformed responses. Existing accepted policies take precedence, while this limit does not automatically freeze a candidate checkpoint.
 
