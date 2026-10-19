@@ -1,6 +1,6 @@
 # Policy learning and evaluation revision plan
 
-Prepared October 19, 2026. Status: Stage 1 implemented and verified on `feat/measured-policy-feedback`; Stage 2 awaits verified feedback from the running experiment. See [offline policy learning tools](OFFLINE_LEARNING.md) for usage and the [verification record](verification/offline-learning-v1.json) for checks and evidence identities.
+Prepared October 19, 2026. Status: Stage 1 committed as `4a0b419`; Stage 2 import and scorer parity implemented; Stage 3 development qualification and broker interface implemented on `feat/measured-policy-feedback`. The measured-candidate milestone remains open. A separate `predicate-context-v1` study is prepared for native qualification. See [offline policy learning tools](OFFLINE_LEARNING.md) for usage, the [Stage 1 verification record](verification/offline-learning-v1.json) for the original checkpoint, and the [Stage 2/3 verification record](verification/offline-learning-v2.json) for the returned-data pass.
 
 The next revision should give FANNAgent reliable tools for learning inexpensive filtered ANN stopping policies from measured feedback. The first milestone is a candidate with measured training latency savings at the declared recall tolerance, followed by a frozen evaluation on the existing confirmation split. Prepare the learning tools alongside the current Torch batch and use its returned measurements to choose subsequent changes.
 
@@ -71,6 +71,8 @@ Keep installation costs visible. Use the current reported latency as the primary
 
 **Completion criterion:** one reproducible report identifies which candidates merit further development and whether failures arise from measurement cost, poor stopping decisions, insufficient labels or missing information. An unsuccessful batch remains a usable outcome.
 
+**Implementation update October 19:** the returned-feedback adapter verifies both archives, all raw file identities, original and acquired labels, runtime getters, actual results, interpreter decisions and complete timing coverage. It normalizes 3,884 actual stopping outcomes and 57,600 pairs across 16 arms and three allocations. Independent scorer parity reproduces all saved summaries and feasibility decisions within `1e-12` roundoff. The six learned candidates fail qualification; the per-query hindsight oracle remains a retrospective comparator. The benchmark report retains native and matched-continue comparisons separately.
+
 ### Stage 3 Align learning qualification and resume feedback rounds
 
 Audit the learner and broker qualification path against the study objective. Distinguish a conservative proposal label such as `preserves_default` from aggregate empirical acceptance at tolerance 0.005. Preserve every measured per-query recall loss in reports. Replace any unconditional zero-loss proposal rejection only in the new study version, with tests proving that the declared aggregate constraints remain enforced. Keep legacy locks and serving acceptance behavior unchanged.
@@ -83,6 +85,10 @@ Resume model work only as an explicitly executed next stage under the original d
 
 **Completion criterion:** a frozen candidate demonstrates measured training savings at the declared recall criterion, or the round ends with a specific evidence-backed abstention and a bounded next investigation.
 
+**Implementation update October 19:** `measured-feedback-v2` supplies aggregate recall qualification, bounded failure feedback and a broker-compatible tool interface. It can archive provisional candidates and immutably freeze a measured candidate for later confirmation without changing old locks or serving gates. A separately declared four-setting conventional tree grid uses the returned labels. New first stops remain measurement requests; model execution and new Torch measurements have not been resumed. This implements the development interface, not the completion criterion above.
+
+The offline pass archived the six failed original trees and four new conventional fits. The new fits contain 49, 0, 32 and 11 unknown stops respectively; the zero-request fit always continues. Deduplication leaves 49 distinct actual-stop requests across 49 learning queries, with at most one requested checkpoint per query. The saved plan is prepared for measurement and makes no latency claim. All 211 non-integration tests, lint and type checks passed; 125 protected files and the original 42-attempt ledger were verified unchanged.
+
 ### Stage 4 Test information sufficiency when failures persist
 
 Use measured failures to determine whether the current feature interface can distinguish cases that require different stopping decisions. Repeated fitting cannot separate identical allowed inputs. Quantify the conflicting states and their recall consequences before proposing additional runtime observations.
@@ -90,6 +96,8 @@ Use measured failures to determine whether the current feature interface can dis
 If needed, test one cheap query-side input, such as the actual predicate threshold or a permitted selectivity summary, in a separate feature ablation. Verify the getter, scope, availability, inference cost and prefix behavior before exposing it to the learner. Freeze a new feature profile and give the same information to the conventional baselines. Executor feedback and richer frontier statistics require their own measured engineering justification.
 
 **Completion criterion:** the added information improves measured quality or latency enough to pay its collection cost. Otherwise retain the simpler interface and report its limitations.
+
+**Narrow ablation brought forward:** the returned evidence has identical qualified trajectories for `votes32` and `votes108` for all 100 vectors, including 275 conflicting measured native-preservation states across 82 vectors. This supports a controlled predicate-context test without proving that a common conservative policy cannot succeed. `prepare-ablation` creates the separate `predicate-context-v1` manifest, actual query-context records and planned profile. Both arms share evidence, folds, fitting grid, policy limits, quality criteria and the original ledger. The context getter remains unqualified pending native implementation, equivalence checks and overhead measurements; existing timings are not transferred to that arm.
 
 ### Stage 5 Evaluate shape knowledge as a separate mechanism
 

@@ -50,7 +50,7 @@ class CandidateArchive:
         with self.store.lease("run"):
             corpus_ref = self.store.put(
                 "learning_corpus",
-                evaluator.corpus.model_dump(mode="json"),
+                evaluator.evidence.model_dump(mode="json"),
                 scope="development",
                 limit=MAX_ARCHIVE_BYTES,
             )
@@ -116,3 +116,34 @@ class CandidateArchive:
             ],
             "next_offset": offset + limit if len(rows) > limit else None,
         }
+
+    def freeze_for_confirmation(self, receipt_ref: str):
+        """Freeze one measured training candidate; this never runs confirmation."""
+        if self.readonly:
+            raise AgentError("archive is read-only")
+        saved = self.read(receipt_ref)
+        assessment = saved["assessment"]
+        qualification = assessment.get("learning_qualification", {})
+        required = ("activation-cold", "reused-warm")
+        if not qualification.get("aggregate_quality_passed") or not all(
+            qualification.get("regimes", {}).get(r, {}).get("training_feasible") is True
+            for r in required
+        ):
+            raise AgentError("candidate needs complete aggregate quality and measured timing gains")
+        selection = {
+            "schema_version": 1,
+            "scope": "learning",
+            "status": "frozen_for_confirmation",
+            "receipt": receipt_ref,
+            "policy_hash": assessment["policy_hash"],
+            "evidence_hash": assessment["evidence_hash"],
+            "required_regimes": list(required),
+            "confirmation_consumed": False,
+            "canonical_acceptance_established": False,
+        }
+        with self.store.lease("run"):
+            previous = self.store.get("learning_frozen_candidate")
+            if previous is not None and previous != selection:
+                raise AgentError("this study already froze a different candidate")
+            self.store.set("learning_frozen_candidate", selection)
+        return selection

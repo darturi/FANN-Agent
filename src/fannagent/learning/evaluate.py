@@ -8,7 +8,8 @@ from ..api.primitives.errors import ValidationError as PolicyError
 from ..api.primitives.interpreter import PolicyDecision
 from ..api.primitives.interpreter import evaluate_policy as interpret
 from ..store import digest
-from .models import FeedbackCorpus
+from .qualification import replay_quality
+from .returned_models import LearningEvidence, ReturnedFeedback
 from .timings import measured_timings
 
 
@@ -50,12 +51,18 @@ def decision_depth(node) -> int:
 class OfflineEvaluator:
     """Replay decisions only; unknown stopped recall and latency stay unknown."""
 
-    def __init__(self, corpus: FeedbackCorpus):
+    def __init__(self, corpus: LearningEvidence):
         # Own a validated copy so caller mutations cannot silently change cached identity.
-        self.corpus = FeedbackCorpus.model_validate_json(corpus.model_dump_json())
-        self.evidence_hash = self.corpus.evidence_hash
+        self.evidence = type(corpus).model_validate_json(corpus.model_dump_json())
+        self.corpus = (
+            self.evidence.corpus if isinstance(self.evidence, ReturnedFeedback) else self.evidence
+        )
+        self.benchmark = (
+            self.evidence.benchmark if isinstance(self.evidence, ReturnedFeedback) else None
+        )
+        self.evidence_hash = self.evidence.evidence_hash
         self.float_features = frozenset(
-            n for n, f in corpus.profile.runtime_features.items() if f.kind == "float"
+            n for n, f in self.corpus.profile.runtime_features.items() if f.kind == "float"
         )
 
     def validate(self, raw: dict | PolicyArtifact) -> PolicyArtifact:
@@ -198,7 +205,7 @@ class OfflineEvaluator:
 
         timings = {
             regime: (
-                measured_timings(self.corpus, policy.policy_hash, regime)
+                measured_timings(self.corpus, policy.policy_hash, regime, self.benchmark)
                 if groups is None
                 else {"status": "group_subset", "training_feasible": None}
             )
@@ -230,6 +237,7 @@ class OfflineEvaluator:
             "decisions": rows,
             "measurement_requests": requests,
             "timings": timings,
+            "learning_qualification": replay_quality(self.corpus, rows, timings),
             "feedback": {
                 "measured_failures": failures[:maximum_examples],
                 "unknown_stops": requests[:maximum_examples],

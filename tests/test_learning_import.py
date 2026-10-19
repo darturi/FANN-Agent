@@ -23,8 +23,8 @@ def repin(package):
     save(package / "manifest.json", {"schema_version": 1, "files": files})
 
 
-def package_fixture(tmp_path):
-    corpus = make_corpus()
+def package_fixture(tmp_path, groups=6):
+    corpus = make_corpus(groups)
     package = tmp_path / "training-package"
     package.mkdir()
     config = {
@@ -34,7 +34,7 @@ def package_fixture(tmp_path):
         "confirmation_queries_allowed": 0,
         "maximum_model_calls_on_Torch": 0,
         "filters": ["plain", "filtered"],
-        "learning_groups": 6,
+        "learning_groups": groups,
         "recall_tolerance": 0.005,
         "minimum_native_recall": 0.95,
         "bootstrap_samples": 300,

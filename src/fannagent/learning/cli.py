@@ -7,19 +7,23 @@ import typer
 from pydantic import ValidationError
 
 from ..api import AgentError
+from .ablation import prepare_ablation
 from .archive import CandidateArchive
+from .benchmark import benchmark_report
 from .describe import describe_corpus
 from .evaluate import OfflineEvaluator
 from .files import read_json, write_new
 from .fit import FitConfig, fit_policy
 from .importers import import_torch_training
-from .models import FeedbackCorpus
+from .returned import import_returned_feedback, read_under, scorer_parity
+from .returned_models import LearningEvidence, ReturnedFeedback, parse_evidence
+from .tools import LearningTools
 
 app = typer.Typer(no_args_is_help=True, pretty_exceptions_enable=False)
 
 
-def load_corpus(path: Path) -> FeedbackCorpus:
-    return FeedbackCorpus.model_validate(read_json(path))
+def load_corpus(path: Path) -> LearningEvidence:
+    return parse_evidence(read_json(path))
 
 
 def emit(value, output: Path | None = None):
@@ -48,7 +52,101 @@ def policy_from_file(path: Path, evaluator: OfflineEvaluator):
 @app.command("inspect")
 def inspect_corpus(corpus: Path):
     """Show training coverage, qualified features and observed information conflicts."""
-    emit(describe_corpus(load_corpus(corpus)))
+    evidence = load_corpus(corpus)
+    value = describe_corpus(evidence.corpus if isinstance(evidence, ReturnedFeedback) else evidence)
+    value["evidence_hash"] = evidence.evidence_hash
+    if isinstance(evidence, ReturnedFeedback):
+        value["returned_import"] = evidence.import_receipt
+    emit(value)
+
+
+@app.command("import-feedback")
+def import_feedback(
+    package: Path,
+    campaign: Path,
+    verification: Path = typer.Option(..., "--verification"),
+    output: Path = typer.Option(..., "--output"),
+    backend: str = "pgvector",
+):
+    """Verify both source archives, raw outcomes and scorer parity; import training only."""
+    from ..backends import extension
+
+    profile = extension(backend).manifest().runtime_profile
+    if profile is None:
+        raise AgentError("backend has no runtime policy profile")
+    result = import_returned_feedback(package, campaign, verification, profile)
+    emit(result.model_dump(mode="json"), output)
+    typer.echo(
+        json.dumps(
+            {"evidence_hash": result.evidence_hash, "import_receipt": result.import_receipt},
+            indent=2,
+        )
+    )
+
+
+@app.command("qualify")
+def qualify(corpus: Path, policy: Path, output: Path | None = None):
+    """Apply aggregate training quality and measured timing gates; never deploy."""
+    evaluator = OfflineEvaluator(load_corpus(corpus))
+    raw, _ = policy_from_file(policy, evaluator)
+    report = evaluator.evaluate(raw)
+    emit(
+        {
+            "evidence_hash": evaluator.evidence_hash,
+            "policy_hash": report["policy_hash"],
+            "qualification": report["learning_qualification"],
+            "timings": report["timings"],
+            "canonical_acceptance_established": False,
+        },
+        output,
+    )
+
+
+@app.command("parity")
+def parity(corpus: Path, campaign: Path, output: Path | None = None):
+    """Reproduce every saved block/pooled statistic from normalized returned pairs."""
+    import hashlib
+
+    from .files import decode
+
+    evidence = load_corpus(corpus)
+    if not isinstance(evidence, ReturnedFeedback):
+        raise AgentError("parity requires returned feedback")
+
+    def read(name):
+        content = read_under(campaign.resolve(), name)
+        if hashlib.sha256(content).hexdigest() != evidence.corpus.source_hashes.get(
+            "returned/" + name
+        ):
+            raise AgentError("saved parity source hash differs")
+        return decode(content)
+
+    emit(scorer_parity(evidence, read("analysis/performance.json"), reader=read), output)
+
+
+@app.command("benchmark")
+def benchmark(corpus: Path, output: Path = typer.Option(..., "--output")):
+    """Report native/matched-control comparisons and mark retrospective oracle arms."""
+    evidence = load_corpus(corpus)
+    if not isinstance(evidence, ReturnedFeedback):
+        raise AgentError("benchmark requires returned feedback")
+    emit(benchmark_report(evidence), output)
+
+
+@app.command("prepare-ablation")
+def ablation(corpus: Path, package: Path, output: Path = typer.Option(..., "--output")):
+    """Prepare predicate-context-v1 without declaring its native getter qualified."""
+    evidence = load_corpus(corpus)
+    if not isinstance(evidence, ReturnedFeedback):
+        raise AgentError("ablation preparation requires returned feedback")
+    emit(prepare_ablation(evidence, package, output))
+
+
+@app.command("tool")
+def tool(corpus: Path, request: Path, archive: Path | None = None):
+    """Call the bounded measured-feedback-v2 interface using a JSON request."""
+    target = CandidateArchive(archive, create=not archive.exists()) if archive is not None else None
+    emit(LearningTools(OfflineEvaluator(load_corpus(corpus)), target).call(read_json(request)))
 
 
 @app.command("import-torch")

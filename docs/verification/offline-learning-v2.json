@@ -1,0 +1,174 @@
+{
+  "ablation": {
+    "native_qualified": false,
+    "status": "prepared_awaiting_native_qualification",
+    "study_hash": "cfeef8e9c67d4cca2528c8b71f2532843fae8da6934a9423933ed769560ff76f"
+  },
+  "archived_candidates": 10,
+  "canonical_acceptance_established": false,
+  "confirmation_consumed": false,
+  "date": "2026-10-19",
+  "evidence_hash": "ab4b45cbf9afcc712f58d32d47bcd65e751d05da084bccb93b999292d61db283",
+  "format": "fannagent.learning.stage23-verification.v1",
+  "import_receipt": {
+    "actual_stop_labels": 3884,
+    "budget_receipt": {
+      "additional_model_calls_this_package": 0,
+      "committed_usd": "3.174666",
+      "confirmed_charges_usd": "2.568458",
+      "future_model_calls": "Must use the original durable ledger; no new per-round budget or credential on HPC.",
+      "learning_receipt_sha256": "769d27e20d9817244af124750a97ce3285da64ffd7cf6c5ed52aa4304f9abfd9",
+      "original_ceiling_usd": "15",
+      "provider_attempts": 42,
+      "remaining_usd": "11.825334",
+      "shared_ledger": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-agent/state.sqlite3",
+      "uncertain_reserve_usd": "0.606208"
+    },
+    "canonical_acceptance_established": false,
+    "confirmation_queries": 0,
+    "new_actual_labels": 1487,
+    "provider_calls": 0,
+    "retained_pairs": 57600,
+    "schema_version": 1,
+    "scope": "learning",
+    "scorer_parity": {
+      "allocation_blocks": 3,
+      "arms": 16,
+      "candidate_feasibility": {
+        "tree-d2-r20": {
+          "activation-cold": false,
+          "reused-warm": false
+        },
+        "tree-d2-r5": {
+          "activation-cold": false,
+          "reused-warm": false
+        },
+        "tree-d2-r80": {
+          "activation-cold": false,
+          "reused-warm": false
+        },
+        "tree-d3-r20": {
+          "activation-cold": false,
+          "reused-warm": false
+        },
+        "tree-d3-r5": {
+          "activation-cold": false,
+          "reused-warm": false
+        },
+        "tree-d3-r80": {
+          "activation-cold": false,
+          "reused-warm": false
+        }
+      },
+      "maximum_absolute_difference": 4.440892098500626e-15,
+      "oracle_is_deployable": false,
+      "rounding_fields": 4743,
+      "status": "passed",
+      "tolerance": 1e-12
+    },
+    "source_corpus_hash": "e3d44fb51f92bf0b3616afc7d1305ab253f7d52bc516dce415a74d86d624f173",
+    "status": "verified"
+  },
+  "ledger_attempts_unchanged": 42,
+  "new_database_queries": 0,
+  "new_fit_grid": {
+    "depth": [
+      2,
+      3
+    ],
+    "folds": 5,
+    "minimum_leaf_groups": 8,
+    "risk_weight": [
+      20,
+      80
+    ]
+  },
+  "new_fits": [
+    {
+      "counts": {
+        "continued": 204,
+        "measured_preserving": 41,
+        "measured_recall_loss": 6,
+        "unknown_stop": 49
+      },
+      "measurement_requests": 49,
+      "name": "cart-d2-r20"
+    },
+    {
+      "counts": {
+        "continued": 300
+      },
+      "measurement_requests": 0,
+      "name": "cart-d2-r80"
+    },
+    {
+      "counts": {
+        "continued": 228,
+        "measured_preserving": 36,
+        "measured_recall_loss": 4,
+        "unknown_stop": 32
+      },
+      "measurement_requests": 32,
+      "name": "cart-d3-r20"
+    },
+    {
+      "counts": {
+        "continued": 276,
+        "measured_preserving": 13,
+        "unknown_stop": 11
+      },
+      "measurement_requests": 11,
+      "name": "cart-d3-r80"
+    }
+  ],
+  "new_model_calls": 0,
+  "new_torch_jobs": 0,
+  "protected_files_unchanged": 125,
+  "source_commit": "4a0b419",
+  "checks": {
+    "pytest": {
+      "command": ".venv/bin/python -m pytest tests -m 'not integration' -q",
+      "passed": 211,
+      "deselected": 1,
+      "warnings": 1,
+      "local_socket_access": true
+    },
+    "ruff": "passed",
+    "mypy": {
+      "status": "passed",
+      "source_files": 18
+    },
+    "diff_check": "passed"
+  },
+  "planned_predicate_context": {
+    "feature": "query_predicate_threshold",
+    "actual_query_records": 300,
+    "observed_threshold_values": [
+      0,
+      32,
+      108
+    ],
+    "shared_vector_group_folds": 100,
+    "planned_profile_hash": "013de92ffffa8e1d6a62d09586cb322bb0c2342b926c7e947a56a8535710ca14",
+    "native_qualified": false,
+    "existing_timings_apply": false
+  },
+  "next_training_measurements": {
+    "distinct_query_checkpoint_requests": 49,
+    "queries": 49,
+    "maximum_requests_per_query": 1,
+    "plan_hash": "f711911f3d06b81f774fcd9ff07a4864e9ed2b445b49f3ec80b399fd1a6ad65c",
+    "status": "prepared_not_executed"
+  },
+  "source_data_and_old_study_locks_preserved": true,
+  "generated_local_artifacts": "agent/runs/learning-v2 (ignored by Git)",
+  "remaining_work": [
+    "Measure new first-stop outcomes and candidate timing before any freeze",
+    "Implement and qualify the native predicate-context getter; verify equivalence and overhead",
+    "Execute a bounded learning round under the original ledger if needed",
+    "Run independent confirmation only after a qualified candidate is frozen"
+  ],
+  "normalized_schema_reloaded_with_completeness_checks": true,
+  "archive_receipts_verified": 10,
+  "frozen_candidate": null
+}

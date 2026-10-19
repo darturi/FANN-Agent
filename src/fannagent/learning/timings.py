@@ -9,9 +9,18 @@ import numpy as np
 
 from ..evaluation import bootstrap
 from .models import FeedbackCorpus
+from .returned_models import BenchmarkEvidence
+from .statistics import feasible, with_filters
 
 
-def measured_timings(corpus: FeedbackCorpus, policy_hash: str, regime: str) -> dict:
+def measured_timings(
+    corpus: FeedbackCorpus,
+    policy_hash: str,
+    regime: str,
+    benchmark: BenchmarkEvidence | None = None,
+) -> dict:
+    if benchmark is not None:
+        return benchmark_timings(corpus, benchmark, policy_hash, regime)
     pairs = [p for p in corpus.timings if p.policy_hash == policy_hash and p.regime == regime]
     schedule = corpus.timing_schedule
     if schedule is None:
@@ -99,6 +108,37 @@ def measured_timings(corpus: FeedbackCorpus, policy_hash: str, regime: str) -> d
         "per_filter": per_filter,
         "per_block": {
             str(b): summarize([p for p in pairs if p.block == b]) for b in schedule.blocks
+        },
+        "scope": "training only; no confirmation or serving acceptance",
+    }
+
+
+def benchmark_timings(corpus, benchmark, policy_hash, regime):
+    # An oracle is a query-dependent retrospective arm, never a global policy.
+    from ..api import validate_policy
+
+    arms = [
+        a
+        for a in benchmark.arms
+        if a.policy is not None
+        and validate_policy(a.policy, corpus.profile).policy_hash == policy_hash
+    ]
+    if not arms:
+        return {"status": "unmeasured", "training_feasible": None, "pairs": 0}
+    arm = arms[0]
+    pairs = [p for p in benchmark.pairs if p.arm == arm.arm and p.regime == regime]
+    report = with_filters(pairs, corpus.queries, corpus.objective)
+    return {
+        "status": "measured",
+        "training_feasible": feasible(report, corpus.objective),
+        "pairs": len(pairs),
+        "arm": arm.arm,
+        "report": report,
+        "per_block": {
+            str(b): with_filters(
+                [p for p in pairs if p.block == b], corpus.queries, corpus.objective
+            )
+            for b in benchmark.schedule.blocks
         },
         "scope": "training only; no confirmation or serving acceptance",
     }
