@@ -1,5 +1,11 @@
 # Policy learning and evaluation revision plan
 
+The separately designed [aggressive proposal experiment](AGGRESSIVE_POLICY_PROPOSAL_EXPERIMENT.md)
+tests acceptance-oriented versus exploratory agent selection with identical
+evidence, features and budgets. It permits recall-losing training proposals while
+retaining the existing final overall/per-filter recall and measured latency
+criteria. Its status is design only; no model or Torch execution has occurred.
+
 Prepared October 19, 2026. Status: Stage 1 committed as `4a0b419`; Stage 2 import and scorer parity implemented; Stage 3 development qualification and broker interface implemented on `feat/measured-policy-feedback`. The measured-candidate milestone remains open. A separate `predicate-context-v1` study is prepared for native qualification. See [offline policy learning tools](OFFLINE_LEARNING.md) for usage, the [Stage 1 verification record](verification/offline-learning-v1.json) for the original checkpoint, and the [Stage 2/3 verification record](verification/offline-learning-v2.json) for the returned-data pass.
 
 The next revision should give FANNAgent reliable tools for learning inexpensive filtered ANN stopping policies from measured feedback. The first milestone is a candidate with measured training latency savings at the declared recall tolerance, followed by a frozen evaluation on the existing confirmation split. Prepare the learning tools alongside the current Torch batch and use its returned measurements to choose subsequent changes.

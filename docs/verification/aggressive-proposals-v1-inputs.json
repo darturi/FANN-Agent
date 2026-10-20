@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "experiment": "aggressive-policy-proposals-v1",
+  "prepared_date_local": "2026-10-20",
+  "timezone": "America/New_York",
+  "status": "design_only_not_implemented_or_run",
+  "plan": "docs/AGGRESSIVE_POLICY_PROPOSAL_EXPERIMENT.md",
+  "scope": "Design and provenance only. No generated model responses or new scientific outcomes.",
+  "source_checkpoints_before_design": {
+    "agent": {
+      "commit": "3a0ea8bb37b6a293b788793b6f78d3f941eb7c04",
+      "branch": "feat/measured-policy-feedback",
+      "message": "docs: checkpoint verified policy studies and dispatch readiness"
+    },
+    "agent-pgvector": {
+      "commit": "09590fd1937295e69503b92dab3841124aa123c0",
+      "branch": "feat/native-predicate-context",
+      "message": "feat: checkpoint predicate context and optimized policy dispatch"
+    },
+    "harness": {
+      "commit": "2fd3af8d921dbafbc3a72dd8ff46e8701c6373f7",
+      "branch": "main",
+      "message": "refactor: share portable benchmark primitives with FANNAgent"
+    },
+    "mini-bench": {
+      "commit": "7a99e9362c85630ffb18eec136b15a8ce0882c71",
+      "branch": "main",
+      "message": "feat: add filtered query observations and benchmark analysis workflows"
+    }
+  },
+  "external_artifact_notice": "Hashes identify existing local evidence; they do not add ignored runs, trial packages, source archives, database backups or raw results to Git. Preserve those external files separately. The workspace parent is not a Git repository.",
+  "input_files": {
+    "agent/runs/learning-v1/corpus.json": {
+      "sha256": "7777598474186b399d4acb4e50c37ec447cd8b0f51f6e9acd2d1842f9ae11a01",
+      "bytes": 29721512,
+      "git_repository": null
+    },
+    "agent/docs/verification/offline-learning-v1.json": {
+      "sha256": "14b339b13abe35fef28f6b23c87a2b3843cd4c6ac10358a8171799a757ed1cff",
+      "bytes": 5793,
+      "git_repository": "agent"
+    },
+    "agent/docs/verification/offline-learning-v2.json": {
+      "sha256": "97370e41662f01c7c3620d68af06c8725a0242ca02b025d9a7599cad84b95d03",
+      "bytes": 5182,
+      "git_repository": "agent"
+    },
+    "agent-pgvector/verification/dispatch-overhead-v1.json": {
+      "sha256": "ab7d0b57000352f7d5c66e22969b991a3e99b8973ae541979eaa232bb6d80bc6",
+      "bytes": 4081,
+      "git_repository": "agent-pgvector"
+    },
+    "agent-pgvector/verification/insertion-bypass-v1.json": {
+      "sha256": "b2119ccb414f838c6dcdab5ec552ba1f6bab8bf02a8fcc6a4a255ad02163f5be",
+      "bytes": 3543,
+      "git_repository": "agent-pgvector"
+    },
+    "agent-pgvector/verification/predicate-context-v1.json": {
+      "sha256": "1badc273ce7c1ff97218931e187cb96fd2317dd592c44ee17541201b5fcb106e",
+      "bytes": 1603,
+      "git_repository": "agent-pgvector"
+    },
+    "mini-bench/README.md": {
+      "sha256": "c081c960750c5db72d71dfd9655389bee16ca9d548e0f014558e8ac273cfb62d",
+      "bytes": 22222,
+      "git_repository": "mini-bench"
+    },
+    "harness/CHANGELOG.md": {
+      "sha256": "2fb45e49c49713218db6c67f8b547e135b74d6ec6756945a01b8bfa252ca79a0",
+      "bytes": 301,
+      "git_repository": "harness"
+    },
+    "trials/torch-reviews-first/manifest.json": {
+      "sha256": "5538cb6a4bd03da6a00fae4913fdfe9237b481f902bcd15d98666f2e99af070a",
+      "bytes": 955708,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-learning/manifest.json": {
+      "sha256": "0dfb4ec0d194d9835347dc72683a246c806558d7a04bee22d4962ff26f967c6a",
+      "bytes": 4700,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-qualified/manifest.json": {
+      "sha256": "2da6012b1b46c62d522b9d8f5f54808b8cd903015c71fcdaf7bb477b9038f14a",
+      "bytes": 875,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-feedback/manifest.json": {
+      "sha256": "c4e92f5e5a0f99cfb9e8926f4bc43540950e6bd7b9ae739b2a4d05a368b86ae0",
+      "bytes": 5108,
+      "git_repository": null
+    },
+    "trials/torch-reviews-training-stops-v2/manifest.json": {
+      "sha256": "1f64c5d4f7e32c9b765180d69ef62781ddead4d4d33739902bc208049e844d3f",
+      "bytes": 5122,
+      "git_repository": null
+    },
+    "trials/torch-reviews-predicate-ablation-v1/manifest.json": {
+      "sha256": "48da859724dccb224cce19f0342082e79651d0d455723497fb1d1b12e97925e5",
+      "bytes": 15402,
+      "git_repository": null
+    },
+    "trials/torch-reviews-insertion-bypass-v1/manifest.json": {
+      "sha256": "dbec33d4cfe0abb2acc921e6c6c18a89068704ccf52d6dcff5baef055c920a82",
+      "bytes": 19876,
+      "git_repository": null
+    },
+    "trials/torch-reviews-dispatch-overhead-v1/manifest.json": {
+      "sha256": "8dc1bed225675da7ccfcd2304aab46e3a892a0afbafaa6b5602f7424b6144b72",
+      "bytes": 24439,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-learning/model.json": {
+      "sha256": "e0b25d7634874573d9b487647de844ac473eebb194e0ae51546e9540ff8eb1d4",
+      "bytes": 381,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-learning/learn.py": {
+      "sha256": "c3398ccd4690af9f4f52740ddcdaf7ea6e15eb903ee1a045a05e2b76be6c957e",
+      "bytes": 11082,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-qualified/run.py": {
+      "sha256": "ae08e5c17ddf2137c44609072251385ae4e598f65e9ccb7004c9bd4d0413219b",
+      "bytes": 14145,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-qualified/qualified_tools.py": {
+      "sha256": "83ffc6cad905238101575e7f7c7f218dc890edfdf46dbd0c457f5e80ed2e5f7e",
+      "bytes": 2848,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-feedback/fit_candidates.py": {
+      "sha256": "459237042bbe5a067ca0f22d31f3d121f799f135d597930512c579a5a8e9c2f8",
+      "bytes": 7615,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-feedback/inputs/candidates.json": {
+      "sha256": "f3022bd05f4a2bbbc8da2a9ee72b2bac396dc4ded6598103458e08fbc77d3dd6",
+      "bytes": 107240,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-feedback/inputs/training-640-light.jsonl": {
+      "sha256": "8d11d2dc27087c96b9fbded006712b8a7426b39ef6bfec570a4c9a306dec89d5",
+      "bytes": 29577085,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-feedback/inputs/budget-receipt.json": {
+      "sha256": "baabfb973a6c40e59507f8ba8d0b39598856d3428bb42d2f61377fc4c3aceb8c",
+      "bytes": 618,
+      "git_repository": null
+    },
+    "trials/torch-reviews-policy-feedback/inputs/original-learning-receipt.json": {
+      "sha256": "769d27e20d9817244af124750a97ce3285da64ffd7cf6c5ed52aa4304f9abfd9",
+      "bytes": 3364,
+      "git_repository": null
+    },
+    "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-agent-qualified/report.txt": {
+      "sha256": "64f31904a8b4d71e13400acdee8357261948d841c78d179a36293c934c7fafa9",
+      "bytes": 1552,
+      "git_repository": null
+    },
+    "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n-analysis/report.txt": {
+      "sha256": "ee99c02f9643e5d0a392b7dc07f3896b2ab77bcb45f0dc661330542b2455a996",
+      "bytes": 4480,
+      "git_repository": null
+    },
+    "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n-analysis/overview.json": {
+      "sha256": "03e850af36023a7f39410bb8816f8dff82011d571f05ab1ac0956544492a4c25",
+      "bytes": 34550,
+      "git_repository": null
+    },
+    "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru-analysis/report.txt": {
+      "sha256": "79b615f73f7150a3906681d86c35b180302e40888a32b1eed1e9c473480df536",
+      "bytes": 4740,
+      "git_repository": null
+    },
+    "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_-analysis/report.txt": {
+      "sha256": "0451e912f863f6981ebfeee7347537e5304ec4683665f15245992fedcee9db73",
+      "bytes": 9929,
+      "git_repository": null
+    },
+    "trials/torch-reviews-dispatch-overhead-v1.tar.gz.sha256": {
+      "sha256": "7bce47ea96dcebf1a48782d597f11434c3c3a2bb5db814fb49563434a1a78faa",
+      "bytes": 108,
+      "git_repository": null
+    }
+  },
+  "learner_view": {
+    "source_corpus": "agent/runs/learning-v1/corpus.json",
+    "query_count": 300,
+    "independent_vector_groups": 100,
+    "actual_stop_outcomes": 2397,
+    "source_timing_pairs": 0,
+    "qualified_features": [
+      "checkpoint_index",
+      "checkpoint_overshoot",
+      "checkpoint_target",
+      "completed_expansions",
+      "component_layer0_distance_evaluations",
+      "component_unique_discoveries",
+      "component_upper_distance_evaluations",
+      "entry_distance",
+      "frontier_count",
+      "frontier_distance_min",
+      "k",
+      "layer0_distance_evaluations",
+      "layer0_distance_since_checkpoint",
+      "predicate_leaf_count",
+      "queue_pops",
+      "retained_result_capacity",
+      "retained_result_count",
+      "unique_discoveries",
+      "upper_distance_evaluations"
+    ],
+    "collection_groups": [
+      "basic",
+      "work",
+      "queue",
+      "distances"
+    ],
+    "profile_name": "pgvector_same_execution_v4/v1",
+    "maximum_decision_depth_including_guards": 4,
+    "ef_search": 640,
+    "k": 10,
+    "host_only_comparison_tree_count": 6,
+    "exclusions": [
+      "source_hashes and host paths",
+      "raw query vectors",
+      "existing six trees and fitter implementation",
+      "later feedback and candidate timings",
+      "other model transcripts",
+      "confirmation/calibration/final-test data",
+      "actual predicate threshold",
+      "unqualified and full-statistics features"
+    ],
+    "fold_rule": "int(sha256(UTF8(\"20261019/\" + group_id)).hexdigest(), 16) % 5"
+  },
+  "paired_generation": {
+    "conditions": [
+      "acceptance_oriented",
+      "exploratory"
+    ],
+    "replicate_pairs": 3,
+    "model_conversations": 6,
+    "model": "anthropic/claude-sonnet-5-5",
+    "host_order_seed": 20261020,
+    "provider_seed_support_assumed": false,
+    "maximum_export_slots_per_conversation": 6,
+    "maximum_provider_attempts_per_conversation": 12,
+    "inventory_request_checkpoints": [
+      6,
+      12
+    ],
+    "per_conversation_usd_cap": "1.50",
+    "total_additional_usd_cap": "9.00",
+    "original_campaign_usd_cap": "15.00",
+    "last_recorded_original_committed_usd": "3.174666",
+    "last_recorded_original_remaining_usd": "11.825334",
+    "requires_live_ledger_and_conservative_per_request_reservation": true,
+    "budget_censoring_is_not_abstention_evidence": true,
+    "minimum_complete_pairs_for_Torch_stage": 2,
+    "analysis_cpu_cores": 2,
+    "analysis_memory_gib": 4,
+    "maximum_analysis_seconds": 3600,
+    "maximum_sandbox_commands": 120,
+    "maximum_seconds_per_command": 60,
+    "aggressive_manipulation_check": {
+      "minimum_stop_fraction": 0.25,
+      "minimum_predicted_mean_work_reduction": 0.2
+    },
+    "proposal_admission": "Identical structural/qualified-feature checks; recall and proxy latency failure allowed as research proposals.",
+    "historical_comparison_scope": "Matched reconstruction on one case with updated tools; not an exact rerun or causal account of every earlier abstention."
+  },
+  "training_measurement": {
+    "maximum_agent_candidates": 36,
+    "conventional_references": 6,
+    "maximum_candidate_cohorts": 6,
+    "maximum_candidates_per_cohort": 7,
+    "matched_continue_per_candidate": true,
+    "common_controls": [
+      "continue-light",
+      "fixed-4096",
+      "fixed-8192",
+      "oracle-original"
+    ],
+    "maximum_arms_per_cohort": 18,
+    "allocations_per_cohort": 3,
+    "queries_per_arm": 300,
+    "retained_activation_pairs_per_query_block": 1,
+    "discarded_warmup_pairs_per_query_block": 1,
+    "retained_reuse_pairs_per_query_block": 3,
+    "maximum_retained_pairs_per_cohort": 64800,
+    "maximum_total_retained_pairs": 388800,
+    "timed_and_warmup_backend_calls_per_full_allocation": 54000,
+    "maximum_counted_backend_reference_qualification_calls_per_allocation": 70000,
+    "maximum_measurement_seconds_per_allocation": 6600,
+    "allocation_cpu_cores": 4,
+    "allocation_memory_gib": 32,
+    "allocation_wall_seconds": 7200,
+    "execution": "Original optimized lightweight x86 binary, frozen feedback driver and existing physical Reviews index; no dispatch/context change."
+  },
+  "final_gate": {
+    "minimum_native_recall_per_stratum": 0.95,
+    "minimum_recall_delta_lower_95_bound_overall_and_each_stratum": -0.005,
+    "valid_complete_top_k_required": true,
+    "activation_and_reuse_log_latency_ratio_upper_95_bound_must_be_below": 0,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261019,
+    "cluster_unit": "Independent vector, retaining its filters/repetitions/allocations together",
+    "maximum_primary_confirmation_candidates": 1,
+    "selection_order": [
+      "greatest activation-inclusive percentage saving among fully qualified training candidates",
+      "fewest decision nodes",
+      "lexical semantic hash"
+    ],
+    "confirmation_vector_groups": 60,
+    "confirmation_queries": 180,
+    "confirmation_allocations": 3,
+    "confirmation_arms": 6,
+    "confirmation_retained_activation_pairs_per_query_block": 1,
+    "confirmation_retained_reuse_pairs_per_query_block": 8,
+    "confirmation_retained_pairs": 29160,
+    "no_confirmation_without_a_frozen_training_qualified_candidate": true,
+    "canonical_acceptance_changed": false
+  },
+  "new_execution_counts": {
+    "model_requests": 0,
+    "fits": 0,
+    "policy_replays": 0,
+    "database_searches": 0,
+    "builds": 0,
+    "tests": 0,
+    "Torch_submissions": 0,
+    "confirmation_queries": 0
+  },
+  "execution_requires_later_user_instruction": true
+}
