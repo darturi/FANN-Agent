@@ -97,7 +97,7 @@ If needed, test one cheap query-side input, such as the actual predicate thresho
 
 **Completion criterion:** the added information improves measured quality or latency enough to pay its collection cost. Otherwise retain the simpler interface and report its limitations.
 
-**Narrow ablation brought forward:** the returned evidence has identical qualified trajectories for `votes32` and `votes108` for all 100 vectors, including 275 conflicting measured native-preservation states across 82 vectors. This supports a controlled predicate-context test without proving that a common conservative policy cannot succeed. `prepare-ablation` creates the separate `predicate-context-v1` manifest, actual query-context records and planned profile. Both arms share evidence, folds, fitting grid, policy limits, quality criteria and the original ledger. The context getter remains unqualified pending native implementation, equivalence checks and overhead measurements; existing timings are not transferred to that arm.
+**Narrow ablation brought forward:** the returned evidence has identical qualified trajectories for `votes32` and `votes108` for all 100 vectors, including 275 conflicting measured native-preservation states across 82 vectors. This supports a controlled predicate-context test without proving that a common conservative policy cannot succeed. `prepare-ablation` creates the separate `predicate-context-v1` manifest, actual query-context records and planned profile. Both arms share evidence, folds, fitting grid, policy limits, quality criteria and the original ledger. The context getter now has local synthetic ARM correctness qualification; native x86 qualification and Reviews equivalence/overhead measurements remain pending. Existing timings are not transferred to that arm.
 
 ### Stage 5 Evaluate shape knowledge as a separate mechanism
 
@@ -141,3 +141,144 @@ The source checkpoint checks passed 15 focused pgvector tests, 58 harness compat
 Put the reusable feedback models, scorer, reports and archive in the core agent, using the existing public policy API, broker, experiment journal and store. Introduce a small learning module boundary as needed rather than adding a new production distribution. The pgvector extension continues to own native execution, exact references and feature qualification. Trial packages continue to own the pinned Torch acquisition recipe. Extend the harness only where it needs to consume the new evidence contract; mini-bench remains an observer and analysis tool.
 
 Implement Stages 1 through 3 before expanding the runtime interface or shape model. Completion of this plan's first milestone means a fully traceable, measured candidate and an independent frozen confirmation evaluation, with an abstention path when the evidence does not support a candidate.
+
+## Native predicate context and the next bounded measurement batch
+
+The experimental native `query_predicate_threshold` getter is implemented in
+`agent-pgvector` as the explicit `PredicateContextBackend` research adapter.
+Its profile matches the predeclared `predicate-context-v1` fingerprint. The
+legacy profile and twelve-argument execution ABI are preserved. Extraction of
+the actual predicate scalar and binding in the existing begin batch are inside
+the policy timing boundary; the new registry and trace normalization validate
+that the returned scalar agrees with the actual query.
+
+Local ARM native qualification passed on 4,000 synthetic rows: forty trajectory
+comparisons, forty getter branches, int64 boundaries, unfiltered/zero semantics,
+disabled availability, invalid-binding rejection and rollback recovery. See
+`agent-pgvector/verification/predicate-context-v1.json` and
+`agent-pgvector/docs/PREDICATE_CONTEXT.md`. This establishes local correctness;
+x86 native execution, Reviews overhead, full copy/deployment and any learned
+context policy remain unqualified. Old timings cannot qualify the new profile.
+
+The separate `trials/torch-reviews-training-stops` package collects exactly the
+49 distinct unknown outcomes requested by the four fixed depth/risk artifacts.
+Three serial allocations each repeat those 49 actual stopped executions and
+measure all four artifacts plus matched controls on the 300 learning queries.
+This produces 147 requested-label executions and 32,400 retained native/policy
+timing pairs (activation and reuse). It uses the existing verified Torch module,
+profile, data and physical index, without incorporating predicate context into
+the missing-outcome comparison. No remote jobs or provider calls were made
+while preparing the package. Independent reporting checks exact requested
+coverage, actual causal prefixes, preserved outcomes and measured timing.
+
+After that batch returns, verify the raw artifacts, add only the 49 actual
+outcomes, and reassess the four predeclared candidates. Continue the context
+ablation under its separate qualification/profile and matching-baseline
+requirements. Confirmation remains sealed and the original $15 model ledger
+continues to cover any later paid learning.
+
+## Prepared Torch x86 qualification and controlled context ablation
+
+`trials/torch-reviews-predicate-ablation-v1` is the next separate, gated package.
+It updates the training source to all 3,933 verified actual outcomes, including
+the 49 newly measured first stops, while preserving the predeclared group folds,
+feature definitions, fitting grid and quality objective. It permits no provider
+calls or confirmation queries. This batch is a controlled CART feature ablation;
+a context-aware direct-agent refit and CART-versus-agent comparison remain a
+separate later model round under the same original ledger.
+
+The Slurm dependency chain builds the pinned native C overlay inside the existing
+SIF, qualifies the x86 getter and original causal trajectories on the original
+physical index, freezes four CART fits under each profile, then measures block
+zero before releasing serial blocks one and two. The old ABI and both new policy
+profiles must preserve native results and all original feature values. Getter
+boundaries, disabled availability, invalid/missing bindings and lifecycle reset
+are qualification gates. No fitting precedes the gate and no refitting follows
+new outcome/timing acquisition in this batch.
+
+Both feature arms use the same candidate binary and policy driver. Native timing
+uses the frozen ordinary-query driver, keeping the context validation/binding
+cost in the policy/outer comparisons. Twenty-four arms include eight candidate
+policies, matched-continue policies, plain/getter continue and two fixed-work
+baselines under both profiles. Three allocations retain 86,400 pairs. New first
+stops are actually measured under both profiles with unchanged causal prefixes;
+unknown outcomes are never interpolated. The report verifies the frozen fitting
+identity and raw coverage, reproduces each summary and pairs context/baseline
+arms to estimate the feature's incremental cost/effect.
+
+Local native synthetic qualification covers eight fits, all 24 arms, paired stop
+acquisition, old-binary rejection, altered-lock rejection, raw coverage checks
+and repeatable data-only export. It establishes package mechanics on ARM. Actual
+x86 qualification and Reviews feature benefit remain pending the Torch run.
+
+## Verified predicate ablation and prepared insertion/bypass study
+
+The predicate campaign `reviews-predicate-ablation-20261019T235922Z.ilxcioru`
+has now returned and been independently verified: 86,400 timing pairs, all eight
+reproduced fits, and the actual predicate scalar at all 48,147 checkpoints.
+Native x86 getter qualification passed. No candidate satisfies both the declared
+per-filter recall and timing criteria. Context depth-three policies avoid early
+stops on votes108, reducing recall-losing queries from 13 to three relative to
+baseline risk-20, but the votes32 confidence bound still fails. Baseline continue
+costs about 0.964 ms on activation and 0.786 ms on reuse; paired incremental plain
+context cost is about 0.049 ms on reuse. The full independent result is retained
+under the campaign's sibling `-analysis` directory.
+
+`trials/torch-reviews-insertion-bypass-v1` is a separate execution-only study.
+It retains seven representative frozen policy/control seeds, decomposing the
+legacy driver, private prepared handles, fused initialization/ANN exchange and
+query-only static bypass. A separate context arm restricts policy eligibility to
+unfiltered queries. There are 29 predeclared arms, 300 learning queries, three
+allocations and 104,400 retained pairs. It performs zero refits or provider calls.
+
+Preparation is charged in cold timing. Every reused query is validated, routing
+comes from its actual predicate, and both backend and outer clocks include it.
+Bypass invokes ordinary native SQL and emits no fabricated checkpoint/work
+observations. Native/fused acknowledgements, first stops, causal prefixes and
+all 2,100 source-arm outcomes must qualify before measurement. The exact prior
+qualified x86 binary is copied unchanged; no native source/index rebuild occurs.
+The original 0.005 overall/per-filter noninferiority margin, vector-cluster
+intervals, native recall floor and sealed confirmation split remain in force.
+
+The implementation is opt-in in `agent-pgvector.optimized`. It also exposes the
+optimized route through its application policy session; the default registered
+backend retains its previous execution path. Failed policy execution is never
+automatically replayed by the low-level probe. Application fallback remains
+caller-controlled. Original scientific inputs and the same spending ledger are
+preserved. New x86 execution qualification and Torch speedup remain pending.
+
+## Verified insertion/bypass result and dispatch study
+
+The insertion campaign `reviews-insertion-bypass-20261020T064451Z.ycqo7_i_`
+returned 104,400 pairs, including 20,400 bypass pairs. Its x86 execution and
+causal prefixes passed qualification; independent reconstruction reproduced all
+raw results, per-filter recall bounds and paired timing effects. No arm qualifies
+with activation or reuse. Baseline CART/static passes recall but costs +0.794 ms
+on activation and +0.374 ms reused on the declared clock. The unfiltered-only
+context arm passes recall but costs +0.848/+0.287 ms. Unrestricted context fails
+the votes32 recall bound; fixed-8192 fails overall and per-filter bounds.
+
+The reductions are real relative to the preceding policy path: prepared handles
+save about 0.21 ms reused, fused exchanges save 0.22-0.26 ms on activation, and
+static bypass further saves 0.468/0.405 ms for baseline CART. Always-continue
+bypass still has residual cost. CPU profiling identifies vector text formatting,
+query validation, repeated routing proof and policy-only Python setup as targets.
+
+`trials/torch-reviews-dispatch-overhead-v1` freezes a new execution-only study:
+five existing policies, six eligibility scenarios, and previous/validation/
+routing/dispatch paths yield 24 arms. Three allocations retain 86,400 pairs on
+the same 300 learning queries, 100 vector groups, three predicates and index.
+Cold timing includes private-handle preparation and the entire checked query.
+No query vector/value cache or untimed query preparation is introduced. Native
+and outer application clocks are both retained; the original 0.005 per-filter
+margin, 0.95 native recall floor and log-ratio timing gate are unchanged.
+
+The opt-in adapter specialization retains shared model/filter validation and
+falls back to the general validator for other inputs. It bounds proof/SQL-shape
+caches and avoids policy-only context setup on native bypass. C-level vector
+formatting must equal the frozen .9g encoding. Qualification checks all 7,200
+arm/query executions and 1,800 traced prefixes before freezing the plan. A
+separate synthetic 768-D CPU profile runs outside primary measurement, with no
+Reviews data or database searches. No new policy, fit, label, provider call or
+confirmation query is authorized by this study. New x86 dispatch execution must
+qualify on Torch; local ARM evidence establishes package mechanics only.

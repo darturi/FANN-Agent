@@ -1,0 +1,12 @@
+{
+  "status": "ready_for_server_preflight_and_49_stop_batch",
+  "package_revision": 2,
+  "archive": "trials/torch-reviews-training-stops-v2.tar.gz",
+  "sha256": "61b26761c70f5f3f43f54ea6b4be016d81059251a882cce67ca09a12049a15b6",
+  "preflight_fix": "returned feedback read before archive verification",
+  "preflight_regression_cases": 8,
+  "measurement_design_changed": false,
+  "remote_jobs_submitted": 0,
+  "provider_calls": 0,
+  "predicate_context_x86_qualification": "pending"
+}
