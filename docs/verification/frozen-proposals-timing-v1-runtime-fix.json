@@ -1,0 +1,84 @@
+{
+  "ab_comparison": {
+    "complete_pairs": 0,
+    "selection_effect_established": false,
+    "status": "inconclusive"
+  },
+  "activation_and_reuse_both_required": true,
+  "actual_generated_package_control_verification": "passed",
+  "all_reference_files_unchanged": true,
+  "allocation_limits": {
+    "backend_calls_per_block_maximum": 53931,
+    "cpus": 4,
+    "measurement_deadline_seconds": 6600,
+    "memory_gib": 32,
+    "planned_allocations": 6,
+    "wall_hours": 2
+  },
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "byte_identical_scientific_inputs": [
+    "frozen-candidates.json",
+    "spending-receipt.json",
+    "generation-contract.json",
+    "proposal-summary.json"
+  ],
+  "cause": "Pure prediction accessed a runtime_profile instance attribute not provided by the frozen Torch backend. The old fake backend invented that attribute and masked the defect.",
+  "confirmation_queries_opened": 0,
+  "date": "2026-10-21",
+  "final_criteria_unchanged": true,
+  "fix": "Pass the preserved runner module PROFILE explicitly into the shared interpreter in qualification and independent report reproduction.",
+  "format": "frozen-proposals-timing-runtime-correction-verification.v1",
+  "frozen_candidates_sha256": "fd12127fe51ea9b596514c8e6fa4a4c5532a3b780ea136c221279b443ec2fffd",
+  "full_package_smoke": "passed_with_all_twelve_original_exports",
+  "minimum_native_recall_each_filter": 0.95,
+  "new_database_searches": 0,
+  "new_fits": 0,
+  "new_model_calls": 0,
+  "original_runner_backend_interface_replay": {
+    "arms": 9600,
+    "database_connections": 0,
+    "fresh_processes": 2,
+    "model_client_imports": 0,
+    "saved_candidate_first_stops": 3600
+  },
+  "original_shared_committed_usd": "8.783870",
+  "original_source_and_upload_preserved": true,
+  "preserve_failed_campaigns_and_bindings": true,
+  "prior_ledger_records_preserved": 169,
+  "recall_tolerance_overall_and_each_filter": 0.005,
+  "remote_failure_raw_downloaded": false,
+  "repair_record_sha256": "cff1c6659914bb319663a47135a8a436a9c382a3637c486b37fe481baf92c1de",
+  "reported_failure_evidence": [
+    {
+      "backend_calls": 234,
+      "campaign": "reviews-frozen-timing-v1-training-c0-20261021T003548Z.yk9crum4",
+      "cancelled_array": "20479673_[1-2%1]",
+      "failed_job": "20479670_0"
+    },
+    {
+      "backend_calls": 234,
+      "campaign": "reviews-frozen-timing-v1-training-c1-20261021T003751Z.gnq7yl2t",
+      "cancelled_array": "20479958_[1-2%1]",
+      "failed_job": "20479956_0"
+    }
+  ],
+  "retained_training_pairs": 115200,
+  "scientific_contract_changes": "None; only source manifest identity and explicit correction provenance differ.",
+  "scope_mutation_tests_rejected": 5,
+  "source": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-frozen-proposals-timing-v1-runtime-fix",
+  "source_archive": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-frozen-proposals-timing-v1-runtime-fix-source.tar.gz",
+  "source_archive_sha256": "879dc2a0609ca2e98cbc89f420a2a40a1c528417a06cb3688d8860e9f3c88539",
+  "source_manifest_sha256": "a4ae514239f05272db9256f9166873697ddc48c2c818bda2b5abace305976b55",
+  "status": "replacement_training_package_ready_not_submitted",
+  "timing_contract_sha256": "71f91fb4ad531ffbc193bb951c68b32ac6c51eb4de5e8c41db58f3fa4ea8fd84",
+  "torch_submissions_during_correction": 0,
+  "training_archive": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/frozen-proposals-timing-v1-runtime-fix/torch-frozen-proposals-timing-v1-runtime-fix-training.tar.gz",
+  "training_archive_bytes": 7267674,
+  "training_archive_sha256": "20b073cda164e27b5cbbaa3d4fdf60c1121bec14b060ed0aeecd4ba64ef38bd8",
+  "training_package_manifest_sha256": "3fa1e8fb1dd179e3e929bc89cb1ec280aaf3d5e68b3823c3818944d514f73f43",
+  "unit_regression_backend_has_runtime_profile": false,
+  "unit_tests_passed": 9,
+  "valid_complete_top10_required": true,
+  "verification_limit": "Local backend-interface replay and synthetic execution/report checks pass. Actual native x86 first-stop qualification and timings must run on Torch."
+}

@@ -73,6 +73,11 @@ The experimental [offline learning tools](docs/OFFLINE_LEARNING.md) provide meas
 runtime-interpreter replay, structured feedback and a separate candidate archive without model or
 database calls.
 
+The [master experiment index](docs/experiments/README.md) links saved runs, failed
+attempts, results, artifact locations, reproduction procedures and the archive
+backup audit. Its generated catalog also records blocks, agent conversations and
+engineering checks separately from independent scientific experiments.
+
 Malformed model tool calls, shell syntax, tool arguments, queries, filters, and policies receive bounded `error_info` feedback with field details and a correction hint. Rejected inputs are not rewritten or replayed. The next model turn can issue a corrected request. Three consecutive invalid turns end exploration with `invalid_submission_limit` and a `no_recommendation` report. A fully successful turn resets the streak; other execution failures do not change it. Resume preserves the streak, and reaching the limit is terminal for that run. Model attempts remain billed, including malformed responses. Existing accepted policies take precedence, while this limit does not automatically freeze a candidate checkpoint.
 
 During exploration, the agent can designate a fallback with `fannagent-tool calibrate '{"policy": ..., "checkpoint": true}'`. Only an accepted, valid calibration replaces the saved candidate. Unmarked or rejected calibrations preserve the previous choice; a later failed recalibration of that same policy makes it ineligible. Calibration returns aggregates and the selected `checkpoint_policy_hash`; the full checkpoint and calibration evidence remain private. Older conversations receive this capability notice once on resume, without resetting their history or counters.

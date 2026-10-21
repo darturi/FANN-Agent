@@ -1,6 +1,117 @@
 # Aggressive policy proposal experiment v1
 
-Prepared October 20, 2026. **Status: design only; no execution authorized by this document.**
+Prepared October 20, 2026. **Current status: v1/v2 generation comparisons remain
+inconclusive; the separate corrected timing study is complete. Held-out
+confirmation remains pending.** See the [master experiment index](experiments/README.md)
+for the full run history, failures, artifacts and reproduction procedures.
+The versioned implementation and launch commands are in
+[`trials/torch-reviews-aggressive-proposals-v1/README.md`](../../trials/torch-reviews-aggressive-proposals-v1/README.md).
+The original implementation verification used synthetic tests, a fake provider
+and existing host-only references without model spending or Torch submissions.
+The subsequent actual generation outcome is recorded in
+[the postrun verification](verification/aggressive-proposals-v1-postrun.json).
+
+The six actual conversations used 71 provider attempts and $2.589112. Five
+reached the 12-attempt limit; one hit its 60-second command timeout on attempt
+11. None exported a proposal or called `finish`. Two exploratory conversations
+archived four distinct structurally valid aggressive intermediates; all four
+offline screens reproduce. These are diagnostic intermediates, not completed
+portfolios, accepted policies or evidence that either selection condition wins.
+The minimum of two complete pairs was not met, so the training packager correctly
+refused to create a Torch campaign. No final recall criterion was changed.
+
+The run also exposed usability limitations in the shared interface: corpus
+schema discovery consumed several requests, typed constants and guards required
+repairs, and tool observations did not expose remaining provider attempts. These
+are plausible contributors to censoring, not a measured causal explanation.
+The frozen v1 prompts, source, results and ledger remain intact. A follow-up
+must separately predeclare common schema guidance, request accounting, completion
+instructions and its budget; it cannot resume or relabel these terminated runs.
+
+The user subsequently authorized that corrected follow-up inside the existing
+budget. **At the close of v2 generation, two exploratory conversations completed,
+four were budget-censored, and no A/B pair completed. Torch measurement was deferred.**
+Its [amended protocol](../../trials/torch-reviews-aggressive-proposals-v2/DESIGN.md),
+[launch commands](../../trials/torch-reviews-aggressive-proposals-v2/README.md)
+and [implementation verification](verification/aggressive-proposals-v2-implementation.json)
+are separate from v1. V2 is capped at $6.36 total, $1.06 and 12 attempts per
+fresh conversation, with v1+v2 still capped at the original $9. Final recall,
+activation/reuse and confirmation gates remain unchanged.
+
+V2 used 56 paid attempts and $3.020092. Its two completed exploratory
+conversations exported 12 distinct policies, of which three pass the unchanged
+training-replay recall checks; no new latency measurement had been made at that
+stage. All 37
+valid archived screens reproduce, representing 35 distinct intermediate policies.
+The three acceptance-oriented conversations screened recall-passing candidates
+before hitting their reservation limit; they did not finish or record abstentions.
+Their zero export counts therefore do not establish deliberate withholding.
+The [v2 postrun verification](verification/aggressive-proposals-v2-postrun.json)
+records this outcome and the preserved diagnostic export inventory.
+
+Every new request required the original fixed $0.606208 maximum-charge
+reservation. With a $1.06 conversation cap, another request became unaffordable
+once committed spending exceeded $0.453792, even though some of the nominal
+12 attempts remained. The finalization guidance should have accounted for this
+reservation constraint as well as the request count. The stopped conversations
+remain censored and cannot be resumed or relabeled under the v2 protocol. Any
+measurement-only follow-up using the already exported portfolio must be declared
+separately and retain the original A/B comparison as inconclusive. It need not
+make further model calls; it cannot bypass v2's predeclared completion gate.
+
+The user authorized that separate twelve-policy timing study. It is implemented
+and packaged as `frozen-proposals-timing-v1`, with
+[its own protocol](../../trials/torch-reviews-frozen-proposals-timing-v1/DESIGN.md),
+[Torch commands](../../trials/torch-reviews-frozen-proposals-timing-v1/README.md)
+and [verification record](verification/frozen-proposals-timing-v1-implementation.json).
+All twelve original exports are included in two source-balanced cohorts of six;
+no model call, fit or proposal change is introduced. Six allocations retain
+115,200 pairs, with the original native comparisons, matched continue controls,
+diagnostic controls, recall criteria and activation/reuse gates. Conditional
+confirmation requires independent local raw-report reproduction before opening
+the original sealed split. V2's summary and closed A/B gate remain unchanged;
+the new timing contract explicitly retains the inconclusive A/B comparison.
+
+The first submitted timing campaign failed in both block-0 allocations on
+October 21, 2026, at 234 backend calls per cohort. The shared-interpreter helper
+read an instance `runtime_profile` attribute absent from the frozen Torch
+backend. The dependent arrays were cancelled. The local fake backend had added
+that attribute and therefore missed the interface mismatch. This mechanical
+failure provides no timing or recall qualification result.
+
+A separately named
+[runtime correction](../../trials/torch-reviews-frozen-proposals-timing-v1-runtime-fix/README.md)
+passes the runner's module-level frozen profile explicitly to prediction in
+qualification and raw analysis. The original upload, source, submission bindings
+and failed campaigns remain preserved. Its
+[verification record](verification/frozen-proposals-timing-v1-runtime-fix.json)
+records interface regression checks against the preserved original runner and
+backend. Packaging requires byte-identical candidates, spending receipt,
+generation contract and A/B summary, and an unchanged scientific protocol except
+implementation identity and correction provenance. Final recall criteria,
+allocation limits, timing boundaries and the inconclusive A/B result remain
+unchanged. No further model calls are permitted.
+
+The replacement timing campaign completed on October 21, 2026. Independent local
+raw reanalysis reproduced all six blocks, 115,200 retained pairs, 28,800 discarded
+warmups and 28,800 native causal-prefix proofs across the original 100 vector
+groups. All final criteria remain unchanged. Two policies pass both training
+regimes: `cons_S32_64_128_t002` saves 12.690% including activation and 13.545% on
+reuse; `tol0.0005` saves 3.555% and 4.190%. The prespecified selection rule chooses
+the former. Nine proposals fail recall; `cons_S128_t002` passes recall but lacks
+a reliable primary-clock latency improvement. The
+[postrun verification](verification/frozen-proposals-timing-v1-runtime-fix-postrun.json)
+records the independently reproduced result and analysis artifacts.
+
+The selected policy's overall recall changes from 99.0% to 98.9%; its worst
+per-filter recall confidence lower bound, for votes108, is exactly -0.5 percentage
+points and passes the original inclusive cutoff. Its selected identity is
+frozen. This is training feasibility only; no confirmation query was opened,
+no new model call or fit was made, and canonical serving acceptance remains
+unestablished. The A/B comparison stays inconclusive with zero complete pairs.
+The next eligible evaluation is the originally prescribed one-policy held-out
+confirmation, without retuning or a fallback candidate after its result.
+
 No model requests, fitting, policy replay, database measurements, builds, tests,
 Torch submissions or confirmation queries were performed to prepare this design.
 The source state was committed before this document was added. Exact revisions
@@ -290,12 +401,12 @@ are diagnostic. Failed confirmation permits no retuning or second candidate
 on that same split. No canonical calibration, final test or serving acceptance
 is consumed or changed by this development experiment.
 
-## Required implementation and verification before a future launch
+## Implementation contract and verification before launch
 
-This document is not a launcher. Implement the paired runner, identical permissive
+This document is not a launcher. The implementation supplies the paired runner, identical permissive
 proposal-export broker, sanitized evidence builder, sealed transcripts, shared
 ledger/subbudget accounting and separate measurement package in a new versioned
-trial. Leave old manifests, locks, uploader limits and paid receipts unchanged.
+trial. Old manifests, locks, uploader limits and paid receipts remain unchanged.
 An explicit new request contract must account for all appended attempts; do not
 relabel extended receipts to pass the original 24-attempt uploader.
 
@@ -304,8 +415,11 @@ selection text, sandbox exclusion of host-only artifacts, candidate provenance,
 immutable inputs, per-call budget reservations and interrupted-run recovery.
 Before Torch execution, verify exact driver/library/index identity, policy
 interpreter/native parity, causal prefixes, complete call accounting, scheduling,
-report reproduction and failure retention. These checks are future work;
-the historical qualification records do not qualify a new runner automatically.
+report reproduction and failure retention. Synthetic control-plane and packaging
+checks are recorded with the implementation. Actual new policy/native execution
+is qualified inside its Torch allocation before measurements. Historical
+qualification records do not qualify a new runner automatically.
 
-Execution remains pending a later user instruction. This design neither runs
-the experiment nor authorizes spending, submission or opening confirmation now.
+This design alone authorizes no additional spending, submission or opening of
+confirmation. Historical authorized executions are recorded above; the latest
+training timing study is complete and held-out confirmation remains pending.

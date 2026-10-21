@@ -1,0 +1,1876 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-21T11:32:18-04:00",
+  "scope": "Archives under the same pruned scan roots as run-inventory.json; runtime/dependency caches and private stores excluded",
+  "archive_count": 207,
+  "total_bytes": 19666947473,
+  "checksum_counts": {
+    "no usable sidecar": 171,
+    "matches": 36
+  },
+  "archives": [
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannagent-data-5297463e89bd5c83.tar.gz",
+      "bytes": 1485978418,
+      "sha256": "658b8be86ad5e189ce4a94b41c52a5832aa2d85a71c8d49942eb2ca244f1330d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannagent-data-535943ca9c1f2ed1.tar.gz",
+      "bytes": 64906268,
+      "sha256": "5c28ab1781576dd0b1806263ba4cecc107a7adff9f9237ba6af73b9ebe7274d6",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannagent-data-8391375b03696d93.tar.gz",
+      "bytes": 1485950221,
+      "sha256": "17a2798146829a5061d3d230258b0c1248cd7937c084f694cb826e152a2a1515",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannagent-data-b11da04dc0cd5fc2.tar.gz",
+      "bytes": 64900689,
+      "sha256": "facf793c7edf50f88f4757ddb6853d4e6d703a46bda8d5e30cd2c0f0b55916b7",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannagent-data-cf6cb9d2885aaa5d.tar.gz",
+      "bytes": 1485977640,
+      "sha256": "43fe733b64500c888ecbfbbe28cc50d558bc6836096775b2a8acf6279cbec86c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannagent-data-ea27671aa9012f6a.tar.gz",
+      "bytes": 1485977741,
+      "sha256": "bc65f633c286accc27288c3dc34131c225612664d12c250c25162af91c5e526c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannagent-movies-data-072df676ace2.tar.gz",
+      "bytes": 114061754,
+      "sha256": "376795d1b66f2bf18df19f85f234e6411de8f02240e7186999b725782b2d81d5",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-0246a0bb77cdafa5-data.tar.gz",
+      "bytes": 201394,
+      "sha256": "e458944d579444bf5d52f407d8d5f84d5183c24d7b7c7ca8d3141caa385806d7",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-111df40ee35f5272-data.tar.gz",
+      "bytes": 235386,
+      "sha256": "989d27fa0858dcaa55076edaac3dbb8615f3830926f36e017302060d8fa2951e",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-23894a0e55d555f0-data.tar.gz",
+      "bytes": 277241,
+      "sha256": "4b431ea6a7d23d1535131f907cceb4d7d07b420435eb976733f56c60c80cd3af",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-2784f7eb82bddca3-data.tar.gz",
+      "bytes": 227027,
+      "sha256": "77c7d14ac45ad58cdc2cc5bde1237b58118133c4cff6b85664d88c87aea75e86",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-328621f4156e0fb5-data.tar.gz",
+      "bytes": 66236,
+      "sha256": "37a2854436f6b68253b305e471b0b373bfbee5f301aaca8355047f4ed2a2d26c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-456577449f9137a0-data.tar.gz",
+      "bytes": 232194,
+      "sha256": "384f59708397644cb281bd1ceb4c64ff078a50fb3cbc6d3fdf281a4f793ff1ac",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-796004e55b078586-data.tar.gz",
+      "bytes": 231899,
+      "sha256": "012a8cbfa7d26b4ab0f73044ef9c589e93a67a77787000f58fb5183a8d4e9336",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-7a2b34fa48318d05-data.tar.gz",
+      "bytes": 232942,
+      "sha256": "8bad028f1276ba866bfa891e2b20d60e161b30ece8a35f2d249f2e3e3e245f76",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-7bf6f0be64ccb9d7-data.tar.gz",
+      "bytes": 201351,
+      "sha256": "0de319565f4694d74abafdcc286f127aeca01b5ae1799989b5c49f1d0f1c7a19",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-85b42230b1ed0056-data.tar.gz",
+      "bytes": 65651,
+      "sha256": "e125a45e9dab7d4ef62928b8871cd723f0e778c1a0c4c6e75d2e604f85448ddf",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-86274f8afe1b4778-data.tar.gz",
+      "bytes": 232079,
+      "sha256": "47e9f92ac84eb090506f2c951377d610b2a13822558b795a6734e01b332d95bb",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-8e4c523bc5e02a12-data.tar.gz",
+      "bytes": 485120,
+      "sha256": "0568a43363b34ca3067bad504d327d37c208b9e7408e323b7fe10e3dd63a61f6",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-973b97b3bb08ec84-data.tar.gz",
+      "bytes": 65905,
+      "sha256": "f6f292ba00e3d4fcf20dbcec56b0f168224c93cf89d0eecd814501cc61452662",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-a1e13b9f8daab608-data.tar.gz",
+      "bytes": 231807,
+      "sha256": "cc6dc4f6192eeaa6d4bbf3428a489af946145c9d69a00290fdc395a8418996ab",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-a786aa513cd78472-data.tar.gz",
+      "bytes": 65237,
+      "sha256": "920513accf568e2fa25b2e7f11758babbc5bfd009537691b029ac2010b859766",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-a7fcdac6f302838f-data.tar.gz",
+      "bytes": 533827,
+      "sha256": "0ccf52f4648ba9642d249202a32083af0c20368648037798411bf26684274784",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-c78e15b82bb317ff-data.tar.gz",
+      "bytes": 231978,
+      "sha256": "14304e7046e86ff25c02e6fd37acc74e4dada6c9ecb76dec3ee3f37508805a3c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-d1bdf7b99df5acb3-data.tar.gz",
+      "bytes": 231878,
+      "sha256": "e339adec5e4cd1d65b82042dac1d6ee5fe9f2071eec84025eacd223af65b775a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-dc54e631b32db3b1-data.tar.gz",
+      "bytes": 232475,
+      "sha256": "1b74d8b0ea6b7a55566091a7da5d1fe69c54df2b48c12231c7fad26ecdfbbe0d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-ef52b6f470aae318-data.tar.gz",
+      "bytes": 484797,
+      "sha256": "bda58a7e670d6b87cc6c5b8aeae954195664f28f3381dbd581d0ff78efdccbde",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-f066de5d1fbf346d-data.tar.gz",
+      "bytes": 65117,
+      "sha256": "4a2683437e56ede2bf9c8a6f7ac984407f8980c194e90eadf45b83151255a6c0",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-elasticsearch-fe33eeb45db04767-data.tar.gz",
+      "bytes": 30022982,
+      "sha256": "484cc60d5dfaef7d6155f32c87a9d4513bb4e8dcdceca93063ca8b73eca6b372",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-01d3f642fa6d4d36-data.tar.gz",
+      "bytes": 7943014,
+      "sha256": "f7197ddfbdb7fac0d568e155673c04ee223ad19641214bdcad073a4815fdba59",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-024037a5b6aaadcb-data.tar.gz",
+      "bytes": 8134384,
+      "sha256": "a25091a58e70d565229f147e2670f9e136138be0bf11eaf0d6e1940ecacaafdc",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-03d5fcc13c8dbd50-data.tar.gz",
+      "bytes": 8131458,
+      "sha256": "7ed7c9901de0a1d08ff6d179ec2d84be817fdca6784a6fb40509aa4bd2ecf838",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-0469950113689211-data.tar.gz",
+      "bytes": 7942912,
+      "sha256": "3cdec33654a3f027b755e1673081d1e8483f3fbd33d007bca36cf80018e68a9b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-09355009a605baa0-data.tar.gz",
+      "bytes": 7943006,
+      "sha256": "0294d7388c5fa474703ff51200a2dea96c92150e67a95f551c1887036cfb2657",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-0ae53ceaf5cb5bbb-data.tar.gz",
+      "bytes": 8159824,
+      "sha256": "3e85df8ab4cde1f751a37ddfe87910e8154610c171eb3140d2cd53c65268041a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-0c386a0ee6012465-data.tar.gz",
+      "bytes": 8781898,
+      "sha256": "aebab896ef1a4ed671f40b062ac47e066fcbede3b3c4f77908316002f8bf18f4",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-0ff148a002fffdfb-data.tar.gz",
+      "bytes": 8151151,
+      "sha256": "9dcc6b4adc1e14002c4ff0f428782b533f8b9ff5de284323028cade74ef21068",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-1036c416b2848e61-data.tar.gz",
+      "bytes": 8152309,
+      "sha256": "e4d196dd8568ecff81f677d747700201d77515bb135c6b59884e9d4a39fc949c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-119f3aea58236b58-data.tar.gz",
+      "bytes": 8715459,
+      "sha256": "635f3699b6e4322278a9fff16745e569c2eb836de563ec53f52cc5872d91ca38",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-1526f36b9ac8f353-data.tar.gz",
+      "bytes": 129344640,
+      "sha256": "6f0d5c0689640ea148e63aca927f55b4e8be603149abc6c521400dfda3dd04d4",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-18a7e13f42d8e99e-data.tar.gz",
+      "bytes": 7948522,
+      "sha256": "a8fb27af414276021796d3ee1a0883853f46b3b8216e0c8eacac92ad35280058",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-1c06042ccd9b0984-data.tar.gz",
+      "bytes": 8132612,
+      "sha256": "9cb178c099c47c10339c62ab558de24c3fc1f33b39d3970234ebf8aac215de48",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-1c54323c4966d92e-data.tar.gz",
+      "bytes": 12220844,
+      "sha256": "6995dd85621de6e1d801295088d587f1b120ad538be3297f5ed5514844068959",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-1d3463b87156ddb8-data.tar.gz",
+      "bytes": 8152739,
+      "sha256": "7bb8bb05e06bbbc11b8db3e9c1c0166fb47e88b86ced72e0ba61cbae4975cc36",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-22bbcfd95a858c9f-data.tar.gz",
+      "bytes": 7948857,
+      "sha256": "cc2c5a4cdf1ae0b2eb20079fab9f38e46771e1a6e84cff3f314e7308c5548f36",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-252ea2ed9008bc5d-data.tar.gz",
+      "bytes": 8152592,
+      "sha256": "ffdd855896a66b6b3a9ac455de98c0b8fe7fad10e4c39f6bbbd588d516f86508",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-2885a4ac2bc1d753-data.tar.gz",
+      "bytes": 8153919,
+      "sha256": "f4bdff3432f96391888c5f5eb48ea3f81f0c395b3984f4960145f7c3fcfea205",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-28f646dd5d1782c3-data.tar.gz",
+      "bytes": 8152684,
+      "sha256": "8f230215fbd55244175b776f53aec6c5a8aa98ac10db81c9e95306e680b326f9",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-29e519cf5dd37694-data.tar.gz",
+      "bytes": 8160547,
+      "sha256": "1e26ece154a65217efd144d18aeae857cd522f21ca3c44d3ceac3adf4a1bd66d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-2ac77e9053f7dbaf-data.tar.gz",
+      "bytes": 7904102,
+      "sha256": "54d51066cae5cc84fcfa7019b747b476173d08ab734127486b6c6ee9943ed04f",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-2cebe5ab761336fb-data.tar.gz",
+      "bytes": 7943265,
+      "sha256": "936580faa491d0288a4ef47d201c8206d5cd9670b9f4caa0e3e64e4bbcac6fc8",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-2e59191636e28f9a-data.tar.gz",
+      "bytes": 7947542,
+      "sha256": "333069bdee323073299b37e8acceb24f745d4bccade1a1e9ba4095273cb1e4b3",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-2eb37a322ec07fff-data.tar.gz",
+      "bytes": 8158383,
+      "sha256": "e5c417c36a52a618b3f2e699280f8f6f68f2b1e184a4568bbb596819f743dcea",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-32ad82e4fc1baec7-data.tar.gz",
+      "bytes": 8135102,
+      "sha256": "1687925de44e01463d996748c33bfa263c8f8cedeaf605bcf40e98a30bb300b6",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-32de8a5c9f601b40-data.tar.gz",
+      "bytes": 7943620,
+      "sha256": "27ef561cf4456ea9ae7c52bcaf0ec87cfc74aab58221d6a6b612b5b3c9787c5a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-33b0e1be32933867-data.tar.gz",
+      "bytes": 7952066,
+      "sha256": "a173549818fe9144b0d13bc4f7bb97ef7242893ff2b25755bb29f7c4fbf7a451",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-33b500c4a956a315-data.tar.gz",
+      "bytes": 5209915,
+      "sha256": "b9a544f95045bbf934c109fd7d5b4fd304092964e22a40f1eab368b861db2c96",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-35ccaaf9a444515f-data.tar.gz",
+      "bytes": 8134943,
+      "sha256": "f49aa72d3a4f06ee65c8120284417233f296e543c550fabd15d0f238e2552fe4",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-3842a3e203706284-data.tar.gz",
+      "bytes": 8776773,
+      "sha256": "e474ba4535df61732462cd1c43b75fbf7d866196bee46110d32e069b5de34315",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-392c71d0a6644234-data.tar.gz",
+      "bytes": 8133686,
+      "sha256": "d7afcfa4fc331c7349a671612ba2f356e15fe103ebacd6a6beabfca6af7fa319",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-3cb6f53e8e052f26-data.tar.gz",
+      "bytes": 7949244,
+      "sha256": "aed9e78cf8fa05989ad80e307d217ea12b1436220ecac0264361ea563acb81b1",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-3f769026b1cd7623-data.tar.gz",
+      "bytes": 8154121,
+      "sha256": "8840be5746e45939ac03885e725974e17e31c6c0732bc9009020e7c64161f987",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-41542b49ba075e1b-data.tar.gz",
+      "bytes": 8130493,
+      "sha256": "b54440625f32dbe3ca30c0898550265863556885e1a072d662773deccae8c18a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-42bf2100c98b54e1-data.tar.gz",
+      "bytes": 8133403,
+      "sha256": "55c13f7269d10374f1fd80c6737cc1c0d8d68464499b8abc8d554f57035964ff",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-45297d259402b4db-data.tar.gz",
+      "bytes": 7944613,
+      "sha256": "af93926afcaa6526522c17bd882fbfc1e52f65a814f2fd6d2ef582ef7b617e62",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-457c901c22530b58-data.tar.gz",
+      "bytes": 12138493,
+      "sha256": "f32fd8cd536847a920a6c0d8c0a64a26c41baece5656d134155a29eb9b6eb7ff",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-4703ee5b610552a6-data.tar.gz",
+      "bytes": 7953158,
+      "sha256": "9c9c193648bc6eb92666dc2ddcf31570ec46b6c3fd46c36023808893e93cacdb",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-47a56cf7f43df527-data.tar.gz",
+      "bytes": 8781189,
+      "sha256": "7cd7c92e14d66f70804c9488a93526d1f0f17628841c19f02f15f8e8b5445152",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-48796a78a574aeac-data.tar.gz",
+      "bytes": 7952867,
+      "sha256": "41c5ffdfed65c34cf6e4c6c806b20fd4613e063be0384a783ee8767b33542e8d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-4b0fddb2327da555-data.tar.gz",
+      "bytes": 8161183,
+      "sha256": "b9d6e6cf384cc832275ded7be0479fb0d2fe84c3c1173eebe17e8a9367701d88",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-4b5eeeb0a9f29ec6-data.tar.gz",
+      "bytes": 7943267,
+      "sha256": "af209de9d299954082da2a921eb51c8ec377da9806befef44edf6d27de76cd97",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-4f7601cfad94c8b5-data.tar.gz",
+      "bytes": 8152731,
+      "sha256": "c13cf5456edd53def59337381a4632df46099b593adb28953b0e5784b89964d5",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-51fb901376b61a9e-data.tar.gz",
+      "bytes": 8130352,
+      "sha256": "402abdfadaa435fb40eb6c0b43b9961f26e1910668fb5123f0e54d36a474ddf8",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-52618a9634f1d20c-data.tar.gz",
+      "bytes": 2430885668,
+      "sha256": "ea232b35861134e9a655bd110cb9a8e09b3716b46ffc584113119bfde6ba7893",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-52d629b7882a79bc-data.tar.gz",
+      "bytes": 8135734,
+      "sha256": "987fdd763d76b1133dc10448b5f1e9767376ef0b133f703d3d916eb822c4c5cb",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-5358e76b7275d08f-data.tar.gz",
+      "bytes": 242,
+      "sha256": "a69e33794b667256b1bf92ece47305056ef11f7c1d96f0ee61eef97ec9a9c4b3",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-59cbcd49a6869b93-data.tar.gz",
+      "bytes": 8137503,
+      "sha256": "2c10e8f0322c079d29c2c3c50c8b24f0b7463cdf656fa84a8d75197e88904286",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-5b017be4023ea2d9-data.tar.gz",
+      "bytes": 8159009,
+      "sha256": "7fc5ab0a8afff7b1a9b822fbe2c857f42a3d59c5c94d7cfb79a538d1a697396b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-5d8e4ac505426bd4-data.tar.gz",
+      "bytes": 7943811,
+      "sha256": "45b2ed4da9ac0f08f0dbba61ad7b32811cd6887d49f33b691cdeab8218f0896a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-5e8977fc262f2889-data.tar.gz",
+      "bytes": 129332382,
+      "sha256": "06b4b23588c619d2e6c03ad4760890b4ad22154017c6e7e2e4c54f8f1b300558",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-605fbab6107ce386-data.tar.gz",
+      "bytes": 8154569,
+      "sha256": "9a67d548a9bf073ec11e5cc445118e17422cbbb0653c90fcac19070613839664",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-61cc974127ab1d70-data.tar.gz",
+      "bytes": 8153336,
+      "sha256": "f2a387317ea5956140d9477ebeb7321f191ca1a77fcac6358c729d706481728b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-669559160fed7bb9-data.tar.gz",
+      "bytes": 7943593,
+      "sha256": "15848a6f77a2326adec862c1398f3c268ef5531df058204d0a91ce0c0156df32",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-6bc44c750ecf0101-data.tar.gz",
+      "bytes": 8132188,
+      "sha256": "c6e46d3b8ebaba90a77301c1561c6493ee38f35b5721699a2785cedd2beeb148",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-6cda86eec403a968-data.tar.gz",
+      "bytes": 8160287,
+      "sha256": "f288eccb21275cce4907b14796052b61b67e1578534975dc21124e980080e403",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-6d6e87de1dce44f8-data.tar.gz",
+      "bytes": 8713805,
+      "sha256": "6f835cabf48c30ec4feee76b3831eff1ad39516231af8ce1571cb7ff8a8f0150",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-72a4aafda1e3d4b9-data.tar.gz",
+      "bytes": 7948999,
+      "sha256": "0f3707fd6d1950f56673c254b84058cd0dc03cd79c438b7c0bfddf236407f1a5",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-7511df1b67b45464-data.tar.gz",
+      "bytes": 8161560,
+      "sha256": "9a06661e8d0c2b23b12fbcedbcade6d5ffb2dcbf9ea62b48a655d121c099c18e",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-76423a29aa5f1853-data.tar.gz",
+      "bytes": 8135575,
+      "sha256": "4286ea406bd2450d8ffd39598df8e0ec9aaec00ef4004127fc455b1210802dbe",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-766f6cbf20006553-data.tar.gz",
+      "bytes": 8151664,
+      "sha256": "899cd847c375ac6c76f72012fe6d9ca3ef955b3c98e7b55fe3d8b4f670fa320c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-77d35474873ee39f-data.tar.gz",
+      "bytes": 8155712,
+      "sha256": "3e64aaebc6d16b8351d32ca26e8b521aa2d648a3bc50ecb9d3b36f2812bd313d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-7a01b1ccc6a476d5-data.tar.gz",
+      "bytes": 7948641,
+      "sha256": "8847af0a5bc93393127f0e790ffc3248ed1dab0ede2140a38137e01a6beb0a80",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-7a2023647c3f6416-data.tar.gz",
+      "bytes": 8160891,
+      "sha256": "8b9022b8f33c5a761fb857567a0211d1658f5b338a6fb2e9c36adf8211f44236",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-7b1e7d1deb1789e3-data.tar.gz",
+      "bytes": 8152642,
+      "sha256": "684c4b66127e0cc298113a7ec2c43cb497928eda7ad6144abe6c3a9d992e640d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-7b7e37100246dc14-data.tar.gz",
+      "bytes": 8158861,
+      "sha256": "75246706366deac80a6f9fe1d4335972cc6947c04ff01b6ec50839cacb3e350a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-8260eab0427dcb31-data.tar.gz",
+      "bytes": 7949205,
+      "sha256": "37e67b4c4e32565ffafc82927139fec55efb2f70b8d13d1b974b6b5372720ecc",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-86a57ebe306d8ea2-data.tar.gz",
+      "bytes": 8129319,
+      "sha256": "26b8e2c852d30f1aae9586d92ea15f99e98ea2b789c3efb896d4572403000049",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-880f1c5cae280b6d-data.tar.gz",
+      "bytes": 7946983,
+      "sha256": "80988f728bcf735c1a2273cc705b47722e51480658bb6452f8161c2283f32f75",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-88d099c67faaffd7-data.tar.gz",
+      "bytes": 8132465,
+      "sha256": "f7f300bb64c86ee202bb14a189518bfcfa2ca7a669a224114334127e3d875d30",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-88f1a68e854646a1-data.tar.gz",
+      "bytes": 7948042,
+      "sha256": "e12020987e702718ad4314ec78c15edad61ee918b48c1ef9b6f34d291f94ea6b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-89b6307a82eda1ff-data.tar.gz",
+      "bytes": 2431229875,
+      "sha256": "88ac8ae0c86b2dbae6aff5b3f8450d517ce5a0b2c590a1754e2992ff796da36f",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-8cc7a12fc322f88c-data.tar.gz",
+      "bytes": 8134884,
+      "sha256": "8f030261fbdeb5357d0a3e00a6c6310385e944cc03093d988651edbcac3425c1",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-8fa7f9b0d9c17291-data.tar.gz",
+      "bytes": 8152509,
+      "sha256": "ea481661ef19c9d46c22eb337ca5f1dffc2d990933ae9052186ddf9041513bb1",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-904439806245d1fa-data.tar.gz",
+      "bytes": 8159639,
+      "sha256": "3a35b53ad9c88e915dfb9fd33bcbeb2aef8ed49ceb92204a25e19d55e78ca770",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-91c5b67118d46d4c-data.tar.gz",
+      "bytes": 8778887,
+      "sha256": "84de3b96c8d03da9d684d76f434729b0af446e6f3ccd49333d626b4a61723d10",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-930e3a14727d9f9b-data.tar.gz",
+      "bytes": 8780760,
+      "sha256": "391432ce4c8acdf521571d0e2296fe1d4cada64bf18d0f82ef0b349a71e7f73d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-945da59a916a40ca-data.tar.gz",
+      "bytes": 8780803,
+      "sha256": "4da0acf2aaedb35474d0ce4191b69fd332ebc4014ee8699861a652c41d2cbac7",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-957849c6e5e46845-data.tar.gz",
+      "bytes": 7949329,
+      "sha256": "71f2c7d6299df4d3ad9f4652fd6596a66a597d7fd31a2d4939f2648e78d29474",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-96a4e2078fa7a698-data.tar.gz",
+      "bytes": 8131859,
+      "sha256": "c1ad72297d0b919c99711ef7e3f2a4da9f4cb058b0f95383cdbafad15af6ad0f",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-97375115b9f3947b-data.tar.gz",
+      "bytes": 7949324,
+      "sha256": "26f99c0e4680b0b0ede1d1ad7fa8e6ab5afa119bc07da3a41ac75e77a0a13f66",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-9786279f76959de1-data.tar.gz",
+      "bytes": 8158774,
+      "sha256": "8fd5c5a5a2e080a35787d432813b7d74d310c4519799f23c688bef673c3f8fd8",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-98cdfc4b13511917-data.tar.gz",
+      "bytes": 8133258,
+      "sha256": "b2d46103dbda34b8d3432464e8ff24060d9b2a9bf90de2dfbedb220c45367fc8",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-9aa1a9b4d87ff7a8-data.tar.gz",
+      "bytes": 8716891,
+      "sha256": "d61b02ebad486ed76cd394b36a8b785d478900544ce43b8902ab7a98989da196",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-9bf0412beeb2cc65-data.tar.gz",
+      "bytes": 7944008,
+      "sha256": "86f54124ec1dc97d90eb11e115cafc60e1ea9b40fa331e1a9944ea5ff49e59c6",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-a2bb01e9b04f4c5b-data.tar.gz",
+      "bytes": 8132180,
+      "sha256": "daa4be01de21aac4a119212ada4ddc309e2ce534d3ef9d450f34a9ac151a622a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-a37daeac71b0f2e8-data.tar.gz",
+      "bytes": 8159800,
+      "sha256": "4cb3a1988cbd527cb10af6acb4516bec47b7fd71b6476acfada107d4ba3635cc",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-a58f62c71d872bf5-data.tar.gz",
+      "bytes": 7948478,
+      "sha256": "c61834c543e63a25d4edbc1ee32fe600b2b8efc0612c97f203be50573e04aa90",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-a7d06426fa7b5cb7-data.tar.gz",
+      "bytes": 8129897,
+      "sha256": "b5a0493c785fb8ba8a0b5164239c189cbe380b8c1650597e31e39cf99a9f9350",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-a7efebdc665bfea6-data.tar.gz",
+      "bytes": 8160348,
+      "sha256": "9718e10002fac8912a114f250f75f628149de818c3b51843f252c2dd15d0cf30",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-a8e0d0087856951c-data.tar.gz",
+      "bytes": 7952856,
+      "sha256": "b23e8c53d2510813942941f69e5198c01df76602bb52e5fda1936796adb30724",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-aef579d734633df4-data.tar.gz",
+      "bytes": 7947553,
+      "sha256": "39e8cb2daaa07f890d6238f8a9db25ded131995f5172d62de2a0f6c4b7c3d4e5",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-afe447aed86a09e4-data.tar.gz",
+      "bytes": 8153057,
+      "sha256": "91af91d75d117833f03bd8551eac4371fbf6fa16aa58631e246c10b3c0f5952d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-b28ae5daddc06fa9-data.tar.gz",
+      "bytes": 8158457,
+      "sha256": "275898115db4986b5dabc5cf140fb5ae699d59e172a39badf77679b9e16da1b3",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-b2c26720bb3cdf9c-data.tar.gz",
+      "bytes": 8155652,
+      "sha256": "63fb8df5a59e667ca3bb5c4b969da0a96987248303dd1d674a1966cc5ee55195",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-b449045bb7229782-data.tar.gz",
+      "bytes": 7952615,
+      "sha256": "f6e2965559be71fba4cc49c1cd03bb5809f63e44bda848f61b2e70a68c270140",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-b564caf9d5715f7b-data.tar.gz",
+      "bytes": 7948020,
+      "sha256": "3c14bfe2e8bba46a7fd2bfa69e88ff7e4235b3fd6e176def107bb295b9583620",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-b7f86d3194c4f6eb-data.tar.gz",
+      "bytes": 2431301859,
+      "sha256": "63e4a665842ad8a16c0dadd44c8dc5ebc8224f993c2aca61b0317c6cab654ed3",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-bdd40a5f0e9c1dc1-data.tar.gz",
+      "bytes": 7948001,
+      "sha256": "deed688a5cb722e24ded2a57d6e9903c75ce7bfda365d75f67fc608eda350a4f",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-c00555e8a570784d-data.tar.gz",
+      "bytes": 8129647,
+      "sha256": "cca138ccb5759f0c1b6d5964b19a6c773f40b7c22dcb4db1384a733187df22cf",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-c1c8edaae7f689ba-data.tar.gz",
+      "bytes": 8131854,
+      "sha256": "a0ae11d9ace909e0cba96233bb5f15d51fb1fc66df7fad8d0e5725837eb18870",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-c3a84b6142c4a50b-data.tar.gz",
+      "bytes": 8153587,
+      "sha256": "bfd588d533442d083f831c1ab6d9498d5308cc68ae07aabe08f26aed069ac46b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-c9880520c29d2b92-data.tar.gz",
+      "bytes": 7943980,
+      "sha256": "3adcdeedac9a90f1ecb91920fa7306b669beaf5c6ded11f72153ec2917a38f17",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-cd9957f83bbfea21-data.tar.gz",
+      "bytes": 8130080,
+      "sha256": "b8a589909e9b089fcc5dff70a31dbcf717a587e9df3f3d3f5bd890efd8a32b8f",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-d59ff3a9348635d8-data.tar.gz",
+      "bytes": 242,
+      "sha256": "5969f35eb3bcfb5a364b3b46f491a5e7d0cbfff23c8308d5d7a92b25ec3f4f29",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-d97d466ce41dc7af-data.tar.gz",
+      "bytes": 8130719,
+      "sha256": "3fe7575c473e645659a7d0248d7ad7637c57cb84319c9cd29457b306cd9b721b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-df88dd4c4bc6f41c-data.tar.gz",
+      "bytes": 8152264,
+      "sha256": "d8f659cf1ec6caead6c35529f14771bf30fdfeedc2ce5ca7722b7bb0d1c9f17d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-e431786953c93d54-data.tar.gz",
+      "bytes": 8129205,
+      "sha256": "f62e756579657b09f77da4c049bd0cb49f8f3a23664a9858fb002a738781c1c0",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-e6afaf76f8451e67-data.tar.gz",
+      "bytes": 8159447,
+      "sha256": "76662df60c02b9ca1300142bc37aa899214a615cb635f071f430489b036090ef",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-e95739a595140a32-data.tar.gz",
+      "bytes": 7942414,
+      "sha256": "2670e112a2bb490f0747b916f09849d29e2c6f334f07558ab03e3255ad4cbaf0",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-e9db31e55227b95a-data.tar.gz",
+      "bytes": 8134748,
+      "sha256": "2cb6088ef80629b3c4cecf7c16a0b8ac5610eaf8ae88c7ec0021e1b4555d0485",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-e9f4fafc05a18bfc-data.tar.gz",
+      "bytes": 8135373,
+      "sha256": "19b1f4484dd83b9c5cb16234d733b1a5be4f0166b12f468c23b887052c957e31",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-f467e661ace194a7-data.tar.gz",
+      "bytes": 8132328,
+      "sha256": "c32c835bac111f203693b2658d45f486dab324976b5d6e68bce21f2944beee8d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-f511096f3167d5a9-data.tar.gz",
+      "bytes": 8131695,
+      "sha256": "fb0d49f945a7b534f0542474a5adfea67b4cda9ec501c7db9ec6e6cf76d22a0d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-f521592308a749e5-data.tar.gz",
+      "bytes": 8153457,
+      "sha256": "ac4af96873b5843e6b274e227a8659c4ef38b09142a087a4e05942027e279a69",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-fa7365e90fd45168-data.tar.gz",
+      "bytes": 7944654,
+      "sha256": "2c5cb3d6aa8d9e25e29b4a93970fe3739109bd5778b1b01f8c44832852b3c16e",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-pgvector-fb69a5a871f01ccc-data.tar.gz",
+      "bytes": 234,
+      "sha256": "58c360f030362e93511514fff8e9104a29eb96126afd7d094b29009fe823ebe5",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-0f1514d50f42a003-data.tar.gz",
+      "bytes": 397174,
+      "sha256": "051b23e48aca01d03e3ad84209274acc5d6b0ed39df80da65b0a32d1cb735a1d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-141357d5268ba8c2-data.tar.gz",
+      "bytes": 60957,
+      "sha256": "f88a04376df67527ec8f946d37e49888a2bba87073e2673ae998cfc4bef4c66b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-283e7742079e8452-data.tar.gz",
+      "bytes": 60985,
+      "sha256": "318b46366d413cb3eccf82bd8dc217538b26f30d59fcf84e91a75bd5e349a242",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-28b3c5e742d69eec-data.tar.gz",
+      "bytes": 33379,
+      "sha256": "adb1af74a0961a663e8edf07834fface59009c6d05734b8717b7ab875e14a7c8",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-2cde7f71283c27bb-data.tar.gz",
+      "bytes": 394869,
+      "sha256": "441c96ebf10cd7fb2e7b651536ddf618d947447be724622e3c6c4dc1efab5a39",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-2feed80f78591dea-data.tar.gz",
+      "bytes": 793185,
+      "sha256": "3b0d225c66c60448762587f1108b9523e81e68cfe90231978790937839bd44f3",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-366294edf4d2147a-data.tar.gz",
+      "bytes": 398296,
+      "sha256": "0292ac3e786c5a3973a1c840daa2a6d9710cbadd1c3567def7511982cb0d5bec",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-5409a8088b0d3b8f-data.tar.gz",
+      "bytes": 792859,
+      "sha256": "a58e1af4c39fd87b581e2e08fa207883f637f72e19450a8dbd13922758312d9e",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-65b940b126ee4672-data.tar.gz",
+      "bytes": 2099747,
+      "sha256": "013ea056290fdd73361ad74a2a0ed964724e6b284a97db38effb52d6f5e27614",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-6f51838eef396266-data.tar.gz",
+      "bytes": 790284,
+      "sha256": "ab0fe3e939b7bffbdee1d62afa4d6ed5a8c58ee143ba0ea2a06737e534634eae",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-76700e115e048a49-data.tar.gz",
+      "bytes": 396333,
+      "sha256": "5c81f25dd57ca9738a3ced867a9f10805178fb0622d837d985c3832cd3a97694",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-8ba4b912dce6daa1-data.tar.gz",
+      "bytes": 64496,
+      "sha256": "4723d171b8c844e05e589e9b7bea99ae17c61fa3cb6ebc91ed10fabbe790db94",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-90d924d3b54ede40-data.tar.gz",
+      "bytes": 60856,
+      "sha256": "6b396910dbf70ee36bf0c16b716cfdbfc608de5de1ebff9bc5dae0e4f694194c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-a132e03f715afc26-data.tar.gz",
+      "bytes": 64370,
+      "sha256": "5a1e2d965460a10507a4ee6f9f7eb2061a9fbc46f9bbabebc6f15c6f8609d572",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-a3e2877604bdc1b0-data.tar.gz",
+      "bytes": 3770852,
+      "sha256": "d454e60100709679696483f46364188f74d058951114c2881eb53e589c7b8c74",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-a62a8f3d152190d8-data.tar.gz",
+      "bytes": 793888,
+      "sha256": "03007c07447b3796f489460142e2b86f0243a91b6850300ce9ec3fff08cfb6fc",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-b4e793e8aa979dff-data.tar.gz",
+      "bytes": 43374,
+      "sha256": "1baabfe1e92e0670df6eb3029ee2dc0a071981c9636a02e17ad6749b0301d0e4",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-bb93ca13854153c3-data.tar.gz",
+      "bytes": 64720,
+      "sha256": "4bb57c06e694da8652de87b347f2ef8bbbd3570d1dc34a22715fabcc5aefd31a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-bdc3b4804e92c4e8-data.tar.gz",
+      "bytes": 90959099,
+      "sha256": "1ec472e2e3562cbf07aba382e50d84ba2311829e6d57857b48ac19007fa4541f",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-d16cdb57530fcf6e-data.tar.gz",
+      "bytes": 812931,
+      "sha256": "0679ec63793f7c0198f6c000fc5ef5f1a9df9a10bbf59c4efc880717be368657",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-e2b0c79136366c41-data.tar.gz",
+      "bytes": 395986,
+      "sha256": "b2fb3f20c05fdaecd8dcba6fa583b4ed0492ba92ea37b4671b1871f6db469645",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-ec7a9e16e6ef8cfe-data.tar.gz",
+      "bytes": 64730,
+      "sha256": "d8d0cde9c07013cc4810cd128107aa20e65f5b79b26ee3c79ce5376f89642950",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/fannbench-weaviate-f418c639db156494-data.tar.gz",
+      "bytes": 60926,
+      "sha256": "9059569089baf489055ee0e42cad9f21fb55f54e3f64d04e8aeb724d68b6915d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "release/docker-hibernation-2026-10-12/volumes/mini-bench-reviews-data-998513d5f1b6.tar.gz",
+      "bytes": 2980162791,
+      "sha256": "b33a5f5b76e650657aedbee7eaa51b4dc08d91a57a190492ec8f5b0fd9802837",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-aggressive-proposals-v1-source.tar.gz",
+      "bytes": 4433531,
+      "sha256": "4d2065172852554a215df0615c888977b1fb7c9c75d7b5e22f5fd01ba5ed9b04",
+      "checksum_sidecar": "trials/torch-reviews-aggressive-proposals-v1-source.tar.gz.sha256",
+      "expected_sha256": "4d2065172852554a215df0615c888977b1fb7c9c75d7b5e22f5fd01ba5ed9b04",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-aggressive-proposals-v2-source.tar.gz",
+      "bytes": 4445079,
+      "sha256": "f5cabae238706f5265fcda3492ff1add94c2e0b1dfbd3cd76db8bc0aba1c1561",
+      "checksum_sidecar": "trials/torch-reviews-aggressive-proposals-v2-source.tar.gz.sha256",
+      "expected_sha256": "f5cabae238706f5265fcda3492ff1add94c2e0b1dfbd3cd76db8bc0aba1c1561",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-collector-ab.tar.gz",
+      "bytes": 53424,
+      "sha256": "e48f44581cfd4ff0f554cf2471431ea8a7970b42adfd7e39e28170abfb260dd2",
+      "checksum_sidecar": "trials/torch-reviews-collector-ab.tar.gz.sha256",
+      "expected_sha256": "e48f44581cfd4ff0f554cf2471431ea8a7970b42adfd7e39e28170abfb260dd2",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-dispatch-overhead-v1.tar.gz",
+      "bytes": 10098286,
+      "sha256": "f68921a3f76fee673583cce2a6ff903f21d1b35820f01f77b27dbb00bc1d01ec",
+      "checksum_sidecar": "trials/torch-reviews-dispatch-overhead-v1.tar.gz.sha256",
+      "expected_sha256": "f68921a3f76fee673583cce2a6ff903f21d1b35820f01f77b27dbb00bc1d01ec",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-ef-sweep.tar.gz",
+      "bytes": 30714,
+      "sha256": "04aeeba7298765eda906afb90a10c7e92d774054476c58843aa7850c6909e4b0",
+      "checksum_sidecar": "trials/torch-reviews-ef-sweep.tar.gz.sha256",
+      "expected_sha256": "04aeeba7298765eda906afb90a10c7e92d774054476c58843aa7850c6909e4b0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-first.tar.gz",
+      "bytes": 1108276866,
+      "sha256": "af22f27ed7da82844848f49870101dcc690945c5743822b22e06f8543eca654d",
+      "checksum_sidecar": "trials/torch-reviews-first.tar.gz.sha256",
+      "expected_sha256": "af22f27ed7da82844848f49870101dcc690945c5743822b22e06f8543eca654d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-frozen-proposals-timing-v1-runtime-fix-source.tar.gz",
+      "bytes": 4423801,
+      "sha256": "879dc2a0609ca2e98cbc89f420a2a40a1c528417a06cb3688d8860e9f3c88539",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-frozen-proposals-timing-v1-source.tar.gz",
+      "bytes": 4420202,
+      "sha256": "687df6147e662df95d57235225d698db732d57dfafadc3b2960cfd79af45c961",
+      "checksum_sidecar": "trials/torch-reviews-frozen-proposals-timing-v1-source.tar.gz.sha256",
+      "expected_sha256": "687df6147e662df95d57235225d698db732d57dfafadc3b2960cfd79af45c961",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-insertion-bypass-v1.tar.gz",
+      "bytes": 10016385,
+      "sha256": "9aca0e93a749983e399c5c8cd494217d7d5d77a44414f8c8f4c45a92dbbedf07",
+      "checksum_sidecar": "trials/torch-reviews-insertion-bypass-v1.tar.gz.sha256",
+      "expected_sha256": "9aca0e93a749983e399c5c8cd494217d7d5d77a44414f8c8f4c45a92dbbedf07",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-lifecycle-fix.tar.gz",
+      "bytes": 14553,
+      "sha256": "3e383da1fc4c2a62cacc5f5949de1fe38d9d70f705c9fb0c8e3bdabefe2c201e",
+      "checksum_sidecar": "trials/torch-reviews-lifecycle-fix.tar.gz.sha256",
+      "expected_sha256": "3e383da1fc4c2a62cacc5f5949de1fe38d9d70f705c9fb0c8e3bdabefe2c201e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-operations.tar.gz",
+      "bytes": 27108,
+      "sha256": "27bd0698355d8b482b809e1e6f6adeeff73c119028c1f3588cf7babc632f0a3d",
+      "checksum_sidecar": "trials/torch-reviews-operations.tar.gz.sha256",
+      "expected_sha256": "27bd0698355d8b482b809e1e6f6adeeff73c119028c1f3588cf7babc632f0a3d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-policy-feedback.tar.gz",
+      "bytes": 3596745,
+      "sha256": "4181b565925d5374b74ed5459cbea7efe017b864ceafbebafb86821db51bc6ed",
+      "checksum_sidecar": "trials/torch-reviews-policy-feedback.tar.gz.sha256",
+      "expected_sha256": "4181b565925d5374b74ed5459cbea7efe017b864ceafbebafb86821db51bc6ed",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-policy-learning.tar.gz",
+      "bytes": 1312212,
+      "sha256": "102c9cc63acfa429c070bb10d19355144871760a44ed48e4271138e4e515f95d",
+      "checksum_sidecar": "trials/torch-reviews-policy-learning.tar.gz.sha256",
+      "expected_sha256": "102c9cc63acfa429c070bb10d19355144871760a44ed48e4271138e4e515f95d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-predicate-ablation-v1.tar.gz",
+      "bytes": 3855407,
+      "sha256": "8066ee297331a8ff7598649daaf66623c9e6babf16f48b843a901190acaaf417",
+      "checksum_sidecar": "trials/torch-reviews-predicate-ablation-v1.tar.gz.sha256",
+      "expected_sha256": "8066ee297331a8ff7598649daaf66623c9e6babf16f48b843a901190acaaf417",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-reference-fix.tar.gz",
+      "bytes": 17984,
+      "sha256": "d6653d7bd211c885b2845b9b502ceffedb59192917395cb0471a95443d9361fb",
+      "checksum_sidecar": "trials/torch-reviews-reference-fix.tar.gz.sha256",
+      "expected_sha256": "d6653d7bd211c885b2845b9b502ceffedb59192917395cb0471a95443d9361fb",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/frozen-proposals-timing-v1/torch-frozen-proposals-timing-v1-training.tar.gz",
+      "bytes": 7264983,
+      "sha256": "7d9bea9c29ccfadffee460e96e26122d9b9f578471aa1f3c88cc036b3b52d3db",
+      "checksum_sidecar": "trials/torch-reviews-results/frozen-proposals-timing-v1/torch-frozen-proposals-timing-v1-training.tar.gz.sha256",
+      "expected_sha256": "7d9bea9c29ccfadffee460e96e26122d9b9f578471aa1f3c88cc036b3b52d3db",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/frozen-proposals-timing-v1-runtime-fix/torch-frozen-proposals-timing-v1-runtime-fix-training.tar.gz",
+      "bytes": 7267674,
+      "sha256": "20b073cda164e27b5cbbaa3d4fdf60c1121bec14b060ed0aeecd4ba64ef38bd8",
+      "checksum_sidecar": "trials/torch-reviews-results/frozen-proposals-timing-v1-runtime-fix/torch-frozen-proposals-timing-v1-runtime-fix-training.tar.gz.sha256",
+      "expected_sha256": "20b073cda164e27b5cbbaa3d4fdf60c1121bec14b060ed0aeecd4ba64ef38bd8",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-collector-ab-20261019T052849Z.Us5why.tar.gz",
+      "bytes": 375513817,
+      "sha256": "3063bc2fdec8015e8fb39eae0e1f6c5b138ffe1d2b3d7ed690f722c4d6f011c9",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-collector-ab-20261019T052849Z.Us5why.tar.gz.sha256",
+      "expected_sha256": "3063bc2fdec8015e8fb39eae0e1f6c5b138ffe1d2b3d7ed690f722c4d6f011c9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-dispatch-overhead-20261020T152408Z.rhheoeyj-feedback.tar.gz",
+      "bytes": 5989475,
+      "sha256": "5066419d6fd715b90d40bc72240d4c88e27238f1443dfa6577d24de77a1b0d48",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-dispatch-overhead-20261020T152408Z.rhheoeyj-feedback.tar.gz.sha256",
+      "expected_sha256": "5066419d6fd715b90d40bc72240d4c88e27238f1443dfa6577d24de77a1b0d48",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-ef-sweep-20261019T004327Z.dcFzo0.tar.gz",
+      "bytes": 1589057,
+      "sha256": "8623d347bdcf4d519cd14f8667c98429693316b66884c8b0631d7b924bf4a378",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-ef-sweep-20261019T004327Z.dcFzo0.tar.gz.sha256",
+      "expected_sha256": "8623d347bdcf4d519cd14f8667c98429693316b66884c8b0631d7b924bf4a378",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58.tar.gz",
+      "bytes": 231646023,
+      "sha256": "f205d2c2b7a234539e3d3f0431de50c51a517d303bafc72650f4f706c2ed8ebe",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58.tar.gz.sha256",
+      "expected_sha256": "f205d2c2b7a234539e3d3f0431de50c51a517d303bafc72650f4f706c2ed8ebe",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_-feedback.tar.gz",
+      "bytes": 6017856,
+      "sha256": "ace97972c903b2f42c09a0c399f61157121da8f8f4d8a85b13d1f92345f4d4a9",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_-feedback.tar.gz.sha256",
+      "expected_sha256": "ace97972c903b2f42c09a0c399f61157121da8f8f4d8a85b13d1f92345f4d4a9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_.tar.gz",
+      "bytes": 16784785,
+      "sha256": "1bc88180c5e12f61eacb0085a6838b841647ff286f3b02d2d2603498c00f565a",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_.tar.gz.sha256",
+      "expected_sha256": "1bc88180c5e12f61eacb0085a6838b841647ff286f3b02d2d2603498c00f565a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n-feedback.tar.gz",
+      "bytes": 3003451,
+      "sha256": "08f9dcf7b9804afed7d06da5cbc7b87409cf7c0051a5b1ad7119e018569fea69",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n-feedback.tar.gz.sha256",
+      "expected_sha256": "08f9dcf7b9804afed7d06da5cbc7b87409cf7c0051a5b1ad7119e018569fea69",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n.tar.gz",
+      "bytes": 16657547,
+      "sha256": "74a61ac237525699951719699f771d3eec9c22dea0a864464e3dadeb94165cef",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n.tar.gz.sha256",
+      "expected_sha256": "74a61ac237525699951719699f771d3eec9c22dea0a864464e3dadeb94165cef",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-agent-qualified.tar.gz",
+      "bytes": 10874374,
+      "sha256": "ea100213b132dbfe9e93263422f1775c3d87e75c748491026ea13c72b086fda2",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-agent-qualified.tar.gz.sha256",
+      "expected_sha256": "ea100213b132dbfe9e93263422f1775c3d87e75c748491026ea13c72b086fda2",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-agent.tar.gz",
+      "bytes": 8051104,
+      "sha256": "f29b6a3ae13ff5e6210eced4b6287178cbfaec41cbf11469972a847ea1fe766d",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-agent.tar.gz.sha256",
+      "expected_sha256": "f29b6a3ae13ff5e6210eced4b6287178cbfaec41cbf11469972a847ea1fe766d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-learning.tar.gz",
+      "bytes": 6644393,
+      "sha256": "5431dd32d22351e160861bf48aca00e42591eaa5c5e728acc221cc2fdb993683",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-learning.tar.gz.sha256",
+      "expected_sha256": "5431dd32d22351e160861bf48aca00e42591eaa5c5e728acc221cc2fdb993683",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru-feedback.tar.gz",
+      "bytes": 5986358,
+      "sha256": "7f2c3cb3c4cf0f2699b36c06d9f79c96091dc8874a45ce031d4b80ffc005f653",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru-feedback.tar.gz.sha256",
+      "expected_sha256": "7f2c3cb3c4cf0f2699b36c06d9f79c96091dc8874a45ce031d4b80ffc005f653",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru.tar.gz",
+      "bytes": 30266184,
+      "sha256": "dc0e9d794f6f3fa99ca5731c7138add0e3cd956eef66c6d68538359e26e6b0f7",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru.tar.gz.sha256",
+      "expected_sha256": "dc0e9d794f6f3fa99ca5731c7138add0e3cd956eef66c6d68538359e26e6b0f7",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-reference-20261018T234510Z.UA52vD.tar.gz",
+      "bytes": 617047,
+      "sha256": "e9073b5b498f5877f905eaa7ce0512209a0bf994dee2044261a72e4d887d01c0",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-reference-20261018T234510Z.UA52vD.tar.gz.sha256",
+      "expected_sha256": "e9073b5b498f5877f905eaa7ce0512209a0bf994dee2044261a72e4d887d01c0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB.tar.gz",
+      "bytes": 3007331,
+      "sha256": "2496a9072782c223c5db050ba5a46bedcc966f2ae360470687d106c60374ea47",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB.tar.gz.sha256",
+      "expected_sha256": "2496a9072782c223c5db050ba5a46bedcc966f2ae360470687d106c60374ea47",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d-feedback.tar.gz",
+      "bytes": 2974534,
+      "sha256": "a133a27eb730cee6022fa769e2503c55fb0a0bcf06a8c2e9fca2c0e6ba64f7b8",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d-feedback.tar.gz.sha256",
+      "expected_sha256": "a133a27eb730cee6022fa769e2503c55fb0a0bcf06a8c2e9fca2c0e6ba64f7b8",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d.tar.gz",
+      "bytes": 14378863,
+      "sha256": "345fe15b9ab116f5d5043de1661e6a2ad6a24b36892c552fefa333d9009df055",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d.tar.gz.sha256",
+      "expected_sha256": "345fe15b9ab116f5d5043de1661e6a2ad6a24b36892c552fefa333d9009df055",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-size-sweep.tar.gz",
+      "bytes": 53091,
+      "sha256": "17fdcead55cfa387d2e73bd4435619a66e8ad2dc280b36583e0dd68eab489378",
+      "checksum_sidecar": "trials/torch-reviews-size-sweep.tar.gz.sha256",
+      "expected_sha256": "17fdcead55cfa387d2e73bd4435619a66e8ad2dc280b36583e0dd68eab489378",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-training-stops-v2.tar.gz",
+      "bytes": 3695174,
+      "sha256": "61b26761c70f5f3f43f54ea6b4be016d81059251a882cce67ca09a12049a15b6",
+      "checksum_sidecar": "trials/torch-reviews-training-stops-v2.tar.gz.sha256",
+      "expected_sha256": "61b26761c70f5f3f43f54ea6b4be016d81059251a882cce67ca09a12049a15b6",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-training-stops.tar.gz",
+      "bytes": 3691645,
+      "sha256": "26804f00c17791abf96140891de97e4f22c89af0fe7e19a591c7f1691a71275f",
+      "checksum_sidecar": "trials/torch-reviews-training-stops.tar.gz.sha256",
+      "expected_sha256": "26804f00c17791abf96140891de97e4f22c89af0fe7e19a591c7f1691a71275f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    }
+  ]
+}
