@@ -20,8 +20,9 @@ jobs:
     env:
       MSWEA_SILENT_STARTUP: '1'
       LITELLM_LOCAL_MODEL_COST_MAP: 'True'
-      MSWEA_GLOBAL_CONFIG_DIR: ${{ runner.temp }}/fannagent-mini
     steps:
+      - name: Isolate tool configuration
+        run: echo "MSWEA_GLOBAL_CONFIG_DIR=$RUNNER_TEMP/fannagent-mini" >> "$GITHUB_ENV"
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false

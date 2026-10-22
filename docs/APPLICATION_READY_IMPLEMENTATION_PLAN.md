@@ -70,9 +70,10 @@ Current deliverables:
 The [results page](results.md), [contribution statement](CONTRIBUTIONS.md),
 [local demo](showcase/local-demo.md), and [validation record](showcase/validation.md)
 now track release completion. Hosted CI and public-link checks will be completed before
-the stable core portfolio tag is issued. The companion source is reviewed and
-tagged locally. Its public upload requires explicit approval following an
-automatic approval-review rejection; no backend source has been uploaded.
+the stable core portfolio tag is issued. The author explicitly approved public
+publication of both reviewed snapshots. The companion source is available at
+[`portfolio-v1`](https://github.com/darturi/FANN-Agent-pgvector/tree/portfolio-v1);
+the core branch is published while hosted CI is verified.
 
 ### Release boundaries
 
