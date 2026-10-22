@@ -91,3 +91,20 @@ The update preserves runtime source, tests, dependencies, recorded research
 results, and the `portfolio-v1` tag. Ongoing research remains in its separate
 branch and worktree. The source-install demo is synthetic, and the real-run
 walkthrough still describes the specialized historical proposal runner.
+
+Follow-up verification used a fresh temporary candidate clone with Python 3.12.7
+and the frozen development dependencies:
+
+| Check | Observed result |
+|---|---|
+| Ordinary core tests | 211 passed; one Docker integration test deselected |
+| Ruff and public SDK typing | Passed; typing checked 17 source files |
+| Source distribution and wheel | Built; wheel contains `LICENSE` and `NOTICE.md` |
+| README first-run commands | Exact shell block passed from a fresh public `portfolio-v1` clone |
+| Synthetic demo outcome | Simulated acceptance, three completed experiments, zero model charges/calls, report retained after cleanup |
+| Local reading-path links | All 143 checked targets resolved |
+| Preservation check | Runtime source, tests, dependency files, research records, active research checkout, and portfolio tag unchanged |
+
+No paid provider request or research database operation was performed for this
+follow-up. Current hosted checks are available in the
+[main-branch CI history](https://github.com/darturi/FANN-Agent/actions/workflows/ci.yml?query=branch%3Amain).
