@@ -1,0 +1,126 @@
+{
+  "ab_comparison": {
+    "complete_pairs": 0,
+    "selection_effect_established": false,
+    "status": "inconclusive"
+  },
+  "accounting": {
+    "acquisition_maximum_backend_calls": 38910,
+    "acquisition_maximum_retained_pairs": 10800,
+    "acquisition_maximum_warmup_pairs": 5400,
+    "allocation_layout": [
+      "build",
+      "acquire-and-fit",
+      "measure-0",
+      "measure-1",
+      "measure-2"
+    ],
+    "allocations": 5,
+    "discarded_warmup_pairs_per_block": 3900,
+    "measurement_arms": 13,
+    "measurement_maximum_backend_calls_per_block": 44610,
+    "retained_pairs_per_block": 15600,
+    "retained_pairs_total": 46800
+  },
+  "archive": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/four-condition-training-v1/torch-four-condition-training-v1.tar.gz",
+  "archive_bytes": 3773048,
+  "archive_file_count": 131,
+  "archive_sha256": "3e4a013fb2530dab3d85dc94b1fcf5b3e133b3c1e0d8ecea75bbdd2f360af05b",
+  "automated_tests_passed": 18,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "both_activation_and_reuse_required": true,
+  "canonical_acceptance_established": false,
+  "checkpoint_commit": "210f524",
+  "command_blocks_bash_zsh_syntax_checked": 3,
+  "confirmation_queries": 0,
+  "date": "2026-10-21",
+  "final_recall_tolerance": 0.005,
+  "full_synthetic_pipeline": {
+    "ab_comparison": {
+      "complete_pairs": 0,
+      "selection_effect_established": false,
+      "status": "inconclusive"
+    },
+    "acquisition": {
+      "actual_stop_proofs": 3600,
+      "backend_calls": 30510,
+      "discarded_warmup_pairs": 4200,
+      "retained_pairs": 8400
+    },
+    "conditions": 4,
+    "confirmation_queries": 0,
+    "elapsed_seconds": 703.233088696,
+    "independent_groups": 100,
+    "measurement_blocks": 3,
+    "nested_fits_reproduced": true,
+    "provider_calls": 0,
+    "retained_pairs": 46800,
+    "status": "passed",
+    "synthetic_only": true
+  },
+  "minimum_native_recall_per_filter": 0.95,
+  "model_provider_calls": 0,
+  "native_checks": {
+    "actual_stop_prefix_comparisons": 144,
+    "architecture": "aarch64",
+    "candidate_module_sha256": "cbdc2eec57a5d6cb57b3a2af072b3de0ad0831ff0f90c4cb08150aa5ea89da4f",
+    "confirmation_queries": 0,
+    "getter_calls": 510,
+    "local_probe_checkpoint_checks": 576,
+    "model_calls": 0,
+    "original_native_and_prefix_comparisons": 12,
+    "physical_index_unchanged": true,
+    "request_reset_verified": true,
+    "status": "passed",
+    "synthetic_only": true
+  },
+  "new_model_spend_usd": "0",
+  "package": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/four-condition-training-v1/torch-four-condition-training-v1",
+  "package_manifest_sha256": "6a76b56b91aa138a28c48d5b4868742766de843b4038d034d4f8304b84eacc80",
+  "real_reviews_queries_executed_locally": 0,
+  "scope": "Nested-validation comparison of fitting procedures; not one deployable policy. Fresh independent confirmation required after any later global fit.",
+  "source_backup": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/four-condition-training-v1/four-condition-training-v1-source.tar.gz",
+  "source_backup_sha256": "2dc54123c7fecc757af43ce57b04f884409d3884db99987e1f4a4c45c3d3c47d",
+  "source_directory": "/Users/danielarturi/Developer/JinyangLiWork/agent/experiments/four-condition-training-v1",
+  "source_files_sha256": {
+    "COMMANDS.txt": "bf730ddf75827a79954382f4e41682c032481c7d8350f7eeecd7a4c731f88bc1",
+    "README.md": "938c7e82dda0ff124a4b426a6fe0704eef89921c62fcb879db3ed78b60014773",
+    "contract.py": "c8eeab2a51d97d892c530218e3b17552cf264b8caeb67f18270ae7c7ae9d82bb",
+    "control.py": "a4c2dc5d0d489b0b75d80922132d6bd542d77007f9859e005ed1ea28c8672241",
+    "execution.py": "c43f633c0fd9c21ebcb53247be2e454a5c1450668483309b453f4c557a69cf14",
+    "fitting.py": "c0b0d04fd6b36b25049e6b5487730e531aff425a3767a7091bc94d816c25a2cb",
+    "input-pins.json": "83daa05712061ac9ea970fe7405bbf878ce81a387e326e1087e48d89c055799a",
+    "job.py": "996670fd15f7970a87b5aff0b8c02c01c251a7a706a7fdcb21d50b8d4f913ed0",
+    "native_integration.py": "a23b77709fb7ee3d2eecdb6240bcd30cb1443e737187c34bee4da24cc6cd0245",
+    "native_patch.py": "4244ef760e67f5229f6fe26cefce1f119d4c6242449d3064aad5d7df7182153d",
+    "no_models.py": "ccf28e41ad1a4024ef033397b1e3e83c788533d85bf5844f737d1165f1127940",
+    "package.py": "42a324e8187f196bd83139a986d82de45104ee7293ad7b07d724bbc52138d50c",
+    "protected.py": "27f98e50e803d88f89a43717e03cc5b31c21a90d96a6f8a0457ad387c811de72",
+    "report.py": "0f0131c7a9d14d700d62a6c982fea2c2ea29c485f3c03d12d62ff638f99abefd",
+    "runtime.py": "1d376986db3834d17ac56049781b7a57a26d50b8cc97e5516701bfd0a1175cc7",
+    "test_study.py": "13f7bc78ee15cc402c988634ebbb87d5a463b0beb247dbc9b98f775cb43c2a02"
+  },
+  "source_preservation": {
+    "ledger_charge_records": 169,
+    "ledger_charges_sha256": "9bae546cf6f63772f905ff848f03b95702e5a19a1409a1a8f1ce35127f767c1b",
+    "previous_source_manifest_sha256": "a4ae514239f05272db9256f9166873697ddc48c2c818bda2b5abace305976b55",
+    "scientific_state_sha256": "8eb787149542b1437bc916228380e6836f950c441616ac1a6d9a6937078435af"
+  },
+  "status": "ready_for_torch_unsubmitted",
+  "torch_submissions_by_assistant": 0,
+  "valid_complete_top10_required": true,
+  "validation_files_sha256": {
+    "full-synthetic-pipeline.log": "4bb0678b53442f3268de6580257ccae54c33e2c08843b8944ba06c8949909f3f",
+    "native-build.log": "17a0e6d98964d9f42279e80261b277252db006d330eff5615992ec6eb4fcda5e",
+    "native-checks.json": "a00fd52a515f96f0c10180a55594d89db4dc1c9dbea09bbc445f52611a00b75a",
+    "native-integration.log": "a00fd52a515f96f0c10180a55594d89db4dc1c9dbea09bbc445f52611a00b75a",
+    "packaging.log": "f5bdad626c77876002b3fb3d01d148cc843e318b5a37ea9334268154404ca3ca",
+    "pipeline-checks.json": "be4d8b0ef5937cde8513df5ac6083b06b0fdd4cbc652cc68f91283e0439b8bbe",
+    "unit-tests.log": "c6b0d0ba0eef5cf28d786139c99f6b91e96858caf9f93fff4c8096a7dc0e2cc8"
+  },
+  "validation_limits": [
+    "Local native tests are ARM64 synthetic tests. Actual x86_64 module is built and qualified on Torch before measurement.",
+    "Full synthetic pipeline used the preceding provisional registry; final provenance definitions were separately native-qualified and unit-tested. Final upload differs from that release check only in experiment.json method-origin audit metadata."
+  ]
+}

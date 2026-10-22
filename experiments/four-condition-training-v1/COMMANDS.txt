@@ -1,0 +1,73 @@
+Run these blocks in order. Submit once. No model calls or confirmation queries.
+
+MAC TERMINAL: verify and upload.
+
+(
+    set -euo pipefail
+    cd /Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/four-condition-training-v1
+    torch_package='torch-four-condition-training-v1'
+    shasum -a 256 -c "${torch_package}.tar.gz.sha256"
+    scp \
+        -o HostKeyAlias=dtn.torch.hpc.nyu.edu \
+        -o HostKeyAlgorithms=ssh-ed25519 \
+        -o StrictHostKeyChecking=yes \
+        -o UpdateHostKeys=no \
+        "${torch_package}.tar.gz" "${torch_package}.tar.gz.sha256" \
+        dar579@dtn012.hpc.nyu.edu:/home/dar579/
+)
+
+TORCH LOGIN TERMINAL: verify, extract and submit once.
+
+(
+    set -euo pipefail
+    cd /home/dar579
+    torch_package='torch-four-condition-training-v1'
+    sha256sum -c "${torch_package}.tar.gz.sha256"
+    test ! -e "$torch_package"
+    tar -xzf "${torch_package}.tar.gz"
+    source /home/dar579/torch-reviews-first/torch.env
+    export TORCH_SLURM_ACCOUNT=torch_pr_288_courant
+    python3 "/home/dar579/${torch_package}/control.py" submit \
+        /home/dar579/torch-reviews-first \
+        /home/dar579/torch-reviews-results
+)
+
+TORCH LOGIN TERMINAL: status of all five allocations, even after a fresh login.
+
+python3 /home/dar579/torch-four-condition-training-v1/control.py status
+
+TORCH LOGIN TERMINAL: collect after all five allocations complete with exit 0.
+
+python3 /home/dar579/torch-four-condition-training-v1/control.py collect
+
+MAC TERMINAL: download the full raw/analysis archive after successful collection.
+
+(
+    set -euo pipefail
+    cd /Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results
+    torch_transfer_options=(
+        -o HostKeyAlias=dtn.torch.hpc.nyu.edu
+        -o HostKeyAlgorithms=ssh-ed25519
+        -o StrictHostKeyChecking=yes
+        -o UpdateHostKeys=no
+    )
+    torch_run="$(ssh "${torch_transfer_options[@]}" dar579@dtn012.hpc.nyu.edu \
+        'cat /home/dar579/torch-four-condition-training-v1/submission-binding.json' |
+        python3 -c 'import json,sys; print(json.load(sys.stdin)["campaign"])')"
+    scp "${torch_transfer_options[@]}" \
+        "dar579@dtn012.hpc.nyu.edu:${torch_run}.tar.gz" \
+        "dar579@dtn012.hpc.nyu.edu:${torch_run}.tar.gz.sha256" .
+    shasum -a 256 -c "$(basename "$torch_run").tar.gz.sha256"
+)
+
+For independent Mac raw reanalysis, safely extract into a new directory and run
+the local report.py against the SEALED LOCAL upload package. Do not execute the
+downloaded package's code. Use the pinned Python runtime and the original
+trials/torch-reviews-first/sources core on PYTHONPATH, with the sealed new
+package and its vendor directory first. Preserve the original archive.
+
+This is a comparison of out-of-fold conventional fitting procedures. It does
+not qualify a globally fitted deployment policy. The failed original
+confirmation is consumed; any later policy needs fresh independent confirmation.
+All final recall/latency gates are unchanged. Original generation A/B stays
+inconclusive with zero complete pairs. No paid generation is part of this run.

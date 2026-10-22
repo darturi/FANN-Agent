@@ -195,8 +195,11 @@ activation/reuse distinctions. Do not resume terminated/censored v1/v2
 conversations, overwrite failed campaigns, or treat a diagnostic oracle as a
 deployable candidate. Fresh paid generation needs its applicable budget and a
 fresh declared run; stochastic model outputs are not guaranteed byte-identical.
-Latest held-out confirmation is a separate future experiment, not a step needed
-to inspect this index.
+The selected-policy confirmation has failed and consumed the original split.
+The separately prepared [four-condition training study](../../experiments/four-condition-training-v1/README.md)
+uses zero further model calls and excludes that confirmation from training.
+It compares fitting procedures, without automatic promotion. Any later
+deployable policy requires fresh independent confirmation.
 
 ## Updating the record
 

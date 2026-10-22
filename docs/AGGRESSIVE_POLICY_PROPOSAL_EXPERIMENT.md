@@ -150,6 +150,22 @@ confirmation. The A/B comparison remains inconclusive with zero complete pairs.
 There were zero new model calls or fits, and all 169 original financial charges
 and the original scientific ledger state remain unchanged.
 
+The next separately versioned implementation is the
+[four-condition training study](../experiments/four-condition-training-v1/README.md).
+It compares the original feature pool with a bounded causal local-filter probe,
+crossed with late versus earlier eligible checkpoints. It uses conventional
+CART fitting, nested vector-group validation, a premeasurement lock and five
+Torch allocations, with zero further model calls. The failed confirmation is
+excluded from fitting and no confirmation or promotion is launched. Its measured
+unit is an out-of-fold fitting procedure; a later global policy requires fresh
+independent confirmation. Final recall and latency criteria and the original
+inconclusive generation A/B comparison remain unchanged.
+The [implementation verification](verification/four-condition-training-v1-implementation.json)
+records the sealed upload, source backup, 18 passing tests, native synthetic
+qualification and complete synthetic acquisition/fitting/timing/report replay.
+The real Reviews study has not been submitted by the assistant; native x86
+qualification and all real measurements run in the user's Torch allocations.
+
 No model requests, fitting, policy replay, database measurements, builds, tests,
 Torch submissions or confirmation queries were performed to prepare this design.
 The source state was committed before this document was added. Exact revisions
