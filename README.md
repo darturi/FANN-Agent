@@ -1,129 +1,131 @@
-# FANNAgent 0.2
+# FANNAgent
 
-FANNAgent is a reusable, offline agent for bounded ANN stopping policies. It owns study splits, spending, candidate selection, frozen policies, evaluation entitlements, reports, and application acceptance. Database integration is supplied by independently installed extensions through `fannagent.api` (API version 1).
+[![CI](https://github.com/darturi/FANN-Agent/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/darturi/FANN-Agent/actions/workflows/ci.yml)
 
-For first-time installation, use the [local release bundle](packaging/README.md).
-It supplies a repeatable host installer and a Docker controller launcher; container
-operation requires no host Python. Packages and images remain local release artifacts.
+**A research agent that investigates when vector search can stop early without
+missing relevant results.**
 
-```sh
-bash /path/to/bundle/install.sh --backend pgvector --mode container --directory .fannagent-install
-./.fannagent-install/fannagent init --backend pgvector --output pgvector.yaml
-./.fannagent-install/fannagent doctor pgvector.yaml --check-source
-```
+A vector database finds similar items, often subject to a filter: for example,
+reviews similar to a query that also have at least 32 helpful votes. Searching
+longer costs time; stopping too early can miss good matches. FANNAgent gives an
+LLM tools to analyze that tradeoff and propose stopping rules. A host controller
+enforces spending limits, validates tool requests, saves progress, and checks
+whether a proposed rule meets separate quality and latency requirements.
 
-Edit generated target fields and set the referenced credentials before `doctor`.
-Simulation uses `--backend fake` and requires no model credentials. Config generation
-refuses existing files. Diagnostics create no study or model request. Use the existing
-prepare/run/resume/evaluate/report/clean commands through the launcher.
+Built by [Daniel Arturi (darturi)](https://github.com/darturi). I designed and
+implemented the project-specific agent system, experimental tooling, and pgvector
+integration. FANNAgent builds on mini-swe-agent's base loop and model interfaces;
+[contributions and upstream credit](docs/CONTRIBUTIONS.md) identify those boundaries.
 
-```sh
-pip install fannagent                         # simulation and saved-result inspection
-pip install fannagent fannagent-pgvector      # add PostgreSQL/pgvector
-fannagent backends list
-fannagent backends describe pgvector
-```
+## See the agent work
 
-Core installation has no `fannbench`, PostgreSQL driver, Elasticsearch client, or concrete extension dependency. Discovery loads descriptors and configuration/profile metadata without connecting to databases. Two production distributions are provided; the SDK and shared algorithms live in the core.
+- [Annotated real run](docs/showcase/agent-run.md): ten provider-backed actions,
+  a rejected policy and its revision, six research exports, and recorded model
+  charges of $0.530724. The model wrote its analysis and explicitly concluded that
+  no proposal was accepted.
+- [Agent architecture](docs/agent-design.md): tools, context, budgets, sandboxing,
+  durable evidence, interruption recovery, and separate evaluation controls.
+- [Research results](docs/results.md): training feasibility, held-out failure,
+  and the limits of the current findings.
+- [Verification record](docs/showcase/validation.md): the checks performed for
+  this portfolio snapshot and the qualification boundaries.
+
+## What I built
+
+| Area | Engineering demonstrated | Code to inspect |
+|---|---|---|
+| Agent orchestration | Model/tool turns, prepared context, recorded experiments, candidate selection, and explicit termination | [Controller](src/fannagent/controller.py) |
+| Domain tools | Typed requests, policy validation, correction feedback, and evidence references | [Tool broker](src/fannagent/broker.py) |
+| Durable execution | Saved conversations, evaluation receipts, checkpoints, and interruption recovery | [Run store](src/fannagent/store.py), [recovery tests](tests/test_checkpoint.py) |
+| Cost control | Per-attempt reservations, usage accounting, and conservative handling of ambiguous charges | [Model adapter](src/fannagent/model.py), [accounting tests](tests/test_model.py) |
+| Evaluation boundaries | Separate development/calibration/test data, frozen policies, and host-owned acceptance | [Study controls](src/fannagent/study.py) |
+| Database integration | A separately packaged pgvector backend with native observation/stopping and application sessions | [Companion source](https://github.com/darturi/FANN-Agent-pgvector/tree/portfolio-v1) |
+
+Research happens outside live query serving. Provider-backed research can use a
+networked model API; an accepted policy executes without an LLM in the query path.
+The static cited primer supplies research guidance. The system does not perform
+autonomous literature retrieval.
+
+The research question is whether a model can choose useful analyses, features,
+and stopping rules from a domain-specific experimental interface. The
+[recorded run](docs/showcase/agent-run.md) shows the model writing analysis code,
+scanning thresholds, and correcting a rejected policy. Current experiments do
+not establish that model-directed search outperforms a deterministic fitter.
 
 ## Simulation
 
-Use `examples/fake.yaml` (schema version 2), or copy its contents into a local configuration file:
+The verified first-run path uses the synthetic backend and a scripted model.
+It needs no API key, database, Docker daemon, GPU, or paid model call. Installation
+requires network access to obtain dependencies. Provide [uv](https://docs.astral.sh/uv/)
+and Python 3.12 or 3.13; uv can provision the requested Python runtime.
+The commands pin the published `portfolio-v1` snapshot so the example has a
+stable source and dependency lock. Install from source as shown here; the
+packages are not currently published on PyPI.
 
 ```sh
-fannagent prepare examples/fake.yaml --run runs/demo
-fannagent run examples/fake.yaml --run runs/demo --steps 2
-fannagent resume --run runs/demo
-fannagent evaluate --run runs/demo
-fannagent status --run runs/demo
-fannagent report --run runs/demo
-fannagent clean --run runs/demo
+git clone --branch portfolio-v1 --single-branch https://github.com/darturi/FANN-Agent.git
+cd FANN-Agent
+uv sync --frozen --python 3.12
+
+demo_dir="$(mktemp -d)"
+export MSWEA_GLOBAL_CONFIG_DIR="$demo_dir/mini-config"
+export MSWEA_SILENT_STARTUP=1
+export LITELLM_LOCAL_MODEL_COST_MAP=True
+
+uv run --frozen fannagent init --backend fake --output "$demo_dir/fake.yaml"
+uv run --frozen fannagent doctor "$demo_dir/fake.yaml"
+uv run --frozen fannagent prepare "$demo_dir/fake.yaml" --run "$demo_dir/run"
+uv run --frozen fannagent run "$demo_dir/fake.yaml" --run "$demo_dir/run" --steps 2
+uv run --frozen fannagent resume --run "$demo_dir/run"
+uv run --frozen fannagent evaluate --run "$demo_dir/run"
+uv run --frozen fannagent experiments --run "$demo_dir/run"
+uv run --frozen fannagent report --run "$demo_dir/run"
+uv run --frozen fannagent status --run "$demo_dir/run"
+uv run --frozen fannagent clean --run "$demo_dir/run"
 ```
 
-Simulation uses its own features, eight-batch checkpoints and synthetic latency. It establishes no database performance result. Paid models retain the existing verified rate-card, token-bound and monetary ceiling contract. Preparation and required capabilities are checked before model spending. Resume cannot change the monetary contract.
+Expected milestones are `interrupted` after the two-step run, `frozen` after
+resume, and an evaluation with `status: accepted`, `valid: true`, and
+`simulated: true`. Status records three completed experiments and a model ledger
+with `committed_usd: "0"` and `calls: []`. The report remains at
+`$demo_dir/run/REPORT.md` after cleanup.
 
-New generated configurations enable literature guidance:
+This demonstrates the lifecycle with predetermined actions and synthetic latency.
+It establishes no database speedup or model-directed discovery. The annotated
+real run above supplies recorded provider-backed behavior. See the
+[local-demo guide](docs/showcase/local-demo.md) for installation details and output.
 
-```yaml
-research:
-  mode: guided
-```
+## Research outcome
 
-`guided` supplies a compact, cited research primer and requires a hypothesis before measurements,
-followed by a conclusion linked to recorded evidence. `protocol_only` requires the same experiment
-records without the primer; `baseline` retains the original exploration protocol. Existing
-configurations without `research` retain baseline behavior. Changing modes requires a new run.
-The exact primer and prompt are pinned to the run and preserved on resume.
+The selected policy showed about 12–14% mean latency savings in its training study.
+Held-out confirmation recorded 11.673% activation-inclusive and 12.377% reused-policy
+mean latency savings, but failed the required recall criterion. No policy qualified
+for acceptance. The agent-generation comparison also remained inconclusive because
+there were zero complete A/B pairs. The [results page](docs/results.md) links the
+recorded evidence and exact limits.
 
-Inspect experiment plans and host-recorded outcomes without a model or database call:
+The project demonstrates an implemented agent and evaluation system. Current
+evidence does not establish a generally beneficial or production-ready optimizer.
+
+## Development and the database backend
 
 ```sh
-fannagent experiments --run runs/demo
-fannagent experiments --run runs/demo --experiment-id EXPERIMENT_ID
-```
-
-See [research guidance and experiments](docs/RESEARCH_GUIDANCE.md) for the tool schema, source
-principles, evidence boundaries, interruption behavior, and comparison modes. Guidance does not
-change the default-relative recall objective or final acceptance criteria.
-
-The [policy learning and evaluation revision plan](docs/POLICY_LEARNING_REVISIONS.md) describes
-the next measured-feedback tools, evidence accounting, candidate archive, and comparison stages.
-It preserves the current Torch experiment and introduces changes through a separate version.
-The experimental [offline learning tools](docs/OFFLINE_LEARNING.md) provide measured-label fitting,
-runtime-interpreter replay, structured feedback and a separate candidate archive without model or
-database calls.
-
-The [master experiment index](docs/experiments/README.md) links saved runs, failed
-attempts, results, artifact locations, reproduction procedures and the archive
-backup audit. Its generated catalog also records blocks, agent conversations and
-engineering checks separately from independent scientific experiments.
-
-Malformed model tool calls, shell syntax, tool arguments, queries, filters, and policies receive bounded `error_info` feedback with field details and a correction hint. Rejected inputs are not rewritten or replayed. The next model turn can issue a corrected request. Three consecutive invalid turns end exploration with `invalid_submission_limit` and a `no_recommendation` report. A fully successful turn resets the streak; other execution failures do not change it. Resume preserves the streak, and reaching the limit is terminal for that run. Model attempts remain billed, including malformed responses. Existing accepted policies take precedence, while this limit does not automatically freeze a candidate checkpoint.
-
-During exploration, the agent can designate a fallback with `fannagent-tool calibrate '{"policy": ..., "checkpoint": true}'`. Only an accepted, valid calibration replaces the saved candidate. Unmarked or rejected calibrations preserve the previous choice; a later failed recalibration of that same policy makes it ineligible. Calibration returns aggregates and the selected `checkpoint_policy_hash`; the full checkpoint and calibration evidence remain private. Older conversations receive this capability notice once on resume, without resetting their history or counters.
-
-If the model budget expires before submission, the controller stops the sandbox and broker and freezes an eligible checkpoint using cached evidence, without another model call or experiment. Run output and `status` show `status: frozen`, `termination_reason: budget_exhausted`, and `finalization_source: checkpoint`. Final evaluation still requires `fannagent evaluate`; only that evaluation can accept the policy for deployment. Its report retains the exhaustion provenance. Without a selected candidate the result is `no_recommendation` with `no_eligible_checkpoint`; invalid checkpoints and freeze failures report distinct reasons and are recoverable through `resume`. Step-limit interruptions remain resumable and explicit abstention does not finalize a checkpoint. Older runs do not infer a fallback from past calibrations.
-
-When the evidence store is full, exhaustion summaries remain available in SQLite and through `report`, including any artifact-storage failures. Successful checkpoint recovery clears the prior exhaustion report atomically with the policy freeze.
-
-Fresh conversations receive compact backend context before their first model call: backend identity, capabilities, dataset dimensions and metadata field mappings, budget totals, and extension-provided target details. Full inspection and feature definitions are available through referenced development artifacts; `fannagent-tool inspect '{}'` remains available for additional detail. Initialization inspection runs on the host without an agent tool action or model request. Baseline scripted runs start with `probe`; guided demonstrations register an experiment first.
-
-The initialized conversation is saved before the first model call and new trajectories record `startup_context_version=1`. Resume retains saved messages and counters without adding or refreshing startup context. Older scripted conversations retain their original inspect-first action sequence. No run-schema or policy migration is required.
-
-## Pgvector
-
-See `../agent-pgvector/README.md` and its schema-v2 example. The extension owns physical restore, native execution, exact SQL, source identifiers and cleanup. Build the self-contained image with `fannagent-pgvector-build`; the source recipe and patches ship in its wheel. Build the development sandbox with `fannagent-workspace-build`. No sibling harness checkout is needed for either installed package.
-
-```sh
-fannagent inspect pgvector.yaml --run runs/pg
-fannagent prepare pgvector.yaml --run runs/pg
-fannagent run pgvector.yaml --run runs/pg
-fannagent resume --run runs/pg
-fannagent evaluate --run runs/pg
-fannagent report --run runs/pg
-fannagent deploy --run runs/pg --target runs/explicit-compatible-copy
-fannagent clean --run runs/pg
-```
-
-Application entry point remains `fannagent.client.open_session(run)`. Sessions return original source identifiers. Accepted policy and environment compatibility are verified by the core; extensions implement session query and close. Pgvector marks ordinary-query fallback and allows callers to disable it.
-
-## Extension authors and development
-
-Read [the SDK guide](docs/EXTENSIONS.md). The test-only independent distribution in `tests/extensions/independent/` demonstrates different features, string identifiers, five-step checkpoints and distinct work units against an unchanged core wheel. It is not a third production package.
-
-```sh
-uv sync --extra dev
-uv pip install -e ../agent-pgvector            # optional during pgvector development
-uv run pytest -m 'not integration'
-uv run mypy src/fannagent/api --check-untyped-defs --follow-imports=silent --ignore-missing-imports
-uv run ruff check src tests
+uv sync --frozen --extra dev --python 3.12
+uv run --frozen pytest -m 'not integration'
+uv run --frozen ruff check src tests
+uv run --frozen mypy src/fannagent/api --check-untyped-defs --follow-imports=silent --ignore-missing-imports
 uv build
 ```
 
-Each distribution has its own metadata, lockfile, tests, build and release notes. The harness's 0.4.1 compatibility wrappers depend on the core's public primitives; production packages never depend on the harness.
+The [pgvector extension](https://github.com/darturi/FANN-Agent-pgvector/tree/portfolio-v1)
+is optional for the simulation and maintained as a separate distribution. Its
+database requirements and historical native qualification are documented there.
+Neither the demo nor ordinary core CI connects to a research database. See the
+[operations reference](docs/USAGE.md) and [extension API](docs/EXTENSIONS.md) for
+advanced workflows. Source installation is the supported portfolio path; public
+package-registry or container-image availability is not required by these commands.
 
-## Run compatibility and TODOs
-
-New operational runs use schema version 2. Convert old configuration `target` and `copy` sections into extension-owned `backend.options`, and move CPU/memory/evidence settings into common sections. Existing runs remain inspection-only: `status` and `report` do not initialize writable SQLite state. Resume, preparation, evaluation, deployment, serving and cleanup reject legacy runs. Use the pinned 0.1 environment for necessary legacy operations; no old ledgers, ownership records or policies are migrated or reset.
-
-Weaviate and Elasticsearch/Lucene remain TODOs for separate packages. Historic inspectors are retained in unshipped `deferred/` reference material and have no active registrations. Additional metrics, streaming analysis, larger data strategies, search-effort optimization and production cutover remain separate work. Public package/image publication, paid-model smoke tests and native AMD64 qualification are separate release gates.
+Licensed under [MIT](LICENSE), with [third-party notices](NOTICE.md).
+The stable portfolio snapshot is `portfolio-v1`. This default branch provides the
+project introduction and development source; ongoing research continues in separate
+branches and workspaces.

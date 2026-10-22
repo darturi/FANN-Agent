@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    name: Core / Python ${{ matrix.python }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.12', '3.13']
+    env:
+      MSWEA_SILENT_STARTUP: '1'
+      LITELLM_LOCAL_MODEL_COST_MAP: 'True'
+    steps:
+      - name: Isolate tool configuration
+        run: echo "MSWEA_GLOBAL_CONFIG_DIR=$RUNNER_TEMP/fannagent-mini" >> "$GITHUB_ENV"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          version: '0.11.14'
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+      - name: Install locked development dependencies
+        run: uv sync --frozen --extra dev
+      - name: Lint
+        run: uv run --frozen ruff check src tests
+      - name: Check public SDK types
+        run: uv run --frozen mypy src/fannagent/api --check-untyped-defs --follow-imports=silent --ignore-missing-imports
+      - name: Test core with synthetic fixtures
+        run: uv run --frozen pytest -m 'not integration' -q
+      - name: Build source distribution and wheel
+        run: uv build
+      - name: Install wheel into a separate environment
+        run: |
+          uv export --frozen --no-emit-project --no-dev --no-hashes --output-file "$RUNNER_TEMP/core-constraints.txt"
+          uv venv --python '${{ matrix.python }}' "$RUNNER_TEMP/fannagent-wheel"
+          uv pip install --python "$RUNNER_TEMP/fannagent-wheel/bin/python" -c "$RUNNER_TEMP/core-constraints.txt" dist/*.whl
+      - name: Verify no-key demo outside the checkout
+        run: |
+          set -euo pipefail
+          unset OPENAI_API_KEY ANTHROPIC_API_KEY GEMINI_API_KEY AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+          demo_dir="$RUNNER_TEMP/fannagent-demo"
+          mkdir -p "$demo_dir"
+          cd "$demo_dir"
+          cli="$RUNNER_TEMP/fannagent-wheel/bin/fannagent"
+          "$cli" init --backend fake --output fake.yaml
+          "$cli" doctor fake.yaml
+          "$cli" prepare fake.yaml --run run > prepare.json
+          "$cli" run fake.yaml --run run --steps 2 > interrupted.json
+          "$cli" resume --run run > resumed.json
+          "$cli" evaluate --run run > evaluated.json
+          "$cli" experiments --run run > experiments.json
+          "$cli" report --run run > report.json
+          "$cli" status --run run > status.json
+          "$RUNNER_TEMP/fannagent-wheel/bin/python" - <<'PY'
+          import json
+          from pathlib import Path
+          def read(name):
+              return json.loads(Path(name).read_text())
+          assert read('interrupted.json')['status'] == 'interrupted'
+          assert read('resumed.json')['status'] == 'frozen'
+          result = read('evaluated.json')
+          assert result['status'] == 'accepted' and result['valid'] and result['simulated']
+          status = read('status.json')
+          assert status['budget']['committed_usd'] == '0' and status['budget']['calls'] == []
+          assert status['research']['experiments']['completed'] == 3
+          assert Path('run/REPORT.md').is_file()
+          print('Installed-wheel simulation passed with zero provider calls.')
+          PY
+          "$cli" clean --run run > cleaned.json

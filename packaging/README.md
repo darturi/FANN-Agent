@@ -1,5 +1,10 @@
 # FANNAgent local installation bundle
 
+For a public first-run installation, use the [source-install simulation](../README.md#simulation).
+The instructions below require a separately assembled local release bundle;
+there is no downloadable public bundle or published PyPI package for this snapshot.
+The [bundle builder](build_release.py) assembles the local release artifacts.
+
 This bundle installs FANNAgent for simulation or pgvector studies. Configuration,
 run state, model charges, policies and evaluation entitlements stay in your workspace.
 Installation never prepares a database or calls a paid model.

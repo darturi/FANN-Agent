@@ -1,0 +1,1420 @@
+{
+  "format": "fannagent.showcase.annotated-run.v1",
+  "purpose": "Documentation-only selected excerpts from an existing provider-backed research conversation. This is not a runnable configuration or a full transcript.",
+  "source_identity": {
+    "study": "aggressive-policy-proposals-v2",
+    "conversation": "pair-0-exploratory",
+    "source_manifest_sha256": "508d624fef85724e52b2424b87c515a9be035ad5534e6f7d5e414b656740bde6",
+    "source_manifest_files_checked": 228,
+    "system_prompt_sha256": "5704ece966f7cc71f4a52be2c29a3dd48b229305443b19b7321afe1d45177aa1",
+    "documentation_base_commit": "4108801d73e9b99ce166454f1e3ab795e1d991a1",
+    "historical_git_commit": null,
+    "historical_git_commit_note": "The archived runner is identified by its sealed source manifest; no single historical Git commit is claimed."
+  },
+  "scope": [
+    "A specialized proposal-study loop reused BudgetedModel, persisted tool records, and the core offline policy evaluator. It was not a fresh invocation of the ordinary prepare/run/evaluate workflow.",
+    "The run analyzed saved training evidence: no new database measurement or confirmation data was available.",
+    "Annotations summarize observable actions. Host assessments and model-written analysis output have separate provenance.",
+    "All figures are copied from saved records. Scientific evaluation and model-generated scripts were not rerun for this document."
+  ],
+  "omitted_material": [
+    "Private model reasoning fields, thinking blocks, provider-specific metadata, raw provider response artifacts, and credentials.",
+    "Query vectors, source identifiers, query-level outcomes, full corpus contents, and complete generated analysis scripts.",
+    "Absolute host paths, private infrastructure details, and records from other conversations except the existing aggregate study outcome."
+  ],
+  "source_files": {
+    "contract": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/contract.json",
+      "sha256": "03202d4f4e66b467e8ec8581afcc9096a53302762a4674ed4a3e58a0b3acce7e",
+      "bytes": 27197
+    },
+    "transcript": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/transcript.json",
+      "sha256": "eb0435bddaade295a4fd449a4232d99a43a33c3b9c9901dd7b352e9b3f7c66a0",
+      "bytes": 193814
+    },
+    "result": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/result.json",
+      "sha256": "eb37a1ad3cc360a931f8c13fb5c41c5561e34b5281ad79e1f693e2b026e4b230",
+      "bytes": 1997298
+    },
+    "study-summary": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/proposal-summary.json",
+      "sha256": "dc61c1ed8ba6df7e130edf87a66e60c5cad4cb705c963e3584f2fccf3745bc7a",
+      "bytes": 2805
+    },
+    "audit": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2-analysis/audit.json",
+      "sha256": "efa7aa0aec7cbec8281a42aa14af95366f0dff695ed18b859f856cae7fb2b2d0",
+      "bytes": 85928
+    },
+    "export-inventory": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2-analysis/export-inventory.json",
+      "sha256": "de57b21d9381550ad3290e45001d799d6eeb876ab6e414ff32d6846057863dca",
+      "bytes": 97545
+    },
+    "source-manifest": {
+      "original_workspace_relative_path": "trials/torch-reviews-aggressive-proposals-v2/manifest.json",
+      "sha256": "508d624fef85724e52b2424b87c515a9be035ad5534e6f7d5e414b656740bde6",
+      "bytes": 24119
+    },
+    "archived-runner": {
+      "original_workspace_relative_path": "trials/torch-reviews-aggressive-proposals-v2/run.py",
+      "sha256": "08643ce9f4fb3e33b08c657553b3810f172618a252ac6b6c721db8194eaa7b0c",
+      "bytes": 23698
+    },
+    "archived-tools": {
+      "original_workspace_relative_path": "trials/torch-reviews-aggressive-proposals-v2/proposal_tools.py",
+      "sha256": "0a6c499dbe258ce708772ff37b4ba813a9530f5a4b30f1b07fc1fe5a49c4d365",
+      "bytes": 9097
+    },
+    "archived-sandbox": {
+      "original_workspace_relative_path": "trials/torch-reviews-aggressive-proposals-v2/sandbox.py",
+      "sha256": "a55085213782d026e6f83c88e2de20685bd7e90356f100dd90241304c8acf77f",
+      "bytes": 3711
+    },
+    "archived-prompts": {
+      "original_workspace_relative_path": "trials/torch-reviews-aggressive-proposals-v2/prompts.py",
+      "sha256": "034747bed2b177488deca55a808002d553587d7e9813fc20a908a71d14cc7680",
+      "bytes": 5534
+    },
+    "command-01": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/001.json",
+      "sha256": "0d67df090dde883e8eccc111c60d31d056c3ced1c54167cc3269d4e08f48bdb7",
+      "bytes": 8981
+    },
+    "command-02": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/002.json",
+      "sha256": "5ff1a554ca3f95645023d1143eee738448bff12dd3ceac1ade87cf2f7df0d09e",
+      "bytes": 26870
+    },
+    "command-03": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/003.json",
+      "sha256": "35b41be78d90151592bc4e890e57d52197c1a5c39ac12c794b218c5229452371",
+      "bytes": 2904
+    },
+    "command-04": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/004.json",
+      "sha256": "8c8a8eeffe257fcb5bd33e3e50e7547d751c7309fdff03500c4da0069ca1a33a",
+      "bytes": 1984
+    },
+    "command-05": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/005.json",
+      "sha256": "ee8c072815e576a44ce21df8978d94777bec2a89bca6385d2e1c828698a162b2",
+      "bytes": 2037
+    },
+    "command-06": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/006.json",
+      "sha256": "e0fef05094729ec80439722d33a1b6f745de0e3e10f2249f77beb19cf8fdc87c",
+      "bytes": 5750
+    },
+    "command-07": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/007.json",
+      "sha256": "4df27201feb52e844c8b06c48a28c60085866f7257b4a1958de7452d9a1f8835",
+      "bytes": 4531
+    },
+    "command-08": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/008.json",
+      "sha256": "0e209f8328f85d12a10e17950215e6213c8159b7022e8cc79671a32e84ee8b79",
+      "bytes": 4798
+    },
+    "command-09": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/009.json",
+      "sha256": "3ae4d86d4f96fc7f21f689efbfc3cbac84d72d7d32e9d13476b0206bb228f27b",
+      "bytes": 4928
+    },
+    "command-10": {
+      "original_workspace_relative_path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/conversations/pair-0-exploratory/commands/010.json",
+      "sha256": "756446e4362c7e80f710e9aad8c2b785c575a421bdee104002879a719de5c58f",
+      "bytes": 3349
+    },
+    "archived-budget": {
+      "original_workspace_relative_path": "trials/torch-reviews-aggressive-proposals-v2/core/fannagent/budget.py",
+      "sha256": "c316f9867004c3f2f9874ae3a775dd1b41a03723ecd74cd952bab52270413586",
+      "bytes": 4442
+    },
+    "archived-model": {
+      "original_workspace_relative_path": "trials/torch-reviews-aggressive-proposals-v2/core/fannagent/model.py",
+      "sha256": "32982aaf13fcf7afabb424f87535bcd37a4da3282fa9e7e3443b3f43c37c4419",
+      "bytes": 9054
+    }
+  },
+  "model": {
+    "source_ref": {
+      "source_id": "contract",
+      "json_pointer": "/model"
+    },
+    "copied_fields": {
+      "model": "anthropic/claude-sonnet-5-5",
+      "pricing_revision": "anthropic-sonnet-5-5-standard-global-2026-10-19",
+      "bound_verified": true,
+      "input_token_bound": 262144,
+      "output_token_limit": 8192
+    }
+  },
+  "limits": {
+    "source_ref": {
+      "source_id": "contract",
+      "json_pointer": ""
+    },
+    "copied_fields": {
+      "conversation_usd": "1.06",
+      "maximum_attempts_per_conversation": 12
+    }
+  },
+  "run": {
+    "source_ref": {
+      "source_id": "result",
+      "json_pointer": ""
+    },
+    "copied_fields": {
+      "spec": {
+        "condition": "exploratory",
+        "id": "pair-0-exploratory",
+        "pair": 0
+      },
+      "status": "completed",
+      "censored": false,
+      "commands": 10,
+      "canonical_acceptance_established": false,
+      "failure": null,
+      "budget": {
+        "committed_usd": "0.530724",
+        "calls": [
+          {
+            "actual": 5438000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 13994000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 41188000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 46364000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 55018000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 54574000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 79332000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 79324000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 74604000,
+            "reserved": 606208000,
+            "status": "settled"
+          },
+          {
+            "actual": 80888000,
+            "reserved": 606208000,
+            "status": "settled"
+          }
+        ]
+      }
+    }
+  },
+  "ledger_unit_note": "The copied raw actual/reserved ledger integers use 1e-9 USD units. The copied committed_usd field is already expressed in USD. Infrastructure charges are outside this scope.",
+  "initial_context": [
+    {
+      "source_ref": {
+        "source_id": "transcript",
+        "json_pointer": "/0/content"
+      },
+      "exact_excerpt": "No confirmation data is available."
+    },
+    {
+      "source_ref": {
+        "source_id": "transcript",
+        "json_pointer": "/0/content"
+      },
+      "exact_excerpt": "At most four total decision levels; missing required features must continue."
+    },
+    {
+      "source_ref": {
+        "source_id": "transcript",
+        "json_pointer": "/0/content"
+      },
+      "exact_excerpt": "The optional /evidence/policy_tools.py handles typed literals and one availability\nguard level; it supplies no thresholds, fitter, candidate or selection rule."
+    },
+    {
+      "source_ref": {
+        "source_id": "transcript",
+        "json_pointer": "/1/content"
+      },
+      "exact_excerpt": "\"actual_stop_outcomes\": 2397"
+    },
+    {
+      "source_ref": {
+        "source_id": "transcript",
+        "json_pointer": "/1/content"
+      },
+      "exact_excerpt": "\"queries\": 300"
+    },
+    {
+      "source_ref": {
+        "source_id": "transcript",
+        "json_pointer": "/1/content"
+      },
+      "exact_excerpt": "\"vector_groups\": 100"
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "title": "Orientation",
+      "annotation": "Reads the evidence guide and available tool contract.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/3/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-01",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 1,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-01",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "cat /evidence/START_HERE.md; cat /evidence/TOOLS.txt; ls -la /evidence"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-01",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "the helper is optional. The host still validates guards and total depth <= 4."
+        },
+        {
+          "source_ref": {
+            "source_id": "command-01",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "SHA256(\"20261019/\" + group) modulo 5; all evidence is training evidence."
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Inspect the training corpus",
+      "annotation": "Inspects the schema, typed-policy helper, and counts of the three query strata.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/6/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-02",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 2,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-02",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "print(collections.Counter(x['stratum'] for x in c['queries']))"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-02",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "Counter({'votes108': 100, 'votes32': 100, 'unfiltered': 100})"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Inventory available observations",
+      "annotation": "Inspects qualified features and existing stopping outcomes.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/9/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-03",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 3,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-03",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "print(len(F),F)"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-03",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "19 ['checkpoint_index', 'checkpoint_overshoot', 'checkpoint_target', 'completed_expansions', 'component_layer0_distance_evaluations', 'component_unique_discoveries', 'component_upper_distance_evaluations', 'entry_distance', 'frontier_count', 'frontier_distance_min', 'k', 'layer0_distance_evaluations', 'layer0_distance_since_checkpoint', 'predicate_leaf_count', 'queue_pops', 'retained_result_capacity', 'retained_result_count', 'unique_discoveries', 'upper_distance_evaluations']"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Compare fixed stopping points",
+      "annotation": "Writes Python to compare recorded recall and work at several checkpoint ordinals by stratum.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/12/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-04",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 4,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-04",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "for ci in [8,16,32,64,128]:"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-04",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "unfiltered 8 100 0.895 -0.098 0.054"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-04",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "votes108 8 100 0.751 -0.234 0.054"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "Prepare analysis rows",
+      "annotation": "Builds local feature/outcome rows joined by checkpoint ordinal.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/15/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-05",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 5,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-05",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "for c in [1,2,4,8,16,32,64,128]:"
+        }
+      ],
+      "output_excerpts": []
+    },
+    {
+      "step": 6,
+      "title": "Search feature thresholds",
+      "annotation": "Writes a feature-threshold scan to find candidate stopping conditions.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/18/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-06",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 6,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-06",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "def stats(R,mask):"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-06",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "c 64 1056 211"
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "title": "Build local policy analysis",
+      "annotation": "Writes local policy simulation and imports the syntax/transport helper.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/21/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-07",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 7,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-07",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "from policy_tools import compare,branch,policy,call"
+        }
+      ],
+      "output_excerpts": []
+    },
+    {
+      "step": 8,
+      "title": "Fit and cross-validate",
+      "annotation": "Writes a staged fitter and prints grouped cross-validation estimates over the training corpus.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/24/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-08",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 8,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-08",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "def fit(train, stages, tol, strat_tol=None):"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-08",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "0.002 S32_64_128 CVdelta -0.0027 [np.float64(-0.001), np.float64(-0.001), np.float64(-0.006)] work 0.661 unk 0"
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "title": "Archive initial candidates",
+      "annotation": "Sends six candidates for host validation and offline assessment; the last is structurally rejected.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/27/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-09",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 9,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-09",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "res=call('archive',{'policy':p,'reason':rat})"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-09",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "{'valid': False, 'receipt': 'a0ef68b43f6e7007d9500f1ef98960e626ecadaf9b81d5c17d285fb4c8a9af54'}"
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "title": "Revise, select, export, finish",
+      "annotation": "Replaces the rejected four-stage candidate with a three-stage candidate, selects valid receipts, exports six proposals, and finishes.",
+      "assistant_action_source": {
+        "source_id": "transcript",
+        "json_pointer": "/30/tool_calls/0/function/arguments"
+      },
+      "command_record": {
+        "source_ref": {
+          "source_id": "command-10",
+          "json_pointer": ""
+        },
+        "copied_fields": {
+          "index": 10,
+          "returncode": 0
+        }
+      },
+      "command_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "print(S0[-1][1])"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "it=fit(list(range(300)),[32,64,128],0.008); name='aggr_S32_64_128_t008'"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/command"
+          },
+          "exact_excerpt": "items=[(n,x['receipt'],t) for n,x,t in S0 if x.get('valid')]"
+        }
+      ],
+      "output_excerpts": [
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "{'valid': False, 'receipt': 'a0ef68b43f6e7007d9500f1ef98960e626ecadaf9b81d5c17d285fb4c8a9af54', 'error': 'AgentError: candidate exceeds the study decision depth'}"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "cons_S128_t002 {'exported': True, 'count': 1, 'canonical_acceptance_established': False}"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "cons_S32_64_128_t002 {'exported': True, 'count': 2, 'canonical_acceptance_established': False}"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "mid_S64_128_t004 {'exported': True, 'count': 3, 'canonical_acceptance_established': False}"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "mid_S32_64_128_t004 {'exported': True, 'count': 4, 'canonical_acceptance_established': False}"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "aggr_S8_32_64_t004 {'exported': True, 'count': 5, 'canonical_acceptance_established': False}"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "aggr_S32_64_128_t008 {'exported': True, 'count': 6, 'canonical_acceptance_established': False}"
+        },
+        {
+          "source_ref": {
+            "source_id": "command-10",
+            "json_pointer": "/output"
+          },
+          "exact_excerpt": "{'finished': True, 'exported': 6}"
+        }
+      ]
+    }
+  ],
+  "candidate_assessments": [
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/0"
+      },
+      "copied_fields": {
+        "sequence": 0,
+        "operation": "archive",
+        "receipt": "d93c2bf8d4649ebb92385a6d702742e1d90b99c8bc354401e4ae5c34db38785f",
+        "valid": true,
+        "semantic_hash": "71c336d0577d5290d743636f0065a46ba0dbe49c0e8dd71d063adf0c0ca2c592",
+        "decision_nodes": 2,
+        "predicted_work_reduction": 0.1563936361712167,
+        "stop_fraction": 0.54,
+        "policy": {
+          "name": "cons_S128_t002"
+        },
+        "assessment": {
+          "assessment_hash": "64715692278642831c6fd74ac5af85625b4220b5b67ebfe354acd0b1147a064c",
+          "canonical_acceptance_established": false,
+          "scope": "learning",
+          "overall": {
+            "counts": {
+              "continued": 138,
+              "measured_preserving": 159,
+              "measured_recall_loss": 3
+            },
+            "independent_groups": 100,
+            "mean_observed_recall_delta": -0.0009999999999999998,
+            "mean_predicted_work": 8688.69,
+            "observed_quality_queries": 300,
+            "quality_coverage_complete": true,
+            "queries": 300,
+            "work_is_latency": false
+          },
+          "timings": {
+            "activation-cold": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            },
+            "reused-warm": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            }
+          },
+          "learning_qualification": {
+            "aggregate_quality_passed": true,
+            "canonical_acceptance_established": false,
+            "overall": {
+              "recall_delta_ci95": [
+                -0.0023333333333333327,
+                0.0
+              ]
+            },
+            "unknown_stops": 0
+          }
+        }
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/1"
+      },
+      "copied_fields": {
+        "sequence": 1,
+        "operation": "archive",
+        "receipt": "2fff563bce93a38f67b1d4232de07cc97e1c1e389572d35454b430f8811d5100",
+        "valid": true,
+        "semantic_hash": "6c73831d52c6eebe05368bf792a7c865dcb33778015cdd84b9cccaf42b7aa331",
+        "decision_nodes": 4,
+        "predicted_work_reduction": 0.30998129999048496,
+        "stop_fraction": 0.8,
+        "policy": {
+          "name": "cons_S32_64_128_t002"
+        },
+        "assessment": {
+          "assessment_hash": "a8159169172deb3be586bffc85c57e9eac4cb1e95e97263fe96b87dbe08b9842",
+          "canonical_acceptance_established": false,
+          "scope": "learning",
+          "overall": {
+            "counts": {
+              "continued": 60,
+              "measured_preserving": 237,
+              "measured_recall_loss": 3
+            },
+            "independent_groups": 100,
+            "mean_observed_recall_delta": -0.0009999999999999998,
+            "mean_predicted_work": 7106.82,
+            "observed_quality_queries": 300,
+            "quality_coverage_complete": true,
+            "queries": 300,
+            "work_is_latency": false
+          },
+          "timings": {
+            "activation-cold": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            },
+            "reused-warm": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            }
+          },
+          "learning_qualification": {
+            "aggregate_quality_passed": true,
+            "canonical_acceptance_established": false,
+            "overall": {
+              "recall_delta_ci95": [
+                -0.0023333333333333327,
+                0.0
+              ]
+            },
+            "unknown_stops": 0
+          }
+        }
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/2"
+      },
+      "copied_fields": {
+        "sequence": 2,
+        "operation": "archive",
+        "receipt": "b851286806cec838a0eae609dec3962a65b6d121bf4793339d2e5f65c5f43acb",
+        "valid": true,
+        "semantic_hash": "fd239192bb75b59ed1596598cc6379e1dbb55934ab49a0e4c8638b0bf0254862",
+        "decision_nodes": 3,
+        "predicted_work_reduction": 0.3601043161486136,
+        "stop_fraction": 0.88,
+        "policy": {
+          "name": "mid_S64_128_t004"
+        },
+        "assessment": {
+          "assessment_hash": "faa1156b9b6d34c4dcf72f9c2c68873aa821e980eb55e56ca119563b3affb5c8",
+          "canonical_acceptance_established": false,
+          "scope": "learning",
+          "overall": {
+            "counts": {
+              "continued": 36,
+              "measured_preserving": 254,
+              "measured_recall_loss": 10
+            },
+            "independent_groups": 100,
+            "mean_observed_recall_delta": -0.0033333333333333327,
+            "mean_predicted_work": 6590.58,
+            "observed_quality_queries": 300,
+            "quality_coverage_complete": true,
+            "queries": 300,
+            "work_is_latency": false
+          },
+          "timings": {
+            "activation-cold": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            },
+            "reused-warm": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            }
+          },
+          "learning_qualification": {
+            "aggregate_quality_passed": false,
+            "canonical_acceptance_established": false,
+            "overall": {
+              "recall_delta_ci95": [
+                -0.0063333333333333314,
+                -0.0009999999999999998
+              ]
+            },
+            "unknown_stops": 0
+          }
+        }
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/3"
+      },
+      "copied_fields": {
+        "sequence": 3,
+        "operation": "archive",
+        "receipt": "d4cdcefa9b802a5c54ee2c6807d473b9622b22244c47f2cc1b6fcbb3d4cd0e37",
+        "valid": true,
+        "semantic_hash": "dda8c748c15d861c11eaf1f2160dac728bd21b0f38d759cbf45e844f5a5530a4",
+        "decision_nodes": 4,
+        "predicted_work_reduction": 0.3715398671386655,
+        "stop_fraction": 0.87,
+        "policy": {
+          "name": "mid_S32_64_128_t004"
+        },
+        "assessment": {
+          "assessment_hash": "e82ecd9c015fd058d8c493c2faa406eaa0600c1829f78448a45656951a5d0074",
+          "canonical_acceptance_established": false,
+          "scope": "learning",
+          "overall": {
+            "counts": {
+              "continued": 39,
+              "measured_preserving": 252,
+              "measured_recall_loss": 9
+            },
+            "independent_groups": 100,
+            "mean_observed_recall_delta": -0.002999999999999999,
+            "mean_predicted_work": 6472.8,
+            "observed_quality_queries": 300,
+            "quality_coverage_complete": true,
+            "queries": 300,
+            "work_is_latency": false
+          },
+          "timings": {
+            "activation-cold": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            },
+            "reused-warm": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            }
+          },
+          "learning_qualification": {
+            "aggregate_quality_passed": false,
+            "canonical_acceptance_established": false,
+            "overall": {
+              "recall_delta_ci95": [
+                -0.005666666666666666,
+                -0.0009999999999999998
+              ]
+            },
+            "unknown_stops": 0
+          }
+        }
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/4"
+      },
+      "copied_fields": {
+        "sequence": 4,
+        "operation": "archive",
+        "receipt": "dd5dafd666fe4bdf8015a4e9afd1c832021cbef64aab66f8f59913060bbf9eac",
+        "valid": true,
+        "semantic_hash": "46a41857072eca372de1a70961b998770b36c001d4c8f3f2ba098f72933841d3",
+        "decision_nodes": 4,
+        "predicted_work_reduction": 0.31752538482600057,
+        "stop_fraction": 0.55,
+        "policy": {
+          "name": "aggr_S8_32_64_t004"
+        },
+        "assessment": {
+          "assessment_hash": "106958a79bb65d40271ee5ab968c94c6317246699fc402359085101c284fcb04",
+          "canonical_acceptance_established": false,
+          "scope": "learning",
+          "overall": {
+            "counts": {
+              "continued": 135,
+              "measured_preserving": 159,
+              "measured_recall_loss": 6
+            },
+            "independent_groups": 100,
+            "mean_observed_recall_delta": -0.0019999999999999996,
+            "mean_predicted_work": 7029.12,
+            "observed_quality_queries": 300,
+            "quality_coverage_complete": true,
+            "queries": 300,
+            "work_is_latency": false
+          },
+          "timings": {
+            "activation-cold": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            },
+            "reused-warm": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            }
+          },
+          "learning_qualification": {
+            "aggregate_quality_passed": false,
+            "canonical_acceptance_established": false,
+            "overall": {
+              "recall_delta_ci95": [
+                -0.004333333333333333,
+                -0.00033333333333333327
+              ]
+            },
+            "unknown_stops": 0
+          }
+        }
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/6"
+      },
+      "copied_fields": {
+        "sequence": 6,
+        "operation": "archive",
+        "receipt": "932045b44a3ea48fc557af7ce91cbe24d10e512ad8df1f2d605f7c9f854f7092",
+        "valid": true,
+        "semantic_hash": "160edd916c0a16a39c4793be82bc21ca834214dea55ac5ad428015eb578c621a",
+        "decision_nodes": 4,
+        "predicted_work_reduction": 0.43473347146355246,
+        "stop_fraction": 0.94,
+        "policy": {
+          "name": "aggr_S32_64_128_t008"
+        },
+        "assessment": {
+          "assessment_hash": "2c7d21cc360e09d3992d1cc3a3b0a09edc45dd3ee10146f857df61c7489e51a7",
+          "canonical_acceptance_established": false,
+          "scope": "learning",
+          "overall": {
+            "counts": {
+              "continued": 18,
+              "measured_preserving": 266,
+              "measured_recall_loss": 16
+            },
+            "independent_groups": 100,
+            "mean_observed_recall_delta": -0.005333333333333332,
+            "mean_predicted_work": 5821.94,
+            "observed_quality_queries": 300,
+            "quality_coverage_complete": true,
+            "queries": 300,
+            "work_is_latency": false
+          },
+          "timings": {
+            "activation-cold": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            },
+            "reused-warm": {
+              "pairs": 0,
+              "status": "unmeasured",
+              "training_feasible": null
+            }
+          },
+          "learning_qualification": {
+            "aggregate_quality_passed": false,
+            "canonical_acceptance_established": false,
+            "overall": {
+              "recall_delta_ci95": [
+                -0.008999999999999998,
+                -0.0023333333333333327
+              ]
+            },
+            "unknown_stops": 0
+          }
+        }
+      }
+    }
+  ],
+  "rejected_candidate": {
+    "source_ref": {
+      "source_id": "result",
+      "json_pointer": "/events/5"
+    },
+    "copied_fields": {
+      "sequence": 5,
+      "operation": "archive",
+      "receipt": "a0ef68b43f6e7007d9500f1ef98960e626ecadaf9b81d5c17d285fb4c8a9af54",
+      "valid": false,
+      "error": "AgentError: candidate exceeds the study decision depth",
+      "policy": {
+        "name": "aggr_S8_32_64_128_t008"
+      }
+    }
+  },
+  "representative_policy": {
+    "source_ref": {
+      "source_id": "result",
+      "json_pointer": "/events/1"
+    },
+    "copied_fields": {
+      "policy": {
+        "feature_groups": [
+          "basic",
+          "work",
+          "queue",
+          "distances"
+        ],
+        "format": "fannagent.bounded_tree.v1",
+        "name": "cons_S32_64_128_t002",
+        "numeric_semantics": "int64_float64_strict",
+        "root": {
+          "else": "continue",
+          "if": {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "feature": "checkpoint_index"
+                      }
+                    ],
+                    "op": "is_available"
+                  },
+                  {
+                    "args": [
+                      {
+                        "feature": "completed_expansions"
+                      }
+                    ],
+                    "op": "is_available"
+                  }
+                ],
+                "op": "and"
+              },
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "feature": "frontier_count"
+                      }
+                    ],
+                    "op": "is_available"
+                  },
+                  {
+                    "args": [
+                      {
+                        "feature": "retained_result_count"
+                      }
+                    ],
+                    "op": "is_available"
+                  }
+                ],
+                "op": "and"
+              }
+            ],
+            "op": "and"
+          },
+          "then": {
+            "else": {
+              "else": {
+                "else": "continue",
+                "if": {
+                  "args": [
+                    {
+                      "args": [
+                        {
+                          "feature": "checkpoint_index"
+                        },
+                        {
+                          "int": 128
+                        }
+                      ],
+                      "op": "eq"
+                    },
+                    {
+                      "args": [
+                        {
+                          "feature": "completed_expansions"
+                        },
+                        {
+                          "int": 417
+                        }
+                      ],
+                      "op": "gte"
+                    }
+                  ],
+                  "op": "and"
+                },
+                "then": "stop"
+              },
+              "if": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "feature": "checkpoint_index"
+                      },
+                      {
+                        "int": 64
+                      }
+                    ],
+                    "op": "eq"
+                  },
+                  {
+                    "args": [
+                      {
+                        "feature": "retained_result_count"
+                      },
+                      {
+                        "int": 1415
+                      }
+                    ],
+                    "op": "lte"
+                  }
+                ],
+                "op": "and"
+              },
+              "then": "stop"
+            },
+            "if": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "feature": "checkpoint_index"
+                    },
+                    {
+                      "int": 32
+                    }
+                  ],
+                  "op": "eq"
+                },
+                {
+                  "args": [
+                    {
+                      "feature": "frontier_count"
+                    },
+                    {
+                      "int": 983
+                    }
+                  ],
+                  "op": "lte"
+                }
+              ],
+              "op": "and"
+            },
+            "then": "stop"
+          }
+        },
+        "runtime_profile_hash": "3d869e5b919b231f913209fe33ec6b829e7b990cf4666a632d092556ff51958d",
+        "schema_version": 1,
+        "shape_model": {},
+        "training_provenance": {}
+      }
+    }
+  },
+  "submitted_rationale_excerpts": [
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/1/reason"
+      },
+      "exact_excerpt": "Sequential single-feature stumps at measured checkpoints [32, 64, 128] fit on all 300 training queries with cumulative per-stratum mean-delta budget 0.002: [(32, 'frontier_count', 'lte', 983), (64, 'retained_result_count', 'lte', 1415), (128, 'completed_expansions', 'gte', 417)]"
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/6/reason"
+      },
+      "exact_excerpt": "Replaces a 4-stage variant rejected as too deep."
+    }
+  ],
+  "export_events": [
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/7"
+      },
+      "copied_fields": {
+        "sequence": 7,
+        "operation": "proposal_export",
+        "receipt": "d93c2bf8d4649ebb92385a6d702742e1d90b99c8bc354401e4ae5c34db38785f",
+        "semantic_hash": "71c336d0577d5290d743636f0065a46ba0dbe49c0e8dd71d063adf0c0ca2c592"
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/8"
+      },
+      "copied_fields": {
+        "sequence": 8,
+        "operation": "proposal_export",
+        "receipt": "2fff563bce93a38f67b1d4232de07cc97e1c1e389572d35454b430f8811d5100",
+        "semantic_hash": "6c73831d52c6eebe05368bf792a7c865dcb33778015cdd84b9cccaf42b7aa331"
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/9"
+      },
+      "copied_fields": {
+        "sequence": 9,
+        "operation": "proposal_export",
+        "receipt": "b851286806cec838a0eae609dec3962a65b6d121bf4793339d2e5f65c5f43acb",
+        "semantic_hash": "fd239192bb75b59ed1596598cc6379e1dbb55934ab49a0e4c8638b0bf0254862"
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/10"
+      },
+      "copied_fields": {
+        "sequence": 10,
+        "operation": "proposal_export",
+        "receipt": "d4cdcefa9b802a5c54ee2c6807d473b9622b22244c47f2cc1b6fcbb3d4cd0e37",
+        "semantic_hash": "dda8c748c15d861c11eaf1f2160dac728bd21b0f38d759cbf45e844f5a5530a4"
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/11"
+      },
+      "copied_fields": {
+        "sequence": 11,
+        "operation": "proposal_export",
+        "receipt": "dd5dafd666fe4bdf8015a4e9afd1c832021cbef64aab66f8f59913060bbf9eac",
+        "semantic_hash": "46a41857072eca372de1a70961b998770b36c001d4c8f3f2ba098f72933841d3"
+      }
+    },
+    {
+      "source_ref": {
+        "source_id": "result",
+        "json_pointer": "/events/12"
+      },
+      "copied_fields": {
+        "sequence": 12,
+        "operation": "proposal_export",
+        "receipt": "932045b44a3ea48fc557af7ce91cbe24d10e512ad8df1f2d605f7c9f854f7092",
+        "semantic_hash": "160edd916c0a16a39c4793be82bc21ca834214dea55ac5ad428015eb578c621a"
+      }
+    }
+  ],
+  "finish": {
+    "source_ref": {
+      "source_id": "result",
+      "json_pointer": "/events/13"
+    },
+    "copied_fields": {
+      "sequence": 13,
+      "operation": "finish",
+      "reason": "Exported 6 research proposals (conservative to aggressive: single/multi-checkpoint stump chains stopping only at measured checkpoints 8/32/64/128; unknown stops =0 in-sample). None is accepted: no latency measured including activation, CV of fitting recipe shows recall delta around -0.002 to -0.011, votes108 weakest, lower bounds often below -0.005. One 4-stage candidate was structurally invalid (too deep) and not exported. Stops at unmeasured checkpoints are unknown and avoided; no confirmation data."
+    }
+  },
+  "host_status_before_final_request": {
+    "source_ref": {
+      "source_id": "transcript",
+      "json_pointer": "/29/content",
+      "embedded_json_pointer": "/research_status"
+    },
+    "copied_fields": {
+      "provider_attempts_used": 9,
+      "provider_attempt_limit": 12,
+      "next_request_number": 10,
+      "conversation_committed_usd": "0.449836",
+      "conversation_cap_usd": "1.06",
+      "remaining_usd": "0.610164",
+      "maximum_next_request_reservation_usd": "0.606208",
+      "next_request_reservation_fits": true,
+      "commands_used": 9
+    }
+  },
+  "existing_audit": {
+    "source_ref": {
+      "source_id": "audit",
+      "json_pointer": "/conversations/1"
+    },
+    "copied_fields": {
+      "id": "pair-0-exploratory",
+      "status": "completed",
+      "attempts": 10,
+      "commands": 10,
+      "committed_usd": "0.530724",
+      "exports": 6,
+      "finish_recorded": true,
+      "censored": false,
+      "command_timeouts": 0,
+      "export_receipt_envelope_collisions_recovered": 6
+    }
+  },
+  "study_outcome": {
+    "source_ref": {
+      "source_id": "study-summary",
+      "json_pointer": ""
+    },
+    "copied_fields": {
+      "canonical_acceptance_established": false,
+      "complete_pairs": 0,
+      "measurement_allowed": false,
+      "interpretation": "Descriptive matched protocol; censored pairs cannot establish conservatism versus budget. Export counts do not establish policy quality or agent superiority."
+    }
+  },
+  "provenance_notes": [
+    "Original paths identify the saved workspace records; they are not links to files bundled in a fresh clone. This curated trace is the standalone documentation excerpt.",
+    "Source hashes identify the original bytes checked locally; they do not publish omitted records or independently prove their authenticity.",
+    "The result serializer overwrote export envelope receipts with target candidate receipts. Export sequence and JSON pointers are the locators here; receipt on an export refers to its archived candidate. The existing audit recorded six recovered collisions for this run.",
+    "Seven archive attempts, six proposal_export events, and one finish event make fourteen tool events. They are not fourteen independent candidate policies.",
+    "The decision-depth rejection and correction occurred in this real run; no synthetic fixture is included."
+  ]
+}
