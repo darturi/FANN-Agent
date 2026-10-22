@@ -398,7 +398,10 @@ def explore(config, store, backend, *, resume=False, step_limit=1000):
                         "trajectory", store.put("trajectory", agent.serialize(startup_metadata))
                     )
                 while agent.n_calls < step_limit:
-                    if startup_metadata.get("workflow_protocol_version") in {1, 2} and agent.n_calls:
+                    if (
+                        startup_metadata.get("workflow_protocol_version") in {1, 2}
+                        and agent.n_calls
+                    ):
                         notice = workflow_notice(tools, step_limit, agent.n_calls)
                         agent.add_messages(
                             model.format_message(
