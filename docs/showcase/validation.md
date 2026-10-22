@@ -38,22 +38,24 @@ typing, builds both distributions, installs the wheel into a separate environmen
 and verifies the no-key lifecycle outside the checkout. Actions are pinned to
 verified upstream release commits and have read-only repository permission.
 
-The [hosted run for `2a38258`](https://github.com/darturi/FANN-Agent/actions/runs/39829430205)
+The [hosted run for the final release commit `6918fba`](https://github.com/darturi/FANN-Agent/actions/runs/39830411124)
 passed both Python versions: ordinary tests, lint, SDK typing, distribution builds,
 and the installed-wheel no-key demo. The initial workflow was rejected before any
 job ran because temporary runner configuration was referenced at the job level;
 initialization now occurs in a runner step. No application behavior was changed.
 
-This validation document and the notice filename were finalized after that run.
-The final source is checked again by the same workflow before the core portfolio
-tag is published. GitHub attaches those checks to the selected commit.
+That exact commit is published as `portfolio-v1`. The wheel includes the MIT
+license and upstream attribution notice. This completion record was added on the
+documentation branch after publication; the release tag remains unchanged.
 
 ## Public source checks
 
-The core portfolio branch and the companion's `portfolio-v1` tag are publicly
-accessible. An unauthenticated HTTPS check resolved all 54 distinct documents,
-source references, evidence files, and companion links in the primary reading path.
-The final core tag is checked separately during publication.
+Both repositories' `portfolio-v1` tags are publicly accessible. The final
+unauthenticated HTTPS check resolved all 57 reading-path links, including source,
+evidence, notices, companion source, and CI. A fresh unauthenticated core tag clone
+resolved to the exact commit tested above. The README commands also passed from
+a fresh public clone of that commit, with three completed experiments, simulated
+acceptance, zero model charges/calls, and a report retained after cleanup.
 
 Fresh public sibling clones also completed the companion's frozen source install
 and backend discovery: core `0.2.0` and pgvector extension `0.1.0`, with `fake` and
@@ -74,5 +76,5 @@ physical restore, production deployment, or broad engine/hardware qualification.
 The separate pgvector source retains its earlier qualification records and limits.
 Public package-registry or image publication is outside this portfolio snapshot.
 
-The selected source is intended to be linked through the `portfolio-v1` tag.
+The selected source is published at the [`portfolio-v1` tag](https://github.com/darturi/FANN-Agent/tree/portfolio-v1).
 `main` and the active research worktree remain separate from publication work.

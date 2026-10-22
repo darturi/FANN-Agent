@@ -2,7 +2,7 @@
 
 Created: October 22, 2026
 
-Status: Hosted validation passed; final tagged publication in progress
+Status: Complete — minimum portfolio snapshot published and verified
 
 ## Objective
 
@@ -69,11 +69,9 @@ Current deliverables:
 
 The [results page](results.md), [contribution statement](CONTRIBUTIONS.md),
 [local demo](showcase/local-demo.md), and [validation record](showcase/validation.md)
-now track release completion. Hosted CI and public-link checks will be completed before
-the stable core portfolio tag is issued. The author explicitly approved public
-publication of both reviewed snapshots. The companion source is available at
-[`portfolio-v1`](https://github.com/darturi/FANN-Agent-pgvector/tree/portfolio-v1);
-the core branch is published while hosted CI is verified.
+record completed release checks. The author explicitly approved public publication
+of both reviewed snapshots. The core and companion tags are published, and the
+released core commit passed hosted CI and the fresh public-clone demo.
 
 ### Release boundaries
 
@@ -339,7 +337,7 @@ step 6.
 - [x] Perform the final setup and demo review from a fresh clone.
 - [x] Review GitHub while signed out: repository access, extension access, source
   references, evidence links, setup instructions, attribution, and results.
-- [ ] Tag the reviewed snapshot and use a stable link for applications.
+- [x] Tag the reviewed snapshot and use a stable link for applications.
 
 ### Completion criteria
 
@@ -358,9 +356,30 @@ step 6.
 - [x] A fresh clone can run the deterministic demonstration without private
   dependencies or paid calls.
 - [x] The results page has accessible evidence and appropriately scoped claims.
-- [ ] The selected source is accessible, attributed, licensed, and reviewed for
+- [x] The selected source is accessible, attributed, licensed, and reviewed for
   private material.
-- [ ] CI, public links, and the tagged snapshot have been checked.
+- [x] CI, public links, and the tagged snapshot have been checked.
+
+## Completed publication record
+
+Published October 22, 2026:
+
+- Core: [`portfolio-v1`](https://github.com/darturi/FANN-Agent/tree/portfolio-v1),
+  commit `6918fbaba7048a66bf9b7e827dcc2aac15f3a6e8`, package `0.2.0`.
+- Companion: [`portfolio-v1`](https://github.com/darturi/FANN-Agent-pgvector/tree/portfolio-v1),
+  commit `05e54503ca06bf1e28bfc59867bf0cf9ab90d1a3`, package `0.1.0`.
+- [Hosted CI on the exact core release commit](https://github.com/darturi/FANN-Agent/actions/runs/39830411124)
+  passed on Python 3.12 and 3.13, including the installed-wheel demo.
+- The README workflow passed from a fresh public clone with three completed
+  experiments, simulated acceptance, zero provider calls/charges, and a retained
+  report. A separate unauthenticated tag clone resolved to the same tested commit.
+- All 57 final public-tag reading-path links returned HTTP 200 without credentials.
+- Original research checkouts, local and remote core `main`, and all 502 checked
+  original experiment artifacts remained unchanged. No paid model or research
+  database run was performed.
+
+This completion record was committed on `docs/application-ready` after publication.
+The stable tags retain the exact reviewed source; later documentation does not move them.
 
 ## Later work outside this minimum release
 
