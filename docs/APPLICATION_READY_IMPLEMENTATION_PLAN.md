@@ -1,0 +1,352 @@
+# Minimum application-ready release implementation plan
+
+Created: October 22, 2026
+
+Status: Documentation preparation only; release implementation remains pending
+
+## Objective
+
+Prepare a public repository link suitable for job applications and a future
+portfolio. A reviewer should be able to understand the agent, inspect an actual
+provider-backed run, and reproduce a small local demonstration.
+
+Center the presentation on agent engineering. Use the vector-search research as
+the concrete problem, the source of domain-specific tools, and the setting for
+rigorous evaluation.
+
+Proposed opening description:
+
+> FANNAgent is an offline research agent that investigates stopping policies for
+> filtered vector search. It chooses experiments, analyzes measurements, and
+> proposes policies within externally enforced budgets and evaluation boundaries.
+
+The intended reader path is:
+
+**README → agent architecture → annotated real run → runnable demo → research results.**
+
+The release steps below remain future work except for the documentation drafts
+identified in the current pass. This pass does not publish artifacts, launch
+experiments, or make model calls.
+
+## Development boundaries
+
+### Current documentation-only pass
+
+The authorized changes are limited to these three Markdown files:
+
+| File | Purpose |
+|---|---|
+| `docs/APPLICATION_READY_IMPLEMENTATION_PLAN.md` | Record scope, development boundaries, and future completion criteria |
+| `docs/agent-design.md` | Explain the existing agent architecture with source and test references |
+| `docs/showcase/README.md` | Provide an introductory showcase page focused on agent engineering |
+
+All other files remain outside this pass, including the root README, source code,
+configuration and prompt assets, dependencies and lockfiles, tests, CI workflows,
+licenses, experiment scripts, raw measurements, saved runs, verification records,
+and generated catalogs. Existing uncommitted work is preserved.
+
+Verification for this pass consists of reading source and checking Markdown
+structure, local links, and the file-change scope. Do not run application commands,
+tests, builds, installers, model requests, database operations, experiment analysis,
+or catalog regeneration. Reading a test establishes what it covers; it does not
+establish that it passed on the current checkout.
+
+Current deliverables:
+
+- [x] Record the documentation-only scope and development boundaries.
+- [x] Draft the [agent-design document](agent-design.md) from the existing source.
+- [x] Draft the [showcase landing page](showcase/README.md) without changing current
+  installation or development instructions.
+
+The real-run walkthrough, fresh-clone demo verification, dedicated results page,
+individual contribution attribution, and public release checks remain pending.
+These drafts do not complete the broader publication steps below.
+
+### Boundaries for later release work
+
+- Select a named release snapshot when publication work is authorized. Ongoing
+  research can continue independently; selecting a snapshot does not freeze the
+  active development branch.
+- Apply publication completion criteria to that snapshot. They are not new
+  prerequisites for running experiments or continuing feature development.
+- Preserve model prompts, tool behavior, spending contracts, policy semantics,
+  workload splits, evaluation entitlements, and acceptance criteria during the
+  documentation work. Functional changes require a separate implementation scope.
+- Preserve historical experiment files and outcomes. Publication summaries cite
+  existing evidence; they do not overwrite records or reinterpret failures as
+  successful acceptance.
+- Keep future demo and CI checks isolated from private databases, active research
+  runs, and paid providers. Runtime demo outputs belong in disposable directories.
+- If installation or CI exposes a functional problem, record the issue and define
+  a scoped fix. Do not broaden the publication pass into a refactor or change
+  scientific criteria to obtain a passing check.
+- Branch changes, commits, tags, remote changes, licensing decisions, publication,
+  and artifact exports are outside the current documentation-only authorization.
+
+### Description and claim boundaries
+
+Describe the system as an offline, LLM-driven, tool-using research agent with
+host-enforced study boundaries, persistent state, and model-cost accounting.
+Explain that offline means research outside live query serving; provider-backed
+research can use networked model APIs. Describe spending controls in terms of the
+configured pricing/token assumptions, ceiling, and allowance; infrastructure costs
+are a separate scope.
+
+Credit mini-swe-agent for its base loop and interfaces. Tie individual contribution
+claims to verified authorship. Distinguish the static cited research primer from
+autonomous literature search, synthetic demonstrations from real model behavior,
+and policy proposals from accepted deployments. Claims of production readiness,
+general performance improvement, or guaranteed security require further evidence.
+
+## Scope and current gaps
+
+The local review found substantial source code, tests, verification records, and
+experiment history. The publication work should make that material understandable,
+accessible, and reproducible from the selected public snapshot.
+
+Observed at planning time:
+
+- Recent core work is on a feature branch, with additional uncommitted work.
+- The pgvector extension is a separate repository with no configured remote in
+  the reviewed checkout.
+- The README begins with installation instructions that assume a local release
+  bundle; public package and image publication remain pending release gates.
+- The experiment index depends on sibling workspace directories and artifacts
+  that a clone of FANN-Agent does not include.
+- Ordinary tests and verification records exist, but no GitHub Actions workflows
+  were tracked in the reviewed core repository.
+- Neither the core nor the extension had a top-level project license.
+- Public access to the configured GitHub remote was not verified.
+
+Recheck these observations when implementation begins. Preserve unrelated work
+already present in the checkout.
+
+## 1. Select the exact version to showcase
+
+### Tasks
+
+- [ ] Review the current feature branch and uncommitted work; select the completed
+  pieces that belong in the application-ready snapshot.
+- [ ] Select a stable core commit and a compatible pgvector extension commit.
+- [ ] Keep the existing package separation and establish an accessible repository
+  for the extension.
+- [ ] Document compatible versions, working repository links, and the exact clone
+  directory names required by any source-install instructions.
+- [ ] Review the selected files and Git history for credentials, private data,
+  logs, and material that should not be published.
+- [ ] Confirm which research material can be shared and document collaborators
+  and upstream contributions.
+- [ ] Choose and add an appropriate project license for each published repository.
+
+### Completion criteria
+
+- The selected public snapshot contains every file needed by its instructions.
+- Both packages have accessible source and documented compatible revisions.
+- The publication review is complete before source or evidence is made public.
+- Unrelated unfinished research work is preserved.
+
+## 2. Explain the agent design and individual contributions
+
+### Deliverables
+
+- Revised `README.md`.
+- New `docs/agent-design.md`, including an architecture diagram.
+
+### Tasks
+
+- [ ] Rewrite the README in this reading order: problem, why an agent is useful,
+  agent capabilities, individual contributions and upstream components,
+  architecture, real run, local demo, results, and limitations.
+- [ ] Explain which decisions the model makes and which constraints the controller
+  enforces.
+- [ ] Explain that policy research happens offline and that deployed stopping
+  policies do not require an online LLM call.
+- [ ] Credit mini-swe-agent for the base agent loop and interfaces.
+- [ ] Identify the orchestration, domain tools, persistence, controls, and
+  evaluation work implemented in this project, with accurate attribution.
+- [ ] Document the capabilities below and link each to implementation code and
+  relevant existing tests.
+
+| Capability | What the explanation must demonstrate |
+|---|---|
+| Agent orchestration | How context, model actions, observations, and termination fit together |
+| Tool design | How domain operations become usable tools with validated arguments and actionable feedback |
+| Durable state | How conversations, experiment records, and candidate checkpoints survive interruption |
+| Cost control | How reservations, retries, uncertain charges, and spending limits are enforced |
+| Execution boundaries | How the sandbox and broker control access to database operations and evidence |
+| Evaluation | How development, calibration, final testing, and acceptance remain separated |
+
+Starting points for the implementation walkthrough include
+`src/fannagent/controller.py`, `model.py`, `broker.py`, `environment.py`,
+`budget.py`, `store.py`, `experiments.py`, `submission.py`, and `study.py`.
+Verify the published revision before adding precise source links.
+
+### Completion criteria
+
+- A new reader can explain the purpose and current outcome of the project.
+- A technical reviewer can follow one model action through validation, execution,
+  recorded evidence, and the next decision, and locate the corresponding code.
+- Individual contributions and framework responsibilities are explicit.
+
+## 3. Publish one annotated real agent run
+
+This is the primary evidence of model-directed agent behavior. The deterministic
+simulation in step 4 serves a separate reproducibility purpose.
+
+### Deliverables
+
+- New `docs/showcase/agent-run.md`.
+- A small sanitized structured trace, such as
+  `docs/showcase/agent-trace.json`.
+
+### Tasks
+
+- [ ] Inspect existing provider-backed runs and select one with a coherent sequence:
+  initial context, hypothesis, tool calls, measurements, revised decision, and
+  recorded outcome.
+- [ ] Start by assessing the two completed exploratory conversations recorded in
+  the aggressive-proposals v2 study. Verify their suitability and artifact
+  availability before selecting either.
+- [ ] Record the model, source revision, request count, recorded cost, and terminal
+  status of the chosen run.
+- [ ] Present structured hypotheses, tool arguments, relevant observations,
+  evidence references, and conclusions in a readable annotated sequence.
+- [ ] Identify what the model chose and what the controller enforced at each
+  important point.
+- [ ] Sanitize credentials, private query data, infrastructure details, and other
+  unsuitable material; label omissions and abridged excerpts.
+- [ ] Preserve the original outcome, including budget exhaustion or abstention
+  where applicable. Keep provenance to the source records.
+- [ ] Include one short example of malformed-call recovery or budget handling.
+  If it comes from a test fixture, label it as a fixture rather than an observed
+  event in the showcased run.
+- [ ] If no existing run is suitable, record the evidence gap and decide separately
+  how to address it; this publication plan does not require a new paid run.
+
+### Completion criteria
+
+- A visitor can inspect concrete evidence of model-directed investigation without
+  accessing the original workspace.
+- The presented decisions are connected to actual tool results and recorded
+  evidence.
+- The outcome and limitations are accurate, and synthetic examples are labeled.
+
+## 4. Provide a reproducible local demonstration
+
+### Deliverables
+
+- Verified source-install and demo instructions in the README, with additional
+  detail in `docs/showcase/local-demo.md` if needed.
+- Representative output from the verified workflow.
+
+### Tasks
+
+- [ ] Use the existing `examples/fake.yaml` simulation.
+- [ ] Document supported prerequisites and exact source-install commands without
+  assuming unpublished packages or local release bundles are available.
+- [ ] Document the prepare, run, resume, evaluate, and report sequence.
+- [ ] Verify the instructions in a clean environment using the selected snapshot.
+- [ ] Include representative output showing experiment records and tool activity,
+  interruption and resume, a frozen policy, subsequent evaluation, and the final
+  report.
+- [ ] Clearly label the demonstration as a deterministic simulation and explain
+  its relationship to the provider-backed run and real database integration.
+- [ ] Document cleanup and the files generated by the demo.
+
+### Completion criteria
+
+- A fresh clone completes the documented workflow without credentials, paid model
+  calls, private files, or sibling research directories.
+- The output demonstrates the documented lifecycle and is explicitly identified
+  as simulated evidence.
+
+## 5. Publish a concise, accessible results page
+
+### Deliverables
+
+- New `docs/results.md`.
+- The small supporting summaries or accessible artifacts needed to substantiate
+  its results table.
+
+### Tasks
+
+- [ ] State the research question, workload, baseline, acceptance criteria, and
+  current conclusion.
+- [ ] Include one concise results table with appropriate provenance and limits.
+- [ ] Include the held-out confirmation finding: a candidate achieved latency
+  savings but failed the recall requirement. Verify all numbers against the
+  selected evidence before publication.
+- [ ] Explain what the evaluation revealed and how the system handled that result.
+- [ ] Distinguish implemented agent capabilities, database engineering checks,
+  exploratory findings, and confirmed performance outcomes.
+- [ ] Publish selected supporting summaries with working links; replace local
+  workspace references in the main reader path.
+- [ ] State data-access requirements and the scope of hardware/environment
+  qualification where relevant.
+- [ ] Preserve the full internal experiment history without making it a prerequisite
+  for understanding the public showcase.
+
+### Completion criteria
+
+- Every headline claim has accessible supporting evidence.
+- The page accurately separates implemented capabilities from demonstrated
+  research outcomes.
+- Reading the showcase does not require the original `trials/`, `harness/`,
+  `release/`, or other private workspace directories.
+
+## 6. Validate and publish the selected snapshot
+
+### Deliverables
+
+- New `.github/workflows/ci.yml`.
+- A short validation record, such as `docs/showcase/validation.md`.
+- A tagged, reviewed public snapshot.
+
+### Tasks
+
+- [ ] Add CI for ordinary tests, linting, the existing SDK typing check, package
+  building, and the scripted demo.
+- [ ] Fix failures exposed by those checks and record the exact validation scope.
+- [ ] Keep environment-dependent database qualification documented separately
+  from checks that run in ordinary CI.
+- [ ] Confirm that CI and demo commands cannot initiate paid model calls or access
+  private databases.
+- [ ] Perform the final setup and demo review from a fresh clone.
+- [ ] Review GitHub while signed out: repository access, extension access, source
+  references, evidence links, setup instructions, attribution, and results.
+- [ ] Tag the reviewed snapshot and use a stable link for applications.
+
+### Completion criteria
+
+- CI passes on the exact selected snapshot.
+- The local demo works from the published source.
+- All primary links work for an unauthenticated visitor.
+- Validation records distinguish current checks from historical qualification.
+
+## Definition of application-ready
+
+- [ ] The README gives a clear explanation of the problem, the agent, individual
+  contributions, and current outcome.
+- [ ] The agent-design document connects important engineering decisions to code
+  and tests.
+- [ ] An annotated provider-backed run demonstrates actual model-directed work.
+- [ ] A fresh clone can run the deterministic demonstration without private
+  dependencies or paid calls.
+- [ ] The results page has accessible evidence and appropriately scoped claims.
+- [ ] The selected source is accessible, attributed, licensed, and reviewed for
+  private material.
+- [ ] CI, public links, and the tagged snapshot have been checked.
+
+## Later work outside this minimum release
+
+- Hosted interactive agent or portfolio website.
+- Package-registry or public container-image publication.
+- Additional database backends.
+- New research experiments or improved optimization results.
+- Broader hardware and production deployment qualification.
+- A promotional video or GIF, unless it proves inexpensive to produce from the
+  verified demo.
+
+The minimum release is complete when the reader path and completion criteria
+above are satisfied. Further research success is not a prerequisite for presenting
+the agent engineering and existing findings accurately.
