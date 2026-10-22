@@ -1,8 +1,9 @@
 # Aggressive policy proposal experiment v1
 
 Prepared October 20, 2026. **Current status: v1/v2 generation comparisons remain
-inconclusive; the separate corrected timing study is complete. Held-out
-confirmation remains pending.** See the [master experiment index](experiments/README.md)
+inconclusive; the separate corrected timing study and held-out confirmation are
+complete. The frozen selected policy fails confirmation recall criteria.**
+See the [master experiment index](experiments/README.md)
 for the full run history, failures, artifacts and reproduction procedures.
 The versioned implementation and launch commands are in
 [`trials/torch-reviews-aggressive-proposals-v1/README.md`](../../trials/torch-reviews-aggressive-proposals-v1/README.md).
@@ -106,11 +107,48 @@ records the independently reproduced result and analysis artifacts.
 The selected policy's overall recall changes from 99.0% to 98.9%; its worst
 per-filter recall confidence lower bound, for votes108, is exactly -0.5 percentage
 points and passes the original inclusive cutoff. Its selected identity is
-frozen. This is training feasibility only; no confirmation query was opened,
+frozen. At training close this was training feasibility only; no confirmation query was opened,
 no new model call or fit was made, and canonical serving acceptance remains
 unestablished. The A/B comparison stays inconclusive with zero complete pairs.
-The next eligible evaluation is the originally prescribed one-policy held-out
+This made the policy eligible for the originally prescribed one-policy held-out
 confirmation, without retuning or a fallback candidate after its result.
+
+The user subsequently authorized packaging that confirmation for the exact
+`cons_S32_64_128_t002` selection. The
+[confirmation-package verification](verification/frozen-proposals-timing-v1-runtime-fix-confirmation-package.json)
+records the completed upload and checksum. Packaging independently reproduced
+both raw training cohort reports and selection before reading the original
+confirmation inventory. The upload contains one selected policy and five
+diagnostic controls, 180 cases in 60 disjoint vector groups, three serial blocks
+and 29,160 retained pairs. It preserves the original timing contract, recall
+criteria and inconclusive A/B result. No model call, fit, query execution or
+Torch submission occurred during packaging. The held-out query inventory was
+packaged with explicit authorization; its outcomes were unmeasured at that stage.
+
+The user-submitted confirmation campaign
+`reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk`
+completed all three allocations on October 21. Independent local raw reanalysis
+reproduces 29,160 retained pairs from 180 query/filter cases in 60 held-out vector
+groups. The unchanged `cons_S32_64_128_t002` is faster in both timing regimes:
+9.865925 to 8.714277 ms including activation (11.673% saved) and 7.590645 to
+6.651142 ms on reuse (12.377% saved). Both latency confidence-bound gates pass.
+Recall fails overall and in votes32 and votes108. Overall native recall is
+99.500%, policy recall 98.944%, and the recall-delta lower 95% bound is -1.056
+percentage points; the permitted bound remains at least -0.500 pp. Per-filter
+lower bounds are -0.500 pp unfiltered (passes inclusively), -0.833 pp votes32
+and -2.167 pp votes108. All complete-result and minimum-native-recall checks pass.
+The [confirmation postrun verification](verification/frozen-proposals-timing-v1-runtime-fix-confirmation-postrun.json)
+records exact results, source identities, raw reproduction and analysis files.
+
+Nine of 180 cases across seven vectors lose recall, with no gains: eight lose
+one top-10 match and one loses two. These outcomes repeat identically across
+blocks and timing repetitions. This is a failed recall confirmation despite
+repeatable latency improvement. No candidate qualifies, no serving acceptance
+is established, and this study ends without retuning or a fallback on the
+consumed split. Future optimized candidates require fresh independent
+confirmation. The A/B comparison remains inconclusive with zero complete pairs.
+There were zero new model calls or fits, and all 169 original financial charges
+and the original scientific ledger state remain unchanged.
 
 No model requests, fitting, policy replay, database measurements, builds, tests,
 Torch submissions or confirmation queries were performed to prepare this design.
@@ -422,4 +460,5 @@ qualification records do not qualify a new runner automatically.
 
 This design alone authorizes no additional spending, submission or opening of
 confirmation. Historical authorized executions are recorded above; the latest
-training timing study is complete and held-out confirmation remains pending.
+training timing study and held-out confirmation are complete. Confirmation
+failed the unchanged recall criteria and permits no policy promotion.
