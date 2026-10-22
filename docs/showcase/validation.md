@@ -19,6 +19,7 @@ Python 3.12.7, and uv 0.11.14. No test outputs were written to the research chec
 | Source distribution and wheel | Built successfully |
 | Generated fake-config lifecycle | Initialization, doctor, preparation, interruption, resume, evaluation, experiment inspection, reporting, status, and cleanup passed from outside the checkout |
 | Installed-wheel lifecycle | Passed in a new runtime-only environment outside the checkout; packaged fake template and MIT license were present |
+| Packaged attribution | A subsequent isolated rebuild includes both `LICENSE` and `NOTICE.md` under the wheel's license directory |
 | Demo acceptance | `accepted`, `valid: true`, `simulated: true`; three completed experiments |
 | Model ledger in the demo | Zero committed model charges, empty call list |
 | Existing real-run documentation | 23 source hashes, 31 field projections, 37 exact excerpts, and ten assistant/action matches were checked during its preparation |
@@ -37,8 +38,28 @@ typing, builds both distributions, installs the wheel into a separate environmen
 and verifies the no-key lifecycle outside the checkout. Actions are pinned to
 verified upstream release commits and have read-only repository permission.
 
-Remote CI and publication checks are recorded here after the candidate is pushed.
-Local checks above do not claim a hosted CI result.
+The [hosted run for `2a38258`](https://github.com/darturi/FANN-Agent/actions/runs/39829430205)
+passed both Python versions: ordinary tests, lint, SDK typing, distribution builds,
+and the installed-wheel no-key demo. The initial workflow was rejected before any
+job ran because temporary runner configuration was referenced at the job level;
+initialization now occurs in a runner step. No application behavior was changed.
+
+This validation document and the notice filename were finalized after that run.
+The final source is checked again by the same workflow before the core portfolio
+tag is published. GitHub attaches those checks to the selected commit.
+
+## Public source checks
+
+The core portfolio branch and the companion's `portfolio-v1` tag are publicly
+accessible. An unauthenticated HTTPS check resolved all 54 distinct documents,
+source references, evidence files, and companion links in the primary reading path.
+The final core tag is checked separately during publication.
+
+Fresh public sibling clones also completed the companion's frozen source install
+and backend discovery: core `0.2.0` and pgvector extension `0.1.0`, with `fake` and
+`pgvector` registered. That check made no database or provider calls. The companion
+tag points to `05e5450`, which retains runtime source from `09590fd` and adds only
+its README and MIT license. No new native qualification is claimed.
 
 ## Qualification boundaries
 

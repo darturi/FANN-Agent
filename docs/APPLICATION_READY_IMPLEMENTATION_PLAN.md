@@ -2,7 +2,7 @@
 
 Created: October 22, 2026
 
-Status: Portfolio release candidate prepared; hosted CI and publication checks in progress
+Status: Hosted validation passed; final tagged publication in progress
 
 ## Objective
 
@@ -143,13 +143,13 @@ already present in the checkout.
 - [x] Review the current feature branch and uncommitted work; select the completed
   pieces that belong in the application-ready snapshot.
 - [x] Select a stable core commit and a compatible pgvector extension commit.
-- [ ] Keep the existing package separation and establish an accessible repository
+- [x] Keep the existing package separation and establish an accessible repository
   for the extension.
-- [ ] Document compatible versions, working repository links, and the exact clone
+- [x] Document compatible versions, working repository links, and the exact clone
   directory names required by any source-install instructions.
 - [x] Review the selected files and Git history for credentials, private data,
   logs, and material that should not be published.
-- [ ] Confirm which research material can be shared and document collaborators
+- [x] Confirm which research material can be shared and document collaborators
   and upstream contributions.
 - [x] Choose and add an appropriate project license for each published repository.
 
@@ -337,7 +337,7 @@ step 6.
 - [x] Confirm that CI and demo commands cannot initiate paid model calls or access
   private databases.
 - [x] Perform the final setup and demo review from a fresh clone.
-- [ ] Review GitHub while signed out: repository access, extension access, source
+- [x] Review GitHub while signed out: repository access, extension access, source
   references, evidence links, setup instructions, attribution, and results.
 - [ ] Tag the reviewed snapshot and use a stable link for applications.
 

@@ -32,7 +32,7 @@ The pretrained models, their training, and those upstream frameworks are not
 FANNAgent implementations. NumPy, PyArrow, Pydantic, Typer, and the other declared
 dependencies retain their own authorship and licenses. Shared neutral primitives
 originated in the FANNBench harness; its notice is retained in
-[third-party notices](../THIRD_PARTY_NOTICES.md).
+[third-party notices](../NOTICE.md).
 
 The [research primer](RESEARCH_GUIDANCE.md) credits the papers that informed its
 guidance. FANNAgent does not claim authorship of those papers or the underlying

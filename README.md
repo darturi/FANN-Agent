@@ -110,6 +110,6 @@ Neither the demo nor ordinary core CI connects to a research database. See the
 advanced workflows. Source installation is the supported portfolio path; public
 package-registry or container-image availability is not required by these commands.
 
-Licensed under [MIT](LICENSE), with [third-party notices](THIRD_PARTY_NOTICES.md).
+Licensed under [MIT](LICENSE), with [third-party notices](NOTICE.md).
 The stable portfolio snapshot is `portfolio-v1`; ongoing research uses separate
 branches and workspaces.
