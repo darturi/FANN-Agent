@@ -374,9 +374,11 @@ Published October 22, 2026:
   experiments, simulated acceptance, zero provider calls/charges, and a retained
   report. A separate unauthenticated tag clone resolved to the same tested commit.
 - All 57 final public-tag reading-path links returned HTTP 200 without credentials.
-- Original research checkouts, local and remote core `main`, and all 502 checked
-  original experiment artifacts remained unchanged. No paid model or research
-  database run was performed.
+- Existing files and branch heads in both original research checkouts, local and
+  remote core `main`, and all 502 checked original experiment artifacts were
+  preserved. Concurrent additions under `experiments/selective-agent-v1/` remain
+  outside the published snapshot and were left untouched. No paid model or
+  research database run was performed.
 
 This completion record was committed on `docs/application-ready` after publication.
 The stable tags retain the exact reviewed source; later documentation does not move them.
