@@ -245,8 +245,12 @@ for those mechanisms; they do not report a new test run or establish scientific
 success. Existing campaign summaries are linked from the
 [showcase overview](showcase/README.md).
 
-An annotated provider-backed trajectory and a freshly verified clone-to-demo path
-remain future deliverables in the
+The [annotated provider-backed run](showcase/agent-run.md) and
+[curated trace](showcase/agent-trace.json) now show an existing proposal-study
+conversation, including a rejected policy, a valid revision, and research exports.
+That archive used a specialized loop around the core model adapter and offline
+evaluator; it does not demonstrate every mechanism in this general source
+walkthrough. A freshly verified clone-to-demo path remains future work in the
 [application-ready plan](APPLICATION_READY_IMPLEMENTATION_PLAN.md). The existing
 scripted simulation demonstrates lifecycle behavior with synthetic measurements;
 it does not demonstrate model-directed discovery or database performance.

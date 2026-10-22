@@ -52,11 +52,15 @@ of the public-release review.
 
 1. Read the [agent design](../agent-design.md) for the architecture, one-action
    walkthrough, and division of model decisions and host authority.
-2. Inspect [invalid-action recovery coverage](../../tests/test_submission_resilience.py),
+2. Follow the [annotated real agent run](agent-run.md): ten provider-backed actions,
+   a rejected policy and its revision, six research exports, and an explicit
+   conclusion that none was accepted. The [curated trace](agent-trace.json)
+   includes selected source evidence and provenance.
+3. Inspect [invalid-action recovery coverage](../../tests/test_submission_resilience.py),
    [provider accounting coverage](../../tests/test_model.py), and
    [checkpoint coverage](../../tests/test_checkpoint.py) for concrete behaviors the
    project checks.
-3. Read the recorded evidence below, keeping agent behavior, engineering checks,
+4. Read the recorded evidence below, keeping agent behavior, engineering checks,
    and scientific acceptance distinct.
 
 These test links describe existing coverage. No tests or experiments were run to
@@ -68,12 +72,14 @@ The existing saved records support a precise account of progress:
 
 | Evidence | Recorded outcome | Interpretation |
 |---|---|---|
+| [Annotated `pair-0-exploratory` conversation](agent-run.md) | Ten provider attempts, one rejected over-depth candidate, a valid revision, and six exported research proposals; recorded model charges $0.530724. | A real model-directed analysis and feedback sequence using the specialized offline proposal runner. No new database timings or final acceptance were established. |
 | [Aggressive proposals v2 audit](../verification/aggressive-proposals-v2-postrun.json) | Two exploratory conversations completed and exported 12 distinct policies; four conversations stopped at budget limits. There were zero complete A/B comparison pairs. | Evidence of model-driven proposal generation; the comparison of generation strategies remains inconclusive. |
 | [Separate frozen-policy confirmation](../verification/frozen-proposals-timing-v1-runtime-fix-confirmation-postrun.json) | The selected candidate showed latency savings but failed the required recall criterion; neither activation nor reuse qualified. | That confirmation did not establish an acceptable deployment candidate. |
 
-These are references to existing verification summaries, not newly executed or
-reanalyzed campaigns. They do not establish a general optimization benefit or
-production readiness. The [full experiment index](../experiments/README.md)
+The walkthrough selects excerpts from existing records; the audit links point to
+existing verification summaries. No campaign was executed or scientifically
+reanalyzed to prepare these pages. They do not establish a general optimization
+benefit or production readiness. The [full experiment index](../experiments/README.md)
 preserves broader history, including unsuccessful runs. Many underlying raw
 campaign artifacts live outside this repository, so its workspace links are not
 yet a standalone public evidence bundle.
@@ -82,13 +88,13 @@ yet a standalone public evidence bundle.
 
 The core has a [scripted simulation example](../../examples/fake.yaml) and
 [existing simulation instructions](../../README.md#simulation). It demonstrates
-the workflow using predetermined actions and synthetic latency. A real model run
-is needed to demonstrate model-directed investigation; database performance
+the workflow using predetermined actions and synthetic latency. The annotated
+run supplies recorded model-directed investigation. Database performance
 requires measured database evidence.
 
-This page and the design walkthrough are documentation previews. The annotated
-real-run walkthrough, fresh-clone verification of the demo, dedicated results
-page, and public-access checks remain pending in the
+The [real-run walkthrough](agent-run.md) is now available as a documentation
+excerpt with its scope and omissions stated. Fresh-clone verification of the
+demo, a dedicated results page, and public-access checks remain pending in the
 [application-ready implementation plan](../APPLICATION_READY_IMPLEMENTATION_PLAN.md).
 The current installation and development instructions remain unchanged.
 

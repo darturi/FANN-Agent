@@ -32,21 +32,26 @@ experiments, or make model calls.
 
 ### Current documentation-only pass
 
-The authorized changes are limited to these three Markdown files:
+The initial pass authorized the first three Markdown files below. The subsequent
+real-run documentation request also authorizes the walkthrough and curated trace,
+plus links and progress updates in those existing documents:
 
 | File | Purpose |
 |---|---|
 | `docs/APPLICATION_READY_IMPLEMENTATION_PLAN.md` | Record scope, development boundaries, and future completion criteria |
 | `docs/agent-design.md` | Explain the existing agent architecture with source and test references |
 | `docs/showcase/README.md` | Provide an introductory showcase page focused on agent engineering |
+| `docs/showcase/agent-run.md` | Annotate one existing provider-backed conversation |
+| `docs/showcase/agent-trace.json` | Store selected original fields and excerpts with source provenance as documentation |
 
 All other files remain outside this pass, including the root README, source code,
 configuration and prompt assets, dependencies and lockfiles, tests, CI workflows,
 licenses, experiment scripts, raw measurements, saved runs, verification records,
 and generated catalogs. Existing uncommitted work is preserved.
 
-Verification for this pass consists of reading source and checking Markdown
-structure, local links, and the file-change scope. Do not run application commands,
+Verification for this pass consists of reading source and existing records,
+checking source hashes and copied-field/excerpt consistency, Markdown structure,
+local links, and the file-change scope. Do not run application commands,
 tests, builds, installers, model requests, database operations, experiment analysis,
 or catalog regeneration. Reading a test establishes what it covers; it does not
 establish that it passed on the current checkout.
@@ -57,9 +62,11 @@ Current deliverables:
 - [x] Draft the [agent-design document](agent-design.md) from the existing source.
 - [x] Draft the [showcase landing page](showcase/README.md) without changing current
   installation or development instructions.
+- [x] Prepare an [annotated real agent run](showcase/agent-run.md) and
+  [curated trace](showcase/agent-trace.json) using saved records only.
 
-The real-run walkthrough, fresh-clone demo verification, dedicated results page,
-individual contribution attribution, and public release checks remain pending.
+Fresh-clone demo verification, a dedicated results page, individual contribution
+attribution, and public release checks remain pending.
 These drafts do not complete the broader publication steps below.
 
 ### Boundaries for later release work
@@ -81,7 +88,9 @@ These drafts do not complete the broader publication steps below.
   a scoped fix. Do not broaden the publication pass into a refactor or change
   scientific criteria to obtain a passing check.
 - Branch changes, commits, tags, remote changes, licensing decisions, publication,
-  and artifact exports are outside the current documentation-only authorization.
+  and external artifact exports are outside this documentation-authoring pass.
+  The curated trace listed above is a new documentation excerpt; original campaign
+  artifacts and verification records remain unchanged.
 
 ### Description and claim boundaries
 
@@ -193,6 +202,12 @@ Verify the published revision before adding precise source links.
 This is the primary evidence of model-directed agent behavior. The deterministic
 simulation in step 4 serves a separate reproducibility purpose.
 
+Documentation is prepared for `pair-0-exploratory` in the v2 proposal study.
+It includes an actual structural rejection and revision, the six exported
+proposals, and recorded cost and outcome. The study-specific runner and its
+training-only evidence scope are explicit. External publication remains part of
+step 6.
+
 ### Deliverables
 
 - New `docs/showcase/agent-run.md`.
@@ -201,27 +216,31 @@ simulation in step 4 serves a separate reproducibility purpose.
 
 ### Tasks
 
-- [ ] Inspect existing provider-backed runs and select one with a coherent sequence:
+- [x] Inspect existing provider-backed runs and select one with a coherent sequence:
   initial context, hypothesis, tool calls, measurements, revised decision, and
   recorded outcome.
-- [ ] Start by assessing the two completed exploratory conversations recorded in
+- [x] Start by assessing the two completed exploratory conversations recorded in
   the aggressive-proposals v2 study. Verify their suitability and artifact
   availability before selecting either.
-- [ ] Record the model, source revision, request count, recorded cost, and terminal
-  status of the chosen run.
-- [ ] Present structured hypotheses, tool arguments, relevant observations,
-  evidence references, and conclusions in a readable annotated sequence.
-- [ ] Identify what the model chose and what the controller enforced at each
+- [x] Record the model, source identity, request count, recorded cost, and terminal
+  status of the chosen run. Use the sealed manifest for this archive; do not
+  invent a historical Git revision.
+- [x] Present the task, working question, tool arguments, relevant observations,
+  evidence references, and conclusions in a readable annotated sequence. Label
+  editorial interpretations; this runner did not use the ordinary guided-mode
+  hypothesis journal.
+- [x] Identify what the model chose and what the controller enforced at each
   important point.
-- [ ] Sanitize credentials, private query data, infrastructure details, and other
+- [x] Sanitize credentials, private query data, infrastructure details, and other
   unsuitable material; label omissions and abridged excerpts.
-- [ ] Preserve the original outcome, including budget exhaustion or abstention
+- [x] Preserve the original outcome, including budget exhaustion or abstention
   where applicable. Keep provenance to the source records.
-- [ ] Include one short example of malformed-call recovery or budget handling.
-  If it comes from a test fixture, label it as a fixture rather than an observed
-  event in the showcased run.
-- [ ] If no existing run is suitable, record the evidence gap and decide separately
-  how to address it; this publication plan does not require a new paid run.
+- [x] Include an actual policy-validation rejection and revision, plus recorded
+  budget handling.
+  Both examples come from the selected conversation; no synthetic fixture is
+  presented as an observed event.
+- [x] Confirm that an existing run is suitable. No new paid run is needed for this
+  walkthrough; any future evidence gap is a separate decision.
 
 ### Completion criteria
 
