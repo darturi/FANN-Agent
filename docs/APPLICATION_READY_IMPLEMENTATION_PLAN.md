@@ -2,7 +2,7 @@
 
 Created: October 22, 2026
 
-Status: Documentation preparation only; release implementation remains pending
+Status: Portfolio release candidate prepared; hosted CI and publication checks in progress
 
 ## Objective
 
@@ -24,13 +24,14 @@ The intended reader path is:
 
 **README → agent architecture → annotated real run → runnable demo → research results.**
 
-The release steps below remain future work except for the documentation drafts
-identified in the current pass. This pass does not publish artifacts, launch
-experiments, or make model calls.
+The initial documentation passes are complete. The subsequent request to finish
+portfolio readiness authorizes source-install verification, CI, MIT licensing,
+author attribution, and publication of the reviewed snapshot. No paid model or
+research database execution is part of this release.
 
 ## Development boundaries
 
-### Current documentation-only pass
+### Completed documentation-only passes
 
 The initial pass authorized the first three Markdown files below. The subsequent
 real-run documentation request also authorizes the walkthrough and curated trace,
@@ -44,17 +45,18 @@ plus links and progress updates in those existing documents:
 | `docs/showcase/agent-run.md` | Annotate one existing provider-backed conversation |
 | `docs/showcase/agent-trace.json` | Store selected original fields and excerpts with source provenance as documentation |
 
-All other files remain outside this pass, including the root README, source code,
-configuration and prompt assets, dependencies and lockfiles, tests, CI workflows,
-licenses, experiment scripts, raw measurements, saved runs, verification records,
-and generated catalogs. Existing uncommitted work is preserved.
+Those initial passes left source, configuration, tests, and research artifacts
+unchanged. The release completion pass adds the root README, usage/contribution/
+results/demo/validation documents, MIT licensing and notices, and CI. The only
+runtime-source edit wraps an overlong controller condition; its syntax tree is
+unchanged. No tests, prompts, dependencies, policy semantics, or statistical
+criteria were modified.
 
-Verification for this pass consists of reading source and existing records,
-checking source hashes and copied-field/excerpt consistency, Markdown structure,
-local links, and the file-change scope. Do not run application commands,
-tests, builds, installers, model requests, database operations, experiment analysis,
-or catalog regeneration. Reading a test establishes what it covers; it does not
-establish that it passed on the current checkout.
+Verification now includes an isolated clone, locked dependency installation,
+existing tests, lint, SDK typing, distribution builds, and the scripted no-key
+lifecycle. Original research worktrees, `main`, and experiment records remain
+protected. Publication uses `docs/application-ready` and a named portfolio tag,
+with a clean companion-backend export rather than changing its research checkout.
 
 Current deliverables:
 
@@ -65,11 +67,14 @@ Current deliverables:
 - [x] Prepare an [annotated real agent run](showcase/agent-run.md) and
   [curated trace](showcase/agent-trace.json) using saved records only.
 
-Fresh-clone demo verification, a dedicated results page, individual contribution
-attribution, and public release checks remain pending.
-These drafts do not complete the broader publication steps below.
+The [results page](results.md), [contribution statement](CONTRIBUTIONS.md),
+[local demo](showcase/local-demo.md), and [validation record](showcase/validation.md)
+now track release completion. Hosted CI and public-link checks will be completed before
+the stable core portfolio tag is issued. The companion source is reviewed and
+tagged locally. Its public upload requires explicit approval following an
+automatic approval-review rejection; no backend source has been uploaded.
 
-### Boundaries for later release work
+### Release boundaries
 
 - Select a named release snapshot when publication work is authorized. Ongoing
   research can continue independently; selecting a snapshot does not freeze the
@@ -87,10 +92,10 @@ These drafts do not complete the broader publication steps below.
 - If installation or CI exposes a functional problem, record the issue and define
   a scoped fix. Do not broaden the publication pass into a refactor or change
   scientific criteria to obtain a passing check.
-- Branch changes, commits, tags, remote changes, licensing decisions, publication,
-  and external artifact exports are outside this documentation-authoring pass.
-  The curated trace listed above is a new documentation excerpt; original campaign
-  artifacts and verification records remain unchanged.
+- The author confirmed sole project-specific implementation and selected MIT.
+  Publish only the reviewed branch/tag and a clean companion-source snapshot.
+  Keep local and remote core `main`, active research branches, original backend
+  checkout, raw artifacts, and verification records unchanged.
 
 ### Description and claim boundaries
 
@@ -134,18 +139,18 @@ already present in the checkout.
 
 ### Tasks
 
-- [ ] Review the current feature branch and uncommitted work; select the completed
+- [x] Review the current feature branch and uncommitted work; select the completed
   pieces that belong in the application-ready snapshot.
-- [ ] Select a stable core commit and a compatible pgvector extension commit.
+- [x] Select a stable core commit and a compatible pgvector extension commit.
 - [ ] Keep the existing package separation and establish an accessible repository
   for the extension.
 - [ ] Document compatible versions, working repository links, and the exact clone
   directory names required by any source-install instructions.
-- [ ] Review the selected files and Git history for credentials, private data,
+- [x] Review the selected files and Git history for credentials, private data,
   logs, and material that should not be published.
 - [ ] Confirm which research material can be shared and document collaborators
   and upstream contributions.
-- [ ] Choose and add an appropriate project license for each published repository.
+- [x] Choose and add an appropriate project license for each published repository.
 
 ### Completion criteria
 
@@ -163,17 +168,17 @@ already present in the checkout.
 
 ### Tasks
 
-- [ ] Rewrite the README in this reading order: problem, why an agent is useful,
+- [x] Rewrite the README in this reading order: problem, why an agent is useful,
   agent capabilities, individual contributions and upstream components,
   architecture, real run, local demo, results, and limitations.
-- [ ] Explain which decisions the model makes and which constraints the controller
+- [x] Explain which decisions the model makes and which constraints the controller
   enforces.
-- [ ] Explain that policy research happens offline and that deployed stopping
+- [x] Explain that policy research happens offline and that deployed stopping
   policies do not require an online LLM call.
-- [ ] Credit mini-swe-agent for the base agent loop and interfaces.
-- [ ] Identify the orchestration, domain tools, persistence, controls, and
+- [x] Credit mini-swe-agent for the base agent loop and interfaces.
+- [x] Identify the orchestration, domain tools, persistence, controls, and
   evaluation work implemented in this project, with accurate attribution.
-- [ ] Document the capabilities below and link each to implementation code and
+- [x] Document the capabilities below and link each to implementation code and
   relevant existing tests.
 
 | Capability | What the explanation must demonstrate |
@@ -260,17 +265,17 @@ step 6.
 
 ### Tasks
 
-- [ ] Use the existing `examples/fake.yaml` simulation.
-- [ ] Document supported prerequisites and exact source-install commands without
+- [x] Use the existing `examples/fake.yaml` simulation.
+- [x] Document supported prerequisites and exact source-install commands without
   assuming unpublished packages or local release bundles are available.
-- [ ] Document the prepare, run, resume, evaluate, and report sequence.
-- [ ] Verify the instructions in a clean environment using the selected snapshot.
-- [ ] Include representative output showing experiment records and tool activity,
+- [x] Document the prepare, run, resume, evaluate, and report sequence.
+- [x] Verify the instructions in a clean environment using the selected snapshot.
+- [x] Include representative output showing experiment records and tool activity,
   interruption and resume, a frozen policy, subsequent evaluation, and the final
   report.
-- [ ] Clearly label the demonstration as a deterministic simulation and explain
+- [x] Clearly label the demonstration as a deterministic simulation and explain
   its relationship to the provider-backed run and real database integration.
-- [ ] Document cleanup and the files generated by the demo.
+- [x] Document cleanup and the files generated by the demo.
 
 ### Completion criteria
 
@@ -289,20 +294,20 @@ step 6.
 
 ### Tasks
 
-- [ ] State the research question, workload, baseline, acceptance criteria, and
+- [x] State the research question, workload, baseline, acceptance criteria, and
   current conclusion.
-- [ ] Include one concise results table with appropriate provenance and limits.
-- [ ] Include the held-out confirmation finding: a candidate achieved latency
+- [x] Include one concise results table with appropriate provenance and limits.
+- [x] Include the held-out confirmation finding: a candidate achieved latency
   savings but failed the recall requirement. Verify all numbers against the
   selected evidence before publication.
-- [ ] Explain what the evaluation revealed and how the system handled that result.
-- [ ] Distinguish implemented agent capabilities, database engineering checks,
+- [x] Explain what the evaluation revealed and how the system handled that result.
+- [x] Distinguish implemented agent capabilities, database engineering checks,
   exploratory findings, and confirmed performance outcomes.
-- [ ] Publish selected supporting summaries with working links; replace local
+- [x] Publish selected supporting summaries with working links; replace local
   workspace references in the main reader path.
-- [ ] State data-access requirements and the scope of hardware/environment
+- [x] State data-access requirements and the scope of hardware/environment
   qualification where relevant.
-- [ ] Preserve the full internal experiment history without making it a prerequisite
+- [x] Preserve the full internal experiment history without making it a prerequisite
   for understanding the public showcase.
 
 ### Completion criteria
@@ -323,14 +328,14 @@ step 6.
 
 ### Tasks
 
-- [ ] Add CI for ordinary tests, linting, the existing SDK typing check, package
+- [x] Add CI for ordinary tests, linting, the existing SDK typing check, package
   building, and the scripted demo.
-- [ ] Fix failures exposed by those checks and record the exact validation scope.
-- [ ] Keep environment-dependent database qualification documented separately
+- [x] Fix failures exposed by those checks and record the exact validation scope.
+- [x] Keep environment-dependent database qualification documented separately
   from checks that run in ordinary CI.
-- [ ] Confirm that CI and demo commands cannot initiate paid model calls or access
+- [x] Confirm that CI and demo commands cannot initiate paid model calls or access
   private databases.
-- [ ] Perform the final setup and demo review from a fresh clone.
+- [x] Perform the final setup and demo review from a fresh clone.
 - [ ] Review GitHub while signed out: repository access, extension access, source
   references, evidence links, setup instructions, attribution, and results.
 - [ ] Tag the reviewed snapshot and use a stable link for applications.
@@ -344,14 +349,14 @@ step 6.
 
 ## Definition of application-ready
 
-- [ ] The README gives a clear explanation of the problem, the agent, individual
+- [x] The README gives a clear explanation of the problem, the agent, individual
   contributions, and current outcome.
-- [ ] The agent-design document connects important engineering decisions to code
+- [x] The agent-design document connects important engineering decisions to code
   and tests.
-- [ ] An annotated provider-backed run demonstrates actual model-directed work.
-- [ ] A fresh clone can run the deterministic demonstration without private
+- [x] An annotated provider-backed run demonstrates actual model-directed work.
+- [x] A fresh clone can run the deterministic demonstration without private
   dependencies or paid calls.
-- [ ] The results page has accessible evidence and appropriately scoped claims.
+- [x] The results page has accessible evidence and appropriately scoped claims.
 - [ ] The selected source is accessible, attributed, licensed, and reviewed for
   private material.
 - [ ] CI, public links, and the tagged snapshot have been checked.

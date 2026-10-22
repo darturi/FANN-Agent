@@ -45,8 +45,10 @@ FANNAgent builds on mini-swe-agent's base loop and model interfaces, with LiteLL
 dispatch. Its project-specific engineering surrounds those components with
 domain tools, study orchestration, accounting, recovery, and evaluation. The core
 includes a synthetic backend and an extension API; the pgvector integration is a
-separate package. Individual contribution and collaborator attribution remain part
-of the public-release review.
+separate package. [Daniel Arturi implemented the project-specific system](../CONTRIBUTIONS.md),
+including the agent infrastructure, experimental tooling, and database integration.
+The contribution statement distinguishes that work from upstream components and
+model-generated analysis.
 
 ## A short reading path
 
@@ -60,11 +62,12 @@ of the public-release review.
    [provider accounting coverage](../../tests/test_model.py), and
    [checkpoint coverage](../../tests/test_checkpoint.py) for concrete behaviors the
    project checks.
-4. Read the recorded evidence below, keeping agent behavior, engineering checks,
-   and scientific acceptance distinct.
+4. Run the [local simulation](local-demo.md), then read the [research results](../results.md)
+   and [validation record](validation.md), keeping agent behavior, engineering
+   checks, and scientific acceptance distinct.
 
-These test links describe existing coverage. No tests or experiments were run to
-prepare this documentation.
+The validation record reports the release checks. No new research experiment or
+paid model run was performed for this showcase.
 
 ## Recorded behavior and research outcome
 
@@ -81,22 +84,23 @@ existing verification summaries. No campaign was executed or scientifically
 reanalyzed to prepare these pages. They do not establish a general optimization
 benefit or production readiness. The [full experiment index](../experiments/README.md)
 preserves broader history, including unsuccessful runs. Many underlying raw
-campaign artifacts live outside this repository, so its workspace links are not
-yet a standalone public evidence bundle.
+campaign artifacts live outside this repository. The curated trace and verification
+summaries are included; full campaign reproduction requires the external assets.
 
 ## Demonstration and publication status
 
 The core has a [scripted simulation example](../../examples/fake.yaml) and
-[existing simulation instructions](../../README.md#simulation). It demonstrates
+[verified simulation instructions](../../README.md#simulation). It demonstrates
 the workflow using predetermined actions and synthetic latency. The annotated
 run supplies recorded model-directed investigation. Database performance
 requires measured database evidence.
 
-The [real-run walkthrough](agent-run.md) is now available as a documentation
-excerpt with its scope and omissions stated. Fresh-clone verification of the
-demo, a dedicated results page, and public-access checks remain pending in the
-[application-ready implementation plan](../APPLICATION_READY_IMPLEMENTATION_PLAN.md).
-The current installation and development instructions remain unchanged.
+The [real-run walkthrough](agent-run.md) is available as a documentation excerpt
+with its scope and omissions stated. The [local demo](local-demo.md) has passed
+in an isolated source clone and from an installed wheel outside the checkout.
+The [results page](../results.md) links the existing evidence. Hosted checks and
+publication verification are recorded in [validation](validation.md); the
+[implementation plan](../APPLICATION_READY_IMPLEMENTATION_PLAN.md) tracks completion.
 
 Claims about budgets are scoped to the configured model API pricing, token bounds,
 ceiling, and allowance; infrastructure costs are separate. Execution controls

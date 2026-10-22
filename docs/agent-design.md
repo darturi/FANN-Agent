@@ -234,23 +234,24 @@ and [SDK coverage](../tests/test_extension_sdk.py).
 The repository demonstrates agent orchestration, domain-tool design, context and
 evidence management, cost accounting, interruption recovery, and experimental
 evaluation. Those are the engineering areas to explain in an application or
-interview. Individual authorship and collaborator credit should be finalized for
-the selected public snapshot; this document identifies component responsibilities
-without assigning every component to one person.
+interview. [Daniel Arturi implemented the project-specific system](CONTRIBUTIONS.md),
+including these mechanisms and the pgvector integration. The contribution
+statement credits the upstream loop, model interfaces, database projects, and
+research sources separately.
 
-## Evidence and next showcase work
+## Evidence and verification
 
 Source links explain implemented mechanisms. Test links identify checks written
-for those mechanisms; they do not report a new test run or establish scientific
-success. Existing campaign summaries are linked from the
-[showcase overview](showcase/README.md).
+for those mechanisms. The [validation record](showcase/validation.md) reports
+release test results, while the [results page](results.md) summarizes existing
+scientific findings. Engineering checks do not establish scientific success.
 
 The [annotated provider-backed run](showcase/agent-run.md) and
 [curated trace](showcase/agent-trace.json) now show an existing proposal-study
 conversation, including a rejected policy, a valid revision, and research exports.
 That archive used a specialized loop around the core model adapter and offline
 evaluator; it does not demonstrate every mechanism in this general source
-walkthrough. A freshly verified clone-to-demo path remains future work in the
-[application-ready plan](APPLICATION_READY_IMPLEMENTATION_PLAN.md). The existing
-scripted simulation demonstrates lifecycle behavior with synthetic measurements;
-it does not demonstrate model-directed discovery or database performance.
+walkthrough. The [verified local simulation](showcase/local-demo.md) demonstrates
+lifecycle behavior with synthetic measurements, including interruption, resume,
+evaluation, reporting, and cleanup. It does not demonstrate model-directed
+discovery or database performance.
