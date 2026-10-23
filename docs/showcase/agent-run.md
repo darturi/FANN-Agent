@@ -1,8 +1,9 @@
-# Annotated real agent run: investigate, revise, export
+# The agent at work: from analysis to measured stopping policies
 
-**One completed provider-backed conversation wrote its own analysis, encountered
-a host-rejected policy, revised it, and exported six research proposals.**
-It finished with an explicit statement that no policy was accepted.
+**One provider-backed conversation wrote its own analysis, revised a policy
+after host feedback, and exported six proposals. One of its policies later
+reduced measured mean query latency by 12.69% including activation and 13.54%
+on reuse on the training workload.** Mean Recall@10 changed from 99.00% to 98.90%.
 
 This walkthrough uses existing records from `pair-0-exploratory` in the
 `aggressive-policy-proposals-v2` study. The companion
@@ -11,7 +12,27 @@ assessments, the representative policy, and source hashes. No model request,
 database operation, fitting procedure, or scientific analysis was rerun to
 prepare these documents.
 
-[Showcase overview](README.md) · [Agent architecture](../agent-design.md)
+[Showcase overview](README.md) · [Agent architecture](../agent-design.md) ·
+[Measured policy performance](../results.md)
+
+## Agent design made visible
+
+The interface supplied typed policy syntax, tool transport, training evidence,
+and resource limits. The model chose the analyses, wrote the fitting code, and
+selected the feature thresholds. When a proposal exceeded the permitted depth,
+the host returned a structured error that the model used to revise it.
+
+This is the intended division of work: domain tools make the experiment
+accessible, model-written analysis drives the investigation, and host validation
+keeps the resulting artifacts executable and inspectable.
+
+The model's export `cons_S32_64_128_t002` was frozen with the other proposals,
+then measured in a separate database timing campaign. The unchanged policy also
+recorded 11.67% activation and 12.38% reuse latency reductions on the 180-case
+held-out workload, with mean recall changing from 99.50% to 98.94%. The
+[performance case study](../results.md) connects that later campaign to this
+conversation's exact artifact. The generation run itself used existing
+measurements; new database timings occurred in the subsequent stage.
 
 ## Run identity and scope
 
@@ -151,11 +172,11 @@ All six assessments reported zero unknown stops on this evidence, with 300 cases
 representing 100 vector groups. Repetitions and filter variants do not turn them
 into 300 independent vector groups.
 
-Work reduction is an offline estimate. Every assessment marked activation and
-reuse latency as `unmeasured`, with zero timing pairs. **None of these exports
-established final acceptance.** The model's local estimates and the host's
-assessments remain distinct records; this page does not recompute or reconcile
-their numerical differences.
+Work reduction is an offline estimate. At generation time, every assessment
+marked activation and reuse latency as `unmeasured`, with zero timing pairs.
+The [later timing study](../results.md) measured the frozen exports. The model's
+local estimates and the host's assessments remain distinct records; this page
+does not recompute or reconcile their numerical differences.
 
 ## Budget visibility and explicit completion
 

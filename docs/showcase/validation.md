@@ -78,3 +78,29 @@ Public package-registry or image publication is outside this portfolio snapshot.
 
 The selected source is published at the [`portfolio-v1` tag](https://github.com/darturi/FANN-Agent/tree/portfolio-v1).
 `main` and the active research worktree remain separate from publication work.
+
+## Portfolio narrative update — October 23, 2026
+
+The `docs/application-ready` narrative now foregrounds the author's experimental
+approach and agent design: architecture decisions, the stopping oracle,
+evaluation methodology, workload, and the connection from an agent export to
+measured database latency reductions. The original `portfolio-v1` tag and its
+release checks above describe the earlier frozen publication.
+
+Verification for this documentation update checked 133 local reading-path links,
+Markdown fences and JSON examples, ten original source-file hashes, both query
+inventory hashes, and the selected policy's lineage. The projected inventories
+contain 300 training and 180 held-out cases in 100 and 60 disjoint vector groups;
+all three filter variants of each group use the same vector. The original
+training corpus contains 2,397 stop labels and 19 qualified features.
+
+The results tables were formatted directly from the original verification JSON.
+Absolute timings, percentage reductions, recall values, per-filter reductions,
+and candidate-specific timing-pair counts were checked against those records.
+The original policy tree in the curated agent trace matches the frozen timing
+candidate's fields, and its policy hash matches both measurement stages.
+
+Runtime source, tests, dependency files, original verification records, and the
+curated agent trace are unchanged. No model call, database execution, fitting,
+or scientific reanalysis was performed. The runtime release suite was not rerun
+for this documentation-only revision.

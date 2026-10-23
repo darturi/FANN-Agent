@@ -10,8 +10,29 @@ spending, evidence access, execution, and policy acceptance under controller
 authority. This document follows those boundaries through the existing source.
 
 Start with the [showcase overview](showcase/README.md) for a shorter introduction.
-This is a source walkthrough prepared on October 22, 2026; linked tests describe
-existing coverage and were not executed for this documentation pass.
+The [recorded run](showcase/agent-run.md) and [measured policy case study](results.md)
+connect these design decisions to an agent-produced artifact and its database
+timings. Linked tests describe existing coverage; this documentation update does
+not execute the research workflow.
+
+## Design decisions and why I made them
+
+I designed the system around a model that can choose its own investigation,
+with explicit interfaces for the operations that make an experiment meaningful.
+
+| Decision | Problem it addresses | Implementation to inspect |
+|---|---|---|
+| Give the model analysis freedom and a bounded policy language | A fixed script would prescribe the investigation; unrestricted generated serving code would be difficult to validate and compare. | The model writes analysis in its workspace, then exports a typed, feature-restricted decision tree. [Policy API](../src/fannagent/api/policy.py) |
+| Put experimental operations behind host tools | Model-written commands need a reliable way to request measurements and receive actionable errors. | Schema checks, structured feedback, and artifact references in the [broker](../src/fannagent/broker.py). |
+| Keep evidence and execution state durable | Research spans many tool calls and can be interrupted after an expensive operation completes. | Content-hashed artifacts, SQLite run state, and retrievable [evaluation receipts](../src/fannagent/evaluation_jobs.py). |
+| Account for model requests before and after dispatch | A run needs to make spending decisions even when usage or a response is uncertain. | Request reservations, settlement, and conservative uncertain-charge handling in the [budget ledger](../src/fannagent/budget.py). |
+| Separate candidate generation from final assessment | Adaptive exploration and policy selection should not consume the evidence used to assess the frozen choice. | Study permissions, freeze identities, and host-owned [evaluation](../src/fannagent/study.py). |
+| Measure the whole policy path against native execution | Fewer search operations can be offset by observation, inference, and activation costs. | [Paired native timings and matched controls](showcase/evaluation.md), with recall scored alongside latency. |
+
+The [oracle](showcase/oracle.md) establishes a stopping reference from actual
+interventions. The [workload](showcase/workload.md) makes the learning problem
+and query split explicit. Together, these choices let me trace a result from a
+model-selected action through a validated artifact to a measured effect.
 
 ## Research and serving
 
