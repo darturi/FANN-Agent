@@ -12,7 +12,7 @@ LLM tools to analyze that tradeoff and propose stopping rules. A host controller
 enforces spending limits, validates tool requests, saves progress, and checks
 whether a proposed rule meets separate quality and latency requirements.
 
-Built by [Daniel Arturi (darturi)](https://github.com/darturi). I designed and
+Built by [Daniel Aarao Reis Arturi (darturi)](https://github.com/darturi). I designed and
 implemented the project-specific agent system, experimental tooling, and pgvector
 integration. FANNAgent builds on mini-swe-agent's base loop and model interfaces;
 [contributions and upstream credit](docs/CONTRIBUTIONS.md) identify those boundaries.

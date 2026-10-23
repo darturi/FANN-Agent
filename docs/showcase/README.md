@@ -45,7 +45,7 @@ FANNAgent builds on mini-swe-agent's base loop and model interfaces, with LiteLL
 dispatch. Its project-specific engineering surrounds those components with
 domain tools, study orchestration, accounting, recovery, and evaluation. The core
 includes a synthetic backend and an extension API; the pgvector integration is a
-separate package. [Daniel Arturi implemented the project-specific system](../CONTRIBUTIONS.md),
+separate package. [Daniel Aarao Reis Arturi implemented the project-specific system](../CONTRIBUTIONS.md),
 including the agent infrastructure, experimental tooling, and database integration.
 The contribution statement distinguishes that work from upstream components and
 model-generated analysis.

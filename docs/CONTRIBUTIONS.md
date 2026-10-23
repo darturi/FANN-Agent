@@ -1,6 +1,6 @@
 # Contributions and upstream credit
 
-Daniel Arturi ([darturi](https://github.com/darturi)) designed and implemented
+Daniel Aarao Reis Arturi ([darturi](https://github.com/darturi)) designed and implemented
 FANNAgent's project-specific code, experimental tooling, and pgvector integration.
 
 | Contribution | Code or evidence to inspect |
