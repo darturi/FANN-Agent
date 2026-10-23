@@ -6,9 +6,12 @@ required. The initial dependency installation needs network access.
 
 ## Source installation
 
-From a clone of the `portfolio-v1` snapshot, run:
+Install [uv](https://docs.astral.sh/uv/) first. It can provision Python 3.12.
+Clone the public `portfolio-v1` snapshot and run:
 
 ```sh
+git clone --branch portfolio-v1 --single-branch https://github.com/darturi/FANN-Agent.git
+cd FANN-Agent
 uv sync --frozen --python 3.12
 demo_dir="$(mktemp -d)"
 export MSWEA_GLOBAL_CONFIG_DIR="$demo_dir/mini-config"
@@ -52,6 +55,8 @@ Cleanup removes owned operational resources and retains state and the report.
 Generated files are under `$demo_dir`, including the mini-swe-agent configuration.
 The demo does not need `trials/`, other repositories, source databases, local
 installation bundles, or archived images.
+Source installation is the supported path; `fannagent` and `fannagent-pgvector`
+are not currently published on PyPI.
 
 ## Installed-wheel check
 

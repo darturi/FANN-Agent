@@ -2,7 +2,6 @@
 
 Daniel Arturi ([darturi](https://github.com/darturi)) designed and implemented
 FANNAgent's project-specific code, experimental tooling, and pgvector integration.
-This attribution was confirmed by the project author during portfolio preparation.
 
 | Contribution | Code or evidence to inspect |
 |---|---|

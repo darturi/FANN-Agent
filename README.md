@@ -75,14 +75,14 @@ evaluator.
 
 ## What I built
 
-| Area | Engineering demonstrated |
-|---|---|
-| Agent orchestration | Prepared-backend context, model/tool turns, recorded experiments, candidate selection, and explicit termination |
-| Domain tools | Typed requests, policy validation, bounded correction feedback, and evidence references |
-| Durable execution | Saved conversations, evaluation receipts, checkpoints, and recovery across interruptions |
-| Cost control | Per-attempt reservations, actual usage accounting, and conservative treatment of ambiguous charges |
-| Evaluation boundaries | Development/calibration/test separation, policy freeze, compatibility checks, and host-owned acceptance |
-| Database integration | A separately packaged pgvector backend with native observation/stopping, prepared copies, and application sessions |
+| Area | Engineering demonstrated | Code to inspect |
+|---|---|---|
+| Agent orchestration | Prepared-backend context, model/tool turns, recorded experiments, candidate selection, and explicit termination | [Controller](src/fannagent/controller.py) |
+| Domain tools | Typed requests, policy validation, bounded correction feedback, and evidence references | [Tool broker](src/fannagent/broker.py) |
+| Durable execution | Saved conversations, evaluation receipts, checkpoints, and recovery across interruptions | [Run store](src/fannagent/store.py), [recovery tests](tests/test_checkpoint.py) |
+| Cost control | Per-attempt reservations, actual usage accounting, and conservative treatment of ambiguous charges | [Model adapter](src/fannagent/model.py), [accounting tests](tests/test_model.py) |
+| Evaluation boundaries | Development/calibration/test separation, policy freeze, compatibility checks, and host-owned acceptance | [Study controls](src/fannagent/study.py) |
+| Database integration | A separately packaged pgvector backend with native observation/stopping, prepared copies, and application sessions | [Companion source](https://github.com/darturi/FANN-Agent-pgvector/tree/portfolio-v1) |
 
 Research happens outside live query serving. Provider-backed research can use a
 networked model API; an accepted policy executes without an LLM in the query path.
@@ -120,6 +120,9 @@ The verified first-run path uses the synthetic backend and a scripted model.
 It needs no API key, database, Docker daemon, GPU, or paid model call. Installation
 requires network access to obtain dependencies. Provide [uv](https://docs.astral.sh/uv/)
 and Python 3.12 or 3.13; uv can provision the requested Python runtime.
+The commands pin the published `portfolio-v1` snapshot so the example has a
+stable source and dependency lock. Install from source as shown here; the
+packages are not currently published on PyPI.
 
 ```sh
 git clone --branch portfolio-v1 --single-branch https://github.com/darturi/FANN-Agent.git

@@ -104,3 +104,23 @@ Runtime source, tests, dependency files, original verification records, and the
 curated agent trace are unchanged. No model call, database execution, fitting,
 or scientific reanalysis was performed. The runtime release suite was not rerun
 for this documentation-only revision.
+
+## Documentation and installation sync — October 23, 2026
+
+Selected documentation updates were copied from `main` at `894e59d` into
+`public-facing`: complete source-clone instructions in the local demo, a clear
+distinction between the public source installation and locally assembled bundles,
+direct source/test links in the engineering summary, and contribution wording.
+The public-facing narrative, research results, and evidence remain unchanged.
+
+Both installation guides and the contribution page match the source commit.
+The first-run shell blocks match `main` exactly. Verification resolved 166 local
+reading-path links, syntax-checked six shell blocks, parsed JSON examples, and
+checked Markdown fences and whitespace. Official PyPI package-record endpoints
+returned HTTP 404 for both `fannagent` and `fannagent-pgvector` on this date.
+
+All writes were restricted to five documentation files in the public-facing
+checkout. No command ran in the development checkout or experiment directories;
+no environment was installed or rebuilt. Runtime source, tests, dependencies,
+experiment files, recorded results, evidence, `main`, and the development branch
+were not changed. The runtime suite and database/model workflows were not rerun.
