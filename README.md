@@ -173,6 +173,6 @@ advanced workflows. Source installation is the supported portfolio path; public
 package-registry or container-image availability is not required by these commands.
 
 Licensed under [MIT](LICENSE), with [third-party notices](NOTICE.md).
-This portfolio narrative is maintained on `docs/application-ready`. The original
+This portfolio narrative is maintained on `public-facing`. The original
 verified simulation release is pinned at `portfolio-v1`, as used by the clone
 command above. Ongoing research uses separate branches and workspaces.

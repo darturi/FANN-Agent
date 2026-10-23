@@ -1,7 +1,7 @@
 # Portfolio snapshot validation
 
 Prepared October 22, 2026. The candidate retains the committed runtime and
-learning tools inherited by `docs/application-ready`. The only runtime-source
+learning tools inherited by the branch now named `public-facing`. The only runtime-source
 edit in the publication pass wraps one overlong controller condition; its parsed
 syntax tree matches the original. Prompts, policies, datasets, statistical gates,
 test implementations, and original research artifacts were not changed.
@@ -81,7 +81,7 @@ The selected source is published at the [`portfolio-v1` tag](https://github.com/
 
 ## Portfolio narrative update — October 23, 2026
 
-The `docs/application-ready` narrative now foregrounds the author's experimental
+The `public-facing` narrative now foregrounds the author's experimental
 approach and agent design: architecture decisions, the stopping oracle,
 evaluation methodology, workload, and the connection from an agent export to
 measured database latency reductions. The original `portfolio-v1` tag and its

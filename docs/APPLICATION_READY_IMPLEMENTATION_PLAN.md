@@ -55,7 +55,7 @@ criteria were modified.
 Verification now includes an isolated clone, locked dependency installation,
 existing tests, lint, SDK typing, distribution builds, and the scripted no-key
 lifecycle. Original research worktrees, `main`, and experiment records remain
-protected. Publication uses `docs/application-ready` and a named portfolio tag,
+protected. Publication uses `public-facing` and a named portfolio tag,
 with a clean companion-backend export rather than changing its research checkout.
 
 Current deliverables:
@@ -380,7 +380,8 @@ Published October 22, 2026:
   outside the published snapshot and were left untouched. No paid model or
   research database run was performed.
 
-This completion record was committed on `docs/application-ready` after publication.
+This completion record was committed after publication on the branch then named
+`docs/application-ready`, now `public-facing`.
 The stable tags retain the exact reviewed source; later documentation does not move them.
 
 ## Later work outside this minimum release
