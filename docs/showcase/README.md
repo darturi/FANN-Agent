@@ -1,7 +1,7 @@
 # FANNAgent: engineering an experimental research agent
 
 FANNAgent connects an LLM's investigation to a real vector-search experimental
-system. Daniel Arturi designed the project-specific agent infrastructure,
+system. Daniel Aarao Reis Arturi designed the project-specific agent infrastructure,
 tooling, evaluation workflow, and pgvector integration.
 
 The working question is concrete: **can the agent discover when search can stop

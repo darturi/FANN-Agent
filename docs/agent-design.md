@@ -255,7 +255,7 @@ and [SDK coverage](../tests/test_extension_sdk.py).
 The repository demonstrates agent orchestration, domain-tool design, context and
 evidence management, cost accounting, interruption recovery, and experimental
 evaluation. Those are the engineering areas to explain in an application or
-interview. [Daniel Arturi implemented the project-specific system](CONTRIBUTIONS.md),
+interview. [Daniel Aarao Reis Arturi implemented the project-specific system](CONTRIBUTIONS.md),
 including these mechanisms and the pgvector integration. The contribution
 statement credits the upstream loop, model interfaces, database projects, and
 research sources separately.

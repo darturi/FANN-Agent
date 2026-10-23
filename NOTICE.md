@@ -1,7 +1,7 @@
 # Third-party notices
 
 FANNAgent is distributed under the [MIT license](LICENSE). Project-specific
-implementation is by Daniel Arturi (darturi).
+implementation is by Daniel Aarao Reis Arturi (darturi).
 
 ## FANNBench shared primitives
 

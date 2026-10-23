@@ -3,7 +3,7 @@
 **An LLM-driven research agent that designs executable stopping policies for
 filtered vector search.**
 
-Built by [Daniel Arturi (darturi)](https://github.com/darturi). I designed the
+Built by [Daniel Aarao Reis Arturi (darturi)](https://github.com/darturi). I designed the
 agent architecture, domain tools, experimental workflow, and native pgvector
 integration to investigate a concrete systems question: **when can a database
 stop searching earlier, and what does that save in latency and cost in recall?**
