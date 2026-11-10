@@ -24,6 +24,51 @@ agent/.venv/bin/python -B agent/experiments/reviews-persistent-batch-v1/rb_local
 
 The screen checks 1,074 direct Light19 stops from the pinned pilot proofs and 4,695 stops per profile for static23 and progress34 from the pinned feature-data proof files. A stop without a matching actual proof is rejected. The seed remains a credited comparator. A passing offline screen is the prerequisite for freezing the candidate and finishing its native package review. A3, Torch, and all protected evaluation inputs remain outside this local work.
 
+## Read-only proposal feedback
+
+Run from the workspace root with the saved development artifacts in their original paths.
+
+```sh
+agent/.venv/bin/python -B agent/experiments/reviews-persistent-batch-v1/rb_feedback.py
+agent/.venv/bin/python -B agent/experiments/reviews-persistent-batch-v1/rb_feedback.py \
+  --inspect progress34 votes108 32
+agent/.venv/bin/python -B agent/experiments/reviews-persistent-batch-v1/rb_feedback.py \
+  --candidate /absolute/path/to/policy.json
+```
+
+The default output replays native640, the credited seed and the frozen prior revision.
+See the [baseline receipt](feedback-baseline.json). Inspect one profile, actual filter and
+checkpoint at a time to get the allowed runtime feature values for all 200 vectors
+in that filter. The separately labeled evaluator data include native and seed
+recall, seed work, same-profile measured stop outcomes and the original five
+vector-group folds. An unreached checkpoint and a reached checkpoint with a
+missing stop proof are distinct. Only runtime feature values can appear in a tree.
+
+Each `--candidate` accepts a complete `selective-policy.v1` composite in the
+same format as `rb_local.py`. The evaluator uses the frozen interpreter to select
+the first stop and the original tie-aware recall gates. A missing proof rejects
+the proposal even when traversal counters are available. A measured incomplete
+top 10 fails recall. The report includes failure examples by fold and filter,
+native bypass and paid-continue counts, and work comparisons with native and seed.
+Historical cost pairs report measured feature collection, policy evaluation and
+backend deltas for matching static23/progress34 stops and continues. Light19
+cost coverage, bypass overhead and candidate end-to-end timing are unavailable
+from those pairs. Work at the final saved checkpoint omits the continue tail.
+
+For a future separately authorized proposal episode, limit the whole episode to
+eight scored proposals with one final choice or abstention. The CLI bounds each
+batch to eight inputs. The provisional screen requires the original recall gates,
+at least 10% fewer observed layer-0 distance evaluations than seed, and positive
+savings in every existing fold. It requires complete matched warm cost pairs
+for the requests that use the policy and a favorable aggregate backend proxy
+versus native. Missing costs get an explicit unresolved result. The 10% work
+threshold is a screening choice with no conversion to latency. The folds are
+exposed development groups and support diagnostics. A proxy pass can inform
+selection of a single candidate for a same-run persistent-reader comparison with
+the original A/A controls. Report the complete request path and separately record
+connection setup, policy installation and reader lifetime. Independent confirmation
+has its own freeze and entitlement.
+
 ## Candidate package status
 
 The sealed archive contains the exact frozen proposal, original pilot runtime inputs needed for the study, the 60-session manifest, and compact development reference and trace expectations. The locally verified candidate replay retains 326 stops and the same recall as native in all three filters. The guest uses the existing full-graph restore and backend and requires read-only input mounts, a bound x86_64 job, four distinct physical CPUs, and a visible 32 GiB memory limit. It records final data and index checks, cleanup, and a locked raw return. The local return verifier checks that guest result as provisional until host and scheduler evidence are reconciled.
