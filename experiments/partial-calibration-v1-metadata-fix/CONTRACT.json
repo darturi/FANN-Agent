@@ -1,0 +1,268 @@
+{
+  "counts": {
+    "aa_interval_checks": 8,
+    "affinity_operations_max": 11200,
+    "diagnostic_bursts": 128,
+    "diagnostic_conditioning_searches": 256,
+    "diagnostic_discarded_warmups": 512,
+    "diagnostic_plan_packets": 192,
+    "diagnostic_retained_searches": 384,
+    "diagnostic_searches": 1152,
+    "formal_reader_priming_searches": 80,
+    "fresh_quality_searches": 600,
+    "half_epoch_interval_checks": 16,
+    "maximum_live_readers": 6,
+    "maximum_live_servers": 2,
+    "maximum_live_sql_connections": 8,
+    "observer_sql_max": 13500,
+    "other_observer_sql_max": 900,
+    "outer_search_envelope": 16802,
+    "plan_packets_total": 4200,
+    "plan_sql_max": 12600,
+    "primary_boundary_plan_packets": 3200,
+    "primary_bursts": 1600,
+    "primary_conditioning_searches": 3200,
+    "primary_discarded_warmups": 6400,
+    "primary_retained_searches": 4800,
+    "primary_searches": 14400,
+    "proc_file_reads_max": 44000,
+    "qualification_quality_plan_packets": 808,
+    "qualification_searches": 10,
+    "quality_stop_searches": 610,
+    "reader_admissions": 10,
+    "retained_stability_interval_checks": 32,
+    "searches_total": 16242,
+    "startup_sql_max": 1000,
+    "telemetry_bundles_diagnostic": 1792,
+    "telemetry_bundles_primary": 3200,
+    "telemetry_bundles_total_max": 5500,
+    "total_required_timing_intervals": 56,
+    "truth_helper_sql_max": 4040,
+    "unused_not_spendable": 560
+  },
+  "cpu_policy": {
+    "both_formal_readers_and_conditioner_same_cell_cpu": true,
+    "client": "C0",
+    "epoch0": {
+      "native640": "C1",
+      "partial640": "C2"
+    },
+    "epoch1": {
+      "native640": "C2",
+      "partial640": "C1"
+    },
+    "outside_allocation_forbidden": true,
+    "postmasters_admin_background": "C3",
+    "required_distinct_physical_cores": 4,
+    "selection": "Sort allowed CPU representatives by (socket,core,logical CPU); take first four distinct physical cores"
+  },
+  "criteria": {
+    "aa_absolute_ms": 0.1,
+    "aa_ratio": 1.02,
+    "adjacent_retained_repetitions_equivalence_required": true,
+    "all_56_timing_intervals_required": true,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261019,
+    "missing_required_rows_or_telemetry": "incomplete_or_failed_qualification",
+    "no_interim_gate_selection": true,
+    "per_half_epoch_required": true,
+    "pointwise_intervals_only": true,
+    "primary_physical_session_per_epoch": true,
+    "quality_floor": 0.95,
+    "quantile_method": "linear",
+    "recall_delta_lower_95_min": -0.0025,
+    "treatment_economics_evaluated_in_this_calibration": false,
+    "unchanged_future_economics": {
+      "both_block_gaps_negative": true,
+      "upper_gap_ms_max": -0.1,
+      "upper_log_ratio_max": "log(0.98)",
+      "upper_quantile": 0.99375
+    }
+  },
+  "design_document": "research/fannagent-partial-calibration-v1-design-2026-10-26.md",
+  "design_sha256": "dec43325d277d04b49c90f8f2adb634a4df1bec02c86bba992e3d7da57f2cec0",
+  "driver": {
+    "prepare_threshold": 5,
+    "prepared_max": 100,
+    "psycopg": "3.3.6"
+  },
+  "graphs": {
+    "native640": {
+      "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+    },
+    "partial640": {
+      "original": {
+        "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+      },
+      "partial": {
+        "270339": "b0300f40eb9917c158855d00fe0a8f36cb1c8aee958fb65b061e4db4d8606700"
+      }
+    }
+  },
+  "new_activity": {
+    "SSH_or_Torch_calls": 0,
+    "allocations": 0,
+    "bootstrap_replays": 0,
+    "code_edits": 0,
+    "experiments": 0,
+    "fits": 0,
+    "native_or_DB_queries": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "simulations": 0,
+    "tests": 0
+  },
+  "private_servers": {
+    "count": 2,
+    "graph_rebuilds_allowed": 0,
+    "max_connections_each": 16,
+    "network": "Unix sockets only; new isolated paths",
+    "shared_buffers_bytes_each": 134217728,
+    "source_clusters_read_only": true
+  },
+  "protocol": "partial-calibration.v1",
+  "qualification_query_ids": [
+    "reviews-bounded-v0161-votes108",
+    "reviews-bounded-v0303-votes108"
+  ],
+  "reader_additional_settings": {
+    "default_transaction_read_only": "on",
+    "statement_timeout": "30000"
+  },
+  "register": "NEXT-PARTIAL-CALIBRATION-01",
+  "resources": {
+    "allocations_max": 1,
+    "conservative_memory_bound_bytes": 15300820992,
+    "cpus": 4,
+    "evidence_bytes_max": 1073741824,
+    "home_bytes_required": 3221225472,
+    "home_inodes_required": 10000,
+    "host_envelope_seconds": 480,
+    "memory_gib": 32,
+    "stage_seconds": {
+      "conformance_quality": 2400,
+      "epoch0": 1800,
+      "epoch1": 1800,
+      "final_cleanup": 600,
+      "restore_identity": 1800
+    },
+    "telemetry_wall_seconds_max": 60,
+    "wall_seconds": 10800,
+    "work_deadline_seconds": 10200
+  },
+  "retained_source_work": "/scratch/dar579/torch-reviews/partial-ann-v1.tu6x964d/partial-21048213.3xxjxm27",
+  "role_environments": {
+    "torch_owner": {
+      "default_transaction_read_only": "off",
+      "jit": "on",
+      "jit_above_cost": "100000",
+      "jit_inline_above_cost": "500000",
+      "jit_optimize_above_cost": "500000",
+      "max_parallel_workers": "8",
+      "max_parallel_workers_per_gather": "2",
+      "max_worker_processes": "8",
+      "min_parallel_index_scan_size": "64",
+      "min_parallel_table_scan_size": "1024",
+      "parallel_setup_cost": "1000",
+      "parallel_tuple_cost": "0.1",
+      "plan_cache_mode": "auto",
+      "shared_buffers": "16384",
+      "track_io_timing": "off",
+      "work_mem": "4096"
+    },
+    "torch_reader": {
+      "jit": "on",
+      "max_parallel_workers_per_gather": "2",
+      "plan_cache_mode": "auto",
+      "work_mem": "16384"
+    }
+  },
+  "runtime": {
+    "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+    "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+    "registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+    "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+    "synthetic_mock": false
+  },
+  "schedule_sha256": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+  "scope": "Instrumented within-cell A/A calibration only; no treatment speed, acceptance or adoption verdict",
+  "settings": {
+    "effective_cache_size": "524288",
+    "enable_bitmapscan": "on",
+    "enable_indexonlyscan": "on",
+    "enable_indexscan": "on",
+    "enable_seqscan": "off",
+    "hnsw.ef_search": "640",
+    "hnsw.iterative_scan": "off",
+    "hnsw.max_scan_tuples": "20000",
+    "hnsw.scan_mem_multiplier": "1",
+    "jit": "on",
+    "max_parallel_workers_per_gather": "2",
+    "random_page_cost": "4",
+    "seq_page_cost": "1",
+    "work_mem": "16384"
+  },
+  "source_campaign": "reviews-partial-ann-v1-20261027T005510Z.q6rgxprs",
+  "source_files_sha256": {
+    "agent/docs/verification/b2e-replica-session-audit-v1.json": "afc0eacd096ea02386e20dbbafdb17d93408183bfeb51f976945a96c826cd97f",
+    "agent/experiments/partial-ann-v1-settings-fix/pa_settings.py": "8bb5e3ac34616e85d27b18512aa72b24ff9330968c2b7ed0ba5262855ac27038",
+    "research/fannagent-b2e-replica-session-audit-2026-10-26.md": "7d9c53e5c0c8c0d9d6fc5a70a6f362c2050d60e8887fb2fc9310e9430bf362fd",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/build.json": "7cdcf81e2fec1796bce6487cccd8aa363b28333f0f03ac2a6fe7c492cd848626",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/cleanup.json": "e93350d2ae06a0445c6afb160478fc8be8165e0b4ebe302aa92dd5dba5290746",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/final-integrity.json": "e1684ca5dcf7d8108d98228192bfe874e75768bf5f3d0938264bcd0329e13d55",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/host-exit.json": "e563da088a37fd9e5ab74b2974e2068fb54fdcf74193ec845462db4c5025bc3b",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/job-exit.json": "15816cb824a0a479d25c75c3f397059d428427b19a6dc5435ef6ae9e7c247e57",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/memory-preflight.json": "367c4e75adc1c6333f42e1cb791b9fc836a3e5d29d6e643f16e19045c70f238c",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/qualification.json": "619fb10659e7f5d6fe3a26775b05fa30d00b393782911206c96f578d11305777",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/quality.json": "ef0dab055e3d7ad8de0a9d25cb134d075d3b13979668e8c81785ced4610cd746",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/references.jsonl": "2b98288882169291ef4f7858c42bddd9e222752d13eb876ba042904e57a6791d",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/runtime-identity.json": "5abd4f0965aafaf18039d93418a80257795acaff692ed3fa97668979844128cc",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/run/targets.json": "c55c0b92c9efa59c6e009159ff4468304c85d54d24ff1878f8ad7c36a7a97485",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/baseline-results.json": "9980086c1a8bfa6585476454754765ab1d452c95a4a5586ed46ec3e9aa017dd9",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/eligibility.json": "eed0dc123868ee61c2ffbadbb066cd36db9e813ce8a7829ed18658f04b6b44d2",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/frozen/experiment.json": "e05b150eb74b44685bd66cb1e51e360803abda5e0c473b8095579acfae14f99b",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/frozen/manifest.json": "082b167507e25009bdb25ea613950cd434ef38608fbcbc6194af19c363d0f6dc",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/frozen/source-index.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/manifest.json": "c77efca4cbf297092a73c3921948209a1762b95a328ba1411154bea1ab4f89b4",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/origin-settings.json": "904a7b7042337257a38a9edd7796caa83b85e9f59af82ebd8d5ed5fee875ef8d",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/queries.jsonl": "394647462a3c7119e8759d8ba10490b2313b05b04dd7d45b6d73b853246e5547"
+  },
+  "source_job": "21048213_0",
+  "status": "design_frozen_only_runtime_prerequisites_pending",
+  "targets": {
+    "native640": {
+      "index": {
+        "oid": 264013,
+        "relname": "reviews_hnsw"
+      },
+      "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484"
+    },
+    "partial640": {
+      "index": {
+        "oid": 270339,
+        "relname": "reviews_hnsw_votes108_v1"
+      },
+      "index_identity": "6ee32f41235ef0a18143cc5ed37e169265fe3757211ef7df6480c7217f382896"
+    }
+  },
+  "telemetry": {
+    "continuous_sampling": false,
+    "diagnostic": "backend+client before/after each of seven on-reader searches per burst in both modes; conditioning calls have standard timers only",
+    "optional_fixed_capability": [
+      "/proc/PID/schedstat CPU/runqueue counters with enabled-state semantics",
+      "/proc/PID/numa_maps at epoch boundaries",
+      "readable frequency/governor metadata at epoch boundaries"
+    ],
+    "primary": "backend+client before/after whole seven-search on-reader burst; no proc/SQL observer I/O between searches",
+    "query_gucs_unchanged": true,
+    "required": [
+      "PID/starttime/server/namespace identity",
+      "singleton CPU affinity readback",
+      "/proc/PID/stat CPU ticks, processor, faults, starttime",
+      "/proc/PID/status context switches and CPU/memory allowed sets",
+      "/proc/PID/io read_bytes/write_bytes",
+      "timestamped sample duration and capability mask"
+    ]
+  }
+}

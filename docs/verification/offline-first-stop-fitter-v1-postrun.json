@@ -1,0 +1,273 @@
+{
+  "ab_comparison": {
+    "complete_pairs": 0,
+    "selection_effect_established": false,
+    "status": "inconclusive"
+  },
+  "all_source_inputs_preserved": true,
+  "audit_log_sha256": "0c7702e38901e60034eb25fbbebe1a1e23683847a17115142b14252caa3394cf",
+  "automated_tests_passed": 16,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "canonical_acceptance_established": false,
+  "comparison_methods": [
+    "original_cart",
+    "whole_query_first_stop_beam"
+  ],
+  "conditions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "confirmation_queries": 0,
+  "date": "2026-10-22",
+  "deployable_policy_selected": false,
+  "design_lock_sha256": "d5d4679f4ca7f6b6823ffc9174a8ce8066606bd0d43daa9c1396c92e9d34d12e",
+  "development_recall_margin": 0.0025,
+  "final_latency_gate": "unmeasured",
+  "final_recall_criteria_unchanged": true,
+  "final_recall_tolerance": 0.005,
+  "fresh_independent_confirmation_required": true,
+  "independent_learning_vectors": 100,
+  "inner_folds": 4,
+  "limitations": [
+    "All inputs are previously examined learning data; this is adaptive development.",
+    "Outer folds do not remove prior study/design adaptation or establish independent confirmation.",
+    "Fixed-stop timing proxies do not measure new policy collection, preparation or interpretation costs.",
+    "Bootstrap conditions on fitted OOF decisions; training uncertainty is not independently resampled.",
+    "Finite beam search is not an optimum or an information-theoretic feature ceiling.",
+    "Fold-specific policies are not a globally fitted deployment artifact. Fresh independent confirmation required."
+  ],
+  "minimum_native_recall_per_filter": 0.95,
+  "new_actual_stop_measurements": 0,
+  "new_backend_calls": 0,
+  "new_conventional_fits": 320,
+  "new_model_spend_usd": "0",
+  "original_cart_fit_lock_exactly_reproduced": true,
+  "original_cart_fits_reproduced": 320,
+  "original_core_sources_verified": 45,
+  "original_input_archive_sha256": "d26318ddf306109fc885711a461b512c6f6c5ed55c1f694f160f57737af8a521",
+  "original_raw_files_verified": 63,
+  "original_sealed_package_manifest_sha256": "6a76b56b91aa138a28c48d5b4868742766de843b4038d034d4f8304b84eacc80",
+  "out_of_fold_rows_reproduced": 2400,
+  "out_of_fold_stopped_cases_per_condition": {
+    "cart": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0
+    },
+    "first_stop_beam": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0
+    }
+  },
+  "outer_folds": 5,
+  "output_directory": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022",
+  "output_files_sha256": {
+    "baseline-reproduction.json": "24131595a12a0fd4e1de616aec63b695a1e04f8a7a2c6e116d811c19bae98d5e",
+    "comparison.json": "2fcbf99c821811bd669987a5e5d1977ba20f7664c331c1356674d6f44cc030ac",
+    "design-lock.json": "d5d4679f4ca7f6b6823ffc9174a8ce8066606bd0d43daa9c1396c92e9d34d12e",
+    "first-stop-fit-lock.json": "49f751493bd470c55cf867a8cce2e4b2fc16a50ff11ee1222eae513d02a1b4d5",
+    "folds/A-0.json": "30cb806032b6835a8fb72b7850b26d61b8b8ffbe76bef2fdb0781d45f7fff92f",
+    "folds/A-1.json": "341698f55a34e0e99c1a9055e9402032099326da3f9fc1eef77300fe9182769f",
+    "folds/A-2.json": "bb980a431b123b5c3c30848ac2f693a42fa9246dbcb5b79fd5bd0b15f3008404",
+    "folds/A-3.json": "88b19a04ffd0f0f6d22da211de0cd6fe43026f36788686b6d0378d6c44957931",
+    "folds/A-4.json": "b02906e51898817ebe298fc76064e5fd772c5f5305cd489aeaa9131dd921b6ea",
+    "folds/B-0.json": "9a1e766529cb5a3b5a4fd23bb9f38979c8d2741dc25de55b8c3283baaf62eb90",
+    "folds/B-1.json": "8c14518bfadcf6107543d250c85bd71aa447c72d237a89d217d2423641c9eff2",
+    "folds/B-2.json": "d5277f85cac4a29ddf8b1b5659a454ec8aee6c12440505e65439c44122addad3",
+    "folds/B-3.json": "00ff1e24548475dcf5bdeb4473075da9092e6ebe02fcb019ae68a3977198bc2a",
+    "folds/B-4.json": "776cc970ad6dc3d6f41dee91ff795fb472c6698661de0b72a4e36330ecbb754f",
+    "folds/C-0.json": "d197b2f6f7eec511a7a7958737e4a361993214584fd0c8a176f70e154ffcc97d",
+    "folds/C-1.json": "4bb2841d9753665298211c14ec20385a5b9d46142a070c629ecefe09e9db4c38",
+    "folds/C-2.json": "786b310721727c4bf9ff0e784d000b043bb16d33c1f4567f37233abe7197201d",
+    "folds/C-3.json": "cc1308c14565b2e11c62a4a5764783ac001c084dbf7cdd0ec586cbd61d018a06",
+    "folds/C-4.json": "bbc83dbcd24a181aaea58cc249e8225219c1b169d0e78588a8bbddf80fb405b5",
+    "folds/D-0.json": "d52b9e237bcf7be69166f40b1fc8798fb2cb1b581b54551379351bfcb4a1e674",
+    "folds/D-1.json": "5628d5e38fa27e8020f00aebf8b544539bc5741a86def2cffa9d9cd9126dac96",
+    "folds/D-2.json": "c4a998402cbd6bf56f60eb1882c15cd46f46dc38e5d9a06c51e64de2288e496c",
+    "folds/D-3.json": "8df8b18e6c425216f3239ba09f56304ff999c5c816485fbd5db04dab60389143",
+    "folds/D-4.json": "adaecc8f6022e03f97934ad4fed1caa078ac026c099654cdb6137883edb811f6",
+    "frozen-source/README.md": "10d773d674207da35d88dc73839799f1897f6c97cabca9ba52859c6929dbe01a",
+    "frozen-source/compare.py": "4ee4da1fdc5e96534d242069250fa26d4dd7f3a5acaf9fd795b7364d784c8060",
+    "frozen-source/first_stop.py": "3de88fdfca97c9c1fa6cdd806f38d5ef99f7e058b84bd9cc2c88e3f85fe5478d",
+    "frozen-source/input-pins.json": "c67ccdd3980d54bec3be778e29c6b014eb328f9604bf0a901c4c54053e60e5e4",
+    "frozen-source/offline_common.py": "dcce9fa2991c1ed1e938870d0f26cafc89d4bd0020b32c65343fbb493e2abe5c",
+    "frozen-source/test_comparison.py": "7d5bfffba6d1da6a4726821ea1e35ff0d12d8c6c5b902704325bf601250b0808",
+    "interpretation.txt": "3ec0dcd2a13a780fe79b62c1ebf1ba5279532a58ebbc961c23ff1c095e6d7bae",
+    "out-of-fold-replay.json": "5850ef1ccec5880d937b7de5590b254f122d7e19dd38e7a89d33bd4e0e3e28ae",
+    "postrun-audit.json": "0c7702e38901e60034eb25fbbebe1a1e23683847a17115142b14252caa3394cf",
+    "report.txt": "6f808a56d73eedc7b11f41be57b46cf47055d109b9c2fbe81cc7f3e46a12ac2b",
+    "selection-diagnostics.json": "9a62216e35a122b26a15e360ad4c17f5611867d9ba9686ca84406c6024bbc7c8",
+    "training-diagnostics.json": "b2cb9d33ee678a9e7b644ae982d01b83ab588ca3861690622deba46cb524b88f",
+    "validation/check_results.py": "bb59eb2d7d3ad7033d5a1b9e18d8be1cd43f73ea0891e007bf5c6dc88ea28349",
+    "validation/unit-tests.log": "6cf519c7b69342946d459cc2e6dffef0d432470d1d79775bb83542fe45699326",
+    "verification.json": "0f3214f7b67e8272695eae56301922d868f90452ae17588471a56722d2e65e7f"
+  },
+  "postrun_reselection_or_tuning": false,
+  "provider_calls": 0,
+  "query_filter_cases_per_procedure": 300,
+  "results_archive": {
+    "bytes": 726372,
+    "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022.tar.gz",
+    "sha256": "62b666772fa4e8cc00438548c01fc8a00c0029074c52949ccb609a0c7535ca5f",
+    "verified_files": 39
+  },
+  "saved_new_policies_audited": 320,
+  "selected_stopping_policy_folds": {
+    "cart": 0,
+    "first_stop_beam": 0
+  },
+  "selection_diagnostics": {
+    "counts": {
+      "cart": {
+        "development_recall_pass": 0,
+        "diagnostic_final_tolerance_and_positive_proxy": 2,
+        "diagnostic_final_tolerance_recall_pass": 4,
+        "inner_assessments": 80,
+        "positive_worst_regime_proxy": 51,
+        "votes108_development_recall_fail": 80
+      },
+      "first_stop_beam": {
+        "development_recall_pass": 0,
+        "diagnostic_final_tolerance_and_positive_proxy": 2,
+        "diagnostic_final_tolerance_recall_pass": 5,
+        "inner_assessments": 80,
+        "positive_worst_regime_proxy": 63,
+        "votes108_development_recall_fail": 80
+      }
+    },
+    "diagnostic_note": "Final-tolerance counts are postrun descriptions only; selection was not changed."
+  },
+  "source_archive": {
+    "bytes": 19935,
+    "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022-source.tar.gz",
+    "sha256": "9b3303934da17396b24bb373c8b96d71694b316a36bf531a88887e5b2d3f7cb4",
+    "verified_files": 6
+  },
+  "source_directory": "/Users/danielarturi/Developer/JinyangLiWork/agent/experiments/offline-first-stop-fitter-v1",
+  "source_files_sha256": {
+    "README.md": "10d773d674207da35d88dc73839799f1897f6c97cabca9ba52859c6929dbe01a",
+    "compare.py": "4ee4da1fdc5e96534d242069250fa26d4dd7f3a5acaf9fd795b7364d784c8060",
+    "first_stop.py": "3de88fdfca97c9c1fa6cdd806f38d5ef99f7e058b84bd9cc2c88e3f85fe5478d",
+    "input-pins.json": "c67ccdd3980d54bec3be778e29c6b014eb328f9604bf0a901c4c54053e60e5e4",
+    "offline_common.py": "dcce9fa2991c1ed1e938870d0f26cafc89d4bd0020b32c65343fbb493e2abe5c",
+    "test_comparison.py": "7d5bfffba6d1da6a4726821ea1e35ff0d12d8c6c5b902704325bf601250b0808"
+  },
+  "status": "implemented_executed_and_audited_no_selected_stopping_policy",
+  "stdout_log_sha256": "a6c8255dee2624824b12618b6cebd85a937cf4d20c86ae40d5a94eb285812f2e",
+  "synthetic_tests_log_sha256": "6cf519c7b69342946d459cc2e6dffef0d432470d1d79775bb83542fe45699326",
+  "torch_submissions": 0,
+  "training_candidate_scores_computed": 2922482,
+  "training_diagnostics": {
+    "by_condition_and_risk": {
+      "A/1280.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 60,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 20
+      },
+      "A/20.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 98,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      },
+      "A/320.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 78,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 12
+      },
+      "A/80.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 90,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      },
+      "B/1280.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 56,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 20
+      },
+      "B/20.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 75,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      },
+      "B/320.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 67,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 10
+      },
+      "B/80.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 68,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      },
+      "C/1280.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 60,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 20
+      },
+      "C/20.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 100,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      },
+      "C/320.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 74,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 19
+      },
+      "C/80.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 95,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      },
+      "D/1280.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 58,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 20
+      },
+      "D/20.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 76,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      },
+      "D/320.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 65,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 15
+      },
+      "D/80.0": {
+        "any_training_stop": 20,
+        "decision_nodes_total": 65,
+        "fit_policies": 20,
+        "zero_training_recall_loss": 0
+      }
+    },
+    "counts": {
+      "inner_fit_policies": 320,
+      "training_policies_with_any_stop": 320,
+      "zero_observed_training_recall_loss": 136
+    },
+    "scope": "Descriptive training fit diagnostic; no refits or selection changes"
+  },
+  "training_first_stop_cases_and_objectives_audited": 57600
+}

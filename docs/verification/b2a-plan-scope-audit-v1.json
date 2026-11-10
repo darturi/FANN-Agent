@@ -1,0 +1,157 @@
+{
+  "B1a_original_audit": "complete; preserved unchanged",
+  "B1b2_aggregate": "closed_negative_quality",
+  "B1b_aggregate": "measurement_inconclusive",
+  "B1c": "deferred",
+  "M1_M2_M3_and_canonical_acceptance_established": false,
+  "activity": {
+    "code_changes": 0,
+    "existing_source_files_inventoried": 349,
+    "fits": 0,
+    "immutable_input_files": 907,
+    "native_db_torch_provider_calls": 0,
+    "new_experiments": 0,
+    "new_vector_or_protected_query_value_access": 0,
+    "policy_simulations": 0,
+    "tests": 0
+  },
+  "adopted_execution": "original retained",
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "dd4bc55fbe240f844cd6db1ee94c580f7aebb6078a14de23cf34d8e878a7878c",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25.md": "33286593cc9d3e4ff66c43e091a0fbfd22a8869962d94c7ab397450f813245e9",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25/audit.json": "c8a7ceecbcafe49ce1e568c263bb310e0b58769cb0fa1e1a87447039c1934fae",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25/documentation-checks.json": "e44ac6022e871a0d8cf5dd23c60354de33c74aa7826eb71617429fa1e4b85c3f",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25/input-and-source-inventory.json": "fa2dacfc51a69603331c00c9f9a4237bba5e1dcd9e0f61b8f4c5f9d68634fcd4",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "5e1f0abcde822ac0e43498399b5f17e121d3c6cff7947c5f6d144e6c931d989f"
+  },
+  "changed_existing_documents": {
+    "agent/docs/experiments/README.md": {
+      "after_sha256": "dd4bc55fbe240f844cd6db1ee94c580f7aebb6078a14de23cf34d8e878a7878c",
+      "before_sha256": "72650527f6f8b285f4c479a25ad4ce17f66a2b8249f55dea9ffbdb4c9482aca7"
+    },
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": {
+      "after_sha256": "5e1f0abcde822ac0e43498399b5f17e121d3c6cff7947c5f6d144e6c931d989f",
+      "before_sha256": "ac594eec48e547a281707d50513d62b7d745530925e7f978015110f628bd87fa"
+    }
+  },
+  "completed_at_utc": "2026-10-26T00:05:50.079912+00:00",
+  "findings_artifact": "research/fannagent-b2a-plan-scope-audit-2026-10-25/audit.json",
+  "gate": {
+    "GB2a": "pass_scoped_source_feasibility",
+    "decision": "GO_new_exact_topk_design_only",
+    "implementation_or_measurement_performed": false,
+    "index_rebuild_authorized": false,
+    "performance_qualification": false,
+    "router_fitting_allowed": false
+  },
+  "id": "NEXT-PLAN-SCOPE-01",
+  "new_documents": [
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25/audit.json",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25/input-and-source-inventory.json",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25/documentation-checks.json"
+  ],
+  "next_proposal": {
+    "budget_assigned": false,
+    "do_not_bundle": [
+      "new scalar/partial/partitioned indexes",
+      "JIT/parallel/work_mem tuning",
+      "new validators/direct-native transport",
+      "planner-cost fitting",
+      "router fitting",
+      "protected query samples",
+      "post-hoc subset rescue",
+      "extra effort values"
+    ],
+    "id": "NEXT-EXACT-TOPK-01",
+    "initial_intervention": "Same native cosine/top10 statement; owned exact reader effective settings seqscan on, indexscan/indexonlyscan/bitmapscan off. Preserve all other settings, vector formatting, truth generator, data/module/graph.",
+    "phase": "B2b",
+    "proposed_resource_ceiling_only": {
+      "allocations": 1,
+      "backend_search_attempts_maximum": 50000,
+      "cases": 600,
+      "confirmation_queries": 0,
+      "cpus": 4,
+      "exposed_vectors": 200,
+      "fits": 0,
+      "memory_gib": 32,
+      "new_vectors": 0,
+      "provider_calls": 0,
+      "wall_seconds": 7200,
+      "work_deadline_seconds": 6600
+    },
+    "question": "Can fixed exact top10 execution on the current relation preserve exact semantics and beat unchanged native640 in any predeclared predicate context after full costs?",
+    "scope_to_freeze": "Primary full-outer warm persistent-reader frontier diagnostic; startup/restore/admission/first-use/cleanup separate. Native640 and exact identical-path A/A replicas; two temporal blocks in one allocation. No activation/adoption inference. Exact schedule/call counts, equivalence/nonregression and context-benefit gates frozen before implementation.",
+    "status": "design_recommended_not_frozen_or_implemented",
+    "stop_rules": [
+      "Native/semantic/plan/integrity failure: close failed qualification; do not treat as scientific quality-negative or silently retry.",
+      "Complete valid output failing frozen quality: negative close before timing.",
+      "Insufficient A/A precision: inconclusive, no correction/additional block.",
+      "No qualified context economics or resource cap: finite closure; no automatic revision."
+    ],
+    "user_commands_needed_now": false
+  },
+  "phase": "B2a",
+  "preservation": {
+    "all_hashes_match_before_and_after": true,
+    "existing_code_source_files": 349,
+    "frozen_contracts_sources_packages_returns_receipts_untouched": true,
+    "immutable_input_evidence_source_files": 907,
+    "preexisting_user_proposal_edit_preserved": true,
+    "previous_B1b2_888_inventory_and_postrun_artifacts_match": true
+  },
+  "primary_sources": [
+    {
+      "id": "S21",
+      "role": "ACORN-1 construction and query-neighbor expansion differ from current pgvector; no drop-in guarantee",
+      "title": "ACORN v1, Section5.3",
+      "url": "https://arxiv.org/html/2403.04871v1#S5.SS3"
+    },
+    {
+      "id": "S26",
+      "role": "Supported filtering alternatives and completeness-oriented iterative resumption; no local performance inference",
+      "title": "pgvector0.8.6 filtering and iterative scans",
+      "url": "https://github.com/pgvector/pgvector/blob/v0.8.6/README.md"
+    },
+    {
+      "id": "S33",
+      "role": "Plan cost units and estimated versus actual behavior",
+      "title": "PostgreSQL17 Using EXPLAIN",
+      "url": "https://www.postgresql.org/docs/17/using-explain.html"
+    },
+    {
+      "id": "S34",
+      "role": "Planner settings are controls, not proof of actual plan; prepared-plan modes",
+      "title": "PostgreSQL17 Query Planning",
+      "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+    },
+    {
+      "id": "S35",
+      "role": "Planning-time predicate implication; generic parameter hazards",
+      "title": "PostgreSQL17 Partial Indexes",
+      "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+    },
+    {
+      "id": "S36",
+      "role": "Bitmap combination loses ordering; not a free sorted HNSW/predicate intersection",
+      "title": "PostgreSQL17 Combining Multiple Indexes",
+      "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+    },
+    {
+      "id": "S37",
+      "role": "Custom/generic plan distinction; actual cache behavior must be qualified",
+      "title": "PostgreSQL17 PREPARE",
+      "url": "https://www.postgresql.org/docs/17/sql-prepare.html"
+    },
+    {
+      "id": "S38",
+      "role": "LIMIT bounds returned results but nonmatching ordered scans still process candidate rows",
+      "title": "PostgreSQL17 Indexes and ORDER BY",
+      "url": "https://www.postgresql.org/docs/17/indexes-ordering.html"
+    }
+  ],
+  "prior_verdicts_preserved": true,
+  "status": "complete",
+  "user_phase_name_reconciliation": "User said B1a, already complete; explicitly stated assumption to handle next B2a read-only audit; original B1a unchanged.",
+  "version": "b2a-plan-scope-audit-v1.v1"
+}

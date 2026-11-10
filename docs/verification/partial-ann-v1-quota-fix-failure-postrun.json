@@ -1,0 +1,89 @@
+{
+  "activity": {
+    "new_database_calls": 0,
+    "new_fits": 0,
+    "new_index_builds": 0,
+    "new_native_experiments": 0,
+    "new_provider_calls": 0,
+    "new_torch_calls": 0,
+    "protected_queries": 0
+  },
+  "admin_environment": {
+    "default_transaction_read_only": "off",
+    "jit": "on",
+    "jit_above_cost": "100000",
+    "jit_inline_above_cost": "500000",
+    "jit_optimize_above_cost": "500000",
+    "max_parallel_workers": "8",
+    "max_parallel_workers_per_gather": "2",
+    "max_worker_processes": "8",
+    "min_parallel_index_scan_size": "64",
+    "min_parallel_table_scan_size": "1024",
+    "parallel_setup_cost": "1000",
+    "parallel_tuple_cost": "0.1",
+    "plan_cache_mode": "auto",
+    "shared_buffers": "16384",
+    "track_io_timing": "off",
+    "work_mem": "4096"
+  },
+  "archive_bytes": 163151,
+  "archive_members": 21,
+  "archive_sha256": "60ae88ccf64c9f23e15af96d304c1b63f326f8ee52f01a2374ac02a289a20a82",
+  "artifacts_sha256": {
+    "trials/torch-reviews-partial-ann-v1-quota-fix/failure-review-2026-10-26/analysis.json": "c1298290b6662666ee9b4167557efa25c223f09a2e3effb937e596c3f7ec097f",
+    "trials/torch-reviews-partial-ann-v1-quota-fix/failure-review-2026-10-26/verify_failed.py": "724b536fb1cf553a51a33de2cf465108f57bf5e102b0abcdbb261b8b8c4451da"
+  },
+  "backend_searches": 0,
+  "campaign": "reviews-partial-ann-v1-20261027T000432Z.9haq3pyt",
+  "cleanup_and_shutdown_log_verified": true,
+  "exact_guard_mismatches": {
+    "work_mem": {
+      "actual": "4096",
+      "expected": "16384"
+    }
+  },
+  "final_integrity_verified": false,
+  "incomplete_lock_files_verified": 8,
+  "job_id": "21043219",
+  "next": "Prepare separately named settings-scope correction under frozen design; preserve original spent allowance",
+  "original_allowance_consumed": true,
+  "original_guard_failure_reproduced": true,
+  "package_manifest_sha256": "c52355cde583edb684bd250f6e5286fbb29097ef9d6ffd9dc5aac5ca40980845",
+  "protected_before_after_equal": true,
+  "protected_entries": 1672,
+  "protected_groups": 23,
+  "quality_AA_economics": "not_assessed",
+  "raw_files_sha256": {
+    "analysis/failure-summary.json": "07e51e716a539efd5e955c522569e22837d8bdc259e887b0d5fd06c90c34019d",
+    "logs/block-0-21043219-0.log": "0b60c1ffeef780d95ff2cb65f3ce7d91b9eccc202db5180cde0c883106840f96",
+    "protected-source-before.json": "9d7ae5adedd898166b5fedd66a2f848b26291cf35981525c85800879721340c2",
+    "resource-preflight-login.json": "4394a7ecbf8416b9c87fde440ae64d569106d7ab1f7c93052618cfcc5c0e3be9",
+    "run/LOCK.json": "5adbc288358aa0bb66dc16d0c750efeb5b7fa696f20acf9cfb2e2a21fd41159e",
+    "run/catalogs.jsonl": "5802e6664ad349a431725ca46f713c5b07ed22853506d6dbace709e2877f48c0",
+    "run/charges-checkpoint.json": "3bd1cf700230dbea78bc0032c71bcae90e425da83b8fb670a96432b048abede5",
+    "run/cleanup.json": "e93350d2ae06a0445c6afb160478fc8be8165e0b4ebe302aa92dd5dba5290746",
+    "run/failure.json": "9449dfd597183f383c62a5a4447602e76699ae693c8f4312e8301ec16165bdd9",
+    "run/host-exit.json": "e776a4a9d7237a3fdb735353e0976798b945f3f78b4bf170a21f3bf9090aad3d",
+    "run/host-failure.json": "0d1efcf811d22d2c12f8dd33b593f56c4aa0c9278715e7f64b463f51b62aba48",
+    "run/job-exit.json": "5fb8a75af4156fde495d25fe192855e230cd9360996e03e17945f449d6ab85dc",
+    "run/native640-server.log": "0e9a50b395f41e26a3efa51ff1f41af92cf213d598fe7997e174021a939678fb",
+    "run/progress.json": "d8aa7b3242863b68d6b7190ee52e86f57cf0a9bf6602d4657aff1a0fde223df7",
+    "run/protected-source-after.json": "9d7ae5adedd898166b5fedd66a2f848b26291cf35981525c85800879721340c2",
+    "run/protected-source-before.json": "9d7ae5adedd898166b5fedd66a2f848b26291cf35981525c85800879721340c2",
+    "run/resource-preflight.json": "7c329e64941a7a963fd2fdda92e84b200ee6e1062723f9cf229a7056a2c1efc4",
+    "run/sql.jsonl": "fdabac49f5bfdd886816aaa7600ce655973ecb1e56e394fe0c75d3ac3429e5df",
+    "run/status.json": "72adc35d13c2f7928c9f1dfedd995a37b091019123f15857ec72012fda1d210e",
+    "scheduler-evidence.json": "7f5f1bc3b8b4ed1e4b9458dd19101b1aee9ed2dd2e92ff31a494d95fddc03a50",
+    "submission.json": "ac5b3d5faf587e788e78ed4ac419a8011ecf36e0757bdbeace3a69f839f78ad5"
+  },
+  "reader_connections": 0,
+  "sql": {
+    "observer": 1,
+    "startup": 5
+  },
+  "status": "verified_failed_initial_environment",
+  "structural_checks_pass_after_counterfactual_work_mem_only": true,
+  "verification_kind": "trusted-local data-only checksum/member/lock/submission/scheduler/catalog/accounting/cleanup/protected replay",
+  "verified_at_utc": "2026-10-27T00:35:25.890534+00:00",
+  "version": "partial-ann.v1.quota-fix.failed-postrun"
+}

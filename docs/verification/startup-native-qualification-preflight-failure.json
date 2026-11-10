@@ -1,0 +1,36 @@
+{
+  "allowance_state": "spent_and_closed_no_retry",
+  "assistant_remote_commands": 0,
+  "code_guard_tests_limits_changed": false,
+  "code_package_tests_limits_changed": false,
+  "decision": "D134",
+  "job_id": "21756110",
+  "live_queue_message": "slurm_load_jobs error: Invalid job id specified",
+  "manifest_sha256": "13d281a4d366b8dabcc0a2dfb5c52629528d02baccde1883c63d40d4cee79cfb",
+  "native_correctness_CPU_memory_resource_B2f": "unqualified",
+  "native_qualification": "not_completed",
+  "new_allowance_issued": false,
+  "next_step": "Collect exact terminal state and full scheduler traceback, download/verify original raw under unchanged caps, independently review the allocated-node path/role before freezing any justified correction. Do not approve/submit again.",
+  "plan_sha256": "08a9293c3c4e4386118be6a354476efe27ec61749c421bf85136c426585526b0",
+  "preflight_failure": {
+    "message": "Outside the frozen site-prefix scope",
+    "native_qualification": false,
+    "searches": 0,
+    "type": "ValueError"
+  },
+  "retry_authorized": false,
+  "review_date": "2026-11-03",
+  "roadmap_version": "1.86",
+  "scheduler": {
+    "AllocCPUS": 4,
+    "Elapsed": "00:00:38",
+    "ExitCode": "1:0",
+    "ReqMem": "32G",
+    "State": "FAILED",
+    "batch_MaxRSS": "427216K",
+    "extern_exit_code": "0:0",
+    "extern_state": "COMPLETED"
+  },
+  "source": "User-pasted terminal status; full raw return not yet collected",
+  "status": "failed_preflight_allowance_spent_raw_review_pending"
+}

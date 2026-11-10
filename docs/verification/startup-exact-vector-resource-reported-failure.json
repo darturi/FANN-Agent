@@ -1,0 +1,25 @@
+{
+  "ANN_searches_by_Codex": 0,
+  "OOM_or_specific_cleanup_cause_established": false,
+  "Torch_jobs_by_Codex": 0,
+  "allowance": "spent; no retry or new capsule",
+  "array_task": "21542975_0",
+  "date": "2026-10-31",
+  "decision": "D115",
+  "exact_searches_by_Codex": 0,
+  "files_sha256": {
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reported-failure-2026-10-31/COMMANDS.txt": "52565a1ed3b0697faa22ddc3135ac522320d37ef8a781637afa455064200d211",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reported-failure-2026-10-31/assessment.json": "215c8fa68c1afc99499de1353a8ccd3cb8fe8b7bc3dfa9b86a67b32655c063c3",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reported-failure-2026-10-31/failure-reported.json": "28e9a93f40fb924ba31e1b6ffcebdd327a847913f59b5d294bb50df3167c4c92",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reported-failure-2026-10-31/host-exit-reported.json": "c35d94afb3d8446e806b9e68ca310b8dd3e66470aff192b5024fb13e1d7fa293",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reported-failure-2026-10-31/host-failure-reported.json": "583c36101f2ec8a22b85de95e29fa9bcc4d938d0fa99c9ac9cdbe8fbcb1d822a",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reported-failure-2026-10-31/status-reported.json": "3d91d1b082ec4719acb3ceb055cdcfa077e4add9e14c5f94432e0e4590499b20"
+  },
+  "full_B2f_released": false,
+  "job_id": "21542975",
+  "native_memory_qualified": false,
+  "native_return_verified": false,
+  "next_gate": "terminal failed-raw collection/download and independent full audit",
+  "roadmap_version": "1.67",
+  "status": "reported_native_resource_failure_full_return_pending"
+}

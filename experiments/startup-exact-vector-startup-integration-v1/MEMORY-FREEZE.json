@@ -1,0 +1,246 @@
+{
+  "arithmetic_only": {
+    "maximum_payload_reduction_bytes": 759662592,
+    "no_native_fraction_or_peak_prediction": true,
+    "observed_shortfall_bytes": 751878144,
+    "payload_only_excess_bytes": 7784448
+  },
+  "baseline_files_sha256": {
+    "exact_vector.py": "159204cb4cd164dc147789a4764abf58cc7be586e0100da01476b862212feb0e",
+    "integration.py": "714262c2bb251a59bc322eebc259882953132588a9d26ff01a68f921ce3a70de",
+    "run_checks.py": "e6e41b618347c0df25a1e0def288fbb42a515dd70d1fe1879d9fd59179a6467c",
+    "test_exact_vector.py": "0fe11951f98f37d1c3107eaf83d86a52f726f3e97b96943d1924db5259b314d5",
+    "test_integration.py": "262ae053d4e8c1077c27868346337eecdb5870f7ce420036e3da24c35627b57d"
+  },
+  "baseline_source": "agent/experiments/startup-exact-vector-resource-lifecycle-v1/a3",
+  "basis": {
+    "effective_cap_bytes": 34359738368,
+    "largest_recorded_aggregate_peak_bytes": 30816649216,
+    "native_resource_job": "21542975_0 failed/spent",
+    "no_causal_native_saving_inferred": true,
+    "observed_small_fixture_matrix_conversion_overlap_bytes": 196608,
+    "reserve_plus_workspace_bytes": 4294967296,
+    "review_probe_sha256": "66a1ca61a075c720f5651863dd7d58386d97da14823da37f52e8a53f140516a8"
+  },
+  "decision": "GO_one_exact_roundtrip_binary32_or_raw_binary64_offline_candidate",
+  "formatter": {
+    "arguments": {
+      "trim": "-",
+      "unique": true
+    },
+    "function": "numpy.format_float_positional",
+    "function_source_sha256": "93a04d0dc48215f0a0c18595ff35a222d6d89ef87cc0c07fa91b3a04c6609058",
+    "module_source_sha256": "00002f92b23453a3daff064e9e9b95641a5db020a3a58a5c585f2c03f48f61b8",
+    "numpy": "2.3.4"
+  },
+  "frozen_at_utc": "2026-10-31T22:24:56.547567+00:00",
+  "full_B2f_released": false,
+  "implementation_files": [
+    "exact_codec.py",
+    "fixture_adapter.py",
+    "test_memory_remedy.py",
+    "run_checks.py",
+    "README.md",
+    "MEMORY-FREEZE.json",
+    "baseline/exact_vector.py",
+    "baseline/integration.py",
+    "baseline/run_checks.py",
+    "baseline/test_exact_vector.py",
+    "baseline/test_integration.py"
+  ],
+  "implementation_not_started": true,
+  "limits": {
+    "counts": {
+      "ANN_searches": 0,
+      "allocations": 1,
+      "confirmation_queries": 0,
+      "data_verification_scans": 4,
+      "exact_searches": 0,
+      "maximum_live_readers": 6,
+      "maximum_live_servers": 2,
+      "maximum_live_sql_connections": 8,
+      "new_fits": 0,
+      "plan_packets": 0,
+      "provider_calls": 0,
+      "reader_admissions_total": 10,
+      "searches_total": 0,
+      "snapshot_scans": 1
+    },
+    "date": "2026-10-27",
+    "decision": {
+      "comparison": "max(cgroup aggregate recorded peak over all visible finite ancestors)+reserve+workspace <= min(32GiB,all visible finite memory limits)",
+      "event_policy": "No positive oom/oom_kill/oom_group_kill/max/failcnt delta for a margin pass; missing counters/peak/gaps=>inconclusive",
+      "no_automatic_full_calibration": true,
+      "no_cache_subtraction": true,
+      "outcomes": [
+        "startup_resource_margin_pass_scoped",
+        "startup_complete_resource_margin_inconclusive",
+        "failed_or_incomplete"
+      ],
+      "reserve_bytes": 2147483648,
+      "scope": "startup/admission resource readiness only; no workload memory, quality, A/A or performance qualification",
+      "total_peak_includes_cache": true,
+      "unmeasured_workspace_allowance_bytes": 2147483648
+    },
+    "dimensions": 768,
+    "epoch_creation_order": {
+      "0": [
+        "native640-r0",
+        "partial640-r0",
+        "native640-r1",
+        "partial640-r1"
+      ],
+      "1": [
+        "partial640-r1",
+        "native640-r1",
+        "partial640-r0",
+        "native640-r0"
+      ]
+    },
+    "exposed_requests": 200,
+    "graphs": {
+      "native640": {
+        "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+      },
+      "partial640": {
+        "original": {
+          "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+        },
+        "partial": {
+          "270339": "b0300f40eb9917c158855d00fe0a8f36cb1c8aee958fb65b061e4db4d8606700"
+        }
+      }
+    },
+    "name": "torch-startup-resource-v1",
+    "prefix": "reviews-startup-resource-v1-",
+    "protocol": "startup-resource.v1",
+    "register": "NEXT-STARTUP-RESOURCE-01",
+    "resources": {
+      "cgroup_ancestors_max": 16,
+      "cpus": 4,
+      "epoch_hold_seconds": 5,
+      "host_post_seconds": 240,
+      "host_pre_seconds": 240,
+      "memory_gib": 32,
+      "outer_margin_seconds": 120,
+      "processes_max": 32,
+      "raw_bytes_max": 536870912,
+      "runtime_cleanup_reserve_seconds": 600,
+      "runtime_seconds": 3000,
+      "sampler_cpu_seconds_max": 60,
+      "sampler_file_bytes_max": 65536,
+      "sampler_file_reads_max": 500000,
+      "sampler_max_gap_seconds": 5,
+      "sampler_period_seconds": 1,
+      "sampler_raw_bytes_max": 268435456,
+      "sampler_read_bytes_max": 536870912,
+      "sampler_samples_max": 3600,
+      "sql_caps": {
+        "observer": 100,
+        "startup": 500,
+        "truth_helper": 0
+      },
+      "stage_seconds": {
+        "epoch0": 120,
+        "epoch1": 120,
+        "final_cleanup": 600,
+        "restore_identity": 1500,
+        "snapshot_admission": 600
+      },
+      "wall_seconds": 3600
+    },
+    "retained_source_work": "/scratch/dar579/torch-reviews/partial-ann-v1.tu6x964d/partial-21048213.3xxjxm27",
+    "rows": 247286,
+    "runtime": {
+      "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+      "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+      "registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+      "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+      "synthetic_mock": false
+    },
+    "source_contract_sha256": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+    "source_files_sha256": {
+      "agent/experiments/partial-calibration-v1-identity-fix/CONTRACT.json": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+      "agent/experiments/partial-calibration-v1-identity-fix/SCHEDULE.json": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+      "agent/experiments/partial-calibration-v1-identity-fix/legacy_common.py": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+      "agent/experiments/partial-calibration-v1-identity-fix/legacy_metadata.py": "fba262f11a173757f13e71741286449b0e136936f4adf245375e3069996faefc",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_restore.py": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_snapshot.py": "af2b2e266450ca4c25d58eda8da6a2e4ed63c0c2d318d930ea6b185623653d41",
+      "agent/experiments/partial-calibration-v1-identity-fix/quota_base.py": "8790f4f8b0ee813efe9d3ee6d135929e55bc1cd33b39a917d1b51d7c1509ffc4"
+    },
+    "source_schedule_sha256": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+    "targets": {
+      "native640": {
+        "index": {
+          "oid": 264013,
+          "relname": "reviews_hnsw"
+        },
+        "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484"
+      },
+      "partial640": {
+        "index": {
+          "oid": 270339,
+          "relname": "reviews_hnsw_votes108_v1"
+        },
+        "index_identity": "6ee32f41235ef0a18143cc5ed37e169265fe3757211ef7df6480c7217f382896"
+      }
+    },
+    "timezone": "America/New_York"
+  },
+  "main_manifest_sha256": "2bc40b4bf802ad333bca5bbc1e60f3a6219d456a48bf8a30a79a3328e37829df",
+  "native_allowance": "none; all prior allowances remain spent; no new entitlement",
+  "native_correctness_qualified": false,
+  "native_memory_qualified": false,
+  "native_producer_integration": false,
+  "next_gates": [
+    "Bounded local source/snapshot exactness and consumer verification.",
+    "Separate production integration/proof design and exact-image correctness review; old native proof does not qualify this new codec.",
+    "Only a separately authorized fresh resource allocation could evaluate original total-charge gate; no allocation is requested or released by this design."
+  ],
+  "offline_limits": {
+    "ANN_searches": 0,
+    "SSH": 0,
+    "Torch_jobs": 0,
+    "connections": 0,
+    "dimensions": 768,
+    "exact_searches": 0,
+    "full_native_data_scans": 0,
+    "max_fixture_rows": 64,
+    "real_SQL": 0,
+    "subprocesses": 0
+  },
+  "preservation_before_sha256": "96de4a74efdcf9a1ab59c8b3deb2dbac4cd6265b049d37cbd2306cc291742c5b",
+  "preserved_files": 5445,
+  "rejected_changes": [
+    "Changing SQL/client cursor/transactions, original main constructor or validation",
+    "Lossy binary32 truncation/float category normalization",
+    "Cache subtraction/drop/reclaim, forced GC, early root release, omitted scans",
+    "Memory/wall/CPU/reserve/workspace or sampler/verification limit changes",
+    "Native capsule/build/controller/handoff or spent allowance retry"
+  ],
+  "required_evidence": [
+    "All original56A3 case IDs and files unchanged and passing;128+128 main and56+56 exact-native proofs plus142+142 lifecycle artifacts preserved byte-for-byte.",
+    "Bit/category/canonical/frame/hash parity for compact and fallback vectors including float32 collisions, signed zero, subnormals/large ints, nonfinite and malformed rejection.",
+    "Actual unchanged Snapshot constructor: matrix uint32 bits, typed IDs/maps, metadata masks, identity, query/workload/description, Parquet/save and bounded JSON samples.",
+    "No per-vector float32 data allocation on compact original-constructor path; view sharing and weakref lifetime probe without retaining observer arrays or forcing GC.",
+    "No storage expansion relative to old payload; three-slot object size no bigger; no decoded-list cache; mutation independence.",
+    "Original producer-loop SQL/cursor/order/pack-before-next-row and binding/rollback tests remain unchanged. New codec is a standalone component, not silently installed in old native producer.",
+    "At most64synthetic rows; fixture adapter refuses NativeSpec/unknown specs before constructor. All real network/process/SQL calls guarded.",
+    "Strict source/formatter identity and original digest restoration on success/BaseException; nested/concurrent/foreign bindings rejected."
+  ],
+  "schema": "startup-exact-vector.memory-remedy-freeze.v1",
+  "selected_codec": [
+    "Three immutable slots exactly as old PackedVector: payload bytes, integer-category bitmask, original exact integer tuple; infer mode from fixed payload length.",
+    "On encoding convert one original validated vector to binary32. Reconstruct each scalar using the pinned shortest positional formatter and compare every binary64 bit against the original numeric payload.",
+    "Use3072byte binary32 payload only if every scalar roundtrips exactly; otherwise retain original6144byte raw binary64 payload for the entire vector. Never publish an unchecked approximation.",
+    "Keep exact original Python integer categories/values and signed zero. No float32-only identity or residual guesses; arbitrary finite values fall back losslessly.",
+    "For compact vectors float32 NumPy conversion returns a read-only view of retained bytes, avoiding the original per-vector float32 astype data allocation. Original Snapshot constructor and norm/finite validation remain unchanged.",
+    "Default/binary64 conversion reconstructs exact values in one bounded row; copy=False is rejected when conversion requires allocation. New internal type semantics are explicit, original PackedVector APIs/tests untouched."
+  ],
+  "source_directory": "agent/experiments/startup-exact-vector-memory-remedy-v1"
+}

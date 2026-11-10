@@ -1,0 +1,39 @@
+{
+  "schema": "a3.client.configuration.compatibility.freeze.v1",
+  "date": "2026-11-04",
+  "status": "frozen_before_implementation",
+  "parent_use_policy_sha256": "fbc786192abf7aa9288cd72ea288b3d340aed50d5edea4ad342ae3a5bf9bf073",
+  "configuration_sha256": "ba998cfda785eee87ef65023a8fe2caf4f7c3734665eb15af5b76d5a2b603ea6",
+  "configuration_bytes": 16647,
+  "decision": "Implement a separate fail-closed compatibility harness, never patching original admission/science. Keep exact captured bytes. Separate metadata-only inspection from sealed-input replay; no live replay is released until a concrete installed dependency closure has been independently reviewed and pinned in code.",
+  "entrypoints": {
+    "inspect": "Only dar579, Linux x86_64 Torch login outside any allocation; verify original packet/plan/trust/semantic references and conservative quota; read exact existing capture and installed ELF/loader metadata into a new private evidence directory. No Slurm subprocess, shell, ldd, loader execution, strace, export or remote connection.",
+    "replay": "Predeclared version/config/cs-partition/current-user association queries only; require an in-code reviewed closure with exact client/config/controller/dependency/input pins. The initial reviewed-closure table is empty: CLI must hold before any child starts. Future admission requires another frozen concrete closure, not a boolean supplied in a user file.",
+    "local_checks": "Source and independent snapshot tests, real local fixture children, and real Linux memfd/seal/FD lifetime/cleanup checks in an existing network-disabled container. ARM Linux kernel proofs are not x86_64/Torch/native Slurm qualification."
+  },
+  "capability": [
+    "Linux memfd_create with CLOEXEC and ALLOW_SEALING; write exact bounded bytes, set SEAL_WRITE/GROW/SHRINK/SEAL, verify full seals, size and SHA before and after each query; pass only that FD and close every owned FD on success/error.",
+    "Use a narrow clean environment independent of original global functions. Reject existing unreviewed scheduler/loader overrides, filter JWT/SACK/other non-whitelisted variables, and replace SLURM_CONF only inside this opaque pinned-byte capability. Preserve original policy unchanged for all other callers.",
+    "Ten-second command deadline, 65536 combined-output bytes, owned process-group cleanup on every exit including children retaining pipes; no shell, retries or arbitrary argv. Verify query role/arguments before creating descriptors or processes.",
+    "Replay cannot claim complete native parsing or closure from static ELF analysis. Relative auxiliary files, MUNGE socket, loader cache/hwcaps/default search, plugin fallback and runtime-only inputs require concrete review. No JWT private key is opened."
+  ],
+  "inspection": [
+    "Bounded static ELF64 little-endian x86_64 metadata parser; never execute inspected ELF files or use ldd. Record PT_INTERP, DT_NEEDED, SONAME, RPATH/RUNPATH and dynamic flags with complete bounds/termination checks.",
+    "Only fixed scontrol/sacctmgr clients, bounded installed plugin directory inventory, Slurm library files and transitive ELF candidates from fixed system/Slurm library roots; candidate resolution is explicitly not runtime-loader resolution. Record unresolved/ambiguous edges and retain holds.",
+    "Root-owned non-writable ELF leaf, root-owned non-writable resolved and lexical ancestors, except the exact already observed /opt/slurm UID1001:GID1001:0755 ancestor. This scoped installed-ELF role does not allow any nonroot leaf/config/loader-input exemption. Record immutable root-owned symlink generations and canonical file generation/hash before/after reads.",
+    "Record loader input metadata/hash for fixed /etc/ld.so.cache and /etc/ld.so.preload if present; reject nonempty preload; do not infer absence of other implicit inputs. Inventory plugin filenames without dlopen, hash at most 96 ELF files, 256 MiB total, 32 MiB each; root input files at most 1 MiB each. Any bound or identity violation holds.",
+    "Retained raw at most 2 MiB and 16 files, each at most 1 MiB; total inspection deadline 120 seconds. These are strict subsets for this separate login helper, not increases or reallocations of scientific limits."
+  ],
+  "preservation": {
+    "main_tests": "128+128 unchanged",
+    "A3_tests": "276+276 unchanged",
+    "original_science_admission_references_limits": "byte-identical; strict full packet semantic verification",
+    "all_spent_allowances": "closed, including 21756110; no approval/submission/retry entrypoint",
+    "new_allocations": 0,
+    "ANN_searches": 0,
+    "exact_searches": 0,
+    "scientific_SQL": 0,
+    "provider_calls": 0
+  },
+  "qualification": "configuration_admitted=false, dependency_closure_verified=false and native_qualification=false until their separate exact installed/native gates actually pass"
+}

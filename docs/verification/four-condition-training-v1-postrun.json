@@ -1,0 +1,848 @@
+{
+  "acquisition": {
+    "actual_stop_proofs": 4698,
+    "backend_calls": 38196,
+    "discarded_warmup_pairs": 5298,
+    "retained_pairs": 10596
+  },
+  "all_timed_condition_outputs_identical_to_native": true,
+  "allocations": [
+    {
+      "host_exit": {
+        "completed_sources_unchanged": true,
+        "exit_code": 0,
+        "job_id": "20583883",
+        "provider_calls": 0,
+        "work_directory": "/scratch/dar579/torch-reviews/torch-four-condition-training-v1.f84g61rs/four-build-20583883.3kv091fo"
+      },
+      "phase": "build",
+      "protected_sources_unchanged": true,
+      "status": {
+        "architecture": "x86_64",
+        "module_sha256": "9365e5f6dae724fec95f5743c00c0dfda1356e528c7be2d2b91a7d35709b3ff8",
+        "package_manifest_sha256": "6a76b56b91aa138a28c48d5b4868742766de843b4038d034d4f8304b84eacc80",
+        "provider_calls": 0,
+        "status": "complete"
+      }
+    },
+    {
+      "host_exit": {
+        "completed_sources_unchanged": true,
+        "exit_code": 0,
+        "job_id": "20583884",
+        "provider_calls": 0,
+        "work_directory": "/scratch/dar579/torch-reviews/torch-four-condition-training-v1.f84g61rs/four-acquire-20583884.2sfcv696"
+      },
+      "phase": "acquire",
+      "protected_sources_unchanged": true,
+      "status": {
+        "backend_searches": 38196,
+        "canonical_acceptance_established": false,
+        "confirmation_queries": 0,
+        "control_installations": 5298,
+        "frozen_policies": 20,
+        "measurement_seconds": 1305.1502647218294,
+        "metadata_verification_sql_reads": 300,
+        "new_actual_stop_outcomes": 4698,
+        "operations": {
+          "exact_reference": 300,
+          "native": 16194,
+          "policy": 16398,
+          "policy_trace": 5304
+        },
+        "probe_receipt_sql_reads": 300,
+        "provider_calls": 0,
+        "stage": "acquisition-and-fitting",
+        "status": "complete",
+        "training_queries": 300
+      }
+    },
+    {
+      "host_exit": {
+        "completed_sources_unchanged": true,
+        "exit_code": 0,
+        "job_id": "20583885",
+        "provider_calls": 0,
+        "work_directory": "/scratch/dar579/torch-reviews/torch-four-condition-training-v1.f84g61rs/four-measure-20583885.yo69p8x_"
+      },
+      "phase": "blocks/block-0",
+      "protected_sources_unchanged": true,
+      "status": {
+        "backend_searches": 44610,
+        "block": 0,
+        "canonical_acceptance_established": false,
+        "confirmation_queries": 0,
+        "control_installations": 3900,
+        "fit_lock_sha256": "ba682a3b9e78933c734e0d246f53e2c4e32eaa23a2df8893f4aedc158adf1cd4",
+        "measurement_seconds": 1698.2118166522123,
+        "operations": {
+          "exact_reference": 300,
+          "native": 19800,
+          "policy": 20004,
+          "policy_trace": 4506
+        },
+        "provider_calls": 0,
+        "retained_pairs": 15600,
+        "stage": "training-measurement",
+        "status": "complete",
+        "training_queries": 300
+      }
+    },
+    {
+      "host_exit": {
+        "completed_sources_unchanged": true,
+        "exit_code": 0,
+        "job_id": "20587359",
+        "provider_calls": 0,
+        "work_directory": "/scratch/dar579/torch-reviews/torch-four-condition-training-v1.f84g61rs/four-measure-20587359.sj9j2tvq"
+      },
+      "phase": "blocks/block-1",
+      "protected_sources_unchanged": true,
+      "status": {
+        "backend_searches": 44610,
+        "block": 1,
+        "canonical_acceptance_established": false,
+        "confirmation_queries": 0,
+        "control_installations": 3900,
+        "fit_lock_sha256": "ba682a3b9e78933c734e0d246f53e2c4e32eaa23a2df8893f4aedc158adf1cd4",
+        "measurement_seconds": 1780.3194120000117,
+        "operations": {
+          "exact_reference": 300,
+          "native": 19800,
+          "policy": 20004,
+          "policy_trace": 4506
+        },
+        "provider_calls": 0,
+        "retained_pairs": 15600,
+        "stage": "training-measurement",
+        "status": "complete",
+        "training_queries": 300
+      }
+    },
+    {
+      "host_exit": {
+        "completed_sources_unchanged": true,
+        "exit_code": 0,
+        "job_id": "20583886",
+        "provider_calls": 0,
+        "work_directory": "/scratch/dar579/torch-reviews/torch-four-condition-training-v1.f84g61rs/four-measure-20583886.64ff5mxo"
+      },
+      "phase": "blocks/block-2",
+      "protected_sources_unchanged": true,
+      "status": {
+        "backend_searches": 44610,
+        "block": 2,
+        "canonical_acceptance_established": false,
+        "confirmation_queries": 0,
+        "control_installations": 3900,
+        "fit_lock_sha256": "ba682a3b9e78933c734e0d246f53e2c4e32eaa23a2df8893f4aedc158adf1cd4",
+        "measurement_seconds": 1661.1560518541373,
+        "operations": {
+          "exact_reference": 300,
+          "native": 19800,
+          "policy": 20004,
+          "policy_trace": 4506
+        },
+        "provider_calls": 0,
+        "retained_pairs": 15600,
+        "stage": "training-measurement",
+        "status": "complete",
+        "training_queries": 300
+      }
+    }
+  ],
+  "analysis_directory": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp-analysis",
+  "analysis_files_sha256": {
+    "diagnostics.py": "0ae12f7f32503a2a0e8d9f4c17f9b6f6544db013408ee07002a9c19d428d2525",
+    "extraction.json": "0d77a19b7383577b5b1dac264b94f0df022b9516bcbe2893462d9dd6a6f6a067",
+    "inner-selection-diagnostics.json": "a1c1367261b69d50a227d04f746127a466ebe00832b2242bf0906e27599f569b",
+    "interpretation.txt": "8c71ee838f11398175744afba201f8bc84121574752b855cbf6afa49fa76de70",
+    "overview.json": "b39ca54913f94623ceae88638cd4ec74d334542f841ef46ac019e631b2e63d86",
+    "performance.json": "11838a0ba6b6afcc8602868b623169cb628767139c39ff36803903f70a487777",
+    "raw-reproduction.log": "667e8ace3a27f3d7576a0fa8c7d4ee6ae6a189d308ba4d17695b482be8c17f52",
+    "report.txt": "7f28de053704d5e304b9575136278055165b85ad8ff8766beaa54fde7fb32f43",
+    "reproduce.py": "c802e6c0a86a4e167cfb7593ae4cb53283b0fd2257168939de49b2ac3c087bfe",
+    "verification.json": "1ae1d2176fda8c51ba24e7f6157087d11efe9012dbbc68bca7ab509d3ac5195e"
+  },
+  "archive_bytes": 29337528,
+  "archive_members_regular_files": 204,
+  "archive_sha256": "d26318ddf306109fc885711a461b512c6f6c5ed55c1f694f160f57737af8a521",
+  "arms": {
+    "A": {
+      "activation-cold": {
+        "delta_ms": 1.1169822866666668,
+        "delta_ms_ci95": [
+          1.0215870094722224,
+          1.2099047558888893
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.408035238888889,
+        "native_percent": 113.28470034830958,
+        "policy_ms": 9.525017525555555,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -13.284700348309594
+      },
+      "reused-warm": {
+        "delta_ms": 0.7874083781481481,
+        "delta_ms_ci95": [
+          0.7779136872500001,
+          0.7973840157685184
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.543637818148149,
+        "native_percent": 114.20382073970303,
+        "policy_ms": 6.331046196296296,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -14.203820739703035
+      }
+    },
+    "B": {
+      "activation-cold": {
+        "delta_ms": 1.2999361088888888,
+        "delta_ms_ci95": [
+          1.2052381991666665,
+          1.3973590003055554
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.303566453333334,
+        "native_percent": 115.65515391723095,
+        "policy_ms": 9.603502562222221,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.655153917230942
+      },
+      "reused-warm": {
+        "delta_ms": 0.7904847737037036,
+        "delta_ms_ci95": [
+          0.7802979887222222,
+          0.8015101487777784
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.554205154074074,
+        "native_percent": 114.23218537622569,
+        "policy_ms": 6.344689927777778,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -14.23218537622569
+      }
+    },
+    "C": {
+      "activation-cold": {
+        "delta_ms": 1.4095920633333336,
+        "delta_ms_ci95": [
+          1.2980535793333328,
+          1.5227706729722223
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.335254585555555,
+        "native_percent": 116.9112058769754,
+        "policy_ms": 9.744846648888888,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -16.91120587697541
+      },
+      "reused-warm": {
+        "delta_ms": 0.84129701,
+        "delta_ms_ci95": [
+          0.8304938574907408,
+          0.8526200972962963
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.578005470740741,
+        "native_percent": 115.08239843816928,
+        "policy_ms": 6.41930248074074,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.082398438169289
+      }
+    },
+    "D": {
+      "activation-cold": {
+        "delta_ms": 1.2705251711111112,
+        "delta_ms_ci95": [
+          1.1854353378055553,
+          1.3569201861388884
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.401732003333333,
+        "native_percent": 115.12218160025861,
+        "policy_ms": 9.672257174444445,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.122181600258607
+      },
+      "reused-warm": {
+        "delta_ms": 0.838777731111111,
+        "delta_ms_ci95": [
+          0.8282581553703705,
+          0.8499698247592595
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.55349101074074,
+        "native_percent": 115.103611935067,
+        "policy_ms": 6.392268741851852,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.103611935067002
+      }
+    },
+    "continue-base": {
+      "activation-cold": {
+        "delta_ms": 1.2798462366666667,
+        "delta_ms_ci95": [
+          1.1772966874444446,
+          1.3817643208611117
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.35279977,
+        "native_percent": 115.32236222474019,
+        "policy_ms": 9.632646006666667,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.322362224740193
+      },
+      "reused-warm": {
+        "delta_ms": 0.789630528148148,
+        "delta_ms_ci95": [
+          0.7786964685925926,
+          0.8012501973518521
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.546340633703704,
+        "native_percent": 114.23696415885033,
+        "policy_ms": 6.335971161851852,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -14.236964158850324
+      }
+    },
+    "continue-local": {
+      "activation-cold": {
+        "delta_ms": 1.3013186611111112,
+        "delta_ms_ci95": [
+          1.1977874330555558,
+          1.4047515612500003
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.381699837777779,
+        "native_percent": 115.52571299733067,
+        "policy_ms": 9.683018498888888,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.52571299733068
+      },
+      "reused-warm": {
+        "delta_ms": 0.8510303403703702,
+        "delta_ms_ci95": [
+          0.8382306535462962,
+          0.8648688007222226
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.565867427037037,
+        "native_percent": 115.29016548680917,
+        "policy_ms": 6.4168977674074075,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.290165486809174
+      }
+    },
+    "fixed-4096": {
+      "activation-cold": {
+        "delta_ms": -3.5671532555555556,
+        "delta_ms_ci95": [
+          -3.8337185488055563,
+          -3.285056427972223
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": true,
+        "final_recall_pass": false,
+        "layer0_distances": 4088.0,
+        "mean_recall_percent": 96.76666666666668,
+        "native_ms": 7.8964325566666655,
+        "native_percent": 54.82576176068345,
+        "policy_ms": 4.329279301111111,
+        "recall_delta_ci95_pp": [
+          -3.3333333333333317,
+          -1.3666666666666658
+        ],
+        "recall_delta_pp": -2.2333333333333334,
+        "saving_percent": 45.17423823931655
+      },
+      "reused-warm": {
+        "delta_ms": -2.6979467992592583,
+        "delta_ms_ci95": [
+          -2.8969491417314814,
+          -2.487564143324074
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": true,
+        "final_recall_pass": false,
+        "layer0_distances": 4088.0,
+        "mean_recall_percent": 96.76666666666665,
+        "native_ms": 5.937999054444444,
+        "native_percent": 54.56471490611113,
+        "policy_ms": 3.2400522551851854,
+        "recall_delta_ci95_pp": [
+          -3.3333333333333326,
+          -1.3666666666666658
+        ],
+        "recall_delta_pp": -2.2333333333333334,
+        "saving_percent": 45.43528509388888
+      }
+    },
+    "fixed-8192": {
+      "activation-cold": {
+        "delta_ms": -0.6520153822222222,
+        "delta_ms_ci95": [
+          -0.8760366457499997,
+          -0.4232780987777781
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": true,
+        "final_recall_pass": false,
+        "layer0_distances": 7959.94,
+        "mean_recall_percent": 98.60000000000001,
+        "native_ms": 8.19266701111111,
+        "native_percent": 92.04147585471324,
+        "policy_ms": 7.54065162888889,
+        "recall_delta_ci95_pp": [
+          -0.6999999999999998,
+          -0.16666666666666663
+        ],
+        "recall_delta_pp": -0.3999999999999999,
+        "saving_percent": 7.958524145286757
+      },
+      "reused-warm": {
+        "delta_ms": -0.565303937037037,
+        "delta_ms_ci95": [
+          -0.727830848638889,
+          -0.401744738175926
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": true,
+        "final_recall_pass": false,
+        "layer0_distances": 7959.94,
+        "mean_recall_percent": 98.6,
+        "native_ms": 5.722343891481481,
+        "native_percent": 90.12111212193011,
+        "policy_ms": 5.1570399544444445,
+        "recall_delta_ci95_pp": [
+          -0.6999999999999998,
+          -0.16666666666666663
+        ],
+        "recall_delta_pp": -0.3999999999999999,
+        "saving_percent": 9.878887878069884
+      }
+    },
+    "matched-A": {
+      "activation-cold": {
+        "delta_ms": 1.1311606455555554,
+        "delta_ms_ci95": [
+          1.0388730102777783,
+          1.2221659491111112
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.456096999999998,
+        "native_percent": 113.37686459315164,
+        "policy_ms": 9.587257645555555,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -13.37686459315163
+      },
+      "reused-warm": {
+        "delta_ms": 0.783835014074074,
+        "delta_ms_ci95": [
+          0.7743990636759257,
+          0.7935600196759263
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.564567733333333,
+        "native_percent": 114.08617976520767,
+        "policy_ms": 6.348402747407408,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -14.086179765207671
+      }
+    },
+    "matched-B": {
+      "activation-cold": {
+        "delta_ms": 1.2640660966666668,
+        "delta_ms_ci95": [
+          1.1740190130555557,
+          1.353445674388889
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.277779744444445,
+        "native_percent": 115.27059351289253,
+        "policy_ms": 9.54184584111111,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.270593512892534
+      },
+      "reused-warm": {
+        "delta_ms": 0.7979623770370371,
+        "delta_ms_ci95": [
+          0.7858573500833339,
+          0.8115308526851845
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.565211905925925,
+        "native_percent": 114.33840059508525,
+        "policy_ms": 6.363174282962962,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -14.338400595085236
+      }
+    },
+    "matched-C": {
+      "activation-cold": {
+        "delta_ms": 1.2795778455555555,
+        "delta_ms_ci95": [
+          1.18182772825,
+          1.3817537088888894
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.380003036666666,
+        "native_percent": 115.26941983143406,
+        "policy_ms": 9.659580882222222,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.269419831434055
+      },
+      "reused-warm": {
+        "delta_ms": 0.8392634374074074,
+        "delta_ms_ci95": [
+          0.8291755238796293,
+          0.8501431000555557
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.552797170740741,
+        "native_percent": 115.11424623664851,
+        "policy_ms": 6.392060608148149,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.11424623664852
+      }
+    },
+    "matched-D": {
+      "activation-cold": {
+        "delta_ms": 1.1911367155555554,
+        "delta_ms_ci95": [
+          1.0813237741666668,
+          1.2999697297222226
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 8.447515255555556,
+        "native_percent": 114.10043876241829,
+        "policy_ms": 9.638651971111111,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -14.100438762418294
+      },
+      "reused-warm": {
+        "delta_ms": 0.8364995837037038,
+        "delta_ms_ci95": [
+          0.8252063883148151,
+          0.8493368090000002
+        ],
+        "final_combined_pass": false,
+        "final_latency_pass": false,
+        "final_recall_pass": true,
+        "layer0_distances": 10299.46,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.568006658888889,
+        "native_percent": 115.02332225785503,
+        "policy_ms": 6.404506242592594,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": -15.023322257855034
+      }
+    },
+    "oracle-sparse": {
+      "activation-cold": {
+        "delta_ms": -4.625445642222223,
+        "delta_ms_ci95": [
+          -4.929524415694444,
+          -4.303661343111111
+        ],
+        "final_combined_pass": true,
+        "final_latency_pass": true,
+        "final_recall_pass": true,
+        "layer0_distances": 2407.1466666666665,
+        "mean_recall_percent": 99.0,
+        "native_ms": 7.763272411111111,
+        "native_percent": 40.41886723436245,
+        "policy_ms": 3.137826768888889,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": 59.58113276563755
+      },
+      "reused-warm": {
+        "delta_ms": -3.516187340740741,
+        "delta_ms_ci95": [
+          -3.7425864110092584,
+          -3.27253365637963
+        ],
+        "final_combined_pass": true,
+        "final_latency_pass": true,
+        "final_recall_pass": true,
+        "layer0_distances": 2407.1466666666665,
+        "mean_recall_percent": 99.0,
+        "native_ms": 5.876544976666667,
+        "native_percent": 40.165737611095146,
+        "policy_ms": 2.3603576359259257,
+        "recall_delta_ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "recall_delta_pp": 0.0,
+        "saving_percent": 59.834262388904854
+      }
+    }
+  },
+  "backend_searches": 172026,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "campaign": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp",
+  "canonical_acceptance_established": false,
+  "collected_performance_exactly_reproduced": true,
+  "collected_raw_hashes_exactly_reproduced": true,
+  "conditions": {
+    "A": {
+      "activation_gate_pass": false,
+      "fold_abstentions": 5,
+      "reuse_gate_pass": false
+    },
+    "B": {
+      "activation_gate_pass": false,
+      "fold_abstentions": 5,
+      "reuse_gate_pass": false
+    },
+    "C": {
+      "activation_gate_pass": false,
+      "fold_abstentions": 5,
+      "reuse_gate_pass": false
+    },
+    "D": {
+      "activation_gate_pass": false,
+      "fold_abstentions": 5,
+      "reuse_gate_pass": false
+    }
+  },
+  "confirmation_queries": 0,
+  "date": "2026-10-22",
+  "deployable_policy_selected": false,
+  "development_recall_margin": 0.0025,
+  "discarded_timing_warmup_pairs": 11700,
+  "downloaded_code_executed": false,
+  "extracted_bytes": 465024170,
+  "final_criteria_unchanged": true,
+  "fit_lock_sha256": "ba682a3b9e78933c734e0d246f53e2c4e32eaa23a2df8893f4aedc158adf1cd4",
+  "fresh_independent_confirmation_required": true,
+  "independent_learning_vectors": 100,
+  "inner_selection_counts": {
+    "candidate_assessments": 80,
+    "development_recall_pass": 0,
+    "diagnostic_final_tolerance_and_positive_proxy": 2,
+    "diagnostic_final_tolerance_recall_pass": 4,
+    "positive_worst_regime_proxy": 51,
+    "selected_outer_fold_abstentions": 20,
+    "votes108_development_recall_fail": 80
+  },
+  "limitations": [
+    "OOF procedure comparison on the original learning groups, not independent confirmation.",
+    "Bootstrap conditions on these fitted OOF outputs; training-process uncertainty is not independently bootstrapped.",
+    "Factorial contrasts are descriptive, without multiplicity correction.",
+    "Oracle uses hindsight and is not a deployable policy.",
+    "All selected policies continue; factor timing contrasts do not establish learned early-stopping efficacy.",
+    "Local probe statistics are already saturated at the first checkpoint and are static for each query.",
+    "Internal development reserve is stricter than final recall tolerance. Diagnostic tolerance counts did not change selection or acceptance."
+  ],
+  "minimum_native_recall_per_filter": 0.95,
+  "module_sha256": "9365e5f6dae724fec95f5743c00c0dfda1356e528c7be2d2b91a7d35709b3ff8",
+  "nested_fit_lock_exactly_reproduced": true,
+  "new_model_spend_usd": "0",
+  "oracle_cases_stopping_before_checkpoint_32": 175,
+  "original_generation_ab_comparison": {
+    "complete_pairs": 0,
+    "selection_effect_established": false,
+    "status": "inconclusive"
+  },
+  "postrun_reselection_or_optimization": false,
+  "probe_diagnostics": {
+    "filtered_groups_with_conflicting_recall_preservation_labels": 73,
+    "filtered_vector_pairs": 100,
+    "first_checkpoint_by_filter": {
+      "unfiltered": {
+        "distinct_ratios": 1,
+        "ratio_max": 1,
+        "ratio_min": 1
+      },
+      "votes108": {
+        "distinct_ratios": 15,
+        "ratio_max": 0.34375,
+        "ratio_min": 0.109375
+      },
+      "votes32": {
+        "distinct_ratios": 17,
+        "ratio_max": 0.703125,
+        "ratio_min": 0.4375
+      }
+    },
+    "full_64_node_sample_at_first_checkpoint": 300,
+    "identical_filtered_probe_statistics_excluding_threshold": 0,
+    "identical_original_filtered_trajectories": 100,
+    "query_cases": 300,
+    "unchanged_probe_statistics_across_query": 300
+  },
+  "provider_calls": 0,
+  "query_filter_cases": 300,
+  "recall_tolerance": 0.005,
+  "retained_timing_pairs": 46800,
+  "sealed_local_package_manifest_sha256": "6a76b56b91aa138a28c48d5b4868742766de843b4038d034d4f8304b84eacc80",
+  "sealed_local_package_verified_files": 130,
+  "source_implementation_commit": "57b79d7",
+  "status": "independently_reproduced_no_qualified_procedure",
+  "verified_raw_files": 63
+}

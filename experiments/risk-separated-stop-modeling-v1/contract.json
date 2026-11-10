@@ -1,0 +1,155 @@
+{
+  "analysis_date": "2026-10-24",
+  "authorization": "User explicitly requested design freeze, implementation, local checks, one bounded local experiment, verification, analysis and roadmap update. No user Torch command needed for this offline phase.",
+  "benefit_floors_ms": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "continuation": "Measured same-profile continue cost/outcome; no invented free routing gain. Analytical native reference reported separately.",
+  "frozen_utc": "2026-10-25T00:09:01.895532+00:00",
+  "id": "NEXT-RISK-01",
+  "inner_assignment": "Training groups hash sorted by [20261024,p3b-inner-v1,outer_fold,group], round-robin four folds.",
+  "inner_folds": 4,
+  "limits": {
+    "cpu_threads": 1,
+    "database_calls": 0,
+    "extra_trees_estimators_per_fit": 64,
+    "independent_vectors": 200,
+    "inner_candidate_assessments": 980,
+    "memory_gib": 4,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "query_filter_cases": 600,
+    "scientific_estimator_fits_max": 100,
+    "source_read_gib_max": 16,
+    "synthetic_test_fits_max": 24,
+    "torch_allocations": 0,
+    "wall_minutes": 60
+  },
+  "methods": [
+    "shallow_tree",
+    "extra_trees"
+  ],
+  "models": {
+    "extra_trees": {
+      "bootstrap": false,
+      "class": "sklearn.ensemble.ExtraTreesRegressor",
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": 1.0,
+      "min_samples_leaf": 8,
+      "n_estimators": 64,
+      "n_jobs": 1,
+      "random_state": 20261024
+    },
+    "shallow_tree": {
+      "class": "sklearn.tree.DecisionTreeRegressor",
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "min_samples_leaf": 8,
+      "random_state": 20261024,
+      "splitter": "best"
+    }
+  },
+  "next_branch": {
+    "neither_qualifies": "Close this finite formulation allowance. No more exposed-data hyperparameter/seed/model tuning under P3c. Gate explicit justified fresh DEVELOPMENT diversity with new entitlements/measurement contract OR broader B1 scope; preserve protected evaluation samples.",
+    "only_flexible_signal": "Investigate bounded representation/compression at qualified observed risk/cost frontier, then separately contracted actual-latency evidence.",
+    "qualifying_shallow_signal": "Preserve shallow family for separately bounded representation/interface and actual-latency planning; no adoption or confirmation access."
+  },
+  "operating_identity": {
+    "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+    "new_policy_latency": "unmeasured",
+    "physical_index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+    "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+    "target_execution": "original"
+  },
+  "outer_assignment": "Reuse exact five 40-vector folds pinned in selective corpus.",
+  "outer_folds": 5,
+  "owner": "Codex",
+  "phase": "P3c",
+  "profiles": [
+    "static23",
+    "progress34"
+  ],
+  "protected_boundary": "Use only already exposed 200-vector corpus, P3a definitions/pins and sealed API validation sources. No raw consumed confirmation, unexecuted60/reserved37 query values or canonical workloads.",
+  "reference": {
+    "baseline": "Frozen completed P3b calibrated and fixed-diagnostic OOF records, source and fold identities. No P3b fitting or retuning.",
+    "controls": [
+      "analytical_native",
+      "measured_profile_continue",
+      "fixed_checkpoint128_else_continue"
+    ],
+    "matched_groups": "Require exact outer AND inner assignment equality before fitting. Within-profile/method paired P3c-minus-P3b bootstrap for each phase; diagnostic gating differs, so not a pure causal capacity contrast."
+  },
+  "reporting": {
+    "also_report": "All980 inner candidates, all model/group/leaf receipts and OOF predictions; selected and fixed risk-cap.0025/benefit0 diagnostic, analytical native/paid continue/fixed128 controls; loss by predicate/stage/evaluator native-work bins; original-.005 replay criterion.",
+    "cost_limits": "Fixed-stop acquisition proxies only. Never pool old/new binary costs, transplant static costs to Light19, subtract P2 savings or reuse conditioned P2c timing as serving latency.",
+    "development_signal": "Complete top-10 and native floors; same -.0025 lower recall bounds, positive mean proxy savings in both regimes and nonzero stop count. This is not final latency acceptance.",
+    "primary": "Nested calibrated OOF first-stop quality, validity, stop coverage and fixed-stop cost proxies by profile/method; paired P3c-minus-P3b and flexible-minus-shallow contrasts.",
+    "reference_controls": [
+      "analytical_native",
+      "measured_profile_continue",
+      "fixed_checkpoint128_else_continue"
+    ],
+    "risk_semantics": "Loss prediction is an empirical mean, NOT a confidence upper bound. Inner gate screening is empirical development admission, NOT conformal risk control. Actual first-stop loss need not be monotone in a score threshold; no distribution-free or simultaneous guarantee claimed.",
+    "uncertainty": "Pointwise 10000-resample vector bootstrap on fixed OOF decisions. Prior adaptation/training uncertainty not removed; no independent confirmation or universal information ceiling."
+  },
+  "reviewer": "Codex correctness/result review; permanent artifacts for user review",
+  "risk_caps": [
+    0.0,
+    0.00025,
+    0.0005,
+    0.001,
+    0.0025,
+    0.005,
+    0.01
+  ],
+  "seed": 20261024,
+  "selection": {
+    "admission": "All valid complete top-10; native mean recall >=.95 per filter; lower 95% recall delta >=-.0025 overall and every filter; positive mean activation AND reuse proxies overall; at least one stop.",
+    "decision": "First reached allowed checkpoint with mean predicted risk <= risk_cap AND mean predicted benefit >= benefit_floor_ms. Otherwise paid measured same-profile continue.",
+    "fallback": "If no inner candidate qualifies, record explicit same-profile continue, with its measured costs; no outer-outcome rescue.",
+    "fixed_diagnostic": {
+      "benefit_floor_ms": 0.0,
+      "risk_cap": 0.0025,
+      "scope": "Always evaluate on outer heldout groups; never rescue a rejected selection."
+    },
+    "inner_scores": "Reuse exact P3b outer and inner group assignments. Each inner model fits/prunes/averages on120 groups only and predicts40 validation groups. Pool160 OOF groups for49 fixed gate pairs.",
+    "no_full_data_refit": true,
+    "outer_refit": "Exactly one risk-partition/benefit-leaf model per profile/method/outer fold on160 training groups. Same refit evaluates selected gates and diagnostic; never refit on all200.",
+    "ranking": "Maximum min(mean activation proxy saving,mean reuse proxy saving); exact ties prefer SMALLER risk cap, then LARGER benefit floor.",
+    "unit": "One complete first-stop outcome per query, vector-group clustered across three filters."
+  },
+  "stop_rule": "One frozen campaign, exactly100 estimator fits maximum (80inner+20outer diagnostic/selected-shared refits), no extra model families, seeds, folds, risk/benefit grid, post-hoc routing, global refit, native/provider/Torch/protected evaluation or automatic followup. Preserve all failures. Correctness repair cannot change criteria or use outcomes to tune.",
+  "timezone": "America/New_York",
+  "training": {
+    "benefit_target": "min(activation_fixed_stop_proxy_ms_saved,reuse_fixed_stop_proxy_ms_saved), separately averaged within the SAME fitting-data partitions. No added trees/partitions/fit or utility-minus-risk scalar.",
+    "capacity": "Same depth3 shallow / depth8 64-tree ensemble and eight distinct fitting-vector leaf minimum as P3b. Two outputs share each existing partition; no independent second head/tree set.",
+    "ensemble": "Mean risk and mean benefit across the same 64 trees; offline diagnostic, not assumed deployable.",
+    "features": "Same exact qualified runtime fields within each profile; no IDs, evaluator strata, folds, roles, labels, future states or truth inputs.",
+    "group_support": "After sklearn fitting, prune any split having a child supported by fewer than eight distinct training vectors. Replace it with the fitted parent value. Same rule for both methods.",
+    "leaf_values": "Store fitting-row weighted means of loss and benefit at each retained/pruned leaf; clip risk to [0,1] only for numerical rounding. Validate unpruned risk predictions against sklearn. Benefit uses only fitting labels.",
+    "partition_target": "max(0,native_recall-stop_recall) in recall-fraction units for valid complete top10, otherwise 1.0. Fit squared-error regression on this loss ONLY.",
+    "preprocessing": "No learned scaling, imputation, feature selection or global quantiles. Fixed scikit-learn float32 input semantics are reproduced in canonical exported predicates.",
+    "sample_weights": "Each query contributes equal total weight within its vector: 1/(3 * reached_grid_states_for_query). Each vector totals one.",
+    "shallow_export": "Evaluate both leaf gates once at compile time into stop/continue leaves; preserve depth3 plus availability/grid guard. Validate and compare first-stop shared interpreter."
+  },
+  "version": "risk-separated-stop-modeling.v1"
+}

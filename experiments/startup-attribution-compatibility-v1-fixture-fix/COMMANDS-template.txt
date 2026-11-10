@@ -1,0 +1,30 @@
+# NATIVE COMPATIBILITY JOB ONLY: 15 minutes / 2 physical CPUs / 4 GiB.
+# 128 source +128 sealed synthetic checks, zero DB/SQL/search/server/provider.
+# Main A2 remains held until these results are verified locally.
+
+# MAC LOCAL TERMINAL: authenticate and wait for UPLOAD VERIFIED.
+bash @OUTPUT@/transfer.sh upload
+
+# TORCH LOGIN: run once after verified upload.
+(
+  set -euo pipefail
+  cd /home/dar579
+  sha256sum -c torch-startup-attribution-compatibility-v1-fixture-fix.tar.gz.sha256
+  test ! -e torch-startup-attribution-compatibility-v1-fixture-fix
+  tar -xzf torch-startup-attribution-compatibility-v1-fixture-fix.tar.gz
+  source /home/dar579/torch-reviews-first/torch.env
+  export TORCH_SLURM_ACCOUNT=torch_pr_288_courant
+  PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-attribution-compatibility-v1-fixture-fix/cc_control.py submit
+)
+
+# TORCH: check the actual queued/running/terminal compatibility job.
+PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-attribution-compatibility-v1-fixture-fix/cc_control.py status
+
+# TORCH: after terminal status, collect even on failure.
+PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-attribution-compatibility-v1-fixture-fix/cc_control.py collect
+
+# MAC LOCAL TERMINAL: after collect prints archive path.
+bash @OUTPUT@/transfer.sh download
+
+# Reply Downloaded or paste the exact error. Preserve all bindings/reservations/
+# sources/returns. Do not repeat submit or launch main A2/full B2f.

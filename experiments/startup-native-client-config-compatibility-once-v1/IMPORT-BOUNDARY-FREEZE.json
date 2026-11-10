@@ -1,0 +1,10 @@
+{
+  "ANN_searches": 0,
+  "correction": "Before imports require the exact known package manifest SHA, strict complete regular-file inventory without links/extra files, exact PLAN SHA and SHA for every Python module in the pinned manifest. Then run the unchanged original complete semantic verifier and quota. No original module is patched. Add adversarial pre-import failures and a real unchanged-packet boundary check.",
+  "date": "2026-11-04",
+  "exact_searches": 0,
+  "finding": "The original packet semantic verifier is imported before it can verify itself. The standalone metadata helper must bind that import boundary before importing old user-owned Python modules.",
+  "new_allocations": 0,
+  "preservation": "All69existing test IDs, code/receipts and earlier306-check completion are archived. No Torch helper has been released/run. All main/A3 tests, strict verification, limits and old allowances unchanged.",
+  "status": "frozen_before_correction"
+}

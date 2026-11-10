@@ -1,0 +1,212 @@
+{
+  "AA_equivalence_verdict": "not_assessed",
+  "G2": "revise_pending_P2b_evidence",
+  "campaign": "/home/dar579/torch-reviews-results/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0",
+  "campaign_name": "reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0",
+  "canonical_acceptance_established": false,
+  "collection_observed": false,
+  "engineering_gate_verdict": "not_assessed",
+  "evidence_type": "User-pasted pp_control.py status and Slurm accounting output; not independently read from Torch or verified raw archive.",
+  "implementation_receipt_sha256": "f9018f2f939b7505294a8fc40d206cd174c37756eee6dbc4dac6bc831b98c772",
+  "next_action": "Collect the existing bound campaign on Torch; use Mac transfer.sh download for checksum verification and sealed local replay. Do not upload, extract, submit or rerun.",
+  "performance_improvement_established": false,
+  "raw_archive_download_observed": false,
+  "raw_archive_independently_verified": false,
+  "recorded_utc": "2026-10-23T23:27:30.506690+00:00",
+  "reported_block_statuses": {
+    "0": {
+      "backend_searches": 92721,
+      "block": 0,
+      "confirmation_queries": 0,
+      "control_installations": 8280,
+      "control_sql_note": "Eviction installs counted separately; other SQL statements are not counted.",
+      "development_cases": 600,
+      "diagnostic_cases": 90,
+      "diagnostic_pairs": 4320,
+      "elapsed_seconds": 2331.0766745177098,
+      "independent_vectors": 200,
+      "operations": {
+        "exact_reference": 600,
+        "native": 42000,
+        "native_bypass": 27000,
+        "policy": 19312,
+        "policy_trace": 3809
+      },
+      "provider_calls": 0,
+      "retained_pairs": 28800,
+      "status": "complete"
+    },
+    "1": {
+      "backend_searches": 92721,
+      "block": 1,
+      "confirmation_queries": 0,
+      "control_installations": 8280,
+      "control_sql_note": "Eviction installs counted separately; other SQL statements are not counted.",
+      "development_cases": 600,
+      "diagnostic_cases": 90,
+      "diagnostic_pairs": 4320,
+      "elapsed_seconds": 2404.9968149391934,
+      "independent_vectors": 200,
+      "operations": {
+        "exact_reference": 600,
+        "native": 42000,
+        "native_bypass": 27000,
+        "policy": 19312,
+        "policy_trace": 3809
+      },
+      "provider_calls": 0,
+      "retained_pairs": 28800,
+      "status": "complete"
+    },
+    "2": {
+      "backend_searches": 92721,
+      "block": 2,
+      "confirmation_queries": 0,
+      "control_installations": 8280,
+      "control_sql_note": "Eviction installs counted separately; other SQL statements are not counted.",
+      "development_cases": 600,
+      "diagnostic_cases": 90,
+      "diagnostic_pairs": 4320,
+      "elapsed_seconds": 2410.8620606297627,
+      "independent_vectors": 200,
+      "operations": {
+        "exact_reference": 600,
+        "native": 42000,
+        "native_bypass": 27000,
+        "policy": 19312,
+        "policy_trace": 3809
+      },
+      "provider_calls": 0,
+      "retained_pairs": 28800,
+      "status": "complete"
+    },
+    "3": {
+      "backend_searches": 92721,
+      "block": 3,
+      "confirmation_queries": 0,
+      "control_installations": 8280,
+      "control_sql_note": "Eviction installs counted separately; other SQL statements are not counted.",
+      "development_cases": 600,
+      "diagnostic_cases": 90,
+      "diagnostic_pairs": 4320,
+      "elapsed_seconds": 2929.372268629726,
+      "independent_vectors": 200,
+      "operations": {
+        "exact_reference": 600,
+        "native": 42000,
+        "native_bypass": 27000,
+        "policy": 19312,
+        "policy_trace": 3809
+      },
+      "provider_calls": 0,
+      "retained_pairs": 28800,
+      "status": "complete"
+    }
+  },
+  "reported_confirmation_queries": 0,
+  "reported_diagnostic_retained_pairs_total": 17280,
+  "reported_dispatch": {
+    "block-0": {
+      "job_id": "20753185",
+      "status": "submitted"
+    },
+    "block-1": {
+      "job_id": "20753186",
+      "status": "submitted"
+    },
+    "block-2": {
+      "job_id": "20753187",
+      "status": "submitted"
+    },
+    "block-3": {
+      "job_id": "20753188",
+      "status": "submitted"
+    }
+  },
+  "reported_eviction_installations_total": 33120,
+  "reported_host_exits": {
+    "0": {
+      "exit_code": 0,
+      "job_id": "20753185",
+      "protected_sources_unchanged": true,
+      "provider_calls": 0,
+      "work_directory": "/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753185.iz9uhog8"
+    },
+    "1": {
+      "exit_code": 0,
+      "job_id": "20753186",
+      "protected_sources_unchanged": true,
+      "provider_calls": 0,
+      "work_directory": "/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753186.4e6_9kkq"
+    },
+    "2": {
+      "exit_code": 0,
+      "job_id": "20753187",
+      "protected_sources_unchanged": true,
+      "provider_calls": 0,
+      "work_directory": "/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753187.zbmcy11r"
+    },
+    "3": {
+      "exit_code": 0,
+      "job_id": "20753188",
+      "protected_sources_unchanged": true,
+      "provider_calls": 0,
+      "work_directory": "/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753188.ln8xijrt"
+    }
+  },
+  "reported_internal_elapsed_seconds_total": 10076.307818716392,
+  "reported_limits": {
+    "allocations": 4,
+    "arms": 12,
+    "cases": 600,
+    "control_evictions_per_block": 8280,
+    "development_vectors": 200,
+    "diagnostic_cases": 90,
+    "diagnostic_pairs_per_block": 4320,
+    "diagnostic_searches": 10800,
+    "diagnostic_vectors": 30,
+    "diagnostic_warmups_per_block": 1080,
+    "getter_searches": 921,
+    "main_searches": 81921,
+    "retained_pairs_per_block": 28800,
+    "reuse_repetitions": 3,
+    "searches_per_block": 92721,
+    "searches_total": 370884,
+    "warmups_per_block": 7200
+  },
+  "reported_primary_retained_pairs_total": 115200,
+  "reported_provider_calls": 0,
+  "reported_searches_total": 370884,
+  "reported_slurm_top_level_jobs": [
+    {
+      "elapsed": "00:40:13",
+      "exit_code": "0:0",
+      "job_id": "20753185_0",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed": "00:41:42",
+      "exit_code": "0:0",
+      "job_id": "20753186_1",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed": "00:41:29",
+      "exit_code": "0:0",
+      "job_id": "20753187_2",
+      "state": "COMPLETED"
+    },
+    {
+      "elapsed": "00:50:31",
+      "exit_code": "0:0",
+      "job_id": "20753188_3",
+      "state": "COMPLETED"
+    }
+  ],
+  "source_attachment": "/Users/danielarturi/.codex/attachments/af1c50ad-24a3-4db6-b1b0-5394d8c2885f/Pasted text.txt",
+  "source_attachment_sha256": "7c273233b998aef01aac433d600ed42c2242e545bc58e4f5bd10eab4b5e86358",
+  "source_text": "[dar579@torch-login-a-1 ~]$ PYTHONDONTWRITEBYTECODE=1 python3 \\\n  /home/dar579/torch-admission-profile-identity-v1/pp_control.py status\nCampaign: /home/dar579/torch-reviews-results/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0\n{\n  \"dispatch\": {\n    \"block-0\": {\n      \"job_id\": \"20753185\",\n      \"status\": \"submitted\"\n    },\n    \"block-1\": {\n      \"job_id\": \"20753186\",\n      \"status\": \"submitted\"\n    },\n    \"block-2\": {\n      \"job_id\": \"20753187\",\n      \"status\": \"submitted\"\n    },\n    \"block-3\": {\n      \"job_id\": \"20753188\",\n      \"status\": \"submitted\"\n    }\n  },\n  \"limits\": {\n    \"allocations\": 4,\n    \"development_vectors\": 200,\n    \"cases\": 600,\n    \"diagnostic_vectors\": 30,\n    \"diagnostic_cases\": 90,\n    \"arms\": 12,\n    \"getter_searches\": 921,\n    \"reuse_repetitions\": 3,\n    \"main_searches\": 81921,\n    \"diagnostic_searches\": 10800,\n    \"searches_per_block\": 92721,\n    \"searches_total\": 370884,\n    \"retained_pairs_per_block\": 28800,\n    \"warmups_per_block\": 7200,\n    \"diagnostic_pairs_per_block\": 4320,\n    \"diagnostic_warmups_per_block\": 1080,\n    \"control_evictions_per_block\": 8280\n  },\n  \"provider_calls\": 0\n}\n0 progress.json: {\"block\": 0, \"phase\": \"diagnostic_profiling\", \"provider_calls\": 0, \"query\": 90, \"searches\": 92721, \"total\": 90}\n0 status.json: {\"backend_searches\": 92721, \"block\": 0, \"confirmation_queries\": 0, \"control_installations\": 8280, \"control_sql_note\": \"Eviction installs counted separately; other SQL statements are not counted.\", \"development_cases\": 600, \"diagnostic_cases\": 90, \"diagnostic_pairs\": 4320, \"elapsed_seconds\": 2331.0766745177098, \"independent_vectors\": 200, \"operations\": {\"exact_reference\": 600, \"native\": 42000, \"native_bypass\": 27000, \"policy\": 19312, \"policy_trace\": 3809}, \"provider_calls\": 0, \"retained_pairs\": 28800, \"status\": \"complete\"}\n0 host-exit.json: {\"exit_code\": 0, \"job_id\": \"20753185\", \"protected_sources_unchanged\": true, \"provider_calls\": 0, \"work_directory\": \"/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753185.iz9uhog8\"}\n1 progress.json: {\"block\": 1, \"phase\": \"diagnostic_profiling\", \"provider_calls\": 0, \"query\": 90, \"searches\": 92721, \"total\": 90}\n1 status.json: {\"backend_searches\": 92721, \"block\": 1, \"confirmation_queries\": 0, \"control_installations\": 8280, \"control_sql_note\": \"Eviction installs counted separately; other SQL statements are not counted.\", \"development_cases\": 600, \"diagnostic_cases\": 90, \"diagnostic_pairs\": 4320, \"elapsed_seconds\": 2404.9968149391934, \"independent_vectors\": 200, \"operations\": {\"exact_reference\": 600, \"native\": 42000, \"native_bypass\": 27000, \"policy\": 19312, \"policy_trace\": 3809}, \"provider_calls\": 0, \"retained_pairs\": 28800, \"status\": \"complete\"}\n1 host-exit.json: {\"exit_code\": 0, \"job_id\": \"20753186\", \"protected_sources_unchanged\": true, \"provider_calls\": 0, \"work_directory\": \"/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753186.4e6_9kkq\"}\n2 progress.json: {\"block\": 2, \"phase\": \"diagnostic_profiling\", \"provider_calls\": 0, \"query\": 90, \"searches\": 92721, \"total\": 90}\n2 status.json: {\"backend_searches\": 92721, \"block\": 2, \"confirmation_queries\": 0, \"control_installations\": 8280, \"control_sql_note\": \"Eviction installs counted separately; other SQL statements are not counted.\", \"development_cases\": 600, \"diagnostic_cases\": 90, \"diagnostic_pairs\": 4320, \"elapsed_seconds\": 2410.8620606297627, \"independent_vectors\": 200, \"operations\": {\"exact_reference\": 600, \"native\": 42000, \"native_bypass\": 27000, \"policy\": 19312, \"policy_trace\": 3809}, \"provider_calls\": 0, \"retained_pairs\": 28800, \"status\": \"complete\"}\n2 host-exit.json: {\"exit_code\": 0, \"job_id\": \"20753187\", \"protected_sources_unchanged\": true, \"provider_calls\": 0, \"work_directory\": \"/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753187.zbmcy11r\"}\n3 progress.json: {\"block\": 3, \"phase\": \"diagnostic_profiling\", \"provider_calls\": 0, \"query\": 90, \"searches\": 92721, \"total\": 90}\n3 status.json: {\"backend_searches\": 92721, \"block\": 3, \"confirmation_queries\": 0, \"control_installations\": 8280, \"control_sql_note\": \"Eviction installs counted separately; other SQL statements are not counted.\", \"development_cases\": 600, \"diagnostic_cases\": 90, \"diagnostic_pairs\": 4320, \"elapsed_seconds\": 2929.372268629726, \"independent_vectors\": 200, \"operations\": {\"exact_reference\": 600, \"native\": 42000, \"native_bypass\": 27000, \"policy\": 19312, \"policy_trace\": 3809}, \"provider_calls\": 0, \"retained_pairs\": 28800, \"status\": \"complete\"}\n3 host-exit.json: {\"exit_code\": 0, \"job_id\": \"20753188\", \"protected_sources_unchanged\": true, \"provider_calls\": 0, \"work_directory\": \"/scratch/dar579/torch-reviews/admission-profile-v1.0x9o6mwi/cost-20753188.ln8xijrt\"}\nJobID             State ExitCode    Elapsed \n------------ ---------- -------- ---------- \n20753185_0    COMPLETED      0:0   00:40:13 \n20753185_0.+  COMPLETED      0:0   00:40:13 \n20753185_0.+  COMPLETED      0:0   00:40:14 \n20753186_1    COMPLETED      0:0   00:41:42 \n20753186_1.+  COMPLETED      0:0   00:41:42 \n20753186_1.+  COMPLETED      0:0   00:41:43 \n20753187_2    COMPLETED      0:0   00:41:29 \n20753187_2.+  COMPLETED      0:0   00:41:29 \n20753187_2.+  COMPLETED      0:0   00:41:29 \n20753188_3    COMPLETED      0:0   00:50:31 \n20753188_3.+  COMPLETED      0:0   00:50:31 \n20753188_3.+  COMPLETED      0:0   00:50:32 \n             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)\n[dar579@torch-login-a-1 ~]$ ",
+  "status": "user_reported_four_blocks_completed_pending_raw_verification",
+  "version": "admission-profile-identity-v1-torch-status.v1",
+  "work_this_update": "Read pasted status, record provisional completion and update research progress only; no experiment, model call, remote action, source change or adoption."
+}

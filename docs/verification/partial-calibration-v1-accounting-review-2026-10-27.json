@@ -1,0 +1,147 @@
+{
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "f39828bde8a4f4eaa1068bd4ef6b89c6a931b9c05a1496d4317e5c80a715ba24",
+    "research/fannagent-partial-calibration-v1-accounting-review-2026-10-27.md": "8a930114bbe867578930dfedfc2e696fc81bd9474a0ff3bf39d4d3ac75f3d9ef",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "dca54e94212542a640f64ca22121e4663706d33905fe48815b888df7099c562f",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/accounting-review-2026-10-27/RELEASE-HOLD.json": "47b604f114d156de5aa0f9b1112c649b15b4f52418652f5147f50974ed6c23be",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/accounting-review-2026-10-27/assessment.json": "a8aff6f4bfbeba1f60060b5e3678b0259931df7f25c025b4865123db2dffbeb9",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/accounting-review-2026-10-27/documentation-checks.json": "f4830a5c31dcfe1da5fbb1e4991c16e3102e544dfd5c04c080839317b7214cdd",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/accounting-review-2026-10-27/preservation-after.json": "d067a1faa3ee2dbd18eeea237bfa21838c6d909b8248b897302768b539185c20",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/accounting-review-2026-10-27/preservation-before.json": "65a6b3c64de424dc3d13ca72e4f8d923780a944525d07ff349471a2c8ae49a99",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/accounting-review-2026-10-27/user-config-output.txt": "c9a01eaf5e8179bf460cf4cbd43b5adb2d5650d3d3c7dabccb59f6eba11ff7a9"
+  },
+  "assessment": {
+    "additional_allocations_released": 0,
+    "additional_user_commands_needed_now": false,
+    "anonymous_peak_known": false,
+    "cache_fraction_known": false,
+    "cgroup_version_known": false,
+    "code_changes": 0,
+    "config": {
+      "JobAcctGatherParams": null,
+      "JobAcctGatherType": "jobacct_gather/cgroup",
+      "ProctrackType": "proctrack/cgroup",
+      "TaskPlugin": [
+        "task/cgroup",
+        "task/affinity"
+      ],
+      "TaskPluginParam": null
+    },
+    "date": "2026-10-27",
+    "decision": "Retain release hold; recommend a separately bounded startup-only resource qualification design before another full calibration",
+    "evidence": "User-provided controller configuration from Torch login; no independent remote execution",
+    "failed_task_effective_limit_known": false,
+    "gib_assuming_kib": 31.980735778808594,
+    "interpretation": [
+      "For cgroup/v2 without no_file_cache, file cache is counted in RSS/MaxRSS",
+      "This output does not identify v1/v2 on the failed compute node",
+      "TaskPlugin alone does not establish ConstrainRAMSpace/AllowedRAMSpace or effective limit",
+      "No quantitative cache subtraction, OOM conclusion or whole-run headroom follows"
+    ],
+    "new_experiments": 0,
+    "next_step_scope": [
+      "Unchanged graphs/module/data/frozen backend",
+      "Full-size snapshot construction and identity/request admission",
+      "Both fixed reader creation orders,ten admissions,maxsix live",
+      "Record actual host/container cgroup identity/limits/current/peak/components/events and process high-water values",
+      "No ANN/exact-reference searches,quality/bootstrap/latency analysis,providers,fits or protected samples",
+      "Verify preserved source and cleanup before independent resource-only review"
+    ],
+    "no_file_cache_configured": false,
+    "recorded_failure": "RuntimeError: Snapshot eligibility changed; FAILED1:0",
+    "recorded_oom": false,
+    "recorded_peak": "33534232K",
+    "remote_tool_calls": 0,
+    "sources": [
+      "https://slurm.schedmd.com/cgroup_v2.html",
+      "https://slurm.schedmd.com/slurm.conf.html",
+      "https://slurm.schedmd.com/cgroup.conf.html",
+      "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+    ],
+    "status": "configuration_received_memory_feasibility_unqualified",
+    "timezone": "America/New_York"
+  },
+  "b1c_deferred": true,
+  "b2d_verdict": "measurement_inconclusive",
+  "date": "2026-10-27",
+  "input_provenance": "User transcript from Torch login; no independent remote execution",
+  "next_user_action": "None now",
+  "original_execution_retained": true,
+  "preservation": {
+    "changed": 0,
+    "prior_pinned_files": 3115
+  },
+  "register": "NEXT-PARTIAL-CALIBRATION-01",
+  "release": {
+    "additional_allocations_released": 0,
+    "next_owner_action": "Codex: prospective startup-only resource qualification design; not yet implementation or native launch",
+    "next_user_action": "None now; preserve all prior attempts and do not resubmit",
+    "prior119_checks": "historical passing; code unchanged; not rerun for this data/documentation-only update",
+    "production_package_released": false,
+    "read_only_configuration_request_complete": true,
+    "release_gate_R3": "held",
+    "resource_gate_R2": "partial: accounting family/options known; full-run resource feasibility unqualified",
+    "spent_allocations": 3,
+    "spent_jobs": [
+      "21111616_0",
+      "21129331_0",
+      "21159802_0"
+    ],
+    "status": "release_held_resource_qualification_design_needed"
+  },
+  "resource_proposal": {
+    "ANN_or_exact_searches": 0,
+    "allocations_at_most": 1,
+    "cpus": 4,
+    "decision_rules_and_ancillary_caps_require_prospective_freeze": true,
+    "entitlement_issued": false,
+    "memory_gib": 32,
+    "status": "outline_only_not_frozen_or_implemented",
+    "wall_seconds_at_most": 3600
+  },
+  "scope": {
+    "code_changes": 0,
+    "experiments": 0,
+    "fits": 0,
+    "native_database_calls": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "ssh_calls": 0,
+    "torch_allocations": 0
+  },
+  "source_checks": {
+    "prior_passed": 119,
+    "source_sha256": {
+      "experiment.py": "9468652dd92abf5fb3ca5a76f58193a649a721fc0b81ea13683638be2e95c1a8",
+      "identity_repair.py": "20585c6ed061099b1750eec1795839554cb38898e53696d06290b95b600e7e0c",
+      "launch_repair.py": "5426ab2f159d76ddcb64e2df4954a52cdbc99004ce5f48eb1bdecb46e9709b42",
+      "legacy_common.py": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+      "legacy_metadata.py": "fba262f11a173757f13e71741286449b0e136936f4adf245375e3069996faefc",
+      "metadata_repair.py": "540039ffeec25d05d98621c01d1944a954755b01f6fb5d0ec6cdfed053dff99c",
+      "pc_common.py": "425957812f96d85e58a368ee651558216bae0004310835775c2f22d61f415729",
+      "pc_control.py": "6528ee4eefeb6dab3bd82d83774f5d677bbe0e32eb124774a201797692ba1927",
+      "pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+      "pc_job.py": "12e14ab440602dc352e4b0c9e58660e457babd21a4e384eeb85c48ffbbf73655",
+      "pc_measure.py": "e3c4484f88fa23be8ebce76c267b7f63e7cd6f722d5bcd772a0c8cb428ed44a8",
+      "pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+      "pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+      "pc_report.py": "e350689fbaa521bf96908c836a66bbefb0f99369be19947c0b29e3b76b9c1aba",
+      "pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+      "pc_restore.py": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+      "pc_results.py": "c45a6ae0a0809a1f52d4e8dc0988488629913ed1830e24047ac631c9c6270b03",
+      "pc_runtime.py": "f2a67e7f76b5c2d595056499cae814debf81efe607b473cadf2efce29aeeb3e6",
+      "pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+      "pc_snapshot.py": "af2b2e266450ca4c25d58eda8da6a2e4ed63c0c2d318d930ea6b185623653d41",
+      "pc_stats.py": "57ec97fdaac47553bfa5655249004ef38df844277903409efe1d596839f6a2e7",
+      "pc_trace.py": "d26085ce72c55e64184f50a176904ac94723185ef8bcb3c62d7c8f1bdd852100",
+      "quota_base.py": "8790f4f8b0ee813efe9d3ee6d135929e55bc1cd33b39a917d1b51d7c1509ffc4",
+      "run_checks.py": "b80a77b1c676c5a13b311a3ce8037dc25895ccd9ad0f5db3457d0ca50e9b24d1",
+      "test_experiment.py": "dcb0f1b118d5f2e24ca1881221b8336ff9394f98e7c0371c7bf40d92d759a8f3",
+      "test_support.py": "64e997026efced999594bda30b08f9ba150c90133a89398f1ee70a558f13b617"
+    },
+    "source_still_matches": true,
+    "tests_rerun": false
+  },
+  "status": "configuration_review_complete_resource_qualification_design_next",
+  "timezone": "America/New_York"
+}

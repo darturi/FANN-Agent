@@ -1,0 +1,90 @@
+{
+  "activity": {
+    "native_db_or_ann_experiments": 0,
+    "new_fits": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "ssh_calls": 0,
+    "torch_submissions": 0
+  },
+  "adoption_authorized": false,
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "5a4b2ea4c056fa0107dbfc4b856cb843dbb2a076cb39baed611197eacd3cc95c",
+    "research/fannagent-partial-calibration-v1-implementation-2026-10-27.md": "e1c3be73369e979560a3f0ed2e1d7c69c8d893d8a9ec0b46cd6bd42de1e9b834",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "41223c63abda809440ae2191979cbc5a819327ce41cdaee36317f3f5530f4db3",
+    "trials/torch-reviews-partial-calibration-v1/COMMANDS.txt": "ec18f0f8dc71e48afa424f81f3746de69d708f6bc0473df209f4b7ff80274d6c",
+    "trials/torch-reviews-partial-calibration-v1/local-checks-sealed.json": "dac529d2c4103563e5daa6fb894be26e8094fc4a9552e9be52c1b98608b6111f",
+    "trials/torch-reviews-partial-calibration-v1/local-checks-source.json": "80516d8d2ea6fc6a77f5ba95739209d4004b7671fc3787094c07d133cea67f87",
+    "trials/torch-reviews-partial-calibration-v1/preservation-after.json": "d46537b0814244bf1d8ca0c8a45a870ec42f628a3071606e3dd24431c330bf65",
+    "trials/torch-reviews-partial-calibration-v1/preservation-before.json": "8b4a2a72ed2abd754ed87f23edc3223441dfd2691b21cab29f0161328162f3fc",
+    "trials/torch-reviews-partial-calibration-v1/release-integrity.json": "30d6e482b6ab48df3d3559108f57465f8c7a2087eeeda42adbb31a9ec2394f08",
+    "trials/torch-reviews-partial-calibration-v1/static-checks.json": "b411a5141847ccb8aa750c92cfec55da68b16a557a5cb8766ad2140382c077ad",
+    "trials/torch-reviews-partial-calibration-v1/torch-partial-calibration-v1.tar.gz": "aee3441ea7d0f9ade26caaa680833062729bb475ecf89d365212fa126bfdcb93",
+    "trials/torch-reviews-partial-calibration-v1/torch-partial-calibration-v1.tar.gz.sha256": "d759560229f44119a57f20c6477c8c29dca0b03a9ed1f8a3bb6f376d158c157a",
+    "trials/torch-reviews-partial-calibration-v1/torch-partial-calibration-v1/manifest.json": "41b4e47890ee1134eabbd1836a628954e93ee91e7e7fafb29da63e4da68ae42a",
+    "trials/torch-reviews-partial-calibration-v1/transfer.sh": "aa974a962dff2b581eae0d5c2eb129892be3c812fb4615a1da44e523ac44b594"
+  },
+  "b1c_deferred": true,
+  "b2d_verdict": "measurement_inconclusive",
+  "date": "2026-10-27",
+  "limits": {
+    "allocations": 1,
+    "cpus": 4,
+    "memory_gib": 32,
+    "plan_packets": 4200,
+    "quality_stop_searches": 610,
+    "required_timing_intervals": 56,
+    "searches_max": 16242,
+    "wall_seconds": 10800
+  },
+  "local_checks": {
+    "passed": true,
+    "scope": "synthetic correctness only; full mock acquisition and independent raw reconstruction",
+    "sealed": 78,
+    "source": 78
+  },
+  "native_pending": [
+    "N0 stopped whole-cluster restore and source/data/catalog/graph/module/resource/core/required-telemetry qualification",
+    "N1 conformance and fresh quality",
+    "N2 complete exact two-epoch acquisition",
+    "N3 final identity, source preservation and cleanup",
+    "N4 trusted independent complete-raw reconstruction and all56 timing intervals"
+  ],
+  "next_user_action": "Mac transfer.sh upload; then one Torch pc_control.py submit using COMMANDS.txt",
+  "old_evidence_changed": false,
+  "old_experimental_code_changed": false,
+  "original_execution_retained": true,
+  "prior_files_preserved": 2255,
+  "production_code_changed": false,
+  "protocol": "partial-calibration.v1",
+  "register": "NEXT-PARTIAL-CALIBRATION-01",
+  "release": {
+    "archive_member_byte_parity": true,
+    "archive_sha256": "aee3441ea7d0f9ade26caaa680833062729bb475ecf89d365212fa126bfdcb93",
+    "archive_uncompressed_bytes": 294257089,
+    "frozen_contract_sha256": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+    "frozen_design_sha256": "dec43325d277d04b49c90f8f2adb634a4df1bec02c86bba992e3d7da57f2cec0",
+    "frozen_schedule_sha256": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+    "inherited_result_function_AST_parity": {
+      "admit": true,
+      "call": true,
+      "equivalent": true,
+      "exact": true,
+      "quality_report": true,
+      "record_result": true,
+      "truth_record": true
+    },
+    "manifest_files": 191,
+    "package_manifest_sha256": "41b4e47890ee1134eabbd1836a628954e93ee91e7e7fafb29da63e4da68ae42a",
+    "prior_immutable_files_preserved": 2255,
+    "regular_archive_members": 192,
+    "shell_syntax": "pass",
+    "source_sealed_code_match": true,
+    "status": "pass"
+  },
+  "scientific_design_changed": false,
+  "status": "implementation_checked_sealed_native_pending",
+  "timezone": "America/New_York",
+  "treatment_speed_qualified": false,
+  "user_authorization": "Execute the described next steps: isolated implementation/local checks/seal and one-job handoff after source inventory"
+}

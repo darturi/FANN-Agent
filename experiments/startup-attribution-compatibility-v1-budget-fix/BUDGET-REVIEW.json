@@ -1,0 +1,72 @@
+{
+  "completed_nonoverlapping_fixture_stage_seconds": 143.703017787,
+  "date": "2026-10-30",
+  "event_counts": {
+    "fixture_stage": 90,
+    "pass": 119,
+    "start": 120,
+    "suite_start": 1
+  },
+  "failed_job": "21382454",
+  "failed_return_archive_sha256": "5dda69a42a36775b5c9b9b17c253e2e45be6d181d8217944284b57db4fa8e214",
+  "last_started_test": "test_original_mapping_mismatch_rejects_before_restore (test_a2_release.ReleaseTests.test_original_mapping_mismatch_rejects_before_restore)",
+  "limits": {
+    "allocations": 1,
+    "candidate_build_seconds": 90,
+    "guest_cleanup_seconds": 30,
+    "guest_preflight_seconds": 30,
+    "guest_seconds": 990,
+    "home_return_required_bytes": 134217728,
+    "host_cleanup_seconds": 60,
+    "host_startup_seconds": 90,
+    "memory_gib": 4,
+    "outer_margin_seconds": 105,
+    "physical_cpus": 2,
+    "raw_bytes": 4194304,
+    "scratch_required_bytes": 4294967296,
+    "sealed_suite_seconds": 420,
+    "source_suite_seconds": 420,
+    "termination_seconds": 15,
+    "wall_seconds": 1260
+  },
+  "main_A2": "Held: original1h/4CPU/32GiB, science/code/references/limits unchanged; C3 follows independent complete native qualification only.",
+  "main_cases_ast_discovered": 128,
+  "preservation_files": 5111,
+  "proposal_review": {
+    "20_minute_sum": "Incomplete as stated: 420+90+420+30=960 leaves no guest preflight; existing host additionally passed deadline minus15, reducing usable guest time. Phase postchecks and receipt publication also need bounded accounting.",
+    "420_seconds_per_suite": "Accept as prospective 40% increase over failed 300s cap, not an empirical native upper bound. Eight unstarted tests, current test final checks and final suite/seed/guard receipts remain unmeasured; sealed costs unmeasured. Timeout or missing proof consumes the new allowance, with no continuation.",
+    "chosen_envelope": "21 minutes: add30s explicit guest preflight, separate15s container termination reserve, retain105s outer margin. Source/sealed420 each include their complete validation; candidate90 includes its checks. Every phase must have its full cap available before starting; no dynamically shrunken test phase."
+  },
+  "release_gates": [
+    "Frozen new identity and one durable reservation; all old allowances remain spent.",
+    "All existing43 capsule tests plus deadline/reserve/cleanup/accounting negative checks source and sealed.",
+    "All128 original main checks guarded on source and packaged fixture; complete seeds/restoration/receipts.",
+    "Byte-identical fixture helper, checker, main68 recipes and parent607 files; exact source/seal/archive/old evidence preservation.",
+    "No submission in this task. Prepare exact separately named upload/verify/submit/status/collect/download commands."
+  ],
+  "reviewer": "independent fresh trace/source audit in current chat; no subagent",
+  "scope": {
+    "ANN_searches": 0,
+    "SQL": 0,
+    "database_connections": 0,
+    "exact_searches": 0,
+    "fits": 0,
+    "main_A2_launched": false,
+    "postgres_servers": 0,
+    "providers": 0,
+    "suites": 2,
+    "tests_per_suite": 128
+  },
+  "source_findings": [
+    "Original builder copies/hashes full298917834-byte A1 inventory, including262630951-byte evidence file; strict runtime verifier revisits nested pins. Hardlinks do not remove reads.",
+    "No new functional defect is supported; fixture_io.py and check_child.py stay byte-identical.",
+    "Current deadline arithmetic is literal300/720/900/330 and min-shrinks phases; revise isolated budget derivation, complete-phase admission, timing receipts and bounded cleanup only."
+  ],
+  "spent_allowances": [
+    "21348020",
+    "21367064",
+    "21382454"
+  ],
+  "status": "GO_budget_only_isolated_compatibility_correction",
+  "timezone": "America/New_York"
+}

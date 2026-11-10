@@ -1,0 +1,5 @@
+{
+  "parent_sha256": "5f244802f61684c20b85d55e73e1ffb41b97d3828edd1baacdf3cf8833584743",
+  "schema": "a3.owned-failure-cleanup.freeze.v1",
+  "scope": "Qualification remains failed on authority/observer loss. Already registered descendants retain a cleanup-only capability until the original absolute cleanup endpoint: the private guardian may signal only retained PID descriptors from its proven descendant registry without reselecting any numeric PID if proc reads fail. No new spawn, foreign descriptor, stale PID, permission retry or success is allowed. Parent revocation closes its private pipe and waits boundedly for that same guardian; no guardian/group numeric kill. Add actual Linux read-ledger-exhaustion and site-revocation failures proving bounded stop while HOLD persists."
+}

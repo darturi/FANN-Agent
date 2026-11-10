@@ -1,0 +1,45 @@
+{
+  "constraints": [
+    "Frozen new identity and one durable reservation; all old allowances remain spent.",
+    "All existing43 capsule tests plus deadline/reserve/cleanup/accounting negative checks source and sealed.",
+    "All128 original main checks guarded on source and packaged fixture; complete seeds/restoration/receipts.",
+    "Byte-identical fixture helper, checker, main68 recipes and parent607 files; exact source/seal/archive/old evidence preservation.",
+    "No submission in this task. Prepare exact separately named upload/verify/submit/status/collect/download commands."
+  ],
+  "date": "2026-10-30",
+  "failure_branch": "Any deadline, failed case, denied action or missing proof closes this single allowance failed/incomplete. Preserve raw/reservation; no automatic retry or main release.",
+  "limits": {
+    "allocations": 1,
+    "candidate_build_seconds": 90,
+    "guest_cleanup_seconds": 30,
+    "guest_preflight_seconds": 30,
+    "guest_seconds": 990,
+    "home_return_required_bytes": 134217728,
+    "host_cleanup_seconds": 60,
+    "host_startup_seconds": 90,
+    "memory_gib": 4,
+    "outer_margin_seconds": 105,
+    "physical_cpus": 2,
+    "raw_bytes": 4194304,
+    "scratch_required_bytes": 4294967296,
+    "sealed_suite_seconds": 420,
+    "source_suite_seconds": 420,
+    "termination_seconds": 15,
+    "wall_seconds": 1260
+  },
+  "parent_package_manifest_sha256": "417ed38074dabe90a66560605fd93e88d147a89691185b3be6b3e0bf6b57b840",
+  "review_sha256": "d31105cb0216e3377979b3f3110d3a3917b5bcd98c097f6ef460426e1cbd1d57",
+  "schema": "startup-attribution.compatibility-budget-freeze.v1",
+  "scope": {
+    "ANN_searches": 0,
+    "SQL": 0,
+    "database_connections": 0,
+    "exact_searches": 0,
+    "fits": 0,
+    "main_A2_launched": false,
+    "postgres_servers": 0,
+    "providers": 0,
+    "suites": 2,
+    "tests_per_suite": 128
+  }
+}

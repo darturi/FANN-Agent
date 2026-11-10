@@ -1,0 +1,6 @@
+{
+  "basis": "Existing installed Apptainer may use its documented privileged starter. Original guardian rejects mixed UID observations. This is a compatibility design finding, not a claim that a Torch transition was observed.",
+  "parent_sha256": "26fe14db5cc9ef4c04b7e807199476d9adb9fadece072529d78a92b58f1c11da",
+  "schema": "a3.privileged-runtime-monitor.freeze.v1",
+  "scope": "Only the new admitted host kernel, after installed Apptainer root-ownership/identity verification, may register proven descendant UID transitions limited to observer UID and0 as monitor-only. Preserve actual UID tuple, PID/start/cgroup and private ancestry. Never send any shutdown signal to a monitor-only privileged descriptor, including failure fallback. Require actual exit descriptor readiness and ECHILD; helper non-exit holds qualification within unchanged endpoint. Guest/science policy remains same-UID strict. No privilege/site/cgroup changes. Test real mixed UID in a separate network-none read-only local container with a benign root-owned sleep helper, all capabilities dropped, plus source/snapshot models."
+}

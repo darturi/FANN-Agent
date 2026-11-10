@@ -1,0 +1,91 @@
+{
+  "hooks": [
+    {
+      "file": "_connection_base.py",
+      "file_sha256": "14115b0bdcb81125b3c340340b4e8e674bb1ae03f4b320c94c2b93d30462f36e",
+      "function_sha256": "fb1d5546c1445a2e23ddade3c0f52cb9f253556c45f50539565401488af7d284",
+      "kind": "generator",
+      "qualified_name": "psycopg._connection_base.BaseConnection._exec_command",
+      "signature": "(self, command: 'QueryNoTemplate', result_format: 'pq.Format' = <Format.TEXT: 0>) -> 'PQGen[PGresult | None]'"
+    },
+    {
+      "file": "_connection_base.py",
+      "file_sha256": "14115b0bdcb81125b3c340340b4e8e674bb1ae03f4b320c94c2b93d30462f36e",
+      "function_sha256": "8bd0b1d62711979bea0bd6169aa65a91db0df3726806091edbd68b90fbb508f7",
+      "kind": "generator",
+      "qualified_name": "psycopg._connection_base.BaseConnection._deallocate",
+      "signature": "(self, name: 'bytes | None') -> 'PQGen[None]'"
+    },
+    {
+      "file": "_cursor_base.py",
+      "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+      "function_sha256": "2e4b180e6286fe071dd2de0b2bf6ad8328191cb8ff74dabcf179b7d3546175bf",
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._execute_send",
+      "signature": "(self, query: 'PostgresQuery', *, force_extended: 'bool' = False, binary: 'bool | None' = None) -> 'None'"
+    },
+    {
+      "file": "_cursor_base.py",
+      "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+      "function_sha256": "d1773a0bb0048c6d04070cfef87a05e409039fa38e466bb1845b6ac63962ebde",
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._send_prepare",
+      "signature": "(self, name: 'bytes', query: 'PostgresQuery') -> 'None'"
+    },
+    {
+      "file": "_cursor_base.py",
+      "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+      "function_sha256": "b93f0ec6a1ac9ed226cfff67cbccd3d89467cb2141e2f187cb484ad052e919fb",
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._send_query_prepared",
+      "signature": "(self, name: 'bytes', pgq: 'PostgresQuery', *, binary: 'bool | None' = None) -> 'None'"
+    },
+    {
+      "file": "_server_cursor_base.py",
+      "file_sha256": "6514d1e38e8899aaf52353949c8db2a43dccb0445d885986433d5ba0dce19cde",
+      "function_sha256": "4726beb1926c98a74e95cb3e747718724f1091b6a6f3c1c0d14a3e582f77c637",
+      "kind": "generator",
+      "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._describe_gen",
+      "signature": "(self) -> 'PQGen[None]'"
+    },
+    {
+      "file": "_server_cursor_base.py",
+      "file_sha256": "6514d1e38e8899aaf52353949c8db2a43dccb0445d885986433d5ba0dce19cde",
+      "function_sha256": "c03aa12d7ac8f3ead8bef6a672e4ccc52b21ed5838730a9edc3d73344c99131c",
+      "kind": "generator",
+      "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._declare_gen",
+      "signature": "(self, query: 'Query', params: 'Params | None' = None, binary: 'bool | None' = None) -> 'PQGen[None]'"
+    },
+    {
+      "file": "_server_cursor_base.py",
+      "file_sha256": "6514d1e38e8899aaf52353949c8db2a43dccb0445d885986433d5ba0dce19cde",
+      "function_sha256": "33d82be3e9fc7166714c783b088782366f57ff365beb738a70828d64e035fbf7",
+      "kind": "generator",
+      "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._fetch_gen",
+      "signature": "(self, num: 'int | None') -> 'PQGen[list[Row]]'"
+    },
+    {
+      "file": "_cursor_base.py",
+      "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+      "function_sha256": "04e872b6b24efbcd1d361ca4e7e2cb077fd44816dd7e48655a3047fdc74d112f",
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._close",
+      "signature": "(self) -> 'None'"
+    }
+  ],
+  "implementation": "cpython",
+  "libpq_implementation": "binary",
+  "libpq_version": 180006,
+  "numpy": "2.5.3",
+  "psycopg": "3.3.6",
+  "pyarrow": "22.0.0",
+  "python": "3.12.15",
+  "query_parser": {
+    "file": "_queries.py",
+    "file_sha256": "c217b09decc0c1ca1e6577847f029e8b96a99a5ac4315a81ba026121d4886410",
+    "function_sha256": "a57458f5b0a7ae99c48284113674df43f8d986f638ec4244567b4c0647ff43b4",
+    "qualified_name": "psycopg._queries._query2pg_nocache",
+    "scope": "uncached pure template validation; no parameter dumping or cache priming",
+    "signature": "(query: 'bytes', encoding: 'str') -> 'tuple[bytes, list[PyFormat], list[str] | None, list[QueryPart]]'"
+  }
+}

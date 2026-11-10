@@ -1,0 +1,94 @@
+{
+  "ANN_searches": 0,
+  "Torch_jobs": 0,
+  "all_prior_allowances_closed": true,
+  "date": "2026-11-02",
+  "decision": "D129",
+  "design_sha256": "5f244802f61684c20b85d55e73e1ffb41b97d3828edd1baacdf3cf8833584743",
+  "evidence_directory": "trials/torch-reviews-startup-native-authority-ownership-v1",
+  "exact_searches": 0,
+  "fresh_Torch_allowance_issued": false,
+  "implementation_pin_sha256": "1023ef6a64a6d737fa76b0912ce6f05c39f242b6cbce87152f394fe801d9ae93",
+  "native_adapter_wiring_complete": false,
+  "native_qualification_handoff": "HOLD",
+  "native_release": false,
+  "next_step": "Freeze host/guest adapter integration, cross-process authority handoff and practical authenticated site-attestation acquisition before implementation; verify complete startup/failure/publication paths. No native launch or fresh allowance authorized.",
+  "production_trust_roots": 0,
+  "provider_calls": 0,
+  "real_SQL": 0,
+  "report_sha256": "63c0d7851fd310683f5c367f3ce4e01dae91be2b4fbf8529d44905a0a74a3d7f",
+  "roadmap_version": "1.81",
+  "schema": "a3.authority-ownership.decision.v1",
+  "site_attestation_provisioned": false,
+  "spent_allowances_reused": false,
+  "status": "offline_backend_implemented_verified_native_handoff_HOLD",
+  "timezone": "America/New_York",
+  "verification": {
+    "ANN_searches": 0,
+    "Torch_jobs": 0,
+    "all_D128_source_files_identical": 25,
+    "authority_backend_implemented_offline": true,
+    "authority_models_per_phase": 68,
+    "exact_searches": 0,
+    "final_snapshot": "code-snapshot-v3",
+    "fresh_Torch_allowance_issued": false,
+    "fresh_local_checks": 642,
+    "full_B2f_released": false,
+    "inherited_integration_cases_per_phase": 136,
+    "linux": {
+      "snapshot": {
+        "architecture": "aarch64",
+        "cases": 17,
+        "kernel": "6.12.76-linuxkit",
+        "observations": 18,
+        "raw_bytes": 22952,
+        "seconds": 21.476665259
+      },
+      "source": {
+        "architecture": "aarch64",
+        "cases": 17,
+        "kernel": "6.12.76-linuxkit",
+        "observations": 18,
+        "raw_bytes": 22945,
+        "seconds": 21.576785552
+      }
+    },
+    "native_CPU_budget_qualified": false,
+    "native_adapter_wiring_complete": false,
+    "native_entry_closed": true,
+    "native_memory_qualified": false,
+    "native_release": false,
+    "native_resource_release": false,
+    "native_target_qualified": false,
+    "original_helpers_per_phase": {
+      "controller": 39,
+      "path": 26,
+      "storage": 35
+    },
+    "original_science_reexecuted": false,
+    "pinned_files_verified": 129,
+    "preservation_seconds": 50.97829291597009,
+    "prior_bytes_verified": 28833842186,
+    "prior_files_preserved": 200143,
+    "prior_full_science_proof_freshly_reverified": {
+      "A3": [
+        276,
+        276
+      ],
+      "CPU_samples": 60,
+      "main": [
+        128,
+        128
+      ]
+    },
+    "production_trust_roots": 0,
+    "provider_calls": 0,
+    "real_SQL": 0,
+    "real_linux_cases_per_phase": 17,
+    "schema": "a3.authority-ownership.verification.v1",
+    "scope": "offline authority/ownership backend only; native adapters and production trust remain closed",
+    "site_attestation_provisioned": false,
+    "spent_allowances_reused": false,
+    "status": "pass"
+  }
+}

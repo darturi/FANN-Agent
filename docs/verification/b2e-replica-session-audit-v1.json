@@ -1,0 +1,210 @@
+{
+  "activity": {
+    "Torch_or_SSH_calls": 0,
+    "allocations": 0,
+    "bootstrap_replays": 0,
+    "model_fits": 0,
+    "new_experiments": 0,
+    "new_native_or_database_queries": 0,
+    "production_or_experiment_or_analysis_source_edits": 0,
+    "protected_query_values_accessed": 0,
+    "provider_calls": 0,
+    "raw_or_package_or_old_receipt_edits": 0,
+    "simulations": 0,
+    "tests_run": 0
+  },
+  "campaign": "reviews-partial-ann-v1-20261027T005510Z.q6rgxprs",
+  "checks": {
+    "all_3200_warmups_included": true,
+    "all_5700_plan_packets_included": true,
+    "all_6400_formal_conditioning_rows_included": true,
+    "all_6400_retained_rows_included": true,
+    "all_prior_pins_match": true,
+    "boundary_settings_equal": true,
+    "changed_prior_immutable_files": [],
+    "future_calibration_contract_frozen": false,
+    "no_generic_custom_split_observed": true,
+    "plan_parameters_cache_counters_equal_within_cells": true,
+    "prior_immutable_files": 2235,
+    "proposed_calibration_ready_to_run": false,
+    "root_cause_identified": false,
+    "trusted_pa_source_matches_sealed_package": {
+      "pa_common.py": true,
+      "pa_control.py": true,
+      "pa_interface.py": true,
+      "pa_job.py": true,
+      "pa_measure.py": true,
+      "pa_metadata.py": true,
+      "pa_recovery.py": true,
+      "pa_report.py": true,
+      "pa_resources.py": true,
+      "pa_runtime.py": true,
+      "pa_settings.py": true,
+      "pa_stats.py": true,
+      "pa_trace.py": true
+    }
+  },
+  "decision": {
+    "causal_root_cause_identified": false,
+    "design_envelope_only": {
+      "allocated_or_authorized_now": 0,
+      "allocations_proposed_max": 1,
+      "combined_backend_search_attempts_max": 16802,
+      "cpus_max": 4,
+      "exact_admission_observer_telemetry_stage_counts": "Must derive and freeze before implementation; if not feasible within envelope, no allocation.",
+      "memory_gib_max": 32,
+      "wall_hours_max": 3
+    },
+    "existing_verdict": "measurement_inconclusive",
+    "gate": "GB2e",
+    "no_automatic_treatment_repeat": true,
+    "ready_to_implement_or_run": false,
+    "reason": "Observed progressive warm-state transient plus persistent within-cell session-associated asymmetry; observed settings/plans/parameters/counters equal. Missing physical backend/CPU/cache identities prevent attribution. Quality signal warrants a bounded diagnostic, not a blind repeat.",
+    "result": "GO_to_one_separately_frozen_instrumented_AA_calibration_design",
+    "scientific_margins_unchanged": {
+      "aa_absolute_interval_ms": [
+        -0.1,
+        0.1
+      ],
+      "aa_log_interval": "[-log(1.02), +log(1.02)]",
+      "both_block_gaps_negative": true,
+      "economic_upper_gap_ms_max": -0.1,
+      "economic_upper_log_ratio_max": "log(0.98)",
+      "quality_floor": 0.95,
+      "recall_delta_lower_95_min": -0.0025
+    }
+  },
+  "documentation_checks": "trials/torch-reviews-partial-ann-v1-settings-fix/b2e-audit-2026-10-26/documentation-checks.json",
+  "evidence": {
+    "analysis": "trials/torch-reviews-partial-ann-v1-settings-fix/b2e-audit-2026-10-26/analysis.json",
+    "input_pins": "trials/torch-reviews-partial-ann-v1-settings-fix/b2e-audit-2026-10-26/preservation-before.json",
+    "report": "research/fannagent-b2e-replica-session-audit-2026-10-26.md",
+    "scope": "trials/torch-reviews-partial-ann-v1-settings-fix/b2e-audit-2026-10-26/scope.json",
+    "source_line_findings": {
+      "base_connection": {
+        "finding": "Per-object state and autocommit reader connection to private server; frozen loader imports this runner class, not its main/older affinity logging path.",
+        "lines": [
+          156,
+          158,
+          164,
+          171,
+          174,
+          179
+        ],
+        "source": "trials/torch-reviews-first/runner.py"
+      },
+      "job_limits": {
+        "finding": "Single-thread BLAS/OMP environment; source does not pin individual backend CPUs or capture placement. Slurm CPU allocation alone is not a measured backend placement record.",
+        "lines": [
+          13,
+          25,
+          28,
+          29,
+          40
+        ],
+        "source": "agent/experiments/partial-ann-v1-settings-fix/pa_job.py"
+      },
+      "observer": {
+        "finding": "Per-packet inventory, fresh EXPLAIN and cached EXPLAIN EXECUTE if present; counters captured before cached EXPLAIN; non-ANALYZE, prepare=False observers.",
+        "lines": [
+          151,
+          185,
+          196,
+          199,
+          209,
+          231
+        ],
+        "source": "agent/experiments/partial-ann-v1-settings-fix/pa_metadata.py"
+      },
+      "ownership": {
+        "finding": "Per-reader backend/connection/admitted immutable binding; shared snapshot and requests read-only; fixed logical label to connection ownership; no retries or identity replacement allowed.",
+        "lines": [
+          38,
+          75,
+          89,
+          139,
+          157,
+          201
+        ],
+        "source": "agent/experiments/partial-ann-v1-settings-fix/pa_interface.py"
+      },
+      "runtime_limits": {
+        "finding": "Runtime identity pins image/module/profile/registry, not reader to backend PID or CPU state.",
+        "lines": [
+          95,
+          99,
+          239,
+          248
+        ],
+        "source": "agent/experiments/partial-ann-v1-settings-fix/pa_runtime.py"
+      },
+      "schedule": {
+        "finding": "Complementary cells/query order and within-round reversal; fixed creation and observer orders; main reference conditioners do not warm the measured connection itself; one on-reader warmup then two retained repeats.",
+        "lines": [
+          26,
+          129,
+          468,
+          470,
+          476,
+          485,
+          504,
+          534
+        ],
+        "source": "agent/experiments/partial-ann-v1-settings-fix/pa_measure.py"
+      },
+      "timer": {
+        "finding": "sql_ms begins before native conn.execute().fetchall() and ends after ID/distance decoding; client/protocol/wait/fetch/server/decode composite, not pure server execution or CPU time.",
+        "lines": [
+          1165,
+          1168,
+          1178,
+          1188,
+          1214
+        ],
+        "source": "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/frozen/vendor/fannagent_pgvector/backend.py"
+      },
+      "trace_limits": {
+        "finding": "Search SQL increments a count and delegates; no per-search physical backend/CPU/wait/buffer telemetry. Non-search observer/setup SQL has timestamp/hash/category.",
+        "lines": [
+          91,
+          97,
+          112
+        ],
+        "source": "agent/experiments/partial-ann-v1-settings-fix/pa_trace.py"
+      }
+    },
+    "source_sha256": {
+      "agent/experiments/partial-ann-v1-settings-fix/pa_interface.py": "1ea34c59c2ab25fa6bba0eb8043007ffa6f46957a403173e85079c9d364e72cf",
+      "agent/experiments/partial-ann-v1-settings-fix/pa_job.py": "a70cc853fcdd2520595e3190c17261e8af68d6b54cbab3e82e090c0327fa1289",
+      "agent/experiments/partial-ann-v1-settings-fix/pa_measure.py": "dbad31f905d195c78c839fdba02957ca8d08837ac7062a301cbaf95b9d604faa",
+      "agent/experiments/partial-ann-v1-settings-fix/pa_metadata.py": "80b650455f7dddda7cdeb4dc7eafa27642bad323c0db286834278f7852d314a3",
+      "agent/experiments/partial-ann-v1-settings-fix/pa_runtime.py": "dad6de299c3aa9917bdd1d3bcc8c156b0eb339d892eb32a18bf985c435246a7b",
+      "agent/experiments/partial-ann-v1-settings-fix/pa_trace.py": "2724f7ec26273c7ab12ead945f399cbaf09154463259d68a4243677ecf6e8dd7",
+      "trials/torch-reviews-first/runner.py": "266bf3d65acc33f18cb0a9d3455a5a562d4ec2e65b608afe94e680b309ca1550",
+      "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/frozen/legacy_execution.py": "3dcdf9183c4a8771b98e8ac045e99877ed8bb00d68a0b78f2e944d4de1416ff6",
+      "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix/frozen/vendor/fannagent_pgvector/backend.py": "bc743c14178dbe30ab705dc790db20fc7b045e4c30395e2488da21ab6266834d"
+    }
+  },
+  "job_id": "21048213_0",
+  "mutable_before_sha256": {
+    "agent/docs/experiments/README.md": "b16a71f167829699c19cea8d8d38f85a46eeb18b42821e9e93eafa1af0608b8b",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "77b4508485186df85bc2ae7545ccbc0e8195cba69305e3bf98eb477ebe762a20"
+  },
+  "next_step": "B2f.0\u20131 fixed-graph restoration and telemetry feasibility; separately freeze one instrumented qualification-first A/A calibration design before any implementation or native allocation.",
+  "outputs_sha256": {
+    "agent/docs/experiments/README.md": "41af94dcc690b076a26645d65951dc9ddab498ca9308856142b2bca66a48801d",
+    "research/fannagent-b2e-replica-session-audit-2026-10-26.md": "7d9c53e5c0c8c0d9d6fc5a70a6f362c2050d60e8887fb2fc9310e9430bf362fd",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "ffdb7ec74ec5c35ab89dc55cdddaefe149f99449803fa4f55860e892d374acc7",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2e-audit-2026-10-26/analysis.json": "3a6e1ad4624595cfcbbda6201382d059e64769dc73825e88ccb0fbd802cfa0be",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2e-audit-2026-10-26/preservation-before.json": "8897afdfae81d18871d3d574fb098da44c556a52c1ea9444e822291be517ff16",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2e-audit-2026-10-26/scope.json": "b64452ae8e44ed446436cede930a6db19975f0bc0b25e321914e26152487ec85"
+  },
+  "phase": "B2e",
+  "prior_verdict_unchanged": "measurement_inconclusive",
+  "recorded_at_utc": "2026-10-27T02:26:20.895281+00:00",
+  "register": "NEXT-PARTIAL-CONTROLS-01",
+  "schema_version": 1,
+  "scope": "Read existing traces/source; descriptive analysis and Markdown/JSON documentation only.",
+  "status": "complete_read_only_design_GO",
+  "user_commands_needed_now": false
+}

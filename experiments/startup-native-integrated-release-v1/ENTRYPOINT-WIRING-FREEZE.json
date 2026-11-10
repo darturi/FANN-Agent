@@ -1,0 +1,5 @@
+{
+  "schema": "a3.entrypoint-wiring.freeze.v1",
+  "basis": "The first supervised local replay stopped before any staging or scientific phase: ni_host imported specification from ni_binding, which exports only its admitted Campaign. All271 model cases passed but did not import this entrypoint. Preserve failed process receipt and pin/snapshot; fix only ni_host to import unchanged nh_binding.specification and add an entrypoint import test. No limit/test removal or native action.",
+  "correction": "Keep new admitted Campaign from ni_binding; import original byte-identical specification from nh_binding. Rerun complete models and full replay from a fresh snapshot/pin."
+}

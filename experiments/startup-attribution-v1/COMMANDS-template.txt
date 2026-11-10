@@ -1,0 +1,3 @@
+A1 local readiness only. A2 native handoff is unreleased.
+No Torch upload, submit, retry or experiment command is released here.
+A later maximum ONE ADDITIONAL allocation would remain zero ANN/exact searches.

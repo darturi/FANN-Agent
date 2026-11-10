@@ -1,0 +1,132 @@
+{
+  "analysis_date": "2026-10-24",
+  "authorization": "User requested moving to P3b after the completed P3a audit. Local offline modeling only.",
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "checkpoints": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "common_training": {
+    "decision": "Stop at first reached allowed checkpoint with mean group-pruned tree score >= fixed candidate threshold; otherwise continue.",
+    "ensemble": "Flexible offline diagnostic predictor; not assumed deployable in current runtime.",
+    "features": "Same exact qualified runtime fields within each profile; no IDs, evaluator strata, folds, roles, labels, future states or truth inputs.",
+    "group_support": "After sklearn fitting, prune any split having a child supported by fewer than eight distinct training vectors. Replace it with the fitted parent value. Same rule for both methods.",
+    "invalid_penalty_ms": 1000.0,
+    "minimum_leaf_groups": 8,
+    "preprocessing": "No learned scaling, imputation, feature selection or global quantiles. Fixed scikit-learn float32 input semantics are reproduced in canonical exported predicates.",
+    "sample_weights": "Each query contributes equal total weight within its vector: 1/(3 * reached_grid_states_for_query). Each vector totals one.",
+    "shallow_export": "Depth-three tree plus canonical availability/eight-checkpoint guard. Validate artifact and interpreter parity on observed trajectories; no native execution or adoption.",
+    "target": "min(activation_fixed_stop_proxy_ms_saved,reuse_fixed_stop_proxy_ms_saved) - risk_weight * max(0,native_recall-stop_recall) - 1000 * incomplete_or_invalid"
+  },
+  "continuation": "Measured same-profile continue cost/outcome; no invented free routing gain. Analytical native reference reported separately.",
+  "frozen_utc": "2026-10-24T23:20:30.208379+00:00",
+  "id": "NEXT-MODEL-01",
+  "inner_assignment": "Training groups hash sorted by [20261024,p3b-inner-v1,outer_fold,group], round-robin four folds.",
+  "inner_folds": 4,
+  "limits": {
+    "cpu_threads": 1,
+    "database_calls": 0,
+    "extra_trees_estimators_per_fit": 64,
+    "independent_vectors": 200,
+    "memory_gib": 4,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "query_filter_cases": 600,
+    "scientific_estimator_fits_max": 360,
+    "source_read_gib_max": 16,
+    "synthetic_test_fits_max": 24,
+    "torch_allocations": 0,
+    "wall_minutes": 60
+  },
+  "methods": [
+    "shallow_tree",
+    "extra_trees"
+  ],
+  "models": {
+    "extra_trees": {
+      "bootstrap": false,
+      "class": "sklearn.ensemble.ExtraTreesRegressor",
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": 1.0,
+      "min_samples_leaf": 8,
+      "n_estimators": 64,
+      "n_jobs": 1,
+      "random_state": 20261024
+    },
+    "shallow_tree": {
+      "class": "sklearn.tree.DecisionTreeRegressor",
+      "criterion": "squared_error",
+      "max_depth": 3,
+      "min_samples_leaf": 8,
+      "random_state": 20261024,
+      "splitter": "best"
+    }
+  },
+  "next_branch": "If flexible supports a signal and shallow fails, investigate bounded representation/compression. If both fail, record a negative result for these finite procedures and inspect information/risk/diversity; no universal ceiling. Any targeted native acquisition needs a separate justification/contract.",
+  "operating_identity": {
+    "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+    "new_policy_latency": "unmeasured",
+    "physical_index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+    "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+    "target_execution": "original"
+  },
+  "outer_assignment": "Reuse exact five 40-vector folds pinned in selective corpus.",
+  "outer_folds": 5,
+  "owner": "Codex",
+  "phase": "P3b",
+  "profiles": [
+    "static23",
+    "progress34"
+  ],
+  "protected_boundary": "Use only already exposed 200-vector corpus, P3a definitions/pins and sealed API validation sources. No raw consumed confirmation, unexecuted60/reserved37 query values or canonical workloads.",
+  "reporting": {
+    "also_report": "Original -.005 recall replay bounds; proxy intervals, diagnostic risk320 outcomes, continue/native/fixed128 controls, checkpoint/filter errors, first-stop losses, selected and unselected inner candidates, all fold/model receipts.",
+    "cost_limits": "Fixed-stop acquisition proxies only. Never pool old/new binary costs, transplant static costs to Light19, subtract P2 savings or reuse conditioned P2c timing as serving latency.",
+    "development_signal": "Complete top-10 and native floors; same -.0025 lower recall bounds, positive mean proxy savings in both regimes and nonzero stop count. This is not final latency acceptance.",
+    "primary": "Calibrated nested OOF first-stop recall/validity/coverage and acquisition cost proxies per method/profile; compare flexible minus shallow within profile using paired vector bootstrap.",
+    "reference_controls": [
+      "analytical_native",
+      "measured_profile_continue",
+      "fixed_checkpoint128_else_continue"
+    ],
+    "uncertainty": "Pointwise 10000-resample vector bootstrap on fixed OOF decisions. Prior adaptation/training uncertainty not removed; no independent confirmation or universal information ceiling."
+  },
+  "reviewer": "Codex correctness/result review; permanent artifacts for user review",
+  "risk_weights": [
+    20.0,
+    80.0,
+    320.0,
+    1280.0
+  ],
+  "seed": 20261024,
+  "selection": {
+    "admission": "All valid complete top-10; native mean recall >=.95 per filter; lower 95% recall delta >=-.0025 overall and every filter; positive mean activation AND reuse proxies overall; at least one stop.",
+    "fallback": "If no inner candidate qualifies, record explicit same-profile continue, with its measured costs; no outer-outcome rescue.",
+    "fixed_diagnostic": "Also refit risk320, threshold0 once for every profile/method/outer-fold regardless of selection; reuse if chosen risk320. Diagnostic first-stop outcomes never rescue a rejected candidate.",
+    "inner_scores": "Pool four inner held-out folds for each risk/threshold, covering all 160 outer-training vectors exactly once; fit and prune using the inner fitting groups only.",
+    "no_full_data_refit": true,
+    "outer_refit": "Refit selected risk on outer-training groups only. Evaluate held-out outer groups once.",
+    "ranking": "Maximum min(mean activation proxy saving,mean reuse proxy saving); exact ties prefer larger risk then larger threshold.",
+    "unit": "One complete first-stop outcome per query, vector-group clustered across three filters."
+  },
+  "stop_rule": "One frozen nested campaign. No retuning after OOF results, additional model families, extra seeds/folds, global refit, production adoption, confirmation or automatic Torch acquisition. Preserve failed/incomplete campaigns; correctness repairs must not change scientific criteria or use outcomes to retune.",
+  "thresholds_ms": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "timezone": "America/New_York",
+  "version": "grouped-stop-modeling.v1"
+}

@@ -1,0 +1,56 @@
+{
+  "ANN_searches": 0,
+  "SQL": 0,
+  "Torch_jobs_by_Codex": 0,
+  "all_previous_allowances_spent": true,
+  "authentic_proof_consumption": "metadata-only pass; temporary hypothetical release deleted",
+  "campaign": "reviews-startup-exact-vector-compatibility-v1-20261031T014056Z.3twju78d",
+  "correctness_allowance": "spent_completed; no resubmission",
+  "database_connections": 0,
+  "date": "2026-10-31",
+  "decision": "D112",
+  "exact_runtime_reference_pass": true,
+  "exact_searches": 0,
+  "exact_target_python": "3.12.15",
+  "files_sha256": {
+    "research/fannagent-startup-exact-vector-native-correctness-postrun-2026-10-31.md": "c5acede648edd323d63ae8da21f3a4d987c88ffdc391d3cf7467f5eb49cbb5b0",
+    "trials/torch-reviews-startup-exact-vector-compatibility-v1/postrun-audit-2026-10-31/qualified-receipts/QUALIFICATION-AUDIT.json": "a66f1937a9218e5140ba7b9404ae146708bd2621a0532f6722afc61775006971",
+    "trials/torch-reviews-startup-exact-vector-compatibility-v1/postrun-audit-2026-10-31/qualified-receipts/integration-sealed.json": "cc66d5c5464bc16882f6a1931b33316f1b7131dd5556b7d0b47970ecd3c2447f",
+    "trials/torch-reviews-startup-exact-vector-compatibility-v1/postrun-audit-2026-10-31/qualified-receipts/integration-source.json": "1d572b3510576bc80d6076dc7fac0c68c782e9a64bcf9b55118a68fd01ce8edb",
+    "trials/torch-reviews-startup-exact-vector-compatibility-v1/postrun-audit-2026-10-31/qualified-receipts/main-sealed.json": "b13eda95f3223e508d13eec9c0ed7555da391d9ac42bba958bd4accca2f8c16d",
+    "trials/torch-reviews-startup-exact-vector-compatibility-v1/postrun-audit-2026-10-31/qualified-receipts/main-source.json": "f11f5d3f1797662047a4932781d432a795d61ec416e20c42ec99d74299f8f466",
+    "trials/torch-reviews-startup-exact-vector-compatibility-v1/postrun-audit-2026-10-31/returned-verification.json": "0bff2748eb06c482b4d5b32a0fa278f133fe24e48716d65e8d83250d5b2de7eb",
+    "trials/torch-reviews-startup-exact-vector-compatibility-v1/postrun-audit-2026-10-31/verify_returned.py": "668dc92cf49659a613af29aa05a0127ab11451b0e2c7f2f0d3e4e171b1bd5d51"
+  },
+  "final_integrity_verified": true,
+  "full_B2f_released": false,
+  "guard_restoration_verified": true,
+  "guest_elapsed_seconds": 684.6033130190335,
+  "host_elapsed_seconds": 699.2012442450505,
+  "job_id": "21470341",
+  "locked_files_verified": 28,
+  "main_recipe_files_unchanged": 68,
+  "native_A3_tests": {
+    "sealed": 56,
+    "source": 56
+  },
+  "native_main_tests": {
+    "sealed": 128,
+    "source": 128
+  },
+  "native_memory_or_savings_qualified": false,
+  "native_resource_released": false,
+  "native_target_qualified": true,
+  "next_gate": "separate unchanged-limit startup-resource harness freeze/local qualification/release review; no new Torch command",
+  "package_manifest_sha256": "31def95d859395541fdac0a9ec04e40091788f51d571076477e8d08fcff8a199",
+  "prior_files_preserved": 789,
+  "returned_archive": {
+    "bytes": 52187,
+    "regular_members": 33,
+    "sha256": "3edd0524f864aa97869a0ee71fe034c60a36b3cf37e24dfe8995dce455b2e2d3",
+    "uncompressed_bytes": 372913
+  },
+  "roadmap_version": "1.64",
+  "status": "A3_native_correctness_independently_verified_complete_resource_held",
+  "total_individual_cases_verified": 368
+}

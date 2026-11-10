@@ -1,0 +1,22 @@
+{
+  "ANN_searches": 0,
+  "Torch_remote_commands": 0,
+  "all_spent_allowances": "closed including21756110",
+  "all_tests_strict_verification_limits_and_evidence_preserved": true,
+  "configuration_admitted": false,
+  "date": "2026-11-04",
+  "decision": "D146",
+  "dependency_closure_verified": false,
+  "evidence_directory": "trials/torch-reviews-startup-native-pinned-client-config-v1/dependency-return-xgzm0ve9",
+  "exact_searches": 0,
+  "expected_raw_files": 4,
+  "local_download_checks": "27source+27snapshot pass",
+  "native_qualification": false,
+  "new_allocations": 0,
+  "raw_downloaded_locally": false,
+  "reported_directory": "/home/dar579/torch-reviews-results/a3-client-config-dependencies.xgzm0ve9",
+  "reported_quota_seconds": 2.069581504998496,
+  "reported_strict_verification_seconds": 56.006351844989695,
+  "roadmap_version": "1.98",
+  "status": "reported_login_capture_complete_raw_dependency_review_pending"
+}

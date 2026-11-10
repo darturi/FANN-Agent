@@ -1,0 +1,32 @@
+# MAIN A2: ONE ZERO-SEARCH SLURM ALLOCATION, 1 hour / 4 physical CPUs / 32 GiB.
+# The prior image inventory is complete. These commands launch the main diagnostic.
+# No ANN/exact searches or full B2f calibration; no automatic retry.
+
+# MAC LOCAL TERMINAL: complete MFA and wait for UPLOAD VERIFIED.
+bash @OUTPUT@/transfer.sh upload
+
+# TORCH LOGIN: run once, only after verified upload.
+(
+  set -euo pipefail
+  cd /home/dar579
+  sha256sum -c torch-startup-attribution-v1-image-reference.tar.gz.sha256
+  test ! -e torch-startup-attribution-v1-image-reference
+  tar -xzf torch-startup-attribution-v1-image-reference.tar.gz
+  source /home/dar579/torch-reviews-first/torch.env
+  export TORCH_SLURM_ACCOUNT=torch_pr_288_courant
+  PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-attribution-v1-image-reference/sa_control.py submit \
+    /home/dar579/torch-reviews-first /home/dar579/torch-reviews-results
+)
+
+# TORCH: check after submit or reconnect. RUNNING/PENDING is not complete.
+PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-attribution-v1-image-reference/sa_control.py status
+
+# TORCH: after terminal status, collect including on any failure.
+PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-attribution-v1-image-reference/sa_control.py collect
+
+# MAC LOCAL TERMINAL: after collect prints the archive path.
+bash @OUTPUT@/transfer.sh download
+
+# Reply Downloaded or paste the exact error. Preserve bindings, reservations,
+# all packages/returns and the retained stopped source. Do not repeat submit,
+# delete reservations, change the image/graphs or increase any cap/margin.

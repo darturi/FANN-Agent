@@ -1,0 +1,75 @@
+{
+  "activity": {
+    "new_allocations_by_codex": 0,
+    "new_experiments": 0,
+    "new_fits": 0,
+    "new_tests": 0,
+    "protected_query_access": 0,
+    "provider_calls": 0,
+    "sealed_package_changes": 0,
+    "source_changes": 0,
+    "torch_ssh_calls": 0
+  },
+  "allocation_allowance": "consumed; preserve shared reservation; no automatic resubmit",
+  "array_task": "21043219_0",
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "ce18f544e06259b2ffddd825d7a0b58928d3ea0be84373f6b7b1bd4cca187036",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "d6fb558be2c8c8cf6c457f643bf6cd9e6c46ae93471e8403a2940b1528af8558",
+    "trials/torch-reviews-partial-ann-v1-quota-fix/native-failure-2026-10-26/COLLECT-ONLY.txt": "e7dfb9037632265f5739aec40575c343c118d4e2496311eff94adfd0d935727b",
+    "trials/torch-reviews-partial-ann-v1-quota-fix/native-failure-2026-10-26/INTERPRETATION.md": "5729bcb89a270d419d433321240acf7d5d21520f23055fea177849ddd75541f2",
+    "trials/torch-reviews-partial-ann-v1-quota-fix/native-failure-2026-10-26/documentation-checks.json": "9d5d8ab9c5d030ca9654d73b666f4ba9f180c922101fc5b9e40fa82ea49257c8",
+    "trials/torch-reviews-partial-ann-v1-quota-fix/native-failure-2026-10-26/preservation-before.json": "eb415cf2ae1ac79299b933510cb88f2e853ea08e0b0c7d676741c66584253dde",
+    "trials/torch-reviews-partial-ann-v1-quota-fix/native-failure-2026-10-26/status.json": "441e5abc229a8e8a34bda0043bc484204fe8b9921f130497fcf9db941cfd7464",
+    "trials/torch-reviews-partial-ann-v1-quota-fix/native-failure-2026-10-26/user-submission-status.txt": "a535e6aecd0a78d78b74bb6918687252d48e2c7e17901f74f2d167abfd86c43a"
+  },
+  "campaign": "reviews-partial-ann-v1-20261027T000432Z.9haq3pyt",
+  "campaign_path": "/home/dar579/torch-reviews-results/reviews-partial-ann-v1-20261027T000432Z.9haq3pyt",
+  "date": "2026-10-26",
+  "interpretation": {
+    "cleanup_independently_verified": false,
+    "exact_native_environment_mismatch": "not_yet_known",
+    "initial_environment_guard_failed": true,
+    "original_execution_retained": true,
+    "partial_index_build_reached": false,
+    "performance_result": false,
+    "protected_integrity_independently_verified": false,
+    "quality_AA_economics": "not_assessed",
+    "raw_archive_downloaded_verified": false,
+    "source_inference": "First admin catalog is checked by reader environment validator before any reader is created; exact rejected setting awaits durable raw catalog. Memory guard also checks admin work_mem later; no isolated one-line waiver proposed.",
+    "submission_succeeded": true
+  },
+  "job_id": "21043219",
+  "next": "User Torch collect, Mac quota-fix download; then independent failed raw/catalog/cleanup/accounting review before considering any separate correction",
+  "package_manifest_sha256": "c52355cde583edb684bd250f6e5286fbb29097ef9d6ffd9dc5aac5ca40980845",
+  "preservation": {
+    "mismatches": [],
+    "prior_files_verified": 1928
+  },
+  "recorded_at_utc": "2026-10-27T00:11:36.133363+00:00",
+  "register": "NEXT-PARTIAL-ANN-01",
+  "reported": {
+    "backend_searches": 0,
+    "confirmation_queries": 0,
+    "failure_message": "JIT/parallel/work_mem/cache tuning is outside this treatment",
+    "failure_type": "ValueError",
+    "final_integrity_verified": false,
+    "maximum_live_readers": 0,
+    "new_fits": 0,
+    "operations": {},
+    "protected_sources_unchanged": true,
+    "provider_calls": 0,
+    "reader_connections": 0,
+    "runtime_elapsed_seconds": 133.90960839,
+    "sql": {
+      "observer": 1,
+      "startup": 5
+    }
+  },
+  "roadmap_version": "1.28",
+  "sbatch_test_only_id_reported": "21043215",
+  "scheduler_elapsed_reported": "00:04:00",
+  "scheduler_exit_code_reported": "1:0",
+  "scheduler_state_reported": "FAILED",
+  "status": "user_reported_failed_initial_environment_qualification_awaiting_raw",
+  "version": "partial-ann.v1.quota-fix.native-failure-status"
+}

@@ -1,0 +1,2234 @@
+{
+  "M1": false,
+  "M2": false,
+  "M3": false,
+  "actual_new_policy_latency": "unmeasured",
+  "artifacts_sha256": {
+    "agent/experiments/grouped-stop-modeling-v1/README.md": "5524c7edf83b3fe2f6a4ced792f657ecfa8edaade66a3b4e4f50bc2b0787abba",
+    "agent/experiments/grouped-stop-modeling-v1/contract.json": "d50ccf6a7b41e7b7af79541c6b0f55cd87ef20acb4842636fb0da63125f1b5c7",
+    "agent/experiments/grouped-stop-modeling-v1/input-pins.json": "01a404459b6e6127b0d8c027ec6d3286c8d9345839365a0e3c97e4b172da3740",
+    "research/fannagent-p3b-grouped-modeling-2026-10-24/analysis.json": "7f24bcafda7c5ce9eb5ad7c7b05effbe390a6a540bca309b903827bad25f1cc8",
+    "research/fannagent-p3b-grouped-modeling-2026-10-24/analyze_saved.py": "0ba30ddc87b912a11b29ada31a5834c44702fd4505b07ca55a3cadacd3d25554",
+    "research/fannagent-p3b-grouped-modeling-2026-10-24/verify_saved.py": "474018c88de926a0a06468bb2280b34d6b49b4c5d3bb7116bff91caec0906952",
+    "trials/torch-reviews-grouped-stop-modeling-v1/api-dependency-install.json": "531f9eceeced137c224da57eb4cb889b68400681f3f23ba0fb1867b9e1ab849c",
+    "trials/torch-reviews-grouped-stop-modeling-v1/dependency-install.json": "6d583d690c9d3d74ca6b2b416f18554ae5fb6eb83d0f939932689ec1e4a83932",
+    "trials/torch-reviews-grouped-stop-modeling-v1/local-checks-preflight.json": "3068e0b1c7bacbdc0ef0f9ee053155961a329139c55a9c085bdee15c6930e987",
+    "trials/torch-reviews-grouped-stop-modeling-v1/local-checks.json": "4e662d2e6795df09a8cef5037c6927a8614558cb3284514947de570ef135d9ef",
+    "trials/torch-reviews-grouped-stop-modeling-v1/preflight-repair.json": "03560c7b5c7f614567e9a1ebb2aced7978b3312c07666c14bbf3a3e947084497",
+    "trials/torch-reviews-grouped-stop-modeling-v1/run-v1.log": "e6de11d18f41c094cb86fbe9d4d20397f9ef2d4e505c5cd8ca15f52ef9139be0",
+    "trials/torch-reviews-grouped-stop-modeling-v1/run.log": "738a877119698f3ccce6f5ddae8c9c3cffab295f6fb35c913efc9e57d71b874c",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/design-lock.json": "101135ac5c19400127d33b67f1ef19c2041b40b4c5de17d51cdff2855b936791",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/folds.json": "251f582fdbddbc042f0a40e2f3c4f29e75810cbf39d1adc1d7bcbb871421dce2",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/performance.json": "de04f6d303f61516b65c814f2e5071b1653bc1c935c594b77050c2d15cb1368a",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/report.txt": "229011204c09c66023efc94cabc8c60efd5487d1dc23bd4cdc2d45b471e398ee",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/verification-replay.json": "98fc86252c425618151a3bcfa6d0849fa05e1792ef37d76e6a66ede816effbce",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/verification.json": "c2b799c2d5a3c010d1690237713250b325484d80f652352b0eadfa3d424956cd",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261025-local-v1/design-lock.json": "09f1cef5bf7f1e99e1feb4371e35ce4eedae0089f1951afe613e338129a42963",
+    "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261025-local-v1/failure.json": "2e66782b94aac7b90b3c2ecc1796ac734f1cd315da7b5fcd55909861065ca8d1",
+    "trials/torch-reviews-grouped-stop-modeling-v1/verification-replay.log": "ff22daf83050ec3e66c138344a463bd0c067175c66fa8a035dccf91f3d5628ee"
+  },
+  "authorization": "User: Move on to p3b. Local offline implementation, checks, frozen comparison, analysis and roadmap update.",
+  "canonical_acceptance": false,
+  "dependencies": {
+    "location": "trials/torch-reviews-grouped-stop-modeling-v1/local-env",
+    "production_environment_modified": false,
+    "runtime": {
+      "packages": {
+        "annotated-types": "0.8.0",
+        "joblib": "1.5.2",
+        "numpy": "2.3.5",
+        "pydantic": "2.12.3",
+        "pydantic-core": "2.41.4",
+        "scikit-learn": "1.7.2",
+        "scipy": "1.16.3",
+        "threadpoolctl": "3.6.0",
+        "typing-extensions": "4.16.0",
+        "typing-inspection": "0.4.4"
+      },
+      "python": "3.12.7 (v3.12.7:0b05ead877f, Sep 30 2024, 23:18:00) [Clang 13.0.0 (clang-1300.0.29.30)]"
+    }
+  },
+  "experiment": "NEXT-MODEL-01",
+  "frozen_contract_sha256": "d50ccf6a7b41e7b7af79541c6b0f55cd87ef20acb4842636fb0da63125f1b5c7",
+  "gate": {
+    "G3": "revise",
+    "P3b": "closed_negative_for_frozen_procedures",
+    "not_a_universal_information_ceiling": true,
+    "qualified_family": null
+  },
+  "input_files_pinned_and_verified": 99,
+  "limitations": [
+    "All 200 vectors previously exposed; grouped outer folds do not remove earlier design adaptation.",
+    "Uncertainty conditions on fixed OOF fits; training uncertainty not independently resampled.",
+    "Fixed-stop proxy costs do not measure a learned tree or composite-session serving latency.",
+    "Finite models, target objective and pruning procedure do not establish a universal information or policy-family ceiling.",
+    "Extra Trees remains an offline diagnostic predictor; shallow artifacts have observed interpreter parity only."
+  ],
+  "local_checks": {
+    "dependency_install_receipts_sha256": {
+      "api-dependency-install.json": "531f9eceeced137c224da57eb4cb889b68400681f3f23ba0fb1867b9e1ab849c",
+      "dependency-install.json": "6d583d690c9d3d74ca6b2b416f18554ae5fb6eb83d0f939932689ec1e4a83932"
+    },
+    "fixed_contract_sha256": "d50ccf6a7b41e7b7af79541c6b0f55cd87ef20acb4842636fb0da63125f1b5c7",
+    "guarded_frozen_API_import": "passed",
+    "initial_tests_log_preserved": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-grouped-stop-modeling-v1/local-tests.log",
+    "local_test_note": "Initial tests used NumPy weak scalar comparison in the test oracle. Corrected oracle compares float32-converted values as float64, matching sklearn threshold semantics. No scientific fitting occurred before correction.",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "scientific_dataset_fits": 0,
+    "source_files_sha256": {
+      "README.md": "5524c7edf83b3fe2f6a4ced792f657ecfa8edaade66a3b4e4f50bc2b0787abba",
+      "common.py": "9b6ce670ff10dc5311fa65e25619b97c79510085155bf3af93c96a8d018d1021",
+      "compare.py": "26f810660f088afd74d20b8da651f99aea16a04eebec93ffb7f15bac7430a029",
+      "contract.json": "d50ccf6a7b41e7b7af79541c6b0f55cd87ef20acb4842636fb0da63125f1b5c7",
+      "data.py": "510c7b08848c4e1472b5c9481a184cd05dc14747a6ec1b80351b604875914bbd",
+      "input-pins.json": "01a404459b6e6127b0d8c027ec6d3286c8d9345839365a0e3c97e4b172da3740",
+      "models.py": "28a113a0fd7ffdb61fe1550d3e7defe329fc7d947932b6a03512c7a667b73704",
+      "requirements.txt": "98d1281994ef6efc02f1b585e88eae96be3e1e4019c1c0c67a2aa1f87f21b0d9",
+      "stats.py": "80cffd0fb2950c43742f8262ec9d064489c125691b7ccb032ccf030966e48b5a",
+      "test_comparison.py": "0e786cc585360d14ceb3c365b85fb1bfd027986c66d1736c37236fe85c44c4df"
+    },
+    "status": "passed",
+    "synthetic_estimator_fits_total": 12,
+    "synthetic_test_processes": 3,
+    "tests_log_sha256": "9f0f54c10eba1f0b561d581194a79d8b17a3cb9dd9657d89a62d92e65075c88d",
+    "tests_passed": 14,
+    "version": "grouped-stop-modeling.v1.local-checks"
+  },
+  "next_step": {
+    "Torch_command_needed_now": false,
+    "automatic_additional_fitting_authorized_by_this_record": false,
+    "gates": [
+      "Qualified risk/proxy signal permits representation and actual execution review; no immediate adoption.",
+      "Neither method qualifies: close this formulation allowance and explicitly choose justified fresh development diversity or broader B1 scope, with a new contract; no endless retuning."
+    ],
+    "hypothesis": "Separate recall-loss risk from savings prediction while holding runtime information, action grid and model capacity fixed.",
+    "id": "NEXT-RISK-01",
+    "new_measurement_needed_now": false,
+    "phase": "P3c",
+    "prerequisite": "Freeze a separate finite grouped-development protocol, risk/savings objectives, candidate count, stopping rule and data entitlement before any new fit.",
+    "reason": "All 225 positive-proxy inner candidates fail recall; all 305 recall-passing candidates have nonpositive proxies; fixed diagnostic ensemble fails unfiltered recall. This motivates a formulation comparison, not a proven causal diagnosis.",
+    "status": "planned_not_implemented_or_run"
+  },
+  "original_execution_retained": true,
+  "phase": "P3b",
+  "preflight": {
+    "all_failed_sources_and_logs_preserved": true,
+    "failed_run": "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261025-local-v1",
+    "failure": "Python neighboring bytecode-cache lookup blocked before corpus loading.",
+    "repair": "Redirected cache lookups to new run output; bytecode writing disabled; scientific contract unchanged.",
+    "scientific_fits": 0
+  },
+  "recorded_at_utc": "2026-10-24T23:38:08.719202+00:00",
+  "result": {
+    "branch": {
+      "progress34": "no_qualified_signal_for_these_finite_procedures_inspect_information_risk_diversity",
+      "static23": "no_qualified_signal_for_these_finite_procedures_inspect_information_risk_diversity"
+    },
+    "calibrated_noncontinue_cells": 0,
+    "calibrated_reports": {
+      "progress34": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -1.8708390966666668,
+            "activation_proxy_ms_saved_ci95": [
+              -1.9014733048333343,
+              -1.840601914916667
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.9965668999999999,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0170696427083334,
+              -0.9760813381666666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -1.79147203,
+              "activation_proxy_ms_saved_ci95": [
+                -1.8374945875,
+                -1.747737208500001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.9524540599999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9826046858749999,
+                -0.9238333667499997
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.942195675,
+              "activation_proxy_ms_saved_ci95": [
+                -1.9904067542500004,
+                -1.8944511693749988
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.030491015,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.0683095313749997,
+                -0.9949362838749999
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -1.8788495850000002,
+              "activation_proxy_ms_saved_ci95": [
+                -1.929307086375001,
+                -1.829376488375001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0067556249999998,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.042172682125,
+                -0.9735974114999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -1.8708390966666668
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -1.8708390966666668,
+            "activation_proxy_ms_saved_ci95": [
+              -1.9014733048333343,
+              -1.840601914916667
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.9965668999999999,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0170696427083334,
+              -0.9760813381666666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -1.79147203,
+              "activation_proxy_ms_saved_ci95": [
+                -1.8374945875,
+                -1.747737208500001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.9524540599999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9826046858749999,
+                -0.9238333667499997
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.942195675,
+              "activation_proxy_ms_saved_ci95": [
+                -1.9904067542500004,
+                -1.8944511693749988
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.030491015,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.0683095313749997,
+                -0.9949362838749999
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -1.8788495850000002,
+              "activation_proxy_ms_saved_ci95": [
+                -1.929307086375001,
+                -1.829376488375001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0067556249999998,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.042172682125,
+                -0.9735974114999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -1.8708390966666668
+        }
+      },
+      "static23": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -2.250748421666666,
+            "activation_proxy_ms_saved_ci95": [
+              -2.3660921955416674,
+              -2.1360719067499994
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -1.0556534516666667,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0959285687083336,
+              -1.0166401980416666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -2.298574525,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5203282940000005,
+                -2.0773935814999995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0862184300000002,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.153571516125,
+                -1.0200308276249999
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -2.311733105,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5342541367499987,
+                -2.0920560216249995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.037124155,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1029530664999996,
+                -0.9722040429999997
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -2.1419376349999997,
+              "activation_proxy_ms_saved_ci95": [
+                -2.3562567320000007,
+                -1.9376077566249996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.04361777,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1050168269999996,
+                -0.9839448409999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -2.250748421666666
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -2.250748421666666,
+            "activation_proxy_ms_saved_ci95": [
+              -2.3660921955416674,
+              -2.1360719067499994
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -1.0556534516666667,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0959285687083336,
+              -1.0166401980416666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -2.298574525,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5203282940000005,
+                -2.0773935814999995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0862184300000002,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.153571516125,
+                -1.0200308276249999
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -2.311733105,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5342541367499987,
+                -2.0920560216249995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.037124155,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1029530664999996,
+                -0.9722040429999997
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -2.1419376349999997,
+              "activation_proxy_ms_saved_ci95": [
+                -2.3562567320000007,
+                -1.9376077566249996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.04361777,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1050168269999996,
+                -0.9839448409999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -2.250748421666666
+        }
+      }
+    },
+    "controls": {
+      "progress34": {
+        "analytical_native": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": 0.0,
+            "activation_proxy_ms_saved_ci95": [
+              0.0,
+              0.0
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": 0.0,
+            "reuse_proxy_ms_saved_ci95": [
+              0.0,
+              0.0
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": 0.0,
+              "activation_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.0,
+              "reuse_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": 0.0,
+              "activation_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.0,
+              "reuse_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": 0.0,
+              "activation_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.0,
+              "reuse_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "scope": "Analytical reference only; no new native execution or free serving route claim.",
+          "utility_proxy_ms": 0.0
+        },
+        "fixed_checkpoint128_else_continue": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": false,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 498,
+            "continue": 102
+          },
+          "original_tolerance_recall_replay_pass": false,
+          "overall": {
+            "activation_proxy_ms_saved": 0.316834075,
+            "activation_proxy_ms_saved_ci95": [
+              0.11490437462500001,
+              0.5182659976249999
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": false,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9876666666666665,
+            "query_filter_cases": 600,
+            "recall_delta": -0.002666666666666666,
+            "recall_delta_ci95": [
+              -0.004333333333333331,
+              -0.0013333333333333329
+            ],
+            "recall_loss_cases": 16,
+            "reuse_proxy_ms_saved": 0.5262636683333333,
+            "reuse_proxy_ms_saved_ci95": [
+              0.3851051841666667,
+              0.6686871830416666
+            ],
+            "stopped_cases": 498
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": 0.38749352000000004,
+              "activation_proxy_ms_saved_ci95": [
+                0.12675030175000007,
+                0.6516128744999995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9919999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0014999999999999996,
+              "recall_delta_ci95": [
+                -0.003499999999999999,
+                0.0
+              ],
+              "recall_loss_cases": 3,
+              "reuse_proxy_ms_saved": 0.5936055250000001,
+              "reuse_proxy_ms_saved_ci95": [
+                0.4460414443749999,
+                0.7464448153750005
+              ],
+              "stopped_cases": 166
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": 0.19177770000000002,
+              "activation_proxy_ms_saved_ci95": [
+                -0.03888867124999996,
+                0.42534344524999956
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": false,
+              "policy_recall": 0.981,
+              "query_filter_cases": 200,
+              "recall_delta": -0.004999999999999999,
+              "recall_delta_ci95": [
+                -0.008499999999999997,
+                -0.0019999999999999996
+              ],
+              "recall_loss_cases": 10,
+              "reuse_proxy_ms_saved": 0.4929343300000001,
+              "reuse_proxy_ms_saved_ci95": [
+                0.3398640108750001,
+                0.645880945375
+              ],
+              "stopped_cases": 166
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": 0.37123100499999995,
+              "activation_proxy_ms_saved_ci95": [
+                0.1321253117499998,
+                0.617498511
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.99,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0014999999999999996,
+              "recall_delta_ci95": [
+                -0.003499999999999999,
+                0.0
+              ],
+              "recall_loss_cases": 3,
+              "reuse_proxy_ms_saved": 0.49225115,
+              "reuse_proxy_ms_saved_ci95": [
+                0.34552349037499996,
+                0.6410193425000001
+              ],
+              "stopped_cases": 166
+            }
+          },
+          "utility_proxy_ms": 0.316834075
+        },
+        "measured_profile_continue": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -1.8708390966666666,
+            "activation_proxy_ms_saved_ci95": [
+              -1.9014733048333343,
+              -1.840601914916667
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.9965668999999999,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0170696427083334,
+              -0.9760813381666666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -1.7914720300000002,
+              "activation_proxy_ms_saved_ci95": [
+                -1.8374945875,
+                -1.747737208500001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.95245406,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9826046858749999,
+                -0.9238333667499997
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.9421956749999998,
+              "activation_proxy_ms_saved_ci95": [
+                -1.9904067542500004,
+                -1.8944511693749988
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.030491015,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.0683095313749997,
+                -0.9949362838749999
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -1.8788495850000002,
+              "activation_proxy_ms_saved_ci95": [
+                -1.929307086375001,
+                -1.829376488375001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.006755625,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.042172682125,
+                -0.9735974114999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -1.8708390966666666
+        }
+      },
+      "static23": {
+        "analytical_native": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": 0.0,
+            "activation_proxy_ms_saved_ci95": [
+              0.0,
+              0.0
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": 0.0,
+            "reuse_proxy_ms_saved_ci95": [
+              0.0,
+              0.0
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": 0.0,
+              "activation_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.0,
+              "reuse_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": 0.0,
+              "activation_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.0,
+              "reuse_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": 0.0,
+              "activation_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.0,
+              "reuse_proxy_ms_saved_ci95": [
+                0.0,
+                0.0
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "scope": "Analytical reference only; no new native execution or free serving route claim.",
+          "utility_proxy_ms": 0.0
+        },
+        "fixed_checkpoint128_else_continue": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": false,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 498,
+            "continue": 102
+          },
+          "original_tolerance_recall_replay_pass": false,
+          "overall": {
+            "activation_proxy_ms_saved": 0.36313473666666674,
+            "activation_proxy_ms_saved_ci95": [
+              0.13471442579166665,
+              0.5889531950416668
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": false,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9876666666666665,
+            "query_filter_cases": 600,
+            "recall_delta": -0.002666666666666666,
+            "recall_delta_ci95": [
+              -0.004333333333333331,
+              -0.0013333333333333329
+            ],
+            "recall_loss_cases": 16,
+            "reuse_proxy_ms_saved": 0.5787972583333334,
+            "reuse_proxy_ms_saved_ci95": [
+              0.4322078051249999,
+              0.725897610166667
+            ],
+            "stopped_cases": 498
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": 0.33304681,
+              "activation_proxy_ms_saved_ci95": [
+                0.04971551987500003,
+                0.6082484326249998
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9919999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0014999999999999996,
+              "recall_delta_ci95": [
+                -0.003499999999999999,
+                0.0
+              ],
+              "recall_loss_cases": 3,
+              "reuse_proxy_ms_saved": 0.6428740949999999,
+              "reuse_proxy_ms_saved_ci95": [
+                0.4839626617499999,
+                0.7998270156249997
+              ],
+              "stopped_cases": 166
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": 0.467048655,
+              "activation_proxy_ms_saved_ci95": [
+                0.18732202887500002,
+                0.7440109548749994
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": false,
+              "policy_recall": 0.981,
+              "query_filter_cases": 200,
+              "recall_delta": -0.004999999999999999,
+              "recall_delta_ci95": [
+                -0.008499999999999997,
+                -0.0019999999999999996
+              ],
+              "recall_loss_cases": 10,
+              "reuse_proxy_ms_saved": 0.5684013099999999,
+              "reuse_proxy_ms_saved_ci95": [
+                0.409646869125,
+                0.7271448503749999
+              ],
+              "stopped_cases": 166
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": 0.28930874500000003,
+              "activation_proxy_ms_saved_ci95": [
+                0.03211739624999997,
+                0.5547713995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.99,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0014999999999999996,
+              "recall_delta_ci95": [
+                -0.003499999999999999,
+                0.0
+              ],
+              "recall_loss_cases": 3,
+              "reuse_proxy_ms_saved": 0.5251163699999999,
+              "reuse_proxy_ms_saved_ci95": [
+                0.37702858525,
+                0.6713369247499997
+              ],
+              "stopped_cases": 166
+            }
+          },
+          "utility_proxy_ms": 0.36313473666666674
+        },
+        "measured_profile_continue": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -2.250748421666666,
+            "activation_proxy_ms_saved_ci95": [
+              -2.3660921955416674,
+              -2.1360719067499994
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -1.0556534516666667,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0959285687083336,
+              -1.0166401980416666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -2.298574525,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5203282940000005,
+                -2.0773935814999995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0862184299999997,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.153571516125,
+                -1.0200308276249999
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -2.311733105,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5342541367499987,
+                -2.0920560216249995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.037124155,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1029530664999996,
+                -0.9722040429999997
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -2.141937635,
+              "activation_proxy_ms_saved_ci95": [
+                -2.3562567320000007,
+                -1.9376077566249996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.04361777,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1050168269999996,
+                -0.9839448409999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -2.250748421666666
+        }
+      }
+    },
+    "fixed_diagnostic_reports": {
+      "progress34": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": false,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 19,
+            "16": 30,
+            "32": 91,
+            "64": 76,
+            "continue": 384
+          },
+          "original_tolerance_recall_replay_pass": false,
+          "overall": {
+            "activation_proxy_ms_saved": 0.19454953666666663,
+            "activation_proxy_ms_saved_ci95": [
+              -0.06297455666666678,
+              0.4541867225416668
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": false,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9878333333333335,
+            "query_filter_cases": 600,
+            "recall_delta": -0.0024999999999999996,
+            "recall_delta_ci95": [
+              -0.004666666666666666,
+              -0.0008333333333333332
+            ],
+            "recall_loss_cases": 10,
+            "reuse_proxy_ms_saved": 0.5777245316666667,
+            "reuse_proxy_ms_saved_ci95": [
+              0.3781410039166668,
+              0.7785047847500003
+            ],
+            "stopped_cases": 216
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": 2.20848047,
+              "activation_proxy_ms_saved_ci95": [
+                1.7401583003749992,
+                2.672204916875
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": false,
+              "policy_recall": 0.9869999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0065000000000000014,
+              "recall_delta_ci95": [
+                -0.0125,
+                -0.0019999999999999996
+              ],
+              "recall_loss_cases": 8,
+              "reuse_proxy_ms_saved": 2.1133814,
+              "reuse_proxy_ms_saved_ci95": [
+                1.7469505408750001,
+                2.4751782433749994
+              ],
+              "stopped_cases": 131
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.762864995,
+              "activation_proxy_ms_saved_ci95": [
+                -1.8794867657500005,
+                -1.6329515419999996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.8837494300000001,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9789841568749998,
+                -0.775964215625
+              ],
+              "stopped_cases": 10
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": 0.13803313499999997,
+              "activation_proxy_ms_saved_ci95": [
+                -0.2532401651250001,
+                0.5459004636249997
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9905000000000002,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0009999999999999998,
+              "recall_delta_ci95": [
+                -0.0024999999999999996,
+                0.0
+              ],
+              "recall_loss_cases": 2,
+              "reuse_proxy_ms_saved": 0.503541625,
+              "reuse_proxy_ms_saved_ci95": [
+                0.20961288875000011,
+                0.8082714836249998
+              ],
+              "stopped_cases": 75
+            }
+          },
+          "utility_proxy_ms": 0.19454953666666663
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -1.8708390966666668,
+            "activation_proxy_ms_saved_ci95": [
+              -1.9014733048333343,
+              -1.840601914916667
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.9965668999999999,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0170696427083334,
+              -0.9760813381666666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -1.79147203,
+              "activation_proxy_ms_saved_ci95": [
+                -1.8374945875,
+                -1.747737208500001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.9524540599999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9826046858749999,
+                -0.9238333667499997
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.942195675,
+              "activation_proxy_ms_saved_ci95": [
+                -1.9904067542500004,
+                -1.8944511693749988
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.030491015,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.0683095313749997,
+                -0.9949362838749999
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -1.8788495850000002,
+              "activation_proxy_ms_saved_ci95": [
+                -1.929307086375001,
+                -1.829376488375001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0067556249999998,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.042172682125,
+                -0.9735974114999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -1.8708390966666668
+        }
+      },
+      "static23": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": false,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 40,
+            "16": 49,
+            "32": 110,
+            "64": 69,
+            "continue": 332
+          },
+          "original_tolerance_recall_replay_pass": false,
+          "overall": {
+            "activation_proxy_ms_saved": 0.45461294666666674,
+            "activation_proxy_ms_saved_ci95": [
+              0.14462590229166666,
+              0.7569391915416667
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": false,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9879999999999999,
+            "query_filter_cases": 600,
+            "recall_delta": -0.002333333333333333,
+            "recall_delta_ci95": [
+              -0.003999999999999999,
+              -0.0009999999999999998
+            ],
+            "recall_loss_cases": 11,
+            "reuse_proxy_ms_saved": 0.924389015,
+            "reuse_proxy_ms_saved_ci95": [
+              0.7091027877916668,
+              1.1362493710833332
+            ],
+            "stopped_cases": 268
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": 2.661432455,
+              "activation_proxy_ms_saved_ci95": [
+                2.1553495313750006,
+                3.154945367250001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": false,
+              "policy_recall": 0.987,
+              "query_filter_cases": 200,
+              "recall_delta": -0.006499999999999999,
+              "recall_delta_ci95": [
+                -0.011499999999999998,
+                -0.0024999999999999996
+              ],
+              "recall_loss_cases": 10,
+              "reuse_proxy_ms_saved": 2.56621308,
+              "reuse_proxy_ms_saved_ci95": [
+                2.197533274625,
+                2.923480074750001
+              ],
+              "stopped_cases": 149
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.9413104499999998,
+              "activation_proxy_ms_saved_ci95": [
+                -2.213501895999999,
+                -1.6685790441250006
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.812501625,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9320133453750005,
+                -0.6889698592499999
+              ],
+              "stopped_cases": 19
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": 0.643716835,
+              "activation_proxy_ms_saved_ci95": [
+                0.16265116725000023,
+                1.1144675391249999
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.991,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_loss_cases": 1,
+              "reuse_proxy_ms_saved": 1.01945559,
+              "reuse_proxy_ms_saved_ci95": [
+                0.6787883727499999,
+                1.3590781822499993
+              ],
+              "stopped_cases": 100
+            }
+          },
+          "utility_proxy_ms": 0.45461294666666674
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -2.250748421666666,
+            "activation_proxy_ms_saved_ci95": [
+              -2.3660921955416674,
+              -2.1360719067499994
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -1.0556534516666667,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0959285687083336,
+              -1.0166401980416666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -2.298574525,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5203282940000005,
+                -2.0773935814999995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0862184300000002,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.153571516125,
+                -1.0200308276249999
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -2.311733105,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5342541367499987,
+                -2.0920560216249995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.037124155,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1029530664999996,
+                -0.9722040429999997
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -2.1419376349999997,
+              "activation_proxy_ms_saved_ci95": [
+                -2.3562567320000007,
+                -1.9376077566249996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.04361777,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1050168269999996,
+                -0.9839448409999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -2.250748421666666
+        }
+      }
+    },
+    "inner_candidate_summary": {
+      "any_stop": 303,
+      "complete_top10": 552,
+      "positive_both_proxies": 225,
+      "positive_but_recall_fail": 225,
+      "qualified": 0,
+      "recall_pass": 305,
+      "recall_pass_but_nonpositive_proxy": 305,
+      "trials": 560
+    },
+    "outer_cells": 20,
+    "paired_flexible_minus_shallow": {
+      "calibrated": {
+        "progress34": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        },
+        "static23": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        }
+      },
+      "fixed_diagnostic": {
+        "progress34": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              1.8140258559583327,
+              2.319688541625
+            ],
+            "activation_proxy_saving_difference_ms": 2.0653886333333333,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0025,
+            "recall_delta_difference_ci95": [
+              -0.004666666666666666,
+              -0.0008333333333333332
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              1.379688503833333,
+              1.7714754594583333
+            ],
+            "reuse_proxy_saving_difference_ms": 1.5742914316666667,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              3.5301613785000017,
+              4.4714635857500005
+            ],
+            "activation_proxy_saving_difference_ms": 3.9999525,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.006500000000000001,
+            "recall_delta_difference_ci95": [
+              -0.0125,
+              -0.0019999999999999996
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              2.702728737,
+              3.4281110605000005
+            ],
+            "reuse_proxy_saving_difference_ms": 3.06583546,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.076808426125,
+              0.3017149551249999
+            ],
+            "activation_proxy_saving_difference_ms": 0.17933068,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.062193512500000006,
+              0.24779424137499995
+            ],
+            "reuse_proxy_saving_difference_ms": 0.146741585,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              1.625817153375,
+              2.424045139375
+            ],
+            "activation_proxy_saving_difference_ms": 2.01688272,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0009999999999999998,
+            "recall_delta_difference_ci95": [
+              -0.0024999999999999996,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              1.21963281725,
+              1.8101313007499997
+            ],
+            "reuse_proxy_saving_difference_ms": 1.5102972499999998,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        },
+        "static23": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              2.4167788219583324,
+              2.999343427708333
+            ],
+            "activation_proxy_saving_difference_ms": 2.7053613683333335,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.002333333333333333,
+            "recall_delta_difference_ci95": [
+              -0.003999999999999999,
+              -0.0009999999999999998
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              1.7679796507916667,
+              2.1918850090833337
+            ],
+            "reuse_proxy_saving_difference_ms": 1.9800424666666665,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              4.435542503749999,
+              5.493369494749999
+            ],
+            "activation_proxy_saving_difference_ms": 4.960006979999999,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.006499999999999999,
+            "recall_delta_difference_ci95": [
+              -0.011499999999999998,
+              -0.0024999999999999996
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              3.2758421541250002,
+              4.021844845624999
+            ],
+            "reuse_proxy_saving_difference_ms": 3.65243151,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.19823205475000003,
+              0.5660664419999999
+            ],
+            "activation_proxy_saving_difference_ms": 0.370422655,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.12808657925,
+              0.33232970337500006
+            ],
+            "reuse_proxy_saving_difference_ms": 0.22462253000000001,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              2.3265566546250005,
+              3.249577063499999
+            ],
+            "activation_proxy_saving_difference_ms": 2.78565447,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0004999999999999999,
+            "recall_delta_difference_ci95": [
+              -0.0014999999999999996,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              1.732805391125,
+              2.4027948603750002
+            ],
+            "reuse_proxy_saving_difference_ms": 2.06307336,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        }
+      }
+    }
+  },
+  "run": "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1",
+  "scientific_resources": {
+    "cpu_threads": 1,
+    "elapsed_seconds": 235.66110558318906,
+    "estimator_fits": 340,
+    "individual_trees": 11050,
+    "limit_estimator_fits": 360,
+    "memory_limit_bytes": 4294967296,
+    "metered_reads_bytes": 841202095,
+    "peak_rss_bytes": 1070366720,
+    "read_limit_bytes": 17179869184,
+    "wall_limit_seconds": 3600
+  },
+  "source_files_pinned": 10,
+  "status": "complete_locally_verified_closed_negative_for_frozen_procedures",
+  "verification": {
+    "all_unpruned_sklearn_prediction_parity": true,
+    "data_only_independent_replay": {
+      "all_inner_and_outer_group_splits_verified": true,
+      "all_outer_model_first_stops_independently_reconstructed": true,
+      "all_reports_and_paired_contrasts_match_tolerance": 1e-12,
+      "all_stored_model_hashes_and_pruning_bounds_verified": true,
+      "design_lock_sha256": "101135ac5c19400127d33b67f1ef19c2041b40b4c5de17d51cdff2855b936791",
+      "individual_trees": 11050,
+      "inner_candidate_assessments_reconstructed": 560,
+      "new_fits_in_verification": 0,
+      "new_measurements_provider_or_Torch_calls": 0,
+      "outer_first_stop_cases_reconstructed": 4800,
+      "saved_performance_sha256": "de04f6d303f61516b65c814f2e5071b1653bc1c935c594b77050c2d15cb1368a",
+      "scientific_estimator_fits": 340,
+      "source_and_input_preservation": true,
+      "status": "passed"
+    },
+    "group_support_minimum_distinct_vectors": 8,
+    "original_output_hashes_verified": 803,
+    "primary_status": "passed",
+    "shallow_validator_and_shared_interpreter_first_stop_parity": true,
+    "source_input_preservation": true
+  },
+  "version": "grouped-stop-modeling.v1.postrun",
+  "zero_access_boundaries": {
+    "Torch_allocations": 0,
+    "confirmation_queries": 0,
+    "database_calls": 0,
+    "full_data_refit": false,
+    "globally_selected_policy": false,
+    "new_native_measurements": 0,
+    "production_code_changes": false,
+    "protected_query_values_opened": false,
+    "provider_calls": 0
+  }
+}

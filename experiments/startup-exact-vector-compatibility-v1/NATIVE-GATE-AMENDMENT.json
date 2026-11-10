@@ -1,0 +1,9 @@
+{
+  "at_utc": "2026-10-31T00:35:14.773931+00:00",
+  "budgets": "Original25m correctness budget unchanged; same90s caps include four additional gate cases; future native resource limits remain1h4CPU32GiB, zero searches, one snapshot/four verification scans and unchanged margin/no-event rule.",
+  "code_before": "No production integration/capsule seal yet; original A2/prototype and prior positive/negative logs preserved.",
+  "date": "2026-10-30",
+  "metadata_only_full_counts": "247286-row count may be validated as metadata; actual fixtures stay<=64x768, no native arrays/DB/search.",
+  "reason": "Replace placeholder unconditional native rejection before target qualification, so later resource release needs new pinned evidence rather than another integration code change.",
+  "scope": "NativeSpec metadata validation only: distinct startup-resource contract, manifest, exact code hashes and complete exact-image128+128/56+56 correctness proofs. Current correctness capsule cannot authorize native resources."
+}

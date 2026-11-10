@@ -1,0 +1,21 @@
+{
+  "quota": {
+    "/home": {
+      "inode_limit_lower": 29000,
+      "inode_usage_upper": 17980,
+      "inodes_available_lower": 11020,
+      "space_available_lower": 23811100000,
+      "space_limit_lower": 49000000000,
+      "space_usage_upper": 25188900000
+    },
+    "/scratch": {
+      "inode_limit_lower": 4990000,
+      "inode_usage_upper": 176801,
+      "inodes_available_lower": 4813199,
+      "space_available_lower": 4744009000000,
+      "space_limit_lower": 4990000000000,
+      "space_usage_upper": 245991000000
+    }
+  },
+  "text": "\u001b[0;36m\u001b[1mQuota Information for dar579\u001b[0m\nHostname: torch-login-a-0 at 2026-11-03 18:05:25\n\nFilesystem   Environment       Backed up?   Allocation           Current Usage\nSpace        Variable          /Flushed?    Space / Files        Space(%) / Files(%)\n\n/home        $HOME             YES/NO       50GB/30k             \u001b[0;32m25GB(49.38%)/17980(59.00%)\u001b[0m\n/scratch     $SCRATCH          NO/YES       5.00TB/5.00M         \u001b[0;32m245GB(4.90%)/176801(3.00%)\u001b[0m\n/archive     $ARCHIVE          YES/NO       2.00TB/20k           \u001b[0;32m1GB(0.05%)/2382(11.00%)\u001b[0m\n"
+}

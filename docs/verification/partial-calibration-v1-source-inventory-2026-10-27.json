@@ -1,0 +1,148 @@
+{
+  "B2d_verdict_unchanged": "measurement_inconclusive",
+  "activity": {
+    "allocations": 0,
+    "assistant_SSH_Torch_calls": 0,
+    "assistant_native_DB_queries": 0,
+    "bootstrap_replays": 0,
+    "code_edits": 0,
+    "experiments": 0,
+    "fits": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "simulations": 0,
+    "tests": 0
+  },
+  "decision": "Clear the requested preliminary read-only source availability/hash/space prerequisite only; next step is separately requested B2f implementation/local readiness. No further user Torch commands now.",
+  "documentation_checks": "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-source-inventory-2026-10-27/documentation-checks.json",
+  "frozen_artifacts_unchanged": {
+    "agent/docs/verification/partial-calibration-v1-design-freeze.json": "058e3457799fc8152c8df46ca48d0d233e1688f79690e671045aeacba37b3557",
+    "research/fannagent-partial-calibration-v1-design-2026-10-26.md": "dec43325d277d04b49c90f8f2adb634a4df1bec02c86bba992e3d7da57f2cec0",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-design-2026-10-26/contract.json": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-design-2026-10-26/schedule.json": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328"
+  },
+  "gate": "P0-B2f preliminary only",
+  "graph_comparisons": [
+    {
+      "expected_sha256": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393",
+      "match": true,
+      "path": "/scratch/dar579/torch-reviews/partial-ann-v1.tu6x964d/partial-21048213.3xxjxm27/native640/pgdata/base/16384/264013",
+      "reported_sha256": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+    },
+    {
+      "expected_sha256": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393",
+      "match": true,
+      "path": "/scratch/dar579/torch-reviews/partial-ann-v1.tu6x964d/partial-21048213.3xxjxm27/partial640/pgdata/base/16384/264013",
+      "reported_sha256": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+    },
+    {
+      "expected_sha256": "b0300f40eb9917c158855d00fe0a8f36cb1c8aee958fb65b061e4db4d8606700",
+      "match": true,
+      "path": "/scratch/dar579/torch-reviews/partial-ann-v1.tu6x964d/partial-21048213.3xxjxm27/partial640/pgdata/base/16384/270339",
+      "reported_sha256": "b0300f40eb9917c158855d00fe0a8f36cb1c8aee958fb65b061e4db4d8606700"
+    }
+  ],
+  "more_user_commands_needed_now": false,
+  "observations": {
+    "PG_VERSION_contents_not_read": true,
+    "PG_VERSION_files_listed": true,
+    "all_three_graph_hashes_match": true,
+    "no_postmaster_pid_stop_branch_reported": true,
+    "paths_owned_by_dar579_as_reported": true,
+    "pg_control_clean_state_not_read": true,
+    "pg_control_files_listed_size_bytes": 8192,
+    "pid_absence_basis": "Inferred from successful traversal of both checks to checksums/df/myquota in the supplied set-e transcript; not an independent filesystem check.",
+    "source_and_both_pgdata_paths_listed": true,
+    "space_and_quota_output_received": true
+  },
+  "original_execution_retained": true,
+  "outputs_sha256": {
+    "agent/docs/experiments/README.md": "4f934bb35192a2b6951809c87aff642ab38c013765c146d0fccc3a651a71d26c",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "69410b9a6d3ea4a50de4af2305ebdf3aaa57b93a909f145e90f937c9f661383f",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-source-inventory-2026-10-27/assessment.json": "373494108b28c8b3cfb9aa925335ed2003c70862d84e177d62fc85342ca6c565",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-source-inventory-2026-10-27/preservation-before.json": "1007b19b9363a718d0726ae783e449d053e4e699b641919ee22bbb8bb809feb9",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-source-inventory-2026-10-27/review.md": "0da399c6857a9ad360191b65f4f76f3042b376181502dce74fb2f82e4b147ca5",
+    "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-source-inventory-2026-10-27/user-output.txt": "e23d3bd046d3beab5301165f94b744fa7ffe628ac59d17aa694af8d801c73634"
+  },
+  "pending": [
+    "Matching-version pg_controldata clean-shutdown state",
+    "Whole stopped-cluster inventories, absence of unsafe aliases/tablespaces and consistency through copy",
+    "Independent writable clone safety, full logical data/catalog/module/runtime and relation-family proofs",
+    "Current B0/B1,F0/F1 footprints and final conservative scratch/filesystem inode/quota preflight",
+    "Actual allocation four physical cores, PID namespace mapping and mandatory proc/affinity capabilities",
+    "Separate requested implementation/local correctness/preservation/seal",
+    "Separate bounded native execution and independent 56-interval calibration verdict"
+  ],
+  "phase": "B2f preliminary source inventory",
+  "preservation": {
+    "all_hashes_match": true,
+    "changed_files": [],
+    "manifest": "trials/torch-reviews-partial-ann-v1-settings-fix/b2f-source-inventory-2026-10-27/preservation-before.json",
+    "mutable_before_sha256": {
+      "agent/docs/experiments/README.md": "10cda2430b265a6247c58d9a91f9d22277ef43222359c9fba80ee77814537bf5",
+      "research/fannagent-performance-research-roadmap-2026-10-22.md": "93e6feaa805de1f8935190ab77c81bae0b4544fddf5cff4838d7bcf113175464"
+    },
+    "prior_immutable_files": 2249
+  },
+  "protocol": "partial-calibration.v1",
+  "provenance": "Human user pasted requested read-only Torch command output; stdout transcribed with display spacing/emphasis normalization. No independent remote read or raw transfer.",
+  "quota_arithmetic": {
+    "capacity_percent_is_global_filesystem_not_user_quota": true,
+    "complete_scratch_gate_assessed": false,
+    "filesystem_inode_availability_not_measured": true,
+    "filesystems": {
+      "/home": {
+        "filesystem_available_1024_blocks": 954397704192,
+        "filesystem_available_bytes": 977303249092608,
+        "quota_inode_limit_lower": 29000,
+        "quota_inode_usage": 14433,
+        "quota_inodes_available_lower": 14567,
+        "quota_space_available_lower_bytes": 26340700000,
+        "quota_space_limit_lower_bytes": 49000000000,
+        "quota_usage_upper_bytes": 22659300000,
+        "required_home_bytes": 3221225472,
+        "required_home_inodes": 10000
+      },
+      "/scratch": {
+        "filesystem_available_1024_blocks": 213729288192,
+        "filesystem_available_bytes": 218858791108608,
+        "quota_inode_limit_lower": 4990000,
+        "quota_inode_usage": 143401,
+        "quota_inodes_available_lower": 4846599,
+        "quota_space_available_lower_bytes": 4778000000000,
+        "quota_space_limit_lower_bytes": 4990000000000,
+        "quota_usage_upper_bytes": 212000000000,
+        "required_incremental_scratch_bytes": null,
+        "required_incremental_scratch_inodes": null
+      }
+    },
+    "home_reported_quota_space_and_inodes_pass": true,
+    "method": "Same conservative decimal display rounding convention as existing resource guard, reconstructed from reported scalars without importing/executing experiment code; quota limit lower by one displayed unit, usage upper by one displayed unit, percentage upper constrains usage using allocation upper.",
+    "scratch_positive_headroom_reported": true,
+    "whole_cluster_footprints_and_file_counts_not_measured": true
+  },
+  "readiness": {
+    "actual_compute_core_affinity_proc_telemetry_verified": false,
+    "clean_whole_cluster_copies_verified": false,
+    "code_implemented": false,
+    "complete_resource_preflight_verified": false,
+    "experimental_local_checks_run": false,
+    "independent_remote_graph_read_by_Codex": false,
+    "native_calibration_run": false,
+    "package_sealed": false,
+    "preliminary_source_output_received": true,
+    "reported_graph_hashes_compared_exactly": true
+  },
+  "recorded_at_utc": "2026-10-27T15:00:29.176970+00:00",
+  "register": "NEXT-PARTIAL-CALIBRATION-01",
+  "reported_host": "torch-login-a-0",
+  "reported_timestamp": "2026-10-27 10:55:06",
+  "reported_timestamp_timezone": "not supplied",
+  "review_date": "2026-10-27",
+  "review_timezone": "America/New_York",
+  "schema_version": 1,
+  "source_campaign": "reviews-partial-ann-v1-20261027T005510Z.q6rgxprs",
+  "source_job": "21048213_0",
+  "source_path": "/scratch/dar579/torch-reviews/partial-ann-v1.tu6x964d/partial-21048213.3xxjxm27",
+  "status": "preliminary_user_reported_source_inventory_pass"
+}

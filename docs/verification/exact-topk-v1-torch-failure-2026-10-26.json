@@ -1,0 +1,31 @@
+{
+  "aa_result_available": false,
+  "array_task_id": "0",
+  "backend_searches": 0,
+  "campaign": "reviews-exact-topk-v1-20261026T032153Z.9khasec1",
+  "cleanup_independently_verified": false,
+  "error": {
+    "message": "HNSW catalog differs from frozen source",
+    "type": "ValueError"
+  },
+  "exit_code": "1:0",
+  "host_error": "Runtime or cleanup failed",
+  "job_id": "20941363",
+  "next_action": "collect original failed raw archive, checksum/download using original helper, independently verify before releasing corrected commands",
+  "not_established": "Actual complete remote catalog was not saved before the old guard failed; other differences cannot be excluded from this pasted status.",
+  "operations": {},
+  "original_package_manifest_sha256": "0124abaa1c472f19e0f778c633f7a4c1cc42f69430f83964a4a14cb90a56f55e",
+  "performance_result_available": false,
+  "progress_label": "restore_and_verify",
+  "protected_sources_unchanged_reported": true,
+  "provider_calls": 0,
+  "quality_result_available": false,
+  "raw_archive_downloaded": false,
+  "record_type": "user_reported_torch_failure_not_independently_raw_verified",
+  "recorded_date": "2026-10-26",
+  "reported_elapsed": "00:06:17",
+  "scheduler_state": "FAILED",
+  "source_backed_defect": "to_jsonb(oid) emits JSON text, but original guard and mock expected integer264013",
+  "source_traced_failure_site": "measure initial before_qualification catalog, after restore/initialization",
+  "work_directory": "/scratch/dar579/torch-reviews/exact-topk-v1.664ufstt/cost-20941363.2g6tv4d3"
+}

@@ -1,0 +1,261 @@
+{
+  "activity_by_codex": {
+    "native_db_or_ann_experiments": 0,
+    "new_fits": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "ssh_calls": 0,
+    "torch_submissions": 0
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "cd053471fe355c2e948183abbe91925dfc09278237e5df2dfe58f80bc1736f5e",
+    "research/fannagent-partial-calibration-v1-release-audit-2026-10-27.md": "8f91384d78ec654c822b6b779f8fbeec919b2530dd28c71bf1eea3a437df639c",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "9d3b0ffad5e3d649c8fe11b93e72c6a839068e1ee70387510f4a301c65a46523",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/COMMANDS.txt": "af7014c088dddeeeed06eb39f36edc27d1b6974f2de0c0423c181d4259e29d55",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/RELEASE-HOLD.json": "f9eb733767be46a34274aed8365d77c18e5faa8883afe9139c0959328ef0de11",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/failed-archive-verification.json": "a01bc79eab91ebb3afa524440e48a12f3d7808a3a6c0f5821f40f3908177fd95",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/failed-verification.log": "af84caf90c3f5d9d00714ab4f34754b02f133faac7e85278eabe74462b8a8911",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/local-checks-source-attempt-1.json": "9efbdaa378c0860d43a3ca7d11913062d0882df632c3a5a8a2b73e9e718930ec",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/local-checks-source-attempt-1.log": "4d9cd545c3f25ed0b8949f358b2908307aa324b387955a0c2660ab7fcbc95a55",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/local-checks-source.json": "112a08e1bcad66eb3eefba8e4326364e846fb6f344097eec2eb6a0ef563b0593",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/local-checks-source.log": "56a30ee3dab7f08f28d2f6e946c1b36a08c01b251d06360e78068ae34ffeb218",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/preservation-after.json": "2c719b88b4b65654cafd1ae536bc23e6b7bb6e7f0954d80ac3c3c2eefbe7204f",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/preservation-before.json": "37b11c696073fd2b0ba42bff86a2530e971a2a2c710e617c0154efa6d8890cef",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/runtime-entry-checks.log": "38da344d8007eda0fbc9c383db017273dd83f6489f68f136522770d2f3b14618",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/scientific-parity.json": "ab3094ee3f4e80ad71663e9c5cf11a261eff6ab06d21af120bb4306cc12d6206",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/source-audit.json": "80dea5cdff9f00bd50156ec47f8c0761b26a06ec8fa356cab9ac54202ab701a7",
+    "trials/torch-reviews-partial-calibration-v1-identity-fix/static-checks.json": "800d540cc7812eabf76c85330663d75d62aff2dbd4e3652cb784e9cbebd5bd20"
+  },
+  "b1c_deferred": true,
+  "b2d_verdict": "measurement_inconclusive",
+  "date": "2026-10-27",
+  "diagnosis": {
+    "cause": "Runtime included field_map in pinned source_ids/votes eligibility hash",
+    "correction": [
+      "Hash only unchanged two-key pinned schema",
+      "Validate exact field map separately",
+      "Restore pinned full snapshot identity comparison",
+      "Require snapshot startup proof in trusted complete-raw analysis"
+    ],
+    "old_comparison_guaranteed_mismatch": true,
+    "old_test_gap": "Actual backend methods exercised through acquire, runtime startup guard skipped"
+  },
+  "local_checks": {
+    "actual_frozen_backend_methods_with_mocked_IO": true,
+    "actual_runtime_main_exercised": true,
+    "first_combined_local_attempt": {
+      "corrected_before_final_checks": true,
+      "errors": 1,
+      "preserved": true,
+      "status": "failed_fixture_schema",
+      "tests_run": 111
+    },
+    "full_size_id_vote_only_rows": 247286,
+    "runtime_entry_tests": 6,
+    "sealed_release_tests": null,
+    "source_tests": 119,
+    "static": {
+      "AST_files": 26,
+      "bash_syntax": true,
+      "ruff_check": true,
+      "ruff_format": true,
+      "scope": "isolated source only; no production seal",
+      "status": "pass"
+    },
+    "status": "pass"
+  },
+  "original_execution_retained": true,
+  "preservation": {
+    "changed": 0,
+    "prior_pinned_files": 3065
+  },
+  "production_code_changed": false,
+  "protocol": "partial-calibration.v1.identity-fix",
+  "register": "NEXT-PARTIAL-CALIBRATION-01",
+  "release": {
+    "additional_job_commands_released": false,
+    "native_calibration_qualified": false,
+    "new_allocations_released": 0,
+    "next_user_action": "Read-only scontrol show config accounting fields; no submission",
+    "open_gates": [
+      "R2 accounting attribution/full-run memory feasibility",
+      "R3 final release review/seal/source+sealed/archive/preservation checks"
+    ],
+    "production_package_exists": false,
+    "production_packaging_blocked": true,
+    "spent_allocations": 3,
+    "spent_jobs": [
+      "21111616_0",
+      "21129331_0",
+      "21159802_0"
+    ],
+    "status": "release_held_memory_review",
+    "transfer_helper_released": false
+  },
+  "science": {
+    "production_package_released": false,
+    "same_scientific_files": {
+      "CONTRACT.json": {
+        "sha256": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+        "unchanged": true
+      },
+      "DESIGN.md": {
+        "sha256": "dec43325d277d04b49c90f8f2adb634a4df1bec02c86bba992e3d7da57f2cec0",
+        "unchanged": true
+      },
+      "LAUNCHER.sh": {
+        "sha256": "3947bedc90d9a4367ba3d1f7478b788f288ecc54e357dab90ec52633c9c52f92",
+        "unchanged": true
+      },
+      "SCHEDULE.json": {
+        "sha256": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+        "unchanged": true
+      },
+      "legacy_common.py": {
+        "sha256": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+        "unchanged": true
+      },
+      "legacy_metadata.py": {
+        "sha256": "fba262f11a173757f13e71741286449b0e136936f4adf245375e3069996faefc",
+        "unchanged": true
+      },
+      "pc_interface.py": {
+        "sha256": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+        "unchanged": true
+      },
+      "pc_job.py": {
+        "sha256": "12e14ab440602dc352e4b0c9e58660e457babd21a4e384eeb85c48ffbbf73655",
+        "unchanged": true
+      },
+      "pc_measure.py": {
+        "sha256": "e3c4484f88fa23be8ebce76c267b7f63e7cd6f722d5bcd772a0c8cb428ed44a8",
+        "unchanged": true
+      },
+      "pc_metadata.py": {
+        "sha256": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+        "unchanged": true
+      },
+      "pc_proc.py": {
+        "sha256": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+        "unchanged": true
+      },
+      "pc_resources.py": {
+        "sha256": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+        "unchanged": true
+      },
+      "pc_restore.py": {
+        "sha256": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+        "unchanged": true
+      },
+      "pc_results.py": {
+        "sha256": "c45a6ae0a0809a1f52d4e8dc0988488629913ed1830e24047ac631c9c6270b03",
+        "unchanged": true
+      },
+      "pc_settings.py": {
+        "sha256": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+        "unchanged": true
+      },
+      "pc_stats.py": {
+        "sha256": "57ec97fdaac47553bfa5655249004ef38df844277903409efe1d596839f6a2e7",
+        "unchanged": true
+      },
+      "pc_trace.py": {
+        "sha256": "d26085ce72c55e64184f50a176904ac94723185ef8bcb3c62d7c8f1bdd852100",
+        "unchanged": true
+      },
+      "quota_base.py": {
+        "sha256": "8790f4f8b0ee813efe9d3ee6d135929e55bc1cd33b39a917d1b51d7c1509ffc4",
+        "unchanged": true
+      }
+    },
+    "status": "pass"
+  },
+  "scientific_contract_schedule_margins_caps_changed": false,
+  "scientific_protocol": "partial-calibration.v1",
+  "source_sha256": {
+    "experiment.py": "9468652dd92abf5fb3ca5a76f58193a649a721fc0b81ea13683638be2e95c1a8",
+    "identity_repair.py": "20585c6ed061099b1750eec1795839554cb38898e53696d06290b95b600e7e0c",
+    "launch_repair.py": "5426ab2f159d76ddcb64e2df4954a52cdbc99004ce5f48eb1bdecb46e9709b42",
+    "legacy_common.py": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+    "legacy_metadata.py": "fba262f11a173757f13e71741286449b0e136936f4adf245375e3069996faefc",
+    "metadata_repair.py": "540039ffeec25d05d98621c01d1944a954755b01f6fb5d0ec6cdfed053dff99c",
+    "pc_common.py": "425957812f96d85e58a368ee651558216bae0004310835775c2f22d61f415729",
+    "pc_control.py": "6528ee4eefeb6dab3bd82d83774f5d677bbe0e32eb124774a201797692ba1927",
+    "pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+    "pc_job.py": "12e14ab440602dc352e4b0c9e58660e457babd21a4e384eeb85c48ffbbf73655",
+    "pc_measure.py": "e3c4484f88fa23be8ebce76c267b7f63e7cd6f722d5bcd772a0c8cb428ed44a8",
+    "pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+    "pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+    "pc_report.py": "e350689fbaa521bf96908c836a66bbefb0f99369be19947c0b29e3b76b9c1aba",
+    "pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+    "pc_restore.py": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+    "pc_results.py": "c45a6ae0a0809a1f52d4e8dc0988488629913ed1830e24047ac631c9c6270b03",
+    "pc_runtime.py": "f2a67e7f76b5c2d595056499cae814debf81efe607b473cadf2efce29aeeb3e6",
+    "pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+    "pc_snapshot.py": "af2b2e266450ca4c25d58eda8da6a2e4ed63c0c2d318d930ea6b185623653d41",
+    "pc_stats.py": "57ec97fdaac47553bfa5655249004ef38df844277903409efe1d596839f6a2e7",
+    "pc_trace.py": "d26085ce72c55e64184f50a176904ac94723185ef8bcb3c62d7c8f1bdd852100",
+    "quota_base.py": "8790f4f8b0ee813efe9d3ee6d135929e55bc1cd33b39a917d1b51d7c1509ffc4",
+    "run_checks.py": "b80a77b1c676c5a13b311a3ce8037dc25895ccd9ad0f5db3457d0ca50e9b24d1",
+    "test_experiment.py": "dcb0f1b118d5f2e24ca1881221b8336ff9394f98e7c0371c7bf40d92d759a8f3",
+    "test_support.py": "64e997026efced999594bda30b08f9ba150c90133a89398f1ee70a558f13b617"
+  },
+  "status": "release_held_memory_review",
+  "timezone": "America/New_York",
+  "verified_failure": {
+    "archive_files": 30,
+    "archive_sha256": "7e383c42372f1953700dd0743f737d3b83f65be301c31d7bda8863d6006ba21e",
+    "automatic_retry": false,
+    "calibration_verdict": false,
+    "campaign": "reviews-partial-calibration-v1-metadata-fix-20261028T000153Z.y1p9092a",
+    "cleanup_verified": true,
+    "final_measurement_integrity_qualified": false,
+    "identity_source_sha256": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "initial_catalogs_match": true,
+    "job": "21159802_0",
+    "native_searches": 0,
+    "previous_manifest_sha256": "794db833de9306045caffbfeca43384f6b45171481bcbb1a21fb51213811615d",
+    "protected_sources_unchanged": true,
+    "raw_files_sha256": {
+      "analysis/failure-summary.json": "07e51e716a539efd5e955c522569e22837d8bdc259e887b0d5fd06c90c34019d",
+      "logs/block-0-21159802-0.log": "2bbdda420a88f67753fabc41e6f7e9b05a22506a4431563c9d620e7995f1961f",
+      "protected-source-before.json": "dab1af3826657645c8363e1925c5d727b0a105a9619a3bde8d55399518dd6e4c",
+      "resource-preflight-login.json": "787041b12f5ce1c0bba03ea6cf033ac2ebdff390eeb870369a7e7959617d0433",
+      "run/LOCK.json": "aad272dba36c1697ec7840eaca1badb5fb36033543d7dc36b9259f5e00c045a6",
+      "run/admissions.jsonl": "942853f32e7644fd7510064e8539bf900ea6ba68a15c9bdd1e460a3e5057d716",
+      "run/catalogs.jsonl": "eafd447db621d9d14e3afec8e8ea8adfb8fc09dc5cbeb3db35203018ef0470d9",
+      "run/charges-checkpoint.json": "a61e23390ada0edee0f3f8e2da24ae1955ef9457db5107c1805dba85095d3276",
+      "run/cleanup.json": "e93350d2ae06a0445c6afb160478fc8be8165e0b4ebe302aa92dd5dba5290746",
+      "run/copies.json": "12223c4ec892ac9076c2f631b3d6d41459f27714d65ce9e5af2d9851df92f3a7",
+      "run/failure.json": "a488678fcca0e78cf552aa542e10ab8a4d9d8ed5689257ff439f3c71628f70d4",
+      "run/host-exit.json": "7d120b6dd349f46dd80e8e1e6b0631699e99d888d3d88843b38dbbff4b7717ea",
+      "run/host-failure.json": "0d1efcf811d22d2c12f8dd33b593f56c4aa0c9278715e7f64b463f51b62aba48",
+      "run/host-launch.json": "c445c345e885a1b34cd72ccee2c61c6f03abfd0ba78977a97e63d1fc6532dcc1",
+      "run/job-exit.json": "5fb8a75af4156fde495d25fe192855e230cd9360996e03e17945f449d6ab85dc",
+      "run/memory-preflight.json": "367c4e75adc1c6333f42e1cb791b9fc836a3e5d29d6e643f16e19045c70f238c",
+      "run/native640-server.log": "b9646fb8ed58e880ab9bd333e62beff9ae172fb3daee94c7380775c496f06567",
+      "run/partial640-server.log": "0ac69f7a3b012d33e088d025a93986fec763746fd10b10f34309e266a74d878a",
+      "run/placement.jsonl": "7a239dc744526a7387d97399cbf14c908d48e0ed85bdfd68d576597a54422fc7",
+      "run/progress.json": "d8aa7b3242863b68d6b7190ee52e86f57cf0a9bf6602d4657aff1a0fde223df7",
+      "run/protected-source-after.json": "dab1af3826657645c8363e1925c5d727b0a105a9619a3bde8d55399518dd6e4c",
+      "run/protected-source-before.json": "dab1af3826657645c8363e1925c5d727b0a105a9619a3bde8d55399518dd6e4c",
+      "run/resource-preflight.json": "b9f1beec9753493a52c7823567395a08b28aecd066fa33a7009a81cb35348aef",
+      "run/source-after.json": "22c17993428532d2bf647e65ede69c421569d970c68c707d14446344067774e3",
+      "run/source-before.json": "22c17993428532d2bf647e65ede69c421569d970c68c707d14446344067774e3",
+      "run/source-control.json": "4d1b16100d3fcb8e3cace39e66e427c7c5173f85e1157d513dc47d7a7510ee85",
+      "run/sql.jsonl": "d76000d552a3bf1e4e390ef215456810e48c30249de70d26400e71eef8828995",
+      "run/status.json": "05637a38e883ed92883fe33e233a750ee7fe1b00989b2b1944bfc8b7a6d3926d",
+      "scheduler-evidence.json": "05164a5aec2acf03cb70d7eb21def7b7d07dbb07a1e6ef160f601bc0dbf31a25",
+      "submission.json": "42b118d8a7984f6b9e81347df16b353568aa5f2d599ac2ada641f33eeafd0e60"
+    },
+    "raw_lock_verified": true,
+    "reader_admissions": 2,
+    "retained_identity_present_both_cells": true,
+    "scheduler_maxrss": "33534232K; accounting peak, anonymous RSS/headroom unresolved",
+    "source_bytes": 4603663760,
+    "source_file_count": 2587,
+    "source_inventories_unchanged": true,
+    "spent_allocations_total": 3,
+    "status": "verified_zero_search_eligibility_startup_failure"
+  }
+}

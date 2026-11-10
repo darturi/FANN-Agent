@@ -1,0 +1,24 @@
+{
+  "before_code_sha256": {
+    "exact_codec.py": "8345ed58d5199571a0c48837bc921461a64c81fba77b3d402a5cef0f3dd93fe0",
+    "test_memory_remedy.py": "9212ecd47c0a8e67c788ab3ab53792ae385d7ef588d0ab44250c603d2c454ce1"
+  },
+  "dependency_changes": false,
+  "formatter": {
+    "arguments": {
+      "trim": "-",
+      "unique": true
+    },
+    "function": "numpy.format_float_positional",
+    "function_source_sha256": "93a04d0dc48215f0a0c18595ff35a222d6d89ef87cc0c07fa91b3a04c6609058",
+    "module_source_sha256": "ea1e7577acc4048383d842a628827e33dc544f06842ab5848b3ee3bb298eaea2",
+    "numpy": "2.5.3"
+  },
+  "frozen_at_utc": "2026-10-31T22:32:26.001618+00:00",
+  "implementation_change": "Read effective exact formatter reference from this immutable hash-pinned amendment; original codec/memory/scientific design and all limits unchanged.",
+  "initial_failed_receipt_sha256": "4350432c68f9f65f150ceedec066d418d10493785f436ae207487e2857cc0d35",
+  "native_release": false,
+  "parent_freeze_sha256": "2f7107f50b6661d5e5c53318c236e94897387807f87ebab53e123a4a415bfbd7",
+  "reason": "Design freeze was written by system Python withNumPy2.3.4. Review probe and approved guarded runner use the exact existingNumPy2.5.3 environment. Correct reference prospectively; preserve original freeze and failed receipt, no version wildcard or dependency change.",
+  "schema": "startup-exact-vector.memory-formatter-amendment.v1"
+}

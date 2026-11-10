@@ -1,0 +1,556 @@
+{
+  "activity": {
+    "SSH_SCP_calls": 0,
+    "analysis_utility_created": true,
+    "existing_database_access": 0,
+    "new_Torch_jobs": 0,
+    "new_experiments": 0,
+    "new_fits": 0,
+    "new_native_searches": 0,
+    "new_performance_bootstrap_or_interval_tests": 0,
+    "protected_query_values_opened": 0,
+    "provider_calls": 0,
+    "quality_bootstrap_replay": "One unchanged sealed quality_report call, original seed/resamples/gates, four prespecified contexts",
+    "scientific_implementation_or_seal_changes": 0
+  },
+  "all_original_and_corrected_allowances_consumed": true,
+  "archive": {
+    "all_extracted_bytes_match": true,
+    "bytes": 2219553,
+    "regular_members": 30,
+    "sha256": "6856a060b01166ac53ba3993caf9affe3e5d49892dbbc5536eca35e7b102ceaf"
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "8d287581988a98cd25e2fee0bcff6a2a5a741cb62a327b2adce5a46945e35a32",
+    "research/fannagent-exact-topk-v1-catalog-fix-partial-results-2026-10-26.md": "4bb9bb4c1fc306dcd2b3b501d21ec2c8ca933f9d4dc717c08ccfc9cf31b27d1d",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "1cab6c358b7a72234eb4587d4a82f6579641413c27c1c8f0da8e223b9783fcd2",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/partial-review-2026-10-26/analysis-log.txt": "785e33172a86051bd90a7f2555795dfc106eb71a6fd25460c5ac179bbad87603",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/partial-review-2026-10-26/analysis.json": "eda11880a9a148e70fa381b35e68cdcad090e8f6cddbe647d435551aacb6a742",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/partial-review-2026-10-26/analyze_partial.py": "1a246f993cd0bc2b5ef57101cebe79970d2bd09d981bc1b9ae92a5616fd2eeeb",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/partial-review-2026-10-26/preservation-before.json": "6b78702586a10a6667463f681a3a79f46855caacf7888c195a5e4f79730f0993"
+  },
+  "campaign": "reviews-exact-topk-v1-catalog-fix-20261026T050859Z.jrmkwhuy",
+  "counts": {
+    "backend_attempts": 26247,
+    "complete_block0_cases": 600,
+    "complete_block1_prefix_cases": 163,
+    "complete_case_block_instances": 763,
+    "complete_slots": 6104,
+    "conditioning_records": 6105,
+    "exact10_faster_case_block_instances": 0,
+    "execution_records_including_warmup": 18312,
+    "extra_conditioning_query_id": "reviews-bounded-v0646-votes32",
+    "operations": {
+      "conditioning": 6105,
+      "measurement": 12208,
+      "qualification_exact": 6,
+      "qualification_exact10": 12,
+      "qualification_native640": 12,
+      "reference_exact": 600,
+      "reference_exact10": 600,
+      "reference_native640": 600,
+      "warmup": 6104
+    },
+    "retained": 12208,
+    "retained_planned": 19200
+  },
+  "date": "2026-10-26",
+  "decision": {
+    "adopt_exact10": false,
+    "canonical_acceptance_established": false,
+    "formal_outcome": "incomplete_budget_exhausted; no performance verdict",
+    "quality_prefix": "pass",
+    "reason": "Exact10 slower in all763 complete case/block instances; full first block56.11x arithmetic mean latency, no observed context advantage. Full controls/final audits missing; no positive qualification inferred.",
+    "recommended_next": "Read-only B2c alternative mechanism feasibility/design triage; prioritize one indexed/filter-aware ANN candidate before implementation, fits or another allocation.",
+    "repeat_or_extend_current_comparison": false,
+    "retain_original": true
+  },
+  "descriptive_AA_point_gaps_only": {
+    "0": {
+      "overall": {
+        "exact10": {
+          "b_minus_a_mean_ms": 0.4194499012500046
+        },
+        "native640": {
+          "b_minus_a_mean_ms": 0.03957146750000007
+        }
+      },
+      "unfiltered": {
+        "exact10": {
+          "b_minus_a_mean_ms": 1.5360339087500279
+        },
+        "native640": {
+          "b_minus_a_mean_ms": 0.06102498375000032
+        }
+      },
+      "votes108": {
+        "exact10": {
+          "b_minus_a_mean_ms": -1.459427572500033
+        },
+        "native640": {
+          "b_minus_a_mean_ms": -0.006909824999999259
+        }
+      },
+      "votes32": {
+        "exact10": {
+          "b_minus_a_mean_ms": 1.1817433675000188
+        },
+        "native640": {
+          "b_minus_a_mean_ms": 0.06459924375000092
+        }
+      }
+    },
+    "1": {
+      "overall": {
+        "exact10": {
+          "b_minus_a_mean_ms": 3.7088377131902917
+        },
+        "native640": {
+          "b_minus_a_mean_ms": -0.08198916104294618
+        }
+      },
+      "unfiltered": {
+        "exact10": {
+          "b_minus_a_mean_ms": 6.658275264150916
+        },
+        "native640": {
+          "b_minus_a_mean_ms": -0.1789418301886787
+        }
+      },
+      "votes108": {
+        "exact10": {
+          "b_minus_a_mean_ms": 1.714019978070212
+        },
+        "native640": {
+          "b_minus_a_mean_ms": -0.07242100438596566
+        }
+      },
+      "votes32": {
+        "exact10": {
+          "b_minus_a_mean_ms": 2.904770179245247
+        },
+        "native640": {
+          "b_minus_a_mean_ms": 0.004673226415095044
+        }
+      }
+    }
+  },
+  "descriptive_latency_only": {
+    "0": {
+      "overall": {
+        "cases": 600,
+        "exact_minus_native_ms": 526.4285211060417,
+        "outer_ms": {
+          "exact10": {
+            "max": 1263.574,
+            "mean": 535.9803936177084,
+            "median": 510.2527675,
+            "min": 244.14301,
+            "n": 4800
+          },
+          "native640": {
+            "max": 21.912315,
+            "mean": 9.551872511666666,
+            "median": 9.95064,
+            "min": 2.549465,
+            "n": 4800
+          }
+        },
+        "ratio_of_arithmetic_means": 56.11259917498495,
+        "sql_mean_ms": {
+          "exact10": 535.4551266197917,
+          "native640": 9.183025274791667
+        },
+        "vectors": 200
+      },
+      "unfiltered": {
+        "cases": 200,
+        "exact_minus_native_ms": 815.0852969287499,
+        "outer_ms": {
+          "exact10": {
+            "max": 906.577977,
+            "mean": 824.633492626875,
+            "median": 826.455367,
+            "min": 755.875779,
+            "n": 1600
+          },
+          "native640": {
+            "max": 21.179337,
+            "mean": 9.548195698125,
+            "median": 9.938255999999999,
+            "min": 2.549465,
+            "n": 1600
+          }
+        },
+        "ratio_of_arithmetic_means": 86.36537401394172,
+        "sql_mean_ms": {
+          "exact10": 824.120555498125,
+          "native640": 9.19055449375
+        },
+        "vectors": 200
+      },
+      "votes108": {
+        "cases": 200,
+        "exact_minus_native_ms": 262.75186864750003,
+        "outer_ms": {
+          "exact10": {
+            "max": 1259.522571,
+            "mean": 272.3154295675,
+            "median": 270.7720475,
+            "min": 244.14301,
+            "n": 1600
+          },
+          "native640": {
+            "max": 20.808161,
+            "mean": 9.56356092,
+            "median": 10.0103465,
+            "min": 2.620356,
+            "n": 1600
+          }
+        },
+        "ratio_of_arithmetic_means": 28.47427143983729,
+        "sql_mean_ms": {
+          "exact10": 271.7859936575,
+          "native640": 9.1886856
+        },
+        "vectors": 200
+      },
+      "votes32": {
+        "cases": 200,
+        "exact_minus_native_ms": 501.448397741875,
+        "outer_ms": {
+          "exact10": {
+            "max": 1263.574,
+            "mean": 510.99225865875,
+            "median": 510.19987349999997,
+            "min": 469.012154,
+            "n": 1600
+          },
+          "native640": {
+            "max": 21.912315,
+            "mean": 9.543860916875,
+            "median": 9.879872500000001,
+            "min": 2.571565,
+            "n": 1600
+          }
+        },
+        "ratio_of_arithmetic_means": 53.5414611664382,
+        "sql_mean_ms": {
+          "exact10": 510.45883070375,
+          "native640": 9.169835730625
+        },
+        "vectors": 200
+      }
+    },
+    "1": {
+      "overall": {
+        "cases": 163,
+        "exact_minus_native_ms": 522.1362228404909,
+        "outer_ms": {
+          "exact10": {
+            "max": 898.747723,
+            "mean": 531.9655974608896,
+            "median": 509.8495585,
+            "min": 245.447862,
+            "n": 1304
+          },
+          "native640": {
+            "max": 21.705242,
+            "mean": 9.829374620398774,
+            "median": 10.140545,
+            "min": 2.111768,
+            "n": 1304
+          }
+        },
+        "ratio_of_arithmetic_means": 54.119984027967384,
+        "sql_mean_ms": {
+          "exact10": 531.4480792177914,
+          "native640": 9.468504496932516
+        },
+        "vectors": 124
+      },
+      "unfiltered": {
+        "cases": 53,
+        "exact_minus_native_ms": 820.1150853443396,
+        "outer_ms": {
+          "exact10": {
+            "max": 898.747723,
+            "mean": 829.768061235849,
+            "median": 830.9851765000001,
+            "min": 779.466204,
+            "n": 424
+          },
+          "native640": {
+            "max": 19.090676,
+            "mean": 9.652975891509435,
+            "median": 10.028373,
+            "min": 2.111768,
+            "n": 424
+          }
+        },
+        "ratio_of_arithmetic_means": 85.95981908187468,
+        "sql_mean_ms": {
+          "exact10": 829.2609776108491,
+          "native640": 9.307941141509435
+        },
+        "vectors": 53
+      },
+      "votes108": {
+        "cases": 57,
+        "exact_minus_native_ms": 263.98173401315785,
+        "outer_ms": {
+          "exact10": {
+            "max": 308.539731,
+            "mean": 273.93938061622805,
+            "median": 272.950257,
+            "min": 245.447862,
+            "n": 456
+          },
+          "native640": {
+            "max": 21.705242,
+            "mean": 9.957646603070176,
+            "median": 10.211832000000001,
+            "min": 2.455307,
+            "n": 456
+          }
+        },
+        "ratio_of_arithmetic_means": 27.510454180184112,
+        "sql_mean_ms": {
+          "exact10": 273.41476716666665,
+          "native640": 9.590827096491228
+        },
+        "vectors": 57
+      },
+      "votes32": {
+        "cases": 53,
+        "exact_minus_native_ms": 501.7952068113208,
+        "outer_ms": {
+          "exact10": {
+            "max": 551.456726,
+            "mean": 511.66302727358493,
+            "median": 511.354551,
+            "min": 473.066524,
+            "n": 424
+          },
+          "native640": {
+            "max": 16.873627,
+            "mean": 9.86782046226415,
+            "median": 10.161319,
+            "min": 3.736891,
+            "n": 424
+          }
+        },
+        "ratio_of_arithmetic_means": 51.851675780913524,
+        "sql_mean_ms": {
+          "exact10": 511.1427051061321,
+          "native640": 9.497513358490567
+        },
+        "vectors": 53
+      }
+    }
+  },
+  "formal_outcome": "incomplete_budget_exhausted; no complete A/A or economic gate, not retrospective closed_negative_economics",
+  "job_id": "20949301_0",
+  "limits": [
+    "Full catalog snapshots, final graph/module checks and success LOCK/status/charges/metadata/block1 boundary not acquired",
+    "No standard complete-run report/gate invoked on partial data; no new post-hoc performance intervals",
+    "Saved quality is exposed development prefix, not independent confirmation",
+    "Elapsed1:52:22 is prior user-status evidence; collected sacct does not include elapsed",
+    "Descriptive cost on fixed exposed workload does not prove a universal exact-search ceiling or predict another mechanism gain"
+  ],
+  "next_phase": {
+    "future_design_requirement": "Unchanged quality/control/full-cost gates, explicit identity/API/physical/native changes, actual phase-cost estimates and prospectively frozen cost-sanity/futility stage; no protected samples or automatic allocation",
+    "id": "NEXT-ANN-ALTERNATIVES-01",
+    "implementation_or_compute_assigned": false,
+    "label": "B2c",
+    "owner_proposed": "Codex",
+    "scope": "Read-only indexed/filter-aware ANN mechanism/compatibility/cost review; choose at most one justified prospective design or no-go",
+    "status": "planned_not_started",
+    "user_commands_needed_now": false
+  },
+  "phase_costs": {
+    "all_conditioning_calls_seconds": 205.40002214799998,
+    "all_recorded_plan_diagnostic_seconds": 19.760645042,
+    "all_warm_exact_calls_seconds": 4891.107725335,
+    "all_warm_native_calls_seconds": 92.762579188,
+    "block0_exact_fraction_of_block_wall": 0.9482136926950555,
+    "block0_exact_query_seconds": 3850.068992194,
+    "block0_observed_wall_seconds": 4060.338952975,
+    "exact10_reference_seconds": 322.08221845599996,
+    "full_truth_reference_seconds": 587.428665652,
+    "limits": "Search/diagnostic spans checked disjoint. Exact phase timings include query/transport/decoder; no CPU/IO/JIT causal attribution. Warm residual includes checks/serialization/catalogs/gaps. Different phase totals are not all one partition of the budget.",
+    "native640_reference_seconds": 178.08365993200002,
+    "observed_warm_window_until_cleanup_seconds": 5222.30254247,
+    "qualification_seconds": 13.185694450000002,
+    "restoration_full_charge_available": false,
+    "shared_initialization_seconds": 115.28751114,
+    "warm_exact_fraction_of_window": 0.93658069128673,
+    "warm_plan_diagnostic_seconds": 14.041516610999999,
+    "warm_unattributed_wall_seconds": 18.990699187999546
+  },
+  "preservation": {
+    "all_prior_hashes_match": true,
+    "only_preexisting_files_changed": [
+      "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "agent/docs/experiments/README.md"
+    ],
+    "prior_immutable_files": 1352,
+    "scientific_source_packages_raw_receipts_designs_preserved": true
+  },
+  "quality": {
+    "independent_confirmation": false,
+    "pass": true,
+    "pointwise_intervals": true,
+    "strata": {
+      "overall": {
+        "cases": 600,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": true,
+          "exact_semantics": true
+        },
+        "final_margin_diagnostic_only": true,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "exact10": 1.0,
+          "native640": 0.9903333333333334
+        },
+        "pass": true,
+        "recall_delta": 0.009666666666666664,
+        "recall_delta_ci95": [
+          0.005833333333333333,
+          0.014166666666666666
+        ]
+      },
+      "unfiltered": {
+        "cases": 200,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": true,
+          "exact_semantics": true
+        },
+        "final_margin_diagnostic_only": true,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "exact10": 1.0,
+          "native640": 0.9935
+        },
+        "pass": true,
+        "recall_delta": 0.006499999999999999,
+        "recall_delta_ci95": [
+          0.0024999999999999996,
+          0.012
+        ]
+      },
+      "votes108": {
+        "cases": 200,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": true,
+          "exact_semantics": true
+        },
+        "final_margin_diagnostic_only": true,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "exact10": 1.0,
+          "native640": 0.986
+        },
+        "pass": true,
+        "recall_delta": 0.013999999999999997,
+        "recall_delta_ci95": [
+          0.007999999999999998,
+          0.020999999999999998
+        ]
+      },
+      "votes32": {
+        "cases": 200,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": true,
+          "exact_semantics": true
+        },
+        "final_margin_diagnostic_only": true,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "exact10": 1.0,
+          "native640": 0.9915
+        },
+        "pass": true,
+        "recall_delta": 0.008499999999999999,
+        "recall_delta_ci95": [
+          0.003999999999999999,
+          0.013999999999999997
+        ]
+      }
+    }
+  },
+  "raw_files_sha256": {
+    "analysis/failure-summary.json": "07e51e716a539efd5e955c522569e22837d8bdc259e887b0d5fd06c90c34019d",
+    "logs/block-0-20949301-0.log": "1167c595f72d088a9e645bc737e03ded15d271f32bfd3715215c6e4d6eccbaa5",
+    "protected-source-before.json": "9b479d60275ccd87d1e222d2a92807d667ffa08c4368d02566724eba6875b4ef",
+    "repair-prerequisites.json": "6962470bd611b409f5fe7bdd7642145dbe9bed113064a7394000694f20781be5",
+    "run/admissions.json": "bb3513f466ba5b857774702285aaf4ba54ffca5f92b6d1403bbdfafba0a18687",
+    "run/cleanup.json": "4a90afd1a880867b37879c101786ef01c823db08e618da26ee6eecfe8f181c42",
+    "run/conditioning.jsonl": "b603b826ed83dedb7a05bd11672c45c356eff2a49240e6e06af7931136006a33",
+    "run/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "run/executions.jsonl": "77d98008481a54a3e23eea6a01f17230598f21fd01ca6634ab8105a4c7b81cfb",
+    "run/failure.json": "762743fdcd1388bca323931f96fb690d52d57a09337bc77ccb0818002d447d0b",
+    "run/host-exit.json": "55a126d1c419a2a49503294767d159b6134f0d59ed7d6ee718110634c0a9c140",
+    "run/host-failure.json": "0d1efcf811d22d2c12f8dd33b593f56c4aa0c9278715e7f64b463f51b62aba48",
+    "run/host.json": "23b27bf43c1a95baa52e88c82d802d0fe75f45489388ed3e9cda58031134e2fb",
+    "run/job-exit.json": "5fb8a75af4156fde495d25fe192855e230cd9360996e03e17945f449d6ab85dc",
+    "run/plan-audits.jsonl": "e3e864fe2f65acc77d726a8ba13f52a8de16d204d64071a5ba91cdd28f36f5d7",
+    "run/progress.json": "5252ce60c77b56ec069561c2cce2f20a08086e6c9067dd8c7a209849ea99b407",
+    "run/protected-source-after.json": "9b479d60275ccd87d1e222d2a92807d667ffa08c4368d02566724eba6875b4ef",
+    "run/protected-source-before.json": "9b479d60275ccd87d1e222d2a92807d667ffa08c4368d02566724eba6875b4ef",
+    "run/qualification.json": "363d324d432f9ac68201d6779f26c695a6059adfa70e601f2c977572da9bf407",
+    "run/quality-settings.json": "fe5c1a56669a3b57ff57dd9e925b74b44f16090938da60660b7085d3cc7dc43e",
+    "run/quality.json": "3275dccea89b84882e9e155cc01261ed755487f292a896bfb0ff29578256ce6d",
+    "run/references.jsonl": "dfba07aedb4c3e8973185ff791b4b0c72849343010f5c051fc76d64b3a8984f7",
+    "run/runtime-identity.json": "d615914add33dff55ab4c80132fcd81c3c68aa47cc7cc217acd98cdac2364cda",
+    "run/server.log": "62aa5aec268cd03907ae8c91d9c77d75e583c7243fee26840d49b722acd0034d",
+    "run/shared-initialization.json": "222fe5ef3155a049548b70700825b559a87b04141b0b75494d1b8293776f5f9e",
+    "run/slots.jsonl": "4314a7f85c63ca9b5162f63daa299566fc32171bf40aa1532eaeb6a7b03094e7",
+    "run/warm-boundaries-before.json": "2c3fcbc6bbd513cf17ecf68810dc6231d5b09314671cdd0cae0ff22049d8475e",
+    "run/warm-boundary-0.json": "7b87fe81ed2019e1ef116e23ea42d90705a069dfe6104ba237f8ac980dcbb285",
+    "scheduler-evidence.json": "1784efe9c006900854413d7ee176c5c9f63c84f963f58672071b0e8dbb099bd5",
+    "submission.json": "422d042d928aae489f1e1a285a29853b9d392341934f10b173803d1968b45381"
+  },
+  "roadmap_version": "1.24",
+  "sources_rechecked": [
+    "https://github.com/pgvector/pgvector/blob/v0.8.6/README.md#filtering",
+    "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html",
+    "https://www.postgresql.org/docs/17/indexes-partial.html"
+  ],
+  "status": "verified_finite_incomplete_budget_exhausted_no_repeat_recommended",
+  "verification": {
+    "all_recorded_search_charge_arithmetic_order_and_outputs_validated": true,
+    "available_plan_packets_validated": 8520,
+    "block0_boundary_settings_pass": true,
+    "captured_protected_hashes_identical": true,
+    "cleanup_closed_all_readers_database_stopped": true,
+    "final_index_module_checks_established": false,
+    "full_catalog_snapshots_available": false,
+    "full_formal_AA_or_economic_gate_assessed": false,
+    "maximum_live_readers": 5,
+    "missing_success_artifacts": [
+      "LOCK.json",
+      "status.json",
+      "metadata.json",
+      "charges.json",
+      "warm-boundary-1.json"
+    ],
+    "partial_event_order_exact_prefix": true,
+    "prepared_initial_database_and_runtime_identities_match": true,
+    "protected_entries": 1622,
+    "protected_groups": 20,
+    "qualification_verified_with_unchanged_sealed_function": true,
+    "quality_recomputed_sealed_parity": true,
+    "readers_admitted": 14,
+    "references_pinned_and_independently_scored": 600,
+    "restoration_phase_full_charge_available": false,
+    "submission_job_accounting_match": true
+  },
+  "verified_quality_prefix_pass": true,
+  "version": "exact-topk.v1.catalog-fix.partial-postrun"
+}

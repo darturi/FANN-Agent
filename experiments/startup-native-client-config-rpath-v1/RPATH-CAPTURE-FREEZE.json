@@ -1,0 +1,18 @@
+{
+  "ANN_searches": 0,
+  "Torch_remote_commands": 0,
+  "all_spent_allowances": "closed including21756110",
+  "all_tests": "128+128main/276+276A3 preserved, original85/15IDs retained",
+  "checks": "All85functional and15kernel IDs remain. Add observed-RPATH/fixed-root-order/required-DSO capture cases and exact AST proof that only ROOTS changed. Independent source/snapshot and local Linux checks, exact original target/reference preservation. Strict direct-SFTP/new SHA/fresh directory/bootstrap constants only; no actual Torch execution.",
+  "date": "2026-11-04",
+  "decision": "In a separate inspector append only the already observed absolute PLUGIN_DIR to the static candidate ROOTS, preserving existing first-two roots and every prior root. This captures the required libslurmfull.so candidate and its recursive ELF dependencies without making a runtime-loader resolution or dependency-closure claim.",
+  "exact_searches": 0,
+  "finding": "Both clients need libslurmfull.so with DT_RPATH=/opt/slurm/lib64/slurm. That directory inventory lists libslurmfull.so but the fixed candidate ROOTS omitted it, so the DSO/hash/transitive dependencies were never inspected. It is a capture omission, not proof of a missing system library.",
+  "inspection_sha256": "25bcef5cdc926a9aa2601eb4612b17ae22c981cae91b9291191cc6d36eda9960",
+  "new_allocations": 0,
+  "other_gates": "Even after this candidate capture, loader cache/hwcaps/implicit defaults, actual dynamic plugin loading, relative auxiliary/MUNGE inputs and native sealed-config parsing/compatibility remain unqualified; native replay table stays empty.",
+  "raw_manifest_sha256": "8cc54a29960829e6c945cf13256a814c76ad1b2fcf8800a365777640dafe305d",
+  "schema": "a3.observed.RPATH.capture.correction.freeze.v1",
+  "status": "frozen_before_implementation",
+  "unchanged": "All functions, ownership/identity/input/size/object/read/raw/time/one-pass strict-verification/quota guards, current snapshot/config, original tests and scientific limits; no root or arbitrary environment-path exception. Original source/evidence never edited."
+}

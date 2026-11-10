@@ -1,0 +1,14 @@
+{
+  "additional_allowed_file": "ev_report.py",
+  "before_sha256": "c0d946a8a6eca6607f662f6429e823db5124124f657fa89a90dd80e7be58bec1",
+  "changes": [
+    "Require empty cancellation proof and absent cleanup-request marker before positive entry/resource analysis.",
+    "Extend synthetic complete-return fixture with empty cancellation proof; preserve all old test method bytes and IDs."
+  ],
+  "frozen_at_utc": "2026-10-31T21:23:59.837614+00:00",
+  "justification": "New cancellation/observer-loss evidence must be rejected by the trusted positive analyzer even if status and raw locks are rewritten; missing proof also fails closed.",
+  "limit_changes": false,
+  "native_release": false,
+  "parent_freeze_sha256": "a390844b3c8e4093f759c251ed3ad737314accac24d9fdf323503698bf4c14f0",
+  "schema": "offline-lifecycle-freeze-amendment.v1"
+}

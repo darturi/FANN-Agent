@@ -1,0 +1,148 @@
+{
+  "activity": {
+    "ANN_searches": 0,
+    "SSH_calls": 0,
+    "Torch_jobs": 0,
+    "cache_control_operations": 0,
+    "dataset_vectors_decoded": 0,
+    "dependency_changes": 0,
+    "exact_searches": 0,
+    "implementation_code_changes": 0,
+    "model_fits": 0,
+    "native_database_queries": 0,
+    "new_experiments": 0,
+    "new_native_measurements": 0,
+    "new_tests": 0,
+    "provider_calls": 0,
+    "query_values_decoded": 0
+  },
+  "date": "2026-10-28",
+  "decision": {
+    "B1c": "deferred",
+    "B2d": "measurement_inconclusive",
+    "candidate_decisions": {
+      "bounded_zero_search_attribution": "GO_to_design_only_freeze",
+      "cache_eviction_cap_increase_margin_relaxation": "not_selected",
+      "compact_or_lazy_original_rows": "broader_consumer_and_exact_value_contract_needed",
+      "named_snapshot_cursor_only": "no_go_as_sufficient_next_correction; possible separately qualified transient candidate",
+      "reader_close_or_forced_gc_only": "no_go; readers close and snapshot remains reachable",
+      "skip_hashes_or_scans": "excluded",
+      "smaller_verification_batch": "no_blind_tuning; already512_no_threads"
+    },
+    "findings": [
+      "One shared snapshot survives all reader closes and overlaps final integrity via factory/reader backend roots",
+      "Snapshot cursor is client-stored; decoded rows and matrix remain persistent after close",
+      "Verification already uses named cursor and512-record Arrow batches; four full scans remain required",
+      "Verification transaction brackets total333.775s,56.60% of streaming runtime; execute intervals total0.034982s and omit iteration work",
+      "API SQL counts omit driver-internal fetch/close/transaction operations; native wire-command counts not measured",
+      "114 max events strictly pre-hash;76 across load/hash;68 overlaps first final verification boundary; one strictly in first final native verification transaction",
+      "Existing traces have no per-allocation/per-file/Arrow-pool/buffer-lifetime proof sufficient to select one safe remedy"
+    ],
+    "full_B2f": "held",
+    "next": {
+      "action": "Freeze finite lifetime/IO observation and API-versus-driver-command accounting design before code; original constructor/data/identity/SQL/transactions/scans/margins preserved",
+      "id": "NEXT-STARTUP-ATTRIBUTION-01",
+      "new_code_authorized_by_this_audit": false,
+      "new_jobs_released": 0,
+      "phase": "A0",
+      "user_Torch_commands_needed": false
+    },
+    "original_execution": "retained",
+    "phases": {
+      "W0": "complete_existing_evidence_and_counter_bracket_review",
+      "W1": "complete_source_lifetime_consumer_and_IO_review",
+      "W2": "complete_GO_to_separate_attribution_design_only"
+    },
+    "register": "NEXT-STARTUP-MEMORY-02"
+  },
+  "documentation": {
+    "evidence": "trials/torch-reviews-startup-working-set-audit-v1",
+    "report": "research/fannagent-startup-working-set-audit-v1-2026-10-28.md",
+    "roadmap": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+    "roadmap_version": "1.45"
+  },
+  "existing_trace_review": {
+    "api_calls_vs_internal_commands": {
+      "api_boundary": "pc_trace.Trace.call; raw cursor iteration and raw transaction context are delegated outside this counter/allowlist",
+      "driver": {
+        "counts_scope": "Conditional source calculation with pinned defaults; not measured wire count; excludes DECLARE/CLOSE/transaction/describe activity",
+        "internal_fetch": "_server_cursor.py::__next__ -> _server_cursor_base.py::_fetch_gen -> raw connection _exec_command",
+        "passes": 4,
+        "rows_per_verification": 247286,
+        "server_cursor_default_itersize": 100,
+        "source_implied_fetches_per_pass": 2473,
+        "source_implied_fetches_total": 9892,
+        "version_from_pinned_dependency_lock": "3.3.6"
+      },
+      "existing_api_counts": {
+        "observer": 56,
+        "startup": 171,
+        "total": 227
+      },
+      "new_searches_inferred": false,
+      "next_requirement": "A separate prospective design must retain API-level charge semantics and add finite driver-command/fetch/row/protocol accounting; no silent cap change",
+      "past_api_caps_reinterpreted": false,
+      "past_resource_verdict_changed": false,
+      "source_locations": {
+        "charge": "pc_trace.py::Trace.call",
+        "cursor_close": "pc_trace.py::Cursor.__exit__",
+        "cursor_iteration": "pc_trace.py::Cursor.__iter__",
+        "transaction": "pc_trace.py::Connection.transaction",
+        "verification": "pc_restore.py::verify_data"
+      },
+      "status": "source_confirmed_gap_in_physical_command_observability"
+    },
+    "campaigns": {
+      "original": "reviews-startup-resource-v1-20261028T020546Z.zdsnk75c",
+      "stream": "reviews-startup-resource-stream-v1-20261028T151219Z.hmj9cwut"
+    },
+    "data_scans_per_campaign": 4,
+    "scope": "No new measurements; transaction brackets are not whole function timers; named-cursor execute durations omit subsequent iteration/fetch/decode/comparison work; component samples sequential/nonadditive; no causal allocation or per-file attribution",
+    "stream_verification_transaction_runtime_share": 0.5659764642410534,
+    "verification_logged_execute_seconds": {
+      "original": 0.033684406,
+      "stream": 0.034981576
+    },
+    "verification_transaction_seconds": {
+      "original": 370.58012383100004,
+      "stream": 333.774641256
+    }
+  },
+  "limitations": [
+    "Snapshot/allocator/per-file causes and sufficient future remedy remain unidentified",
+    "Named verification cursor batch sizes do not establish a total-memory bound",
+    "Transaction intervals include fetch/transfer/decode/compare and are not whole-function or physical-IO timers",
+    "Default fetch model is source-implied, not measured wire-command count; no retrospective cap change",
+    "Both prior resource peaks remain capped/inconclusive, and original execution/B1c status is unchanged"
+  ],
+  "next": {
+    "action": "Separate bounded zero-search lifetime/IO attribution and API-versus-driver-command accounting design freeze; no implementation or experiment now",
+    "full_B2f": "held",
+    "id": "NEXT-STARTUP-ATTRIBUTION-01",
+    "new_jobs_released": 0,
+    "phase": "A0",
+    "user_commands_needed": false
+  },
+  "phases": [
+    "W0",
+    "W1",
+    "W2"
+  ],
+  "preservation": {
+    "changed": [],
+    "prior_inputs": 3961,
+    "receipt": "trials/torch-reviews-startup-working-set-audit-v1/preservation-after.json",
+    "source_files_unchanged": 246
+  },
+  "recorded_at": "2026-10-28T13:06:16.923955-04:00",
+  "register": "NEXT-STARTUP-MEMORY-02",
+  "source": {
+    "earlier_consumer_pins": 116,
+    "files": 246,
+    "implementation_imported_or_executed": false,
+    "inventory": "trials/torch-reviews-startup-working-set-audit-v1/source-inventory.json",
+    "review_scope": "Static producer/constructor/consumer/reader-close/finalization/verification/copy/hash/driver-boundary control flow; inventory includes dependency/source overapproximation"
+  },
+  "status": "complete_read_only_audit_GO_to_separate_attribution_design_only",
+  "timezone": "America/New_York"
+}

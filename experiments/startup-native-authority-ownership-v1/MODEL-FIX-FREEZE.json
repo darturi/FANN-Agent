@@ -1,0 +1,5 @@
+{
+  "parent_sha256": "00bb20d4dd6cf645aa06d5b52909a5d8c1d38ce372b9c1a1ac070990e0b930d3",
+  "schema": "a3.publication.model-fixture.fix.v1",
+  "scope": "New publication regression omitted the controller action identity used to name its journal. Populate that required fixture field. Keep the timeout and retained-handle assertions unchanged; no production/source policy, original test, limit or authority change."
+}

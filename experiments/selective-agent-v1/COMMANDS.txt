@@ -1,0 +1,44 @@
+MAC: start the single authorized agent episode using the existing configured credential.
+This command sequence performs paid generation only after unpaid preflight and
+native validation. Hard cap $10; phase A $6/eight attempts; phase B $4/four attempts.
+
+(
+    set -euo pipefail
+    cd /Users/danielarturi/Developer/JinyangLiWork
+    agent/.venv/bin/python agent/experiments/selective-agent-v1/study.py prepare
+    agent/.venv/bin/python agent/experiments/selective-agent-v1/study.py preflight
+    agent/.venv/bin/python agent/experiments/selective-agent-v1/study.py propose
+    agent/.venv/bin/python agent/experiments/selective-agent-v1/study.py package --stage pilot
+)
+
+The package command prints the exact package, archive/checksum and generated
+COMMANDS.txt. That file contains exact Mac upload, Torch submission/status/
+collection and Mac download/independent analysis commands. Package/campaign
+names include the entire unique episode ID. No previous shell variable is needed.
+
+After downloading/ingesting pilot results with the generated command file, MAC:
+
+(
+    set -euo pipefail
+    cd /Users/danielarturi/Developer/JinyangLiWork
+    agent/.venv/bin/python agent/experiments/selective-agent-v1/study.py resume
+    agent/.venv/bin/python agent/experiments/selective-agent-v1/study.py status
+)
+
+If the agent made a sole revision, MAC:
+
+/Users/danielarturi/Developer/JinyangLiWork/agent/.venv/bin/python \
+    /Users/danielarturi/Developer/JinyangLiWork/agent/experiments/selective-agent-v1/study.py \
+    package --stage revision
+
+Follow its generated transfer/run/ingest commands. There is no further model
+feedback. Only after the selected primary has passed actual development gates:
+
+/Users/danielarturi/Developer/JinyangLiWork/agent/.venv/bin/python \
+    /Users/danielarturi/Developer/JinyangLiWork/agent/experiments/selective-agent-v1/study.py \
+    package --stage confirmation
+
+Again follow its exact generated commands. Confirmation consumes the unused
+60-vector entitlement before Torch dispatch. No replacement policy, new labels,
+extra model episode or automatic deployment follows a failure. Original A/B
+remains inconclusive; final recall criteria remain unchanged.

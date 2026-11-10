@@ -1,0 +1,44 @@
+{
+  "ANN_searches": 0,
+  "Torch_commands": false,
+  "Torch_jobs": 0,
+  "all_prior_allowances": "spent; no retry, extension, resubmit or new entitlement",
+  "cooperative_cancellation_frozen_before_implementation": true,
+  "date": "2026-10-31",
+  "decision": "D117",
+  "exact_image_correction_qualified": false,
+  "exact_searches": 0,
+  "files_sha256": {
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/OFFLINE-AMENDMENT-1.json": "5ddb9f17712811be8011a1997b813a0bad9e26936131b6aa57102bf774767d31",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/OFFLINE-AMENDMENT-2.json": "aabeb4e1705b90804b708a844f2e5b9c7651c18f67cac34c4e11c2a72f30d62b",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/OFFLINE-FREEZE.json": "a390844b3c8e4093f759c251ed3ad737314accac24d9fdf323503698bf4c14f0",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/REPORT.md": "e53cd7e8788c7377be227e7814ece44e497fc65179baaec51cf12054df2de854",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/REVIEW.json": "b91dacb046e1f77c63e046b5f089f9725ac18467d0d8cb93644389ed9a328cb3",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/candidate-source-inventory.json": "8b19f5cf331fd53d19a42ca6006c9eead09bdf67197a00f3652e90aff8d8aed3",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/local-checks-snapshot.json": "ad356d9eda12729b22ca6e964be963a8d1581018cb0adcb73b88af0a6bfab154",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/local-checks-source-final.json": "ef4e9404f5b2b6c9b1c753793b5c12b1b06cfcfd66d8b9f48f53df815b74bc40",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/offline-verification.json": "43275496e28117a3029292f389a2fe938faea43f3d90bfba4868b4c55b5471c0",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/preservation-before.json": "47d3bf92902b22b21060ed3e8955b681443992925af03af93bbe950cdbbd9f6d",
+    "trials/torch-reviews-startup-exact-vector-resource-offline-review-v1/verify_offline.py": "8351ac205529126b47cf513ed064b6b603b566c4d80fdcac687cbcca3aa622d5"
+  },
+  "full_B2f_released": false,
+  "local_checks": {
+    "source": 142,
+    "source_snapshot": 142
+  },
+  "memory_correction_implemented": false,
+  "native_capsule": false,
+  "native_case_proofs_preserved": {
+    "A3_sealed": 56,
+    "A3_source": 56,
+    "main_sealed": 128,
+    "main_source": 128
+  },
+  "native_memory_qualified": false,
+  "next_gate": "separate source-backed memory remedy design; lifecycle correction stays offline",
+  "prior_files_preserved": 5163,
+  "resource_limits_and_memory_decision_unchanged": true,
+  "roadmap_version": "1.69",
+  "status": "offline_lifecycle_correction_verified_memory_held",
+  "unchanged_main_and_producer": true
+}

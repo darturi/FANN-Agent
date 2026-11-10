@@ -1,0 +1,118 @@
+{
+  "activity": {
+    "ANN_searches": 0,
+    "database_queries": 0,
+    "exact_searches": 0,
+    "implementation_changes": 0,
+    "new_experiments": 0,
+    "new_fits": 0,
+    "new_measurements": 0,
+    "new_tests": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "ssh_calls": 0,
+    "torch_jobs": 0
+  },
+  "allocations_released": 0,
+  "audit": {
+    "inventory": "trials/torch-reviews-startup-memory-audit-v1/source-inventory.json",
+    "lifetime_review": "trials/torch-reviews-startup-memory-audit-v1/trace-lifetime-review.json",
+    "reference_occurrences": 137,
+    "source_design_verification": {
+      "exact_reference_mixin_does_not_override_snapshot": true,
+      "not_an_implementation_test_suite": true,
+      "old_resource_counts_caps_margins_copied_exactly": true,
+      "prospective_paths_uncreated": true,
+      "runner_does_not_override_snapshot": true,
+      "source_constructor_digest_calls": 1,
+      "source_files_verified": 116,
+      "source_freeze_matches": true,
+      "static_references": 137,
+      "status": "pass_source_and_document_consistency_only"
+    },
+    "source_files": 116
+  },
+  "baseline": {
+    "campaign": "reviews-startup-resource-v1-20261028T020546Z.zdsnk75c",
+    "package_manifest_sha256": "4212507e81abc053aa5045e09a8cb624b789ed0bad4e1e8d1bf69f82f31484d9",
+    "resource_result": "startup_complete_resource_margin_inconclusive",
+    "snapshot_identity": "54282be380f20bfab05a44e6260e116435aecf5a289a258ae8164a23c187b303"
+  },
+  "completed_phases": [
+    "M0 read-only source/consumer/lifetime/identity audit",
+    "M1 prospective narrow correction/equivalence/resource design freeze"
+  ],
+  "contract": "trials/torch-reviews-startup-memory-audit-v1/CORRECTION-DESIGN.json",
+  "date": "2026-10-28",
+  "decision": "GO for separately requested isolated per-row canonical identity hashing implementation/local qualification; no native or memory-margin pass",
+  "design": "research/fannagent-startup-identity-stream-v1-design-2026-10-28.md",
+  "findings": [
+    "Ten admissions share one retained snapshot.",
+    "Original Python rows and numeric values have real identity/query/sample/export/workload/audit consumers.",
+    "The snapshot uses client result storage; four data-bit checks already use named server cursors.",
+    "The constructor retains rows and float32 matrix; complete canonical text/bytes are transient hash work.",
+    "Existing trace has about 10.61 GiB retained runtime RSS; no object-specific attribution or saving is established."
+  ],
+  "gates": {
+    "M0": "complete_read_only",
+    "M1": "frozen_design_feasibility_only",
+    "M2": "not_implemented_or_tested; next separate request",
+    "M3": "native_not_released",
+    "M4": "full_calibration_held"
+  },
+  "id": "NEXT-STARTUP-MEMORY-01",
+  "margin_changes": 0,
+  "next_step": "M2 isolated implementation and actual source/sealed local checks on separate request; no Torch command yet.",
+  "preservation": {
+    "changed": [],
+    "inputs": 3456,
+    "previous_postrun_inputs": 3442,
+    "receipt": "trials/torch-reviews-startup-memory-audit-v1/preservation-after.json"
+  },
+  "primary_sources": [
+    {
+      "role": "Encoder settings/byte contract",
+      "url": "https://docs.python.org/3.12/library/json.html"
+    },
+    {
+      "role": "Incremental update equivalence",
+      "url": "https://docs.python.org/3.12/library/hashlib.html"
+    },
+    {
+      "role": "Versioned reference for whole-document/token encoder paths; actual image provenance still required",
+      "url": "https://github.com/python/cpython/blob/v3.12.0/Lib/json/encoder.py"
+    },
+    {
+      "role": "Default client result storage versus named server cursors; live docs 3.3.7.dev1, pinned installed recipe 3.3.6",
+      "url": "https://www.psycopg.org/psycopg3/docs/advanced/cursors.html"
+    }
+  ],
+  "recorded_at": "2026-10-28T01:25:24.322965-04:00",
+  "report": "research/fannagent-startup-memory-audit-v1-2026-10-28.md",
+  "resource_changes": 0,
+  "roadmap": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+  "roadmap_version": "1.42",
+  "selected_design": {
+    "binding": "Only snapshot-module digest during one initial acquisition; exact restoration in finally",
+    "canonical": "Use original serializer per fields/row, exact root punctuation and incremental SHA256",
+    "contract_sha256": "880700840f8cb12f7501fc7171f74c199815afb7d5b356e8f9a1d5369657e815",
+    "design_sha256": "6e7dc63adb305902c17e9604f3d7cf234b1c67faa531319f4bd848fbe1a4d48b",
+    "protocol": "startup-resource.stream.v1",
+    "remedy": "per_row_original_canonical_encoding_incremental_sha256",
+    "unchanged": [
+      "Source/constructor/cursor/rows/NumPy/validation/identity",
+      "Data/graphs/module/image/profile/settings/policies",
+      "Original source/copy/final/cleanup/zero-search/resource margins and budgets"
+    ]
+  },
+  "status": "M0_audit_and_M1_design_complete_scoped_feasibility_only",
+  "timezone": "America/New_York",
+  "unmeasured": [
+    "Per-allocation attribution",
+    "Serialized document length",
+    "Memory saving from this remedy",
+    "CPU/runtime cost at full size",
+    "Whether unchanged 28-GiB peak ceiling/no-event gate will pass"
+  ],
+  "user_commands_needed": false
+}

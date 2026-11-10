@@ -1,0 +1,37 @@
+{
+  "ANN_searches": 0,
+  "account": "torch_pr_288_courant",
+  "all_tests_strict_verification_limits_preserved": true,
+  "allowance": "21756110 and all earlier allowances remain spent and closed; no retry or fresh allocation authorized",
+  "assistant_remote_commands": 0,
+  "confirmed": [
+    "Read-only packet/plan/policy verification and accounting query completed without diagnostic error",
+    "Accounting confirms FAILED1:0 on cs624 from2026-11-03T11:52:48 to11:53:26; displayed timezone not specified",
+    "Current login SLURM_CONF is unset; no login path metadata exists",
+    "sacct --env-vars returned NONE; no stored configuration candidate",
+    "Original launcher does not set or source SLURM_CONF; trace still proves allocated process had a nonempty existing strict-resolved configuration path rejected by old root predicate and exact fallback scope"
+  ],
+  "correction_frozen": false,
+  "correction_implemented": false,
+  "date": "2026-11-03",
+  "decision": "D137",
+  "evidence_directory": "trials/torch-reviews-startup-native-site-compatibility-v1/submission-21756110/failure-review-2026-11-03/metadata-unavailable-review",
+  "exact_searches": 0,
+  "job_id": "21756110",
+  "messages_sent": 0,
+  "native_correctness_CPU_memory_resources_B2f": "unqualified",
+  "new_allocations": 0,
+  "next_step": "Ask NYU HPC support for allocated configuration path, complete symlink/ownership/access chain and supported provenance for21756110/cs624; use existing scheduler logs/site configuration, no job resubmission or diagnostic allocation. Distinguish historical evidence from current layout if history is unavailable.",
+  "no_further_user_compute_commands_prepared": true,
+  "node": "cs624",
+  "not_established": [
+    "Exact allocated runtime value/resolved pathname",
+    "Rejected leaf/ancestor owner/mode/write access",
+    "The site mechanism supplying the batch configuration and safe trust scope",
+    "Whether unavailable historical state can be recovered by administrators"
+  ],
+  "reason": "Neither absence of an accounting record nor an unset login variable justifies a new exception, guessing a cache path, unsetting allocated configuration, or weakening trust",
+  "roadmap_version": "1.89",
+  "source": "user-pasted successful login-only diagnostic; original sealed return and launcher/source review",
+  "status": "held_pending_site_configuration_provenance"
+}

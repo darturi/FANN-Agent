@@ -1,0 +1,11 @@
+{
+  "schema": "a3.control-read-budget.freeze.v1",
+  "basis": "Final native-adapter audit found seven direct Path.read_text call sites for kernel boot, cgroup and mount information outside the guardian shared ledger. No Torch run occurred. The original scientific hardware/reference code is unchanged and outside this ownership-control correction.",
+  "correction": "Add one new control-reader module with an exact three-file proc whitelist, no-follow open, 64KiB per-file bound and hard eight reads per process. There are exactly nine admitted control processes: host, owned container guest and seven single-use frozen scientific commands. Their maximum72 control reads are conservatively prepaid as128 reads and128*(65536+1) bytes in the ONE original shared ledger before any owned launch. The host has at most eight bounded admission reads before that ledger is materialized; those reads use the same reserved slice, not a separate allowance. Failed pre-ledger admission never qualifies. All subsequent ownership observations continue charging that same ledger. No counter reset, new allowance, limit increase, scientific change or privileged action.",
+  "verification": "Preserve the current completed replay and source/snapshot-v2/pin exactly as a prior offline attempt. Add over-bound, per-process exhaustion, whitelist, close-on-failure and prepaid-ledger tests. Run complete model/source/snapshot and Linux ownership checks plus a fresh full strict scientific replay from a new snapshot. Package only the final pins; retain all earlier evidence.",
+  "Torch_jobs": 0,
+  "ANN_searches": 0,
+  "exact_searches": 0,
+  "native_release": false,
+  "spent_allowances_reused": false
+}

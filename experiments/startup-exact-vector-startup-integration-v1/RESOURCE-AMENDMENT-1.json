@@ -1,0 +1,31 @@
+{
+  "choice": "Add one explicit bounded metadata read adapter in the new resource harness; qualified A3 five files and all original A2 code remain byte-identical.",
+  "constraints": [
+    "Only the original owned backend SimpleNamespace store.get and exact FrozenDict/FrozenList source manifest are eligible; every original reader origin/binding and immutable state object stays identical.",
+    "On the first source_manifest read, require canonical frozen metadata exactly equals the qualified spec.fields_json and <=16384 bytes; return a new ordinary JSON metadata list with byte-for-byte canonical equality. Other source entries/keys delegate unchanged. No vectors, rows, SQL, constructor or source values are changed.",
+    "Restore the original store.get immediately before returning this single metadata read, thus before the qualified producer _connect/cursor/identity/cache publication. Restore again in finally on every BaseException; reject unused/tampered binding or changed immutable source. Record exact one read, bytes, source identity and pre-connection restoration.",
+    "Run bounded literal frozen-metadata success/type/identity/oversize/restoration preflight under the exact interpreter before any DB restore, using the same adapter; strict code/provenance bindings and original eight canonical parity literals remain.",
+    "Local actual full-runtime source+sealed fixtures must now reach all epochs, final four scans and cleanup; negative cases must reach their intended failure point. Add independent metadata/delegate/retention replay tamper tests."
+  ],
+  "evidence_sha256": "da4665d45df5e84ab4ad253b3d400c1f73714ed9dc7e25a239427cf3d32b0558",
+  "finding": "Actual frozen runner/OwnedReader/Factory supplies FrozenList metadata; qualified Identity requires exact ordinary list. Rows/count/active binding and canonical metadata all match. Previous native56+56 covered ordinary-field producer/entry plus mocked Factory.create; its scoped result is preserved, not broadened.",
+  "frozen_at_utc": "2026-10-31T19:07:57.838417+00:00",
+  "limits_unchanged": {
+    "ANN_searches": 0,
+    "added_literal_preflight_cpu_seconds_max": 1,
+    "data_verification_scans": 4,
+    "exact_searches": 0,
+    "memory_gib": 32,
+    "metadata_bytes_max": 16384,
+    "physical_cpus": 4,
+    "positive_limit_or_OOM_allowed": false,
+    "reserve_bytes": 2147483648,
+    "snapshot_scans": 1,
+    "wall_seconds": 3600,
+    "workspace_bytes": 2147483648
+  },
+  "native_qualification_interpretation": "The unchanged producer already qualifies on ordinary metadata. The new harness adapter is locally qualified separately and tested by literal exact-image preflight; the fresh bounded resource job measures the combined path. No old receipt claims native coverage of this adapter, no spent job is retried.",
+  "parent_freeze_sha256": "1276241332fffd1fbd76b7c8fc67fddf9ea47977a6372fca6b5d5c4e9a67c042",
+  "qualification_rule": "If local/source/sealed/preflight/source preservation/strict release proof fails, no resource handoff. Any resource dispatch uncertainty/failure spends this distinct allowance; no automatic correction/retry or B2f.",
+  "schema": "startup-exact-vector.resource-amendment.v1"
+}

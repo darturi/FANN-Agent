@@ -1,0 +1,80 @@
+{
+  "A0_contract_sha256": "bad39761af2d718c6e9f0ab8b215a1532334f0a9d6d56751274476d8d2b25ff7",
+  "allowed_parent_changes": [
+    "experiment.json",
+    "LOCAL_CHECKS.json",
+    "README.md",
+    "COMMANDS-template.txt",
+    "LAUNCHER.sh",
+    "slurm/measure.sbatch",
+    "experiment.py",
+    "pc_common.py",
+    "pc_control.py",
+    "sa_control.py",
+    "sa_session.py",
+    "sa_driver.py",
+    "sa_report.py",
+    "sa_fixtures.py",
+    "run_checks.py",
+    "test_a1_driver.py",
+    "test_a1_host.py",
+    "test_a1_package.py"
+  ],
+  "date": "2026-10-29",
+  "docker_config_sha256": "ea7083a544d105d589ac1a3915b7ab8425fe1e867f2afc3ceaf99f0a9a48967f",
+  "fixture_scope": {
+    "ANN_searches": 0,
+    "dimensions": 768,
+    "exact_searches": 0,
+    "native_database_queries": 0,
+    "new_fits": 0,
+    "providers": 0,
+    "source_rows_max": 64
+  },
+  "historical_local_reference_sha256": "707fc1fd7eb52a22e00535d9d06ad51c48a3a674620f8c145724e58f86edb409",
+  "image_inventory_sha256": "fda84beafd88d3b3728f84c769258bd8623cc285d62a78fe8d34830b8916cde9",
+  "image_reference_sha256": "3a200f39baaa10d0fd33150b4b2901a0116532e79225f3c92d36fb94f2e448f8",
+  "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+  "local_target_check_limits": {
+    "containers_max": 2,
+    "cpus": 2,
+    "memory_gib": 3,
+    "network": "none",
+    "original_workspace_bind": "read-only",
+    "pids": 128,
+    "root_filesystem": "read-only",
+    "tmpfs_tmp_mib": 64,
+    "tmpfs_work_mib": 1792,
+    "wall_seconds_per_suite": 900
+  },
+  "name": "torch-startup-attribution-v1-image-reference",
+  "native_release": {
+    "allocations_max": 1,
+    "automatic_retries": 0,
+    "full_B2f": false,
+    "memory_gib": 32,
+    "physical_cpus": 4,
+    "searches": 0,
+    "wall_seconds": 3600
+  },
+  "parent_A1_manifest_sha256": "065022eb9428e4a7607b1eafa5784855103e184b174b4b5ac5abd6389827b96a",
+  "pre_restore": [
+    "strict full image provenance",
+    "original source AST line mapping",
+    "all monitoring local masks clear",
+    "literal frame/restore preflight",
+    "Arrow/proc/cgroup capability",
+    "sampler and original source/resource gates"
+  ],
+  "protocol": "startup-attribution.v1",
+  "reference_difference": {
+    "python": {
+      "image": "3.12.15",
+      "local": "3.12.7"
+    }
+  },
+  "reservation_name": "torch-startup-attribution-v1",
+  "schema": "startup-attribution.image-reference-correction.v1",
+  "science_changed": false,
+  "scope": "Separate exact target/local references; strict native image binding; pre-restore validation; restored finite controller. Native handoff requires local and exact-target checks; original scientific/runtime/workload/observer/cleanup limits unchanged."
+}

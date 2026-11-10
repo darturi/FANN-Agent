@@ -1,0 +1,7 @@
+{
+  "correction": "Only new ni_guardian: require direct-child status, kernel ECHILD and POLLIN exit evidence on every remaining retained pidfd (reject missing/POLLNVAL/live descriptors), then retire those already-exited handles. Census is discovery, never final absence proof. Add deterministic descriptor-state cases and rerun real nested source/snapshot. Every D129 file and all existing tests remain unchanged; no deadline, allowance or data/strict-verification relaxation.",
+  "evidence_sha256": "cfd90b3e5b670c5adcb060ba64987b91db85e010f0ae9f87b384453302c5aa3a",
+  "finding": "Actual nested guardians produce kernel ECHILD after descendants were reaped by inner owners, while a prior census and retained pidfds remain. Rejecting nonempty stale census caused four false cleanup failures.",
+  "parent_sha256": "26fe14db5cc9ef4c04b7e807199476d9adb9fadece072529d78a92b58f1c11da",
+  "schema": "a3.nested-reaping.correction.freeze.v1"
+}

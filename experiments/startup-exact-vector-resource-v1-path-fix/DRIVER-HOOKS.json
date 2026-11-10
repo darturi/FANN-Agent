@@ -1,0 +1,55 @@
+{
+  "hooks": [
+    {
+      "kind": "generator",
+      "qualified_name": "psycopg._connection_base.BaseConnection._exec_command",
+      "role": "Internal FETCH/CLOSE/BEGIN/COMMIT/ROLLBACK/driver-generated deallocation SQL; predispatch ownership/template/cap check; preserve yield/send/throw/close/return"
+    },
+    {
+      "kind": "generator",
+      "qualified_name": "psycopg._connection_base.BaseConnection._deallocate",
+      "role": "Classify protocol Close-prepared versus its SQL fallback without double counting; own prepared-name registry only"
+    },
+    {
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._execute_send",
+      "role": "Unprepared API execution including four actual DECLARE sends, linked to API token"
+    },
+    {
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._send_prepare",
+      "role": "Protocol preparation; own bounded statement registry and API provenance"
+    },
+    {
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._send_query_prepared",
+      "role": "Prepared API execution; mutually exclusive with unprepared execution for same API attempt"
+    },
+    {
+      "kind": "generator",
+      "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._describe_gen",
+      "role": "Four existing portal descriptions, protocol-only ledger"
+    },
+    {
+      "kind": "generator",
+      "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._declare_gen",
+      "role": "Map exactly four original verification cursors to cell/phase; actual DECLARE send counted at _execute_send"
+    },
+    {
+      "kind": "generator",
+      "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._fetch_gen",
+      "role": "Count original page requests and returned row counts; delegate exactly once; no extra fetch or row copy"
+    },
+    {
+      "kind": "normal",
+      "qualified_name": "psycopg._cursor_base.BaseCursor._close",
+      "role": "S03/S04 only for the one tracked snapshot cursor; other original cursor closes delegate normally"
+    }
+  ],
+  "not_claimed": "Network packets, authentication/startup exchanges, backend-internal SQL, all individual protocol frames or per-file physical IO are not counted",
+  "pinned_runtime_image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+  "pipeline": "must be off; no pipeline instrumentation fallback",
+  "provenance": "A1 must capture/verify actual image Python driver files, signatures and source hashes against pinned3.3.6 reference; mismatch blocks release, never select alternate hooks",
+  "schema": "startup-attribution.driver-hooks.v1",
+  "version": "3.3.6"
+}

@@ -1,0 +1,87 @@
+{
+  "ANN_searches": 0,
+  "Torch_jobs": 0,
+  "all_previous_allowances_spent": true,
+  "archive": {
+    "bytes": 39063874,
+    "regular_members": 984,
+    "sha256": "9702d0fe3a81efb1051e16d18be63977541d447587335208a6f584e770409044",
+    "uncompressed_bytes": 596915735
+  },
+  "core_spent_jobs": [
+    "21348020",
+    "21367064",
+    "21382454",
+    "21443102",
+    "21459623_0",
+    "21470341"
+  ],
+  "database_connections": 0,
+  "date": "2026-10-31",
+  "decision": "D113",
+  "earlier_calibration_resource_allowances": "all remain spent",
+  "exact_native_producer_qualification_preserved": true,
+  "exact_searches": 0,
+  "files_sha256": {
+    "research/fannagent-startup-exact-vector-resource-readiness-2026-10-31.md": "9208e6cf681c411a45feb7b7df73ce407bd0e5c695e690fda0be9194f6e79696",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/COMMANDS.txt": "5de5be1201c0852b1941b967f5e41933ddeb97047288403eac970612bc4f18f1",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/RESOURCE-AMENDMENT-1.json": "cb01d50a80ac563cde330ee4ac1905ce9c8536e8ee56a504f450e80b6e80315d",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/RESOURCE-FREEZE.json": "1276241332fffd1fbd76b7c8fc67fddf9ea47977a6372fca6b5d5c4e9a67c042",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/handoff-generation.json": "c220a06e80e876f61e589f4fc096b75608775ba38fd2cda3cc245165228174c2",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/handoff-verification.json": "7ef7563444a6ee96f73bc41cd3a77b40a1a1e0dea27a6e5294ab5113f9c6f1b2",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/local-artifact-storage.json": "722547942c003de1079baef81874575e977056eb87c5c2287034ea0940be792f",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/local-checks-sealed.json": "42138ec6a1815a0a2c9c63c82f33a4f65b354b9ed736e2f589c5a94a6bd3b532",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/local-checks-source.json": "5a9fb0899e0fff111bb0255b3e958389d21600820f61eee372343010a9b1c77e",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/metadata-boundary-failure.json": "da4665d45df5e84ab4ad253b3d400c1f73714ed9dc7e25a239427cf3d32b0558",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/prepare_handoff.py": "27df29030f2c39371e325136be99beb3f1ba4670d30d31f16e274aec29bf3376",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/release-verification.json": "1bce95948cd56dcef294c552593186684d6eee731fc2f97b396cc14671146004",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/transfer.sh": "877076c5ad47f103b973c546ddf9af61cea898080751220452cd5ab0e2ba9c72",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/verify_handoff.py": "9b31c01d8fe69e6e74a9339cc4fc73ad4a491b95f8e69c76847f70614c5ff4ac",
+    "trials/torch-reviews-startup-exact-vector-resource-v1/verify_release.py": "b5a4ef592f64de55b7964861a62d06034d186ee4555fd4497898df14309ba14b"
+  },
+  "full_B2f_released": false,
+  "local_fixture_storage": "only new test-seed immutable large files linked read-only; no production/database link change",
+  "local_tests": {
+    "sealed": 100,
+    "source": 100
+  },
+  "metadata_adapter": "separately frozen bounded harness view; immutable source unchanged and getter restored before producer connection",
+  "native_memory_qualified": false,
+  "native_resource_handoff_released": true,
+  "native_wrapper_target_execution": false,
+  "new_allowance": {
+    "allocations": 1,
+    "package": "torch-startup-exact-vector-resource-v1",
+    "retry_on_failure_or_unknown": false,
+    "status": "unspent_unlaunched"
+  },
+  "next_gate": "User new resource upload/once-only submit/status/terminal collect/download, then independent full source/identity/lifecycle/coverage/unchanged-margin replay",
+  "package_manifest_sha256": "bf3bb5c5dc5f4c0ab9f8a52bc899116acc8be150ae1604ebc2d75f3d660c3397",
+  "preserved_native_cases": {
+    "A3_sealed": 56,
+    "A3_source": 56,
+    "main_sealed": 128,
+    "main_source": 128
+  },
+  "prior_files_preserved": 1956,
+  "real_SQL": 0,
+  "real_SSH": 0,
+  "resource_scope": {
+    "ANN_searches": 0,
+    "allocations": 1,
+    "cache_subtraction": false,
+    "data_verification_scans": 4,
+    "exact_searches": 0,
+    "memory_gib": 32,
+    "physical_cpus": 4,
+    "positive_limit_events_allowed": false,
+    "reserve_bytes": 2147483648,
+    "snapshot_scans": 1,
+    "wall_seconds": 3600,
+    "workspace_bytes": 2147483648
+  },
+  "roadmap_version": "1.65",
+  "status": "A3_startup_memory_harness_locally_qualified_new_handoff_ready_unlaunched",
+  "unchanged_main_recipes": 68,
+  "unchanged_qualified_A3_files": 5
+}

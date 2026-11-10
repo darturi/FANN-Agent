@@ -1,0 +1,34 @@
+{
+  "added_phases": "All33 prototype and23 integrated cases in each complete90s source/sealed A3 phase",
+  "all_old_jobs_spent": [
+    "21348020",
+    "21367064",
+    "21382454",
+    "21443102",
+    "21459623"
+  ],
+  "basis": "Native C2B source283.272s/candidate37.151s/sealed284.598s. Keep complete420/90/420 caps and30s preflight/cleanup; add90s for each new A3 suite,30s extra host verification and30s outer margin. Local times are not native headroom proof. Any failure spends new allowance, no retry.",
+  "failure": "single allowance spent on any timeout/failure/missing proof; no retry",
+  "limits": {
+    "allocations": 1,
+    "candidate_build_seconds": 90,
+    "guest_cleanup_seconds": 30,
+    "guest_preflight_seconds": 30,
+    "guest_seconds": 1170,
+    "home_return_required_bytes": 134217728,
+    "host_cleanup_seconds": 60,
+    "host_startup_seconds": 120,
+    "integration_sealed_seconds": 90,
+    "integration_source_seconds": 90,
+    "memory_gib": 4,
+    "outer_margin_seconds": 135,
+    "physical_cpus": 2,
+    "raw_bytes": 8388608,
+    "scratch_required_bytes": 4294967296,
+    "sealed_suite_seconds": 420,
+    "source_suite_seconds": 420,
+    "termination_seconds": 15,
+    "wall_seconds": 1500
+  },
+  "scope": "Distinct A3 exact-target correctness, no native DB/resource job"
+}

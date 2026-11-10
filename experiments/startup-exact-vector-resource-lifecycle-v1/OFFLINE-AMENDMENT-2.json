@@ -1,0 +1,25 @@
+{
+  "before_source_sha256": {
+    "README.md": "2dfe2aa3d851e99a15c1455d8c95d9d512292e4e4ddaa58093b3adb5d3e0bbe1",
+    "ev_cleanup.py": "0071b0a4504f4d94fe9d279c757e66d3803e4da060b4ff76f2397c51859b2a74",
+    "experiment.py": "b5ed147a48efdb3572626b41ddb48f58e10dd7891098ad9116c66d53a446c132",
+    "pc_runtime.py": "9b14caf52da78f3daf3b76d13745a0d2af433d4aeefdc4c41b10b248d3f6f2ce",
+    "test_fixtures.py": "37c20fa90a32c4f348ef238192a476a6b50813b4a7fe0e2931f871f87f7c8339",
+    "test_lifecycle.py": "12378940b1675e270202991a1f74123e6e3b995e6183a0578418d19c3ff8783c"
+  },
+  "changes": [
+    "External cancellation signals only record a bounded request, never raise through arbitrary Python cleanup frames.",
+    "Existing budget.check first enforces the unchanged deadline, then raises pending cancellation before additional ordinary SQL/work. Cleanup checks honor deadlines and allow orderly failure cleanup.",
+    "SIGALRM continues to interrupt immediately; pure operations still obey original stage/global timers, no new grace or extra SQL.",
+    "Retain failure result/markers/strict replay guard and original all110 tests. Add actual runtime cancellation-before-SQL regression."
+  ],
+  "extra_native_capsule": false,
+  "frozen_at_utc": "2026-10-31T21:40:46.322741+00:00",
+  "justification": "An asynchronously raising cancellation handler can interrupt finally before its cleanup guard is set. Recording cancellation and raising at existing budget safepoints closes that entry race without blocking deadline alarms.",
+  "limits_changed": false,
+  "native_release": false,
+  "new_source_file": "OFFLINE-AMENDMENT-2.json",
+  "parent_freeze_sha256": "a390844b3c8e4093f759c251ed3ad737314accac24d9fdf323503698bf4c14f0",
+  "prior_source_inventory_sha256": "c3e8ed30a14d6b8ff6eba86cc79576d2db051e0eb1ca5512f5e1795c8a74974f",
+  "schema": "offline-lifecycle-freeze-amendment.v2"
+}

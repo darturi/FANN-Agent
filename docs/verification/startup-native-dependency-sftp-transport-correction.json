@@ -1,0 +1,19 @@
+{
+  "ANN_searches": 0,
+  "Torch_remote_commands": 0,
+  "all_spent_allowances": "closed including21756110",
+  "configuration_admitted": false,
+  "date": "2026-11-04",
+  "decision": "D144",
+  "evidence_directory": "trials/torch-reviews-startup-native-pinned-client-config-v1/dependency-command-v1/sftp-upload-correction-v1",
+  "exact_searches": 0,
+  "native_qualification": false,
+  "new_allocations": 0,
+  "old_payload_and_Torch_command_unchanged": true,
+  "old_tests_strict_verification_limits_and_failure_evidence_preserved": true,
+  "roadmap_version": "1.96",
+  "server_policy_cause": "not inferred",
+  "snapshot_checks": 14,
+  "source_checks": 14,
+  "status": "ready_user_direct_SFTP_upload_correction"
+}

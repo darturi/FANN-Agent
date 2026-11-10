@@ -1,0 +1,25 @@
+{
+  "ANN_searches": 0,
+  "date": "2026-10-31",
+  "decision": "D116",
+  "exact_searches": 0,
+  "files_sha256": {
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/postrun-audit-2026-10-31/REPORT.md": "7d691d1578bc4280fb5d9a9be8ad506e1d4eae8052ef20ecb2a3302537b753ea",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/postrun-audit-2026-10-31/input-inventory.json": "cd74d9ff6799c6385aea5b002d49b9aba8a3f6dfe315565d25536894711bd96c",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/postrun-audit-2026-10-31/preservation-verification.json": "044027a1de0062e79c33c7f6ec836b36b877b8022e65d3a6f90cd69dc1122819",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/postrun-audit-2026-10-31/returned-verification.json": "92fd888182f0b776d5d81475f27f9c3b4e4f384de394d398b19a4d8c75976070",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/postrun-audit-2026-10-31/trusted-source-inventory.json": "611c53710a59f9a4141eade6bb38179f1b6cc2297082bdb841419c2f33d2aa0f",
+    "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/postrun-audit-2026-10-31/verify_returned.py": "5727c22ea60d8ca564f8f3f86b2ba0e59ef3b7af868f8e6a97c54235b7ec4ee5"
+  },
+  "full_B2f_released": false,
+  "job_id": "21542975_0",
+  "native_correctness_remains_separately_qualified": true,
+  "native_memory_qualified": false,
+  "new_Torch_jobs": 0,
+  "next_gate": "offline total-charge/sampler/shutdown source-backed design review; prospective freeze before correction; no native handoff",
+  "observed_aggregate_peak_already_fails_frozen_margin": true,
+  "resource_allowance": "spent; no retry, extension, new capsule or automatic repeat",
+  "roadmap_version": "1.68",
+  "source_or_limit_changes": false,
+  "status": "failed_native_return_independently_verified"
+}

@@ -1,0 +1,625 @@
+{
+  "activity_this_review": {
+    "confirmation_queries": 0,
+    "new_code_changes": 0,
+    "new_experiments": 0,
+    "new_fits": 0,
+    "new_native_db_torch_provider_calls": 0,
+    "new_simulations_or_policy_selections": 0,
+    "new_tests": 0,
+    "new_vectors": 0,
+    "primary_source_browse": "Existing versioned pgvector0.8.6 filtering/iterative guidance and ACORNv1 rechecked; no local speed inference",
+    "protected_query_values_accessed": 0,
+    "type": "saved_data_verification_and_documentation_only"
+  },
+  "actual_consumption": {
+    "backend_searches": 1830,
+    "cases": 600,
+    "completed_temporal_blocks": 0,
+    "conditioning_searches": 0,
+    "confirmation_queries": 0,
+    "control_installations": 0,
+    "discarded_warmups": 0,
+    "elapsed_seconds": 859.3760264851153,
+    "index_and_module_after_verified": true,
+    "new_fits": 0,
+    "operations": {
+      "qualification_exact": 6,
+      "qualification_native480": 12,
+      "qualification_native640": 12,
+      "reference_exact": 600,
+      "reference_native480": 600,
+      "reference_native640": 600
+    },
+    "provider_calls": 0,
+    "quality_pass": false,
+    "reader_connections": 10,
+    "retained_executions": 0,
+    "slots": 0,
+    "status": "complete",
+    "vectors": 200
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "72650527f6f8b285f4c479a25ad4ce17f66a2b8249f55dea9ffbdb4c9482aca7",
+    "research/fannagent-native-effort-midpoint-v1-results-2026-10-25.md": "f53a05607c192c26b949237ea70dabc2640165f5b472beb545138fd1a5c6edae",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "ac594eec48e547a281707d50513d62b7d745530925e7f978015110f628bd87fa",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/archive-preservation.json": "7b954b6b2d06fd84f77d6c22492d6f25a477899b13834e78ea23a6d0b4b6ba28",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/descriptive.json": "08bc6cf54c2f4d7fd8e02774e8713025aa4acae006296088075eeab3cceb8621",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/documentation-checks.json": "6042c6ff2f94406673c125addd6ca6855fb3d8343c7d2ffc3dbc8cdf49a88596",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/input-inventory.json": "58e109611ca723b58f53f32ba7bf5ee462124b3a057b998c68f52cfc78dcdb6f",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/replay/performance.json": "b764731c6b65299a0a3f834ab6801db3a6809ffda5254c87c6fe3beab181b319",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/replay/report.txt": "c9f00d46ee18e11c9eae2f2727ea9c255b6aec9728a78681a568a8cc4e88f32d",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/replay/verification.json": "f645694098441eef42475739a0f756c889d9fa944e97a269ee3c8f74a221e95c",
+    "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/verification.json": "1a50664452eb14d7fd5ac167eaf2983f77986866fbe5d09eff7a4e4b36495ada"
+  },
+  "campaign": "reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki",
+  "changed_documents": [
+    "research/fannagent-native-effort-midpoint-v1-results-2026-10-25.md",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md",
+    "agent/docs/experiments/README.md"
+  ],
+  "charges": {
+    "exact_internal_non_search_execute_calls": 12120,
+    "explicit_reader_startup_execute_calls": 170,
+    "operations": {
+      "qualification_exact": 6,
+      "qualification_native480": 12,
+      "qualification_native640": 12,
+      "reference_exact": 600,
+      "reference_native480": 600,
+      "reference_native640": 600
+    },
+    "overlapping_categories_must_not_be_summed": true,
+    "phase_details": "Reader SQL counts come from unchanged inherited startup/exact source; diagnostics and phase boundaries are separately logged. Restore/auth/admin work remains in restore_import wall charge, not a statement-level profile.",
+    "qualifier_diagnostic_sql": {
+      "exact_internal_non_search_execute_calls": 120,
+      "injected_failed_statements": 3,
+      "plan_explains": 6,
+      "rollback_recovery_selects": 3,
+      "setting_queries": 12
+    },
+    "quality_setting_queries": 2,
+    "restore_import": {
+      "end_ns": 3362425924588165,
+      "outer_ms": 160431.022735,
+      "start_ns": 3362265493565430
+    },
+    "searches": 1830,
+    "snapshot_and_server_selects": 2,
+    "warm_boundary_setting_queries": 0
+  },
+  "documentation_checks": "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/documentation-checks.json",
+  "experiment": "NEXT-EFFORT-MID-01",
+  "fresh_saved_data_replay": {
+    "argv": [
+      "/Users/danielarturi/Developer/JinyangLiWork/agent/.venv/bin/python",
+      "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1/experiment.py",
+      "analyze",
+      "--campaign",
+      "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki",
+      "--output",
+      "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/replay"
+    ],
+    "download_helper_performance_and_report_byte_identical": true,
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "executable_origin": "unchanged local sealed package; no downloaded executable",
+    "exit_code": 0,
+    "parity_repair_applied": false,
+    "remote_performance_and_report_byte_identical": true,
+    "working_directory": "/Users/danielarturi/Developer/JinyangLiWork"
+  },
+  "frozen_contract": {
+    "path": "research/fannagent-native-effort-midpoint-v1-design-2026-10-25.md",
+    "sha256": "09176883e515ccad645523cab67fa756757230713a82a144959fe3b447102ed7",
+    "unchanged": true
+  },
+  "gate_shortfalls_and_case_diagnosis": {
+    "comparison_unit": "Recall percentage points (pp), not relative percent",
+    "development_lower_bound_pp": -0.25,
+    "final_lower_bound_pp_diagnostic_only": -0.5,
+    "matched_prior320_quality": {
+      "case_ids": 600,
+      "database_identity_identical": true,
+      "exact_truth_identical_cases": 600,
+      "independent_vectors": 200,
+      "native640_outputs_identical_cases": 600,
+      "prior_wrapped320_equals_source320_cases": 600,
+      "query_inventory_bytes_identical": true,
+      "runtime_image_module_profile_registry_identical": true,
+      "timing_comparison_allowed": false
+    },
+    "purpose": "Arithmetic diagnosis of saved outcomes; no new native search, bootstrap, fit, simulation or selection",
+    "strata": {
+      "overall": {
+        "480_floor_headroom_pp": 3.8500000000000085,
+        "480_minus_prior320_delta_pp": 0.6166666666666667,
+        "480_vs_prior320_paired_cases": {
+          "equal": 564,
+          "higher": 36,
+          "lower": 0
+        },
+        "absolute_native_floors_pass": true,
+        "cases": 600,
+        "changed_recall_cases": [
+          {
+            "query_id": "reviews-bounded-v0253-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0253-votes32",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0161-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0253-unfiltered",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0202-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0582-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0808-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0460-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0420-votes32",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0999-votes32",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0656-votes108",
+            "truth_hit_delta": -1
+          }
+        ],
+        "ci95_delta_pp": [
+          -0.33333333333333326,
+          -0.06666666666666665
+        ],
+        "development_reserve_pass": false,
+        "final_margin_diagnostic_pass": true,
+        "final_margin_shortfall_pp": 0,
+        "groups_net_truth_hits": {
+          "equal": 191,
+          "lower": 9
+        },
+        "independent_vectors": 200,
+        "mean_recall_percent": {
+          "native480": 98.85000000000001,
+          "native640": 99.03333333333333
+        },
+        "net_truth_hits_480_minus640": -11,
+        "observed_delta_pp": -0.1833333333333333,
+        "paired_cases": {
+          "different_id_sets": 11,
+          "different_ordered_ids": 11,
+          "equal": 589,
+          "higher": 0,
+          "lower": 11
+        },
+        "prior320_recall_percent": 98.23333333333333,
+        "prior320_truth_hits": 5894,
+        "reserve_headroom_pp": 0,
+        "reserve_shortfall_pp": 0.08333333333333326,
+        "truth_hits": {
+          "native480": 5931,
+          "native640": 5942
+        },
+        "truth_slots": 6000
+      },
+      "unfiltered": {
+        "480_floor_headroom_pp": 4.300000000000011,
+        "480_minus_prior320_delta_pp": 0.35000000000000003,
+        "480_vs_prior320_paired_cases": {
+          "equal": 193,
+          "higher": 7,
+          "lower": 0
+        },
+        "absolute_native_floors_pass": true,
+        "cases": 200,
+        "changed_recall_cases": [
+          {
+            "query_id": "reviews-bounded-v0253-unfiltered",
+            "truth_hit_delta": -1
+          }
+        ],
+        "ci95_delta_pp": [
+          -0.14999999999999997,
+          0.0
+        ],
+        "development_reserve_pass": true,
+        "final_margin_diagnostic_pass": true,
+        "final_margin_shortfall_pp": 0,
+        "groups_net_truth_hits": {
+          "equal": 199,
+          "lower": 1
+        },
+        "independent_vectors": 200,
+        "mean_recall_percent": {
+          "native480": 99.3,
+          "native640": 99.35000000000001
+        },
+        "net_truth_hits_480_minus640": -1,
+        "observed_delta_pp": -0.04999999999999999,
+        "paired_cases": {
+          "different_id_sets": 1,
+          "different_ordered_ids": 1,
+          "equal": 199,
+          "higher": 0,
+          "lower": 1
+        },
+        "prior320_recall_percent": 98.95,
+        "prior320_truth_hits": 1979,
+        "reserve_headroom_pp": 0.10000000000000003,
+        "reserve_shortfall_pp": 0,
+        "truth_hits": {
+          "native480": 1986,
+          "native640": 1987
+        },
+        "truth_slots": 2000
+      },
+      "votes108": {
+        "480_floor_headroom_pp": 3.250000000000014,
+        "480_minus_prior320_delta_pp": 1.0999999999999999,
+        "480_vs_prior320_paired_cases": {
+          "equal": 179,
+          "higher": 21,
+          "lower": 0
+        },
+        "absolute_native_floors_pass": true,
+        "cases": 200,
+        "changed_recall_cases": [
+          {
+            "query_id": "reviews-bounded-v0253-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0161-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0202-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0582-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0808-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0460-votes108",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0656-votes108",
+            "truth_hit_delta": -1
+          }
+        ],
+        "ci95_delta_pp": [
+          -0.6499999999999999,
+          -0.09999999999999998
+        ],
+        "development_reserve_pass": false,
+        "final_margin_diagnostic_pass": false,
+        "final_margin_shortfall_pp": 0.1499999999999999,
+        "groups_net_truth_hits": {
+          "equal": 193,
+          "lower": 7
+        },
+        "independent_vectors": 200,
+        "mean_recall_percent": {
+          "native480": 98.25,
+          "native640": 98.6
+        },
+        "net_truth_hits_480_minus640": -7,
+        "observed_delta_pp": -0.3499999999999999,
+        "paired_cases": {
+          "different_id_sets": 7,
+          "different_ordered_ids": 7,
+          "equal": 193,
+          "higher": 0,
+          "lower": 7
+        },
+        "prior320_recall_percent": 97.15,
+        "prior320_truth_hits": 1943,
+        "reserve_headroom_pp": 0,
+        "reserve_shortfall_pp": 0.3999999999999999,
+        "truth_hits": {
+          "native480": 1965,
+          "native640": 1972
+        },
+        "truth_slots": 2000
+      },
+      "votes32": {
+        "480_floor_headroom_pp": 4.0,
+        "480_minus_prior320_delta_pp": 0.4,
+        "480_vs_prior320_paired_cases": {
+          "equal": 192,
+          "higher": 8,
+          "lower": 0
+        },
+        "absolute_native_floors_pass": true,
+        "cases": 200,
+        "changed_recall_cases": [
+          {
+            "query_id": "reviews-bounded-v0253-votes32",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0420-votes32",
+            "truth_hit_delta": -1
+          },
+          {
+            "query_id": "reviews-bounded-v0999-votes32",
+            "truth_hit_delta": -1
+          }
+        ],
+        "ci95_delta_pp": [
+          -0.3499999999999999,
+          0.0
+        ],
+        "development_reserve_pass": false,
+        "final_margin_diagnostic_pass": true,
+        "final_margin_shortfall_pp": 0,
+        "groups_net_truth_hits": {
+          "equal": 197,
+          "lower": 3
+        },
+        "independent_vectors": 200,
+        "mean_recall_percent": {
+          "native480": 99.0,
+          "native640": 99.15
+        },
+        "net_truth_hits_480_minus640": -3,
+        "observed_delta_pp": -0.14999999999999997,
+        "paired_cases": {
+          "different_id_sets": 3,
+          "different_ordered_ids": 3,
+          "equal": 197,
+          "higher": 0,
+          "lower": 3
+        },
+        "prior320_recall_percent": 98.6,
+        "prior320_truth_hits": 1972,
+        "reserve_headroom_pp": 0,
+        "reserve_shortfall_pp": 0.09999999999999992,
+        "truth_hits": {
+          "native480": 1980,
+          "native640": 1983
+        },
+        "truth_slots": 2000
+      }
+    },
+    "version": "native-effort-midpoint-saved-descriptive.v1"
+  },
+  "input_archive": {
+    "all_archive_bytes_match_extraction": true,
+    "archive_bytes": 329356,
+    "archive_regular_members": 24,
+    "archive_sha256": "f32a9f23b543999150a82651ee0cf5320cba30ae8c460f47fcd89edc72f27c04",
+    "campaign": "reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki",
+    "documented_transport_helper_update": [
+      {
+        "new_sha256": "8f8e3dd570e9a6267ddd8b4c1fb3ed4fe85750de993a27cb0b1fda799c475b83",
+        "old_sha256": "9df5c8c86cc42f80d7a27f15c505cb158011009b113dbaf09f035d7e7c874c0d",
+        "path": "trials/torch-reviews-native-effort-midpoint-v1/transfer.sh",
+        "status": "documented_transport_only_update"
+      }
+    ],
+    "extracted_members_exact": true,
+    "immutable_input_files": 888,
+    "prior691_preserved": true,
+    "sealed_archive_all_bytes_verified": true,
+    "sealed_archive_members": 151,
+    "sealed_archive_sha256": "fbd7ac0654bb9ff99f6add7011127caf01c008cd08fb142abe56783ea94e6185",
+    "sealed_manifest_files": 150,
+    "sealed_manifest_sha256": "b7ad5be746bfa26bcaf5fbd381b0523c518f3872bb8011d8d00331b399c34bc1",
+    "status": "passed"
+  },
+  "next_step": {
+    "automatic_effort_ladder_or_repeat": false,
+    "id": "NEXT-PLAN-SCOPE-01",
+    "measurement_or_implementation_budget_assigned": false,
+    "phase": "B2a",
+    "router_fitting_allowed": false,
+    "scope": "Read-only existing-source/saved-plan/filter/index/identity/input-cost feasibility audit; GB2a go/no-go",
+    "status": "proposed_not_started",
+    "user_commands_needed_now": false
+  },
+  "preservation": {
+    "all_immutable_hashes_match_after_review": true,
+    "documented_earlier_transport_exception": [
+      {
+        "new_sha256": "8f8e3dd570e9a6267ddd8b4c1fb3ed4fe85750de993a27cb0b1fda799c475b83",
+        "old_sha256": "9df5c8c86cc42f80d7a27f15c505cb158011009b113dbaf09f035d7e7c874c0d",
+        "path": "trials/torch-reviews-native-effort-midpoint-v1/transfer.sh",
+        "status": "documented_transport_only_update"
+      }
+    ],
+    "immutable_files": 888,
+    "implementation_source_files": 12,
+    "implementation_sources_match_preparation": true,
+    "original_execution_retained": true,
+    "preexisting_user_proposal_edit_preserved": true,
+    "prior_preparation_files": 691,
+    "prior_verdicts_preserved": true,
+    "returned_protected_before_after_equal": true
+  },
+  "quality": {
+    "independent_confirmation": false,
+    "pass": false,
+    "pointwise_intervals": true,
+    "strata": {
+      "overall": {
+        "cases": 600,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": false
+        },
+        "final_margin_diagnostic_only": true,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "native480": 0.9885,
+          "native640": 0.9903333333333334
+        },
+        "pass": false,
+        "recall_delta": -0.0018333333333333329,
+        "recall_delta_ci95": [
+          -0.0033333333333333327,
+          -0.0006666666666666665
+        ]
+      },
+      "unfiltered": {
+        "cases": 200,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": true
+        },
+        "final_margin_diagnostic_only": true,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "native480": 0.9930000000000001,
+          "native640": 0.9935
+        },
+        "pass": true,
+        "recall_delta": -0.0004999999999999999,
+        "recall_delta_ci95": [
+          -0.0014999999999999996,
+          0.0
+        ]
+      },
+      "votes108": {
+        "cases": 200,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": false
+        },
+        "final_margin_diagnostic_only": false,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "native480": 0.9825000000000002,
+          "native640": 0.986
+        },
+        "pass": false,
+        "recall_delta": -0.003499999999999999,
+        "recall_delta_ci95": [
+          -0.006499999999999999,
+          -0.0009999999999999998
+        ]
+      },
+      "votes32": {
+        "cases": 200,
+        "checks": {
+          "both_native_floors": true,
+          "development_reserve": false
+        },
+        "final_margin_diagnostic_only": true,
+        "independent_vectors": 200,
+        "mean_recall": {
+          "native480": 0.99,
+          "native640": 0.9915
+        },
+        "pass": false,
+        "recall_delta": -0.0014999999999999996,
+        "recall_delta_ci95": [
+          -0.003499999999999999,
+          0.0
+        ]
+      }
+    }
+  },
+  "recorded_at_utc": "2026-10-25T23:53:13.002497+00:00",
+  "scientific_verdict": {
+    "B1c_proceed": false,
+    "M1": false,
+    "M2": false,
+    "M3": false,
+    "aa_assessed": false,
+    "activation_qualified": false,
+    "canonical_acceptance_established": false,
+    "router_selected": false,
+    "status": "closed_negative_quality"
+  },
+  "status": "verified_complete",
+  "user_job": {
+    "array_job_id": "20898557",
+    "array_task_id": "0",
+    "host_exit_code": 0,
+    "slurm_accounting_requeried": false,
+    "slurm_elapsed_user_report_seconds": 973
+  },
+  "verification": {
+    "aa_and_benefit": "not_assessed",
+    "archive_verification": "archive-preservation.json",
+    "campaign": "reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki",
+    "cross_campaign_quality_identity": {
+      "case_ids": 600,
+      "database_identity_identical": true,
+      "exact_truth_identical_cases": 600,
+      "independent_vectors": 200,
+      "native640_outputs_identical_cases": 600,
+      "prior_wrapped320_equals_source320_cases": 600,
+      "query_inventory_bytes_identical": true,
+      "runtime_image_module_profile_registry_identical": true,
+      "timing_comparison_allowed": false
+    },
+    "independent_id_based_recall_recomputed": 1200,
+    "input_inventory": "input-inventory.json",
+    "new_experiments_or_fits": 0,
+    "new_native_db_torch_provider_calls": 0,
+    "no_timing_files_on_quality_stop": true,
+    "prior320_source_recall_recomputed": 600,
+    "protected_query_values_accessed": 0,
+    "qualification": "passed",
+    "raw_lock_files": 15,
+    "remote_and_download_helper_parity": {
+      "trials/torch-reviews-native-effort-midpoint-v1/analysis-local/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/performance.json": {
+        "byte_identical": true,
+        "sha256": "b764731c6b65299a0a3f834ab6801db3a6809ffda5254c87c6fe3beab181b319"
+      },
+      "trials/torch-reviews-native-effort-midpoint-v1/analysis-local/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/report.txt": {
+        "byte_identical": true,
+        "sha256": "c9f00d46ee18e11c9eae2f2727ea9c255b6aec9728a78681a568a8cc4e88f32d"
+      },
+      "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/analysis/performance.json": {
+        "byte_identical": true,
+        "sha256": "b764731c6b65299a0a3f834ab6801db3a6809ffda5254c87c6fe3beab181b319"
+      },
+      "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/analysis/report.txt": {
+        "byte_identical": true,
+        "sha256": "c9f00d46ee18e11c9eae2f2727ea9c255b6aec9728a78681a568a8cc4e88f32d"
+      }
+    },
+    "scientific_verdict": "closed_negative_quality",
+    "status": "passed",
+    "unchanged_sealed_replay": {
+      "absolute_float_tolerance": 1e-12,
+      "campaign": "reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki",
+      "canonical_acceptance_established": false,
+      "package_manifest_sha256": "b7ad5be746bfa26bcaf5fbd381b0523c518f3872bb8011d8d00331b399c34bc1",
+      "remote_local_parity": true,
+      "status": "passed"
+    },
+    "version": "native-effort-midpoint-postrun-verification.v1"
+  },
+  "version": "native-effort-midpoint-v1-postrun.v1"
+}

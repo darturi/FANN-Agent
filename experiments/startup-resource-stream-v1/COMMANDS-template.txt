@@ -1,0 +1,33 @@
+# ONE ADDITIONAL STARTUP-ONLY ALLOCATION: 1 hour / 4 CPUs / 32 GiB.
+# Exactly zero ANN/exact searches. Three calibration failures and the original resource job stay spent.
+# This does not launch or resume B2f calibration. No automatic retries.
+
+# MAC: complete MFA; wait for UPLOAD VERIFIED.
+bash @OUTPUT@/transfer.sh upload
+
+# TORCH LOGIN: run once, only after UPLOAD VERIFIED.
+(
+  set -euo pipefail
+  cd /home/dar579
+  sha256sum -c torch-startup-resource-stream-v1.tar.gz.sha256
+  test ! -e torch-startup-resource-stream-v1
+  tar -xzf torch-startup-resource-stream-v1.tar.gz
+  source /home/dar579/torch-reviews-first/torch.env
+  export TORCH_SLURM_ACCOUNT=torch_pr_288_courant
+  PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-resource-stream-v1/pc_control.py submit \
+    /home/dar579/torch-reviews-first /home/dar579/torch-reviews-results
+)
+
+# TORCH: safe after reconnect; no path/environment arguments.
+PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-resource-stream-v1/pc_control.py status
+
+# TORCH: after terminal status, including any failure.
+PYTHONDONTWRITEBYTECODE=1 python3 /home/dar579/torch-startup-resource-stream-v1/pc_control.py collect
+
+# MAC: after collect prints archive path; checksum and trusted local analysis.
+bash @OUTPUT@/transfer.sh download
+
+# Preserve every package, binding, reservation, archive and retained source.
+# On any error, report it; do not repeat submit, delete reservations, rebuild graphs,
+# raise memory or resume a failed campaign. Status/collect remain safe.
+# No quality/A/A/performance result can be produced by this resource-only study.

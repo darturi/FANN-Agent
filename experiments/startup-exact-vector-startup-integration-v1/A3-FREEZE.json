@@ -1,0 +1,79 @@
+{
+  "A2_archive_sha256": "1da3b40f9c92c4b234c22361f1225404170447ed142beccc32865e077a7687a7",
+  "A2_manifest_sha256": "2bc40b4bf802ad333bca5bbc1e60f3a6219d456a48bf8a30a79a3328e37829df",
+  "basis": "Verified A2 row-decode RSS +8029081600 bytes, task anon +8029089792; matrix +761188352; cursor close +12288. Descriptive evidence, not savings.",
+  "consumer_source_sha256": {
+    "frozen/vendor/fannagent/broker.py": "727c5da124f867085c70b201598ac84b2808321a92b003a142ea47ad05fbb7f7",
+    "frozen/vendor/fannagent/snapshot.py": "0ebac2227ab66c07b7b1271c6aeb294a9061329e6d2817c52dadb63c9b9cf4fa",
+    "frozen/vendor/fannagent/store.py": "4dde727909c60079d34b1fd9c666403eee75636468e28c5c3e886d558049300b",
+    "frozen/vendor/fannagent/study.py": "0962ff60f5eb319c1d9a0e05a1bbc24154f5906f4c48e1a3a7583e55a1e46ebb",
+    "frozen/vendor/fannagent/workload.py": "0856314f0681773ed95a1b0cf3c51ead122dd4679e567d1c06998175676001e0",
+    "frozen/vendor/fannagent_pgvector/backend.py": "bc743c14178dbe30ab705dc790db20fc7b045e4c30395e2488da21ab6266834d",
+    "pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+    "pc_results.py": "7bdcf2071596b95516e061c8ab013fe93782e07e7af208224bf41d03ba4e8707",
+    "pc_snapshot.py": "4fae4ef69058c3608ff63f8d800bb3e822c5d6af713671bde3b368aa681a75eb",
+    "si_stream.py": "fd4013873ad3c3aea92c23527a0d223664cda4f6599ad909e3f1fdab74a7e6d7"
+  },
+  "decision": "GO_one_exact_binary64_vector_representation_with_integer_type_tags_to_offline_prototype",
+  "frozen_at_utc": "2026-10-30T23:06:38.807723+00:00",
+  "implementation_paths": [
+    "agent/experiments/startup-exact-vector-v1",
+    "trials/torch-reviews-startup-exact-vector-v1"
+  ],
+  "native_release": false,
+  "native_release_gates": [
+    "Finish standalone offline candidate and consumer review; exact-image source/sealed correctness remains separate and unqualified.",
+    "Before any native correctness run, freeze a distinct capsule/budget and production integration path; preserve all old 128+128 cases, strict references and final guards. No reuse of spent jobs.",
+    "A later fresh startup resource qualification must retain original scans/orders/limits/integrity/cleanup and prove unchanged conservative margin. No workload/B2f release follows automatically."
+  ],
+  "native_resource_rule_unchanged": {
+    "cache_subtraction": false,
+    "memory_gib": 32,
+    "peak_plus_reserves_within_limit": true,
+    "positive_limit_or_OOM_events_allowed": false,
+    "reserve_bytes": 2147483648,
+    "workspace_allowance_bytes": 2147483648
+  },
+  "offline_limits": {
+    "ANN_searches": 0,
+    "SQL": 0,
+    "SSH": 0,
+    "Torch_submissions": 0,
+    "dimensions": 768,
+    "exact_searches": 0,
+    "full_native_scans": 0,
+    "max_fixture_rows": 64,
+    "native_database_connections": 0,
+    "provider_calls": 0
+  },
+  "old_allowances": "Main21459623 and all four compatibility jobs spent; no resubmission.",
+  "preservation_before_sha256": "2470e65d2e3e59d62c0a828de570546bdabb100403b498f239bcec222b976826",
+  "preserved_files": 756,
+  "protocol": "startup-exact-vector.design.v1",
+  "rejected_alternatives": {
+    "cursor_only_batch_only_close_GC_only": "Does not address independently observed retained decoded rows plus matrix and final-verification overlap; no evidence-backed margin guarantee.",
+    "float32_compaction": "Changes original decoded values and canonical identity.",
+    "larger_allocation_skip_checks_cache_subtraction": "Violates frozen qualification contract.",
+    "plain_float64_array": "Loses original JSON integer categories unless exact tags/values are retained; external JSON encoder does not directly serialize array/opaque sequences."
+  },
+  "required_offline_checks": [
+    "Integer versus float canonical bytes; signed zero, subnormals, float32 rounding collisions, large exact integers and finite/nonfinite/error cases.",
+    "Original constructor on packed/unpacked fixtures; complete canonical byte/hash parity, float32 uint32 matrix parity, identifiers/maps/metadata/query/workload/description/save/sample consumer parity.",
+    "Binding restoration on success and exceptions, nested/concurrent/foreign-binding rejection; strict source/hash pinning; reject oversized/unexpected input.",
+    "Packed payload ownership independent of input mutation, bounded per-row conversion, no cached whole decoded-vector list; byte footprint accounting without native memory/savings claims.",
+    "All preexisting A2 source/seal/raw/analysis/128+128 receipts remain byte-identical. Freeze precedes candidate code."
+  ],
+  "selected_remedy": [
+    "Only a future isolated producer stores one decoded vector at a time as immutable IEEE754 binary64 bytes, with exact original Python-int tags/values. It must not first accumulate all decoded list vectors.",
+    "Reuse original Snapshot constructor and float32 matrix/finite/norm/metadata validators unchanged. Native SQL, client cursor, ordering, transaction and PostgreSQL text values remain unchanged.",
+    "Construct exact canonical bytes one ordinary original-type vector/row at a time using the original canonical encoder and unchanged bounded per-row identity framing; restore digest binding before publication and on every failure.",
+    "Adapt bounded external row samples to ordinary list/dict JSON before publication. Internal vector storage type changes explicitly; no universal list-mutation/drop-in API equivalence claim."
+  ],
+  "semantic_invariants": [
+    "Exact original JSON int/float categories, binary64 float bits and signed zero; no float32 round-trip, decimal shortening or normalized replacement values.",
+    "Original typed identifiers and sort order, source maps, metadata/nullable masks, float32 matrix bits, identity bytes/hash, query validation, workload generation, description, Parquet values and JSON sample values.",
+    "Keep every row and shared snapshot alive through original consumer and final integrity lifetimes. No early disposal, forced GC, pool/cache release or verification omission.",
+    "Unsupported types, malformed/nonfinite vectors, binding changes, source mismatches, nested/concurrent scope and cap violations fail closed. Mutation behavior of original public list vectors is outside this new internal experiment contract."
+  ],
+  "stage": "A3 remedy decision and bounded offline feasibility; native release held"
+}

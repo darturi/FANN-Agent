@@ -1,0 +1,17 @@
+{
+  "ANN_searches": 0,
+  "all_main_and_A3_tests_preserved": true,
+  "date": "2026-11-03",
+  "exact_searches": 0,
+  "limits_and_strict_verification_unchanged": true,
+  "local_checks": "Exact source and independent snapshot adversarial capture cases, actual local fake-process output/file-size/deadline behavior, and immutable parent/source/package/reference receipt preservation. No scientific tests need rerun because code/tests/references are unchanged.",
+  "new_allocations": 0,
+  "parent_design_sha256": "42b03193f03fb175cde7501af2bd28bb8d3c9500efb0e46bc8077a0966bd31a2",
+  "query_controls": "Only --version, show config and write config with explicit private filename.10second per command deadline plus at most1second owned process-group cleanup;64KiB combined output.1MiB RLIMIT_FSIZE soft cap inherited by writer, never raised; size equal to cap held as possibly truncated. Whole capture <=2MiB/16regular files, inside unchanged32MiB/256file raw maximum.",
+  "raw_handling": "Keep full bounded outputs, including nonzero and partial timeout/output-bound results. Over-bound output is explicitly incomplete; no success verdict. Require exactly one expected timestamp-suffixed regular0600owner file, nlink1, no symlink/special/namespace-generation change. Read hash through O_NOFOLLOW/nonblocking FD and compare stat before/after plus named path. No exported content or environment printed.",
+  "readiness": "Capture success is pending syntax/dependency/portability review; it does not qualify or authorize a Slurm configuration override. On any failure retain output and private directory, print structured held status, exit nonzero, never retry.",
+  "schema": "a3.login.config.capture.freeze.v1",
+  "scope": "Capture only. No private config use, sealed-client adapter, native qualification, job, approval, spent reuse or remote assistant command.",
+  "verification": "Original immutable package/plan/admission policy plus exact observed scontrol SHA. Existing environment trust rules unchanged. Baseline and post export version/controller/auth/cluster match known anchor. Fresh conservative original quota/headroom check.",
+  "write_scope": "Only a fresh0700a3-client-config-capture.*directory under existing owned results root. Explicit export/slurm.conf output base, one export attempt, no default output destination, no cluster configuration change. Private full logs and receipt; never overwrite prior paths."
+}

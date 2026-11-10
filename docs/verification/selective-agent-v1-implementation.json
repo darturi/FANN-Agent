@@ -1,0 +1,209 @@
+{
+  "version": "selective-agent-v1",
+  "status": "pilot_verified; single_feedback_response_abstained; episode_finished",
+  "recorded_utc": "2026-10-22T20:17:11.463617+00:00",
+  "source": "/Users/danielarturi/Developer/JinyangLiWork/agent/experiments/selective-agent-v1",
+  "source_files_sha256": {
+    "package.py": "8a0ae03a91510c9a5b53c1c998d88740e84975a414175aedd5a20bdffd94691d",
+    "screen.py": "336a31551f76db5a9ea24cc3ec7ce84b4eabab04414cfddd16e08ccdb07189fd",
+    "native_check.py": "42a96d4fb5b2410a3e8d0529158e62863b3047eb12c02499edf862553c448f3a",
+    "fake_episode_test.py": "3fef5a29abc97b26b3038102589ae1715caeb8c966b2632d99e8b98178ce78fa",
+    "reference_backend.py": "c9993cd4705e1a1e7e40e2b44524e9499a4a3041642c9f4bcd3a17594da676a4",
+    "episode_budget.py": "79d01c70a54d3dc698785607aa0fca655664cb132f050cfdbc7d0464fa3f300f",
+    "execution.py": "be142803bfd9e1bfdb09af618cde25494ad43a45e2f58f39af14ed0d30b6dd77",
+    "policy_tools.py": "88af672a4512c30bded3a959e7629bed3702ae14c386112b23e9aa3157b61838",
+    "native_selective.py": "b3c35e080d6c8c1e438cb7c9997971060e23760c19cb89fcfd1eb8c281bc531e",
+    "fd_execution.py": "96324da1537b7a8a177a0c5cf9f8d3b611f3f174592a029ffcf417a44a5800b3",
+    "fd_policy_tools.py": "eb7d79bd0f246f4490f80f5fa8d03ff9fc6643660470a7b5a1e1b805394ac8fb",
+    "job.py": "5a98934980d459b13e0422ca8e99957deb8f8ffecf11b56ab2b9a7a727f3ccbb",
+    "provider_preflight.py": "a04809e721a95afc39af7e565aa568877ad89c84c8d3b8ea0c682820772f50be",
+    "database.py": "a72143e088b0ff6519ff868a865275f56281f7e9ee3be8ef7c048b72403d2f95",
+    "tools.py": "e64b2229f9e04dd6b2f1ff43f589a88ade0d85ff1cf772d2f283db79d6b28621",
+    "control.py": "69b599c614ff89deede5767be69994180aa0ef76c1c1169609c2e2790bf7a579",
+    "policy.py": "f6befdf5773c4d499804fb3ba71c522ad4f6bc57b8dca913b33300b1af9f0e0f",
+    "preservation.py": "ad47d1a56e842c647fa26be7c60bc601da0387a3db33f2f3246c1ee1f9fee6a7",
+    "design.py": "53dfd16b0277e3cb616a74879deeea909ff492a9de5c4d173da2169fa55febd2",
+    "protected.py": "7378d6ba45a9cd2c25c4321b753a227fa3464a1b9323f68814bf63c20d2b4f6e",
+    "fd_contract.py": "e3ed62d6e0fd8e6a37fd21784f7036c07cd5cf2c5bcb1ddb707cc5a7f61ea0c5",
+    "runtime_base.py": "9b2d9bb1edac4b6aaf13d8a0145661b6af21f05f3b901e2554257c12d4ea8805",
+    "prior_protected.py": "67c80db3b2851161ba3aae0b640bc6e9cfa7ac323f1b0ae224b55d0db259c48d",
+    "test_study.py": "b7c4872a5ab5b74634c5460462965fba087ad424bd4eff9d2f5629f18b37a35e",
+    "runtime.py": "a379a3d56e09651d883d0db97fe50c7db88c4e0ff20a08fce53528177744db3c",
+    "beam_search.py": "21032fad5db01616a296618334e47a6b8e51196fa83e806b0437609135e1e28c",
+    "prompts.py": "4d0c2b86e7c1855c9d64b54f8f21b51128e7023f917a31e1be791e2df2beb4e9",
+    "README.md": "7233984f69464eea1c958548e7a3ba9b70f9971c095d8150247d5c11cde7b13f",
+    "sandbox.py": "32cced60546c82cbe13659ccc94fa486c8dade6b21778d2cc71ac12676e9cfb8",
+    "validate.py": "b71578e92743258b58e1fa381b2d8b7fe674fd81c3866529cb35f11a42aa1e8d",
+    "verify_patch.py": "b354609b150dc892158a5aa05cebdf554778f6e7d2e3ef8b642a76c149223e13",
+    "legacy_execution.py": "3dcdf9183c4a8771b98e8ac045e99877ed8bb00d68a0b78f2e944d4de1416ff6",
+    "study_stats.py": "2c3d7f10024556d37001ee06828cb4f06ea384953aed673b0f9aaffb164f415e",
+    "fitting.py": "baa271150db5a774a4716a37b4ed511d7d5ca6b21741b073f46a02739cece7fc",
+    "COMMANDS.txt": "f7f0d320309232e9375281d21d3e15ce4d3c2ba15238904d025d224774a5e78c",
+    "no_models.py": "ccf28e41ad1a4024ef033397b1e3e83c788533d85bf5844f737d1165f1127940",
+    "contract.py": "df217008b77b084e76d97b4d54cbdf3958422e56b4ac323e50b62df5495e3ba6",
+    "evidence.py": "7f6d1e49a21e5eb08916dae94268e378dd5f8aaf267b8ce9988bd95054f4ddac",
+    "integrity.py": "62341655720f39c6aa73f7815461dd1420192c6f35b5c5784f138a7ad5388a75",
+    "legacy_contract.py": "c8eeab2a51d97d892c530218e3b17552cf264b8caeb67f18270ae7c7ae9d82bb",
+    "report.py": "72050ce44d71c5e271b08ba3e8ff746b0cce4a39b51ead442fca4ee74417ac68",
+    "legacy_protected.py": "88a7dfb37ef68732b73cadfbd648d310622b382ffd1624e587a13bc685cd0a96",
+    "study.py": "82affe734a46025f7f5d5a82725b1fe2690002f5dd6f936d3288010c169f9577",
+    "TOOLS.md": "8139db7c9648438c9f456a5e990a7baaeb28216d52515ff0283fdaa256882728"
+  },
+  "source_archive": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-selective-agent-v1/selective-agent-v1-source.tar.gz",
+  "source_archive_sha256": "70c9bd52c98bbf6218fff4feaffaa3458830cc8b0f3ce9a660818f30fb5fbc23",
+  "prepared_episode": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6",
+  "unit_tests_passed": 22,
+  "native_validation": {
+    "actual_stop_prefix_comparisons": 144,
+    "architecture": "aarch64",
+    "candidate_module_sha256": "8790deb7aab2dfbad0df6acdabb3ca6f64eccbd3e63df31c825834c2cd5cbaec",
+    "causal_progress_checkpoint_checks": 576,
+    "checked_utc": "2026-10-22T19:24:44.893849+00:00",
+    "compiler_image": "sha256:ae86d11d19bbf9f78caa716df09a4e4bce2539810322b2e1c5248c6d28ae2eef",
+    "fixture_image": "sha256:a05358202e42cc093848b563db8b15ec376060d4a1f2fb0e1970522bc1f5dcd6",
+    "logs": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-selective-agent-v1/validation/native-at44cl0t",
+    "native_source_sha256": "341f9325ce08b735bc10021257ba29b13664ee83b67cfa1f7e1eed7ebf441ec4",
+    "numeric_boolean_availability_getter_calls": 921,
+    "original_native_static_prefix_comparisons": 12,
+    "physical_index_unchanged": true,
+    "provider_calls": 0,
+    "real_Reviews_measurements": 0,
+    "request_reset_verified": true,
+    "selective": {
+      "full_driver": {
+        "confirmation_driver_block_searches": 6861,
+        "confirmation_driver_retained_pairs": 2430,
+        "new_Reviews_measurements": 0,
+        "pilot_backend_searches": 27873,
+        "pilot_blocks": 3,
+        "pilot_retained_pairs": 8640,
+        "raw_report_reproduced": true,
+        "synthetic_never_qualifies": true
+      },
+      "route_error_reconnect_checks": 24
+    },
+    "status": "passed",
+    "study_source_sha256": "860dc09cbe93362b8b7536efe6d7a050f8f88e6243b2afd2114825a6608d109c",
+    "synthetic_only": true,
+    "x86_Torch_module_rebuilt": false
+  },
+  "fake_provider_lifecycle": {
+    "actual_Docker_broker": true,
+    "explicit_pause_resume_finish": true,
+    "paid_provider_requests": 0,
+    "provider_dispatches_simulated": 2,
+    "revision_without_measurement_cannot_confirm": true,
+    "run": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-selective-agent-v1/validation/fake-episode-6knloctx/runs/20261022T192239Z-b6381b2b",
+    "same_ledger": true,
+    "same_transcript": true,
+    "status": "passed",
+    "synthetic_cannot_submit": true,
+    "synthetic_only": true
+  },
+  "new_paid_model_calls": 8,
+  "new_Torch_allocations": 3,
+  "final_recall_criteria_unchanged": true,
+  "original_ab_comparison": {
+    "status": "inconclusive",
+    "complete_pairs": 0,
+    "selection_effect_established": false
+  },
+  "canonical_acceptance_established": false,
+  "new_model_cap_usd": "10",
+  "phase_caps_usd": {
+    "A": "6",
+    "B": "4"
+  },
+  "maximum_allocations": 9,
+  "maximum_backend_reference_searches": 299529,
+  "runtime_module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+  "confirmation_vectors_unexecuted": 60,
+  "other_reserved_vectors_unexecuted": 37,
+  "remote_access": "Noninteractive login blocked by host-key verification; DTN requires interactive authentication. No host keys changed.",
+  "automatic_review_block": "Resolved by explicit user authorization of the specified Anthropic development-data transfer; original rejection retained in egress review.",
+  "egress_review": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/egress-review.json",
+  "phase_A": {
+    "status": "explicitly_paused_for_measurement",
+    "attempts_used": 7,
+    "attempt_limit": 8,
+    "settled_usd": "0.16713",
+    "uncertain_reserved_usd": "0",
+    "helper_fits": 18,
+    "exports": [
+      {
+        "semantic_hash": "3ea7f234d2dd2b51411a9a29f283133f862dcaa90024cd9377daa3eff4781578",
+        "name": "agent-helper-c5d2f50bb175",
+        "eligible": [
+          "unfiltered"
+        ],
+        "profile": "light19",
+        "origin": "Trusted helper fit risk1280 light19 eligibility unfiltered only; helper reuse"
+      },
+      {
+        "semantic_hash": "4b54cd2dfcc54063d4edc745f552e29a8944bc1cb7706487b78a3d9b8a0c6b80",
+        "name": "agent-helper-e9ff53b092e3",
+        "eligible": [
+          "unfiltered",
+          "votes32"
+        ],
+        "profile": "light19",
+        "origin": "Trusted helper fit risk1280 on light19 with eligibility unfiltered+votes32; helper reuse, not new discovery"
+      },
+      {
+        "semantic_hash": "a014a290966444a86614f1e5be1960dad2fb8684044e85e9df82899911062b0d",
+        "name": "cons-bypass108",
+        "eligible": [
+          "unfiltered",
+          "votes32"
+        ],
+        "profile": "light19",
+        "origin": "Reuse of earlier agent seed cons_S32_64_128_t002 with sole change: eligibility drops votes108 (native bypass)"
+      }
+    ]
+  },
+  "phase_B": {
+    "status": "completed_abstained",
+    "attempts_used": 1,
+    "attempt_cap": 4,
+    "settled_usd": "0.071204",
+    "uncertain_reserved_usd": "0",
+    "unused_phase_allowance_usd": "3.928796",
+    "further_model_requests_permitted": false
+  },
+  "pilot_package": {
+    "archive_sha256": "148715699f8ef79d9727433b6764bd9222eb2346b84926d5e9a07aa6e7e7bee7",
+    "archive_bytes": 13751945,
+    "manifest_sha256": "082b167507e25009bdb25ea613950cd434ef38608fbcbc6194af19c363d0f6dc",
+    "verified_members": 127,
+    "shell_blocks_verified": 3,
+    "queries": 600,
+    "independent_vectors": 200,
+    "candidates": 3,
+    "counts_per_allocation": {
+      "allocations": 3,
+      "arms": 8,
+      "backend_searches_per_block_maximum": 56721,
+      "cases": 600,
+      "discarded_warmup_pairs_per_block": 4800,
+      "getter_searches": 921,
+      "independent_vectors": 200,
+      "profile_references_per_case": 3,
+      "qualification_backend_calls_per_database_allocation": 921,
+      "retained_pairs_per_block": 19200,
+      "warm_passes": 3
+    },
+    "provider_calls_allowed": 0
+  },
+  "payload_authorization": {
+    "approved": true,
+    "user_answer": "Approve this Anthropic data transfer",
+    "includes_later_pilot_feedback": true
+  },
+  "pilot_commands": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/packages/pilot/COMMANDS.txt",
+  "postrun_receipt": "/Users/danielarturi/Developer/JinyangLiWork/agent/docs/verification/selective-agent-v1-pilot-postrun.json",
+  "agent_final_status": "abstained",
+  "new_model_total_spending_usd": "0.238334",
+  "pilot_allocations_used": 3,
+  "revision_allocations_used": 0,
+  "confirmation_allocations_used": 0
+}

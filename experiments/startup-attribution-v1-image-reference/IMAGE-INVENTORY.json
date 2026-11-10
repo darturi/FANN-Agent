@@ -1,0 +1,170 @@
+{
+  "A1_reference_differences": {
+    "python": {
+      "actual": "3.12.15",
+      "reference": "3.12.7"
+    }
+  },
+  "SQL": 0,
+  "accounting": {
+    "literal_callbacks": 4,
+    "source_bytes": 246814,
+    "source_reads": 12
+  },
+  "actual_driver": {
+    "hooks": [
+      {
+        "file": "_connection_base.py",
+        "file_sha256": "14115b0bdcb81125b3c340340b4e8e674bb1ae03f4b320c94c2b93d30462f36e",
+        "function_sha256": "fb1d5546c1445a2e23ddade3c0f52cb9f253556c45f50539565401488af7d284",
+        "kind": "generator",
+        "qualified_name": "psycopg._connection_base.BaseConnection._exec_command",
+        "signature": "(self, command: 'QueryNoTemplate', result_format: 'pq.Format' = <Format.TEXT: 0>) -> 'PQGen[PGresult | None]'"
+      },
+      {
+        "file": "_connection_base.py",
+        "file_sha256": "14115b0bdcb81125b3c340340b4e8e674bb1ae03f4b320c94c2b93d30462f36e",
+        "function_sha256": "8bd0b1d62711979bea0bd6169aa65a91db0df3726806091edbd68b90fbb508f7",
+        "kind": "generator",
+        "qualified_name": "psycopg._connection_base.BaseConnection._deallocate",
+        "signature": "(self, name: 'bytes | None') -> 'PQGen[None]'"
+      },
+      {
+        "file": "_cursor_base.py",
+        "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+        "function_sha256": "2e4b180e6286fe071dd2de0b2bf6ad8328191cb8ff74dabcf179b7d3546175bf",
+        "kind": "normal",
+        "qualified_name": "psycopg._cursor_base.BaseCursor._execute_send",
+        "signature": "(self, query: 'PostgresQuery', *, force_extended: 'bool' = False, binary: 'bool | None' = None) -> 'None'"
+      },
+      {
+        "file": "_cursor_base.py",
+        "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+        "function_sha256": "d1773a0bb0048c6d04070cfef87a05e409039fa38e466bb1845b6ac63962ebde",
+        "kind": "normal",
+        "qualified_name": "psycopg._cursor_base.BaseCursor._send_prepare",
+        "signature": "(self, name: 'bytes', query: 'PostgresQuery') -> 'None'"
+      },
+      {
+        "file": "_cursor_base.py",
+        "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+        "function_sha256": "b93f0ec6a1ac9ed226cfff67cbccd3d89467cb2141e2f187cb484ad052e919fb",
+        "kind": "normal",
+        "qualified_name": "psycopg._cursor_base.BaseCursor._send_query_prepared",
+        "signature": "(self, name: 'bytes', pgq: 'PostgresQuery', *, binary: 'bool | None' = None) -> 'None'"
+      },
+      {
+        "file": "_server_cursor_base.py",
+        "file_sha256": "6514d1e38e8899aaf52353949c8db2a43dccb0445d885986433d5ba0dce19cde",
+        "function_sha256": "4726beb1926c98a74e95cb3e747718724f1091b6a6f3c1c0d14a3e582f77c637",
+        "kind": "generator",
+        "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._describe_gen",
+        "signature": "(self) -> 'PQGen[None]'"
+      },
+      {
+        "file": "_server_cursor_base.py",
+        "file_sha256": "6514d1e38e8899aaf52353949c8db2a43dccb0445d885986433d5ba0dce19cde",
+        "function_sha256": "c03aa12d7ac8f3ead8bef6a672e4ccc52b21ed5838730a9edc3d73344c99131c",
+        "kind": "generator",
+        "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._declare_gen",
+        "signature": "(self, query: 'Query', params: 'Params | None' = None, binary: 'bool | None' = None) -> 'PQGen[None]'"
+      },
+      {
+        "file": "_server_cursor_base.py",
+        "file_sha256": "6514d1e38e8899aaf52353949c8db2a43dccb0445d885986433d5ba0dce19cde",
+        "function_sha256": "33d82be3e9fc7166714c783b088782366f57ff365beb738a70828d64e035fbf7",
+        "kind": "generator",
+        "qualified_name": "psycopg._server_cursor_base.ServerCursorMixin._fetch_gen",
+        "signature": "(self, num: 'int | None') -> 'PQGen[list[Row]]'"
+      },
+      {
+        "file": "_cursor_base.py",
+        "file_sha256": "6aa7e17b57fe37f343809ead45ebba3764666afebfee1517fe930a9ea74186e7",
+        "function_sha256": "04e872b6b24efbcd1d361ca4e7e2cb077fd44816dd7e48655a3047fdc74d112f",
+        "kind": "normal",
+        "qualified_name": "psycopg._cursor_base.BaseCursor._close",
+        "signature": "(self) -> 'None'"
+      }
+    ],
+    "implementation": "cpython",
+    "libpq_implementation": "binary",
+    "libpq_version": 180006,
+    "numpy": "2.5.3",
+    "psycopg": "3.3.6",
+    "pyarrow": "22.0.0",
+    "python": "3.12.15",
+    "query_parser": {
+      "file": "_queries.py",
+      "file_sha256": "c217b09decc0c1ca1e6577847f029e8b96a99a5ac4315a81ba026121d4886410",
+      "function_sha256": "a57458f5b0a7ae99c48284113674df43f8d986f638ec4244567b4c0647ff43b4",
+      "qualified_name": "psycopg._queries._query2pg_nocache",
+      "scope": "uncached pure template validation; no parameter dumping or cache priming",
+      "signature": "(query: 'bytes', encoding: 'str') -> 'tuple[bytes, list[PyFormat], list[str] | None, list[QueryPart]]'"
+    }
+  },
+  "allocation_qualification": false,
+  "arrow_default_pool": {
+    "backend": "mimalloc",
+    "high_water_bytes": 0,
+    "live_bytes": 0
+  },
+  "capsule_manifest_sha256": "5f8bbb0dfa50b5346d00e4b60f5a7f3e6757bd48de3f0abe2073a3b882b554ce",
+  "cgroup_capability": "not measured by this image-only inventory",
+  "database_connections": 0,
+  "elapsed_seconds": 5.627513442013878,
+  "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+  "limits": {
+    "CPU_seconds": 15,
+    "address_space_bytes": 2147483648,
+    "capsule_bytes": 16777216,
+    "literal_callbacks": 16,
+    "report_bytes": 131072,
+    "source_bytes": 4194304,
+    "source_file_bytes": 65536,
+    "source_reads": 128,
+    "wall_seconds": 30,
+    "wrapper_kill_grace_seconds": 5,
+    "wrapper_wall_seconds": 60
+  },
+  "literal_monitoring": {
+    "events": 4,
+    "restored": true
+  },
+  "native_handoff_released": false,
+  "original_function_mapping": {
+    "local_masks_clear": true,
+    "mapped_lines": [
+      [
+        970,
+        982,
+        983,
+        992
+      ],
+      [
+        23,
+        54,
+        55,
+        57,
+        61,
+        89
+      ]
+    ],
+    "original_bindings_unchanged": true,
+    "qualified_names": [
+      "fannagent_pgvector.backend.NativeBackend.snapshot",
+      "fannagent.snapshot.Snapshot.__init__"
+    ],
+    "source_sha256": [
+      "bc743c14178dbe30ab705dc790db20fc7b045e4c30395e2488da21ab6266834d",
+      "0ebac2227ab66c07b7b1271c6aeb294a9061329e6d2817c52dadb63c9b9cf4fa"
+    ]
+  },
+  "parent_A1_manifest_sha256": "065022eb9428e4a7607b1eafa5784855103e184b174b4b5ac5abd6389827b96a",
+  "provider_calls": 0,
+  "resource_margin_qualification": false,
+  "schema": "startup-attribution.image-inventory.v1",
+  "searches": 0,
+  "slurm_submissions": 0,
+  "snapshot_calls": 0,
+  "status": "inventory_complete_reference_mismatch"
+}

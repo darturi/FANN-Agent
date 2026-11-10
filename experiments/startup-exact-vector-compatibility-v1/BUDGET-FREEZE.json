@@ -1,0 +1,67 @@
+{
+  "A3_freeze_sha256": "68d7dca04d248dce16f04dbdafbee1fd9100f50d791349a0f67ee97c35f538c6",
+  "ANN_searches": 0,
+  "SQL": 0,
+  "budget_basis": "Native C2B source283.272s/candidate37.151s/sealed284.598s. Keep complete420/90/420 caps and30s preflight/cleanup; add90s for each new A3 suite,30s extra host verification and30s outer margin. Local times are not native headroom proof. Any failure spends new allowance, no retry.",
+  "date": "2026-10-30",
+  "exact_searches": 0,
+  "frozen_at_utc": "2026-10-31T00:18:49.816959+00:00",
+  "full_B2f_release": false,
+  "limits": {
+    "allocations": 1,
+    "candidate_build_seconds": 90,
+    "guest_cleanup_seconds": 30,
+    "guest_preflight_seconds": 30,
+    "guest_seconds": 1170,
+    "home_return_required_bytes": 134217728,
+    "host_cleanup_seconds": 60,
+    "host_startup_seconds": 120,
+    "integration_sealed_seconds": 90,
+    "integration_source_seconds": 90,
+    "memory_gib": 4,
+    "outer_margin_seconds": 135,
+    "physical_cpus": 2,
+    "raw_bytes": 8388608,
+    "scratch_required_bytes": 4294967296,
+    "sealed_suite_seconds": 420,
+    "source_suite_seconds": 420,
+    "termination_seconds": 15,
+    "wall_seconds": 1500
+  },
+  "main_A2_manifest_sha256": "2bc40b4bf802ad333bca5bbc1e60f3a6219d456a48bf8a30a79a3328e37829df",
+  "native_jobs_by_Codex": 0,
+  "native_resource_release": false,
+  "new_capsule_name": "torch-startup-exact-vector-compatibility-v1",
+  "new_capsule_prefix": "reviews-startup-exact-vector-compatibility-v1-",
+  "old_jobs_spent": [
+    "21348020",
+    "21367064",
+    "21382454",
+    "21443102",
+    "21459623"
+  ],
+  "preserved_files": 789,
+  "prototype_files_sha256": {
+    "README.md": "4661d6e9940bcafb5461b594dc375dfe7260d59cd0d0145afd8839cf16310957",
+    "exact_vector.py": "159204cb4cd164dc147789a4764abf58cc7be586e0100da01476b862212feb0e",
+    "run_checks.py": "2010e5c172b240b3bf258cd76074969e4c1b37880e7eca8f6268be7726545b8d",
+    "test_exact_vector.py": "0fe11951f98f37d1c3107eaf83d86a52f726f3e97b96943d1924db5259b314d5"
+  },
+  "required_checks": [
+    "Actual producer executes identical SQL once; one-row packing before append; cursor/cache/error behavior and exact original constructor identity/matrix/eligibility/admission.",
+    "Partial parse/count/field/identity/cursor/consumer/cancellation failures clear candidate/cache and restore instance/digest bindings before publication.",
+    "Shared reader aliases, blocked searches, unchanged original base method and sample output semantics; native-release gate closed.",
+    "Source and sealed code/module origin/hash parity; strict exact image private-hook/library reference; all old128+128 unchanged.",
+    "Controller durable unique reservation/no retry, full phase/tail admission/deadlines, failed-prefix collection, raw locks and local transfer/control shell checks."
+  ],
+  "runtime_invariants": [
+    "Original SQL/order/client cursor/transaction and all rows/fields/identity; original Snapshot constructor and validators unchanged.",
+    "Per-instance explicit producer binding on only owned startup backends; no changes to original class/function/source. Restore prior instance state on every failure. No binding remains active on return.",
+    "Full count/order/source-field/type checks; validate identity and original eligibility/admission before shared snapshot publication. No early retention-root release or resource-rule change.",
+    "Native production context requires independently verified qualification/release receipt and is closed at this phase. Fixture contexts explicitly limited to64x768.",
+    "Original old128+128 tests/guards/build/seed/restoration proofs remain intact, plus all33 prototype and all new integration checks in both source and sealed A3 suites.",
+    "Sparse reference view uses exact read-only original A1 frozen files and main68 recipes, not duplicated full production package; native capsule extracts to scratch to avoid home inode pressure."
+  ],
+  "scope": "A3 separate production producer/boundary integration and a distinct exact-target zero-DB correctness capsule; no native resource release",
+  "selected_remedy": "unchanged exact PackedVector prototype, one vector packed before row append, original Snapshot constructor, original framed canonical encoding plus exact per-row adapter, bounded JSON samples"
+}

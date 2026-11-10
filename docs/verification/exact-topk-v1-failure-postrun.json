@@ -1,0 +1,171 @@
+{
+  "activity": {
+    "SSH_SCP_calls": 0,
+    "existing_databases_accessed": 0,
+    "new_ANN_native_searches": 0,
+    "new_Torch_jobs": 0,
+    "new_fits": 0,
+    "new_scientific_experiments": 0,
+    "protected_query_values_opened": 0,
+    "provider_calls": 0,
+    "scientific_implementation_changes": 0,
+    "verification_utility_created": true
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "d7910bfc9a666c0346c3cc42068c11b6aa7542df5661e719760e1be91be07f6c",
+    "agent/docs/verification/exact-topk-v1-catalog-fix-implementation.json": "ab2f1551b4f2aec7c100e0224552addb6e133bfbfc4a0cd6ff12c98e5f9311e8",
+    "research/fannagent-exact-topk-v1-failure-verification-2026-10-26.md": "978d85fc423d657f21df45861fd33aa05656f1973467c0835fb76bcc4b6a18c6",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "c7bd44d08db2181e79d51c67bc5972ebb1ba7b1659ae7331d009be2fa96f2dca",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/COMMANDS.txt": "c87eb147067cd7c5757fc9d9e4d38e83f2bf2e0a688e08e7f8c08d9312bfb4ec",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/RUN-CORRECTED.txt": "86e8035e2552a58cf58a543545b767b0d88b865c17d24db7c94404925525d9d4",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/failed-v1-verification-2026-10-26/preservation-before.json": "703a00050cc38e7d3bcb5a30382460021f8017c1f459782b9cfac04856fa47e4",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/failed-v1-verification-2026-10-26/verification-log.txt": "69a7d4f6ebd5af2ac52c87526f8805aa8868b8bcbee9909d87b4da077826c0f3",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/failed-v1-verification-2026-10-26/verification.json": "f55d51ca515f9f79727838077d7572a00b8a073f31d16ea7d99591722408ee8f",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/failed-v1-verification-2026-10-26/verify_return.py": "099f9f5f2c1eaa4447908affc7ad96b3cc62ce03cfd7082a495565497bbb15d3",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix.tar.gz": "b15b0b4b43708dbd891ae0b11a380591bdf2b192b731010398ba3fb7be75f95b",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix.tar.gz.sha256": "1846e486e1a0c706c1eaa3fcc9a9b860344bad0fdb8f74f7739610f53788e6a4",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix/manifest.json": "6b2bb0f4a2797f01b70edcf256c518fe20f5cc00598d755ada04f216c9c6f842",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/transfer.sh": "e91707d759abdff6df5571e558918c497452d53e6d096579e2dac164fd45288f"
+  },
+  "campaign": "reviews-exact-topk-v1-20261026T032153Z.9khasec1",
+  "date": "2026-10-26",
+  "job_id": "20941363_0",
+  "next": "User corrected upload and once-only submit via RUN-CORRECTED; then status, collect, download and independent actual native/scientific return verification.",
+  "pending_gates": {
+    "AA_16_intervals": "unassessed",
+    "B2b_R4_native_catalog_graph_module_plan_semantics": "unassessed",
+    "adjusted_economic_gates": "unassessed",
+    "canonical_acceptance_established": false,
+    "valid_quality": "unassessed"
+  },
+  "preservation": {
+    "all_hashes_unchanged": true,
+    "historical_designs_receipts_and_HOLD_commands_preserved": true,
+    "immutable_input_files": 1307,
+    "mutable_documents_updated": [
+      "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "agent/docs/experiments/README.md"
+    ],
+    "original_and_corrected_seals_preserved": true,
+    "original_failed_raw_preserved": true
+  },
+  "prior_readiness": {
+    "receipt_sha256": "ab2f1551b4f2aec7c100e0224552addb6e133bfbfc4a0cd6ff12c98e5f9311e8",
+    "sealed_tests": {
+      "count": 43,
+      "result": "pass",
+      "seconds": 103.704
+    },
+    "source_package_archive_unchanged": true,
+    "source_tests": {
+      "count": 43,
+      "result": "pass",
+      "seconds": 104.39
+    },
+    "tests_repeated_this_review": false,
+    "unchanged_scientific_constants_and_127_frozen_files": true
+  },
+  "recovery_gate": {
+    "B2b_R2_failed_return": "pass",
+    "B2b_R3_corrected_handoff": "complete",
+    "controller_rechecks_actual_remote_prerequisites": true,
+    "corrected_commands_released": true,
+    "corrected_native_run_submitted": false,
+    "new_runbook": "trials/torch-reviews-exact-topk-v1-catalog-fix/RUN-CORRECTED.txt",
+    "original_allowance_stays_consumed": true,
+    "original_and_corrected_bindings_reservations_must_be_preserved": true
+  },
+  "resources": {
+    "automatic_retry": false,
+    "corrected_prospective_allocations": 1,
+    "cpus": 4,
+    "max_backend_attempts": 40230,
+    "memory_gib": 32,
+    "original_backend_attempts": 0,
+    "original_job_elapsed": {
+      "origin": "prior_user_status; not present in collected scheduler format",
+      "value": "00:06:17"
+    },
+    "quality_stop_backend_attempts": 1830,
+    "wall_hours": 2,
+    "work_seconds": 6600
+  },
+  "roadmap_version": "1.22",
+  "scientific_result": "failed_qualification_before_any_search; no quality_AA_economic verdict",
+  "status": "original_failed_qualification_raw_verified_unchanged_corrected_handoff_released",
+  "verification": {
+    "activity": {
+      "ANN_native_searches": 0,
+      "SSH_SCP_calls": 0,
+      "new_Torch_jobs": 0,
+      "new_experiments": 0,
+      "new_fits": 0,
+      "provider_calls": 0,
+      "scientific_code_changes": 0
+    },
+    "all_readers_closed": true,
+    "archive_bytes": 153662,
+    "archive_matches_every_returned_byte": true,
+    "archive_regular_members": 19,
+    "archive_sha256": "6773f88b361e01c5ed6fb7b4f15ba687329636bf62c1c18dff7fc5224312c25c",
+    "backend_searches": 0,
+    "binding_limit": "Original helper validated remote binding manifest/campaign during successful download; binding bytes are not in this archive. Corrected controller rechecks the actual remote package/binding and failed-campaign prerequisites before sbatch.",
+    "campaign": "reviews-exact-topk-v1-20261026T032153Z.9khasec1",
+    "canonical_acceptance_established": false,
+    "captured_protected_hashes_byte_identical_before_after": true,
+    "cleanup_outer_ms": 2100.987975,
+    "corrected_commands_release_recommended": true,
+    "corrected_manifest_sha256": "6b2bb0f4a2797f01b70edcf256c518fe20f5cc00598d755ada04f216c9c6f842",
+    "corrected_native_run_submitted": false,
+    "diagnostic_limit": "Old code rejects catalog before persisting it; source-backed type defect is established, but other actual raw catalog fields cannot be reconstructed.",
+    "elapsed": {
+      "origin": "previous_user_status_only; collected sacct format has no elapsed column",
+      "value": "00:06:17"
+    },
+    "full_catalog_raw_available": false,
+    "job_id": "20941363_0",
+    "native_phase": "before_qualification catalog",
+    "original_allowance_remains_consumed": true,
+    "original_manifest_sha256": "0124abaa1c472f19e0f778c633f7a4c1cc42f69430f83964a4a14cb90a56f55e",
+    "prepared_database_identity_matches_frozen": true,
+    "preserved_prior_files": 1307,
+    "prior_raw_identity_groups_match_frozen_contract": 7,
+    "private_database_stopped": true,
+    "protected_entries": 1621,
+    "protected_groups": 19,
+    "quality_AA_performance_results_available": false,
+    "raw_files_sha256": {
+      "analysis/failure-summary.json": "07e51e716a539efd5e955c522569e22837d8bdc259e887b0d5fd06c90c34019d",
+      "logs/block-0-20941363-0.log": "138636dc9ba224a5ae0741be526cc0df19928181ef49108188c73c71382ab821",
+      "protected-source-before.json": "52ae804da86dc53612da7c9b4c4f922cba4a2cd49f4abbfae629ec05639e69e3",
+      "run/admissions.json": "5f594641227386e522b6fd4f6f511687a5edbd6867ade69b68a1235813753502",
+      "run/cleanup.json": "1c3036510666c476a818fe0b2e2fb406522e6c273c4d6efe4574c41d5f692f37",
+      "run/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+      "run/failure.json": "0ef2a9135b498ca7438e0f13e3fa53fea7667f9c600932a1d4fce900e5374398",
+      "run/host-exit.json": "55f191da151d7758f0dcf909dbf67fcabe254cec6e055711318fda293502ae4a",
+      "run/host-failure.json": "0d1efcf811d22d2c12f8dd33b593f56c4aa0c9278715e7f64b463f51b62aba48",
+      "run/host.json": "58e1484df49bd484d4e99ff0211b87cdb23579e9221a827da4339dfb487029c6",
+      "run/job-exit.json": "5fb8a75af4156fde495d25fe192855e230cd9360996e03e17945f449d6ab85dc",
+      "run/progress.json": "d0c700a2ab4fbcb1819dd77ba09bfa93ab108f10686b3a0b614fed7c1404bd62",
+      "run/protected-source-after.json": "52ae804da86dc53612da7c9b4c4f922cba4a2cd49f4abbfae629ec05639e69e3",
+      "run/protected-source-before.json": "52ae804da86dc53612da7c9b4c4f922cba4a2cd49f4abbfae629ec05639e69e3",
+      "run/runtime-identity.json": "b776bccf21af221c9610a979b42790fad8a289510c396a40cb985c7fa0687df0",
+      "run/server.log": "f8a3d50967352c64d61c1496f7482a267b457bd43bbe2250a17fe4e388ad4d02",
+      "run/shared-initialization.json": "4bd49c3d80f34924a5767ed7ca6d8e0895da24c8d76b26d75c012617d02899e9",
+      "scheduler-evidence.json": "7c2b5902cfc779f250204a5c998441e12c686cc69cc4986e985cc39db959a2ba",
+      "submission.json": "acfc3b2340a39d31f3e0732c8109dc24641a9cab2449126dd51bb5db48a9786c"
+    },
+    "readers_admitted": 1,
+    "runtime_module_profile_registry_match": true,
+    "scheduler": {
+      "exit_code": "1:0",
+      "state": "FAILED",
+      "terminal_raw_accounting_verified": true
+    },
+    "search_operations": {},
+    "snapshot_eligibility_origin_effective_settings_match": true,
+    "status": "passed_failed_qualification_raw_verified_corrected_handoff_ready",
+    "submission_job_and_remote_paths_match": true
+  },
+  "version": "exact-topk.v1.failure-postrun"
+}

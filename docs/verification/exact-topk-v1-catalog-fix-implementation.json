@@ -1,0 +1,241 @@
+{
+  "activity": {
+    "actual_SSH_SCP_calls": 0,
+    "existing_databases_accessed": 0,
+    "local_database_SQL_executed": 0,
+    "local_initdb_attempts": 3,
+    "new_ANN_native_searches": 0,
+    "new_Torch_jobs": 0,
+    "new_fits": 0,
+    "new_scientific_experiments": 0,
+    "protected_query_values_opened": 0,
+    "provider_calls": 0
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "0f9ac7ef351071f7b43189055ea8191a2412a43f6139d724ed5d0a2871d17e99",
+    "agent/docs/verification/exact-topk-v1-torch-failure-2026-10-26.json": "94a3217378aad7afb00003bfc4c10952303c91f84bdd2b2bd5f923ece137d0b3",
+    "research/fannagent-exact-topk-v1-catalog-failure-2026-10-26.md": "eb572aa66347eacd80dfb2b9910c7580d07ee6832ea2ccf6065ecba2db0747b3",
+    "research/fannagent-exact-topk-v1-catalog-fix-design-2026-10-26.md": "56fcf3e743e221f5ba99848e3c2bdde083770ca4f177d9e804162ea9e7e49012",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "d43e8f49e73b945d734b00bed0f220bbf2bdc65a17399161cc9c3fb25e7de669",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/COMMANDS.txt": "c87eb147067cd7c5757fc9d9e4d38e83f2bf2e0a688e08e7f8c08d9312bfb4ec",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/RECOVER-FAILED-V1.txt": "73537f81b531b364ba2f69475ada3179b931d7208dace158a37f9122dd0a898a",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/format.txt": "04eb0d6e6734823dcd2b2b704729e976f683df7a8f334da7216520ef1cb319bf",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/lint.txt": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/oid-json-scalar-fixture-unavailable.json": "4a43d421654e0c9ed9e331ff5bb867a2fc123489fb0a0966b8109fd7a499e875",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/package-build.txt": "8a704ebcd4b3cb6cf839c65ebf25ae3ba2881f27b0752d9b33bf16548e3cc8eb",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/package-integrity.json": "1a3a0b955af1a658bf0192bab2f3e91396c0cb18a7a8835b826ab4d814243cbb",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/preservation-before.json": "9a7e85e5c20338d5cecbe9485848be038f68872a1a440d7b17a3b0017fbece05",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/scientific-scope-preservation.json": "5f82be9ae9878f31a9a0be26b2f374aeacdadf20c10dedf5476fb0b19c14ea5c",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/tests-sealed.txt": "36f2eb2f832e4e2eefec783a562b3d9a6d5efcef1dd45b9d74330a9dfe81df93",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/local-checks/tests-source.txt": "3fc7c7569dc05609ce8be5e1c63681fe1193f8ce898ffe3635414f090fcabbf0",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix.tar.gz": "b15b0b4b43708dbd891ae0b11a380591bdf2b192b731010398ba3fb7be75f95b",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix.tar.gz.sha256": "1846e486e1a0c706c1eaa3fcc9a9b860344bad0fdb8f74f7739610f53788e6a4",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix/manifest.json": "6b2bb0f4a2797f01b70edcf256c518fe20f5cc00598d755ada04f216c9c6f842",
+    "trials/torch-reviews-exact-topk-v1-catalog-fix/transfer.sh": "e91707d759abdff6df5571e558918c497452d53e6d096579e2dac164fd45288f"
+  },
+  "date": "2026-10-26",
+  "local_database_fixture_limit": {
+    "attempts": 3,
+    "first_attempts_error": "initdb bootstrap could not create shared memory segment: Operation not permitted (shmget)",
+    "native_vector_searches": 0,
+    "postgres_major_version": 16,
+    "source_backed_unit_regression_required": true,
+    "status": "unavailable",
+    "temporary_clusters_removed": true,
+    "third_attempt": "same failure with shared_memory_type=mmap / dynamic_shared_memory_type=mmap options",
+    "user_databases_accessed": 0
+  },
+  "native_gate_status": {
+    "canonical_acceptance_established": false,
+    "corrected_AA": "unassessed",
+    "corrected_economics": "unassessed",
+    "corrected_native_catalog_plan_semantics": "unassessed",
+    "corrected_quality": "unassessed",
+    "original_initial_catalog": "failed_qualification_user_reported",
+    "original_raw_checksum_accounting_cleanup": "pending"
+  },
+  "next": {
+    "Codex_after_return": "Verify original archive/submission/job/scheduler/search/cleanup/protected evidence; reconcile all mismatches; release corrected commands only if prerequisites match",
+    "corrected_commands_released": false,
+    "do_not": "Delete/reset original reservation or resubmit original v1",
+    "user_now": "Original Torch controller collect, then original Mac helper download/checksum (RECOVER-FAILED-V1.txt)"
+  },
+  "original_native_failure": {
+    "aa_result_available": false,
+    "array_task_id": "0",
+    "backend_searches": 0,
+    "campaign": "reviews-exact-topk-v1-20261026T032153Z.9khasec1",
+    "cleanup_independently_verified": false,
+    "error": {
+      "message": "HNSW catalog differs from frozen source",
+      "type": "ValueError"
+    },
+    "exit_code": "1:0",
+    "host_error": "Runtime or cleanup failed",
+    "job_id": "20941363",
+    "next_action": "collect original failed raw archive, checksum/download using original helper, independently verify before releasing corrected commands",
+    "not_established": "Actual complete remote catalog was not saved before the old guard failed; other differences cannot be excluded from this pasted status.",
+    "operations": {},
+    "original_package_manifest_sha256": "0124abaa1c472f19e0f778c633f7a4c1cc42f69430f83964a4a14cb90a56f55e",
+    "performance_result_available": false,
+    "progress_label": "restore_and_verify",
+    "protected_sources_unchanged_reported": true,
+    "provider_calls": 0,
+    "quality_result_available": false,
+    "raw_archive_downloaded": false,
+    "record_type": "user_reported_torch_failure_not_independently_raw_verified",
+    "recorded_date": "2026-10-26",
+    "reported_elapsed": "00:06:17",
+    "scheduler_state": "FAILED",
+    "source_backed_defect": "to_jsonb(oid) emits JSON text, but original guard and mock expected integer264013",
+    "source_traced_failure_site": "measure initial before_qualification catalog, after restore/initialization",
+    "work_directory": "/scratch/dar579/torch-reviews/exact-topk-v1.664ufstt/cost-20941363.2g6tv4d3"
+  },
+  "resource_accounting": {
+    "corrected_allocation_not_submitted": true,
+    "original_allowance_remains_consumed": true,
+    "original_backend_searches_reported": 0,
+    "original_elapsed_user_reported": "00:06:17",
+    "original_job": "20941363_0",
+    "prospective_correction_limit": {
+      "allocations": 1,
+      "cpus": 4,
+      "max_backend_attempts": 40230,
+      "memory_gib": 32,
+      "no_automatic_retry": true,
+      "quality_stop_attempts": 1830,
+      "wall_hours": 2,
+      "work_seconds": 6600
+    }
+  },
+  "roadmap_version": "1.21",
+  "scope": {
+    "adopted_execution_changed": false,
+    "catalog_SQL_unchanged": true,
+    "correction": "Strict JSON text OID; raw rejected catalog and field diagnostics; accurate initial catalog progress; separate provenance and recovery guard",
+    "frozen_addendum": "research/fannagent-exact-topk-v1-catalog-fix-design-2026-10-26.md",
+    "original_source_seal_receipt_design_preserved": true,
+    "reader_quality_statistics_report_host_launcher_byte_identical": true,
+    "scientific_gates_cohort_settings_graph_module_preserved": true,
+    "source_directory": "agent/experiments/exact-topk-v1-catalog-fix"
+  },
+  "source_files_sha256": {
+    "agent/experiments/exact-topk-v1-catalog-fix/README.md": "41cdf35430b4990baa71bbac5d1cbd1eec1c7ef86fcf0ea8b429133f250f1851",
+    "agent/experiments/exact-topk-v1-catalog-fix/experiment.py": "86a4ed6bf83e15cf5de2fed3fb20d427bc33df9d1070a024c9a76195cc85a9a9",
+    "agent/experiments/exact-topk-v1-catalog-fix/test_experiment.py": "ae9476a2e04de6abe4b7a7350c801ffd1f153f9267d7ad5023f35e3208d7f14b",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_common.py": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_control.py": "4714635d639bac1e989beea902478631432779ee3705df895471665ccaa60890",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_interface.py": "ea865a9ed5d0275710457dafc7852fef1366fd9d60b6f288c0c1229cfbb13a87",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_job.py": "4135e0cbb8a2a254a465e72b6fec81ad232e4e50b3142bdebfc441efd0de9988",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_measure.py": "28ceb2e161a4d642000551c58ad26e769b122a425bf0cb9b189e5709f33580bb",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_metadata.py": "c26975dd1b039916c9de28b9bd76b7ed03358920b7dfefb985f183c486b4b575",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_quality.py": "3fa7246464012348ba4a50a452356c31ef26e086a552293b474b3e69fb2ba5df",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_report.py": "f259bb5b5d4f1bc412f35f0400fc25550f0ccb748ffe0c2f6ab1db8b39051552",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_runtime.py": "0072ac01807d21882de573299b32a2fdee4c1a3928b7fe386aef6746f57a8ece",
+    "agent/experiments/exact-topk-v1-catalog-fix/xt_stats.py": "60a0fea456a8fa90d54ec25e5aa25f598e3dc230e6a0ab4d88a5f74fc18f8ec9"
+  },
+  "sources": {
+    "PG17_11_jsonb_scalar": "https://github.com/postgres/postgres/blob/REL_17_11/src/backend/utils/adt/jsonb.c#L764-L772",
+    "PG17_11_type_categorization": "https://github.com/postgres/postgres/blob/REL_17_11/src/backend/utils/adt/jsonfuncs.c#L5608-L5705"
+  },
+  "status": "local_readiness_pass_corrected_commands_held_for_original_failed_raw_verification",
+  "verification": {
+    "check_kind": "Source-backed/mocked contracts and synthetic clocks, not actual ANN/native qualification",
+    "format": "pass",
+    "lint": "pass",
+    "missing_changed_cleanup_search_scheduler_archive_recovery_prerequisites_rejected": true,
+    "original_guard_text_oid_rejection_reproduced": true,
+    "other_graph_checks_retained": true,
+    "package_integrity": {
+      "all_archive_bytes_match_package": true,
+      "archive_bytes": 14855087,
+      "archive_members": 156,
+      "archive_sha256": "b15b0b4b43708dbd891ae0b11a380591bdf2b192b731010398ba3fb7be75f95b",
+      "design_bytes_preserved": true,
+      "isolated_local_initdb_attempts": 3,
+      "local_database_sql_executed": 0,
+      "manifest_files": 155,
+      "manifest_sha256": "6b2bb0f4a2797f01b70edcf256c518fe20f5cc00598d755ada04f216c9c6f842",
+      "new_native_ANN_Torch_provider_calls": 0,
+      "prior_B2a_349_sources_preserved": true,
+      "prior_immutable_files_preserved": 1095,
+      "shell_syntax": "passed",
+      "source_and_sealed_bytes_match": true,
+      "status": "passed",
+      "transport_mock_checks": [
+        {
+          "jobs_submitted": 0,
+          "mock_failure": "authentication",
+          "real_network_calls": 0,
+          "returncode": 1,
+          "success_printed": false
+        },
+        {
+          "jobs_submitted": 0,
+          "mock_failure": "transfer",
+          "real_network_calls": 0,
+          "returncode": 12,
+          "success_printed": false
+        },
+        {
+          "jobs_submitted": 0,
+          "mock_failure": "verification",
+          "real_network_calls": 0,
+          "returncode": 14,
+          "success_printed": false
+        },
+        {
+          "jobs_submitted": 0,
+          "mock_failure": "none",
+          "real_network_calls": 0,
+          "returncode": 0,
+          "success_printed": true
+        }
+      ]
+    },
+    "prior_immutable_files_preserved": 1095,
+    "rejected_catalog_raw_timer_and_stability_evidence_preserved": true,
+    "scientific_scope_preservation": {
+      "catalog_SQL_byte_identical": true,
+      "identical_scientific_constants": [
+        "COUNTS",
+        "QUALITY_OPERATIONS",
+        "CRITERIA",
+        "SCOPE",
+        "FILTERS",
+        "CELLS",
+        "MODES",
+        "EXACT_SETTINGS",
+        "SEED",
+        "DESIGN_SHA",
+        "SOURCE_MANIFEST",
+        "ANCHOR_MANIFEST",
+        "PROFILE_SHA"
+      ],
+      "measurement_change_only_adds_progress_notification": true,
+      "new_native_or_scientific_experiments": 0,
+      "original_design_byte_identical": true,
+      "status": "passed",
+      "unchanged_complete_source_files": {
+        "xt_interface.py": "ea865a9ed5d0275710457dafc7852fef1366fd9d60b6f288c0c1229cfbb13a87",
+        "xt_job.py": "4135e0cbb8a2a254a465e72b6fec81ad232e4e50b3142bdebfc441efd0de9988",
+        "xt_quality.py": "3fa7246464012348ba4a50a452356c31ef26e086a552293b474b3e69fb2ba5df",
+        "xt_report.py": "f259bb5b5d4f1bc412f35f0400fc25550f0ccb748ffe0c2f6ab1db8b39051552",
+        "xt_stats.py": "60a0fea456a8fa90d54ec25e5aa25f598e3dc230e6a0ab4d88a5f74fc18f8ec9"
+      },
+      "unchanged_frozen_files": 127
+    },
+    "sealed_tests": {
+      "count": 43,
+      "result": "pass",
+      "seconds": 103.704
+    },
+    "source_tests": {
+      "count": 43,
+      "result": "pass",
+      "seconds": 104.39
+    },
+    "wrong_oid_and_type_rejected": true
+  },
+  "version": "exact-topk.v1.catalog-fix.implementation"
+}

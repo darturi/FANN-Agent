@@ -1,0 +1,18 @@
+{
+  "ANN_searches": 0,
+  "Torch_remote_commands": 0,
+  "all_spent_allowances": "closed including21756110",
+  "date": "2026-11-04",
+  "deadline_seconds": 120,
+  "decision": "D145",
+  "evidence_directory": "trials/torch-reviews-startup-native-pinned-client-config-v1/verification-cost-correction-v1",
+  "exact_original_full_semantic_verification_calls": 1,
+  "exact_searches": 0,
+  "limits_strict_criteria_and_all_tests_preserved": true,
+  "local_checks": 424,
+  "native_runtime_qualification": false,
+  "new_allocations": 0,
+  "roadmap_version": "1.97",
+  "status": "ready_user_corrected_login_inspection_native_completion_pending",
+  "unchanged_original_quota_tail_AST": "8558e93f8db06d840dc72b1c6a843fdea9497982aa196ecdc4addc2d19529138"
+}

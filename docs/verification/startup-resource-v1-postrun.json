@@ -1,0 +1,228 @@
+{
+  "acquisition": {
+    "admitted_requests": 200,
+    "ann_searches": 0,
+    "completed_epochs": 2,
+    "data_verification_scans": 4,
+    "elapsed_seconds": 808,
+    "exact_searches": 0,
+    "executed_requests": 0,
+    "exit_code": "0:0",
+    "maximum_live_readers": 6,
+    "new_fits": 0,
+    "plan_packets": 0,
+    "prohibited_sql_attempts": 0,
+    "provider_calls": 0,
+    "reader_admissions": 10,
+    "runtime_elapsed_seconds": 670.3898171847686,
+    "snapshot_scans": 1,
+    "sql_counts": {
+      "observer": 56,
+      "startup": 171
+    },
+    "terminal": "COMPLETED"
+  },
+  "activity_this_analysis": {
+    "ann_searches": 0,
+    "exact_searches": 0,
+    "implementation_changes": 0,
+    "native_database_queries": 0,
+    "new_experiments": 0,
+    "new_fits": 0,
+    "new_tests": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "ssh_calls": 0,
+    "torch_allocations": 0
+  },
+  "archive": {
+    "archive": "trials/torch-reviews-startup-resource-v1/reviews-startup-resource-v1-20261028T020546Z.zdsnk75c.tar.gz",
+    "archive_bytes": 934849,
+    "archive_sha256": "312bf5c02959a1e90514f6ec556914303095eb30c2f87acd9b182010a28320e7",
+    "members": 46,
+    "package_manifest_sha256": "4212507e81abc053aa5045e09a8cb624b789ed0bad4e1e8d1bf69f82f31484d9",
+    "raw_files_sha256": {
+      "analysis/acquisition-summary.json": "9314d5c9bf3858035d283115300be30157525f97a6cad5f7c5dc897f5e1edcb0",
+      "logs/block-0-21171789-0.log": "1a648bb99b273cfcc43a29fcebf8378d1443b4daf22f4356cecdf00de5c46497",
+      "protected-source-before.json": "fea0dd82d08bcf3626723fdc32b03a2ea7becec0538dde84b10945f78152d72b",
+      "resource-preflight-login.json": "143485aabf9049ad41979ad759b02701cba532b18819c1653824bb3c9f169eb3",
+      "run/HOST-LOCK.json": "ac1291737d112a86d41914c1bae9d03329e90456359809a06315f6bbe8a12a66",
+      "run/LOCK.json": "a64a1d626dffaac9c5d9041666c3f7c9a89045959c190b62bea565af85f0e7aa",
+      "run/admissions.jsonl": "96d9ad114d0198ea5936af56c5daa9216089482547b5394f03bc4b5e070aaff6",
+      "run/admitted-requests.json": "ade2e0e385554c5a8c64a485e0bcdd760b81f76df28dfb0030b2ce580d8fb15a",
+      "run/catalogs.jsonl": "0bb45aed329952188b8e72be6b2f838b57a098994f25934a2d0d7b57f08dc222",
+      "run/charges-checkpoint.json": "d52280cadee52cf5830b890f8ceef7499116ca50fa967256a7e482fc93e7be2a",
+      "run/cleanup.json": "e93350d2ae06a0445c6afb160478fc8be8165e0b4ebe302aa92dd5dba5290746",
+      "run/copies.json": "12223c4ec892ac9076c2f631b3d6d41459f27714d65ce9e5af2d9851df92f3a7",
+      "run/final-integrity.json": "4c6057fd2537d22275e74027ee302ed8f713e43e245be22cbf605cdf049c65d3",
+      "run/host-exit.json": "d8e509ff9bc173711e00aba87e9d2c8d5bfc4b411e46c7057a0a5b2b97a0b432",
+      "run/host-launch.json": "c445c345e885a1b34cd72ccee2c61c6f03abfd0ba78977a97e63d1fc6532dcc1",
+      "run/identities.jsonl": "cb202130ded665b6dfb03162f323a5b2480897293ced135eabbc6a9fab07add8",
+      "run/job-exit.json": "15816cb824a0a479d25c75c3f397059d428427b19a6dc5435ef6ae9e7c247e57",
+      "run/lifecycle.jsonl": "9eb5c7be3677ad497e3eccfe6f0d916ede47da67949cab88df019bf611a496f3",
+      "run/memory-context.json": "72f0a99a133681bfcc38a25cc5c7cd9aeecc0de058a9b3094b44110b0fa6754b",
+      "run/memory-health.json": "d92b586b1f944b8b1a4312d76e98216a1811482353f14c38f414c310cac859b0",
+      "run/memory-preflight.json": "367c4e75adc1c6333f42e1cb791b9fc836a3e5d29d6e643f16e19045c70f238c",
+      "run/memory-stop.json": "28656352e7d34a3c1c4965b64f5aac8ae8259bd6bfda63ebe92fed5d03dc1547",
+      "run/memory-summary.json": "d92b586b1f944b8b1a4312d76e98216a1811482353f14c38f414c310cac859b0",
+      "run/memory.jsonl": "346436d7751dbc330072152d6cd05c9838244648e126995713fbdf7dd2e54a4f",
+      "run/native640-server.log": "9029ffe7f4e1b536c22bc1d1c00dbc810ab9df8adec9b591d03b75f7e4e18af5",
+      "run/partial640-server.log": "18bcadab650f7891b30fdd365a81373a97b06a9dbf0b743f4cd01cc3245274bf",
+      "run/phases.jsonl": "d2cb1563a45cb63139283138a79b526d100de2fe10c5fa46f810e2924ef9712a",
+      "run/placement.jsonl": "b42d0740ee61255ed66876db6cbc8b674d0eb85cd9e883d5332e5bc80745475c",
+      "run/progress.json": "a61b0a2731cb822954cb4925dec3e5ba6cf136e0d0c6928feba74a9edf989092",
+      "run/protected-source-after.json": "fea0dd82d08bcf3626723fdc32b03a2ea7becec0538dde84b10945f78152d72b",
+      "run/protected-source-before.json": "fea0dd82d08bcf3626723fdc32b03a2ea7becec0538dde84b10945f78152d72b",
+      "run/reader-context.jsonl": "46531073b1ece9ef6e60697f8f6e3f24853dae9fe1dd9b1d03534792a34b8d92",
+      "run/resource-preflight.json": "3de8efbb8a0542483c970d6cd518e0194e0e72bf6c0748bbb48cdda64ddd31a8",
+      "run/restore-qualified.json": "0f368c24bbefd9c41b5857ffb2aede8268515cc9479b463aa77dd8c2271a7370",
+      "run/runtime-identity.json": "5abd4f0965aafaf18039d93418a80257795acaff692ed3fa97668979844128cc",
+      "run/runtime-process.json": "62fa332de7f4db3bf885be4647b37b254640fc21eb596de86eedfa816d5309ce",
+      "run/snapshot-qualified.json": "0cd2d51288cd0187467c7a91ea9d1fd9f7852954085d569482ad87e8fe45ac76",
+      "run/source-after.json": "22c17993428532d2bf647e65ede69c421569d970c68c707d14446344067774e3",
+      "run/source-before.json": "22c17993428532d2bf647e65ede69c421569d970c68c707d14446344067774e3",
+      "run/source-control.json": "4d1b16100d3fcb8e3cace39e66e427c7c5173f85e1157d513dc47d7a7510ee85",
+      "run/sql.jsonl": "a20f3f6c3db8bcd0ca58f71a7206da5af835c3edcef7821e01cdc295c0a24944",
+      "run/status.json": "a0ea15824bd09f0c049bf3afc68a8ac4694bc0570da7ce8ab6c5537e527bc8d1",
+      "run/stopped-copies.json": "d2ad7fa827bcd77031c1adafeeb9aff08510a7188521b7c73c3386085e8a3ac9",
+      "run/telemetry.jsonl": "1f3647c829530ced8f86d78066b29e16ccbe230e8ba7c4972f9d50595a334e94",
+      "scheduler-evidence.json": "1b0dfc12891571b471261efaed996383eccdf2f6257bd5364d50526b631514a2",
+      "submission.json": "ed9472ee1129ff21a914e451d25ce6c60ff6aa0addcec5e279ba20f9107c37c1"
+    },
+    "recorded_at": "2026-10-28T01:00:24.071446-04:00",
+    "replay_matches_existing_download_analysis": true,
+    "trusted_sealed_replay": "pass"
+  },
+  "budget": {
+    "additional_allocations_released": 0,
+    "failed_calibration_attempts_spent": 3,
+    "separate_startup_resource_allocations_spent": 1,
+    "total_allocations_spent": 4
+  },
+  "campaign": "reviews-startup-resource-v1-20261028T020546Z.zdsnk75c",
+  "checks": {
+    "archive_members_equal_extracted_raw": true,
+    "cgroup_mapping_limits_events_peak_coverage": "pass",
+    "cleanup_and_source_preservation": "pass",
+    "fresh_analysis_exact_match": true,
+    "host_guest_locks": "pass",
+    "reader_lifecycle_settings_placement": "pass",
+    "safe_regular_members": 46,
+    "scheduler_job_identity": "pass",
+    "source_copy_data_catalog_graph_module_integrity": "pass",
+    "stage_sql_scope": "pass",
+    "startup_snapshot_admission": "pass",
+    "trusted_sealed_reconstruction": "pass",
+    "unchanged_sealed_files": 221
+  },
+  "date": "2026-10-28",
+  "full_calibration_qualified": false,
+  "identity": {
+    "design_sha256": "fbe4ffbf95f983018ed112b778af637c39ff3fe807ac17176d84bbc66fbb5fc0",
+    "package_manifest_sha256": "4212507e81abc053aa5045e09a8cb624b789ed0bad4e1e8d1bf69f82f31484d9",
+    "resource_contract_sha256": "a4120866fea72befae75e485bc05bc7265314eb64b85839e5436e4c480339b90"
+  },
+  "job_id": "21171789_0",
+  "memory_observations": {
+    "event_phase": "snapshot_load",
+    "max_gap_seconds": 1.03029102,
+    "near_peak_sample": {
+      "component_scope": "One sampling frame; interface reads are sequential and not atomic; do not subtract file/cache or add nested components",
+      "components_bytes": {
+        "anon": 15972859904,
+        "file": 18314125312,
+        "kernel": 69230592,
+        "shmem": 287924224
+      },
+      "components_gib": {
+        "anon": 14.875885009765625,
+        "file": 17.056358337402344,
+        "kernel": 0.06447601318359375,
+        "shmem": 0.26815032958984375
+      },
+      "current_bytes": 34356858880,
+      "current_gib": 31.997318267822266,
+      "phase": "snapshot_load",
+      "seconds_from_first_sample": 543.001753966
+    },
+    "phase_metrics": "trials/torch-reviews-startup-resource-v1/postrun-audit-2026-10-28/metrics.json",
+    "runtime_process": {
+      "container_pid": 14,
+      "host_pids": [
+        3254493
+      ],
+      "largest_VmHWM_GiB": 15.030391693115234,
+      "largest_VmHWM_KiB": 15760508,
+      "starttime": 356641827
+    },
+    "samples": 806
+  },
+  "next_step": {
+    "experiment_or_allocation_authorized": false,
+    "id": "NEXT-STARTUP-MEMORY-01",
+    "implementation_authorized_by_this_review": false,
+    "scope": "Read-only snapshot representation/lifetime/identity/consumer audit and prospective correction design",
+    "user_commands_needed": false
+  },
+  "no_automatic_retry": true,
+  "no_cache_subtraction": true,
+  "no_memory_cap_or_margin_change": true,
+  "preserved_inputs": {
+    "changed": [],
+    "earlier_files": 3123,
+    "files": 3442,
+    "receipt": "trials/torch-reviews-startup-resource-v1/postrun-audit-2026-10-28/preservation-after.json"
+  },
+  "primary_interpretation_sources": [
+    "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+    "https://slurm.schedmd.com/cgroup_v2.html"
+  ],
+  "protocol": "startup-resource.v1",
+  "recorded_at": "2026-10-28T01:04:37.027276-04:00",
+  "register": "NEXT-STARTUP-RESOURCE-01",
+  "report": "research/fannagent-startup-resource-v1-postrun-2026-10-28.md",
+  "resource_gate": {
+    "effective_limit_bytes": 34359738368,
+    "job_max_event_delta": 592,
+    "largest_kernel_aggregate_peak_bytes": 34359738368,
+    "oom_event_delta": 0,
+    "oom_group_kill_event_delta": 0,
+    "oom_kill_event_delta": 0,
+    "required_total_bytes": 38654705664,
+    "reserve_bytes": 2147483648,
+    "shortfall_bytes": 4294967296,
+    "startup_peak_ceiling_for_margin_bytes": 30064771072,
+    "swap_limit_bytes": 0,
+    "swap_observed_bytes": 0,
+    "unconstrained_memory_demand_known": false,
+    "workspace_allowance_bytes": 2147483648
+  },
+  "roadmap": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+  "roadmap_version": "1.41",
+  "scope_verdict": "startup_complete_resource_margin_inconclusive",
+  "source_review": {
+    "files_sha256": {
+      "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/snapshot.py": "0ebac2227ab66c07b7b1271c6aeb294a9061329e6d2817c52dadb63c9b9cf4fa",
+      "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/store.py": "4dde727909c60079d34b1fd9c666403eee75636468e28c5c3e886d558049300b",
+      "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/backend.py": "bc743c14178dbe30ab705dc790db20fc7b045e4c30395e2488da21ab6266834d"
+    },
+    "implementation_change_proposed_not_performed": true,
+    "inference": "Snapshot loading is the observed pressure phase; these overlapping representations/encoding buffers are candidate memory mechanisms, with no per-allocation causal attribution.",
+    "observed_facts": [
+      "Frozen backend decodes all database vectors into Python lists before constructing Snapshot.",
+      "Snapshot retains rows plus a float32 NumPy matrix.",
+      "Snapshot identity calls digest over all rows/fields; canonical materializes complete JSON text and then UTF-8 bytes."
+    ]
+  },
+  "source_review_limit": "Candidate allocations in combined snapshot phase; no per-allocation attribution or measured remedy saving.",
+  "startup_execution_verified": true,
+  "status": "verified_complete_startup_resource_margin_inconclusive",
+  "timezone": "America/New_York",
+  "unchanged_decisions": {
+    "B1c": "deferred",
+    "B2d": "measurement_inconclusive",
+    "full_calibration": "held",
+    "original_execution": "retain"
+  },
+  "workload_memory_qualified": false
+}

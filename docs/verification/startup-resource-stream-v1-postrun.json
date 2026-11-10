@@ -1,0 +1,167 @@
+{
+  "archive": {
+    "all_raw_bytes_equal": true,
+    "bytes": 829195,
+    "regular_members": 48,
+    "sha256": "63ff9b4800faab0a0ece6955ccabfb9c512548a35909cbca0e9b175a73ab3fef"
+  },
+  "campaign": "reviews-startup-resource-stream-v1-20261028T151219Z.hmj9cwut",
+  "comparison": {
+    "baseline_campaign": "reviews-startup-resource-v1-20261028T020546Z.zdsnk75c",
+    "baseline_job": "21171789_0",
+    "baseline_kernel_job_peak_gib": 32,
+    "baseline_limit_max_events": 592,
+    "baseline_runtime_rss_high_water_gib": 15.030391693115234,
+    "baseline_scheduler_elapsed_seconds": 808,
+    "baseline_snapshot_SQL_seconds": 6.485253958,
+    "baseline_snapshot_load_constructor_identity_seconds": 117.843556237,
+    "observed_runtime_rss_high_water_difference_gib": -3.70721435546875,
+    "observed_runtime_rss_high_water_percent_change": -24.664788723815246,
+    "scope": "Descriptive separate single jobs; no randomized paired estimate or causal memory/performance claim",
+    "stream_kernel_job_peak_gib": 32,
+    "stream_limit_max_events": 259,
+    "stream_runtime_rss_high_water_gib": 11.323177337646484,
+    "stream_scheduler_elapsed_seconds": 715,
+    "stream_snapshot_SQL_seconds": 5.693957337,
+    "stream_snapshot_load_constructor_identity_seconds": 99.927059837
+  },
+  "date": "2026-10-28",
+  "decision": {
+    "B1c": "deferred",
+    "full_calibration": "held",
+    "native_identity_startup": "pass_scoped",
+    "new_jobs_released": 0,
+    "no_automatic_retry": true,
+    "original_execution": "retained",
+    "resource_margin": "inconclusive",
+    "search_quality_AA_speed": "not_assessed_zero_searches",
+    "spent_calibration_attempts": 3,
+    "spent_resource_jobs": 2
+  },
+  "evidence": "trials/torch-reviews-startup-resource-stream-v1/postrun-audit-2026-10-28",
+  "fresh_replay": {
+    "exact_parity_with_preserved_download_analysis": true,
+    "path": "trials/torch-reviews-startup-resource-stream-v1/postrun-audit-2026-10-28/replay/resource.json",
+    "sha256": "fe75ecaa1631dffc8d8c6f493f9d2627af71d8922981b6c099a601d2e4abb4ec"
+  },
+  "identity_stream": {
+    "binding_restored": true,
+    "component_calls": 247287,
+    "identity": "54282be380f20bfab05a44e6260e116435aecf5a289a258ae8164a23c187b303",
+    "invocations": 1,
+    "max_pending_bytes": 65536,
+    "provenance": {
+      "binding_module": "fannagent.snapshot",
+      "binding_name": "digest",
+      "cache_tag": "cpython-312",
+      "encoder_sha256": "52bfb1b66029cc70fa3bd7fe11df9f2e03922d413407a341b387a22c987f24f8",
+      "helper_sha256": "fd4013873ad3c3aea92c23527a0d223664cda4f6599ad909e3f1fdab74a7e6d7",
+      "implementation": "CPython",
+      "json_module_sha256": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5",
+      "original": "fannagent.store.digest",
+      "python_version": "3.12.15 (main, Oct  6 2026, 02:02:22) [GCC 14.2.0]",
+      "sources": {
+        "snapshot": "0ebac2227ab66c07b7b1271c6aeb294a9061329e6d2817c52dadb63c9b9cf4fa",
+        "store": "4dde727909c60079d34b1fd9c666403eee75636468e28c5c3e886d558049300b"
+      }
+    },
+    "rows": 247286,
+    "total_bytes": 2374063027
+  },
+  "job_id": "21224521_0",
+  "limitations": [
+    "Separate single-job descriptive comparisons do not identify exact causal savings or search performance",
+    "Sequential memory components/process HWM are not additive; no cache subtraction",
+    "Boundary counter deltas76 and68 cannot be assigned wholly to one adjacent phase",
+    "Capped peak does not establish unconstrained demand or sufficient larger allocation",
+    "No full-workload memory, recall, A/A, speed or adoption qualification"
+  ],
+  "memory": {
+    "cache_subtracted_bytes": 0,
+    "counter_bracket_attribution": {
+      "hold_to_finalization_boundary": 68,
+      "load_to_stream_boundary": 76,
+      "stable_finalization": 1,
+      "stable_pre_stream_snapshot_load": 114
+    },
+    "effective_limit_gib": 32,
+    "group_oom_delta": 0,
+    "host_container_mapping": {
+      "container_pid": 14,
+      "host_pid": 2322646,
+      "rss_high_water_gib": 11.323177337646484,
+      "rss_high_water_kib": 11873212,
+      "starttime": 361356987
+    },
+    "job_max_event_delta": 259,
+    "kernel_job_peak_gib": 32,
+    "margin_shortfall_gib": 4,
+    "maximum_gap_seconds": 1.029625274,
+    "oom_event_delta": 0,
+    "oom_kill_delta": 0,
+    "outcome": "startup_complete_resource_margin_inconclusive",
+    "required_peak_ceiling_gib": 28,
+    "reserve_gib": 2,
+    "samples": 712,
+    "workspace_allowance_gib": 2
+  },
+  "native_scope": {
+    "ANN_searches": 0,
+    "admitted_requests": 200,
+    "binding_restored": true,
+    "cleanup_verified": true,
+    "confirmation_queries": 0,
+    "data_scans": 4,
+    "epochs": 2,
+    "exact_original_identity_verified": true,
+    "exact_searches": 0,
+    "executed_requests": 0,
+    "final_integrity_verified": true,
+    "maximum_live_readers": 6,
+    "new_fits": 0,
+    "protected_source_unchanged": true,
+    "provider_calls": 0,
+    "reader_admissions": 10,
+    "snapshot_scans": 1,
+    "startup_completed": true
+  },
+  "next_step": {
+    "id": "NEXT-STARTUP-MEMORY-02",
+    "scope": "Read-only snapshot-loading/retained-representation/verification I/O working-set audit using existing two traces and pinned source; separate remedy/design GO/no-GO, no new measurements/code/job",
+    "user_commands_needed": false
+  },
+  "outcome": "startup_complete_resource_margin_inconclusive",
+  "phase": "M3",
+  "preservation": {
+    "changed": [],
+    "files": 3947,
+    "receipt": "trials/torch-reviews-startup-resource-stream-v1/postrun-audit-2026-10-28/preservation-after.json"
+  },
+  "protocol": "startup-resource.stream.v1",
+  "recorded_at": "2026-10-28T12:50:40.800644-04:00",
+  "register": "NEXT-STARTUP-MEMORY-01",
+  "report": "research/fannagent-startup-resource-stream-v1-postrun-2026-10-28.md",
+  "review_activity": {
+    "ANN_searches": 0,
+    "SSH_calls": 0,
+    "exact_searches": 0,
+    "implementation_changes": 0,
+    "native_database_queries": 0,
+    "new_fits": 0,
+    "new_scientific_experiments": 0,
+    "new_tests": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "torch_jobs": 0
+  },
+  "roadmap": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+  "scheduler": {
+    "elapsed_seconds": 715,
+    "exit_code": "0:0",
+    "status": "COMPLETED"
+  },
+  "sealed_files": 346,
+  "sealed_manifest_sha256": "26a7d66b67137e77d5208d7b851b19d980a8a64060defc25cbe418db17190354",
+  "status": "complete_closed_inconclusive_resource",
+  "timezone": "America/New_York"
+}

@@ -1,0 +1,61 @@
+{
+  "activity": {
+    "bootstrap_replays": 0,
+    "database_native_calls": 0,
+    "documentation_writes_only": true,
+    "experiment_imports": 0,
+    "experiments": 0,
+    "fits": 0,
+    "index_builds": 0,
+    "local_correctness_tests": 0,
+    "new_allocations": 0,
+    "protected_query_value_access": 0,
+    "provider_calls": 0,
+    "scientific_code_changes": 0,
+    "simulations": 0,
+    "source_and_saved_evidence_read_only": true,
+    "ssh_or_torch_calls": 0
+  },
+  "actual_allocations": 0,
+  "actual_searches": 0,
+  "completed_at_utc": "2026-10-26T14:51:43.010934+00:00",
+  "decision": "One >=108 partial cosine HNSW prospectively selected; B2d isolated implementation/local checks/seal next, no current user command.",
+  "documentation_checks": "research/fannagent-b2c-ann-alternatives-audit-2026-10-26/documentation-checks.json",
+  "native_compatibility": "not_assessed; public inspector still rejects partial; strict experimental adapter and fresh/cached plans required",
+  "native_performance": "not_assessed",
+  "next_phase": "B2d / NEXT-PARTIAL-ANN-01",
+  "next_phase_status": "design_frozen_only_not_implemented_checked_sealed_or_run",
+  "outputs_sha256": {
+    "agent/docs/experiments/README.md": "b81ba32de46648ae6e717b9e7b8e45925e5f0d736c5c8ae1621423d4b416a771",
+    "research/fannagent-b2c-ann-alternatives-audit-2026-10-26.md": "b02ceb149c662091d4350b0cd89d2826d3c0dddf9be7a361efe10594f0d603dd",
+    "research/fannagent-b2c-ann-alternatives-audit-2026-10-26/audit.json": "c404660d3990330c9bed3e7685f0f91d67d1fd6cec9506fce95a165a17f48db7",
+    "research/fannagent-b2c-ann-alternatives-audit-2026-10-26/documentation-checks.json": "d1ea82165e245f1f1c6eebb910be0aa087cc0824be3aaf5ebf521ab950ae13d8",
+    "research/fannagent-b2c-ann-alternatives-audit-2026-10-26/input-and-source-inventory.json": "d07a5abe10b6c5265a4226293468872f6ae34a4b2abe64192ad1b4f02485b1ac",
+    "research/fannagent-partial-ann-v1-design-2026-10-26.md": "7a59792f2db41a4c88095231c1682695ab8a112943112bb2c82d774f22dbefcb",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "21335c86dd6feb0eac8be9398d3f6f2716ad657aa16525b85de03caf0c9ccbbd"
+  },
+  "preservation": {
+    "immutable_files_verified": 1364,
+    "inventory": "research/fannagent-b2c-ann-alternatives-audit-2026-10-26/input-and-source-inventory.json",
+    "mismatches": [],
+    "mutable_documents_before_sha256": {
+      "agent/docs/experiments/README.md": "8d287581988a98cd25e2fee0bcff6a2a5a741cb62a327b2adce5a46945e35a32",
+      "research/fannagent-performance-research-roadmap-2026-10-22.md": "1cab6c358b7a72234eb4587d4a82f6579641413c27c1c8f0da8e223b9783fcd2"
+    },
+    "prior_b2b_archive_sha256": "6856a060b01166ac53ba3993caf9affe3e5d49892dbbc5536eca35e7b102ceaf",
+    "prior_b2b_manifest": "6b2bb0f4a2797f01b70edcf256c518fe20f5cc00598d755ada04f216c9c6f842",
+    "source_files_verified": 349
+  },
+  "preserved_decisions": {
+    "B1c": "deferred",
+    "B2b": "verified incomplete_budget_exhausted; no repeat, full A/A/economics/final integrity unassessed",
+    "adopted_execution": "original",
+    "protected_entitlements": "60 confirmation and37 reserved vectors untouched"
+  },
+  "prospective_allocations": 1,
+  "prospective_search_cap": 16802,
+  "register": "NEXT-ANN-ALTERNATIVES-01",
+  "scientific_correctness_tests_run": false,
+  "status": "complete_scoped_design_go",
+  "version": "b2c-ann-alternatives-audit-completion.v1"
+}

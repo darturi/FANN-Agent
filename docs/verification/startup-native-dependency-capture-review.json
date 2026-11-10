@@ -1,0 +1,23 @@
+{
+  "ANN_searches": 0,
+  "ELF_objects": 18,
+  "Torch_remote_commands": 0,
+  "all_spent_allowances": "closed including21756110",
+  "captured_components": 34,
+  "configuration_admitted": false,
+  "date": "2026-11-04",
+  "decision": "D147",
+  "dependency_closure_verified": false,
+  "evidence_directory": "trials/torch-reviews-startup-native-pinned-client-config-v1/dependency-review-xgzm0ve9-v1",
+  "exact_searches": 0,
+  "local_checks": 436,
+  "native_qualification": false,
+  "new_allocations": 0,
+  "old_tests_strict_verification_limits_and_evidence_preserved": true,
+  "only_ROOTS_AST_delta": true,
+  "raw_bytes": 73986,
+  "raw_files": 4,
+  "roadmap_version": "1.99",
+  "status": "actual_capture_reviewed_narrow_RPATH_candidate_fix_locally_ready_native_gate_held",
+  "unresolved_required_library": "libslurmfull.so"
+}

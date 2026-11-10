@@ -1,0 +1,318 @@
+{
+  "B1b_experiment_complete": true,
+  "B1c_proceed": false,
+  "M1": false,
+  "M2": false,
+  "M3": false,
+  "absolute_float_tolerance": 1e-12,
+  "activation_AA": {
+    "failed_intervals": 30,
+    "passed_intervals": 2,
+    "required_intervals": 32,
+    "status": "measurement_inconclusive"
+  },
+  "activation_overall": {
+    "all_valid": true,
+    "arithmetic_latency_change_percent": 61.8102418013241,
+    "baseline_ms": 83.3027355575,
+    "block_gap_ms": {
+      "0": 52.510189543749995,
+      "1": 50.46905500666667
+    },
+    "gap_ci95": [
+      48.07135007301562,
+      55.21888873435938
+    ],
+    "gap_ms": 51.48962227520833,
+    "independent_vectors": 200,
+    "log_ratio": 0.49952729398667073,
+    "log_ratio_ci95": [
+      0.4876225345122848,
+      0.51101754135443
+    ],
+    "observations": 2400,
+    "recall_delta": -0.007999999999999998,
+    "recall_delta_ci95": [
+      -0.01083333333333333,
+      -0.005333333333333332
+    ],
+    "reference_recall": 0.9903333333333334,
+    "sql_gap_ci95": [
+      -3.3136595530729185,
+      -3.0163831895364583
+    ],
+    "sql_gap_ms": -3.1668054289583334,
+    "treatment_ms": 134.79235783270835,
+    "treatment_recall": 0.9823333333333335
+  },
+  "actual_searches": 139272,
+  "archive_regular_files_verified": 40,
+  "archive_sha256": "d338a6a1ed7c85cec9c1677ef6070ae4705b73b2692b63d52d651b2ce68eac3d",
+  "artifacts_sha256": {
+    "agent/experiments/native-effort-frontier-v1/README.md": "2c2bad492d4574ef2648736b9b3507b322d628268646e130500e21e575e409bc",
+    "agent/experiments/native-effort-frontier-v1/recover_campaign_identity.py": "0e2fdc782d68e10bacecc7cc6ffee287fd62e2a26f2cd2684082fe6f607d97e1",
+    "agent/experiments/native-effort-frontier-v1/test_recover_campaign_identity.py": "ea902c314714d59db8295caa8727b7496532d95bbea905c12ecaaac75a14bf21",
+    "research/fannagent-native-effort-frontier-v1-results-2026-10-25.md": "7c10e2f05e310c6ed50b3b0a2936c286731becb0dace22d9ad09d057c35d8bfa",
+    "trials/torch-reviews-native-effort-frontier-v1/analysis-review/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/descriptive-analysis.json": "d16ca10acb7f1123ef8fe575813e2cf7949813b59890117a4cbf856052129b5d",
+    "trials/torch-reviews-native-effort-frontier-v1/analysis-review/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/performance.json": "333f906121e6a2210174398188e8338d4c57d5733a9ce9452f44ea703c015d77",
+    "trials/torch-reviews-native-effort-frontier-v1/analysis-review/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/report.txt": "d9123bae7be125ba247b75ade3a2d157ec5aae58cdc25e576f18c1aea7171904",
+    "trials/torch-reviews-native-effort-frontier-v1/analysis-review/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/verification.json": "099f00bc2315576dad99636002d69f253367db65338f8ca965c5e7e97fa21899",
+    "trials/torch-reviews-native-effort-frontier-v1/recovery-checks/format.log": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938",
+    "trials/torch-reviews-native-effort-frontier-v1/recovery-checks/lint.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "trials/torch-reviews-native-effort-frontier-v1/recovery-checks/tests.log": "49b6860971c85be3b537ffdd13f7bf132f94f84e0f372f88154623ebeab422dc"
+  },
+  "campaign": "reviews-native-effort-v1-20261025T014743Z.p_kspq5v",
+  "canonical_acceptance_established": false,
+  "completed_allocations": 2,
+  "conditioning_calls": 38400,
+  "confirmation_queries": 0,
+  "discarded_warmups": 19200,
+  "exact_native_effort_source_reference_searches": 4800,
+  "exact_unmodified_report_parity": false,
+  "exposed_vectors": 200,
+  "float_differences": [
+    {
+      "absolute_difference": 4.336808689942018e-19,
+      "local": -0.0018628669840777008,
+      "path": "result/aa/original640/reuse/overall/log_ratio_ci95/0",
+      "remote": -0.0018628669840777012
+    },
+    {
+      "absolute_difference": 2.168404344971009e-19,
+      "local": 0.0007604869977518808,
+      "path": "result/aa/wrapped320/activation/overall/log_ratio_ci95/1",
+      "remote": 0.000760486997751881
+    },
+    {
+      "absolute_difference": 1.3552527156068805e-19,
+      "local": -0.00019286645716375478,
+      "path": "result/aa/wrapped640/reuse/unfiltered/log_ratio",
+      "remote": -0.00019286645716375464
+    }
+  ],
+  "forced640_reuse_overall": {
+    "all_valid": true,
+    "arithmetic_latency_change_percent": 3.736497172622766,
+    "baseline_ms": 5.519471168819444,
+    "block_gap_ms": {
+      "0": 0.2557620597222222,
+      "1": 0.1567077086111111
+    },
+    "gap_ci95": [
+      0.19077903825173598,
+      0.22178856093750002
+    ],
+    "gap_ms": 0.20623488416666663,
+    "independent_vectors": 200,
+    "log_ratio": 0.03636019998420819,
+    "log_ratio_ci95": [
+      0.03368351817473321,
+      0.03900532451756957
+    ],
+    "observations": 7200,
+    "recall_delta": 0.0,
+    "recall_delta_ci95": [
+      0.0,
+      0.0
+    ],
+    "reference_recall": 0.9903333333333333,
+    "sql_gap_ci95": [
+      0.06728077614930558,
+      0.09651127860937496
+    ],
+    "sql_gap_ms": 0.08190543680555556,
+    "treatment_ms": 5.725706052986111,
+    "treatment_recall": 0.9903333333333333
+  },
+  "formal_frozen_gate_verdict": "measurement_inconclusive",
+  "id": "NEXT-EFFORT-01",
+  "identity_proof": {
+    "canonical_campaign": "reviews-native-effort-v1-20261025T014743Z.p_kspq5v",
+    "jobs": {
+      "block-0": "20845494",
+      "block-1": "20845495"
+    },
+    "package_manifest_sha256": "35a09d4e2fd71598a023f6479e418d9e8bc90434d764a53564c60a5436b69c1f",
+    "permitted_remote_name": "results",
+    "remote_container_directory": "/results",
+    "submission_campaign": "/home/dar579/torch-reviews-results/reviews-native-effort-v1-20261025T014743Z.p_kspq5v"
+  },
+  "largest_absolute_float_difference": 4.336808689942018e-19,
+  "local_DB_calls": 0,
+  "local_new_native_searches": 0,
+  "locked_raw_files_verified": 26,
+  "metadata_recovery": {
+    "absolute_float_tolerance": 1e-12,
+    "all_other_discrete_fields_exact": true,
+    "canonical_value": "reviews-native-effort-v1-20261025T014743Z.p_kspq5v",
+    "field": "result/campaign",
+    "reason": "Sealed collect binds the canonical campaign to /results; reporter uses Path.name",
+    "remote_value": "results"
+  },
+  "native_conformance": "passed",
+  "new_Torch_submissions": 0,
+  "new_fits": 0,
+  "next_step": "Read-only effort/interface revision review before any new bounded experiment; intermediate effort levels and lower-overhead admission are hypotheses, not established improvements.",
+  "no_user_commands_needed": true,
+  "original_execution_retained": true,
+  "package_manifest_sha256": "35a09d4e2fd71598a023f6479e418d9e8bc90434d764a53564c60a5436b69c1f",
+  "phase": "B1b",
+  "preservation": {
+    "all_hashes_match": true,
+    "new_code_only": "Two data-only recovery/helper test files; no execution, gate or scoring change",
+    "prior_inventory_counts": {
+      "code_and_source_files_sha256_before_document_updates": 324,
+      "consulted_input_files_sha256": 29,
+      "historical_ef_raw_and_saved_output_files_sha256": 128
+    },
+    "sealed_experiment_and_raw_data_changed": false,
+    "sealed_package_files_verified": 146
+  },
+  "protected_query_values_accessed": 0,
+  "provider_calls": 0,
+  "qualification_searches": 72,
+  "query_filter_cases": 600,
+  "raw_files_sha256": {
+    "blocks/block-0/conditioning.jsonl": "d864054b53ef49f68c75457b935b78d46b6df768cebb5dfb987b1555113e2c05",
+    "blocks/block-0/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "blocks/block-0/executions.jsonl": "0f37c5a79860e0917dcc736457635c431efb4e11926d04aaed9776c60ee3c05e",
+    "blocks/block-0/host.json": "ec8b5ad416c491e2b899a88f752ebda4acf873840bce5468fbdb7864c06f141e",
+    "blocks/block-0/job-exit.json": "15816cb824a0a479d25c75c3f397059d428427b19a6dc5435ef6ae9e7c247e57",
+    "blocks/block-0/protected-source-before.json": "39d953df43d8048ee16310f4c308d191396c8dd7df3382ba8f19669d2ede6b09",
+    "blocks/block-0/qualification.json": "5eb6d37dd6fae29ebc0589c601aaa8d6e29efa875176f065507558c45c0f3e55",
+    "blocks/block-0/references.jsonl": "d1407821a3176cb1900e2e236dacd7744590898bd57b0f9a83327c5918620148",
+    "blocks/block-0/runtime-identity.json": "e875151c038fc7f3d03b11f258784bb7693935d73c09bb304e799aea72cc0040",
+    "blocks/block-0/server.log": "fa82720126d1a788a56c597275d8168263979661eaecd71a04b3bea461159760",
+    "blocks/block-0/shared-initialization.json": "c32fdb86e317559adf13899da3493cf567e14a64bb12195823f17d171b1a5e3f",
+    "blocks/block-0/slots.jsonl": "5fbee5b37b38e1bba6bfdfe5fbb78f628c9cb6a6f0a9cd96b76f8dc9306f8472",
+    "blocks/block-0/status.json": "9152de8f4cfca9b5fb5cb0cdd7c2ab41394b0e8e3679867375898a958c02709d",
+    "blocks/block-1/conditioning.jsonl": "cec50dd1d4a69d88856f211fdc83ee0aeb7ee2797587d8d050891efd129e7bb1",
+    "blocks/block-1/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "blocks/block-1/executions.jsonl": "88e2f46a68ad96cab9743e156c415d8420abc13e9bced92da8abec891a74c4a6",
+    "blocks/block-1/host.json": "f9c7c2cdd4be83f1c0ff05a2706cf9b8a00f587d95959d7a92eb8eea338a8d30",
+    "blocks/block-1/job-exit.json": "15816cb824a0a479d25c75c3f397059d428427b19a6dc5435ef6ae9e7c247e57",
+    "blocks/block-1/protected-source-before.json": "39d953df43d8048ee16310f4c308d191396c8dd7df3382ba8f19669d2ede6b09",
+    "blocks/block-1/qualification.json": "3e22e6b8331b265208a3b7c67933721c121c64368e8023822e9cf82e606c676f",
+    "blocks/block-1/references.jsonl": "34072710e899508c4477b31ffb453ee62a96da40eaaaa880d12993d192397cd6",
+    "blocks/block-1/runtime-identity.json": "e875151c038fc7f3d03b11f258784bb7693935d73c09bb304e799aea72cc0040",
+    "blocks/block-1/server.log": "13220f99a08e8550787b6aa4b8d0c9b77466d812d53f99b4d86d487ea7598c48",
+    "blocks/block-1/shared-initialization.json": "86b140a357ba70ca2e2d4978fba4605ba3a54a21d20563e0efdd925d02e58c64",
+    "blocks/block-1/slots.jsonl": "18a7f7b6daadc3af18355ebda00c515bdccb6b9b99d33b942a960f4002d5f5d8",
+    "blocks/block-1/status.json": "6495c002431a049c9964badb65f0cacc58547278e629735adb6bd726e38ca658"
+  },
+  "reader_admissions": 28832,
+  "recall": {
+    "overall": {
+      "cases": 600,
+      "delta": -0.007999999999999998,
+      "delta_ci95": [
+        -0.01083333333333333,
+        -0.005333333333333333
+      ],
+      "effort320_recall": 0.9823333333333333,
+      "higher_recall_cases": 0,
+      "lower_recall_cases": 46,
+      "reference_recall": 0.9903333333333333,
+      "same_ids_cases": 551,
+      "same_recall_cases": 554
+    },
+    "unfiltered": {
+      "cases": 200,
+      "delta": -0.003999999999999999,
+      "delta_ci95": [
+        -0.006999999999999999,
+        -0.0014999999999999996
+      ],
+      "effort320_recall": 0.9895,
+      "higher_recall_cases": 0,
+      "lower_recall_cases": 8,
+      "reference_recall": 0.9934999999999998,
+      "same_ids_cases": 191,
+      "same_recall_cases": 192
+    },
+    "votes108": {
+      "cases": 200,
+      "delta": -0.014499999999999997,
+      "delta_ci95": [
+        -0.020000000000000004,
+        -0.009500000000000001
+      ],
+      "effort320_recall": 0.9715000000000001,
+      "higher_recall_cases": 0,
+      "lower_recall_cases": 27,
+      "reference_recall": 0.986,
+      "same_ids_cases": 171,
+      "same_recall_cases": 173
+    },
+    "votes32": {
+      "cases": 200,
+      "delta": -0.0055,
+      "delta_ci95": [
+        -0.009000000000000001,
+        -0.0024999999999999996
+      ],
+      "effort320_recall": 0.986,
+      "higher_recall_cases": 0,
+      "lower_recall_cases": 11,
+      "reference_recall": 0.9915000000000002,
+      "same_ids_cases": 189,
+      "same_recall_cases": 189
+    }
+  },
+  "recorded_at_utc": "2026-10-25T15:19:01.745732+00:00",
+  "recovery_checks": {
+    "format": "passed",
+    "full_fresh_sealed_raw_replay": "passed",
+    "lint": "passed",
+    "tests": 4
+  },
+  "remote_local_statistical_and_gate_parity": true,
+  "retained_executions": 76800,
+  "reuse_AA": {
+    "failed_intervals": 0,
+    "passed_intervals": 32,
+    "required_intervals": 32,
+    "status": "pass"
+  },
+  "reuse_overall": {
+    "all_valid": true,
+    "arithmetic_latency_change_percent": -40.53963729731805,
+    "baseline_ms": 5.519471168819444,
+    "block_gap_ms": {
+      "0": -2.319991713472222,
+      "1": -2.1551554716666668
+    },
+    "gap_ci95": [
+      -2.2923284307031246,
+      -2.180725784845486
+    ],
+    "gap_ms": -2.2375735925694444,
+    "independent_vectors": 200,
+    "log_ratio": -0.5181084713012296,
+    "log_ratio_ci95": [
+      -0.5253660459192803,
+      -0.510918523011837
+    ],
+    "observations": 7200,
+    "recall_delta": -0.008,
+    "recall_delta_ci95": [
+      -0.01083333333333333,
+      -0.005333333333333333
+    ],
+    "reference_recall": 0.9903333333333333,
+    "sql_gap_ci95": [
+      -2.418002527380207,
+      -2.3058738014027775
+    ],
+    "sql_gap_ms": -2.3629461354861108,
+    "treatment_ms": 3.28189757625,
+    "treatment_recall": 0.9823333333333333
+  },
+  "review_date_local": "2026-10-25 America/New_York",
+  "status": "verified_completed_no_qualified_context",
+  "supported_context_regimes": [],
+  "user_Torch_jobs": {
+    "block-0": "20845494",
+    "block-1": "20845495"
+  }
+}

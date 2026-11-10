@@ -1,0 +1,71 @@
+MAC TERMINAL: verify and upload this new package.
+
+(
+    set -euo pipefail
+    cd /Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/feature-data-ablation-v1
+    torch_package='torch-feature-data-ablation-v1'
+    shasum -a 256 -c "${torch_package}.tar.gz.sha256"
+    scp -o HostKeyAlias=dtn.torch.hpc.nyu.edu \
+        -o HostKeyAlgorithms=ssh-ed25519 \
+        -o StrictHostKeyChecking=yes -o UpdateHostKeys=no \
+        "${torch_package}.tar.gz" "${torch_package}.tar.gz.sha256" \
+        dar579@dtn012.hpc.nyu.edu:/home/dar579/
+)
+
+TORCH LOGIN TERMINAL: verify, extract and submit ONCE.
+
+(
+    set -euo pipefail
+    cd /home/dar579
+    torch_package='torch-feature-data-ablation-v1'
+    sha256sum -c "${torch_package}.tar.gz.sha256"
+    test ! -e "$torch_package"
+    tar -xzf "${torch_package}.tar.gz"
+    source /home/dar579/torch-reviews-first/torch.env
+    export TORCH_SLURM_ACCOUNT=torch_pr_288_courant
+    python3 "/home/dar579/${torch_package}/control.py" submit \
+        /home/dar579/torch-reviews-first /home/dar579/torch-reviews-results
+)
+
+TORCH: check all currently submitted allocations, including in a fresh login.
+
+python3 /home/dar579/torch-feature-data-ablation-v1/control.py status
+
+TORCH: after the fit allocation completes with exit 0, advance once.
+It stops after failed calibration, or submits ONE common-evaluation allocation.
+
+python3 /home/dar579/torch-feature-data-ablation-v1/control.py advance
+
+TORCH: if common evaluation was submitted, check status; after it completes
+with exit 0, run the SAME advance command again. It stops after a failed common
+gate, or submits THREE timing allocations. Repeating cannot duplicate dispatch.
+
+python3 /home/dar579/torch-feature-data-ablation-v1/control.py advance
+
+TORCH: collect after a terminal failed gate OR all three timing blocks complete.
+
+python3 /home/dar579/torch-feature-data-ablation-v1/control.py collect
+
+MAC TERMINAL: download full results after successful collection.
+
+(
+    set -euo pipefail
+    cd /Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results
+    torch_transfer_options=(
+        -o HostKeyAlias=dtn.torch.hpc.nyu.edu
+        -o HostKeyAlgorithms=ssh-ed25519
+        -o StrictHostKeyChecking=yes
+        -o UpdateHostKeys=no
+    )
+    torch_run="$(ssh "${torch_transfer_options[@]}" dar579@dtn012.hpc.nyu.edu \
+        'cat /home/dar579/torch-feature-data-ablation-v1/submission-binding.json' |
+        python3 -c 'import json,sys; print(json.load(sys.stdin)["campaign"])')"
+    scp "${torch_transfer_options[@]}" \
+        "dar579@dtn012.hpc.nyu.edu:${torch_run}.tar.gz" \
+        "dar579@dtn012.hpc.nyu.edu:${torch_run}.tar.gz.sha256" .
+    shasum -a 256 -c "$(basename "$torch_run").tar.gz.sha256"
+)
+
+No model calls. Final recall unchanged. Original generation A/B inconclusive.
+Development evaluation is not canonical confirmation. Do not reuse the failed
+confirmation or reserved calibration/final-test workload for fitting.

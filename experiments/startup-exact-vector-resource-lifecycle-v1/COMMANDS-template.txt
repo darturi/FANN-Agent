@@ -1,0 +1,53 @@
+# CORRECTED HANDOFF FOR THE SAME UNSPENT A3 ALLOWANCE: one hour / four physical CPUs / 32 GiB.
+# Zero ANN/exact searches, no request execution, no full B2f release.
+# Main A2, all four old compatibility jobs and A3 correctness are spent. Never rerun them.
+
+# MAC: upload, then wait for UPLOAD VERIFIED.
+bash @OUTPUT@/transfer.sh upload
+
+# TORCH LOGIN: verify the upload, extract to private scratch, verify and submit ONCE.
+(
+  set -euo pipefail
+  umask 077
+  source /home/dar579/torch-reviews-first/torch.env
+  export TORCH_SLURM_ACCOUNT=torch_pr_288_courant
+  PYTHONDONTWRITEBYTECODE=1 python3 -B - <<'PYSTATE'
+from pathlib import Path
+paths = (
+    Path("/home/dar579/torch-reviews-results/.torch-startup-exact-vector-resource-v1-reservation.json"),
+    Path("/scratch/dar579/torch-reviews/a3-resource-packages/torch-startup-exact-vector-resource-v1/submission-binding.json"),
+    Path("/scratch/dar579/torch-reviews/a3-resource-path-fix-packages/torch-startup-exact-vector-resource-v1/submission-binding.json"),
+)
+for path in paths:
+    if path.exists() or path.is_symlink():
+        raise SystemExit("Existing binding/reservation: preserve and inspect status; do not submit: " + str(path))
+print("No resource reservation or binding exists; continuing the same unspent allowance.")
+PYSTATE
+  cd /home/dar579/a3-resource-path-fix-transfer
+  sha256sum -c torch-startup-exact-vector-resource-v1.tar.gz.sha256
+  test "$TORCH_SCRATCH_ROOT" = /scratch/dar579/torch-reviews
+  a3_resource_root="$TORCH_SCRATCH_ROOT/a3-resource-path-fix-packages"
+  test ! -L "$a3_resource_root"
+  mkdir -p -m 700 "$a3_resource_root"
+  test -O "$a3_resource_root"
+  a3_resource_package="$a3_resource_root/torch-startup-exact-vector-resource-v1"
+  test ! -L "$a3_resource_package"
+  if test ! -e "$a3_resource_package"; then
+    tar --no-same-owner -xzf torch-startup-exact-vector-resource-v1.tar.gz -C "$a3_resource_root"
+  fi
+  PYTHONDONTWRITEBYTECODE=1 python3 -B -u "$a3_resource_package/pc_control.py" verify
+  PYTHONDONTWRITEBYTECODE=1 python3 -B -u "$a3_resource_package/pc_control.py" submit \
+    /home/dar579/torch-reviews-first /home/dar579/torch-reviews-results
+)
+
+# TORCH: repeat status while queued/running.
+PYTHONDONTWRITEBYTECODE=1 python3 -B -u /scratch/dar579/torch-reviews/a3-resource-path-fix-packages/torch-startup-exact-vector-resource-v1/pc_control.py status
+
+# TORCH: collect after terminal status, including failure.
+PYTHONDONTWRITEBYTECODE=1 python3 -B -u /scratch/dar579/torch-reviews/a3-resource-path-fix-packages/torch-startup-exact-vector-resource-v1/pc_control.py collect
+
+# MAC: download after collect prints the archive path.
+bash @OUTPUT@/transfer.sh download
+
+# Reply Downloaded, or stop and paste any error. Preserve every binding/reservation;
+# do not retry or submit an old package. Independent memory verdict follows download.

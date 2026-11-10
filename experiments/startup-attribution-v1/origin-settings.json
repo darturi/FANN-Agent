@@ -1,0 +1,16 @@
+{
+  "effective_cache_size": "524288",
+  "enable_bitmapscan": "on",
+  "enable_indexonlyscan": "on",
+  "enable_indexscan": "on",
+  "enable_seqscan": "off",
+  "hnsw.ef_search": "320",
+  "hnsw.iterative_scan": "off",
+  "hnsw.max_scan_tuples": "20000",
+  "hnsw.scan_mem_multiplier": "1",
+  "jit": "on",
+  "max_parallel_workers_per_gather": "2",
+  "random_page_cost": "4",
+  "seq_page_cost": "1",
+  "work_mem": "16384"
+}

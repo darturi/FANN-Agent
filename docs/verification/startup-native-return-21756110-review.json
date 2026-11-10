@@ -1,0 +1,34 @@
+{
+  "allowance": "21756110 spent and closed; no retry",
+  "assistant_remote_commands": 0,
+  "confirmed": [
+    "Terminal FAILED/1:0 after38seconds",
+    "Approved plan/account/package and submitted job identity consistent",
+    "Failure is SLURM_CONF validation before first Slurm probe subprocess",
+    "No native scientific phases launched; preflight record explicitly native_qualification false and searches0",
+    "Every one of the9rawfiles read; actual allocated SLURM_CONF value/component metadata absent"
+  ],
+  "correction_frozen": false,
+  "correction_implemented": false,
+  "date": "2026-11-03",
+  "decision": "D136",
+  "diagnostic_checks": "four mocked cases pass; no scheduler execution",
+  "evidence_directory": "trials/torch-reviews-startup-native-site-compatibility-v1/submission-21756110/failure-review-2026-11-03/raw-return-review",
+  "job_id": "21756110",
+  "native_target_CPU_memory_resources_B2f": "unqualified",
+  "new_allocations": 0,
+  "next_step": "User runs prepared login-only metadata/accounting diagnostic; no allocation, compute-node login or config change",
+  "raw_bytes": 16283,
+  "raw_files": 9,
+  "raw_sha256": "3fcbdbd793766cb70a6c916f066a87949331fd145a8c66e107a871b4f8f4d467",
+  "reason_no_correction": "Evidence does not justify a specific new trust exception or any environment bypass",
+  "roadmap_version": "1.88",
+  "searches": 0,
+  "status": "verified_failed_preflight_configuration_path_unknown",
+  "tests_limits_verification_unchanged": true,
+  "unknown": [
+    "Historical allocated runtime SLURM_CONF value and resolved path",
+    "Rejected component UID/GID/mode/write access and provenance",
+    "Whether scheduler accounting retained submission environment; retained values may precede Slurm runtime injection"
+  ]
+}

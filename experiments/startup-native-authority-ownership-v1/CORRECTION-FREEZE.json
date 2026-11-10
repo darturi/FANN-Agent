@@ -1,0 +1,48 @@
+{
+  "ANN_searches": 0,
+  "Torch_jobs": 0,
+  "corrections": {
+    "binding_admission": "Reconcile complete frozen binding fields/current integration bytes/exact inner manifest before native guest work. Require native authority/admission verification before host spawn; no certificate issuer/entitlement is issued in this review, so target remains closed even below the old entry gate.",
+    "owned_groups": "Native runner/host must have an explicit validated owned-group controller before spawning; current version supplies no authoritative native ownership backend. Bounded TERM10/KILL5 attempts remain inside original endpoints; check group even after leader exits, require entire group absent and direct child reaped, unknown ownership/group state fails. Offline fake-group probes only; no real group signal.",
+    "publication": "Guest status publication shares the existing600s cleanup endpoint; host control/lock publication shares post240. Returned finished time is after publication, controls label pre-publication times explicitly. Artifact-only success is insufficient: release classification requires independently observed successful process exit and bounded completion. No limit extension or truncation.",
+    "readiness": "Reject readiness by observed arrival after host+240, in addition to guest-start/binding/strict clock checks. Preserve latest launch210 and full3000/240/120 reserves. Reject nonempty campaign before any control write.",
+    "review_policy": "Separate prospective qualification handoff from downstream resource/B2f qualification. Local/synthetic facts never grant native authority or replenish spent allowances. Emit HOLD with explicit missing evidence. Preserve original proof/science/strict verifier and delegated helpers.",
+    "signals": "Install and restore original TERM/INT/USR1/ALRM interruption handlers independently in host and standalone guest; handlers remain active through publication."
+  },
+  "exact_searches": 0,
+  "fresh_allowance_issued": false,
+  "frozen_at_utc": "2026-11-02T04:42:19.931800+00:00",
+  "limits": {
+    "allocations": 1,
+    "guest_cleanup_seconds": 600,
+    "guest_seconds": 3000,
+    "home_free_files": 1000,
+    "home_return_required_bytes": 134217728,
+    "host_post_seconds": 240,
+    "host_pre_seconds": 240,
+    "memory_gib": 32,
+    "outer_margin_seconds": 120,
+    "physical_cpus": 4,
+    "raw_bytes": 33554432,
+    "scratch_free_files": 30000,
+    "scratch_required_bytes": 8589934592,
+    "wall_seconds": 3600
+  },
+  "native_release": false,
+  "phase_seconds": {
+    "a3_sealed": 600,
+    "a3_source": 600,
+    "candidate_build": 90,
+    "cpu": 180,
+    "guest_cleanup": 600,
+    "main_sealed": 420,
+    "main_source": 420,
+    "preflight": 30
+  },
+  "review_freeze_sha256": "4322d59c07fc5b8bb3fa7ba39d167e332586298200ae128c2028a669d8ae0217",
+  "schema": "a3.native-release-correction.freeze.v1",
+  "scope": "Separate corrected candidate, preserving original D127 source and every test/proof. Native entry and all old allowances remain closed. No scheduler, entitlement, capsule or Torch commands.",
+  "source_probe_sha256": "d72e0e41ee91919e4daa22d9214e502a47d8d976e8f90ad2c3c5191d3af5bca7",
+  "spent_allowances_reused": false,
+  "verification": "Preserve byte-identical original81 integration tests and all old39/35/26/main128/A3276 cases. Add source/snapshot release regression/fault tests and rerun complete local host/guest science+60CPU under exact caps. Retention code remains byte-identical; independently reverify existing597MB/1000-file lossless proof without duplicating data. Full prior-file hashes before/after."
+}

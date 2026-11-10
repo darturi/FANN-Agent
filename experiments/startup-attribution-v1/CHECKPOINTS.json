@@ -1,0 +1,535 @@
+{
+  "checkpoints": [
+    {
+      "id": "H00.sampler_ready",
+      "meaning": "Sampler ready, before input verification",
+      "scope": "host"
+    },
+    {
+      "id": "H01.bundle_before",
+      "meaning": "Before original package/bundle/image verification",
+      "scope": "host"
+    },
+    {
+      "id": "H02.bundle_after",
+      "meaning": "After original package/bundle/image verification",
+      "scope": "host"
+    },
+    {
+      "id": "H03.preflight_before",
+      "meaning": "Before original host resource preflight",
+      "scope": "host"
+    },
+    {
+      "id": "H04.preflight_after",
+      "meaning": "After original host resource preflight",
+      "scope": "host"
+    },
+    {
+      "id": "H05.protected_before",
+      "meaning": "Before host protected-input proof",
+      "scope": "host"
+    },
+    {
+      "id": "H06.protected_after",
+      "meaning": "After host protected-input proof",
+      "scope": "host"
+    },
+    {
+      "id": "H07.container_before",
+      "meaning": "Before container launch",
+      "scope": "host"
+    },
+    {
+      "id": "H08.container_after",
+      "meaning": "After container termination",
+      "scope": "host"
+    },
+    {
+      "id": "H09.protected_final_before",
+      "meaning": "Before final host protected-input proof",
+      "scope": "host"
+    },
+    {
+      "id": "H10.protected_final_after",
+      "meaning": "After final host protected-input proof",
+      "scope": "host"
+    },
+    {
+      "id": "H11.sampler_stop_before",
+      "meaning": "Before bounded sampler stop",
+      "scope": "host"
+    },
+    {
+      "id": "R00.instrument_preflight.before",
+      "meaning": "Before bounded diagnostic capability/encoder preflight (no SQL)",
+      "scope": "runtime"
+    },
+    {
+      "id": "R00.instrument_preflight.after",
+      "meaning": "After bounded diagnostic capability/encoder preflight (no SQL)",
+      "scope": "runtime"
+    },
+    {
+      "id": "R01.source_inventory.before",
+      "meaning": "Before initial retained-source inventory",
+      "scope": "runtime"
+    },
+    {
+      "id": "R01.source_inventory.after",
+      "meaning": "After initial retained-source inventory",
+      "scope": "runtime"
+    },
+    {
+      "id": "R02.source_graphs.before",
+      "meaning": "Before initial retained-source graph hashes",
+      "scope": "runtime"
+    },
+    {
+      "id": "R02.source_graphs.after",
+      "meaning": "After initial retained-source graph hashes",
+      "scope": "runtime"
+    },
+    {
+      "id": "R03.clone.native640.before",
+      "meaning": "Before independent cluster copy native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R03.clone.native640.after",
+      "meaning": "After independent cluster copy native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.native640.source.before",
+      "meaning": "Before existing clone source inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.native640.source.after",
+      "meaning": "After existing clone source inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.native640.destination.before",
+      "meaning": "Before existing clone destination inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.native640.destination.after",
+      "meaning": "After existing clone destination inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R03.clone.partial640.before",
+      "meaning": "Before independent cluster copy partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R03.clone.partial640.after",
+      "meaning": "After independent cluster copy partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.partial640.source.before",
+      "meaning": "Before existing clone source inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.partial640.source.after",
+      "meaning": "After existing clone source inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.partial640.destination.before",
+      "meaning": "Before existing clone destination inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R04.clone_inventory.partial640.destination.after",
+      "meaning": "After existing clone destination inventory; no added scan",
+      "scope": "runtime"
+    },
+    {
+      "id": "R05.source_postclone.before",
+      "meaning": "Before existing retained-source postcopy inventory",
+      "scope": "runtime"
+    },
+    {
+      "id": "R05.source_postclone.after",
+      "meaning": "After existing retained-source postcopy inventory",
+      "scope": "runtime"
+    },
+    {
+      "id": "R06.working_graphs.before",
+      "meaning": "Before initial working graph hashes",
+      "scope": "runtime"
+    },
+    {
+      "id": "R06.working_graphs.after",
+      "meaning": "After initial working graph hashes",
+      "scope": "runtime"
+    },
+    {
+      "id": "R07.server_start.native640.before",
+      "meaning": "Before original server start native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R07.server_start.native640.after",
+      "meaning": "After original server start native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R07.server_start.partial640.before",
+      "meaning": "Before original server start partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R07.server_start.partial640.after",
+      "meaning": "After original server start partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.native640.before",
+      "meaning": "Before complete verify_data call initial/native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.native640.after",
+      "meaning": "After complete verify_data call initial/native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.native640.fetch_return.1",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.native640.fetch_return.1237",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.native640.fetch_return.2473",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.partial640.before",
+      "meaning": "Before complete verify_data call initial/partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.partial640.after",
+      "meaning": "After complete verify_data call initial/partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.partial640.fetch_return.1",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.partial640.fetch_return.1237",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.initial.partial640.fetch_return.2473",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.native640.before",
+      "meaning": "Before complete verify_data call final/native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.native640.after",
+      "meaning": "After complete verify_data call final/native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.native640.fetch_return.1",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.native640.fetch_return.1237",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.native640.fetch_return.2473",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.partial640.before",
+      "meaning": "Before complete verify_data call final/partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.partial640.after",
+      "meaning": "After complete verify_data call final/partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.partial640.fetch_return.1",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.partial640.fetch_return.1237",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "id": "V.final.partial640.fetch_return.2473",
+      "meaning": "After this existing FETCH page returns; memory only, no extra FETCH",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 970,
+      "id": "S00.producer_entry",
+      "meaning": "Original backend snapshot entry, cache must be absent",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 982,
+      "id": "S01.execute_before",
+      "meaning": "Before original snapshot cursor execute",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 983,
+      "id": "S02.result_received",
+      "meaning": "Original client result received, before row decoding",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": null,
+      "id": "S03.decoded_before_close",
+      "meaning": "Tracked raw snapshot cursor _close entry after original iteration",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": null,
+      "id": "S04.cursor_closed",
+      "meaning": "Tracked raw snapshot cursor _close return",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 23,
+      "id": "S05.constructor_entry",
+      "meaning": "Original Snapshot constructor entered, original fields/rows",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 54,
+      "id": "S05a.matrix_before",
+      "meaning": "Before original np.asarray matrix construction after maps/fields",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 55,
+      "id": "S06.matrix_ready",
+      "meaning": "Matrix ready, before finite validation",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 57,
+      "id": "S07.finite_complete",
+      "meaning": "Finite check complete, before original norm check",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 61,
+      "id": "S08.norm_complete",
+      "meaning": "Norm check complete, before dimension/metadata work",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 89,
+      "id": "S09.metadata_ready",
+      "meaning": "Metadata ready, before original identity call",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": null,
+      "id": "S10.identity_begin",
+      "meaning": "Existing identity-stream phase start",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": null,
+      "id": "S11.identity_end",
+      "meaning": "Existing identity-stream phase end",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": 992,
+      "id": "S12.constructor_complete",
+      "meaning": "Original constructor returned to backend",
+      "scope": "runtime"
+    },
+    {
+      "frozen_line": null,
+      "id": "S13.publication_ready",
+      "meaning": "Exact original identity/eligibility validated; monitoring scope restored before shared publication",
+      "scope": "runtime"
+    },
+    {
+      "id": "E0.creation_before",
+      "meaning": "Original epoch 0 creation_before",
+      "scope": "runtime"
+    },
+    {
+      "id": "E0.hold_begin",
+      "meaning": "Original epoch 0 hold_begin",
+      "scope": "runtime"
+    },
+    {
+      "id": "E0.hold_end",
+      "meaning": "Original epoch 0 hold_end",
+      "scope": "runtime"
+    },
+    {
+      "id": "E0.closed_after",
+      "meaning": "Original epoch 0 closed_after",
+      "scope": "runtime"
+    },
+    {
+      "id": "E1.creation_before",
+      "meaning": "Original epoch 1 creation_before",
+      "scope": "runtime"
+    },
+    {
+      "id": "E1.hold_begin",
+      "meaning": "Original epoch 1 hold_begin",
+      "scope": "runtime"
+    },
+    {
+      "id": "E1.hold_end",
+      "meaning": "Original epoch 1 hold_end",
+      "scope": "runtime"
+    },
+    {
+      "id": "E1.closed_after",
+      "meaning": "Original epoch 1 closed_after",
+      "scope": "runtime"
+    },
+    {
+      "id": "R08.final_reader_close.before",
+      "meaning": "Before existing final Factory.close; no snapshot root removal",
+      "scope": "runtime"
+    },
+    {
+      "id": "R08.final_reader_close.after",
+      "meaning": "After existing final Factory.close; no snapshot root removal",
+      "scope": "runtime"
+    },
+    {
+      "id": "R09.final_catalog.native640.before",
+      "meaning": "Before original final catalog proof native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R09.final_catalog.native640.after",
+      "meaning": "After original final catalog proof native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R10.final_graph.native640.before",
+      "meaning": "Before original final graph family hashes native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R10.final_graph.native640.after",
+      "meaning": "After original final graph family hashes native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R11.server_stop.native640.before",
+      "meaning": "Before original bounded server stop native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R11.server_stop.native640.after",
+      "meaning": "After original bounded server stop native640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R09.final_catalog.partial640.before",
+      "meaning": "Before original final catalog proof partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R09.final_catalog.partial640.after",
+      "meaning": "After original final catalog proof partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R10.final_graph.partial640.before",
+      "meaning": "Before original final graph family hashes partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R10.final_graph.partial640.after",
+      "meaning": "After original final graph family hashes partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R11.server_stop.partial640.before",
+      "meaning": "Before original bounded server stop partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R11.server_stop.partial640.after",
+      "meaning": "After original bounded server stop partial640",
+      "scope": "runtime"
+    },
+    {
+      "id": "R12.stopped_graphs.before",
+      "meaning": "Before original stopped-working graph/control proof",
+      "scope": "runtime"
+    },
+    {
+      "id": "R12.stopped_graphs.after",
+      "meaning": "After original stopped-working graph/control proof",
+      "scope": "runtime"
+    },
+    {
+      "id": "R13.source_final.before",
+      "meaning": "Before original final retained-source inventory",
+      "scope": "runtime"
+    },
+    {
+      "id": "R13.source_final.after",
+      "meaning": "After original final retained-source inventory",
+      "scope": "runtime"
+    },
+    {
+      "id": "R14.restore_verify.before",
+      "meaning": "Before diagnostic hook restoration proof and final cleanup checks",
+      "scope": "runtime"
+    },
+    {
+      "id": "R14.restore_verify.after",
+      "meaning": "After diagnostic hook restoration proof and final cleanup checks",
+      "scope": "runtime"
+    },
+    {
+      "id": "R15.runtime_complete",
+      "meaning": "Before guest final lock, after diagnostic summary flush",
+      "scope": "runtime"
+    }
+  ],
+  "complete_required_count": 102,
+  "failure": "Incomplete prefixes preserved; a success requires every required checkpoint exactly once, except per-source duplicate LINE locations coalesce to one semantic checkpoint",
+  "maximum_record_bytes": 16384,
+  "maximum_records": 128,
+  "ordering": "Host/runtime own-process order plus original source happens-before; concurrent sampler frames bracket checkpoints, no atomic sample assumption",
+  "schema": "startup-attribution.checkpoints.v1"
+}

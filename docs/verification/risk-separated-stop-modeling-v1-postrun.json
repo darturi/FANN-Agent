@@ -1,0 +1,1817 @@
+{
+  "M1": false,
+  "M2": false,
+  "M3": false,
+  "artifacts_sha256": {
+    "agent/experiments/risk-separated-stop-modeling-v1/README.md": "22d864ad8598c42890b194cb524a2e23a3b8873294893679c6337e85ce14e6bd",
+    "agent/experiments/risk-separated-stop-modeling-v1/contract.json": "92928bbca0ca8c1b0a4ac6962d3fe95aa083b96c14e9b49b4ea050c657ae99ae",
+    "agent/experiments/risk-separated-stop-modeling-v1/input-pins.json": "f50b1da583e235d5c66d110ee3832e65dde3bd1784628e7b0070f085753977a7",
+    "research/fannagent-p3c-risk-separated-modeling-2026-10-24/analysis.json": "f9977b6f31d120b1f2d993f47d35fda0d38ee0c3e91aa429c7da91464af6edf7",
+    "research/fannagent-p3c-risk-separated-modeling-2026-10-24/analyze_saved.py": "f8eaadba6c11b943b47e2c58262e7b052c5f3a0cd54cb238a582988b36698aa8",
+    "research/fannagent-p3c-risk-separated-modeling-2026-10-24/verify_saved.py": "f5075caa7d25addc6a8be9ed9a94c1124c234854ea2fe9c3782824f2e0aa31f8",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/checks-v1-source.json": "9c46f21908af75ed46d5d3d835ec408b211525b704c7dc8ffd26c0baf332eb2b",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/descriptive-analysis.log": "563cf08f91dc34ee275e7d1381406ee3db7355776dc3f8b031b11b9ad401a42c",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/local-checks.json": "10ef3a9ce90aa821f186fcb9aad0bb4ba38d1c87cd42e2841d07672c3f697438",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/local-tests-v1.log": "df3dcac189fccb0b8967f0aceede4b6eac9149d0470d0b9f40ca6d9fc4809851",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/preflight-v1.log": "dca7c27e6833a66c112be81f44f013303243cfdff4d5f3d7d75b7b57a432f6de",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/preflight-v1/result.json": "04795cd18d7704d92095899c902c69fe295629f740344ed8e18687903909ebe3",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/run-v1.log": "7ce0ca7ab567edf351f3308d5f5ba225759295c8d1f5e8cf81cb2cd1f8b1b725",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/design-lock.json": "f7021eded250d9c7bb7613cc621d48d15d93a88d5640d7fd664586172224622f",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/folds.json": "251f582fdbddbc042f0a40e2f3c4f29e75810cbf39d1adc1d7bcbb871421dce2",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/performance.json": "4465d0a7a3386ba2bcd6ed79d05208438ab4a939925ad72a0e35e17a48e0f8b1",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/report.txt": "9d9b5e4fc9ab27d1757282dcdf3136b569aa798d31614367665ba7523d11f4fb",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/verification-replay.json": "7a90291cffe38b861b5c8089757744aaa0cf1e2bf8cef8a91ad4ae7e197791fd",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/verification.json": "40aa6b2b850c8cad1b5eb913940eaa31faf02298c62317f6c1e093435e1a139f",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/start-state.json": "78eb47272a7269628a830b2cccfcabe97f48e18cbd1b2fe82d15feda07676dab",
+    "trials/torch-reviews-risk-separated-stop-modeling-v1/verification-replay-v1.log": "c5c629d7185b90cf6e3b71006b61bc6845e9f0827bb6abf476d2a1bf485c5ecb"
+  },
+  "authorization": "User explicitly requested frozen design, implementation, local checks, one bounded local experiment, verification, analysis and roadmap update.",
+  "boundaries": {
+    "Torch_allocations": 0,
+    "actual_new_policy_latency": "unmeasured",
+    "confirmation_queries": 0,
+    "database_calls": 0,
+    "full_data_refit": false,
+    "globally_selected_policy": false,
+    "new_native_searches": 0,
+    "prior_sources_receipts_evidence_modified": false,
+    "production_code_modified": false,
+    "production_environments_modified": false,
+    "protected_query_values_opened": false,
+    "provider_calls": 0
+  },
+  "canonical_acceptance": false,
+  "decision": {
+    "G3": "closed_negative_for_bounded_P3_investigation",
+    "P3c": "closed_negative_for_finite_formulation",
+    "additional_tuning_under_P3c": false,
+    "qualified_family": null,
+    "universal_feature_or_family_ceiling_claimed": false
+  },
+  "dependency_environment_reused_read_only": "trials/torch-reviews-grouped-stop-modeling-v1/local-env",
+  "experiment": "NEXT-RISK-01",
+  "failed_scientific_runs": 0,
+  "frozen_contract_sha256": "92928bbca0ca8c1b0a4ac6962d3fe95aa083b96c14e9b49b4ea050c657ae99ae",
+  "limitations": [
+    "All 200 vectors previously exposed; grouped outer folds do not remove earlier design adaptation.",
+    "Uncertainty conditions on fixed OOF fits; training uncertainty not independently resampled.",
+    "Fixed-stop proxy costs do not measure a learned tree or composite-session serving latency.",
+    "Finite risk partitions, benefit estimates and pruning procedure do not establish a universal information or policy-family ceiling.",
+    "Extra Trees remains an offline diagnostic predictor; shallow artifacts have observed interpreter parity only.",
+    "Predicted risk is a fitting-leaf mean, not a confidence bound or conformal risk-control guarantee.",
+    "P3c design uses earlier P3b outcomes; matched folds do not remove adaptation. Threshold grids/formulation differ, so do not infer an isolated causal capacity effect."
+  ],
+  "local_checks": {
+    "fixed_contract_sha256": "92928bbca0ca8c1b0a4ac6962d3fe95aa083b96c14e9b49b4ea050c657ae99ae",
+    "guarded_API_and_baseline_preflight_sha256": "04795cd18d7704d92095899c902c69fe295629f740344ed8e18687903909ebe3",
+    "preflight_note": "All919 input hashes pass, guarded API import passes, frozen P3b OOF reports reconstruct exactly, no scientific fits.",
+    "prior_isolated_dependency_environment": "trials/torch-reviews-grouped-stop-modeling-v1/local-env",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "runtime": {
+      "packages": {
+        "annotated-types": "0.8.0",
+        "joblib": "1.5.2",
+        "numpy": "2.3.5",
+        "pydantic": "2.12.3",
+        "pydantic-core": "2.41.4",
+        "scikit-learn": "1.7.2",
+        "scipy": "1.16.3",
+        "threadpoolctl": "3.6.0",
+        "typing-extensions": "4.16.0",
+        "typing-inspection": "0.4.4"
+      },
+      "python": "3.12.7 (v3.12.7:0b05ead877f, Sep 30 2024, 23:18:00) [Clang 13.0.0 (clang-1300.0.29.30)]"
+    },
+    "scientific_dataset_fits": 0,
+    "source_files_sha256": {
+      "README.md": "22d864ad8598c42890b194cb524a2e23a3b8873294893679c6337e85ce14e6bd",
+      "common.py": "0b613483c6f44c7df46420a66ee847e79be624a9bf257dd2699a66e74f3655c8",
+      "compare.py": "c83955760595d7ee8ff090672d95a320d2c56e2b69281285d4e02a9404e0f5c2",
+      "contract.json": "92928bbca0ca8c1b0a4ac6962d3fe95aa083b96c14e9b49b4ea050c657ae99ae",
+      "data.py": "d5a1aa38eb510290bb9ccb142ee6fc7ac75e77e7f3eb56c5aff9a0d93775dc6c",
+      "input-pins.json": "f50b1da583e235d5c66d110ee3832e65dde3bd1784628e7b0070f085753977a7",
+      "models.py": "412863c7e9e831018d1d361bafc341867cb7b69d6611d85242d2e8109b87f7da",
+      "requirements.txt": "98d1281994ef6efc02f1b585e88eae96be3e1e4019c1c0c67a2aa1f87f21b0d9",
+      "stats.py": "80cffd0fb2950c43742f8262ec9d064489c125691b7ccb032ccf030966e48b5a",
+      "test_comparison.py": "41a3cc52859b51f9b15a8dba5ebdd40139bc944251da2dff38bbc73011fe81fe"
+    },
+    "status": "passed",
+    "synthetic_estimator_fits_total": 6,
+    "synthetic_test_processes": 1,
+    "tests_log_sha256": "df3dcac189fccb0b8967f0aceede4b6eac9149d0470d0b9f40ca6d9fc4809851",
+    "tests_passed": 16,
+    "version": "risk-separated-stop-modeling.v1.local-checks"
+  },
+  "local_date": "2026-10-24",
+  "new_dependency_installations": 0,
+  "next_recommendation": {
+    "automatic_B1_experiment_authorized": false,
+    "id": "NEXT-SCOPE-01",
+    "not_established": "No claim that search-effort adaptation is supported or faster until audited/measured. Fresh development diversity remains an alternative with a precise hypothesis and new entitlement contract.",
+    "phase": "B1a",
+    "scope": "Read-only fixed-index query-dependent search-effort feasibility/design audit. Verify actual backend controls, cheap qualified inputs, compatibility, primary timer, ordinary-native baseline and a finite prospective comparison before any measurement.",
+    "status": "proposed_not_implemented_or_run",
+    "user_commands_needed_now": false,
+    "why": "Risk-separated diagnostics reduce observed loss yet fail activation economics; calibrated OOF selection does not yield a joint qualifier. Prefer scoping a way to change search work without presuming a richer stopping-profile cost can be recovered."
+  },
+  "original_execution_retained": true,
+  "phase": "P3c",
+  "prior_input_artifacts_pinned_and_verified": 919,
+  "recorded_at_utc": "2026-10-25T00:18:35.098253+00:00",
+  "result": {
+    "branch": {
+      "progress34": "close_finite_formulation_allowance_gate_fresh_development_diversity_or_B1_scope",
+      "static23": "close_finite_formulation_allowance_gate_fresh_development_diversity_or_B1_scope"
+    },
+    "calibrated_reports": {
+      "progress34": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 53,
+            "32": 6,
+            "64": 31,
+            "continue": 510
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -1.3714797550000002,
+            "activation_proxy_ms_saved_ci95": [
+              -1.5299622882500004,
+              -1.1951853114166666
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9901666666666668,
+            "query_filter_cases": 600,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": -0.65375935,
+            "reuse_proxy_ms_saved_ci95": [
+              -0.7655596012916667,
+              -0.5307083839166665
+            ],
+            "stopped_cases": 90
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -1.12991646,
+              "activation_proxy_ms_saved_ci95": [
+                -1.3473666622500005,
+                -0.8930250788749998
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.50166447,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.6513257596249998,
+                -0.337175474375
+              ],
+              "stopped_cases": 35
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.763212625,
+              "activation_proxy_ms_saved_ci95": [
+                -1.86937009775,
+                -1.6414807593750003
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9854999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_loss_cases": 1,
+              "reuse_proxy_ms_saved": -0.8906589149999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9697331242499999,
+                -0.8015146008750003
+              ],
+              "stopped_cases": 20
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -1.2213101800000001,
+              "activation_proxy_ms_saved_ci95": [
+                -1.4449469267500004,
+                -0.9772318291250002
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.568954665,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.7141800437499997,
+                -0.4101620506250001
+              ],
+              "stopped_cases": 35
+            }
+          },
+          "utility_proxy_ms": -1.3714797550000002
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -1.8708390966666668,
+            "activation_proxy_ms_saved_ci95": [
+              -1.9014733048333343,
+              -1.840601914916667
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.9965668999999999,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0170696427083334,
+              -0.9760813381666666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -1.79147203,
+              "activation_proxy_ms_saved_ci95": [
+                -1.8374945875,
+                -1.747737208500001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.9524540599999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9826046858749999,
+                -0.9238333667499997
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.942195675,
+              "activation_proxy_ms_saved_ci95": [
+                -1.9904067542500004,
+                -1.8944511693749988
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.030491015,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.0683095313749997,
+                -0.9949362838749999
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -1.8788495850000002,
+              "activation_proxy_ms_saved_ci95": [
+                -1.929307086375001,
+                -1.829376488375001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0067556249999998,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.042172682125,
+                -0.9735974114999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -1.8708390966666668
+        }
+      },
+      "static23": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": false,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 133,
+            "16": 1,
+            "32": 31,
+            "64": 71,
+            "continue": 364
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -0.6031496116666666,
+            "activation_proxy_ms_saved_ci95": [
+              -0.8759962592083337,
+              -0.3166066837916666
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9891666666666666,
+            "query_filter_cases": 600,
+            "recall_delta": -0.0011666666666666663,
+            "recall_delta_ci95": [
+              -0.002499999999999999,
+              -0.00016666666666666663
+            ],
+            "recall_loss_cases": 7,
+            "reuse_proxy_ms_saved": 0.03266833166666667,
+            "reuse_proxy_ms_saved_ci95": [
+              -0.15167894712499996,
+              0.2187018827916666
+            ],
+            "stopped_cases": 236
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -0.10289643999999992,
+              "activation_proxy_ms_saved_ci95": [
+                -0.49434497437500025,
+                0.2976768679999997
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9925,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0009999999999999998,
+              "recall_delta_ci95": [
+                -0.0024999999999999996,
+                0.0
+              ],
+              "recall_loss_cases": 2,
+              "reuse_proxy_ms_saved": 0.35364835000000006,
+              "reuse_proxy_ms_saved_ci95": [
+                0.0999418538750001,
+                0.60836458675
+              ],
+              "stopped_cases": 93
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.391706585,
+              "activation_proxy_ms_saved_ci95": [
+                -1.6973008569999999,
+                -1.0841224544999999
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": false,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9845,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0014999999999999996,
+              "recall_delta_ci95": [
+                -0.003499999999999999,
+                0.0
+              ],
+              "recall_loss_cases": 3,
+              "reuse_proxy_ms_saved": -0.5000205249999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.6476797296249996,
+                -0.34654657837500025
+              ],
+              "stopped_cases": 53
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -0.31484581000000006,
+              "activation_proxy_ms_saved_ci95": [
+                -0.6729842308749996,
+                0.04953832412499993
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9905000000000002,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0009999999999999998,
+              "recall_delta_ci95": [
+                -0.0024999999999999996,
+                0.0
+              ],
+              "recall_loss_cases": 2,
+              "reuse_proxy_ms_saved": 0.24437716999999995,
+              "reuse_proxy_ms_saved_ci95": [
+                0.015166487624999973,
+                0.4768106147499998
+              ],
+              "stopped_cases": 90
+            }
+          },
+          "utility_proxy_ms": -0.6031496116666666
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -2.250748421666666,
+            "activation_proxy_ms_saved_ci95": [
+              -2.3660921955416674,
+              -2.1360719067499994
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -1.0556534516666667,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0959285687083336,
+              -1.0166401980416666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -2.298574525,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5203282940000005,
+                -2.0773935814999995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0862184300000002,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.153571516125,
+                -1.0200308276249999
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -2.311733105,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5342541367499987,
+                -2.0920560216249995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.037124155,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1029530664999996,
+                -0.9722040429999997
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -2.1419376349999997,
+              "activation_proxy_ms_saved_ci95": [
+                -2.3562567320000007,
+                -1.9376077566249996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.04361777,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1050168269999996,
+                -0.9839448409999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -2.250748421666666
+        }
+      }
+    },
+    "fixed_diagnostic_reports": {
+      "progress34": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 236,
+            "32": 4,
+            "64": 58,
+            "continue": 302
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -0.5993842833333334,
+            "activation_proxy_ms_saved_ci95": [
+              -0.774446925,
+              -0.4238192355833334
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9901666666666668,
+            "query_filter_cases": 600,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": -0.13717329999999997,
+            "reuse_proxy_ms_saved_ci95": [
+              -0.2552714338749999,
+              -0.017511972708333313
+            ],
+            "stopped_cases": 298
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -0.13898569,
+              "activation_proxy_ms_saved_ci95": [
+                -0.39760050900000016,
+                0.12250275587499998
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.20000133499999997,
+              "reuse_proxy_ms_saved_ci95": [
+                0.03422045175000005,
+                0.3666319248749999
+              ],
+              "stopped_cases": 124
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.3668793,
+              "activation_proxy_ms_saved_ci95": [
+                -1.544912157875,
+                -1.1834875430000005
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9854999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_loss_cases": 1,
+              "reuse_proxy_ms_saved": -0.6262138049999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.73450268,
+                -0.513435566
+              ],
+              "stopped_cases": 57
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -0.2922878600000001,
+              "activation_proxy_ms_saved_ci95": [
+                -0.5413057413750002,
+                -0.03579294625000032
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.014692570000000061,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.14692419162499995,
+                0.17920522249999998
+              ],
+              "stopped_cases": 117
+            }
+          },
+          "utility_proxy_ms": -0.5993842833333334
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -1.8708390966666668,
+            "activation_proxy_ms_saved_ci95": [
+              -1.9014733048333343,
+              -1.840601914916667
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.9965668999999999,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0170696427083334,
+              -0.9760813381666666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -1.79147203,
+              "activation_proxy_ms_saved_ci95": [
+                -1.8374945875,
+                -1.747737208500001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -0.9524540599999999,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.9826046858749999,
+                -0.9238333667499997
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.942195675,
+              "activation_proxy_ms_saved_ci95": [
+                -1.9904067542500004,
+                -1.8944511693749988
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.030491015,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.0683095313749997,
+                -0.9949362838749999
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -1.8788495850000002,
+              "activation_proxy_ms_saved_ci95": [
+                -1.929307086375001,
+                -1.829376488375001
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0067556249999998,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.042172682125,
+                -0.9735974114999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -1.8708390966666668
+        }
+      },
+      "static23": {
+        "extra_trees": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "128": 263,
+            "32": 4,
+            "64": 94,
+            "continue": 239
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -0.280049505,
+            "activation_proxy_ms_saved_ci95": [
+              -0.5162129273750001,
+              -0.050924278041666736
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9901666666666668,
+            "query_filter_cases": 600,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": 0.13550282499999994,
+            "reuse_proxy_ms_saved_ci95": [
+              -0.008033737833333323,
+              0.27659521904166656
+            ],
+            "stopped_cases": 361
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": 0.25479146000000014,
+              "activation_proxy_ms_saved_ci95": [
+                -0.07491528212499984,
+                0.5840804842499999
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.524974145,
+              "reuse_proxy_ms_saved_ci95": [
+                0.31842260775,
+                0.731279768125
+              ],
+              "stopped_cases": 144
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -1.09659302,
+              "activation_proxy_ms_saved_ci95": [
+                -1.3993184462499988,
+                -0.7980676643750002
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9854999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_loss_cases": 1,
+              "reuse_proxy_ms_saved": -0.43731345499999996,
+              "reuse_proxy_ms_saved_ci95": [
+                -0.5789775597499999,
+                -0.2967003422499999
+              ],
+              "stopped_cases": 80
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": 0.0016530450000000485,
+              "activation_proxy_ms_saved_ci95": [
+                -0.300146072875,
+                0.30158966112499996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": 0.318847785,
+              "reuse_proxy_ms_saved_ci95": [
+                0.13570892299999995,
+                0.5041222424999998
+              ],
+              "stopped_cases": 137
+            }
+          },
+          "utility_proxy_ms": -0.280049505
+        },
+        "shallow_tree": {
+          "actual_new_policy_latency": "unmeasured",
+          "canonical_acceptance": false,
+          "development_recall_pass": true,
+          "development_signal": false,
+          "first_stop_histogram": {
+            "continue": 600
+          },
+          "original_tolerance_recall_replay_pass": true,
+          "overall": {
+            "activation_proxy_ms_saved": -2.250748421666666,
+            "activation_proxy_ms_saved_ci95": [
+              -2.3660921955416674,
+              -2.1360719067499994
+            ],
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 200,
+            "native_recall": 0.9903333333333334,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9903333333333334,
+            "query_filter_cases": 600,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -1.0556534516666667,
+            "reuse_proxy_ms_saved_ci95": [
+              -1.0959285687083336,
+              -1.0166401980416666
+            ],
+            "stopped_cases": 0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "activation_proxy_ms_saved": -2.298574525,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5203282940000005,
+                -2.0773935814999995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9934999999999999,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9934999999999999,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.0862184300000002,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.153571516125,
+                -1.0200308276249999
+              ],
+              "stopped_cases": 0
+            },
+            "votes108": {
+              "activation_proxy_ms_saved": -2.311733105,
+              "activation_proxy_ms_saved_ci95": [
+                -2.5342541367499987,
+                -2.0920560216249995
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.986,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.986,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.037124155,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1029530664999996,
+                -0.9722040429999997
+              ],
+              "stopped_cases": 0
+            },
+            "votes32": {
+              "activation_proxy_ms_saved": -2.1419376349999997,
+              "activation_proxy_ms_saved_ci95": [
+                -2.3562567320000007,
+                -1.9376077566249996
+              ],
+              "all_valid_complete_top10": true,
+              "development_recall_pass": true,
+              "incomplete_cases": 0,
+              "independent_vectors": 200,
+              "native_recall": 0.9915,
+              "original_tolerance_recall_replay_pass": true,
+              "policy_recall": 0.9915,
+              "query_filter_cases": 200,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_loss_cases": 0,
+              "reuse_proxy_ms_saved": -1.04361777,
+              "reuse_proxy_ms_saved_ci95": [
+                -1.1050168269999996,
+                -0.9839448409999998
+              ],
+              "stopped_cases": 0
+            }
+          },
+          "utility_proxy_ms": -2.250748421666666
+        }
+      }
+    },
+    "inner_candidates": {
+      "any_stop": 316,
+      "complete_top10": 980,
+      "positive_both_proxies": 80,
+      "positive_but_recall_fail": 68,
+      "qualified": 12,
+      "recall_pass": 882,
+      "recall_pass_but_nonpositive_proxy": 870,
+      "trials": 980
+    },
+    "outer_cells": 20,
+    "outer_noncontinue_selections": 4,
+    "paired_p3c_minus_frozen_p3b": {
+      "calibrated": {
+        "progress34": {
+          "extra_trees": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                0.3407388325833333,
+                0.673128208
+              ],
+              "activation_proxy_saving_difference_ms": 0.4993593416666667,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.00016666666666666663,
+              "recall_delta_difference_ci95": [
+                -0.0004999999999999999,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.23406047866666668,
+                0.4621630393333333
+              ],
+              "reuse_proxy_saving_difference_ms": 0.34280755,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                0.44527469849999995,
+                0.89411414475
+              ],
+              "activation_proxy_saving_difference_ms": 0.66155557,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.304818497375,
+                0.6111177993749999
+              ],
+              "reuse_proxy_saving_difference_ms": 0.45078958999999996,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.08173984137500002,
+                0.296719874125
+              ],
+              "activation_proxy_saving_difference_ms": 0.17898305,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.0004999999999999999,
+              "recall_delta_difference_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.07557556725000002,
+                0.21755620699999997
+              ],
+              "reuse_proxy_saving_difference_ms": 0.1398321,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                0.43757028862499997,
+                0.8979677126250001
+              ],
+              "activation_proxy_saving_difference_ms": 0.657539405,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.29352999074999997,
+                0.5960276655
+              ],
+              "reuse_proxy_saving_difference_ms": 0.43780096,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          },
+          "shallow_tree": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          }
+        },
+        "static23": {
+          "extra_trees": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                1.36666062625,
+                1.9391889772916662
+              ],
+              "activation_proxy_saving_difference_ms": 1.64759881,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.0011666666666666663,
+              "recall_delta_difference_ci95": [
+                -0.002499999999999999,
+                -0.00016666666666666663
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.9086050498333337,
+                1.2722491403333338
+              ],
+              "reuse_proxy_saving_difference_ms": 1.0883217833333334,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                1.7876053385000001,
+                2.62507033625
+              ],
+              "activation_proxy_saving_difference_ms": 2.195678085,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.0009999999999999998,
+              "recall_delta_difference_ci95": [
+                -0.0024999999999999996,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                1.18614841275,
+                1.697231168125
+              ],
+              "reuse_proxy_saving_difference_ms": 1.43986678,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.6550591933749998,
+                1.208687206
+              ],
+              "activation_proxy_saving_difference_ms": 0.92002652,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.0014999999999999996,
+              "recall_delta_difference_ci95": [
+                -0.003499999999999999,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.3971415177499999,
+                0.6870135169999999
+              ],
+              "reuse_proxy_saving_difference_ms": 0.53710363,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                1.4709939879999998,
+                2.205182849125
+              ],
+              "activation_proxy_saving_difference_ms": 1.8270918249999997,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.0009999999999999998,
+              "recall_delta_difference_ci95": [
+                -0.0024999999999999996,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                1.0604037441249998,
+                1.5264197000000004
+              ],
+              "reuse_proxy_saving_difference_ms": 1.2879949400000001,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          },
+          "shallow_tree": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          }
+        }
+      },
+      "fixed_diagnostic": {
+        "progress34": {
+          "extra_trees": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                -1.0619846355416667,
+                -0.5339906047499999
+              ],
+              "activation_proxy_saving_difference_ms": -0.79393382,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0023333333333333335,
+              "recall_delta_difference_ci95": [
+                0.0006666666666666665,
+                0.0045
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                -0.9134076856666666,
+                -0.5229953339583333
+              ],
+              "reuse_proxy_saving_difference_ms": -0.7148978316666665,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                -2.832012922625,
+                -1.8812507029999987
+              ],
+              "activation_proxy_saving_difference_ms": -2.3474661599999997,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.006500000000000001,
+              "recall_delta_difference_ci95": [
+                0.0019999999999999996,
+                0.0125
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                -2.2774668383749996,
+                -1.5570580470000002
+              ],
+              "reuse_proxy_saving_difference_ms": -1.9133800650000001,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.20127784025,
+                0.600520092375
+              ],
+              "activation_proxy_saving_difference_ms": 0.395985695,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.0004999999999999999,
+              "recall_delta_difference_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.12709149725000002,
+                0.3909658268750001
+              ],
+              "reuse_proxy_saving_difference_ms": 0.25753562500000005,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                -0.8565714478750002,
+                -0.021120222750000025
+              ],
+              "activation_proxy_saving_difference_ms": -0.43032099500000015,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0009999999999999998,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0024999999999999996
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                -0.7923330013750001,
+                -0.19465125074999992
+              ],
+              "reuse_proxy_saving_difference_ms": -0.488849055,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          },
+          "shallow_tree": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          }
+        },
+        "static23": {
+          "extra_trees": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                -1.0062373805833333,
+                -0.46501318116666673
+              ],
+              "activation_proxy_saving_difference_ms": -0.7346624516666667,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0021666666666666666,
+              "recall_delta_difference_ci95": [
+                0.0008333333333333332,
+                0.0038333333333333327
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                -0.9699378768333334,
+                -0.6124684970833335
+              ],
+              "reuse_proxy_saving_difference_ms": -0.78888619,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                -2.901444923625,
+                -1.9169213811250003
+              ],
+              "activation_proxy_saving_difference_ms": -2.406640995,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.006499999999999999,
+              "recall_delta_difference_ci95": [
+                0.0024999999999999996,
+                0.011499999999999998
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                -2.3883280877499997,
+                -1.7030341528750006
+              ],
+              "reuse_proxy_saving_difference_ms": -2.041238935,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.539788638875,
+                1.159918079
+              ],
+              "activation_proxy_saving_difference_ms": 0.84471743,
+              "independent_vectors": 200,
+              "recall_delta_difference": -0.0004999999999999999,
+              "recall_delta_difference_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.228862965625,
+                0.5230577075
+              ],
+              "reuse_proxy_saving_difference_ms": 0.37518817,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                -1.078138553625,
+                -0.20582802837500005
+              ],
+              "activation_proxy_saving_difference_ms": -0.64206379,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0004999999999999999,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0014999999999999996
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                -0.98924352125,
+                -0.42214276500000003
+              ],
+              "reuse_proxy_saving_difference_ms": -0.7006078050000002,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          },
+          "shallow_tree": {
+            "overall": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "unfiltered": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes108": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            },
+            "votes32": {
+              "activation_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "activation_proxy_saving_difference_ms": 0.0,
+              "independent_vectors": 200,
+              "recall_delta_difference": 0.0,
+              "recall_delta_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ci95": [
+                0.0,
+                0.0
+              ],
+              "reuse_proxy_saving_difference_ms": 0.0,
+              "scope": "Paired fixed-stop development proxies; not actual policy latency."
+            }
+          }
+        }
+      }
+    }
+  },
+  "run": "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1",
+  "scientific_contract_revisions_after_freeze": 0,
+  "scientific_resources": {
+    "cpu_threads": 1,
+    "elapsed_seconds": 102.37680170801468,
+    "estimator_fit_limit": 100,
+    "estimator_fits": 100,
+    "individual_trees": 3250,
+    "inner_fits": 80,
+    "memory_limit_bytes": 4294967296,
+    "metered_run_read_bytes": 900497365,
+    "peak_rss_bytes": 1065762816,
+    "read_limit_bytes": 17179869184,
+    "shared_outer_refits": 20,
+    "wall_limit_seconds": 3600
+  },
+  "source_files_pinned": 10,
+  "status": "complete_verified_closed_negative_for_finite_formulation",
+  "timezone": "America/New_York",
+  "verification": {
+    "data_only_replay": {
+      "all_model_hashes_group_splits_and_leaf_values_verified": true,
+      "design_lock_sha256": "f7021eded250d9c7bb7613cc621d48d15d93a88d5640d7fd664586172224622f",
+      "individual_trees": 3250,
+      "inner_model_predictions_and_candidate_assessments_reconstructed": 980,
+      "new_fits": 0,
+      "new_measurements": 0,
+      "outer_first_stop_cases_reconstructed": 4800,
+      "performance_sha256": "4465d0a7a3386ba2bcd6ed79d05208438ab4a939925ad72a0e35e17a48e0f8b1",
+      "prior_baseline_and_controls_reconstructed": true,
+      "reports_and_all_paired_contrasts_match_tolerance": 1e-12,
+      "retained_nodes_verified": 494452,
+      "scientific_estimator_fits": 100,
+      "source_input_preservation": true,
+      "status": "passed",
+      "training_leaves_independently_reconstructed": 248851
+    },
+    "existing_user_document_unchanged": "agent/docs/AGGRESSIVE_POLICY_PROPOSAL_EXPERIMENT.md",
+    "hashed_result_artifacts": 323,
+    "primary_status": "passed",
+    "prior_baseline_outer_and_inner_folds_match": true,
+    "prior_baseline_reports_reconstruct_exactly": true,
+    "shallow_validator_and_shared_interpreter_first_stops_pass": true,
+    "source_input_preservation": true
+  },
+  "version": "risk-separated-stop-modeling.v1.postrun"
+}

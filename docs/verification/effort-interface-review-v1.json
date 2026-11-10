@@ -1,0 +1,135 @@
+{
+  "M1": false,
+  "M2": false,
+  "M3": false,
+  "activities_this_review": {
+    "database_connections": 0,
+    "fits": 0,
+    "native_searches": 0,
+    "policy_simulations": 0,
+    "production_or_experiment_code_changes": 0,
+    "protected_query_value_access": 0,
+    "provider_calls": 0,
+    "tests": 0,
+    "torch_calls": 0
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "71f2cfa315680fe135105d6af94ff5c6b117f9d86f379e19d3e5e062f60607e5",
+    "research/fannagent-effort-interface-review-2026-10-25.md": "54d149e9e157ddc5f167991910a86e6f6772ba16e1340f04298814330321a790",
+    "research/fannagent-effort-interface-review-2026-10-25/audit.json": "ea680f65c3b82453d399da4cf106573bc63b842cafe7819e5e44ed38e090d0b9",
+    "research/fannagent-effort-interface-review-2026-10-25/documentation-review.json": "059f0d288b79ac88f98dfca22b41fe8330f90224aacf4445582dfda2d4678e9b",
+    "research/fannagent-effort-interface-review-2026-10-25/input-inventory.json": "0f615b414e981826baf19e24512479200a660b4250cadbe9d9a85ef98160d31c",
+    "research/fannagent-native-effort-midpoint-v1-design-2026-10-25.md": "09176883e515ccad645523cab67fa756757230713a82a144959fe3b447102ed7",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "bc71f5911ebdf8190c50d84c546bee6648e4929762fb3dde588d47596a5d489a"
+  },
+  "canonical_acceptance_established": false,
+  "confirmation_entitlements_unchanged": true,
+  "decision": {
+    "B1c_proceed": false,
+    "candidate_fixed_effort": 480,
+    "current_two_reader_router_go": false,
+    "effort_is_predicted_to_qualify": false,
+    "implemented": false,
+    "maximum_new_searches_if_quality_fails": 1830,
+    "maximum_new_searches_if_quality_passes": 59430,
+    "measured": false,
+    "proposed_allocations": 1,
+    "prospective_design_go": true,
+    "reference_fixed_effort": 640,
+    "review_complete": true,
+    "scope": "Quality-first, warm persistent native readers only; full startup/cleanup recorded separately.",
+    "unchanged_activation_calibration_go": false
+  },
+  "documentation_checks": "passed",
+  "execution_correctness_checks_run": false,
+  "method": "Static source reading, existing raw timer arithmetic, primary-source browsing, documentation writes and hash/link/count verification only. No experiment imports/replay/tests or new measurement.",
+  "mutable_documents_before_sha256": {
+    "agent/docs/experiments/README.md": "743229be5b9f28820385816d9413e73c49f4b0211efa2c3c4107be33e78cd2ba",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "1d2aafce2a6b2c0280e4593ee4f1418ce4b17bf05e376499a79da63c08cbf10b"
+  },
+  "next": "Implement/check/seal B1b2 on a subsequent implementation request, then provide exact commands. No package or new Torch experiment exists yet.",
+  "primary_sources_rechecked": [
+    "https://github.com/pgvector/pgvector/blob/v0.8.6/README.md",
+    "https://raw.githubusercontent.com/pgvector/pgvector/8ee86c96f0fd72390f890aa8a336fda6d3ab4c6c/src/hnsw.c",
+    "https://raw.githubusercontent.com/pgvector/pgvector/8ee86c96f0fd72390f890aa8a336fda6d3ab4c6c/src/hnswscan.c",
+    "https://www.postgresql.org/docs/17/sql-set.html",
+    "https://github.com/psycopg/psycopg/blob/3.3.6/docs/advanced/pool.rst",
+    "https://arxiv.org/abs/1603.09320v4"
+  ],
+  "prior_B1b": {
+    "B1c_proceed": false,
+    "formal_verdict": "measurement_inconclusive",
+    "original_execution_retained": true,
+    "prior_receipt_sha256": "df715ce4beea66e6d96b17e14807eb4a75d5504e3b83a8af66118e3248f2266a",
+    "supported_context_regimes": []
+  },
+  "prospective_contract": {
+    "AA_assessed": false,
+    "activation_qualification": false,
+    "automatic_adoption_router_extra_effort_or_block": false,
+    "benefit_assessed": false,
+    "conditional_timing": {
+      "allocations": 1,
+      "conditioning_searches": 19200,
+      "discarded_warmups": 9600,
+      "fresh_AA_interval_checks": 16,
+      "gap_equivalence_ms": 0.1,
+      "log_ratio_equivalence": 0.01980262729617973,
+      "maximum_live_readers": 5,
+      "phase_searches": 57600,
+      "reader_admissions": 14,
+      "retained_searches": 28800,
+      "temporal_blocks_in_same_allocation": 2,
+      "total_campaign_search_ceiling": 59430,
+      "upper_gap_ci95_benefit_ms": -0.1,
+      "upper_log_ratio_ci95_benefit": -0.020202707317519466
+    },
+    "implemented": false,
+    "independent_confirmation": false,
+    "local_correctness_assessed": false,
+    "name": "NEXT-EFFORT-MID-01",
+    "native_assessed": false,
+    "quality_assessed": false,
+    "quality_screen": {
+      "cases": 600,
+      "complete_top_k": 10,
+      "conformance_searches": 30,
+      "early_stop_search_ceiling": 1830,
+      "independent_exposed_vectors": 200,
+      "lower_ci95_recall_delta_reserve": -0.0025,
+      "native_mean_recall_floor_per_filter": 0.95,
+      "overall_and_each_filter_required": true,
+      "reference_searches": 1800
+    },
+    "question": "One global fixed480 versus study640, warm native scope only",
+    "resources": {
+      "cpus": 4,
+      "database_max_connections": 16,
+      "memory_gib": 32,
+      "slurm_wall_seconds": 7200,
+      "work_deadline_seconds": 6600
+    },
+    "seeds": {
+      "bootstrap": 20261019,
+      "bootstrap_resamples": 10000,
+      "order": 20261025
+    }
+  },
+  "recorded_at_utc": "2026-10-25T16:12:49.559555+00:00",
+  "review": "NEXT-EFFORT-REVIEW-01",
+  "source_and_evidence_preservation": {
+    "all_match_after": true,
+    "all_match_before": true,
+    "historical_raw_saved_outputs": 128,
+    "immutable_files": 685,
+    "preexisting_user_modified_proposal_unchanged": true,
+    "prior_code_source_files": 324,
+    "prior_consulted_inputs": 29,
+    "prior_index_content_preserved_exactly": true,
+    "returned_B1b_files": 40,
+    "sealed_B1b_files": 146
+  },
+  "status": "complete_read_only_review_design_go_only",
+  "user_commands_needed_now": false,
+  "version": "effort-interface-review-receipt.v1"
+}

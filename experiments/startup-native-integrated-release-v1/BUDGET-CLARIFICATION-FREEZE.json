@@ -1,0 +1,5 @@
+{
+  "parent_sha256": "5f244802f61684c20b85d55e73e1ffb41b97d3828edd1baacdf3cf8833584743",
+  "schema": "a3.authority-ownership.budget-clarification.v1",
+  "scope": "Bound the combined read-only proc observer across authority parent and all serial guardians with one inherited memfd ledger and per-process POSIX locks. Original total500000 reads/512MiB and64KiB per-file maxima remain; count attempts and reserve/refund bytes before syscalls. Science never inherits the ledger or control pipes. No cgroup, scheduler, storage-quota or allowance changes. Terminal science exit code must propagate separately from successful guardian cleanup; polling drains terminal frames after observed exit. Guardian census cadence0.2seconds; caller endpoints remain unchanged."
+}

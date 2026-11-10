@@ -1,0 +1,248 @@
+{
+  "activity": {
+    "confirmation_queries": 0,
+    "isolated_new_harness_only": true,
+    "jobs_submitted": 0,
+    "new_native_db_torch_provider_experiment_calls": 0,
+    "new_or_protected_query_value_access": 0,
+    "production_changes": 0,
+    "scientific_fits": 0
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "c5bd66bb41541bb33b3899a046e467a4a5222581b448781873b3621d2a070168",
+    "research/fannagent-exact-topk-v1-design-2026-10-25.md": "e63da47adc1446466c31fe5d829fa7ea4380a62fe264e777b0c55180fb58f96f",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "6e37b4e5b0ba0510df9b94c05de6362e589485bc803d7c8449e1cca3405ef488",
+    "trials/torch-reviews-exact-topk-v1/COMMANDS.txt": "771c432db43e240d9517af77af2e9feed3f0ff2f2b3e574772e5e58958424129",
+    "trials/torch-reviews-exact-topk-v1/local-checks/documentation-checks.json": "606b702e769bd0ad2400171f0143ffffa889cd5ce145ef81d356fd374616f06d",
+    "trials/torch-reviews-exact-topk-v1/local-checks/format.txt": "04eb0d6e6734823dcd2b2b704729e976f683df7a8f334da7216520ef1cb319bf",
+    "trials/torch-reviews-exact-topk-v1/local-checks/lint.txt": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "trials/torch-reviews-exact-topk-v1/local-checks/package-build.txt": "aa9ed7b579639857e07638e2841ad750f7ff3cf0121a8530c8d17ca16b1b5720",
+    "trials/torch-reviews-exact-topk-v1/local-checks/package-integrity.json": "b116906f55ed70e9ae96a5082dbaef855795f01bfcbf3f0ac42627d7d5588d50",
+    "trials/torch-reviews-exact-topk-v1/local-checks/preservation-before.json": "6058dbb21434bdb520a2d00e3e640860f0a8aee0a8a11daf367992cc2e2375b9",
+    "trials/torch-reviews-exact-topk-v1/local-checks/sealed-controller-verify.txt": "399836e498821bbb2c2fd8f9017c16d2793e6f9e14774bb6718608076570c239",
+    "trials/torch-reviews-exact-topk-v1/local-checks/tests-sealed.txt": "95bbb9a24d882399be633977c1327fdedf8427af2000842914dfe2664c57b30e",
+    "trials/torch-reviews-exact-topk-v1/local-checks/tests-source-initial.txt": "26c845ca875e88d0b90f8a9f1bb5ecb27381a87e3fb49b7b13af781df2016c20",
+    "trials/torch-reviews-exact-topk-v1/local-checks/tests-source.txt": "3c60b27d94e3e47c1d95bbf7195f0fac2466887511f148fcaa8c370a36c575fd",
+    "trials/torch-reviews-exact-topk-v1/torch-exact-topk-v1.tar.gz": "01c6d272ac5de658e72c7c8e0bd5c2038a44fa5b5181d83039bf16c79f47b65d",
+    "trials/torch-reviews-exact-topk-v1/torch-exact-topk-v1.tar.gz.sha256": "11839c7db47e1015488382463850157b3946b00e8f616f5d40c07bfb9cc0746b",
+    "trials/torch-reviews-exact-topk-v1/torch-exact-topk-v1/manifest.json": "0124abaa1c472f19e0f778c633f7a4c1cc42f69430f83964a4a14cb90a56f55e",
+    "trials/torch-reviews-exact-topk-v1/transfer.sh": "9daca3c7f73cc09f47ac07a324b18238307f30430f9e5b02457919e541662038"
+  },
+  "authorization": "User requested freeze, isolated implementation, local correctness checks and Torch preparation with unchanged data/graph/module and A/A controls. No remote experiment dispatched by Codex.",
+  "design": {
+    "copied_byte_identical": true,
+    "frozen_before_implementation": true,
+    "path": "research/fannagent-exact-topk-v1-design-2026-10-25.md",
+    "sha256": "e63da47adc1446466c31fe5d829fa7ea4380a62fe264e777b0c55180fb58f96f"
+  },
+  "documentation_checks": "trials/torch-reviews-exact-topk-v1/local-checks/documentation-checks.json",
+  "existing_documents_after_sha256": {
+    "agent/docs/experiments/README.md": "c5bd66bb41541bb33b3899a046e467a4a5222581b448781873b3621d2a070168",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "6e37b4e5b0ba0510df9b94c05de6362e589485bc803d7c8449e1cca3405ef488"
+  },
+  "gate_status": {
+    "B1c_proceed": false,
+    "G0_B2b_local_readiness": "pass_scoped_local_checks_only",
+    "M1": false,
+    "M2": false,
+    "M3": false,
+    "aa": "not_assessed",
+    "activation_or_adoption_qualified": false,
+    "economic_frontier": "not_assessed",
+    "native_catalog_plan_semantic_qualification": "not_assessed",
+    "original_execution_retained": true,
+    "quality": "not_assessed",
+    "router_fitted": false
+  },
+  "handoff": {
+    "commands": "trials/torch-reviews-exact-topk-v1/COMMANDS.txt",
+    "controller": "xt_control.py",
+    "remote_package": "/home/dar579/torch-exact-topk-v1",
+    "transfer_helper": "trials/torch-reviews-exact-topk-v1/transfer.sh",
+    "unknown_or_failed_dispatch_retry_allowed": false,
+    "user_next": "Mac upload; wait for UPLOAD VERIFIED; once-only Torch checksum/extract/submit; status; collect; Mac download/sealed local replay"
+  },
+  "id": "NEXT-EXACT-TOPK-01",
+  "local_checks": {
+    "failed_job_terminal_accounting_collect": "passed",
+    "full_mock_backend_calls": 40230,
+    "full_mock_cases": 600,
+    "full_mock_temporal_blocks": 2,
+    "initial_source_check_history": "One duplicate catalog-row rejection check failed initially; validator tightened; initial log preserved; all33 final checks pass from source and sealed copies.",
+    "lint_and_format": "passed",
+    "mock_early_quality_gate_injection_calls": 1830,
+    "mock_negative_economics_collect_and_replay": "passed",
+    "mock_plan_packets_complete": 12012,
+    "mocks_only": true,
+    "native_calls_performed": 0,
+    "preserved_initial_log": "trials/torch-reviews-exact-topk-v1/local-checks/tests-source-initial.txt",
+    "sealed_tests": {
+      "failed_final": 0,
+      "log": "trials/torch-reviews-exact-topk-v1/local-checks/tests-sealed.txt",
+      "passed": 33
+    },
+    "source_and_shell_syntax": "passed",
+    "source_tests": {
+      "failed_final": 0,
+      "log": "trials/torch-reviews-exact-topk-v1/local-checks/tests-source.txt",
+      "passed": 33
+    }
+  },
+  "package": {
+    "all_archive_bytes_match_package": true,
+    "archive_bytes": 14841564,
+    "archive_members": 154,
+    "archive_sha256": "01c6d272ac5de658e72c7c8e0bd5c2038a44fa5b5181d83039bf16c79f47b65d",
+    "design_bytes_preserved": true,
+    "manifest_files": 153,
+    "manifest_sha256": "0124abaa1c472f19e0f778c633f7a4c1cc42f69430f83964a4a14cb90a56f55e",
+    "new_native_db_torch_provider_calls": 0,
+    "prior_B2a_349_sources_preserved": true,
+    "prior_immutable_files_preserved": 912,
+    "shell_syntax": "passed",
+    "source_and_sealed_bytes_match": true,
+    "status": "passed",
+    "transport_mock_checks": [
+      {
+        "jobs_submitted": 0,
+        "mock_failure": "authentication",
+        "real_network_calls": 0,
+        "returncode": 1,
+        "success_printed": false
+      },
+      {
+        "jobs_submitted": 0,
+        "mock_failure": "transfer",
+        "real_network_calls": 0,
+        "returncode": 12,
+        "success_printed": false
+      },
+      {
+        "jobs_submitted": 0,
+        "mock_failure": "verification",
+        "real_network_calls": 0,
+        "returncode": 14,
+        "success_printed": false
+      },
+      {
+        "jobs_submitted": 0,
+        "mock_failure": "none",
+        "real_network_calls": 0,
+        "returncode": 0,
+        "success_printed": true
+      }
+    ]
+  },
+  "phase": "B2b",
+  "prepared_at_utc": "2026-10-26T03:13:41.408357+00:00",
+  "preservation": {
+    "adopted_code_unchanged": true,
+    "all_previous_contracts_sources_packages_returns_receipts_unchanged": true,
+    "all_prior_hashes_preserved": true,
+    "preexisting_user_proposal_edit_preserved": true,
+    "prior_B2a_source_files": 349,
+    "prior_immutable_files": 912
+  },
+  "protocol": {
+    "b1b_manifest_sha256": "35a09d4e2fd71598a023f6479e418d9e8bc90434d764a53564c60a5436b69c1f",
+    "b1b_receipt_sha256": "df715ce4beea66e6d96b17e14807eb4a75d5504e3b83a8af66118e3248f2266a",
+    "cells": [
+      "native640",
+      "exact10"
+    ],
+    "counts": {
+      "aa_interval_checks": 16,
+      "allocations": 1,
+      "cases": 600,
+      "conditioning_searches_per_block": 4800,
+      "discarded_warmups_per_block": 4800,
+      "maximum_live_readers": 5,
+      "qualification_searches": 30,
+      "quality_stop_searches": 1830,
+      "reader_admissions_quality_stop": 10,
+      "reader_admissions_total": 14,
+      "reference_searches": 1800,
+      "retained_executions_per_block": 9600,
+      "searches_total": 40230,
+      "slots_per_block": 4800,
+      "temporal_blocks": 2,
+      "timing_searches_per_block": 19200,
+      "vectors": 200
+    },
+    "criteria": {
+      "aa_absolute_ms": 0.1,
+      "aa_ratio": 1.02,
+      "benefit_endpoints": 8,
+      "benefit_family_alpha": 0.05,
+      "benefit_upper_quantile": 0.99375,
+      "bootstrap_samples": 10000,
+      "bootstrap_seed": 20261019,
+      "development_recall_reserve": 0.0025,
+      "final_recall_margin_diagnostic_only": 0.005,
+      "maximum_ratio_for_benefit": 0.98,
+      "minimum_reference_recall": 0.95,
+      "minimum_saving_ms": 0.1
+    },
+    "design_sha256": "e63da47adc1446466c31fe5d829fa7ea4380a62fe264e777b0c55180fb58f96f",
+    "maximum_seconds": 6600,
+    "measurement_scope": {
+      "activation_qualification": false,
+      "cold_index_claim": false,
+      "independent_confirmation": false,
+      "primary_timer": "Full outer guarded ordinary-native warm query; both arms prevalidated identically",
+      "production_default_claim": false,
+      "router_fitting_allowed": false,
+      "separately_charged": "restore/import/snapshot/request admission, reader startup, qualification/references, conditioning, warmups, audits, cleanup",
+      "shared_state": "One private restore/snapshot; fixed owned reader per arm/label across two temporal blocks"
+    },
+    "observer_sql_maximum": 40000,
+    "operations": {
+      "conditioning": 9600,
+      "measurement": 19200,
+      "qualification_exact": 6,
+      "qualification_exact10": 12,
+      "qualification_native640": 12,
+      "reference_exact": 600,
+      "reference_exact10": 600,
+      "reference_native640": 600,
+      "warmup": 9600
+    },
+    "quality_operations": {
+      "qualification_exact": 6,
+      "qualification_exact10": 12,
+      "qualification_native640": 12,
+      "reference_exact": 600,
+      "reference_exact10": 600,
+      "reference_native640": 600
+    },
+    "reader_modes": [
+      "exact10",
+      "native640"
+    ],
+    "resources": {
+      "cpus": 4,
+      "memory_gib": 32,
+      "wall_hours": 2
+    },
+    "review_receipt_sha256": "ae0eb2876c9886bb2e37ccdd463afdd743863e9c60caa470035d6d2049ed985c",
+    "source_manifest_sha256": "082b167507e25009bdb25ea613950cd434ef38608fbcbc6194af19c363d0f6dc",
+    "version": "exact-topk.v1"
+  },
+  "source_files_sha256": {
+    "agent/experiments/exact-topk-v1/README.md": "d964e6d7ffe436546cf403e457b92789418b64eadb836d51c09ddd2625a2a266",
+    "agent/experiments/exact-topk-v1/experiment.py": "36cfc8c828bce6c4411f9bde2a7dfd5762d6db3c2751c0953b396e9efe66a964",
+    "agent/experiments/exact-topk-v1/test_experiment.py": "eb8329868d7c05c745663258a91d94843b9a1ae74f76d6a5ba23ed3c0dae48dc",
+    "agent/experiments/exact-topk-v1/xt_common.py": "a04cc35c92815623fb3f28b018440c2213e009cb2dfd7853a9954a1956d75f47",
+    "agent/experiments/exact-topk-v1/xt_control.py": "a92b693851f0d10b2218be3384d63d72d38c866be9222e12ee8cee90e7cc118e",
+    "agent/experiments/exact-topk-v1/xt_interface.py": "ea865a9ed5d0275710457dafc7852fef1366fd9d60b6f288c0c1229cfbb13a87",
+    "agent/experiments/exact-topk-v1/xt_job.py": "4135e0cbb8a2a254a465e72b6fec81ad232e4e50b3142bdebfc441efd0de9988",
+    "agent/experiments/exact-topk-v1/xt_measure.py": "5704a3bac47bb150a63f4a90f9cebb82482d84c4008e430cb973dbaecab55c2b",
+    "agent/experiments/exact-topk-v1/xt_metadata.py": "79182fb682ac4e91f3ff45ea658d2533f462f9b887cdaeccb6cc002a12f7653d",
+    "agent/experiments/exact-topk-v1/xt_quality.py": "3fa7246464012348ba4a50a452356c31ef26e086a552293b474b3e69fb2ba5df",
+    "agent/experiments/exact-topk-v1/xt_report.py": "f259bb5b5d4f1bc412f35f0400fc25550f0ccb748ffe0c2f6ab1db8b39051552",
+    "agent/experiments/exact-topk-v1/xt_runtime.py": "f9818b97bb09a9eed7a412cb13992360a97587fcfa8e331c994940fe6b07de4d",
+    "agent/experiments/exact-topk-v1/xt_stats.py": "60a0fea456a8fa90d54ec25e5aa25f598e3dc230e6a0ab4d88a5f74fc18f8ec9"
+  },
+  "status": "implemented_locally_checked_sealed_waiting_user_torch",
+  "version": "exact-topk-v1-implementation.v1"
+}

@@ -1,0 +1,194 @@
+{
+  "G2_retained_execution": "original",
+  "G3_final_family_gate": "not_assessed",
+  "M1": false,
+  "M2": false,
+  "M3": false,
+  "analysis_date": "2026-10-24",
+  "analysis_timezone": "America/New_York",
+  "artifacts_sha256": {
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-1.log": "2568477163b82248aaee4c8076592706773630bcbda05c7ec9e51f652ae9fdf1",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-1.py": "4ad5c355898d09816178e0ffdc8ae115152eca2b145125d7ae888db92031c308",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-2.log": "5a412d9f81cffd66062e25ae126d7dfa8d8b697a9538b96ae24b974d1485162a",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-2.py": "6f0cddcf13405cd381f4a1b6f4d57e6f5439d68c797db6730bdaf73149f01fba",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-3.log": "9268a3ce31169a77e446971a92be7c756058caa3f9638a512b51b5029b4674db",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-3.py": "31fe92403b58616643d9819bb7fe3d1212ea231ac29a2d26f99396675bedc228",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-4.log": "bd3a62bb287393143dcc7f171cb4b400aa1728b4cc1d0df1cc5c918f26682c9a",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/attempt-4.py": "7e3fe86d1bdad67b45bb7b4f2c356119c4727ab533a26caa4ef07c3beec138a1",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/audit-plan.json": "51f257ab21a74c7e8caf7d66eb62c39dc8309c52844d98fc27a8435f131af240",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/audit.json": "6da2bd9bf1d50d3af11f2d6faf5152fd945d39a696feee4910ef7dc39c35dc84",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/audit.log": "ee736582824ebb4ccc45b8c94375c66a49a530ededa078072921768b3b03b234",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/audit.py": "278132a6737c64cf9de2ffa76b5010af34dd6f598fecc17ade5a16a71a0b5f75",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/contract.json": "e5570d5023bab53b37046d206ceec86c04aadfe298d8c465c863fff7bc5a31cf",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/coverage-summary.json": "94c4b7791148f1ab38ba853d6ab45f98e9e4ca587922df64b4a4cc60752f788c",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/coverage.csv": "a91493412203f96462647bdd158aebab2fe9a8f7343fab0d7a2a7ab93a970228",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/feature-diagnostics.json": "b5871289f39587b75abcadee32e52cff9727a491f5c2b11932ab6e873a49456e",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/feature_diagnostics.py": "ebacbcdeac453d71947664a61576950c814092cb9a4c74dc202ce33c4b5081af",
+    "research/fannagent-p3a-evidence-audit-2026-10-24/summarize.py": "41255299d803e104641525efd2a161f2b0379aa9047a5e4dceedebe0743d69bb"
+  },
+  "audit_source_is_data_validation_only": true,
+  "canonical_evaluation_opened": false,
+  "confirmation_query_values_opened": false,
+  "contract_sha256": "e5570d5023bab53b37046d206ceec86c04aadfe298d8c465c863fff7bc5a31cf",
+  "coverage_gate": "pass_for_restricted_static23_progress34_development_modeling",
+  "current_light19_coverage": {
+    "full_fixed_stop_cost_matrix_complete": false,
+    "missing_actual_stop_cells": 3621,
+    "old_binary_light19_observed_stop_cells": 2349,
+    "required_reachable_grid_cells": 4695,
+    "unique_observed_stop_cells": 1074
+  },
+  "decision": {
+    "can_proceed_to_offline_modeling": true,
+    "final_family_or_policy_selection_performed": false,
+    "next_id": "NEXT-MODEL-01",
+    "next_phase": "P3b",
+    "next_status": "proposed_not_implemented_not_run",
+    "restriction": "Freeze a separate finite grouped development comparison on static23/progress34, eight ordinal checkpoints [1,2,4,8,16,32,64,128] plus continue, current e7dc binary/physical index; keep retained original execution as eventual timing target. Compare flexible versus deployable shallow decisions on matched information. Treat acquisition costs only as proxies.",
+    "targeted_measurements_if_scope_expands": [
+      "Current-binary light19: 3,621 reachable grid choices lack direct observed stop proofs; a complete compatible light19 cost matrix is also absent.",
+      "Arbitrary off-grid decisions: 90,411 observed states per static/progress profile have no actual stop label.",
+      "New policy/runtime/getter or complete serving latency: require prospective native proofs and measured full costs after a candidate/mechanism is justified."
+    ],
+    "targeted_measurements_required_now_for_this_scope": false,
+    "user_torch_commands_needed_now": false
+  },
+  "exposure": {
+    "all_200_previously_exposed": true,
+    "all_filters_share_vector_and_fold": true,
+    "cases": 600,
+    "excluded_counts": {
+      "evaluation": 60,
+      "reserved": 37
+    },
+    "float32_vector_inventory_sha256": "ba667eeb5eadf0af5232327174f199288343d50d7b13d3b13449bda316fb77e6",
+    "fold_vectors": {
+      "0": 40,
+      "1": 40,
+      "2": 40,
+      "3": 40,
+      "4": 40
+    },
+    "group_inventory_sha256": "1a67df54b4d60a3f671ffc8b828c1e99b4904128de7d19a13840386fd22ac3db",
+    "group_vector_binding_sha256": "8edb4b7f3e778609b4ce16837e1610534786a231c8ddb7ffc28834c5e5dba209",
+    "independent_vectors": 200,
+    "old100_are_subset_not_new_independent_data": true,
+    "protected_query_values_opened": false,
+    "reserved_and_unexecuted_confirmation_hash_sets_disjoint": true,
+    "role_vectors": {
+      "additional_learning": 60,
+      "calibration": 40,
+      "original_learning": 100
+    }
+  },
+  "feature_alias_diagnostics": {
+    "counts": {
+      "different_complete_recall_preservation_labels": 359,
+      "filtered_vector_pairs": 200,
+      "identical_light19_filtered_trajectory_pairs": 200,
+      "paired_measured_grid_states": 1565,
+      "vectors_with_any_different_complete_recall_preservation_label": 139
+    },
+    "interpretation": "Light19 aliases the two filtered trajectories. Static23/progress34 have validated actual query_predicate_threshold as qualified runtime input; learner must not substitute group/query ID or evaluator stratum. Composite routing remains a separate actual-predicate boundary. Dynamic progress observations are recorded but predictive value is untested.",
+    "new_fits_simulations_or_measurements": 0,
+    "target_definition": "Complete top-10 with recall at least this query native recall; descriptive per-state label, not final policy acceptance.",
+    "version": "p3a-feature-alias-diagnostics.v1"
+  },
+  "id": "NEXT-INFO-01",
+  "input_hash_inventory": "research/fannagent-p3a-evidence-audit-2026-10-24/audit.json#source_input_hashes",
+  "new_database_calls": 0,
+  "new_fits": 0,
+  "new_policy_search_or_simulation": 0,
+  "new_provider_calls": 0,
+  "new_torch_allocations": 0,
+  "original_selective_episode_resumed": false,
+  "phase": "P3a",
+  "previous_experiment_verdicts_changed": false,
+  "production_or_experiment_source_changes": false,
+  "recorded_utc": "2026-10-24T23:02:50.133293+00:00",
+  "resource_accounting": {
+    "contract_local_memory_gib": 4,
+    "contract_local_wall_minutes": 60,
+    "contract_source_read_gib": 16,
+    "deviation": "Four failed data-format assertions were corrected with all versions/logs preserved. Successful primary pass read 9.178 GiB; cumulative I/O over decoder iterations was not metered, so aggregate compliance with the self-imposed 16 GiB read ceiling is not established. No fitting, source-evidence changes, provider/database/Torch calls or scientific threshold changes occurred.",
+    "primary_decoder_validation_attempts": 5,
+    "scientific_experiments": 0,
+    "successful_primary_pass_peak_rss_bytes": 1330429952,
+    "successful_primary_pass_seconds": 43.433757290942594,
+    "successful_primary_pass_source_bytes_read": 9854983253
+  },
+  "scientific_limits": [
+    "All 200 vectors have prior development exposure; folds are not new independent validation.",
+    "The 100-vector older campaign is a subset and uses a different module/profile/registry. Matching outputs/prefixes do not license timing pooling.",
+    "Fixed-stop acquisition timings are proxies, not actual latency of a learned tree/composite session.",
+    "Light19 projection from static traces establishes aligned observations but does not supply all unexecuted light19 interventions/costs.",
+    "Invalid measured stops remain explicit negative outcomes, unreachable grid positions are not imputed, outside-grid outcomes stay unknown."
+  ],
+  "source_preservation": {
+    "before_after_sha256_identical": true,
+    "checked_files": 620
+  },
+  "source_runtime_identities": {
+    "feature-0": {
+      "physical_index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+      "runtime": {
+        "feature_registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+        "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+        "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+        "package_manifest_sha256": "3a50e8296bdba9dbb8c018ef742af2b2e868ae80f85172c876511a015fd5838c",
+        "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3"
+      }
+    },
+    "feature-1": {
+      "physical_index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+      "runtime": {
+        "feature_registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+        "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+        "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+        "package_manifest_sha256": "3a50e8296bdba9dbb8c018ef742af2b2e868ae80f85172c876511a015fd5838c",
+        "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3"
+      }
+    },
+    "four_condition": {
+      "physical_index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+      "runtime": {
+        "feature_registry_hash": "74a882098cd5c8e5fd2bcb21d8f672e4587596ca739459aaffc1baad454d7899",
+        "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+        "module_sha256": "9365e5f6dae724fec95f5743c00c0dfda1356e528c7be2d2b91a7d35709b3ff8",
+        "package_manifest_sha256": "6a76b56b91aa138a28c48d5b4868742766de843b4038d034d4f8304b84eacc80",
+        "query_file_sha256": "cbd20c30eb999e0c3cd5b88582207d7181db5013ac89c95af54a46d61d996581",
+        "runtime_profile_hash": "69f0956672a1157e0dde44cbecbeefc4fdcf52ea2f14e09b43018f9320253b61"
+      }
+    }
+  },
+  "status": "verified_coverage_gate_pass_restricted_modeling_supported",
+  "supported_outcomes": {
+    "progress34": {
+      "actual_stop_labels": 4695,
+      "all_features_available": 4695,
+      "both_fixed_stop_proxies_positive": 4478,
+      "cases": 4800,
+      "positive_activation_proxy": 4520,
+      "positive_reuse_proxy": 4576,
+      "reached": 4695,
+      "recall_below_native": 2108,
+      "recall_not_below_native": 2587,
+      "unreachable_search_finished": 105,
+      "valid_top10": 4665
+    },
+    "static23": {
+      "actual_stop_labels": 4695,
+      "all_features_available": 4695,
+      "both_fixed_stop_proxies_positive": 4502,
+      "cases": 4800,
+      "positive_activation_proxy": 4532,
+      "positive_reuse_proxy": 4587,
+      "reached": 4695,
+      "recall_below_native": 2108,
+      "recall_not_below_native": 2587,
+      "unreachable_search_finished": 105,
+      "valid_top10": 4665
+    }
+  },
+  "version": "p3a-evidence-audit-v1.receipt"
+}

@@ -1,0 +1,154 @@
+{
+  "activity_by_codex": {
+    "native_db_or_ann_experiments": 0,
+    "new_fits": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "ssh_calls": 0,
+    "torch_submissions": 0
+  },
+  "adoption_authorized": false,
+  "allocation_accounting": {
+    "additional_job_resources": {
+      "cpus": 4,
+      "memory_gib": 32,
+      "searches_max": 16242,
+      "wall_seconds": 10800
+    },
+    "automatic_retry": false,
+    "original_attempts_spent": 1,
+    "original_elapsed_seconds": 4,
+    "original_native_searches": 0,
+    "proposed_additional_allocations": 1,
+    "user_requests_new_allocation_by": "Executing explicitly labelled corrected submit command; preparation and upload submit nothing"
+  },
+  "artifacts_sha256": {
+    "agent/docs/experiments/README.md": "be8589fe6faccafa58312aa3f97c15bf4190bcb9c94d9da20f4330a919c2d180",
+    "research/fannagent-partial-calibration-v1-launch-fix-2026-10-27.md": "fe4a43efb7b93d8b358dc163c3d30eb1f2dab1554829333538a8c0773ad67884",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "7449082f72b3a2bba015fdaf8a2c76b1b0968a0fd0c6c07e29e6c3dad8cb06a9",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/COMMANDS.txt": "831575c6be8d105e31b9214100bad5fd859993c5c1cac0472471276492df4d40",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/failed-archive-verification.json": "c65f5bb798c996c5891c6e0f0a5259e2d5bf6672fd4d9e733a176828a2b3e865",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/failed-raw-preservation.json": "16a3342213037efab26ebc8f3304efad1acb07c88b022b0a47b59bda75490485",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/local-checks-sealed.json": "946457f74095f24baf9288c06180aa1122826607021770fbea8f772978078d86",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/local-checks-source.json": "1caaccc5015143ddc5bac0af1d7017a2fa9001c3bbc6658e46c64ce128b94fd2",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/preservation-after.json": "326e3fe42c11b1d1adaebe8e3497ccc895906a2b857d5fe91e0618ed212e0b8a",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/preservation-before.json": "917ac35b0f5243c2c322b3165f3cb867ed82a8f3705a79623e05b117554979b2",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/release-integrity.json": "b69f19e8bfeb38aa0c91afb1dd5527d42df2f5dc24132b63fe5fc61e484e41cb",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/static-checks.json": "cb0cb4b9a4e5804715f2d1de589bd76bc8c047b387719b648b5909c6a4bf9854",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/torch-partial-calibration-v1-launch-fix.tar.gz": "9ab287b9079bf2a8f75c857540528765c13131ade4f1ed1387c7e0eaaa1bc25f",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/torch-partial-calibration-v1-launch-fix.tar.gz.sha256": "d497fe5a408b8dbf71c06f6b0f73ffaf3e183f3884eae39c2f1d6a031e6725e6",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/torch-partial-calibration-v1-launch-fix/manifest.json": "d3ead68818508496a79427fcc624e6c00bc2bf75cfbd553309a315f90627a7c6",
+    "trials/torch-reviews-partial-calibration-v1-launch-fix/transfer.sh": "05946c35374d58d668824738c32224a90e2830c6c4dcf2fe3a568e3719c4f989"
+  },
+  "b1c_deferred": true,
+  "b2d_verdict": "measurement_inconclusive",
+  "correction": [
+    "Record resolved absolute host Python in submission and pass it to batch/step",
+    "Check executable presence on compute node; actual host identity must match",
+    "Explicit SLURM_EXPORT_ENV=ALL and srun --export=ALL",
+    "Capture and validate host-launch.json",
+    "Separate package/campaign/reservation plus old seal/raw/binding/reservation guards"
+  ],
+  "date": "2026-10-27",
+  "diagnosis": {
+    "exact_failed_PATH_captured": false,
+    "launcher_defect": "bare executable and inherited restricted export at the sbatch/srun boundary",
+    "local_original_launcher_synthetic_reproduction": true,
+    "observed": "srun execve of bare python3 failed before the host wrapper"
+  },
+  "local_checks": {
+    "actual_shell_against_synthetic_srun": true,
+    "native_or_slurm_experiment": false,
+    "passed": true,
+    "sealed": 88,
+    "source": 88
+  },
+  "measurement_path_changed": false,
+  "native_gates_pending": [
+    "N0 restored source/data/catalog/graphs/module/resources/cores/required telemetry",
+    "N1 conformance/quality",
+    "N2 complete acquisition",
+    "N3 final integrity/source preservation/cleanup",
+    "N4 independent complete-raw all56 decision"
+  ],
+  "original_execution_retained": true,
+  "preservation": {
+    "changed": 0,
+    "original_failed_seal_and_binding_not_reset": true,
+    "prior_and_failed_files": 2500
+  },
+  "primary_sources": [
+    "https://slurm.schedmd.com/sbatch.html#OPT_export",
+    "https://slurm.schedmd.com/srun.html#OPT_export"
+  ],
+  "production_code_changed": false,
+  "protocol": "partial-calibration.v1.launch-fix",
+  "register": "NEXT-PARTIAL-CALIBRATION-01",
+  "release": {
+    "actual_launcher_matches_sealed_script": true,
+    "all_archive_bytes_match": true,
+    "archive_regular_members": 197,
+    "archive_sha256": "9ab287b9079bf2a8f75c857540528765c13131ade4f1ed1387c7e0eaaa1bc25f",
+    "frozen_anchor_byte_parity": true,
+    "manifest_files": 196,
+    "package_manifest_sha256": "d3ead68818508496a79427fcc624e6c00bc2bf75cfbd553309a315f90627a7c6",
+    "prior_and_failed_files_preserved": 2500,
+    "scientific_files_sha256": {
+      "CONTRACT.json": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+      "DESIGN.md": "dec43325d277d04b49c90f8f2adb634a4df1bec02c86bba992e3d7da57f2cec0",
+      "SCHEDULE.json": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+      "b2d-catalogs.json": "c1ee73e76dbee2dbc4ff2d0c0e0ca444f4fb48b29260697db20a78f296cbc939",
+      "b2d-references.jsonl": "2b98288882169291ef4f7858c42bddd9e222752d13eb876ba042904e57a6791d",
+      "baseline-results.json": "9980086c1a8bfa6585476454754765ab1d452c95a4a5586ed46ec3e9aa017dd9",
+      "eligibility.json": "eed0dc123868ee61c2ffbadbb066cd36db9e813ce8a7829ed18658f04b6b44d2",
+      "legacy_common.py": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+      "legacy_metadata.py": "fba262f11a173757f13e71741286449b0e136936f4adf245375e3069996faefc",
+      "origin-settings.json": "904a7b7042337257a38a9edd7796caa83b85e9f59af82ebd8d5ed5fee875ef8d",
+      "origin-source.json": "808b3493c20e1acfc68f5d85788d0266ad588ba749ef148e24d821f3a1cd3247",
+      "pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+      "pc_measure.py": "e3c4484f88fa23be8ebce76c267b7f63e7cd6f722d5bcd772a0c8cb428ed44a8",
+      "pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+      "pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+      "pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+      "pc_restore.py": "470c20a8d7bf47184600c3bccfcd551557bd36ec135bbd00b724ecf12e5e4c49",
+      "pc_results.py": "c45a6ae0a0809a1f52d4e8dc0988488629913ed1830e24047ac631c9c6270b03",
+      "pc_runtime.py": "7825d5d2a57a5ebf5f25d49e3e86f4a92f7ecae7b904cf2dfa510ff8b9dbaf48",
+      "pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+      "pc_stats.py": "57ec97fdaac47553bfa5655249004ef38df844277903409efe1d596839f6a2e7",
+      "pc_trace.py": "d26085ce72c55e64184f50a176904ac94723185ef8bcb3c62d7c8f1bdd852100",
+      "queries.jsonl": "394647462a3c7119e8759d8ba10490b2313b05b04dd7d45b6d73b853246e5547",
+      "quota_base.py": "8790f4f8b0ee813efe9d3ee6d135929e55bc1cd33b39a917d1b51d7c1509ffc4"
+    },
+    "shell_syntax": "pass",
+    "source_sealed_code_match": true,
+    "status": "pass"
+  },
+  "scientific_design_changed": false,
+  "scientific_protocol": "partial-calibration.v1",
+  "statistical_calculations_changed": false,
+  "status": "launch_correction_checked_sealed_native_pending",
+  "timezone": "America/New_York",
+  "treatment_speed_qualified": false,
+  "verified_failed_attempt": {
+    "allocation_spent": true,
+    "archive_files": 6,
+    "archive_sha256": "1385637e3657038dba52140fce58260dc74484bcb40847ace9a9714f372fb543",
+    "automatic_retry_authorized": false,
+    "calibration_verdict": false,
+    "campaign": "reviews-partial-calibration-v1-20261027T155119Z.6rd0lmkp",
+    "correction_scope": "absolute host interpreter plus explicit srun environment; unchanged scientific design",
+    "experiment_python_started": false,
+    "job": "21111616_0",
+    "native_searches": 0,
+    "original_package_manifest_sha256": "41b4e47890ee1134eabbd1836a628954e93ee91e7e7fafb29da63e4da68ae42a",
+    "raw_files_sha256": {
+      "analysis/failure-summary.json": "07e51e716a539efd5e955c522569e22837d8bdc259e887b0d5fd06c90c34019d",
+      "logs/block-0-21111616-0.log": "7e8a0e7d3a17abf2a8c137b3aa26cf15aacaea63bf9f59c56ca41a762d096466",
+      "protected-source-before.json": "dca9c7f53315b664618f8a37dffb55663ff88eb00dc5dce8fe675e34f76e30af",
+      "resource-preflight-login.json": "278f1b2f3b215fd17788a51e512b46cb15723d65d78303b43ff2cbb32318e187",
+      "scheduler-evidence.json": "deb40465760e31e5bd0118b96b3106e25695404c1d555f5259557dd50c78439a",
+      "submission.json": "eafb86b9c3c66b15f00ef5f726be6a704e172c902de20b95fc13c07688c998f9"
+    },
+    "status": "verified_pre_python_launch_failure"
+  }
+}

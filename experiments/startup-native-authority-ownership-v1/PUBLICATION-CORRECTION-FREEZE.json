@@ -1,0 +1,5 @@
+{
+  "correction": "Explicit before/after deadline checks for backend-owned journal publication. Late registration must close the owned pipe and hold; late terminal publication must retain the active handle and hold. No extension, new allowance or change to any original source/test. Preserve final-v1 results and exact snapshot; rerun new candidate.",
+  "parent_sha256": "5f244802f61684c20b85d55e73e1ffb41b97d3828edd1baacdf3cf8833584743",
+  "schema": "a3.backend.publication.freeze.v1"
+}

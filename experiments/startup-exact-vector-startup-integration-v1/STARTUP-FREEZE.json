@@ -1,0 +1,288 @@
+{
+  "ANN_searches": 0,
+  "Torch_commands": false,
+  "Torch_jobs": 0,
+  "all_spent_allowances": "closed; no retry, extension, resubmit or new entitlement",
+  "allowed_changed_files": [
+    "exact_codec.py",
+    "ev_startup.py",
+    "ev_report.py",
+    "si_verify.py",
+    "pc_common.py",
+    "experiment.py",
+    "test_fixtures.py",
+    "run_checks.py",
+    "README.md"
+  ],
+  "baseline_harness": "agent/experiments/startup-exact-vector-resource-lifecycle-v1",
+  "baseline_harness_sha256": {
+    "B2F-DESIGN.md": "dec43325d277d04b49c90f8f2adb634a4df1bec02c86bba992e3d7da57f2cec0",
+    "COMMANDS-template.txt": "b5159935cf68a54220e102caa918b1f94f8c0d276571fef0e6ceba68e506c5a2",
+    "CONTRACT.json": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+    "CORRECTION-DESIGN.json": "880700840f8cb12f7501fc7171f74c199815afb7d5b356e8f9a1d5369657e815",
+    "DESIGN.md": "6e7dc63adb305902c17e9604f3d7cf234b1c67faa531319f4bd848fbe1a4d48b",
+    "DRIVER-HOOKS.json": "71959233a92883e6e96b8016eef0d810a752a9cc84465a6e17ca63ebdbe0a530",
+    "DRIVER-REFERENCE.json": "707fc1fd7eb52a22e00535d9d06ad51c48a3a674620f8c145724e58f86edb409",
+    "IMAGE-REFERENCE.json": "3a200f39baaa10d0fd33150b4b2901a0116532e79225f3c92d36fb94f2e448f8",
+    "LAUNCHER.sh": "4deb6aacf271cb3d40432c7b662e4461f94b0532d130d965a5df87216b48bdf3",
+    "OFFLINE-AMENDMENT-1.json": "5ddb9f17712811be8011a1997b813a0bad9e26936131b6aa57102bf774767d31",
+    "OFFLINE-AMENDMENT-2.json": "aabeb4e1705b90804b708a844f2e5b9c7651c18f67cac34c4e11c2a72f30d62b",
+    "OFFLINE-FREEZE.json": "a390844b3c8e4093f759c251ed3ad737314accac24d9fdf323503698bf4c14f0",
+    "PATH-FIX-FREEZE.json": "fcc616e56485b98dee60de46df063f5d3d4f8e0e60aa14173771139dadc482ee",
+    "README.md": "96c9e191f50d2e6e9857f3f62aabd042b3d8d366316566747ddc851a5a7e5d3d",
+    "RESOURCE-AMENDMENT-1.json": "cb01d50a80ac563cde330ee4ac1905ce9c8536e8ee56a504f450e80b6e80315d",
+    "RESOURCE-CONTRACT.json": "a4120866fea72befae75e485bc05bc7265314eb64b85839e5436e4c480339b90",
+    "RESOURCE-DESIGN.md": "fbe4ffbf95f983018ed112b778af637c39ff3fe807ac17176d84bbc66fbb5fc0",
+    "RESOURCE-FREEZE.json": "1276241332fffd1fbd76b7c8fc67fddf9ea47977a6372fca6b5d5c4e9a67c042",
+    "SCHEDULE.json": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+    "a3/exact_vector.py": "159204cb4cd164dc147789a4764abf58cc7be586e0100da01476b862212feb0e",
+    "a3/integration.py": "714262c2bb251a59bc322eebc259882953132588a9d26ff01a68f921ce3a70de",
+    "a3/run_checks.py": "e6e41b618347c0df25a1e0def288fbb42a515dd70d1fe1879d9fd59179a6467c",
+    "a3/test_exact_vector.py": "0fe11951f98f37d1c3107eaf83d86a52f726f3e97b96943d1924db5259b314d5",
+    "a3/test_integration.py": "262ae053d4e8c1077c27868346337eecdb5870f7ce420036e3da24c35627b57d",
+    "ev_cleanup.py": "b65b25ea504bd839b971b9ea287e629ffa4a3a87cd02ee51b2b35c251a52c002",
+    "ev_host.py": "aa6d16b5a8c6ae044e12668e8bd9c654525d43c1d2139ec9c25b1006b454f63e",
+    "ev_metadata.py": "172089021394ac2c3d8bcf755517ff04183b3211668816107e1c7d18f37f4c4a",
+    "ev_report.py": "bdce0d65269e4191135bbfe1b1b15dd12b212953169badda8fad24c355776ec8",
+    "ev_startup.py": "67b8201c16882a513efaf04d81ef3a475c7c2210e33807adf09f6a9bb242d91e",
+    "experiment.py": "a00dc9fbb2ea502772fe39d07ed89b060c0e55ac8334ab6eeab92d47a95e2331",
+    "identity_repair.py": "424f3bd8483926f4a9fd8338b18e587164d48e524815942fb870bd905b27cce0",
+    "legacy_common.py": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+    "legacy_metadata.py": "fba262f11a173757f13e71741286449b0e136936f4adf245375e3069996faefc",
+    "origin-settings.json": "904a7b7042337257a38a9edd7796caa83b85e9f59af82ebd8d5ed5fee875ef8d",
+    "pc_common.py": "9965c3da4d47688f017f7e523163204c86e1e1d645b71df6ba4f2cb8d1e63451",
+    "pc_control.py": "bca748499a7e2422b782f8865f22fadb6d87d98c85583cb8073e9ee31f66461b",
+    "pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+    "pc_job.py": "d8d0fa853a585593763c4ccce154bf20ebf8a8e1045b0de58fa1da0f31bd508d",
+    "pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+    "pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+    "pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+    "pc_restore.py": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+    "pc_results.py": "7bdcf2071596b95516e061c8ab013fe93782e07e7af208224bf41d03ba4e8707",
+    "pc_runtime.py": "cdf8f2c49ddae4733a4bd823dbe291738a5be73ecba7fd5c45ab1c7dfbc58d6b",
+    "pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+    "pc_snapshot.py": "15d652df13c17da5c32b5bc50004f9e53d6654db8a6aaff37b698d2f957e0c8f",
+    "pc_trace.py": "e53006a6062f0c9b15706565974fe7850756e0bf1319448f203e98d091e0d0e4",
+    "quota_base.py": "8790f4f8b0ee813efe9d3ee6d135929e55bc1cd33b39a917d1b51d7c1509ffc4",
+    "run_checks.py": "a326652f638749febc08a3ee5dbacccc89f64c0777030de72888ea7f70e7c1df",
+    "si_verify.py": "edfbd7b325b2bad22c1ae0f39fd1bc40d3ed7c7d780d7e03d35acad0a2507385",
+    "sr_host.py": "67d809083f9fd43b6ba5551eef3de20b977c1eddfa1f50c398d82c210cc94561",
+    "sr_interface.py": "1599c72c5848ea346d4d9eed8cabd50e8a745ca5c1e1b9139ec4fc7b42f9b0e0",
+    "sr_memory.py": "627c72e7cdabc3ee0fb9860844c3bf15e635258d864d6de214a00f21c4524661",
+    "sr_report.py": "0cd11d3ee7f5534b6205622f7b06f3e4db722e2c33f72ae6b7f9aa40a392f64d",
+    "sr_sampler.py": "92b6af20f3f02e06641b5f5b071ec7b330723f70066a851b3712d1366d56425b",
+    "test_fixtures.py": "718b30e9dc0535d23b3ed25b6572f566bc3f17450be5e4f69390fc1b30502238",
+    "test_host_resource.py": "da3d040822e1570040af3323e33edc6b4623587e88e84e7e92bb7f3c92c69dbf",
+    "test_lifecycle.py": "8c2da7cceb5b27fbc3282e5c73dab499f7d0f6f1ddae13304e21fbfb5119a6a3",
+    "test_memory.py": "470124377a93c0ef55e459a303d9fd8c38951917a863d32a7bdadc35616b5718",
+    "test_resource.py": "6e72cab71ada2b343e5b4f99c292c018f72194be73cd508f89fa997c5b1b0746"
+  },
+  "exact_references": [
+    "Pinned SIF SHA7cbaab49..., OCI configEA708..., every layer diff_id and10selected actual SIF files verified statically. Formatter module matches approved local2.5.3source exactly.",
+    "Local actual provenance must equal existing DRIVER-REFERENCE; target actual provenance must equal full IMAGE-REFERENCE/CPython3.12.15 and target formatter. No wildcard or fallback between profiles.",
+    "Target-positive reference-data tests and real local negative target gate execute before restore/SQL. Static matches are not exact-image execution qualification. Docker socket read denied locally; no container or target code executed."
+  ],
+  "exact_searches": 0,
+  "frozen_at_utc": "2026-11-01T04:44:04.364280+00:00",
+  "full_B2f_released": false,
+  "implementation_not_started": true,
+  "local_validation": [
+    "Preserve/run142harness cases,56original A3 cases and38memory-component cases, plus actual adaptive runtime/producer/cache/rollback/metadata/cancellation/replay/source/target negatives.",
+    "At most64synthetic snapshot rows; native/unknown spec rejected before connection.200admission-only requests,10readers/max6,one snapshot/four full verification scans remain mocked original counts.",
+    "Original and adaptive compact/fallback/parity paths, per-row encode-before-next transport, target/local distinction, stale source/full-reseal/old-proof negatives.",
+    "Source and independent code-snapshot suites; all real connection/process/network calls blocked. Static source/target/manifest/limits/prior-file preservation audit."
+  ],
+  "memory_component": "agent/experiments/startup-exact-vector-memory-remedy-v1",
+  "memory_source_sha256": {
+    "FORMATTER-AMENDMENT.json": "f50a6864a4984f500dba2d47cf15039c4419bfe009b7eb1b9a8a3214e68da199",
+    "MEMORY-FREEZE.json": "2f7107f50b6661d5e5c53318c236e94897387807f87ebab53e123a4a415bfbd7",
+    "README.md": "755fa7f0d8df4979d6bfd14c7847b034d1a37fd4dd677e2ee0801dc5b1e608f4",
+    "baseline/exact_vector.py": "159204cb4cd164dc147789a4764abf58cc7be586e0100da01476b862212feb0e",
+    "baseline/integration.py": "714262c2bb251a59bc322eebc259882953132588a9d26ff01a68f921ce3a70de",
+    "baseline/run_checks.py": "e6e41b618347c0df25a1e0def288fbb42a515dd70d1fe1879d9fd59179a6467c",
+    "baseline/test_exact_vector.py": "0fe11951f98f37d1c3107eaf83d86a52f726f3e97b96943d1924db5259b314d5",
+    "baseline/test_integration.py": "262ae053d4e8c1077c27868346337eecdb5870f7ce420036e3da24c35627b57d",
+    "exact_codec.py": "af835f867892ae979b6c08e0a58efcfa3c12093506e17a9b99df1daa4504f57d",
+    "fixture_adapter.py": "d476b07cc8f3b1c4328fc9381aaf7a738ce6374e1ef393c3e6749d118acfd37c",
+    "run_checks.py": "916fc61dfc347b9910815ea2df82782b8998a03f18d19fc9e2520efe3a3fa48b",
+    "test_memory_remedy.py": "eac92ff296303c67e7e46a9c168fa575f909895739b7fde8363fef935b4f37ee"
+  },
+  "native_correctness_qualified": false,
+  "native_memory_qualified": false,
+  "new_files": [
+    "adaptive_integration.py",
+    "adaptive_reference.py",
+    "adaptive_contract.py",
+    "test_startup_adaptive.py",
+    "test_memory_remedy.py",
+    "fixture_adapter.py",
+    "MEMORY-FREEZE.json",
+    "FORMATTER-AMENDMENT.json",
+    "TARGET-REFERENCE.json",
+    "STARTUP-FREEZE.json",
+    "A3-FREEZE.json"
+  ],
+  "new_native_allowance": false,
+  "original_resource_contract_sha256": "a4120866fea72befae75e485bc05bc7265314eb64b85839e5436e4c480339b90",
+  "preservation_before_sha256": "0da050f950d0532c309863acc13da961e11d12e745a1fa5bd02a68324bd10338",
+  "prior_files": 5526,
+  "profiles": [
+    "legacy unchanged scientific path for inherited tests",
+    "adaptive explicit cfg profile with native handoff false and source/ref pins"
+  ],
+  "schema": "a3.adaptive-startup.integration-freeze.v1",
+  "science": {
+    "counts": {
+      "ANN_searches": 0,
+      "allocations": 1,
+      "confirmation_queries": 0,
+      "data_verification_scans": 4,
+      "exact_searches": 0,
+      "maximum_live_readers": 6,
+      "maximum_live_servers": 2,
+      "maximum_live_sql_connections": 8,
+      "new_fits": 0,
+      "plan_packets": 0,
+      "provider_calls": 0,
+      "reader_admissions_total": 10,
+      "searches_total": 0,
+      "snapshot_scans": 1
+    },
+    "date": "2026-10-27",
+    "decision": {
+      "comparison": "max(cgroup aggregate recorded peak over all visible finite ancestors)+reserve+workspace <= min(32GiB,all visible finite memory limits)",
+      "event_policy": "No positive oom/oom_kill/oom_group_kill/max/failcnt delta for a margin pass; missing counters/peak/gaps=>inconclusive",
+      "no_automatic_full_calibration": true,
+      "no_cache_subtraction": true,
+      "outcomes": [
+        "startup_resource_margin_pass_scoped",
+        "startup_complete_resource_margin_inconclusive",
+        "failed_or_incomplete"
+      ],
+      "reserve_bytes": 2147483648,
+      "scope": "startup/admission resource readiness only; no workload memory, quality, A/A or performance qualification",
+      "total_peak_includes_cache": true,
+      "unmeasured_workspace_allowance_bytes": 2147483648
+    },
+    "dimensions": 768,
+    "epoch_creation_order": {
+      "0": [
+        "native640-r0",
+        "partial640-r0",
+        "native640-r1",
+        "partial640-r1"
+      ],
+      "1": [
+        "partial640-r1",
+        "native640-r1",
+        "partial640-r0",
+        "native640-r0"
+      ]
+    },
+    "exposed_requests": 200,
+    "graphs": {
+      "native640": {
+        "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+      },
+      "partial640": {
+        "original": {
+          "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+        },
+        "partial": {
+          "270339": "b0300f40eb9917c158855d00fe0a8f36cb1c8aee958fb65b061e4db4d8606700"
+        }
+      }
+    },
+    "name": "torch-startup-resource-v1",
+    "prefix": "reviews-startup-resource-v1-",
+    "protocol": "startup-resource.v1",
+    "register": "NEXT-STARTUP-RESOURCE-01",
+    "resources": {
+      "cgroup_ancestors_max": 16,
+      "cpus": 4,
+      "epoch_hold_seconds": 5,
+      "host_post_seconds": 240,
+      "host_pre_seconds": 240,
+      "memory_gib": 32,
+      "outer_margin_seconds": 120,
+      "processes_max": 32,
+      "raw_bytes_max": 536870912,
+      "runtime_cleanup_reserve_seconds": 600,
+      "runtime_seconds": 3000,
+      "sampler_cpu_seconds_max": 60,
+      "sampler_file_bytes_max": 65536,
+      "sampler_file_reads_max": 500000,
+      "sampler_max_gap_seconds": 5,
+      "sampler_period_seconds": 1,
+      "sampler_raw_bytes_max": 268435456,
+      "sampler_read_bytes_max": 536870912,
+      "sampler_samples_max": 3600,
+      "sql_caps": {
+        "observer": 100,
+        "startup": 500,
+        "truth_helper": 0
+      },
+      "stage_seconds": {
+        "epoch0": 120,
+        "epoch1": 120,
+        "final_cleanup": 600,
+        "restore_identity": 1500,
+        "snapshot_admission": 600
+      },
+      "wall_seconds": 3600
+    },
+    "retained_source_work": "/scratch/dar579/torch-reviews/partial-ann-v1.tu6x964d/partial-21048213.3xxjxm27",
+    "rows": 247286,
+    "runtime": {
+      "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+      "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+      "registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+      "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+      "synthetic_mock": false
+    },
+    "source_contract_sha256": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+    "source_files_sha256": {
+      "agent/experiments/partial-calibration-v1-identity-fix/CONTRACT.json": "679dc806e903ee7d202e5851f2cc4ece889aaebf25d3a9c49e5771af29f558db",
+      "agent/experiments/partial-calibration-v1-identity-fix/SCHEDULE.json": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+      "agent/experiments/partial-calibration-v1-identity-fix/legacy_common.py": "2e15a53db8bf89d2294907b50613c522e2c5ef7fda9ff5e1e8915b6cffa504c7",
+      "agent/experiments/partial-calibration-v1-identity-fix/legacy_metadata.py": "fba262f11a173757f13e71741286449b0e136936f4adf245375e3069996faefc",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_restore.py": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+      "agent/experiments/partial-calibration-v1-identity-fix/pc_snapshot.py": "af2b2e266450ca4c25d58eda8da6a2e4ed63c0c2d318d930ea6b185623653d41",
+      "agent/experiments/partial-calibration-v1-identity-fix/quota_base.py": "8790f4f8b0ee813efe9d3ee6d135929e55bc1cd33b39a917d1b51d7c1509ffc4"
+    },
+    "source_schedule_sha256": "d47b23771919f67e6adc9f23cf3def1b163c49612e452346f7910a9963789328",
+    "targets": {
+      "native640": {
+        "index": {
+          "oid": 264013,
+          "relname": "reviews_hnsw"
+        },
+        "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484"
+      },
+      "partial640": {
+        "index": {
+          "oid": 270339,
+          "relname": "reviews_hnsw_votes108_v1"
+        },
+        "index_identity": "6ee32f41235ef0a18143cc5ed37e169265fe3757211ef7df6480c7217f382896"
+      }
+    },
+    "timezone": "America/New_York"
+  },
+  "selected_integration": [
+    "New adaptive_integration module reuses original FixtureSpec, exact SQL/client cursor, ordering, original Snapshot constructor, eligibility/request validation and search-prohibited factory. Encode each row before requesting next.",
+    "Adapt original scoped identity canonical-row view to ExactVector; old five A3 files remain byte-identical and old native packets qualify only baseline. Atomic publication/owned cache tags/rollback and module bindings are preserved.",
+    "ev_startup selects adaptive profile explicitly; pre-restore literal codec/source/formatter gate, full baseline provenance and adaptive origins/maps are recorded. Both reader creation orders/aliases retained through all four verification scans.",
+    "Retention records compact/raw counts and payload/matrix bytes without decoding/releasing rows; type/source/spec and root ownership checked.",
+    "Replay validates all old source/identity/timing/cleanup rules plus new code/reference/literal/retention proofs; no adaptive local replay can grant native qualification or a resource pass.",
+    "Clone keeps corrected sampling/cooperative-cancellation/shutdown code unchanged. Original memory decision/limits and all scan/search controls remain byte-identical.",
+    "All production builds and CLI native control/job/runtime/sampler entry points remain disabled. require_native_release rejects every profile; old receipts/reservations cannot authorize new code."
+  ],
+  "source_directory": "agent/experiments/startup-exact-vector-startup-integration-v1",
+  "target_reference_sha256": "c97f98b2f1e22ade36350cf6941bdd37722e249e1344e618d302bfa5ae86e073"
+}

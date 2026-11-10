@@ -1,0 +1,32 @@
+{
+  "ANN_searches": 0,
+  "C3_release": "trials/torch-reviews-startup-attribution-v1-image-reference/C3-release-2026-10-30/release-verification.json",
+  "all_compatibility_jobs_spent": [
+    "21348020",
+    "21367064",
+    "21382454",
+    "21443102"
+  ],
+  "archive_sha256": "f2a7f4e5117dc84fa5758bcba8a941ac8ff9d4456ebca0c10e5fa8f487f07ff1",
+  "commands": "trials/torch-reviews-startup-attribution-v1-image-reference/COMMANDS.txt",
+  "date": "2026-10-30",
+  "decision": "D104",
+  "exact_searches": 0,
+  "final_production_local_sealed_tests": 128,
+  "full_B2f_released": false,
+  "main_A2_handoff_released": true,
+  "main_A2_launched": false,
+  "main_allocation": "one_1h_4CPU_32GiB_unspent",
+  "main_recipe_files_unchanged": 68,
+  "manifest_sha256": "2bc40b4bf802ad333bca5bbc1e60f3a6219d456a48bf8a30a79a3328e37829df",
+  "native_audit": "trials/torch-reviews-startup-attribution-compatibility-v1-budget-fix/postrun-audit-2026-10-30/returned-verification.json",
+  "native_job": "21443102",
+  "native_sealed_tests": 128,
+  "native_source_tests": 128,
+  "new_Torch_jobs_by_Codex": 0,
+  "prior_files_preserved": 5883,
+  "resource_margin_qualified": false,
+  "roadmap_version": "1.55",
+  "status": "native_C2B_verified_C3_pass_main_A2_handoff_ready",
+  "timezone": "America/New_York"
+}

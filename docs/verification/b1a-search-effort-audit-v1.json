@@ -1,0 +1,149 @@
+{
+  "GB1": "pass_scoped_engine_feasibility_only",
+  "M1": false,
+  "M2": false,
+  "M3": false,
+  "analysis_date": "2026-10-24",
+  "artifacts_sha256": {
+    "research/fannagent-b1a-search-effort-audit-2026-10-24.md": "b92e4d2e10f7657c8d84c3a542a0d7c47353de097baba24cef32a43aeb5a4228",
+    "research/fannagent-b1a-search-effort-audit-2026-10-24/audit.json": "268b830fdbd9189cf3393d254ee4da9199d46ab95c8be41d577efdde811cff7c",
+    "research/fannagent-b1a-search-effort-audit-2026-10-24/input-and-source-inventory.json": "938a2a6582bccc5565f9cfd18dcc625497034f6943a9400f5280431437b41ab1"
+  },
+  "authorization": "Audit existing sources/evidence, update roadmap and recommend next step. No code changes or experiments.",
+  "canonical_acceptance": false,
+  "cheap_input_scope": {
+    "cases": 600,
+    "contexts": 3,
+    "cost": "Parsing plausibly cheap, but selector/validation/connection/setting cost must be measured. No free feature/cost claim.",
+    "excluded_inputs": [
+      "query/group IDs and evaluator strata",
+      "offline exact selectivity/descriptors/truth",
+      "unmeasured early/progress probes"
+    ],
+    "filter_parser_supported_scope": "None, or actual m_000000 >= nonnegative int64; keep explicit filter-presence bit because unfiltered threshold sentinel0 is not general semantic equivalence.",
+    "individual_vector_difficulty_identified_by_these_contexts": false,
+    "observed_contexts": [
+      {
+        "cases": 200,
+        "filter": null,
+        "k": 10
+      },
+      {
+        "cases": 200,
+        "filter": {
+          "field": "m_000000",
+          "op": "gte",
+          "value": 32
+        },
+        "k": 10
+      },
+      {
+        "cases": 200,
+        "filter": {
+          "field": "m_000000",
+          "op": "gte",
+          "value": 108
+        },
+        "k": 10
+      }
+    ]
+  },
+  "code_files_verified_before_after": 324,
+  "economic_or_predictive_qualification": false,
+  "explicit_consulted_input_files": 29,
+  "historical_raw_input_hashes_verified": 122,
+  "historical_saved_analysis_output_hashes_verified": 6,
+  "id": "NEXT-SCOPE-01",
+  "identity_caveat": {
+    "compatible_current_full_multilevel_effort_matrix_established": false,
+    "current_index": {
+      "completed_Torch_index_reused": false,
+      "dataset_parquet_sha256": "06eae31a43ecfd63a647f6fa93a9c00bcb2350ca6fe2f2bcd35d007c13b2e4ee",
+      "dimension": 768,
+      "filter_eligible_rows": {
+        "unfiltered": 247286,
+        "votes108": 49498,
+        "votes32": 123692
+      },
+      "index_build": {
+        "ef_construction": 64,
+        "fresh_index_at_every_size": true,
+        "insertion_order": "ascending source_id",
+        "m": 16,
+        "maintenance_work_mem": "65536",
+        "max_parallel_maintenance_workers": 0
+      },
+      "index_bytes": 1012678656,
+      "index_filepath": "base/16384/264013",
+      "index_files": {
+        "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+      },
+      "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+      "index_oid": 264013,
+      "row_count": 247286,
+      "source_arm64_index_reused": false,
+      "subset_ids_sha256": "a316caa7b4b5182028401195cb02f9813a3336d498b70248b2b32a3550c96c80",
+      "subset_seed": 20261019
+    },
+    "current_module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+    "current_runtime_profile": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+    "historical_multilevel_index": {
+      "dataset_parquet_sha256": "06eae31a43ecfd63a647f6fa93a9c00bcb2350ca6fe2f2bcd35d007c13b2e4ee",
+      "dimension": 768,
+      "index_bytes": 1012678656,
+      "index_filepath": "base/16384/264013",
+      "index_files": {
+        "264013": "8c15a172408c806f8fcd05b6ddc13812780b6cfa978a931566db7c5ffd323c28"
+      },
+      "index_identity": "6076127834d467a5791fe907f6a5bbc98e5faf637ab08cc98e0ef6b29ddc4259",
+      "index_oid": 264013,
+      "row_count": 247286,
+      "source_arm64_index_reused": false
+    },
+    "historical_size_runtime_profile": "3d869e5b919b231f913209fe33ec6b829e7b990cf4666a632d092556ff51958d",
+    "historical_size_sweep_effort": 320,
+    "historical_size_sweep_full_size_matches_current_index": true,
+    "same_current_and_historical_multilevel_index": false
+  },
+  "new_experiments_models_tests_simulations_DB_provider_Torch_or_protected_query_access": 0,
+  "next_step": {
+    "alternative": "Transaction-local SET must enclose search and include BEGIN/SET/COMMIT cost; it is not current autocommit latency. Avoid per-query reconnecting.",
+    "effort_levels": [
+      320,
+      640
+    ],
+    "first_task": "Freeze native effort-interface correctness/cost and matched two-level frontier contract on current index/module, without fitting any router.",
+    "future_Torch_required": "Only after separately authorized/frozen implementation and local checks; provide exact commands then.",
+    "future_router": "At most8 predicate-context maps for3 contexts x2 efforts if B1b supports a frontier; runtime decisions use actual validated predicates, not evaluator labels. New fitting contract required.",
+    "id": "NEXT-EFFORT-01",
+    "negative_gate": "Close if conformance/control/cost or quality frontier is inadequate; no automatic grid expansion or protected-data use.",
+    "phase": "B1b",
+    "quality_reference": "Unchanged original640 study reference and authoritative exact truth; preserve/capture actual inspected source default separately and include any differing production/default comparator. Never redefine quality relative to the selected lower effort.",
+    "resources": "Not assigned by this audit; freeze one finite campaign, search cap, timing, CPU/memory/allocations and entitlements before dispatch.",
+    "status": "proposed_not_implemented_or_run",
+    "success_gate": "Actual current-index quality/complete-output/settings/cost/frontier evidence plus strict matched control review before any B1c routing fit.",
+    "transport_recommendation": "Two immutable effort-bound readers in one private restored current-index copy, sequential dispatch; preserve origin manifest and log explicit effective override. Charge initialization/binding/selector costs; native640 unwrapped and wrapper-forced640 controls.",
+    "user_commands_needed_now": false
+  },
+  "original_execution_retained": true,
+  "phase": "B1a",
+  "preservation": "All inventoried sources, prior inputs and historical raw/analysis files unchanged; documentation only.",
+  "primary_web_sources": [
+    "https://github.com/pgvector/pgvector/blob/v0.8.6/README.md",
+    "https://raw.githubusercontent.com/pgvector/pgvector/8ee86c96f0fd72390f890aa8a336fda6d3ab4c6c/src/hnsw.c",
+    "https://raw.githubusercontent.com/pgvector/pgvector/8ee86c96f0fd72390f890aa8a336fda6d3ab4c6c/src/hnswscan.c",
+    "https://www.postgresql.org/docs/17/sql-set.html"
+  ],
+  "ready_to_deploy": false,
+  "recorded_at_utc": "2026-10-25T00:37:20.667218+00:00",
+  "reference_scope": {
+    "current_frozen_harness_explicit_reference": 640,
+    "historical_sweep_origin_setting": 320,
+    "production_default_verified_in_this_audit": false,
+    "required": "Keep immutable inspected origin, declared study reference and effective treatment override separate; record actual source default before claiming production/default improvement.",
+    "study_reference": 640
+  },
+  "status": "complete_read_only_audit",
+  "timezone": "America/New_York",
+  "version": "b1a-search-effort-audit.v1.receipt"
+}

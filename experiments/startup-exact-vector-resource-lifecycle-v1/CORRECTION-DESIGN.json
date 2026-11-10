@@ -1,0 +1,387 @@
+{
+  "activity_authorized_by_current_design": {
+    "implementation_changes": 0,
+    "native_allocations": 0,
+    "native_searches": 0,
+    "new_experiments": 0,
+    "new_tests": 0
+  },
+  "baseline": {
+    "dimensions": 768,
+    "eligibility_sha256": "eed0dc123868ee61c2ffbadbb066cd36db9e813ce8a7829ed18658f04b6b44d2",
+    "expected_snapshot_identity": "54282be380f20bfab05a44e6260e116435aecf5a289a258ae8164a23c187b303",
+    "graphs": {
+      "native640": {
+        "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+      },
+      "partial640": {
+        "original": {
+          "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+        },
+        "partial": {
+          "270339": "b0300f40eb9917c158855d00fe0a8f36cb1c8aee958fb65b061e4db4d8606700"
+        }
+      }
+    },
+    "package_manifest_sha256": "4212507e81abc053aa5045e09a8cb624b789ed0bad4e1e8d1bf69f82f31484d9",
+    "resource_contract_sha256": "a4120866fea72befae75e485bc05bc7265314eb64b85839e5436e4c480339b90",
+    "rows": 247286,
+    "runtime": {
+      "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+      "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+      "registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+      "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+      "synthetic_mock": false
+    },
+    "source_inventory_sha256": "d56013975d58245e73677a44f2dd060db5458daaf8aff7a2ccb716ba678b22b7",
+    "source_manifest_sha256": "082b167507e25009bdb25ea613950cd434ef38608fbcbc6194af19c363d0f6dc",
+    "successful_startup_archive_sha256": "312bf5c02959a1e90514f6ec556914303095eb30c2f87acd9b182010a28320e7",
+    "targets": {
+      "native640": {
+        "index": {
+          "oid": 264013,
+          "relname": "reviews_hnsw"
+        },
+        "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484"
+      },
+      "partial640": {
+        "index": {
+          "oid": 270339,
+          "relname": "reviews_hnsw_votes108_v1"
+        },
+        "index_identity": "6ee32f41235ef0a18143cc5ed37e169265fe3757211ef7df6480c7217f382896"
+      }
+    }
+  },
+  "binding": {
+    "concurrent_or_nested_construction": false,
+    "exact_invocation_count": 1,
+    "expected_original": "fannagent.store.digest",
+    "module": "fannagent.snapshot",
+    "name": "digest",
+    "protocol_amendment_must_be_recorded": true,
+    "restore": "finally for every BaseException before publication/validation/reader epochs",
+    "scope": "Only the one explicit initial backend.snapshot() acquisition before sharing",
+    "single_threaded_acquisition_only": true,
+    "source_or_constructor_patch": false,
+    "store_canonical_or_digest_patch": false
+  },
+  "date": "2026-10-28",
+  "design_id": "startup-identity-stream.design.v1",
+  "full_calibration": "held",
+  "local_gate": {
+    "canonical_oracle_bytes_per_fixture_max": 4194304,
+    "existing_check_coverage": "All relevant 117 original coverage categories; actual counts recorded only after implementation",
+    "fixture_dimensions": 768,
+    "fixture_rows_max": 64,
+    "no_full_size_generation_or_benchmarks": true,
+    "requirements": [
+      "Exact framed bytes and hash parity with original canonical oracle",
+      "Original validation/query/typed-ID/metadata/NumPy bits and original row values",
+      "Actual frozen backend/constructor and runtime/host/finalization paths",
+      "Scope binding/restoration on success, errors, unexpected binding, nesting, signals and cap/identity failures",
+      "Named buffer/component/work caps and no full-payload fallback",
+      "Historical launch/sidecar/eligibility defects, zero-search guards, sampler, locks, cleanup, transfer/archive/once-only/replay negatives",
+      "Source/sealed checks, syntax/style/archive/scientific/source preservation before any release"
+    ],
+    "status": "not_run"
+  },
+  "next_gate": "M2 separately requested isolated implementation and local qualification; no Torch commands now",
+  "parent": "NEXT-STARTUP-MEMORY-01",
+  "primary_sources": [
+    {
+      "role": "Encoder settings/byte contract",
+      "url": "https://docs.python.org/3.12/library/json.html"
+    },
+    {
+      "role": "Incremental update equivalence",
+      "url": "https://docs.python.org/3.12/library/hashlib.html"
+    },
+    {
+      "role": "Versioned reference for whole-document/token encoder paths; actual image provenance still required",
+      "url": "https://github.com/python/cpython/blob/v3.12.0/Lib/json/encoder.py"
+    },
+    {
+      "role": "Default client result storage versus named server cursors; live docs 3.3.7.dev1, pinned installed recipe 3.3.6",
+      "url": "https://www.psycopg.org/psycopg3/docs/advanced/cursors.html"
+    }
+  ],
+  "prospective_native": {
+    "additional_summary_requirements": [
+      "Module/helper/source provenance and actual interpreter/encoder",
+      "One digest invocation, component/byte/buffer counts and exact expected identity",
+      "Successful original binding restoration before admission",
+      "Known identity plus unchanged input proofs and sealed-code verification; byte count alone is not semantic proof"
+    ],
+    "counts": {
+      "ANN_searches": 0,
+      "allocations": 1,
+      "confirmation_queries": 0,
+      "data_verification_scans": 4,
+      "exact_searches": 0,
+      "maximum_live_readers": 6,
+      "maximum_live_servers": 2,
+      "maximum_live_sql_connections": 8,
+      "new_fits": 0,
+      "plan_packets": 0,
+      "provider_calls": 0,
+      "reader_admissions_total": 10,
+      "searches_total": 0,
+      "snapshot_scans": 1
+    },
+    "decision": {
+      "comparison": "max(cgroup aggregate recorded peak over all visible finite ancestors)+reserve+workspace <= min(32GiB,all visible finite memory limits)",
+      "event_policy": "No positive oom/oom_kill/oom_group_kill/max/failcnt delta for a margin pass; missing counters/peak/gaps=>inconclusive",
+      "no_automatic_full_calibration": true,
+      "no_cache_subtraction": true,
+      "outcomes": [
+        "startup_resource_margin_pass_scoped",
+        "startup_complete_resource_margin_inconclusive",
+        "failed_or_incomplete"
+      ],
+      "reserve_bytes": 2147483648,
+      "scope": "startup/admission resource readiness only; no workload memory, quality, A/A or performance qualification",
+      "total_peak_includes_cache": true,
+      "unmeasured_workspace_allowance_bytes": 2147483648
+    },
+    "epoch_creation_order": {
+      "0": [
+        "native640-r0",
+        "partial640-r0",
+        "native640-r1",
+        "partial640-r1"
+      ],
+      "1": [
+        "partial640-r1",
+        "native640-r1",
+        "partial640-r0",
+        "native640-r0"
+      ]
+    },
+    "future_output": "trials/torch-reviews-startup-resource-stream-v1",
+    "future_package": "torch-startup-resource-stream-v1",
+    "future_prefix": "reviews-startup-resource-stream-v1-",
+    "future_protocol": "startup-resource.stream.v1",
+    "future_source": "agent/experiments/startup-resource-stream-v1",
+    "preflight": {
+      "cpu_seconds_max": 5,
+      "literal_parity_cases_max": 32,
+      "new_SQL_or_searches": 0,
+      "record_actual_container_interpreter_encoder": true,
+      "total_oracle_bytes_max": 1048576,
+      "within_existing_runtime_envelope": true
+    },
+    "proposed_allocations_max": 1,
+    "released": false,
+    "resources": {
+      "cgroup_ancestors_max": 16,
+      "cpus": 4,
+      "epoch_hold_seconds": 5,
+      "host_post_seconds": 240,
+      "host_pre_seconds": 240,
+      "memory_gib": 32,
+      "outer_margin_seconds": 120,
+      "processes_max": 32,
+      "raw_bytes_max": 536870912,
+      "runtime_cleanup_reserve_seconds": 600,
+      "runtime_seconds": 3000,
+      "sampler_cpu_seconds_max": 60,
+      "sampler_file_bytes_max": 65536,
+      "sampler_file_reads_max": 500000,
+      "sampler_max_gap_seconds": 5,
+      "sampler_period_seconds": 1,
+      "sampler_raw_bytes_max": 268435456,
+      "sampler_read_bytes_max": 536870912,
+      "sampler_samples_max": 3600,
+      "sql_caps": {
+        "observer": 100,
+        "startup": 500,
+        "truth_helper": 0
+      },
+      "stage_seconds": {
+        "epoch0": 120,
+        "epoch1": 120,
+        "final_cleanup": 600,
+        "restore_identity": 1500,
+        "snapshot_admission": 600
+      },
+      "wall_seconds": 3600
+    },
+    "unchanged_constraints": [
+      "Original loader/cursor/SQL/transaction behavior",
+      "Data/rows/graphs/module/image/profile/registry/settings/targets/requests",
+      "Source/copy/snapshot/final proofs and both reader orders/placement",
+      "No searches, EXPLAIN, priming, warmups, plans, fit/provider/confirmation work",
+      "Same host sampler/caps/limits/reserves/600-second snapshot stage and cleanup/deadline envelope",
+      "No cache subtraction, cap/margin changes, automatic retry or alternate remedy"
+    ]
+  },
+  "scope": "One private snapshot identity hash only; source and retained representation/cursor/validation unchanged.",
+  "selected_remedy": "per_row_original_canonical_encoding_incremental_sha256",
+  "serialization": {
+    "between_fields_and_rows": ",\"rows\":[",
+    "between_rows": ",",
+    "component_encoder": "Unchanged frozen fannagent.store.canonical",
+    "encoding": "utf-8",
+    "full_document_or_all_chunks_retention": false,
+    "hash": "sha256",
+    "kwargs": {
+      "allow_nan": false,
+      "check_circular": true,
+      "ensure_ascii": true,
+      "indent": null,
+      "separators": [
+        ",",
+        ":"
+      ],
+      "skipkeys": false,
+      "sort_keys": true
+    },
+    "output": "lowercase hexadecimal",
+    "prefix": "{\"fields\":",
+    "root_keys": [
+      "fields",
+      "rows"
+    ],
+    "row_order": "Original constructor sorted typed source IDs; no additional sorting/casting/copying",
+    "suffix": "]}"
+  },
+  "source_files_sha256": {
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_common.py": "425957812f96d85e58a368ee651558216bae0004310835775c2f22d61f415729",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_control.py": "6528ee4eefeb6dab3bd82d83774f5d677bbe0e32eb124774a201797692ba1927",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_job.py": "12e14ab440602dc352e4b0c9e58660e457babd21a4e384eeb85c48ffbbf73655",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_measure.py": "e3c4484f88fa23be8ebce76c267b7f63e7cd6f722d5bcd772a0c8cb428ed44a8",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_report.py": "e350689fbaa521bf96908c836a66bbefb0f99369be19947c0b29e3b76b9c1aba",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_restore.py": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_results.py": "c45a6ae0a0809a1f52d4e8dc0988488629913ed1830e24047ac631c9c6270b03",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_runtime.py": "f2a67e7f76b5c2d595056499cae814debf81efe607b473cadf2efce29aeeb3e6",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_snapshot.py": "af2b2e266450ca4c25d58eda8da6a2e4ed63c0c2d318d930ea6b185623653d41",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_stats.py": "57ec97fdaac47553bfa5655249004ef38df844277903409efe1d596839f6a2e7",
+    "agent/experiments/partial-calibration-v1-identity-fix/pc_trace.py": "d26085ce72c55e64184f50a176904ac94723185ef8bcb3c62d7c8f1bdd852100",
+    "agent/experiments/startup-resource-v1/pc_common.py": "ab837f969d2f27069858052a852fdf7e4a0b863585ebf57b3b422de7f3017945",
+    "agent/experiments/startup-resource-v1/pc_control.py": "5556570995a16b4619c6c23775df1210b2c59baddc04b87060257ff9994eae5f",
+    "agent/experiments/startup-resource-v1/pc_interface.py": "63fd4950f3de5d629327b1650cc6b9ec0b7d296459dace4f0d9600162728f56a",
+    "agent/experiments/startup-resource-v1/pc_job.py": "158ede705f8d03fec672dbc1ba31898d1c0ca2cf0855fbc843902ae13dfe02f3",
+    "agent/experiments/startup-resource-v1/pc_metadata.py": "b150cc90a71b430636b2b41e5273c6f76c91051377a27dabf79f34e7eb3ad96c",
+    "agent/experiments/startup-resource-v1/pc_proc.py": "0263ab73d07b27e5db2cf97587d6f46d020b5fef502f4e6257a6651dddd34eb9",
+    "agent/experiments/startup-resource-v1/pc_resources.py": "ba1a4f60a2961b343bea49677660824ccfb51d51f13e1444cff32a56a98c9c2b",
+    "agent/experiments/startup-resource-v1/pc_restore.py": "84b9648941fb41e70baa91d714fb129d3c447d02de0620d8066171c19172bd7f",
+    "agent/experiments/startup-resource-v1/pc_results.py": "7bdcf2071596b95516e061c8ab013fe93782e07e7af208224bf41d03ba4e8707",
+    "agent/experiments/startup-resource-v1/pc_runtime.py": "a675627a6a1af6960d1370e87120703e964855fd43d429ba4d1d7a5d6df16f60",
+    "agent/experiments/startup-resource-v1/pc_settings.py": "15565b63ac05629531158302a8715f42d0017868e60d054d4874c548901e1343",
+    "agent/experiments/startup-resource-v1/pc_snapshot.py": "01cfc0e6234472f9f9bb94a4a78adacf4d831585d353f3960f2df1c27cc3ffc2",
+    "agent/experiments/startup-resource-v1/pc_trace.py": "e53006a6062f0c9b15706565974fe7850756e0bf1319448f203e98d091e0d0e4",
+    "trials/torch-reviews-first/requirements.lock": "a23798ec22b577ddfde317390f3d9aeed9c70800f29c4500e7af4638f316d148",
+    "trials/torch-reviews-first/runner.py": "266bf3d65acc33f18cb0a9d3455a5a562d4ec2e65b608afe94e680b309ca1550",
+    "trials/torch-reviews-first/runtime.Dockerfile": "95e1cb773875b9ce2a21e91bfa295d3652cc7bc68e5731452012dccebe668f81",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/execution.py": "be142803bfd9e1bfdb09af618cde25494ad43a45e2f58f39af14ed0d30b6dd77",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/legacy_execution.py": "3dcdf9183c4a8771b98e8ac045e99877ed8bb00d68a0b78f2e944d4de1416ff6",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/reference_backend.py": "c9993cd4705e1a1e7e40e2b44524e9499a4a3041642c9f4bcd3a17594da676a4",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/__init__.py": "b79f99632a801bd5093f395b369b770b824a2785f79e7640d893b9c1de47373e",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/__init__.py": "e6b03e2f7ec9d0a723d7e3a531a0b975f2f1b555045d215d9464b8d2616c895b",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/conformance.py": "0f2863c98bbcccad3e052254966fd1c2c6fb7c9f2d3b3ef74b39882b81209221",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/contracts.py": "b26cd191dcb8b0bb8b578f3a45ba6c5b5a0751248cd42fa2f3a4dbe42d058cc6",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/errors.py": "1b6df806614a98faf7bb91d815334c2ba286d305e94e3d782d2aec7bc2e11cb2",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/policy.py": "aa6d9a7c441f273d7d29b481179188636c46e7ee1cfd1bbef4c2292dee1af8a9",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/__init__.py": "b3d432b2d9d7365f1f534d51c4dbcd25e12e2c1ba6fd6fda6849500ace351980",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/audit.py": "09152b1fc2c106e98b6bb0631e0183cbf025b857d5c85646af9a1000a15355b6",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/compiler.py": "a54dda20c9cbfe0e2a7b72d0a6c70304d089cbeffea280b00898b3e8231c5d5f",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/contracts.py": "0502c0c03f975fecbd8da262029059b7c2705b5bdb16f5b882353cb7a2b04fff",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/data.py": "b3f9f4d651726d8565b17a6b845e9edd716b7ba73a83986513063edb76696b0d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/descriptors.py": "c5efba83b73f4aa01e31c5946e8383452aaf3747682a975ac342e6de202eb8ec",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/errors.py": "968fe473357527e420369e49f4ec31288a7e8f20eb9d6a0f39e28b380a0bc7c5",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/filters.py": "54faf0746380cdd75c10b8c7b1471a01db43349b5aafa0ae26ce99cf05c1c517",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/hashing.py": "c5a0b370606532e9f4e58e8bb87b3f0292f89b2b7267ee81815109b57ed99e60",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/interpreter.py": "e1d67e272fd4aa25f35eecd5f4cdb0568388805c390d460a9a0f7d6a4c1ebc8e",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/primitives/policy_tree.py": "981fb5983ac19a0027292574cfef3e567d0880a66bc775ab2b00b312c60c321a",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/api/profiles.py": "63ea9a7dac86eb92f05ab0c594166d54bdbe48bae007e2a9642ad7ebcdfa046d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/backends/__init__.py": "31695fd5056b4db7be22ea9f3392d22625dd17f38e167e1263edbcde5569fdf2",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/backends/fake.py": "102457755572c1fdc0f995f2c819b661f89d75d90e52409f93d95f08e4bec3c1",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/broker.py": "727c5da124f867085c70b201598ac84b2808321a92b003a142ea47ad05fbb7f7",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/budget.py": "c316f9867004c3f2f9874ae3a775dd1b41a03723ecd74cd952bab52270413586",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/build_workspace.py": "f0b3fb31265bab0d132f70232b0bb29407da3f9c4d4ff587b73510d588fd148d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/cli.py": "70462ccf31b4659b043383c4bc62df24780dab8ab54ea992dfc910786e40877a",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/client.py": "5ea783d5d622a62ff7e0b13f46f8f5489fdddbc73e0a102dffaa03f5571c7e8e",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/config.py": "38edd8f0e17c4656e7187837e4d047b3b11b6fd2758295931e0f5be8ebcec5d0",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/contracts.py": "19ec6458a66536b27056777cbc2fe45c693cb0b9d1bb97264c770b1a7cb5416d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/controller.py": "f363f20a188eef2f8f9d52c6b7699de1224ee29be49496f2ec5ef4aebabf3d42",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/environment.py": "c1bc36f98d655b4d531e14e81ead7ce2a8e347287bae46ee624d745f6a939a8c",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/errors.py": "2898938fc91d8f30b358832d01a61542f88c129a044bdbacf5b8b1c441b849c7",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/evaluation.py": "eb4d3f071f9cc92e10157106f4172ed496944cfc5a7ef560eaf505eab91878b8",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/evaluation_jobs.py": "b25e79f98ab7167df37a6ea5b6e556937fcdba31ecb0d11b05a574653642944d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/experiments.py": "d51bb66f32afb2e863138eb028198239d8f118c69463047d5763f38e64a3f8ff",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/extension_host.py": "fb8f15edff6ae9c28f1d0360a20b7c0af15333f9bfd0c4c3bbfc0d499eae91eb",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/guidance.py": "e7dae1e80a834d2ce990f73fd869ad37c2c150aa96269287c761edd967ed0794",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/__init__.py": "d1892777e2bbcf9c0b1bd8b398528f51c4c176a2c8a0a92a2c49bac01b30da41",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/ablation.py": "e1af356323b1637dce1a27f346ac2e0ad7b913251bf0daa4e6b21b09309b1b5e",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/archive.py": "e84c8f4d0f68a2455d49885dc2612be548a5a0493484e8d87f8865ebc4599117",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/benchmark.py": "6ebf8ae04a4cc59ed1597b4c0d71f0d52381eae4c779588233bc58de96c6b985",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/cli.py": "1580f1cc93b4339dc261e0de0b4ead6ade64683715dfb0776a51287c19a2048d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/describe.py": "ba974e1b65dad6e5e547c657a03275e989ca8e1cdd34e224006071eb33bea12a",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/evaluate.py": "eb815d259d76bb45d139b346ee74a2228e4fd49ac9fefedab51289dd17dbd79a",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/files.py": "b5d174c9a544b607481e68c73d26c8b96f17f1d69b0cabd3cc9b2be346cd5e1d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/fit.py": "d427eb55cca2faaad9604f0b14618ae0fe5952e08cda1b00b0b3a28c84a05638",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/importers.py": "9a2d3ced4dd5bd46c344c7c0c42a0c1960f1db5b9d513b2fdaf57a1f77bcb570",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/models.py": "c5802802c8a3e06c943fb47103c2849ca28d51fc35c6072d2ea8aba06a898e4f",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/qualification.py": "f8e77f78ab418c39fbcf0c435098a1d5e1135bacad6d01e1fa58edafc21747ff",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/returned.py": "951114a54c6265f9b85844c34b6089de080971ac7f673b4dfad0ef61e6368cb3",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/returned_models.py": "1e78f3593e7e1604468ac5c9bf4ed69a89ea6a6d84ce22c536834706a67a7dc2",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/statistics.py": "36373fcb73fc2883dd0f698ed4def3fcd985f8d6b2fcb698519e86249b2a7c51",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/timings.py": "510382b56ca1ecb0ab4e5bb3dbf1babfa5ff53b5031086d04fad90669444c7a2",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/learning/tools.py": "9953086cb7efebe7b9dfb0e6fc765525a1d930e3f6dd2d4b1904091622f34379",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/model.py": "32982aaf13fcf7afabb424f87535bcd37a4da3282fa9e7e3443b3f43c37c4419",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/onboarding.py": "b5d69da71e08db5b78750d0ca342cc3a925ff1833df6f169aa6858555f8caa78",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/policy.py": "d506f843127173ddee8ee978d334b29e485dd0b9ad2b8c68ddd2a6d5471a7e98",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/snapshot.py": "0ebac2227ab66c07b7b1271c6aeb294a9061329e6d2817c52dadb63c9b9cf4fa",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/store.py": "4dde727909c60079d34b1fd9c666403eee75636468e28c5c3e886d558049300b",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/study.py": "0962ff60f5eb319c1d9a0e05a1bbc24154f5906f4c48e1a3a7583e55a1e46ebb",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/submission.py": "9807d48b59463dd3454999b24f5e3c3c86903312077a26f78b64dfcfd1cd2fd5",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/tool_client.py": "ecc679664d3e07a47a543aa5cd209a3f2664ae5899ec9b611f96a9b90d3baa2f",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/workflow.py": "da3132b36a79722c34998d8ff3fe28e84beb528977a5a382cbf8c8fd23b94883",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent/workload.py": "0856314f0681773ed95a1b0cf3c51ead122dd4679e567d1c06998175676001e0",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/__init__.py": "1cddd405df990022753b214df6c07e916856234fe7499939ac581f9b0ac25151",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/backend.py": "bc743c14178dbe30ab705dc790db20fc7b045e4c30395e2488da21ab6266834d",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/build.py": "2c9589c5ca55301aeec6d150415e6811790f6eb8df1c77180569ea4db6639153",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/config.py": "d7e19a8dac41b411a1121e1a197892f36c2d1c29d75f1eec4e38e88b2c72d5c4",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/docker.py": "ca136e7aad6bec467b89ff8f8da12987b2e767629c12741799aa50c2a883770a",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/extension.py": "bbccd0e90e9384d9f1a68a448ff73e00dcc940b4b025bd10e23eefff5e6716be",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/integration.py": "67f3edb6f319482a2f94fe4617184e41bd59344360e84d0e08aea4b42cc794fc",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/native/__init__.py": "436d3b07640f4035dab783a4c540cd69fe20e8ece532db8ce22d1cc429db8d85",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/native/context.py": "565825b030ac46eb6b30826b8a15502ce1b65a23cc44f18bbf2af8f6316dd335",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/native/features.py": "7d333b400744fcc13c68838585832a0c9efaaebd418c158e1193ba50fd4db6cf",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/native/filters.py": "f769c72a1b8f62c32258ceb5b1136aaa3fd6bbe25f9790bbbf8a4a1edca3dfe3",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/native/sequential.py": "650b8276c4096b5b8b56150e60daa3a8b3bafc8c92e37e316d8cd9f1bfc125cf",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/native/trace.py": "a9f99048fd3b8339aafd4f4b6e5bb09eaa1e67c10d307a510f9dabbdd51384e7",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/native/transport.py": "c6d8cd9c707e5acdef982eb9ebc057ee9b77fd1a057599ec485b1d3fbcbf35f7",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/prepared.py": "b8e6bbec82935f6c6f27060f5f454d7d74464e8778d9a63393cc2c5623d8c27c",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/profiles.py": "607cb5674e900d5963b1d77dd741dcfb1fe8226cff00bbbcf0bb6efa44318a86",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/security.py": "080690fd34fa6e280c51bfbb6ae433a3f305aaff3c6265d94e5330af43aad726",
+    "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1/frozen/vendor/fannagent_pgvector/setup.py": "1609b50ddb1de21c9de806a69ab6fdeab1df784e85b387c9810c512fa0b6c27d"
+  },
+  "status": "design_frozen_implementation_and_native_unassessed",
+  "stream_caps": {
+    "canonical_component_calls": 247287,
+    "encoding_allowance_scope": "Named per-row intermediates/coalescer, not a measured or universal process-memory bound",
+    "encoding_working_storage_design_allowance_bytes": 1048576,
+    "fields_bytes_max": 16384,
+    "native_rows": 247286,
+    "pending_buffer_bytes_max": 65536,
+    "row_bytes_max": 65536,
+    "summary_artifact_bytes_max": 65536,
+    "total_stream_bytes_max": 17179869184
+  },
+  "timezone": "America/New_York",
+  "unmeasured": [
+    "Per-allocation attribution",
+    "Serialized document length",
+    "Memory saving from this remedy",
+    "CPU/runtime cost at full size",
+    "Whether unchanged 28-GiB peak ceiling/no-event gate will pass"
+  ]
+}

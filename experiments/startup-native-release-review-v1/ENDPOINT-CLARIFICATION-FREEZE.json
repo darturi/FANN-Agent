@@ -1,0 +1,5 @@
+{
+  "parent_sha256": "a88ddc21f00200ccebb23e23194b259f32ddf13b6adfb69b5eb2812d7605609e",
+  "schema": "a3.release.endpoint.clarification.v1",
+  "scope": "The frozen owned-group shutdown shares host post240; adapter records post entry before shutdown, and host uses that same start, never a fresh240. Every target spawn rechecks missing admission/controller. No added time or authority."
+}

@@ -1,0 +1,4400 @@
+{
+  "allocations_completed": 3,
+  "archive": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-execution-cost-attribution-v1/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi.tar.gz",
+  "archive_checksum_verified": true,
+  "archive_sha256": "0c4dc6e995891a488de502cd11ffaed549a65a233064decf4a692fe638704d3e",
+  "backend_reference_searches": 83763,
+  "block_statuses": {
+    "0": {
+      "backend_searches": 27921,
+      "block": 0,
+      "confirmation_queries": 0,
+      "control_installations": 2340,
+      "control_sql_note": "Eviction installs counted separately; other SQL statements are not counted.",
+      "development_cases": 600,
+      "diagnostic_cases": 180,
+      "diagnostic_pairs": 2160,
+      "elapsed_seconds": 1370.5771217681468,
+      "independent_vectors": 200,
+      "operations": {
+        "exact_reference": 600,
+        "native": 12300,
+        "native_bypass": 7500,
+        "policy": 6112,
+        "policy_trace": 1409
+      },
+      "provider_calls": 0,
+      "retained_pairs": 7200,
+      "status": "complete"
+    },
+    "1": {
+      "backend_searches": 27921,
+      "block": 1,
+      "confirmation_queries": 0,
+      "control_installations": 2340,
+      "control_sql_note": "Eviction installs counted separately; other SQL statements are not counted.",
+      "development_cases": 600,
+      "diagnostic_cases": 180,
+      "diagnostic_pairs": 2160,
+      "elapsed_seconds": 1469.6073194406927,
+      "independent_vectors": 200,
+      "operations": {
+        "exact_reference": 600,
+        "native": 12300,
+        "native_bypass": 7500,
+        "policy": 6112,
+        "policy_trace": 1409
+      },
+      "provider_calls": 0,
+      "retained_pairs": 7200,
+      "status": "complete"
+    },
+    "2": {
+      "backend_searches": 27921,
+      "block": 2,
+      "confirmation_queries": 0,
+      "control_installations": 2340,
+      "control_sql_note": "Eviction installs counted separately; other SQL statements are not counted.",
+      "development_cases": 600,
+      "diagnostic_cases": 180,
+      "diagnostic_pairs": 2160,
+      "elapsed_seconds": 1466.8629953218624,
+      "independent_vectors": 200,
+      "operations": {
+        "exact_reference": 600,
+        "native": 12300,
+        "native_bypass": 7500,
+        "policy": 6112,
+        "policy_trace": 1409
+      },
+      "provider_calls": 0,
+      "retained_pairs": 7200,
+      "status": "complete"
+    }
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20261019,
+    "unit": "vector group; all filters, blocks and repetitions clustered"
+  },
+  "campaign": "reviews-execution-cost-v1-20261023T044408Z.a08qpwdi",
+  "candidate_selection_performed": false,
+  "canonical_acceptance_established": false,
+  "confirmation_queries": 0,
+  "control_eviction_installations": 7020,
+  "diagnostic_discarded_warmup_pairs": 1620,
+  "diagnostic_independent_vectors": 60,
+  "diagnostic_retained_pairs": 6480,
+  "elapsed_time_is_not_slurm_billing_record": true,
+  "gate_review": {
+    "G1": "pass",
+    "G2": "not_assessed",
+    "M1": false,
+    "M2": false,
+    "M3": false,
+    "reason": "Unprofiled cost components reconcile; function counts and frozen source locate preparation, repeated pre-cache policy work, and query normalization. Database wait remains explicitly unresolved at server/transport level.",
+    "reviewer": "Codex analysis"
+  },
+  "independent_vectors": 200,
+  "local_analysis": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-execution-cost-attribution-v1/analysis-local/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi",
+  "local_analysis_files_sha256": {
+    "attribution.md": "fd60acfac788791d80e5caf2299a37300d62375d683713098c42abdf343bdefa",
+    "performance.json": "eb450b214893e92035c44abf8bb57ebe042538b1697a0bc8559f7c930ec20509",
+    "report.txt": "0bffa9450067f25ad4154d735b34dbcf4252fddfec70ae0c9cb696d5b2a02c80",
+    "verification.json": "5ea1b92bc2f4f7e4074ed3f98c85a968958dedded33a2a7a3d03aa36a15b2fd9"
+  },
+  "main_discarded_warmup_pairs": 5400,
+  "main_retained_pairs": 21600,
+  "next_decision": "Define prospective P2 cost/resource limits and qualify one backend-owned prepared-policy lifecycle revision; retain frozen policies, cold activation charges and native compatibility checks. Measure before claiming savings.",
+  "original_selective_episode_resumed": false,
+  "package_manifest_sha256": "4c2f475664784b1851b1274a5c696bccbc55ee41c659a469c3643eb0ca0109c0",
+  "per_block_primary_reports": {
+    "0": {
+      "candidate": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.1769476296666666,
+              1.5902779163750007
+            ],
+            "gap_ms": 1.3825180133333332,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.12812604279421416,
+              0.16758002916945314
+            ],
+            "native_ms": 8.4519791,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              0.9526315662499997,
+              1.3643594945833337
+            ],
+            "outer_gap_ms": 1.158084565,
+            "pairs": 600,
+            "policy_ms": 9.834497113333333,
+            "policy_recall": 0.9901666666666668,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.002051735,
+              "gap_ci95": [
+                1.018604101250001,
+                1.6665041912500003
+              ],
+              "gap_ms": 1.3405219199999998,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.08224832460084985,
+                0.1444401238985111
+              ],
+              "native_ms": 9.252621985000001,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                0.6752369686250002,
+                1.3221872751250003
+              ],
+              "outer_gap_ms": 0.997073475,
+              "pairs": 200,
+              "policy_ms": 10.593143905,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.4601040729999997,
+                1.6602648685000005
+              ],
+              "gap_ms": 1.561816615,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.21762963511005962,
+                0.24773258353141392
+              ],
+              "native_ms": 6.4167342099999995,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.4827066471249994,
+                1.7020872738749993
+              ],
+              "outer_gap_ms": 1.59340878,
+              "pairs": 200,
+              "policy_ms": 7.978550825,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.00206477,
+              "gap_ci95": [
+                0.9092559961250004,
+                1.5792314482499994
+              ],
+              "gap_ms": 1.2452155050000002,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.06611356409662729,
+                0.128257413335206
+              ],
+              "native_ms": 9.686581105,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                0.5486663023749999,
+                1.217817213375
+              ],
+              "outer_gap_ms": 0.8837714399999999,
+              "pairs": 200,
+              "policy_ms": 10.931796610000001,
+              "policy_recall": 0.991,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              -0.7910749170416664,
+              -0.47636913841666645
+            ],
+            "gap_ms": -0.6324926449999999,
+            "independent_vectors": 200,
+            "latency_improved": true,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              -0.1676890341654596,
+              -0.11156581212260035
+            ],
+            "native_ms": 6.150229496111111,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              -0.9891464549305556,
+              -0.6759374018888891
+            ],
+            "outer_gap_ms": -0.8316570672222222,
+            "pairs": 1800,
+            "policy_ms": 5.517736851111111,
+            "policy_recall": 0.9901666666666666,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.001954903333333333,
+              "gap_ci95": [
+                -1.3041984946666667,
+                -0.794566275625
+              ],
+              "gap_ms": -1.0475764433333332,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.2709229926081248,
+                -0.18362771718167847
+              ],
+              "native_ms": 6.439418165,
+              "native_recall": 0.9934999999999998,
+              "outer_gap_ci95": [
+                -1.6041203756666653,
+                -1.0974639012916663
+              ],
+              "outer_gap_ms": -1.3491446566666667,
+              "pairs": 600,
+              "policy_ms": 5.391841721666666,
+              "policy_recall": 0.9934999999999998,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.11170300579166668,
+                0.1396671423333334
+              ],
+              "gap_ms": 0.12570323333333333,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.021283558180833575,
+                0.02567845593370232
+              ],
+              "native_ms": 5.402256846666668,
+              "native_recall": 0.9859999999999999,
+              "outer_gap_ci95": [
+                0.12451484287499985,
+                0.1652807275833332
+              ],
+              "outer_gap_ms": 0.14277722666666665,
+              "pairs": 600,
+              "policy_ms": 5.52796008,
+              "policy_recall": 0.9859999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0019725033333333336,
+              "gap_ci95": [
+                -1.2183879079166657,
+                -0.7407251602916669
+              ],
+              "gap_ms": -0.9756047250000001,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.25743449471907454,
+                -0.17277887364689878
+              ],
+              "native_ms": 6.609013476666666,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                -1.5319137219583334,
+                -1.0554627462083335
+              ],
+              "outer_gap_ms": -1.2886037716666667,
+              "pairs": 600,
+              "policy_ms": 5.633408751666667,
+              "policy_recall": 0.9909999999999999,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "matched-continue": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              3.5767208182083343,
+              3.7717570019999997
+            ],
+            "gap_ms": 3.6741573366666667,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.34542119008491673,
+              0.3692314229656833
+            ],
+            "native_ms": 8.386026485,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              3.338919447041667,
+              3.5345093028750028
+            ],
+            "outer_gap_ms": 3.436313611666667,
+            "pairs": 600,
+            "policy_ms": 12.060183821666666,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.00311516,
+              "gap_ci95": [
+                4.4364338596250015,
+                4.808985164125001
+              ],
+              "gap_ms": 4.622002515,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.398081767560094,
+                0.43471005689961434
+              ],
+              "native_ms": 9.218967215,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                4.083053269875,
+                4.4531352835
+              ],
+              "outer_gap_ms": 4.268058765000001,
+              "pairs": 200,
+              "policy_ms": 13.84096973,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.568605458625001,
+                1.765974718625
+              ],
+              "gap_ms": 1.6668691549999999,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.2299862206173675,
+                0.2593149858606401
+              ],
+              "native_ms": 6.33243254,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.5791687860000005,
+                1.77972679375
+              ],
+              "outer_gap_ms": 1.678391475,
+              "pairs": 200,
+              "policy_ms": 7.999301695000001,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.00311633,
+              "gap_ci95": [
+                4.529533333750002,
+                4.938175016249999
+              ],
+              "gap_ms": 4.733600340000001,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.3900078821353181,
+                0.4298025783408764
+              ],
+              "native_ms": 9.606679699999999,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                4.160158841499995,
+                4.566801601999997
+              ],
+              "outer_gap_ms": 4.362490595000001,
+              "pairs": 200,
+              "policy_ms": 14.34028004,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.0160631613055555,
+              1.0765808600000002
+            ],
+            "gap_ms": 1.0454932300000002,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.1533694409639931,
+              0.1607011077408804
+            ],
+            "native_ms": 5.889866812777778,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              0.8089118365000001,
+              0.8663889274166671
+            ],
+            "outer_gap_ms": 0.8370655005555555,
+            "pairs": 1800,
+            "policy_ms": 6.935360042777778,
+            "policy_recall": 0.9903333333333333,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.002931903333333333,
+              "gap_ci95": [
+                1.3953036189999992,
+                1.4934504396250003
+              ],
+              "gap_ms": 1.4429906016666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.21470010288379904,
+                0.22680500148555344
+              ],
+              "native_ms": 6.001959556666668,
+              "native_recall": 0.9934999999999998,
+              "outer_gap_ci95": [
+                1.0821166131666666,
+                1.1789117860833331
+              ],
+              "outer_gap_ms": 1.1295677816666667,
+              "pairs": 600,
+              "policy_ms": 7.444950158333334,
+              "policy_recall": 0.9934999999999998,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.12404165470833342,
+                0.15326045141666667
+              ],
+              "gap_ms": 0.13816431999999998,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.02325334192336079,
+                0.02748024615373217
+              ],
+              "native_ms": 5.354567985,
+              "native_recall": 0.9859999999999999,
+              "outer_gap_ci95": [
+                0.1349189717916667,
+                0.1645405124999999
+              ],
+              "outer_gap_ms": 0.14922248000000002,
+              "pairs": 600,
+              "policy_ms": 5.4927323050000005,
+              "policy_recall": 0.9859999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0029374,
+              "gap_ci95": [
+                1.4898840608333328,
+                1.625425950208334
+              ],
+              "gap_ms": 1.5553247683333333,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.21843831296433963,
+                0.23155839554718596
+              ],
+              "native_ms": 6.313072896666667,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                1.168725358041666,
+                1.3005222007916668
+              ],
+              "outer_gap_ms": 1.2324062400000002,
+              "pairs": 600,
+              "policy_ms": 7.868397665000001,
+              "policy_recall": 0.9914999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "routed-native": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.3150813271666666,
+              1.4553020867083326
+            ],
+            "gap_ms": 1.3844122,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.18955434972715848,
+              0.21025929032889676
+            ],
+            "native_ms": 6.6847161,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              1.3203920117916665,
+              1.4618083195833333
+            ],
+            "outer_gap_ms": 1.390334785,
+            "pairs": 600,
+            "policy_ms": 8.0691283,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.2902240392500002,
+                1.5307858194999997
+              ],
+              "gap_ms": 1.4114384000000002,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.1904285808102808,
+                0.2243861180341178
+              ],
+              "native_ms": 6.571554185,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                1.298266566625,
+                1.5416943682499988
+              ],
+              "outer_gap_ms": 1.42058832,
+              "pairs": 200,
+              "policy_ms": 7.982992585000001,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.205793360625,
+                1.4248695705000003
+              ],
+              "gap_ms": 1.3145092500000002,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.18198031945753587,
+                0.21423931236060512
+              ],
+              "native_ms": 6.54105305,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.2112126056249992,
+                1.434013511625
+              ],
+              "outer_gap_ms": 1.32189377,
+              "pairs": 200,
+              "policy_ms": 7.8555623,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.286914969625,
+                1.580338216875
+              ],
+              "gap_ms": 1.42728895,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.17631916097367153,
+                0.21095255063431875
+              ],
+              "native_ms": 6.941541065,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                1.2863361261250006,
+                1.5826099306250008
+              ],
+              "outer_gap_ms": 1.428522265,
+              "pairs": 200,
+              "policy_ms": 8.368830015,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              0.10642636350000001,
+              0.12458704501388888
+            ],
+            "gap_ms": 0.11558136555555557,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.02010448926778531,
+              0.023136900817229755
+            ],
+            "native_ms": 5.456718296666667,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              0.11527557940277774,
+              0.13382270749999997
+            ],
+            "outer_gap_ms": 0.12461177888888889,
+            "pairs": 1800,
+            "policy_ms": 5.572299662222222,
+            "policy_recall": 0.9903333333333333,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.07937196012500002,
+                0.10864563279166667
+              ],
+              "gap_ms": 0.09447968500000002,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.01603032257519615,
+                0.02044372609662005
+              ],
+              "native_ms": 5.366397273333333,
+              "native_recall": 0.9934999999999998,
+              "outer_gap_ci95": [
+                0.08711064204166673,
+                0.11701828375
+              ],
+              "outer_gap_ms": 0.10262066,
+              "pairs": 600,
+              "policy_ms": 5.460876958333333,
+              "policy_recall": 0.9934999999999998,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.09897447558333332,
+                0.13431356900000002
+              ],
+              "gap_ms": 0.11701525166666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.01955159097635361,
+                0.025544688718025628
+              ],
+              "native_ms": 5.422569776666666,
+              "native_recall": 0.9859999999999999,
+              "outer_gap_ci95": [
+                0.10867590575,
+                0.14452241299999996
+              ],
+              "outer_gap_ms": 0.12699660833333332,
+              "pairs": 600,
+              "policy_ms": 5.539585028333333,
+              "policy_recall": 0.9859999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.11990958970833333,
+                0.15180781937500004
+              ],
+              "gap_ms": 0.13524916000000003,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.02168908012428677,
+                0.026409733578744914
+              ],
+              "native_ms": 5.58118784,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                0.1285180971249999,
+                0.16104908370833343
+              ],
+              "outer_gap_ms": 0.1442180683333333,
+              "pairs": 600,
+              "policy_ms": 5.716437,
+              "policy_recall": 0.9914999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      }
+    },
+    "1": {
+      "candidate": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.7766963329166672,
+              2.1657013420000006
+            ],
+            "gap_ms": 1.9741066466666666,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.20675895055227828,
+              0.24469032496683096
+            ],
+            "native_ms": 7.762644088333333,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              1.5278472072916656,
+              1.9157383185416659
+            ],
+            "outer_gap_ms": 1.7244764066666667,
+            "pairs": 600,
+            "policy_ms": 9.736750735,
+            "policy_recall": 0.9901666666666668,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.002465685,
+              "gap_ci95": [
+                1.732950084625,
+                2.274481404375
+              ],
+              "gap_ms": 2.008085635,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.1876789421800546,
+                0.24061866439657098
+              ],
+              "native_ms": 8.107740455,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                1.363558108625,
+                1.9053308886250002
+              ],
+              "outer_gap_ms": 1.637827145,
+              "pairs": 200,
+              "policy_ms": 10.115826089999999,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.68731329475,
+                2.0183824261250014
+              ],
+              "gap_ms": 1.8513329450000002,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.23354942611810137,
+                0.27310780313237454
+              ],
+              "native_ms": 6.650919954999999,
+              "native_recall": 0.9860000000000001,
+              "outer_gap_ci95": [
+                1.6932249995000002,
+                2.0243775459999984
+              ],
+              "outer_gap_ms": 1.85750641,
+              "pairs": 200,
+              "policy_ms": 8.5022529,
+              "policy_recall": 0.9860000000000001,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0024958000000000003,
+              "gap_ci95": [
+                1.7663461268750003,
+                2.3615867566249995
+              ],
+              "gap_ms": 2.0629013599999997,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.18106491693894539,
+                0.2379988883212411
+              ],
+              "native_ms": 8.529271855000001,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                1.381117128874999,
+                1.9773715967499996
+              ],
+              "outer_gap_ms": 1.678095665,
+              "pairs": 200,
+              "policy_ms": 10.592173215000003,
+              "policy_recall": 0.9910000000000001,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              -0.436166545527778,
+              -0.16585022698611113
+            ],
+            "gap_ms": -0.2987450738888889,
+            "independent_vectors": 200,
+            "latency_improved": true,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              -0.10287049252673547,
+              -0.05522684130744791
+            ],
+            "native_ms": 6.2369488622222224,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              -0.6623374852222224,
+              -0.39351129225
+            ],
+            "outer_gap_ms": -0.5252248061111111,
+            "pairs": 1800,
+            "policy_ms": 5.938203788333333,
+            "policy_recall": 0.9901666666666666,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.0023788616666666667,
+              "gap_ci95": [
+                -0.7186486811666666,
+                -0.31739650924999996
+              ],
+              "gap_ms": -0.5179064683333333,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.1680657257793839,
+                -0.0968187561877405
+              ],
+              "native_ms": 6.230927168333333,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                -1.056254717916667,
+                -0.6569513292916664
+              ],
+              "outer_gap_ms": -0.8563017533333334,
+              "pairs": 600,
+              "policy_ms": 5.7130207,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.11572247208333329,
+                0.13740984933333336
+              ],
+              "gap_ms": 0.12660644833333332,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.019483330728536155,
+                0.02318983695659127
+              ],
+              "native_ms": 6.050222636666667,
+              "native_recall": 0.9859999999999999,
+              "outer_gap_ci95": [
+                0.12688007325000003,
+                0.14873425112499994
+              ],
+              "outer_gap_ms": 0.13787622833333335,
+              "pairs": 600,
+              "policy_ms": 6.176829085,
+              "policy_recall": 0.9859999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.002380856666666667,
+              "gap_ci95": [
+                -0.7111838613333336,
+                -0.29980777475
+              ],
+              "gap_ms": -0.5049352016666667,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.161240406073657,
+                -0.09033467379094798
+              ],
+              "native_ms": 6.429696781666666,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                -1.0623749360416668,
+                -0.653745411791667
+              ],
+              "outer_gap_ms": -0.8572488933333335,
+              "pairs": 600,
+              "policy_ms": 5.924761579999999,
+              "policy_recall": 0.991,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "matched-continue": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              3.7526702010833346,
+              3.9131492542499986
+            ],
+            "gap_ms": 3.832365665,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.39106302572245527,
+              0.4143873766886263
+            ],
+            "native_ms": 7.759573456666667,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              3.5007574843333336,
+              3.6606664811666674
+            ],
+            "outer_gap_ms": 3.58019789,
+            "pairs": 600,
+            "policy_ms": 11.591939121666666,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.0037067700000000003,
+              "gap_ci95": [
+                4.573204330125,
+                4.860403781374997
+              ],
+              "gap_ms": 4.717214835,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.46152928134692955,
+                0.4972638186542423
+              ],
+              "native_ms": 8.112169054999999,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                4.199415092749999,
+                4.486792989499997
+              ],
+              "outer_gap_ms": 4.344027909999999,
+              "pairs": 200,
+              "policy_ms": 12.829383889999999,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.7150844410000003,
+                2.0073643667499987
+              ],
+              "gap_ms": 1.85924487,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.23926698116563522,
+                0.2754754433266107
+              ],
+              "native_ms": 6.5965685800000005,
+              "native_recall": 0.9860000000000001,
+              "outer_gap_ci95": [
+                1.7218329049999992,
+                2.0138645492499996
+              ],
+              "outer_gap_ms": 1.865772005,
+              "pairs": 200,
+              "policy_ms": 8.455813449999999,
+              "policy_recall": 0.9860000000000001,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0037680950000000004,
+              "gap_ci95": [
+                4.766371700375002,
+                5.0819065018749985
+              ],
+              "gap_ms": 4.920637289999999,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.4534093388842268,
+                0.48676520022920194
+              ],
+              "native_ms": 8.569982735000002,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                4.377118784874999,
+                4.692294636874997
+              ],
+              "outer_gap_ms": 4.5307937549999995,
+              "pairs": 200,
+              "policy_ms": 13.490620025,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.1070148764999994,
+              1.1427009873472225
+            ],
+            "gap_ms": 1.1246792816666666,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.1615327533339594,
+              0.16716918192586153
+            ],
+            "native_ms": 6.155258791666666,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              0.8744934485694444,
+              0.9081805109722226
+            ],
+            "outer_gap_ms": 0.8910845994444443,
+            "pairs": 1800,
+            "policy_ms": 7.279938073333334,
+            "policy_recall": 0.9903333333333333,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.0035395433333333328,
+              "gap_ci95": [
+                1.549817575833333,
+                1.6255417600833337
+              ],
+              "gap_ms": 1.5869772916666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.22990726624506033,
+                0.23920707918025072
+              ],
+              "native_ms": 6.0925687,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                1.2032658044583333,
+                1.275536258916666
+              ],
+              "outer_gap_ms": 1.2385109816666668,
+              "pairs": 600,
+              "policy_ms": 7.679545991666667,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.11970629320833329,
+                0.13719247408333332
+              ],
+              "gap_ms": 0.12874086666666668,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.0202632915358566,
+                0.023187602508648698
+              ],
+              "native_ms": 6.040848891666666,
+              "native_recall": 0.9859999999999999,
+              "outer_gap_ci95": [
+                0.1304274506249999,
+                0.14815499341666657
+              ],
+              "outer_gap_ms": 0.13953581833333334,
+              "pairs": 600,
+              "policy_ms": 6.169589758333333,
+              "policy_recall": 0.9859999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.003566101666666667,
+              "gap_ci95": [
+                1.6300740502500008,
+                1.6873939462916672
+              ],
+              "gap_ms": 1.6583196866666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.23196240901740744,
+                0.2409409644925978
+              ],
+              "native_ms": 6.332358783333334,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                1.2681310380416662,
+                1.3231593867916667
+              ],
+              "outer_gap_ms": 1.2952069983333334,
+              "pairs": 600,
+              "policy_ms": 7.99067847,
+              "policy_recall": 0.9914999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "routed-native": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.4715519575000007,
+              1.6737612833749993
+            ],
+            "gap_ms": 1.5718855416666668,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.20734941989401032,
+              0.2326200458220161
+            ],
+            "native_ms": 6.658823108333333,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              1.4876109724583333,
+              1.690670862291668
+            ],
+            "outer_gap_ms": 1.58790976,
+            "pairs": 600,
+            "policy_ms": 8.23070865,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.3360964453750002,
+                1.6722454206250004
+              ],
+              "gap_ms": 1.504729095,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.19449695089620472,
+                0.23640018118139347
+              ],
+              "native_ms": 6.612404420000001,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                1.3683543907499995,
+                1.706955257875
+              ],
+              "outer_gap_ms": 1.5377153,
+              "pairs": 200,
+              "policy_ms": 8.117133515,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.4139635891249998,
+                1.7272802618749992
+              ],
+              "gap_ms": 1.568186385,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.20271110649754212,
+                0.24004833502590722
+              ],
+              "native_ms": 6.607699859999999,
+              "native_recall": 0.9860000000000001,
+              "outer_gap_ci95": [
+                1.4232813336249999,
+                1.7368427754999993
+              ],
+              "outer_gap_ms": 1.577573435,
+              "pairs": 200,
+              "policy_ms": 8.175886245000001,
+              "policy_recall": 0.9860000000000001,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.4649795906250003,
+                1.8228142557499998
+              ],
+              "gap_ms": 1.642741145,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.20269633048416766,
+                0.2431730470666756
+              ],
+              "native_ms": 6.756365045,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                1.4716254907500008,
+                1.8273224496250002
+              ],
+              "outer_gap_ms": 1.6484405450000004,
+              "pairs": 200,
+              "policy_ms": 8.39910619,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              0.12045411016666668,
+              0.13881044972222223
+            ],
+            "gap_ms": 0.12956514388888887,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.02025907255987203,
+              0.02321076461082752
+            ],
+            "native_ms": 6.048994118888889,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              0.13259327719444441,
+              0.15484898248611106
+            ],
+            "outer_gap_ms": 0.14326388333333334,
+            "pairs": 1800,
+            "policy_ms": 6.178559262777778,
+            "policy_recall": 0.9903333333333333,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.09935774200000001,
+                0.13366781749999992
+              ],
+              "gap_ms": 0.11653383999999999,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.0172546046468879,
+                0.022376584838844076
+              ],
+              "native_ms": 5.945741895,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                0.11321518370833342,
+                0.16272223550000006
+              ],
+              "outer_gap_ms": 0.13589724166666667,
+              "pairs": 600,
+              "policy_ms": 6.062275735,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.13058444695833343,
+                0.155992658
+              ],
+              "gap_ms": 0.14310106833333333,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.021928461385804898,
+                0.025770056535161928
+              ],
+              "native_ms": 6.050336098333334,
+              "native_recall": 0.9859999999999999,
+              "outer_gap_ci95": [
+                0.14100863349999995,
+                0.16627602049999995
+              ],
+              "outer_gap_ms": 0.153501805,
+              "pairs": 600,
+              "policy_ms": 6.1934371666666665,
+              "policy_recall": 0.9859999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.11417818729166657,
+                0.14577427116666658
+              ],
+              "gap_ms": 0.12906052333333332,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.01911703761936625,
+                0.024087317518225227
+              ],
+              "native_ms": 6.150904363333333,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                0.12528477045833336,
+                0.15726581512500007
+              ],
+              "outer_gap_ms": 0.14039260333333334,
+              "pairs": 600,
+              "policy_ms": 6.279964886666667,
+              "policy_recall": 0.9914999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "candidate": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.8390347685000001,
+              2.1736557745
+            ],
+            "gap_ms": 2.006713485,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.22483943240511517,
+              0.2601442946678254
+            ],
+            "native_ms": 7.309979544999999,
+            "native_recall": 0.9903333333333332,
+            "outer_gap_ci95": [
+              1.5934805578333344,
+              1.9281223018749996
+            ],
+            "outer_gap_ms": 1.7610311183333331,
+            "pairs": 600,
+            "policy_ms": 9.31669303,
+            "policy_recall": 0.9901666666666665,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.00244729,
+              "gap_ci95": [
+                1.902992594375,
+                2.4201643272499993
+              ],
+              "gap_ms": 2.1597071899999998,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.21946206869353665,
+                0.2745877062433727
+              ],
+              "native_ms": 7.637514544999999,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                1.5383502726250005,
+                2.05462966675
+              ],
+              "outer_gap_ms": 1.7946313199999997,
+              "pairs": 200,
+              "policy_ms": 9.797221734999999,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.486140210875,
+                1.7841190342500022
+              ],
+              "gap_ms": 1.6338414899999998,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.2169797714826516,
+                0.2566080276175318
+              ],
+              "native_ms": 6.474620445,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.4926901748750003,
+                1.7914684273749997
+              ],
+              "outer_gap_ms": 1.64144622,
+              "pairs": 200,
+              "policy_ms": 8.108461935000001,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.00247228,
+              "gap_ci95": [
+                1.9607839666249993,
+                2.4958117098750003
+              ],
+              "gap_ms": 2.2265917749999997,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.21658457990572882,
+                0.2702749833335485
+              ],
+              "native_ms": 7.817803644999999,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                1.5819767825,
+                2.1164404713750007
+              ],
+              "outer_gap_ms": 1.847015815,
+              "pairs": 200,
+              "policy_ms": 10.044395419999999,
+              "policy_recall": 0.991,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              -0.36118142477777787,
+              -0.11453699284722224
+            ],
+            "gap_ms": -0.23692370666666665,
+            "independent_vectors": 200,
+            "latency_improved": true,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              -0.09050250125687455,
+              -0.045683779196721036
+            ],
+            "native_ms": 6.017787052222222,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              -0.5906699945694446,
+              -0.3467962849166667
+            ],
+            "outer_gap_ms": -0.4671417711111111,
+            "pairs": 1800,
+            "policy_ms": 5.780863345555556,
+            "policy_recall": 0.9901666666666668,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.0024025366666666666,
+              "gap_ci95": [
+                -0.6455448720833333,
+                -0.2627354441250001
+              ],
+              "gap_ms": -0.453799595,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.15324877054567845,
+                -0.08335477975733961
+              ],
+              "native_ms": 5.9984435,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                -0.9961306633750003,
+                -0.618016643625
+              ],
+              "outer_gap_ms": -0.80536924,
+              "pairs": 600,
+              "policy_ms": 5.544643905,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.1255790108333333,
+                0.14033600670833332
+              ],
+              "gap_ms": 0.13309053166666668,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.021603874002078173,
+                0.024090224268594734
+              ],
+              "native_ms": 5.930624823333333,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                0.13739033737500012,
+                0.15203003720833325
+              ],
+              "outer_gap_ms": 0.14482212,
+              "pairs": 600,
+              "policy_ms": 6.063715355,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.002378608333333333,
+              "gap_ci95": [
+                -0.5775566827499999,
+                -0.19883087295833335
+              ],
+              "gap_ms": -0.39006205666666666,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.14198049079324732,
+                -0.07363726039985481
+              ],
+              "native_ms": 6.1242928333333335,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                -0.9269672691666669,
+                -0.5505682661250001
+              ],
+              "outer_gap_ms": -0.7408781933333333,
+              "pairs": 600,
+              "policy_ms": 5.734230776666666,
+              "policy_recall": 0.991,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "matched-continue": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              3.7014203506666687,
+              3.8727368742083326
+            ],
+            "gap_ms": 3.7855297616666665,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.40364722166537526,
+              0.4284733082317091
+            ],
+            "native_ms": 7.380925683333333,
+            "native_recall": 0.9903333333333332,
+            "outer_gap_ci95": [
+              3.4442204873333315,
+              3.61661792
+            ],
+            "outer_gap_ms": 3.52982148,
+            "pairs": 600,
+            "policy_ms": 11.166455445000002,
+            "policy_recall": 0.9903333333333332,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.0036615999999999997,
+              "gap_ci95": [
+                4.558059825749999,
+                4.797887280999998
+              ],
+              "gap_ms": 4.67473094,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.47948488747174106,
+                0.5125220842115145
+              ],
+              "native_ms": 7.673074165,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                4.160011668499999,
+                4.413254492125
+              ],
+              "outer_gap_ms": 4.2852398449999995,
+              "pairs": 200,
+              "policy_ms": 12.347805104999999,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.6511436706250004,
+                1.9949629143749994
+              ],
+              "gap_ms": 1.8248359799999998,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.23850553859426055,
+                0.28194977171070024
+              ],
+              "native_ms": 6.44611735,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.655842903375001,
+                1.9991579845000014
+              ],
+              "outer_gap_ms": 1.829629995,
+              "pairs": 200,
+              "policy_ms": 8.27095333,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0036655699999999995,
+              "gap_ci95": [
+                4.726070848875002,
+                4.991724033625
+              ],
+              "gap_ms": 4.857022365000001,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.4741768099577051,
+                0.5073379181887301
+              ],
+              "native_ms": 8.023585535,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                4.343608913625001,
+                4.6087204147500005
+              ],
+              "outer_gap_ms": 4.4745946,
+              "pairs": 200,
+              "policy_ms": 12.8806079,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.0759848046944447,
+              1.10517902425
+            ],
+            "gap_ms": 1.090676103888889,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.16227383649254654,
+              0.16809289420644438
+            ],
+            "native_ms": 5.978218807777777,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              0.8453188120138888,
+              0.8730022513194441
+            ],
+            "outer_gap_ms": 0.8591923916666667,
+            "pairs": 1800,
+            "policy_ms": 7.068894911666668,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.003510973333333333,
+              "gap_ci95": [
+                1.499025615208334,
+                1.550601034166668
+              ],
+              "gap_ms": 1.5242765966666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.2283812808012804,
+                0.2374008851806145
+              ],
+              "native_ms": 5.935830623333333,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                1.1550647339999995,
+                1.2042778585416665
+              ],
+              "outer_gap_ms": 1.1790295816666667,
+              "pairs": 600,
+              "policy_ms": 7.46010722,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.1331282524166667,
+                0.15308932658333332
+              ],
+              "gap_ms": 0.14176846833333331,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.022821536096428223,
+                0.025557600449215585
+              ],
+              "native_ms": 5.925757093333333,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                0.1446545423333333,
+                0.1642281484166667
+              ],
+              "outer_gap_ms": 0.15323493500000002,
+              "pairs": 600,
+              "policy_ms": 6.067525561666667,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0035385416666666664,
+              "gap_ci95": [
+                1.579473471041667,
+                1.6331008901666673
+              ],
+              "gap_ms": 1.6059832466666666,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.2337939435817195,
+                0.24268357956551298
+              ],
+              "native_ms": 6.073068706666667,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                1.220149309916667,
+                1.2711809911666658
+              ],
+              "outer_gap_ms": 1.2453126583333332,
+              "pairs": 600,
+              "policy_ms": 7.679051953333334,
+              "policy_recall": 0.9914999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "routed-native": {
+        "activation-cold": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.468669185958334,
+              1.641788617958333
+            ],
+            "gap_ms": 1.5537891583333334,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.21499048348490302,
+              0.23844416110455144
+            ],
+            "native_ms": 6.352652418333334,
+            "native_recall": 0.9903333333333332,
+            "outer_gap_ci95": [
+              1.4850435824583337,
+              1.6617799673333329
+            ],
+            "outer_gap_ms": 1.571531445,
+            "pairs": 600,
+            "policy_ms": 7.9064415766666665,
+            "policy_recall": 0.9903333333333332,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.3082800717500003,
+                1.6265576155000006
+              ],
+              "gap_ms": 1.46800005,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.19815611745137127,
+                0.2413934180580425
+              ],
+              "native_ms": 6.341238364999999,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                1.3188888879999994,
+                1.6373281443749996
+              ],
+              "outer_gap_ms": 1.4792556300000002,
+              "pairs": 200,
+              "policy_ms": 7.809238415000001,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.309594525875,
+                1.6026703182499988
+              ],
+              "gap_ms": 1.45577736,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.1954262165351495,
+                0.23192297774606976
+              ],
+              "native_ms": 6.374921275,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.3190144987499994,
+                1.612570699875
+              ],
+              "outer_gap_ms": 1.4658863350000002,
+              "pairs": 200,
+              "policy_ms": 7.830698635000001,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.5933798501250007,
+                1.8834982048750017
+              ],
+              "gap_ms": 1.737590065,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.22879799018141442,
+                0.2637184573716513
+              ],
+              "native_ms": 6.341797615000001,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                1.6156367322500007,
+                1.927474542499999
+              ],
+              "outer_gap_ms": 1.7694523700000002,
+              "pairs": 200,
+              "policy_ms": 8.07938768,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        },
+        "reused-warm": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              0.11627843290277781,
+              0.12607998347222216
+            ],
+            "gap_ms": 0.12142631777777779,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.020235494625704238,
+              0.022046738960096037
+            ],
+            "native_ms": 5.905640316111111,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              0.12709929894444447,
+              0.14144324026388888
+            ],
+            "outer_gap_ms": 0.13387732833333335,
+            "pairs": 1800,
+            "policy_ms": 6.0270666338888885,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.08954878975000005,
+                0.11046142716666664
+              ],
+              "gap_ms": 0.10067720166666672,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.01641242128175761,
+                0.019597678410562983
+              ],
+              "native_ms": 5.823327606666667,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                0.09794502908333329,
+                0.11901428429166662
+              ],
+              "outer_gap_ms": 0.10913350500000002,
+              "pairs": 600,
+              "policy_ms": 5.924004808333334,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.12572459900000005,
+                0.14103129633333328
+              ],
+              "gap_ms": 0.1340111766666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.02166725690656417,
+                0.0241716399771785
+              ],
+              "native_ms": 5.9631167566666665,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                0.1359350787083333,
+                0.1513451446666666
+              ],
+              "outer_gap_ms": 0.14413612833333334,
+              "pairs": 600,
+              "policy_ms": 6.097127933333333,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.12367725441666662,
+                0.13516912916666665
+              ],
+              "gap_ms": 0.129590575,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.021272660531528036,
+                0.023441736857093165
+              ],
+              "native_ms": 5.930476585,
+              "native_recall": 0.9914999999999999,
+              "outer_gap_ci95": [
+                0.13594149887499998,
+                0.16707922633333325
+              ],
+              "outer_gap_ms": 0.14836235166666667,
+              "pairs": 600,
+              "policy_ms": 6.06006716,
+              "policy_recall": 0.9914999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "primary_reports": {
+    "candidate": {
+      "activation-cold": {
+        "current_quality_and_latency_checks_pass": false,
+        "mean_ann_ms": 7.8896315872222225,
+        "mean_preparation_ms": 1.5589558777777777,
+        "mean_routing_ms": 0.18072616111111112,
+        "statistics": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.6102500905972223,
+              1.9653717639444446
+            ],
+            "gap_ms": 1.7877793816666667,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.18826415250586587,
+              0.22278192626975382
+            ],
+            "native_ms": 7.841534244444444,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              1.3710182366805561,
+              1.7248084123749998
+            ],
+            "outer_gap_ms": 1.5478640300000002,
+            "pairs": 1800,
+            "policy_ms": 9.629313626111111,
+            "policy_recall": 0.9901666666666668,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.00232157,
+              "gap_ci95": [
+                1.5708617434166674,
+                2.099869399916665
+              ],
+              "gap_ms": 1.8361049149999997,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.16557682772371798,
+                0.21772137840287617
+              ],
+              "native_ms": 8.332625661666668,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                1.2117291214999995,
+                1.7398669233750004
+              ],
+              "outer_gap_ms": 1.4765106466666669,
+              "pairs": 600,
+              "policy_ms": 10.168730576666666,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.6005886283333335,
+                1.7637727977916657
+              ],
+              "gap_ms": 1.6823303499999998,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.22978468295778953,
+                0.25243217633208687
+              ],
+              "native_ms": 6.514091536666666,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.6155886772500003,
+                1.7805830937083336
+              ],
+              "outer_gap_ms": 1.697453803333333,
+              "pairs": 600,
+              "policy_ms": 8.196421886666666,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0023442833333333335,
+              "gap_ci95": [
+                1.5618774084166658,
+                2.1205894199583324
+              ],
+              "gap_ms": 1.84490288,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                0.15678627227949612,
+                0.2093555328077024
+              ],
+              "native_ms": 8.677885535,
+              "native_recall": 0.9915000000000002,
+              "outer_gap_ci95": [
+                1.187285651541666,
+                1.7446656188749992
+              ],
+              "outer_gap_ms": 1.46962764,
+              "pairs": 600,
+              "policy_ms": 10.522788415,
+              "policy_recall": 0.991,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "reused-warm": {
+        "current_quality_and_latency_checks_pass": true,
+        "mean_ann_ms": 5.609327288888889,
+        "mean_preparation_ms": 0.0,
+        "mean_routing_ms": 0.13627403944444444,
+        "statistics": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              -0.5275749413703702,
+              -0.25283361371759266
+            ],
+            "gap_ms": -0.3893871418518519,
+            "independent_vectors": 200,
+            "latency_improved": true,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              -0.12006196691858129,
+              -0.07065756740697625
+            ],
+            "native_ms": 6.134988470185186,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              -0.745410912162037,
+              -0.4728385652685184
+            ],
+            "outer_gap_ms": -0.6080078814814815,
+            "pairs": 5400,
+            "policy_ms": 5.745601328333334,
+            "policy_recall": 0.9901666666666668,
+            "recall_delta": -0.00016666666666666663,
+            "recall_delta_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.002245433888888889,
+              "gap_ci95": [
+                -0.8824263835000001,
+                -0.46242077233333334
+              ],
+              "gap_ms": -0.673094168888889,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.19693948371419265,
+                -0.12086378261448212
+              ],
+              "native_ms": 6.222929611111112,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                -1.2118418284861108,
+                -0.7933809923194445
+              ],
+              "outer_gap_ms": -1.0036052166666667,
+              "pairs": 1800,
+              "policy_ms": 5.549835442222222,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.12249227638888889,
+                0.1344622375138888
+              ],
+              "gap_ms": 0.12846673777777778,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.02151347479371349,
+                0.02360994868532173
+              ],
+              "native_ms": 5.794368102222221,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                0.13483385408333337,
+                0.14971023929166669
+              ],
+              "outer_gap_ms": 0.14182519166666668,
+              "pairs": 1800,
+              "policy_ms": 5.92283484,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0022439894444444444,
+              "gap_ci95": [
+                -0.8375867434166671,
+                -0.4146516337083332
+              ],
+              "gap_ms": -0.6235339944444445,
+              "independent_vectors": 200,
+              "latency_improved": true,
+              "layer0_distances": 6860.555,
+              "log_latency_ratio_ci95": [
+                -0.18711446976880286,
+                -0.11255238522745001
+              ],
+              "native_ms": 6.3876676972222235,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                -1.175488485222222,
+                -0.7544146481805554
+              ],
+              "outer_gap_ms": -0.9622436194444444,
+              "pairs": 1800,
+              "policy_ms": 5.7641337027777775,
+              "policy_recall": 0.991,
+              "recall_delta": -0.0004999999999999999,
+              "recall_delta_ci95": [
+                -0.0014999999999999996,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      }
+    },
+    "matched-continue": {
+      "activation-cold": {
+        "current_quality_and_latency_checks_pass": false,
+        "mean_ann_ms": 9.843432700555555,
+        "mean_preparation_ms": 1.579669893888889,
+        "mean_routing_ms": 0.18309020166666667,
+        "statistics": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              3.7105606327916676,
+              3.8178555183472254
+            ],
+            "gap_ms": 3.764017587777778,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.3823274809713651,
+              0.4016362809267888
+            ],
+            "native_ms": 7.842175208333334,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              3.4620830108055567,
+              3.568716405611112
+            ],
+            "outer_gap_ms": 3.515444327222222,
+            "pairs": 1800,
+            "policy_ms": 11.606192796111111,
+            "policy_recall": 0.9903333333333333,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.00349451,
+              "gap_ci95": [
+                4.586146638416668,
+                4.758584005333336
+              ],
+              "gap_ms": 4.671316096666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.45217498089360775,
+                0.47634055380016516
+              ],
+              "native_ms": 8.334736811666666,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                4.213638526916666,
+                4.386092374500004
+              ],
+              "outer_gap_ms": 4.29910884,
+              "pairs": 600,
+              "policy_ms": 13.006052908333332,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.702272440041667,
+                1.863947214208334
+              ],
+              "gap_ms": 1.7836500016666668,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.24258400606148128,
+                0.26618774300564035
+              ],
+              "native_ms": 6.458372823333334,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.709899805458334,
+                1.8716471627083333
+              ],
+              "outer_gap_ms": 1.7912644916666665,
+              "pairs": 600,
+              "policy_ms": 8.242022825000001,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0035166650000000004,
+              "gap_ci95": [
+                4.736722797500004,
+                4.936153423125002
+              ],
+              "gap_ms": 4.837086665,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.44432122418864195,
+                0.4701344348496328
+              ],
+              "native_ms": 8.73341599,
+              "native_recall": 0.9915000000000002,
+              "outer_gap_ci95": [
+                4.355762561958332,
+                4.555283144583334
+              ],
+              "outer_gap_ms": 4.45595965,
+              "pairs": 600,
+              "policy_ms": 13.570502655,
+              "policy_recall": 0.9915000000000002,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "reused-warm": {
+        "current_quality_and_latency_checks_pass": false,
+        "mean_ann_ms": 6.955375022407408,
+        "mean_preparation_ms": 0.0,
+        "mean_routing_ms": 0.13935598685185185,
+        "statistics": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.0718012502129624,
+              1.1024183499722222
+            ],
+            "gap_ms": 1.0869495385185184,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.15946066117562474,
+              0.16500634702543368
+            ],
+            "native_ms": 6.00778147074074,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              0.8480648938518522,
+              0.877106734916667
+            ],
+            "outer_gap_ms": 0.8624474972222222,
+            "pairs": 5400,
+            "policy_ms": 7.094731009259259,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": 0.0033274733333333332,
+              "gap_ci95": [
+                1.492667716819444,
+                1.545002421777779
+              ],
+              "gap_ms": 1.5180814966666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.22528444385001958,
+                0.2337403407622862
+              ],
+              "native_ms": 6.010119626666666,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                1.1583363223611116,
+                1.208261705388889
+              ],
+              "outer_gap_ms": 1.1823694483333334,
+              "pairs": 1800,
+              "policy_ms": 7.528201123333333,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.1300216636944444,
+                0.14295141177777773
+              ],
+              "gap_ms": 0.13622455166666667,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.022705801673381328,
+                0.024784097758144847
+              ],
+              "native_ms": 5.7737246566666665,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                0.14096193986111108,
+                0.15414677245833341
+              ],
+              "outer_gap_ms": 0.14733107777777776,
+              "pairs": 1800,
+              "policy_ms": 5.909949208333334,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": 0.0033473477777777776,
+              "gap_ci95": [
+                1.5778133634722222,
+                1.636680986416667
+              ],
+              "gap_ms": 1.6065425672222222,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": 10174.365,
+              "log_latency_ratio_ci95": [
+                0.22916202374655129,
+                0.23749625734739613
+              ],
+              "native_ms": 6.239500128888889,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                1.229884743527778,
+                1.2867107553055555
+              ],
+              "outer_gap_ms": 1.2576419655555557,
+              "pairs": 1800,
+              "policy_ms": 7.846042696111111,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      }
+    },
+    "routed-native": {
+      "activation-cold": {
+        "current_quality_and_latency_checks_pass": false,
+        "mean_ann_ms": 6.621280810555555,
+        "mean_preparation_ms": 1.2935459200000001,
+        "mean_routing_ms": 0.15393277833333333,
+        "statistics": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              1.4568791091249986,
+              1.5505692212916662
+            ],
+            "gap_ms": 1.5033623,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.20818524555836188,
+              0.22323157703186242
+            ],
+            "native_ms": 6.565397208888889,
+            "native_recall": 0.9903333333333333,
+            "outer_gap_ci95": [
+              1.469825241777778,
+              1.5638434203749991
+            ],
+            "outer_gap_ms": 1.5165919966666666,
+            "pairs": 1800,
+            "policy_ms": 8.06875950888889,
+            "policy_recall": 0.9903333333333333,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.3764010675833331,
+                1.547513821125
+              ],
+              "gap_ms": 1.4613891816666666,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.2024605054644617,
+                0.22660876384682357
+              ],
+              "native_ms": 6.508398989999999,
+              "native_recall": 0.9935,
+              "outer_gap_ci95": [
+                1.3935810765833336,
+                1.5661027824999987
+              ],
+              "outer_gap_ms": 1.4791864166666668,
+              "pairs": 600,
+              "policy_ms": 7.969788171666666,
+              "policy_recall": 0.9935,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.364397283124999,
+                1.5263994530000002
+              ],
+              "gap_ms": 1.446157665,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.20019661097212885,
+                0.22235536173173095
+              ],
+              "native_ms": 6.507891395,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                1.3727130569583328,
+                1.5356449755000006
+              ],
+              "outer_gap_ms": 1.4551178466666663,
+              "pairs": 600,
+              "policy_ms": 7.954049059999999,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                1.517175877958333,
+                1.6878378299583339
+              ],
+              "gap_ms": 1.6025400533333334,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.21044804467498038,
+                0.23171135032016188
+              ],
+              "native_ms": 6.679901241666666,
+              "native_recall": 0.9915000000000002,
+              "outer_gap_ci95": [
+                1.5289722453749994,
+                1.7031602509999995
+              ],
+              "outer_gap_ms": 1.6154717266666665,
+              "pairs": 600,
+              "policy_ms": 8.282441294999998,
+              "policy_recall": 0.9915000000000002,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      },
+      "reused-warm": {
+        "current_quality_and_latency_checks_pass": false,
+        "mean_ann_ms": 5.81010464,
+        "mean_preparation_ms": 0.0,
+        "mean_routing_ms": 0.1158705462962963,
+        "statistics": {
+          "overall": {
+            "all_valid": true,
+            "collection_ms": null,
+            "gap_ci95": [
+              0.11732865710648147,
+              0.12728588387962964
+            ],
+            "gap_ms": 0.12219094240740741,
+            "independent_vectors": 200,
+            "latency_improved": false,
+            "layer0_distances": null,
+            "log_latency_ratio_ci95": [
+              0.020591964750037224,
+              0.022440309477781566
+            ],
+            "native_ms": 5.803784243888889,
+            "native_recall": 0.9903333333333334,
+            "outer_gap_ci95": [
+              0.12824905209722212,
+              0.13999829833796296
+            ],
+            "outer_gap_ms": 0.13391766351851853,
+            "pairs": 5400,
+            "policy_ms": 5.925975186296296,
+            "policy_recall": 0.9903333333333334,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_noninferior": true,
+            "returned_count": 10.0
+          },
+          "per_filter": {
+            "unfiltered": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.09484413734722227,
+                0.11258142226388901
+              ],
+              "gap_ms": 0.10389690888888889,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.01736037169041745,
+                0.020057697424870288
+              ],
+              "native_ms": 5.711822258333334,
+              "native_recall": 0.9934999999999999,
+              "outer_gap_ci95": [
+                0.10525737627777779,
+                0.12719061291666658
+              ],
+              "outer_gap_ms": 0.11588380222222222,
+              "pairs": 1800,
+              "policy_ms": 5.815719167222222,
+              "policy_recall": 0.9934999999999999,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes108": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.12325369784722229,
+                0.1392034449305555
+              ],
+              "gap_ms": 0.13137583222222224,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.02170208962550527,
+                0.024527452789057137
+              ],
+              "native_ms": 5.812007543888889,
+              "native_recall": 0.986,
+              "outer_gap_ci95": [
+                0.1332078285972222,
+                0.14944199897222224
+              ],
+              "outer_gap_ms": 0.14154484722222221,
+              "pairs": 1800,
+              "policy_ms": 5.943383376111112,
+              "policy_recall": 0.986,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            },
+            "votes32": {
+              "all_valid": true,
+              "collection_ms": null,
+              "gap_ci95": [
+                0.12394867280555553,
+                0.13936324509722212
+              ],
+              "gap_ms": 0.13130008611111113,
+              "independent_vectors": 200,
+              "latency_improved": false,
+              "layer0_distances": null,
+              "log_latency_ratio_ci95": [
+                0.021354265938050145,
+                0.023947539198167243
+              ],
+              "native_ms": 5.887522929444444,
+              "native_recall": 0.9915,
+              "outer_gap_ci95": [
+                0.1355940814583333,
+                0.1542083575
+              ],
+              "outer_gap_ms": 0.14432434111111112,
+              "pairs": 1800,
+              "policy_ms": 6.018823015555556,
+              "policy_recall": 0.9915,
+              "recall_delta": 0.0,
+              "recall_delta_ci95": [
+                0.0,
+                0.0
+              ],
+              "recall_noninferior": true,
+              "returned_count": 10.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "profile_summary": {
+    "aggregation": "sum durations/counts over three blocks and all filters; divide by phase invocations, not function invocations; nested inclusive durations must not be added",
+    "arms": {
+      "candidate": {
+        "activation": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/connection.py:479:wait",
+              "function_calls_per_phase_invocation": 2.3333333333333335,
+              "inclusive_ms_per_phase_invocation": 11.21104335925926,
+              "self_ms_per_phase_invocation": 10.940214475925927
+            },
+            {
+              "function": "/usr/local/lib/python3.12/json/encoder.py:205:iterencode",
+              "function_calls_per_phase_invocation": 6.333333333333333,
+              "inclusive_ms_per_phase_invocation": 0.43848522962962977,
+              "self_ms_per_phase_invocation": 0.43848522962962977
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/primitives/policy_tree.py:37:visit",
+              "function_calls_per_phase_invocation": 194.66666666666666,
+              "inclusive_ms_per_phase_invocation": 0.45235946111111114,
+              "self_ms_per_phase_invocation": 0.3535347222222222
+            },
+            {
+              "function": "~:0:<built-in method builtins.format>",
+              "function_calls_per_phase_invocation": 768.0,
+              "inclusive_ms_per_phase_invocation": 0.29330879814814814,
+              "self_ms_per_phase_invocation": 0.29330879814814814
+            },
+            {
+              "function": "~:0:<method 'to_python' of 'pydantic_core._pydantic_core.SchemaSerializer' objects>",
+              "function_calls_per_phase_invocation": 5.0,
+              "inclusive_ms_per_phase_invocation": 0.1984783574074074,
+              "self_ms_per_phase_invocation": 0.1984783574074074
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:118:deepcopy",
+              "function_calls_per_phase_invocation": 191.33333333333334,
+              "inclusive_ms_per_phase_invocation": 0.44278255370370373,
+              "self_ms_per_phase_invocation": 0.1896906518518519
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:996:<genexpr>",
+              "function_calls_per_phase_invocation": 769.0,
+              "inclusive_ms_per_phase_invocation": 0.47824177962962977,
+              "self_ms_per_phase_invocation": 0.18493298148148146
+            },
+            {
+              "function": "~:0:<method 'join' of 'str' objects>",
+              "function_calls_per_phase_invocation": 9.0,
+              "inclusive_ms_per_phase_invocation": 0.576073525925926,
+              "self_ms_per_phase_invocation": 0.09783174629629633
+            },
+            {
+              "function": "~:0:<built-in method builtins.isinstance>",
+              "function_calls_per_phase_invocation": 811.3333333333334,
+              "inclusive_ms_per_phase_invocation": 0.11028008888888889,
+              "self_ms_per_phase_invocation": 0.0972867574074074
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:52:_plain_json",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.1712541648148148,
+              "self_ms_per_phase_invocation": 0.0936354240740741
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:76:referenced",
+              "function_calls_per_phase_invocation": 235.33333333333334,
+              "inclusive_ms_per_phase_invocation": 0.11793103888888888,
+              "self_ms_per_phase_invocation": 0.09214869629629632
+            },
+            {
+              "function": "~:0:<method 'get' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 415.0,
+              "inclusive_ms_per_phase_invocation": 0.07003940555555555,
+              "self_ms_per_phase_invocation": 0.07003940555555555
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:60:validate_policy",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 1.0568192592592593,
+              "self_ms_per_phase_invocation": 0.039533048148148155
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/profiles.py:86:fingerprint",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.5692946685185184,
+              "self_ms_per_phase_invocation": 0.03823618888888889
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:80:prepare",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 2.038395846296297,
+              "self_ms_per_phase_invocation": 0.017805251851851854
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:994:_statement",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.6752852185185185,
+              "self_ms_per_phase_invocation": 0.01664198703703704
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/_preparing.py:160:validate",
+              "function_calls_per_phase_invocation": 1.3333333333333333,
+              "inclusive_ms_per_phase_invocation": 0.01398192962962963,
+              "self_ms_per_phase_invocation": 0.0047121333333333335
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:344:_prepare_policy",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 2.0432713000000002,
+              "self_ms_per_phase_invocation": 0.004491844444444446
+            }
+          ],
+          "phase_invocations": 540,
+          "wall_ms_per_phase_invocation": 14.785461266666665
+        },
+        "prepare": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/json/encoder.py:205:iterencode",
+              "function_calls_per_phase_invocation": 8.0,
+              "inclusive_ms_per_phase_invocation": 0.7617959388888889,
+              "self_ms_per_phase_invocation": 0.7617959388888889
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:118:deepcopy",
+              "function_calls_per_phase_invocation": 299.0,
+              "inclusive_ms_per_phase_invocation": 0.6835661574074073,
+              "self_ms_per_phase_invocation": 0.2963976148148148
+            },
+            {
+              "function": "~:0:<method 'to_python' of 'pydantic_core._pydantic_core.SchemaSerializer' objects>",
+              "function_calls_per_phase_invocation": 5.0,
+              "inclusive_ms_per_phase_invocation": 0.2924761666666667,
+              "self_ms_per_phase_invocation": 0.2924761666666667
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/primitives/policy_tree.py:37:visit",
+              "function_calls_per_phase_invocation": 146.0,
+              "inclusive_ms_per_phase_invocation": 0.3527904074074074,
+              "self_ms_per_phase_invocation": 0.27717458333333334
+            },
+            {
+              "function": "/patch/frozen/fd_policy_tools.py:5:references",
+              "function_calls_per_phase_invocation": 453.0,
+              "inclusive_ms_per_phase_invocation": 0.23043578888888888,
+              "self_ms_per_phase_invocation": 0.1787963055555556
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:76:referenced",
+              "function_calls_per_phase_invocation": 353.0,
+              "inclusive_ms_per_phase_invocation": 0.17622287222222227,
+              "self_ms_per_phase_invocation": 0.13732028703703705
+            },
+            {
+              "function": "~:0:<built-in method builtins.isinstance>",
+              "function_calls_per_phase_invocation": 1051.0,
+              "inclusive_ms_per_phase_invocation": 0.11134965000000001,
+              "self_ms_per_phase_invocation": 0.11134965000000001
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:217:_deepcopy_dict",
+              "function_calls_per_phase_invocation": 70.0,
+              "inclusive_ms_per_phase_invocation": 0.6780861111111112,
+              "self_ms_per_phase_invocation": 0.09947986111111112
+            },
+            {
+              "function": "~:0:<method 'get' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 603.0,
+              "inclusive_ms_per_phase_invocation": 0.09497064074074076,
+              "self_ms_per_phase_invocation": 0.09497064074074076
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/profiles.py:86:fingerprint",
+              "function_calls_per_phase_invocation": 4.0,
+              "inclusive_ms_per_phase_invocation": 1.1225795870370372,
+              "self_ms_per_phase_invocation": 0.0768139925925926
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:60:validate_policy",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 1.598895077777778,
+              "self_ms_per_phase_invocation": 0.05920712592592592
+            },
+            {
+              "function": "~:0:<method 'pop' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 440.0,
+              "inclusive_ms_per_phase_invocation": 0.05890552222222222,
+              "self_ms_per_phase_invocation": 0.05890552222222222
+            },
+            {
+              "function": "/patch/frozen/policy.py:23:validate",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 2.9554549703703703,
+              "self_ms_per_phase_invocation": 0.053470274074074085
+            }
+          ],
+          "phase_invocations": 540,
+          "wall_ms_per_phase_invocation": 3.024188951851852
+        },
+        "reuse": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/connection.py:479:wait",
+              "function_calls_per_phase_invocation": 1.6666666666666667,
+              "inclusive_ms_per_phase_invocation": 5.936639927160495,
+              "self_ms_per_phase_invocation": 5.72257065308642
+            },
+            {
+              "function": "~:0:<built-in method builtins.format>",
+              "function_calls_per_phase_invocation": 768.0,
+              "inclusive_ms_per_phase_invocation": 0.28417770370370377,
+              "self_ms_per_phase_invocation": 0.28417770370370377
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:118:deepcopy",
+              "function_calls_per_phase_invocation": 191.33333333333334,
+              "inclusive_ms_per_phase_invocation": 0.4413083419753087,
+              "self_ms_per_phase_invocation": 0.18940883209876544
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:996:<genexpr>",
+              "function_calls_per_phase_invocation": 769.0,
+              "inclusive_ms_per_phase_invocation": 0.4691760759259258,
+              "self_ms_per_phase_invocation": 0.1849983722222222
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/primitives/policy_tree.py:37:visit",
+              "function_calls_per_phase_invocation": 97.33333333333333,
+              "inclusive_ms_per_phase_invocation": 0.2304706080246914,
+              "self_ms_per_phase_invocation": 0.1796841438271605
+            },
+            {
+              "function": "~:0:<method 'join' of 'str' objects>",
+              "function_calls_per_phase_invocation": 2.3333333333333335,
+              "inclusive_ms_per_phase_invocation": 0.5638240858024691,
+              "self_ms_per_phase_invocation": 0.09464800987654322
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:52:_plain_json",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.1708219691358025,
+              "self_ms_per_phase_invocation": 0.09343665061728396
+            },
+            {
+              "function": "~:0:<method 'get' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 410.3333333333333,
+              "inclusive_ms_per_phase_invocation": 0.06770386358024691,
+              "self_ms_per_phase_invocation": 0.06770386358024691
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:217:_deepcopy_dict",
+              "function_calls_per_phase_invocation": 46.0,
+              "inclusive_ms_per_phase_invocation": 0.43779433827160497,
+              "self_ms_per_phase_invocation": 0.06593205185185184
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:1087:_execute_probe",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 7.8953092648148155,
+              "self_ms_per_phase_invocation": 0.05326065864197532
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/snapshot.py:109:query",
+              "function_calls_per_phase_invocation": 1.6666666666666667,
+              "inclusive_ms_per_phase_invocation": 0.32221817962962973,
+              "self_ms_per_phase_invocation": 0.05176020185185185
+            },
+            {
+              "function": "~:0:<built-in method builtins.isinstance>",
+              "function_calls_per_phase_invocation": 351.3333333333333,
+              "inclusive_ms_per_phase_invocation": 0.0603708061728395,
+              "self_ms_per_phase_invocation": 0.04766950123456788
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:994:_statement",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.662849063580247,
+              "self_ms_per_phase_invocation": 0.016279830246913582
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:80:prepare",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.9043338080246914,
+              "self_ms_per_phase_invocation": 0.012028221604938273
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/_preparing.py:160:validate",
+              "function_calls_per_phase_invocation": 1.3333333333333333,
+              "inclusive_ms_per_phase_invocation": 0.014508666666666666,
+              "self_ms_per_phase_invocation": 0.004635585185185187
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:344:_prepare_policy",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.9091565574074076,
+              "self_ms_per_phase_invocation": 0.004433837654320988
+            }
+          ],
+          "phase_invocations": 1620,
+          "wall_ms_per_phase_invocation": 8.24118766419753
+        }
+      },
+      "matched-continue": {
+        "activation": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/connection.py:479:wait",
+              "function_calls_per_phase_invocation": 2.3333333333333335,
+              "inclusive_ms_per_phase_invocation": 13.318872753703701,
+              "self_ms_per_phase_invocation": 13.039890316666666
+            },
+            {
+              "function": "/usr/local/lib/python3.12/json/encoder.py:205:iterencode",
+              "function_calls_per_phase_invocation": 6.333333333333333,
+              "inclusive_ms_per_phase_invocation": 0.44158080185185183,
+              "self_ms_per_phase_invocation": 0.44158080185185183
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/primitives/policy_tree.py:37:visit",
+              "function_calls_per_phase_invocation": 194.66666666666666,
+              "inclusive_ms_per_phase_invocation": 0.45412649814814826,
+              "self_ms_per_phase_invocation": 0.35504720185185185
+            },
+            {
+              "function": "~:0:<built-in method builtins.format>",
+              "function_calls_per_phase_invocation": 768.0,
+              "inclusive_ms_per_phase_invocation": 0.29316736666666665,
+              "self_ms_per_phase_invocation": 0.29316736666666665
+            },
+            {
+              "function": "~:0:<method 'to_python' of 'pydantic_core._pydantic_core.SchemaSerializer' objects>",
+              "function_calls_per_phase_invocation": 5.0,
+              "inclusive_ms_per_phase_invocation": 0.19931516666666665,
+              "self_ms_per_phase_invocation": 0.19931516666666665
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:118:deepcopy",
+              "function_calls_per_phase_invocation": 191.33333333333334,
+              "inclusive_ms_per_phase_invocation": 0.4451470574074074,
+              "self_ms_per_phase_invocation": 0.19078757222222226
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:996:<genexpr>",
+              "function_calls_per_phase_invocation": 769.0,
+              "inclusive_ms_per_phase_invocation": 0.4779192537037037,
+              "self_ms_per_phase_invocation": 0.18475188703703707
+            },
+            {
+              "function": "~:0:<built-in method builtins.isinstance>",
+              "function_calls_per_phase_invocation": 811.3333333333334,
+              "inclusive_ms_per_phase_invocation": 0.1107843037037037,
+              "self_ms_per_phase_invocation": 0.09776689814814815
+            },
+            {
+              "function": "~:0:<method 'join' of 'str' objects>",
+              "function_calls_per_phase_invocation": 9.0,
+              "inclusive_ms_per_phase_invocation": 0.5755628314814816,
+              "self_ms_per_phase_invocation": 0.09764357777777778
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:52:_plain_json",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.17240052777777778,
+              "self_ms_per_phase_invocation": 0.09395202407407408
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:76:referenced",
+              "function_calls_per_phase_invocation": 235.33333333333334,
+              "inclusive_ms_per_phase_invocation": 0.11847496111111114,
+              "self_ms_per_phase_invocation": 0.09266805740740741
+            },
+            {
+              "function": "~:0:<method 'get' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 415.0,
+              "inclusive_ms_per_phase_invocation": 0.06998228148148147,
+              "self_ms_per_phase_invocation": 0.06998228148148147
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/profiles.py:86:fingerprint",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.5789448203703703,
+              "self_ms_per_phase_invocation": 0.0468130037037037
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:60:validate_policy",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 1.0689987814814814,
+              "self_ms_per_phase_invocation": 0.03956569074074075
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:80:prepare",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 2.0568534907407408,
+              "self_ms_per_phase_invocation": 0.017849216666666667
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:994:_statement",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.6748671111111111,
+              "self_ms_per_phase_invocation": 0.01662412222222222
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/_preparing.py:160:validate",
+              "function_calls_per_phase_invocation": 1.3333333333333333,
+              "inclusive_ms_per_phase_invocation": 0.015347512962962962,
+              "self_ms_per_phase_invocation": 0.0049736314814814815
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:344:_prepare_policy",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 2.0617897888888885,
+              "self_ms_per_phase_invocation": 0.004548987037037037
+            }
+          ],
+          "phase_invocations": 540,
+          "wall_ms_per_phase_invocation": 16.925642024074072
+        },
+        "prepare": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/json/encoder.py:205:iterencode",
+              "function_calls_per_phase_invocation": 8.0,
+              "inclusive_ms_per_phase_invocation": 0.7626150777777777,
+              "self_ms_per_phase_invocation": 0.7626150777777777
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:118:deepcopy",
+              "function_calls_per_phase_invocation": 299.0,
+              "inclusive_ms_per_phase_invocation": 0.6847026537037039,
+              "self_ms_per_phase_invocation": 0.29717030925925925
+            },
+            {
+              "function": "~:0:<method 'to_python' of 'pydantic_core._pydantic_core.SchemaSerializer' objects>",
+              "function_calls_per_phase_invocation": 5.0,
+              "inclusive_ms_per_phase_invocation": 0.29233657037037036,
+              "self_ms_per_phase_invocation": 0.29233657037037036
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/primitives/policy_tree.py:37:visit",
+              "function_calls_per_phase_invocation": 146.0,
+              "inclusive_ms_per_phase_invocation": 0.3521107685185185,
+              "self_ms_per_phase_invocation": 0.27661529259259254
+            },
+            {
+              "function": "/patch/frozen/fd_policy_tools.py:5:references",
+              "function_calls_per_phase_invocation": 453.0,
+              "inclusive_ms_per_phase_invocation": 0.2390121925925926,
+              "self_ms_per_phase_invocation": 0.18761945740740743
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:76:referenced",
+              "function_calls_per_phase_invocation": 353.0,
+              "inclusive_ms_per_phase_invocation": 0.17644348703703702,
+              "self_ms_per_phase_invocation": 0.1376503037037037
+            },
+            {
+              "function": "~:0:<built-in method builtins.isinstance>",
+              "function_calls_per_phase_invocation": 1051.0,
+              "inclusive_ms_per_phase_invocation": 0.11096131666666668,
+              "self_ms_per_phase_invocation": 0.11096131666666668
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:217:_deepcopy_dict",
+              "function_calls_per_phase_invocation": 70.0,
+              "inclusive_ms_per_phase_invocation": 0.6792251796296296,
+              "self_ms_per_phase_invocation": 0.09935868333333335
+            },
+            {
+              "function": "~:0:<method 'get' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 603.0,
+              "inclusive_ms_per_phase_invocation": 0.09458967407407405,
+              "self_ms_per_phase_invocation": 0.09458967407407405
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/profiles.py:86:fingerprint",
+              "function_calls_per_phase_invocation": 4.0,
+              "inclusive_ms_per_phase_invocation": 1.1195898814814815,
+              "self_ms_per_phase_invocation": 0.0766885962962963
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:60:validate_policy",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 1.5977503074074073,
+              "self_ms_per_phase_invocation": 0.05889435925925926
+            },
+            {
+              "function": "~:0:<method 'pop' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 440.0,
+              "inclusive_ms_per_phase_invocation": 0.05864737407407408,
+              "self_ms_per_phase_invocation": 0.05864737407407408
+            },
+            {
+              "function": "/patch/frozen/policy.py:23:validate",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 2.9650347222222226,
+              "self_ms_per_phase_invocation": 0.05361285000000001
+            }
+          ],
+          "phase_invocations": 540,
+          "wall_ms_per_phase_invocation": 3.0338227851851847
+        },
+        "reuse": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/connection.py:479:wait",
+              "function_calls_per_phase_invocation": 1.6666666666666667,
+              "inclusive_ms_per_phase_invocation": 7.061033341975307,
+              "self_ms_per_phase_invocation": 6.838619651851851
+            },
+            {
+              "function": "~:0:<built-in method builtins.format>",
+              "function_calls_per_phase_invocation": 768.0,
+              "inclusive_ms_per_phase_invocation": 0.2843252166666667,
+              "self_ms_per_phase_invocation": 0.2843252166666667
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:118:deepcopy",
+              "function_calls_per_phase_invocation": 191.33333333333334,
+              "inclusive_ms_per_phase_invocation": 0.4435121672839506,
+              "self_ms_per_phase_invocation": 0.19068173333333335
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:996:<genexpr>",
+              "function_calls_per_phase_invocation": 769.0,
+              "inclusive_ms_per_phase_invocation": 0.4721917475308643,
+              "self_ms_per_phase_invocation": 0.18786653086419752
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/primitives/policy_tree.py:37:visit",
+              "function_calls_per_phase_invocation": 97.33333333333333,
+              "inclusive_ms_per_phase_invocation": 0.23393639567901228,
+              "self_ms_per_phase_invocation": 0.18312387777777775
+            },
+            {
+              "function": "~:0:<method 'join' of 'str' objects>",
+              "function_calls_per_phase_invocation": 2.3333333333333335,
+              "inclusive_ms_per_phase_invocation": 0.5666669938271605,
+              "self_ms_per_phase_invocation": 0.09447524629629629
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:52:_plain_json",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.17179365061728397,
+              "self_ms_per_phase_invocation": 0.09360313518518516
+            },
+            {
+              "function": "~:0:<method 'get' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 410.3333333333333,
+              "inclusive_ms_per_phase_invocation": 0.06774609691358026,
+              "self_ms_per_phase_invocation": 0.06774609691358026
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:217:_deepcopy_dict",
+              "function_calls_per_phase_invocation": 46.0,
+              "inclusive_ms_per_phase_invocation": 0.43990110432098767,
+              "self_ms_per_phase_invocation": 0.06602710864197531
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:1087:_execute_probe",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 9.040990673456792,
+              "self_ms_per_phase_invocation": 0.054637299382716054
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/snapshot.py:109:query",
+              "function_calls_per_phase_invocation": 1.6666666666666667,
+              "inclusive_ms_per_phase_invocation": 0.3188409716049382,
+              "self_ms_per_phase_invocation": 0.05001327037037038
+            },
+            {
+              "function": "~:0:<built-in method builtins.isinstance>",
+              "function_calls_per_phase_invocation": 351.3333333333333,
+              "inclusive_ms_per_phase_invocation": 0.06053847037037037,
+              "self_ms_per_phase_invocation": 0.047812882716049374
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:994:_statement",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.6660415962962961,
+              "self_ms_per_phase_invocation": 0.016421782098765426
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/prepared.py:80:prepare",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.9117842098765432,
+              "self_ms_per_phase_invocation": 0.012118503703703702
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/_preparing.py:160:validate",
+              "function_calls_per_phase_invocation": 1.3333333333333333,
+              "inclusive_ms_per_phase_invocation": 0.016308515432098766,
+              "self_ms_per_phase_invocation": 0.005066167901234569
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:344:_prepare_policy",
+              "function_calls_per_phase_invocation": 0.6666666666666666,
+              "inclusive_ms_per_phase_invocation": 0.9167231617283952,
+              "self_ms_per_phase_invocation": 0.0045422024691358035
+            }
+          ],
+          "phase_invocations": 1620,
+          "wall_ms_per_phase_invocation": 9.384403284567902
+        }
+      },
+      "routed-native": {
+        "activation": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/connection.py:479:wait",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 12.857895448148149,
+              "self_ms_per_phase_invocation": 12.686450748148147
+            },
+            {
+              "function": "~:0:<built-in method builtins.format>",
+              "function_calls_per_phase_invocation": 768.0,
+              "inclusive_ms_per_phase_invocation": 0.290822625925926,
+              "self_ms_per_phase_invocation": 0.290822625925926
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:996:<genexpr>",
+              "function_calls_per_phase_invocation": 769.0,
+              "inclusive_ms_per_phase_invocation": 0.4757757851851852,
+              "self_ms_per_phase_invocation": 0.18495315925925926
+            },
+            {
+              "function": "~:0:<method 'join' of 'str' objects>",
+              "function_calls_per_phase_invocation": 3.0,
+              "inclusive_ms_per_phase_invocation": 0.5721710722222223,
+              "self_ms_per_phase_invocation": 0.09639528703703705
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:1087:_execute_probe",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 13.71068699814815,
+              "self_ms_per_phase_invocation": 0.05335668703703703
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/snapshot.py:109:query",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.23069293703703705,
+              "self_ms_per_phase_invocation": 0.03888972407407408
+            },
+            {
+              "function": "~:0:<method 'disable' of '_lsprof.Profiler' objects>",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.03184993518518519,
+              "self_ms_per_phase_invocation": 0.03184993518518519
+            },
+            {
+              "function": "~:0:<method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.035280864814814815,
+              "self_ms_per_phase_invocation": 0.031205994444444447
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/_cursor_base.py:275:_maybe_prepare_gen",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.07779488703703703,
+              "self_ms_per_phase_invocation": 0.030982118518518523
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/numpy/_core/numeric.py:2320:isclose",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.05739381851851852,
+              "self_ms_per_phase_invocation": 0.029241533333333337
+            },
+            {
+              "function": "~:0:<built-in method numpy.asarray>",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.023319279629629628,
+              "self_ms_per_phase_invocation": 0.023319279629629628
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/_cursor_base.py:583:_send_query_prepared",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.018835925925925926,
+              "self_ms_per_phase_invocation": 0.018835925925925926
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:994:_statement",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.6731108574074075,
+              "self_ms_per_phase_invocation": 0.01698052777777778
+            }
+          ],
+          "phase_invocations": 540,
+          "wall_ms_per_phase_invocation": 14.059344537037038
+        },
+        "prepare": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/json/encoder.py:205:iterencode",
+              "function_calls_per_phase_invocation": 9.0,
+              "inclusive_ms_per_phase_invocation": 0.7084893111111112,
+              "self_ms_per_phase_invocation": 0.7084893111111112
+            },
+            {
+              "function": "~:0:<method 'to_python' of 'pydantic_core._pydantic_core.SchemaSerializer' objects>",
+              "function_calls_per_phase_invocation": 5.0,
+              "inclusive_ms_per_phase_invocation": 0.2762541592592593,
+              "self_ms_per_phase_invocation": 0.2762541592592593
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:118:deepcopy",
+              "function_calls_per_phase_invocation": 165.0,
+              "inclusive_ms_per_phase_invocation": 0.3949275666666668,
+              "self_ms_per_phase_invocation": 0.17371415370370377
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/primitives/policy_tree.py:37:visit",
+              "function_calls_per_phase_invocation": 74.0,
+              "inclusive_ms_per_phase_invocation": 0.17937465185185186,
+              "self_ms_per_phase_invocation": 0.14627697777777776
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:76:referenced",
+              "function_calls_per_phase_invocation": 190.0,
+              "inclusive_ms_per_phase_invocation": 0.09723539074074075,
+              "self_ms_per_phase_invocation": 0.0764587074074074
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/profiles.py:86:fingerprint",
+              "function_calls_per_phase_invocation": 4.0,
+              "inclusive_ms_per_phase_invocation": 1.115742338888889,
+              "self_ms_per_phase_invocation": 0.07627803703703705
+            },
+            {
+              "function": "/patch/frozen/fd_policy_tools.py:5:references",
+              "function_calls_per_phase_invocation": 191.0,
+              "inclusive_ms_per_phase_invocation": 0.09685948148148149,
+              "self_ms_per_phase_invocation": 0.07599778888888889
+            },
+            {
+              "function": "~:0:<method 'pop' of 'dict' objects>",
+              "function_calls_per_phase_invocation": 440.0,
+              "inclusive_ms_per_phase_invocation": 0.05880518518518519,
+              "self_ms_per_phase_invocation": 0.05880518518518519
+            },
+            {
+              "function": "~:0:<built-in method builtins.isinstance>",
+              "function_calls_per_phase_invocation": 513.0,
+              "inclusive_ms_per_phase_invocation": 0.05703725555555557,
+              "self_ms_per_phase_invocation": 0.05703725555555557
+            },
+            {
+              "function": "/usr/local/lib/python3.12/copy.py:217:_deepcopy_dict",
+              "function_calls_per_phase_invocation": 37.0,
+              "inclusive_ms_per_phase_invocation": 0.38952482222222223,
+              "self_ms_per_phase_invocation": 0.056496972222222226
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/api/policy.py:60:validate_policy",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 1.2897982518518525,
+              "self_ms_per_phase_invocation": 0.0552645425925926
+            },
+            {
+              "function": "~:0:<built-in method _hashlib.openssl_sha256>",
+              "function_calls_per_phase_invocation": 6.0,
+              "inclusive_ms_per_phase_invocation": 0.05508583518518519,
+              "self_ms_per_phase_invocation": 0.05508583518518519
+            },
+            {
+              "function": "/patch/frozen/policy.py:23:validate",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 2.1844344833333333,
+              "self_ms_per_phase_invocation": 0.048574533333333336
+            }
+          ],
+          "phase_invocations": 540,
+          "wall_ms_per_phase_invocation": 2.2679860129629628
+        },
+        "reuse": {
+          "functions": [
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/connection.py:479:wait",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 6.504892835185186,
+              "self_ms_per_phase_invocation": 6.364776284567903
+            },
+            {
+              "function": "~:0:<built-in method builtins.format>",
+              "function_calls_per_phase_invocation": 768.0,
+              "inclusive_ms_per_phase_invocation": 0.2795822018518519,
+              "self_ms_per_phase_invocation": 0.2795822018518519
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:996:<genexpr>",
+              "function_calls_per_phase_invocation": 769.0,
+              "inclusive_ms_per_phase_invocation": 0.4643356290123457,
+              "self_ms_per_phase_invocation": 0.18475342716049384
+            },
+            {
+              "function": "~:0:<method 'join' of 'str' objects>",
+              "function_calls_per_phase_invocation": 3.0,
+              "inclusive_ms_per_phase_invocation": 0.558748975308642,
+              "self_ms_per_phase_invocation": 0.09441334629629632
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:1087:_execute_probe",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 7.308834381481482,
+              "self_ms_per_phase_invocation": 0.04214887962962962
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent/snapshot.py:109:query",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.21494712345679015,
+              "self_ms_per_phase_invocation": 0.03472793703703704
+            },
+            {
+              "function": "~:0:<method 'disable' of '_lsprof.Profiler' objects>",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.029368509876543204,
+              "self_ms_per_phase_invocation": 0.029368509876543204
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/numpy/_core/numeric.py:2320:isclose",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.05487071419753087,
+              "self_ms_per_phase_invocation": 0.02751777716049383
+            },
+            {
+              "function": "~:0:<method 'validate_python' of 'pydantic_core._pydantic_core.SchemaValidator' objects>",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.030911541975308644,
+              "self_ms_per_phase_invocation": 0.027098672222222224
+            },
+            {
+              "function": "~:0:<built-in method numpy.asarray>",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.021332296913580247,
+              "self_ms_per_phase_invocation": 0.021332296913580247
+            },
+            {
+              "function": "/usr/local/lib/python3.12/site-packages/psycopg/_cursor_base.py:275:_maybe_prepare_gen",
+              "function_calls_per_phase_invocation": 2.0,
+              "inclusive_ms_per_phase_invocation": 0.056319427777777785,
+              "self_ms_per_phase_invocation": 0.020586344444444446
+            },
+            {
+              "function": "~:0:<method 'to_python' of 'pydantic_core._pydantic_core.SchemaSerializer' objects>",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.017647327160493827,
+              "self_ms_per_phase_invocation": 0.017647327160493827
+            },
+            {
+              "function": "/patch/frozen/vendor/fannagent_pgvector/backend.py:994:_statement",
+              "function_calls_per_phase_invocation": 1.0,
+              "inclusive_ms_per_phase_invocation": 0.6549696154320989,
+              "self_ms_per_phase_invocation": 0.016229927777777778
+            }
+          ],
+          "phase_invocations": 1620,
+          "wall_ms_per_phase_invocation": 7.634169868518519
+        }
+      }
+    },
+    "diagnostic_only": true
+  },
+  "provider_calls": 0,
+  "query_filter_cases": 600,
+  "raw_campaign": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-execution-cost-attribution-v1/returned/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi",
+  "raw_files_verified": {
+    "blocks/block-0/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "blocks/block-0/diagnostic-pairs.jsonl": "2bc4291679a4b92a6588529d8cac784c0519b15accfe6cc59427797237924272",
+    "blocks/block-0/diagnostic-warmups.jsonl": "48f85bb6e4467788bab30537680200ed7d2fd8326cf8cc98cc730ddeb65fdf0d",
+    "blocks/block-0/job-exit.json": "15816cb824a0a479d25c75c3f397059d428427b19a6dc5435ef6ae9e7c247e57",
+    "blocks/block-0/pairs.jsonl": "7ec0dc79018b8eddbfbc6130caee8144bc272c6c81bc497d566568b9fd0def53",
+    "blocks/block-0/profiles.json": "dd8667b3968eb6be988445c643cba11f983d95eb916af622569aac51f4b33fb4",
+    "blocks/block-0/proofs.jsonl": "76d4c35b8bbbd7c55b4fbb7a016455100223b0e3eb01580282f89b4b45d808d6",
+    "blocks/block-0/protected-source-before.json": "f216efd913ec69d11463732a8edc596709475686c759157bbc5824b218a06a3a",
+    "blocks/block-0/qualified-features.json": "4bbb3308e892dd39384d212d925228bda2b7e3a7070e74503dece163970a4e2e",
+    "blocks/block-0/references.jsonl": "8df64dc13758d7c3d392122da3e35673562ed0b462022d0a4c4d39d69dc37eca",
+    "blocks/block-0/runtime-identity.json": "9be665b8c8dbb07da7e92093299dca840ed14efd00ceb533f218fc13c3d91f1f",
+    "blocks/block-0/server.log": "2e609688c3767895754d668ca7a0f79df9cec4dca1829d91235e5d487fb28ad7",
+    "blocks/block-0/status.json": "79de52594560860d325c028a792b526b20be39c9bbe0f4151f2565e4564b69d7",
+    "blocks/block-0/warmups.jsonl": "4bf3a8121b32aae4909680e9a48aa23880503b81d9e92d85032e7725faf631b5",
+    "blocks/block-1/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "blocks/block-1/diagnostic-pairs.jsonl": "190bddb1d68353ba8e7ed521f0b635b7d780367567937caa591026276f9648c2",
+    "blocks/block-1/diagnostic-warmups.jsonl": "1c52e7e11f61f1fd769d4d39ac92fbd8ff3a28e5be252f261bf15b6298b7ec1d",
+    "blocks/block-1/job-exit.json": "15816cb824a0a479d25c75c3f397059d428427b19a6dc5435ef6ae9e7c247e57",
+    "blocks/block-1/pairs.jsonl": "57ae52ffed714908f6ddf3be5bcccf8a7cb7b4d8e24b574b1f1ba58393d1b321",
+    "blocks/block-1/profiles.json": "628e5a5dec974eae0d7d1a0278e27223dafd2fe38f47c5643d964c73e9af032d",
+    "blocks/block-1/proofs.jsonl": "a54cf897660ce261a57c7263b03c0bde2bb6856fd0d8d6075f317956c3630d2f",
+    "blocks/block-1/protected-source-before.json": "f216efd913ec69d11463732a8edc596709475686c759157bbc5824b218a06a3a",
+    "blocks/block-1/qualified-features.json": "4bbb3308e892dd39384d212d925228bda2b7e3a7070e74503dece163970a4e2e",
+    "blocks/block-1/references.jsonl": "fc70dfefb8721b56e8d1a51691289ef2042c8fac84530e500a86e51a4141827f",
+    "blocks/block-1/runtime-identity.json": "9be665b8c8dbb07da7e92093299dca840ed14efd00ceb533f218fc13c3d91f1f",
+    "blocks/block-1/server.log": "ad6dab119cf798b10f4d331df1728a2f57a8fab05eafaf4bd18f3544ce0cb79f",
+    "blocks/block-1/status.json": "5203c6f5029164de72270238e711c4342f612ecc62e971910d9c9b31cec69bd1",
+    "blocks/block-1/warmups.jsonl": "eb3cd26924ca8cc1276ea812184e957255ab91b3874de5debc0ec66df683aed5",
+    "blocks/block-2/database-identity.json": "28a053d17b4b92336923319772baa88c58391450829ff833bed118a124ef5ffe",
+    "blocks/block-2/diagnostic-pairs.jsonl": "ff37d51536f5d539fa131c1dde80c1e0547fae8cc307b3e07f63ccac5b367602",
+    "blocks/block-2/diagnostic-warmups.jsonl": "c9a37e1dafeadd28822695b1bb778f86cff8cbf8f647289fb972eb2a6742cd92",
+    "blocks/block-2/job-exit.json": "15816cb824a0a479d25c75c3f397059d428427b19a6dc5435ef6ae9e7c247e57",
+    "blocks/block-2/pairs.jsonl": "fa7fe0191e70a013faac767fe897e9065540e0df62a2547385858133ded16d56",
+    "blocks/block-2/profiles.json": "2614d459b582d99e62bf5936d3a9849f439824c36f8b319054a94f1414754c85",
+    "blocks/block-2/proofs.jsonl": "9a8c63cdb2dc8de36fb3f97f4363d864603d13ba2ee017ce8969296a13707c6e",
+    "blocks/block-2/protected-source-before.json": "f216efd913ec69d11463732a8edc596709475686c759157bbc5824b218a06a3a",
+    "blocks/block-2/qualified-features.json": "4bbb3308e892dd39384d212d925228bda2b7e3a7070e74503dece163970a4e2e",
+    "blocks/block-2/references.jsonl": "63fc90ba8d089c96a97425be4c0bcb8b7916b0eda71b40da50e3d1f08a68178f",
+    "blocks/block-2/runtime-identity.json": "9be665b8c8dbb07da7e92093299dca840ed14efd00ceb533f218fc13c3d91f1f",
+    "blocks/block-2/server.log": "eab229db88e9d605764d1e23f44a2b21085d4670f601ddf062538f42e43ad56e",
+    "blocks/block-2/status.json": "8146811dcedf1a37f96ee86bd75dedc93a8ff269c534cc02eadaa4e732dacf74",
+    "blocks/block-2/warmups.jsonl": "2647b9b81bd547aedfd4ee015157c7dfb9e84ef71651b50695058f301de703e4"
+  },
+  "recorded_utc": "2026-10-23T15:01:38.933139+00:00",
+  "remote_local_byte_equality": {
+    "attribution.md": true,
+    "performance.json": false,
+    "report.txt": true
+  },
+  "remote_local_parity": {
+    "absolute_float_tolerance": 1e-12,
+    "canonical_acceptance_established": false,
+    "confirmation_queries": 0,
+    "package_manifest_sha256": "4c2f475664784b1851b1274a5c696bccbc55ee41c659a469c3643eb0ca0109c0",
+    "provider_calls": 0,
+    "remote_local_parity": true,
+    "status": "passed"
+  },
+  "remote_local_roundoff_differences": [
+    {
+      "absolute_difference": 1.3877787807814457e-17,
+      "local": -0.12086378261448212,
+      "path": "/reports/candidate/reused-warm/statistics/per_filter/unfiltered/log_latency_ratio_ci95/1",
+      "remote": -0.12086378261448211
+    }
+  ],
+  "reported_internal_elapsed_seconds_total": 4307.047436530702,
+  "runtime_identity": {
+    "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+    "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+    "package_manifest_sha256": "4c2f475664784b1851b1274a5c696bccbc55ee41c659a469c3643eb0ca0109c0",
+    "registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+    "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3"
+  },
+  "sealed_analysis_code_sha256": {
+    "ec_common.py": "9015a04a3bc3012b4d945b4d2051273b90f3bdc1ee5812947a986f51aa8b616c",
+    "ec_profile.py": "47ee2951104653f5a9ad80136f472fef4de259e6881af1f1076d1159525c27f2",
+    "ec_report.py": "098d276585fead43f7341a3bc788330b13b1b1adb7c526797b2eac75fb2be251",
+    "experiment.py": "e4206aec197bf8e1082eabcf89828ba36e9331bb10861ad9a04d3c4670c1631d"
+  },
+  "slurm_jobs": {
+    "block-0": "20686461",
+    "block-1": "20686462",
+    "block-2": "20686463"
+  },
+  "status": "verified_development_attribution_G1_pass_no_execution_revision",
+  "version": "execution-cost-attribution-v1-postrun"
+}

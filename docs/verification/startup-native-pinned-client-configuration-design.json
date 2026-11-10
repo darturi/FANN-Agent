@@ -1,0 +1,29 @@
+{
+  "ANN_searches": 0,
+  "alternate": "Current controller-exported snapshot, reviewed dependency closure, new PLAN pin, kernel-sealed descriptor for scheduler client subprocesses, unchanged job/auth/kernel/scientific checks",
+  "assistant_remote_commands": 0,
+  "date": "2026-11-03",
+  "decision": "D138",
+  "design": "trials/torch-reviews-startup-native-pinned-client-config-v1/DESIGN-FREEZE.json",
+  "design_sha256": "42b03193f03fb175cde7501af2bd28bb8d3c9500efb0e46bc8077a0966bd31a2",
+  "exact_searches": 0,
+  "feasibility_not_proven": [
+    "Torch export permissions/completeness",
+    "Slurm25.05.4 parsing of actual serialized snapshot",
+    "Complete plugin/include/auxiliary configuration closure",
+    "Native sealed-descriptor client compatibility and compute portability",
+    "Actual A3 native correctness/CPU/memory/resource qualification"
+  ],
+  "messages_sent": 0,
+  "new_allocations": 0,
+  "new_allowance_issued": false,
+  "next_step": "Prepare bounded login-only capture helper and verify locally; then user captures current snapshot without an allocation. Review actual bytes before adapter/release packet.",
+  "problem": "Historical inherited compute configuration metadata unavailable; all previous grants spent",
+  "roadmap_version": "1.90",
+  "scheduler_commands_executed": 0,
+  "science_admission_sources_packages_tests_limits_unchanged": true,
+  "scope": "design_only_no_implementation",
+  "spent_allowances_reused": false,
+  "status": "alternative_design_frozen_capture_and_validation_pending",
+  "why_it_can_help": "Eliminates prospective dependence on the unknown historical node cache instead of admitting it by guess or requiring historical recovery"
+}

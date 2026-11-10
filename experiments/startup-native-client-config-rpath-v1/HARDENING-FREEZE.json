@@ -1,0 +1,23 @@
+{
+  "ANN_searches": 0,
+  "date": "2026-11-04",
+  "exact_searches": 0,
+  "findings": [
+    "Per-command deadline/group cleanup passes, but Inspector.tick alone does not interrupt a blocked regular-file read. Add a 120-second SIGALRM bound around each complete login helper; do not replace/extend a pre-existing timer. Preserve and restore previous handler/timer state.",
+    "If reply/controller or post-command dependency verification fails, retain its held status/error alongside the raw command record, and close the sealed descriptor. Do not leave a passing command row implying a qualified reply.",
+    "Exercise dependency inspection across cyclic/ambiguous/missing static edges and private-key exclusion; neither candidate edges nor static parse success may open replay."
+  ],
+  "input_sha256": {
+    "HARNESS-FREEZE.json": "046f4a793d200be9adf52a9fe8a4585dd96461ea127db3bf91d589dd55582d7f",
+    "candidate.conf": "ba998cfda785eee87ef65023a8fe2caf4f7c3734665eb15af5b76d5a2b603ea6",
+    "compatibility.py": "393a2e71c0d1ca930a31361c1f32f2045baab5cf9a2a32d9750f0b0e60890f83",
+    "linux_probe.py": "17f45c8f70880a92c1cbe6b4dd8b93aa995b57906e088c855c78a7ffec89539f",
+    "run_checks.py": "f79df3352c21f1631c3cf769c074716316ec0c22e39e51d031007552d4909ab2",
+    "test_compatibility.py": "d76833aa74b11aafd48076dc3bbbd4ff1c39fd39ad8a67f19325fe3ca6eee0a1"
+  },
+  "new_allocations": 0,
+  "parent_freeze_sha256": "046f4a793d200be9adf52a9fe8a4585dd96461ea127db3bf91d589dd55582d7f",
+  "schema": "a3.compatibility.hardening.freeze.v1",
+  "scope": "Separate new helper only; original code/config/tests/policies/limits unchanged. Current table of native closures stays empty; no Torch command executed or qualification authorized.",
+  "status": "frozen_before_correction"
+}

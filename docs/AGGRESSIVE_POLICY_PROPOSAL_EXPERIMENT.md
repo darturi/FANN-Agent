@@ -163,10 +163,111 @@ inconclusive generation A/B comparison remain unchanged.
 The [implementation verification](verification/four-condition-training-v1-implementation.json)
 records the sealed upload, source backup, 18 passing tests, native synthetic
 qualification and complete synthetic acquisition/fitting/timing/report replay.
-The real Reviews study has not been submitted by the assistant; native x86
-qualification and all real measurements run in the user's Torch allocations.
+The user completed the real Reviews campaign
+`reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp`. All five allocations
+exited successfully. Independent local replay exactly reproduces the collected
+report, the nested fit lock and all 63 raw-file hashes. The
+[postrun record](verification/four-condition-training-v1-postrun.json) records
+46,800 retained timing pairs, 100 independent learning vectors, 4,698 acquired
+actual stop outcomes, 172,026 backend searches and zero model or confirmation
+calls.
 
-No model requests, fitting, policy replay, database measurements, builds, tests,
+All 20 outer-fold policies explicitly continue: none of the 80 inner-validation
+assessments meets the predeclared 0.25 pp development reserve. Every assessment
+fails that reserve on votes108. Only four would meet the unchanged 0.5 pp final
+recall tolerance on those inner records, and only two of those have positive
+cost proxies; these are diagnostics, not reselection or qualification. The final
+timed A/B/C/D procedures preserve native recall exactly but add respectively
+13.285/15.655/16.911/15.122% activation latency and
+14.204/14.232/15.082/15.104% reuse latency. None qualifies.
+
+The sparse hindsight oracle saves 59.581% activation and 59.834% reuse latency
+with zero recall loss; 175/300 cases stop before ordinal checkpoint 32. The
+new probe distinguishes the two filtered variants for every learning vector,
+but fills all 64 samples before the first checkpoint in every query and its
+statistics remain constant thereafter. Because every selected policy continues,
+the timing contrasts do not establish a learned early-stopping benefit from
+either factor. This remains a training-procedure result, with no deployable
+candidate, no canonical acceptance and no change to the original inconclusive
+agent-generation A/B comparison or the final recall criteria.
+
+The subsequent [offline fitter comparison](../experiments/offline-first-stop-fitter-v1/README.md)
+was implemented and executed on those existing measurements, with no model or
+database calls. Its frozen design compares the original CART with a depth-three
+beam search scored on complete-query first stops, actual recall deficits by
+filter and measured fixed-stop latency proxies. It retains the same conditions,
+folds, risk grid, development reserve and final recall criteria. The original
+CART fit lock reproduces exactly; 16 synthetic checks pass. An audit replays all
+320 new fitted policies over 57,600 fitting cases and all 2,400 OOF rows with the
+shared interpreter. Sources, original measurements and sealed package remain
+unchanged.
+
+The new fitter produces positive cost proxies in 63/80 inner assessments versus
+51/80 for CART, but neither method has an assessment passing the unchanged
+development reserve. All 80 new assessments fail that reserve on votes108.
+Each method therefore explicitly continues in all 20 outer folds and has no
+selected stopping cases. All 80 high-risk new fits preserve recall on their own
+fitting records, yet the validation reserve still fails. This is a development
+generalization diagnostic, not evidence of a runtime speedup or a feature ceiling.
+The [offline postrun verification](verification/offline-first-stop-fitter-v1-postrun.json)
+pins code, design, source backup, outputs and detailed rejection diagnostics.
+New fitted-policy latency remains unmeasured; no Torch timing or confirmation
+is launched, no global deployment policy is selected, and original generation
+A/B remains inconclusive.
+
+The subsequent authorized [four-arm feature/data ablation](../experiments/feature-data-ablation-v1/README.md)
+is implemented as a separate, model-free development study. Its arms cross the
+current 23 observations versus 11 additional bounded layer-zero progress
+observations with 100 versus 160 fitting vectors. Only 197 unused vectors remain
+in the development catalog after recorded exclusions, so the originally
+suggested 300-vector expansion is replaced by 60 additional fitting, 40 separate
+calibration, 60 common evaluation and 37 still-reserved vectors. The consumed
+confirmation and canonical calibration/final-test workloads remain excluded.
+
+All arms use the same frozen first-stop fitter and risk grid. Four initial
+allocations build, acquire and fit; calibration abstention stops the campaign.
+One common development evaluation allocation is conditional on calibration;
+three timing allocations are conditional on that evaluation. The maximum is
+155,766 backend searches and zero model calls. Timing includes static/progress
+continue controls, a measured hindsight oracle and a fixed native votes108
+routing control; routing cannot rescue a failed candidate. The final per-filter
+recall, completeness, native-floor and activation/reuse latency gates are
+unchanged. This is development evidence requiring fresh confirmation; original
+agent-generation A/B remains inconclusive. See the
+[implementation record](verification/feature-data-ablation-v1-implementation.json)
+and [Mac/Torch commands](../experiments/feature-data-ablation-v1/COMMANDS.txt).
+The user-submitted campaign
+`reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y` completed all four
+initial allocations on October 22. Local reconstruction verifies the original
+sealed package, 48 raw file hashes, 9,390 actual stopped-prefix proofs, 21,180
+retained acquisition pairs, 10,590 discarded warmups, 77,172 backend searches
+and exact reproduction of all 16 fits and calibration decisions. No model,
+confirmation, common evaluation or fitted-policy timing calls were made.
+
+Only one candidate passes the calibration recall reserve: static observations
+with 160 fitting vectors at risk 1280. It preserves recall on every one of the
+120 calibration cases, but its fixed-stop activation cost proxy is +0.316700 ms
+(+3.269%) slower than paired native; reuse is -0.101491 ms (-1.508%) faster.
+The other 15 candidates fail votes108 recall. Twelve have positive cost proxies,
+but none passes both recall and cost, so all four arms explicitly abstain.
+Using the unchanged final recall tolerance diagnostically also leaves only
+that same static-160 candidate passing recall. The reserve is not relaxed.
+
+Progress observations vary over the trajectory and all eight progress-arm
+candidates reference them; their implementation was active, not an omitted
+feature-pool issue. They did not produce an eligible candidate. All four
+highest-risk policies preserve recall on fitting data, while three lose recall
+on the common calibration sample. Hindsight preserves recall by checkpoint 32
+in 102/120 calibration query/filter cases; conservative learned decisions mostly
+wait until checkpoints 64/128 or continue. These are descriptive development
+findings, not a feature ceiling, measured fitted-policy speedup or final oracle
+benchmark. The 60 common evaluation vectors remain unexecuted and 37 development
+vectors remain reserved. Original generation A/B stays inconclusive; final
+criteria remain unchanged. The [postrun verification](verification/feature-data-ablation-v1-postrun.json)
+and [local interpretation](../../trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y-analysis/interpretation.txt)
+record the complete diagnostics.
+
+For the original October 20 design preparation, no model requests, fitting, policy replay, database measurements, builds, tests,
 Torch submissions or confirmation queries were performed to prepare this design.
 The source state was committed before this document was added. Exact revisions
 and local evidence hashes are recorded in

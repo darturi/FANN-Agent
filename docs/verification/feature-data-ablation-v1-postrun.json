@@ -1,0 +1,388 @@
+{
+  "actual_metadata_receipt_sql_reads": 1200,
+  "actual_metadata_verification_sql_reads": 1200,
+  "actual_stop_proofs": 9390,
+  "all_fits_and_selection_reproduced_exactly": true,
+  "all_four_host_exits_zero": true,
+  "analysis_files_sha256": {
+    "candidate-diagnostics.json": "0b578b92e001cbf267ba751148db43703035514f1d89bfa68532fbe6844d0d1b",
+    "diagnostics.log": "41a86a63ff04ab51d6f173dec51135f601ff4a5df7d45f845cf999d628ca8a23",
+    "diagnostics.py": "3225d514e21d533060f74bceaad75dd89ef5f9cd3e73510a61715e81901071c2",
+    "extraction.json": "4dcefb044226db0e92952a2807fffbd6cd56a32e5854cd255adc3785728ebe62",
+    "interpretation.txt": "41a86a63ff04ab51d6f173dec51135f601ff4a5df7d45f845cf999d628ca8a23",
+    "local-reproduction.json": "c301f678bf86d6955b42d7b280dad5e860e4852f4fc723bc96ff723b23a8a4b4",
+    "overview.json": "8a2a2408b147be65f5c38e4c4882db70964c6c9c8dcf21dcbfa56eb81a230d43",
+    "performance.json": "5ea4f7b59010c91e9fc95ca1c51fe617932d35a45b525c2c0c67d015d08ea169",
+    "raw-reproduction.log": "d6290bc825e1e9924248c5bcbb85b233ff50b02886e7668ff85bbe6205b1e2df",
+    "report.txt": "c83405cc43dfc6ba9ebaa1ff651008b64f2a53d4d4c29357563448f22501c550",
+    "reproduce.py": "6f75038bb806f5dea5b0e653597ee47d8b6982676113e4133342e0df1e432c3d",
+    "verification.json": "5a6f5057113bf0efbd53056ab92b806f660f5bb752141fe2b87bb9010f1ffe40"
+  },
+  "analysis_used_original_local_code_only": true,
+  "architecture": "x86_64",
+  "archive": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y.tar.gz",
+  "archive_bytes": 34619575,
+  "archive_sha256": "074cb469a65cce5776adcb2ae0441a1cf5d83bf7134c9183877253ba32ccadb5",
+  "backend_searches": 77172,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "calibration_candidate_counts": {
+    "both_cost_proxies_positive": 12,
+    "calibration_recall_pass": 1,
+    "candidates": 16,
+    "eligible": 0,
+    "fails_votes108_development_recall": 15,
+    "passes_unchanged_final_recall_only_diagnostic": 1
+  },
+  "calibration_vectors": 40,
+  "campaign": "reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y",
+  "canonical_acceptance_established": false,
+  "confirmation_queries": 0,
+  "conservative_endpoint_diagnostics": [
+    {
+      "arm": "S100",
+      "calibration_recall_loss_cases": 1,
+      "fixed_stop_replay_timing_proxies": {
+        "activation-cold": {
+          "delta_ms": 1.0265073749999996,
+          "delta_percent_native": 10.617034568433501,
+          "fixed_stop_collection_ms": 0.058745975,
+          "fixed_stop_policy_evaluation_ms": 0.011693183333333333,
+          "fixed_stop_policy_ms": 10.695001608333333,
+          "paired_native_ms": 9.668494233333334,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        },
+        "reused-warm": {
+          "delta_ms": 0.30106799166666676,
+          "delta_percent_native": 4.5501761247188535,
+          "fixed_stop_collection_ms": 0.042041583333333334,
+          "fixed_stop_policy_evaluation_ms": 0.011097441666666666,
+          "fixed_stop_policy_ms": 6.917690808333333,
+          "paired_native_ms": 6.616622816666666,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        }
+      },
+      "recall_reports": {
+        "overall": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9858333333333335,
+          "recall_delta": -0.0008333333333333332,
+          "recall_delta_ci95": [
+            -0.0024999999999999996,
+            0.0
+          ]
+        },
+        "unfiltered": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.99,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "votes108": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9800000000000001,
+          "recall_delta": -0.0024999999999999996,
+          "recall_delta_ci95": [
+            -0.007499999999999998,
+            0.0
+          ]
+        },
+        "votes32": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9875,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "risk": 1280.0,
+      "training_recall_loss_cases": 0
+    },
+    {
+      "arm": "S160",
+      "calibration_recall_loss_cases": 0,
+      "fixed_stop_replay_timing_proxies": {
+        "activation-cold": {
+          "delta_ms": 0.31670004166666743,
+          "delta_percent_native": 3.2690227454855094,
+          "fixed_stop_collection_ms": 0.057700708333333336,
+          "fixed_stop_policy_evaluation_ms": 0.011886375,
+          "fixed_stop_policy_ms": 10.004611883333334,
+          "paired_native_ms": 9.687911841666667,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        },
+        "reused-warm": {
+          "delta_ms": -0.10149140833333359,
+          "delta_percent_native": -1.50804285170577,
+          "fixed_stop_collection_ms": 0.04232615,
+          "fixed_stop_policy_evaluation_ms": 0.011225475,
+          "fixed_stop_policy_ms": 6.628516841666666,
+          "paired_native_ms": 6.73000825,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        }
+      },
+      "recall_reports": {
+        "overall": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9858333333333335,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "unfiltered": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.99,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "votes108": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9800000000000001,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "votes32": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9875,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "risk": 1280.0,
+      "training_recall_loss_cases": 0
+    },
+    {
+      "arm": "P100",
+      "calibration_recall_loss_cases": 5,
+      "fixed_stop_replay_timing_proxies": {
+        "activation-cold": {
+          "delta_ms": 0.07950234166666803,
+          "delta_percent_native": 0.9782478397965824,
+          "fixed_stop_collection_ms": 0.09171065,
+          "fixed_stop_policy_evaluation_ms": 0.010419608333333333,
+          "fixed_stop_policy_ms": 8.206516625,
+          "paired_native_ms": 8.127014283333333,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        },
+        "reused-warm": {
+          "delta_ms": -0.3652555083333331,
+          "delta_percent_native": -5.795904530163126,
+          "fixed_stop_collection_ms": 0.07289541666666667,
+          "fixed_stop_policy_evaluation_ms": 0.010011183333333333,
+          "fixed_stop_policy_ms": 5.936703166666667,
+          "paired_native_ms": 6.301958675,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        }
+      },
+      "recall_reports": {
+        "overall": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9858333333333335,
+          "recall_delta": -0.004999999999999999,
+          "recall_delta_ci95": [
+            -0.01083333333333333,
+            -0.0008333333333333332
+          ]
+        },
+        "unfiltered": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.99,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "votes108": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9800000000000001,
+          "recall_delta": -0.009999999999999998,
+          "recall_delta_ci95": [
+            -0.019999999999999997,
+            -0.0024999999999999996
+          ]
+        },
+        "votes32": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9875,
+          "recall_delta": -0.004999999999999999,
+          "recall_delta_ci95": [
+            -0.014999999999999996,
+            0.0
+          ]
+        }
+      },
+      "risk": 1280.0,
+      "training_recall_loss_cases": 0
+    },
+    {
+      "arm": "P160",
+      "calibration_recall_loss_cases": 2,
+      "fixed_stop_replay_timing_proxies": {
+        "activation-cold": {
+          "delta_ms": 0.12488179166666669,
+          "delta_percent_native": 1.4598944745320275,
+          "fixed_stop_collection_ms": 0.0950728,
+          "fixed_stop_policy_evaluation_ms": 0.012405658333333333,
+          "fixed_stop_policy_ms": 8.679047441666667,
+          "paired_native_ms": 8.55416565,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        },
+        "reused-warm": {
+          "delta_ms": -0.207421608333334,
+          "delta_percent_native": -3.2671582755967323,
+          "fixed_stop_collection_ms": 0.07275513333333333,
+          "fixed_stop_policy_evaluation_ms": 0.011938,
+          "fixed_stop_policy_ms": 6.141264033333333,
+          "paired_native_ms": 6.348685641666667,
+          "pairs": 120,
+          "scope": "Fixed-stop replay proxy, not actual fitted-policy latency or a final latency test."
+        }
+      },
+      "recall_reports": {
+        "overall": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9858333333333335,
+          "recall_delta": -0.0016666666666666663,
+          "recall_delta_ci95": [
+            -0.004166666666666666,
+            0.0
+          ]
+        },
+        "unfiltered": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.99,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "votes108": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9800000000000001,
+          "recall_delta": -0.004999999999999999,
+          "recall_delta_ci95": [
+            -0.012499999999999997,
+            0.0
+          ]
+        },
+        "votes32": {
+          "all_valid": true,
+          "groups": 40,
+          "native_recall": 0.9875,
+          "recall_delta": 0.0,
+          "recall_delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "risk": 1280.0,
+      "training_recall_loss_cases": 0
+    }
+  ],
+  "deployable_policy_selected": false,
+  "development_recall_margin": 0.0025,
+  "discarded_acquisition_warmups": 10590,
+  "evaluation_executed": false,
+  "evaluation_vectors_not_executed": 60,
+  "feature_registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+  "files": 195,
+  "final_recall_criteria_unchanged": true,
+  "final_recall_tolerance": 0.005,
+  "financial_scientific_state_unchanged": true,
+  "fit_pool_vectors": [
+    100,
+    160
+  ],
+  "fitted_policy_timing_executed": false,
+  "independent_development_vectors": 200,
+  "independent_reproduction_conventional_fits": 16,
+  "job_ids": {
+    "acquire-0": "20627108",
+    "acquire-1": "20627109",
+    "build": "20627107",
+    "fit": "20627113"
+  },
+  "limitations": [
+    "Common calibration is adaptive selection data, not final evaluation or confirmation.",
+    "No fitted-policy timing, native-bypass timing or new oracle timing was run; all latency figures here are fixed-stop replay proxies.",
+    "The 60 common evaluation vectors were not executed; their outcomes were not opened during this analysis.",
+    "Four-arm statistical timing contrasts were not run because the predeclared calibration gate failed.",
+    "Descriptive differences across the four training procedures do not establish a general feature/data ceiling or a causal agent-design effect.",
+    "Further development may use these acquired outcomes diagnostically, but cannot relabel this calibration set as fresh validation."
+  ],
+  "local_reproduction_seconds": 71.5435126661323,
+  "minimum_native_recall": 0.95,
+  "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+  "new_backend_calls_during_local_analysis": 0,
+  "new_experimental_fits_during_analysis": 0,
+  "new_provider_calls": 0,
+  "no_symlinks_or_special_files": true,
+  "original_ab_comparison": {
+    "complete_pairs": 0,
+    "selection_effect_established": false,
+    "status": "inconclusive"
+  },
+  "original_conventional_fits": 16,
+  "original_source_receipts_unchanged": true,
+  "package_manifest_sha256": "3a50e8296bdba9dbb8c018ef742af2b2e868ae80f85172c876511a015fd5838c",
+  "physical_index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+  "query_filter_cases_acquired": 600,
+  "raw_file_hashes_verified": 48,
+  "recorded_utc": "2026-10-22T17:29:10.988524+00:00",
+  "reserved_development_vectors": 37,
+  "retained_acquisition_pairs": 21180,
+  "returned_package_matches_original_local_package": true,
+  "root": "/Users/danielarturi/Developer/JinyangLiWork/trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y",
+  "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3",
+  "saved_analysis_byte_identical": true,
+  "shared_interpreter_training_case_checks": 6240,
+  "source_preservation": {
+    "charge_records": 169,
+    "charges_sha256": "9bae546cf6f63772f905ff848f03b95702e5a19a1409a1a8f1ce35127f767c1b",
+    "scientific_state_sha256": "8eb787149542b1437bc916228380e6836f950c441616ac1a6d9a6937078435af",
+    "source_manifest": "a4ae514239f05272db9256f9166873697ddc48c2c818bda2b5abace305976b55"
+  },
+  "status": "completed_and_independently_verified_stopped_after_calibration",
+  "uncompressed_bytes": 568701707
+}

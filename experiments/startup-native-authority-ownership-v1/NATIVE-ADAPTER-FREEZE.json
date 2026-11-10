@@ -1,0 +1,33 @@
+{
+  "Torch_jobs": 0,
+  "changes": [
+    "Readable new staging adapter is byte-identical to D124 module except its prototype SLURM rejection delegates to the same always-closed native gate. Compat original remains byte-identical; all archive/member/full/semantic/space checks preserved.",
+    "Explicit target runtime/bridge/guest/native runner and host process adapter retain old exact hardware/provenance/phase/proof behavior. Every target entry first invokes the always-closed gate; no scheduler/backend or new grant.",
+    "After launch admission at<=210, host readiness timer allows only the existing deadline+240, preserving30startup and all guest/post/outer reserves.",
+    "Controller binds interpreter path/hash, integration code/JSON, storage observations and persistent immutable archive references. Persistent128MiB/1000file guard plus quota consistency policy remain unchanged.",
+    "All original tests plus new closure/origin/deadline/failure tests are preserved and verified in source/snapshot; actual full runs use only local profile."
+  ],
+  "frozen_at_utc": "2026-11-02T02:48:19.339823+00:00",
+  "limits": {
+    "allocations": 1,
+    "guest_cleanup_seconds": 600,
+    "guest_seconds": 3000,
+    "home_free_files": 1000,
+    "home_return_required_bytes": 134217728,
+    "host_post_seconds": 240,
+    "host_pre_seconds": 240,
+    "memory_gib": 32,
+    "outer_margin_seconds": 120,
+    "physical_cpus": 4,
+    "raw_bytes": 33554432,
+    "scratch_free_files": 30000,
+    "scratch_required_bytes": 8589934592,
+    "wall_seconds": 3600
+  },
+  "native_release": false,
+  "new_allowance": false,
+  "parent_design_sha256": "0e3716eed59b12ff772fdf2f315dcdef0df0e9d417f7943b4ec708c792105769",
+  "schema": "a3.native-adapter.closure-freeze.v1",
+  "scope": "Complete explicit target-side adapter paths while all native entry and dispatch remain closed; no original source/helper changes or launch.",
+  "searches": 0
+}

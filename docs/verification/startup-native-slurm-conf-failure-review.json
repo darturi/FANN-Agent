@@ -1,0 +1,43 @@
+{
+  "allowance": "21756110 spent and closed; no retry",
+  "assistant_remote_commands": 0,
+  "call_chain": [
+    "site_control.main -> ni_control.host",
+    "ni_native.Allocation.__init__: self.client construction completed",
+    "ni_native.Allocation.__init__: self.runtime_identity Apptainer check completed",
+    "ni_native.Allocation.__init__: self.site = self.client.probe()",
+    "ni_site.SiteClient.probe: first --version query",
+    "ni_site.bounded_command: evaluate env=clean_environment() before Popen",
+    "site_trust.clean_environment: trusted_data(os.environ[SLURM_CONF], configuration)",
+    "site_trust.trusted_data: Original root data-path rule rejected",
+    "site_trust.exception_chain: Outside the frozen site-prefix scope"
+  ],
+  "code_package_tests_limits_changed": false,
+  "collection_reported_success": true,
+  "confirmed": [
+    "SLURM_CONF was nonempty and its strict resolved path existed",
+    "The original root data-path predicate rejected a leaf or ancestor",
+    "The resolved configuration path was not the narrowly allowed /opt/slurm/etc/slurm.conf",
+    "Slurm binary and recorded Apptainer executable checks completed before this failure",
+    "The first Slurm probe command and original scientific phases were not launched"
+  ],
+  "decision": "D135",
+  "evidence_directory": "trials/torch-reviews-startup-native-site-compatibility-v1/submission-21756110/failure-review-2026-11-03/slurm-conf-trace-review",
+  "identified_role": "SLURM_CONF environment configuration path",
+  "job_id": "21756110",
+  "native_qualification": false,
+  "new_allocations": 0,
+  "next_step": "Download and verify the already collected full return; inspect all actual files before deciding what further read-only metadata is needed. No speculative configuration exemption, environment bypass, hot patch or new allocation.",
+  "remote_archive": "/home/dar579/torch-reviews-results/native-integrated-08a9293c3c4e4386118be6a3.tar.gz",
+  "review_date": "2026-11-03",
+  "roadmap_version": "1.87",
+  "scientific_phases_started": false,
+  "searches": 0,
+  "source": "User-pasted successful collect output and complete chained scheduler traceback",
+  "status": "failed_configuration_role_identified_full_return_download_pending",
+  "unknown": [
+    "actual SLURM_CONF value and resolved pathname",
+    "which component/UID/mode/write-access condition was rejected",
+    "configuration provenance and applicable default/site configuration behavior"
+  ]
+}

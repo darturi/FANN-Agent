@@ -1,0 +1,89 @@
+{
+  "authorized_user_job": {
+    "allocations": 1,
+    "ann_searches": 0,
+    "data_verification_scans": 4,
+    "exact_searches": 0,
+    "hours": 1,
+    "maximum_live_readers": 6,
+    "memory_gib": 32,
+    "physical_cpus": 4,
+    "reader_admissions": 10,
+    "snapshot_scans": 1
+  },
+  "checks": {
+    "coverage": [
+      "actual restricted-environment shell launcher",
+      "actual host entry point and runtime startup/finalization/cleanup with mocked boundaries",
+      "actual frozen constructor/binding/snapshot/eligibility methods",
+      "all three prior startup-failure regressions",
+      "zero-search method/operation/SQL guards and counts",
+      "reader lifecycle/settings/order/CPU mapping",
+      "cgroup v1/v2 mount root/ancestors/counters/limits/events/peaks/process identity/caps",
+      "actual sampler entry point with synthetic proc/cgroup interfaces",
+      "independent complete returned-data replay and rejection cases",
+      "actual transfer script with fake SSH/SCP and authentication/checksum failures",
+      "package/archive/path/symlink/unknown dispatch/once-only guards"
+    ],
+    "errors": 0,
+    "failures": 0,
+    "release_verification": "trials/torch-reviews-startup-resource-v1/release-verification.json",
+    "sealed_tests": 117,
+    "source_tests": 117,
+    "static": {
+      "ast_parse_files": 62,
+      "bash_syntax": "pass: source launcher, sealed Slurm launcher, final transfer helper",
+      "earlier_broad_style_diagnostics_preserved": true,
+      "ruff_check": "pass",
+      "ruff_config": "agent/pyproject.toml; explicit known-first-party=fannagent for dynamic frozen package imports",
+      "ruff_format": "pass",
+      "scope": "Top-level isolated source/sealed Python only; embedded prior evidence/frozen source preserved byte-for-byte"
+    }
+  },
+  "commands": "trials/torch-reviews-startup-resource-v1/COMMANDS.txt",
+  "date": "2026-10-27",
+  "design_frozen_before_implementation": true,
+  "design_sha256": "fbe4ffbf95f983018ed112b778af637c39ff3fe807ac17176d84bbc66fbb5fc0",
+  "full_calibration_release": "held",
+  "limitations": [
+    "Local correctness evidence uses synthetic process/database/resource/large-graph proof boundaries; native and full-size resource evidence pending Torch.",
+    "Zero ANN/exact searches; startup/admission and allowed catalog/settings/snapshot/data-verification SQL only.",
+    "A startup-only margin pass cannot qualify query-workload memory, recall, A/A, speed, adoption or automatic full-calibration release.",
+    "Missing peak/events/coverage or total-charge margin failure cannot be rescued by cache subtraction."
+  ],
+  "native_activity_by_codex": {
+    "ann_searches": 0,
+    "exact_searches": 0,
+    "native_database_queries": 0,
+    "new_fits": 0,
+    "protected_query_values": 0,
+    "provider_calls": 0,
+    "real_ssh_calls": 0,
+    "torch_allocations": 0
+  },
+  "next_step": "User upload and once-only startup-resource.v1 submission, terminal collect/download, trusted independent resource review.",
+  "no_automatic_retry": true,
+  "preservation": {
+    "changed": [],
+    "prior_files": 3123,
+    "production_and_prior_evidence_unchanged": true
+  },
+  "prior_calibration_attempts_spent": 3,
+  "recorded_at": "2026-10-27T21:56:54.856922-04:00",
+  "register": "NEXT-STARTUP-RESOURCE-01",
+  "release": {
+    "archive": "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1.tar.gz",
+    "archive_bytes": 18917673,
+    "archive_files": 222,
+    "archive_sha256": "df8a7a8cbebd549ffd9ab5acfc0ee6d2e49c74cb0bd46d00e636fcc3d0269ab6",
+    "manifest_files": 221,
+    "manifest_sha256": "4212507e81abc053aa5045e09a8cb624b789ed0bad4e1e8d1bf69f82f31484d9",
+    "package": "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1",
+    "synthetic_fixture": false
+  },
+  "resource_contract_sha256": "a4120866fea72befae75e485bc05bc7265314eb64b85839e5436e4c480339b90",
+  "roadmap": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+  "status": "local_source_and_sealed_pass_native_pending",
+  "timezone": "America/New_York",
+  "version": "startup-resource.v1"
+}

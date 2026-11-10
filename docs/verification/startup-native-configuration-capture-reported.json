@@ -1,0 +1,37 @@
+{
+  "ANN_searches": 0,
+  "all_spent_allowances": "closed; including21756110; no retry or new grant",
+  "assistant_remote_commands": 0,
+  "capture_directory": "/home/dar579/torch-reviews-results/a3-client-config-capture.9rki9gow",
+  "configuration_admitted": false,
+  "confirmed_from_report": [
+    "Working expected client SHA and exact site-prefix component ownership retained",
+    "Known cluster/controller/port/auth anchor reported",
+    "Configuration/syntax/dependency/native flags explicitly false"
+  ],
+  "date": "2026-11-03",
+  "decision": "D140",
+  "evidence_directory": "trials/torch-reviews-startup-native-pinned-client-config-v1/capture-return-9rki9gow",
+  "exact_searches": 0,
+  "host": "torch-login-a-0.hpc-infra.svc.cluster.local",
+  "native_qualification": false,
+  "new_allocations": 0,
+  "next_step": "Run new pinned-key Mac download helper; it fetches only the existing capture and never repeats export.14local retrieval/verification checks passed; zero actual transfers or remote commands by assistant.",
+  "pending": [
+    "Download and independently verify all10expected raw files and complete manifest/receipt/command/quota records",
+    "Inspect actual serialized configuration and client dependency closure",
+    "Exact-version sealed-input compatibility and later compute portability/native qualification"
+  ],
+  "provider_calls": 0,
+  "reported_ANN_searches": 0,
+  "reported_configuration_bytes": 16647,
+  "reported_configuration_sha256": "ba998cfda785eee87ef65023a8fe2caf4f7c3734665eb15af5b76d5a2b603ea6",
+  "reported_exact_searches": 0,
+  "reported_manifest_sha256": "0ef4872fd4a60229dd5545d764bebc85998d036347d5555ba1be6ed9d2c9f6f2",
+  "reported_new_allocations": 0,
+  "reported_result": "captured_pending_configuration_review",
+  "roadmap_version": "1.92",
+  "scientific_SQL": 0,
+  "source": "User-pasted final capture JSON; terminal command echo partly garbled, so full private raw/manifest verification remains required",
+  "status": "reported_current_capture_success_full_download_pending"
+}

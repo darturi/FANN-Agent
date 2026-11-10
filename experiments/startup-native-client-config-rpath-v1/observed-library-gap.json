@@ -1,0 +1,50 @@
+{
+  "clients": {
+    "/opt/slurm/bin/sacctmgr": {
+      "elf": {
+        "dynamic_flags": {},
+        "interpreter": "/lib64/ld-linux-x86-64.so.2",
+        "machine": 62,
+        "needed": [
+          "libslurmfull.so",
+          "libreadline.so.8",
+          "libc.so.6"
+        ],
+        "rpath": [
+          "/opt/slurm/lib64/slurm"
+        ],
+        "runpath": [],
+        "soname": [],
+        "type": 2
+      },
+      "path": "/opt/slurm/bin/sacctmgr",
+      "sha256": "60564635b14de58039267be2bf26cb6ba59d064955a9bcf446cdb7a67908b48f"
+    },
+    "/opt/slurm/bin/scontrol": {
+      "elf": {
+        "dynamic_flags": {},
+        "interpreter": "/lib64/ld-linux-x86-64.so.2",
+        "machine": 62,
+        "needed": [
+          "libslurmfull.so",
+          "libreadline.so.8",
+          "libc.so.6"
+        ],
+        "rpath": [
+          "/opt/slurm/lib64/slurm"
+        ],
+        "runpath": [],
+        "soname": [],
+        "type": 2
+      },
+      "path": "/opt/slurm/bin/scontrol",
+      "sha256": "ed806e144b8de806ee88e5fc066e0aed6c42ab281abf457315fca3e9af82b238"
+    }
+  },
+  "directory": {
+    "contains": "libslurmfull.so",
+    "path": "/opt/slurm/lib64/slurm"
+  },
+  "library_candidate_identity": "unknown until further capture; not admitted",
+  "source_inspection_sha256": "25bcef5cdc926a9aa2601eb4612b17ae22c981cae91b9291191cc6d36eda9960"
+}
