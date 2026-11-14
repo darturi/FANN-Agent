@@ -1,0 +1,156 @@
+{
+  "changes_proposed": {
+    "compiler_derived_observation_dependencies": true,
+    "fresh_unguarded_development_evidence": true,
+    "full_precision_evaluation": true,
+    "genuine_agent_threshold_choice_no_hidden_host_optimizer": true,
+    "partial_stop_profile": "explicit new profile, qualify prefix and actual0..10 outputs; old arms unchanged",
+    "runtime_engineering_credited_separately": true,
+    "unneeded_predicate_checkpoint_collection": "skip after qualifying feature/decision parity"
+  },
+  "comparators": {
+    "final_families": 8,
+    "final_readers_per_family": 2,
+    "historical_fixed_comparators": 2,
+    "max_fixed_full_partial_variants": 6,
+    "max_matched_continue_controls": 3,
+    "max_new_live_agent_finalists": 3,
+    "max_turnover_variants": 6,
+    "max_validation_configurations": 25,
+    "max_validation_measured_requests_at_full_pool": 210000,
+    "native_grid": [
+      40,
+      80,
+      160,
+      320,
+      640
+    ]
+  },
+  "date": "2026-11-13",
+  "implementation": {
+    "backend_coordination": "agent-pgvector; versioned copied study engine; no changes to old installed modules",
+    "campaign_path_proposed": "agent/experiments/filtered-ann-protocol-v2/",
+    "reuse_core": [
+      "budget",
+      "store",
+      "policy/profile contracts",
+      "study access boundaries"
+    ]
+  },
+  "new_episode_proposal": {
+    "authorized_now": false,
+    "automatic_retries": false,
+    "max_candidate_submissions_including_invalid_duplicate_repair": 9,
+    "max_candidates_per_batch": 3,
+    "max_domain_tool_invocations": 12,
+    "max_error_examples_per_condition": 3,
+    "max_explanation_cases_per_request": 12,
+    "max_live_finalists": 3,
+    "max_output_tokens_per_request": 6000,
+    "max_paid_requests": 6,
+    "max_usd": 15,
+    "old_allowance_paid_requests": 3,
+    "old_allowance_spent_usd": "0.725544",
+    "provider_model_rate_availability": "pin/check before a newly authorized dispatch"
+  },
+  "no_actions_taken": {
+    "new_Torch_submissions": 0,
+    "new_provider_requests": 0,
+    "sealed_runtime_modified": false,
+    "validation_test_outcomes_opened": false
+  },
+  "objective": "zero observed raw-native640 query recall losses and credible net latency benefit, with engineering and incremental stopping attribution separate",
+  "pending_diagnostic": {
+    "automatic_repeat": false,
+    "freeze_sha256": "c8e4079c62a22e22c0e831152b82c2756fd3c2e4e502e2fb20a76dd933648d73",
+    "kit": "reader-attribution-v1",
+    "unchanged_by_plan": true
+  },
+  "plan_document_sha256": "e87ad77feff7d14b249e84f97f6fe3ab89408c70013af3ed81bd7b0b20a504e6",
+  "pre_revamp_checkpoint_commits": [
+    "c3f7a48",
+    "6250bd4"
+  ],
+  "replication": {
+    "cross_size_query_exposure_audit_required": true,
+    "freeze_procedure_before_new_workloads": true,
+    "initial_episodes_per_new_workload": 1,
+    "policy_transfer_is_separate_from_method_replication": true,
+    "repeated_episode_study": "separate fixed episode/candidate/cost budget before selection; no lucky-episode retries using validation"
+  },
+  "schema": "fannagent.protocol-revamp-plan.v2",
+  "scope": {
+    "absolute_95pct_recall_floor": "diagnostic not eligibility gate",
+    "all_six_filters": true,
+    "development_groups": 450,
+    "exact_search": "offline labels only",
+    "exact_serving_calls": 0,
+    "historical_excluded_groups": 125,
+    "short_outputs": "scored normally; missing neighbors are misses",
+    "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+    "test_groups": 275,
+    "unfiltered_control": true,
+    "validation_groups": 150
+  },
+  "stages": [
+    {
+      "go_no_go": "if unresolved, preserve inconclusive result and do not spend on latency-guided generation",
+      "id": "M0",
+      "name": "finish existing attribution diagnostic"
+    },
+    {
+      "go_no_go": "new versioned profile, prefix/output/decline/native parity; no guard",
+      "id": "M1",
+      "name": "qualify observation masks and partial stopping"
+    },
+    {
+      "go_no_go": "provenance, exact precision, measured/surrogate separation",
+      "id": "M2",
+      "name": "rebuild raw-label compact evidence and cost guidance"
+    },
+    {
+      "go_no_go": "quotas, parsing, recovery, accounting and scope tests with no paid requests",
+      "id": "M3",
+      "name": "typed tool/controller rehearsal"
+    },
+    {
+      "go_no_go": "complete candidate registry and terminal submission/abstention",
+      "id": "M4",
+      "name": "one newly authorized bounded agent episode"
+    },
+    {
+      "go_no_go": "all candidates and matched controls measured; no extra model round after failure",
+      "id": "M5",
+      "name": "one live finalist-cost package"
+    },
+    {
+      "go_no_go": "no protected feedback into generation/runtime tuning",
+      "id": "M6",
+      "name": "one sealed validation selection then frozen final test"
+    }
+  ],
+  "statistics_proposed": {
+    "bootstrap_draws": 20000,
+    "bootstrap_unit": "allocation then vector group; preserve filter/family/label/epoch pairing",
+    "epochs_per_allocation": 4,
+    "family_alpha": 0.05,
+    "final_planned_timed_requests_if_unmodified_counts": 616000,
+    "fixed_final_allocations": 5,
+    "identical_code_equivalence_band": [
+      0.98,
+      1.02
+    ],
+    "identical_code_interval_confidence": 0.9,
+    "matched_continue_ratio_upper_strict_max": 1,
+    "native_practical_ratio_upper_max": 0.95,
+    "primary_contrasts": [
+      "agent/native640",
+      "agent/matched_quality_native",
+      "agent/matched_continue_only"
+    ],
+    "secondary_native_scalar_contrasts": "Holm across12; matched-control per-filter descriptive",
+    "timing_contract_change": "only explicit pre-holdout amendment after diagnostic, with new count/resource justification",
+    "upper_one_sided_confidence": 0.9833333333333333
+  },
+  "status": "proposed_not_active_not_dispatched"
+}

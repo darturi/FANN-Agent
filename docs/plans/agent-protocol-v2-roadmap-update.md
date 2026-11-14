@@ -1,0 +1,7 @@
+# Roadmap update accompanying the proposed agent protocol v2
+
+## November13: pre-revamp state committed; proposed agent protocol v2
+
+The current code and compact source/evidence checkpoint were committed in agent/ at c3f7a48 and6250bd4 before drafting a new plan. The checkpoint archives1,044 source/report/metadata files and records hashes/locations for larger raw artifacts retained locally; no remote push. Other repository HEADs are pinned in its manifest.
+
+The proposed [comprehensive agent protocol revamp](../AGENT_PROTOCOL_REVAMP_V2.md) separates runtime engineering, raw recall preservation, search-work reduction and attributable net latency. It sequences the existing attribution diagnostic, versioned observation masks/partial-stop qualification, raw-reference compact evidence, bounded typed tools, one newly authorized episode, real finalist cost and protected selection/testing. The proposed new episode is capped at$15/six paid requests/nine candidate submissions/twelve domain-tool calls, not an extension of the exhausted old allowance. It adds matched continue-only controls and proposes a prospectively declared three-contrast confirmatory family. Procedure replication and policy transfer remain separate. This is a plan only: it does not activate new semantics, alter the sealed diagnostic, spend provider credits, submit Torch jobs or open holdouts. The current next action remains the existing fixed diagnostic return, with no automatic repeat or presumption of agent success.
