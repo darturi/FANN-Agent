@@ -1,0 +1,9 @@
+# November14 execution update
+
+Source: `research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md` in the shared workspace.
+
+The user authorized executing the revamp plan and clarified that the sealed reader-attribution diagnostic has not yet been submitted. Its kit and freeze hashes are unchanged; the supplied upload/submission commands remain the next Torch action. No new Torch job or provider call was launched locally.
+
+The [local v2 implementation](../agent/experiments/filtered-ann-protocol-v2/README.md) now includes a deterministic causal DSL/compiler, predicate/checkpoint observation masks, qualified-on-synthetic-fixtures partial/zero stops, matched continue-only controls, raw-native evidence rebuild and a bounded typed controller using the existing Store/Budget. Thirty-six targeted tests, generated-C/Python decision parity, two seven-condition PostgreSQL smokes and a complete scripted campaign pass. These are local semantic/controller checks, not original-graph or latency qualification. All six filters and unfiltered remain in scope; exact search has no serving role; protected outcomes remain unopened.
+
+All3,150 development rows were rebuilt with7,940 known full-prefix labels and1,496 still-missing reached partial-prefix labels. The1,964 cases with some known raw-recall-preserving full stop are an oracle opportunity count, not a policy or speed result. The bundle is cost-unqualified; generation is blocked pending verified M0 attribution, original-graph v2 qualification, completed prefix/cost evidence and new episode authorization. The next v2 development kit's measurement contract must follow M0. [Machine-readable execution status](../agent/docs/plans/agent-protocol-v2-execution-status.json) and source/artifact-bound local receipts preserve these limits and the failed rehearsal that exposed a subsequently fixed artifact-scope collision.

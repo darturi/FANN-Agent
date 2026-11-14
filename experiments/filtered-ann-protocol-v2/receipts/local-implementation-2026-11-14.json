@@ -1,0 +1,243 @@
+{
+  "api_spend_usd": "0",
+  "date": "2026-11-14",
+  "external_artifacts": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/agent-protocol-v2-evidence-v2/evidence.json": {
+      "bytes": 1858823,
+      "sha256": "434cc7115871eff2a0d29566aa84e2ed9abfba0ec759ad7b4066571fab5a8078"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/agent-protocol-v2-evidence-v2/summary.json": {
+      "bytes": 7377,
+      "sha256": "334ad10ad17b79b5f2d7fd333af16f38b8aa91c42699555ce676606e846667df"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-local-tests.xml": {
+      "bytes": 6130,
+      "sha256": "6b00232d00c5a68c20f8493122e41e5a9814b66fad3bb393b34b44209394b938"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v3/receipt.json": {
+      "bytes": 3969,
+      "sha256": "31d3e6a59ea2dc00462bd5bab753529f54affc9890c45db74e91209b2b40d7b2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-v1.json": {
+      "bytes": 904,
+      "sha256": "c8e4079c62a22e22c0e831152b82c2756fd3c2e4e502e2fb20a76dd933648d73"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1.tar.gz": {
+      "bytes": 7982390,
+      "sha256": "5ea46c974ea9e6e2a6d367ab72e025528e08eda9b63834e4cd1b6128d4de826f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-v2-local-v1/build.log": {
+      "bytes": 12899,
+      "sha256": "dd8d617606b1e47d3cca5ab2c6b0461bd157ecb28b043b88fa5e7a8dbac64d2f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-v2-local-v1/smoke.log": {
+      "bytes": 1552,
+      "sha256": "b65292f451711d67e0515ea31ef4beea8db3cb831ef3d7b7ced26af7e7860824"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-v2-local-v2/compiled-programs.json": {
+      "bytes": 47331,
+      "sha256": "c084f7ea1eaf50a6af9b71e1eb5761d2d25d15c115ecc9969c6b531cedbceb70"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-v2-local-v2/smoke-zero.log": {
+      "bytes": 1622,
+      "sha256": "9e4bfff8e839ed108684d357fff2d3d1961581b2f061aac636e4d72f6cdd9130"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-v2-local-v2/vector.so": {
+      "bytes": 335616,
+      "sha256": "cf656b0d8c7d4db6104a65be7ff83a18eb20972dd909227e2afc2e2086b54714"
+    }
+  },
+  "limitations": [
+    "Synthetic8d partial-graph smoke only; native work/original graph v2 qualification pending.",
+    "M0 attribution is not submitted according to user; no verified return.",
+    "1496 reached partial-prefix labels and qualified original-graph costs remain missing.",
+    "No paid-provider adapter activated; original allowance exhausted; new authorization required for M4.",
+    "Cost estimator is an unqualified component surrogate interface, with real uncertainty/timing binding still pending."
+  ],
+  "lint": "ruff check passed",
+  "local_module_sha256": "cf656b0d8c7d4db6104a65be7ff83a18eb20972dd909227e2afc2e2086b54714",
+  "provider_requests": 0,
+  "retained_failed_rehearsal": {
+    "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v1",
+    "reason": "Final text submission exposed a Store scope collision; private round outcomes now wrap their reservation and outcome; regression test and scripted v3 pass."
+  },
+  "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+  "schema": "filtered-ann-v2-local-implementation.v1",
+  "scope": "development-only local implementation; not original-graph qualification",
+  "scripted_rehearsal": {
+    "actual_api_spend_usd": "0",
+    "candidate_submissions_including_invalid_duplicate": 3,
+    "external_provider_requests": 0,
+    "finalists": [
+      "candidate-1"
+    ],
+    "fixture_evidence_hash": "489c3dbef6e89da28cac89d9ed287ce25b900b1cef4c46cb3a32ede24de40b4f",
+    "holdout_access": false,
+    "limits": "Synthetic labels, costs and rate card. No study performance or qualification.",
+    "real_generation_preflight": {
+      "cost_status": "unqualified_pending_M0_and_original_graph_v2_costs",
+      "development_rows": 3150,
+      "evidence_hash": "63cb9309d9afa84ad4c0bd90845c8b341da2f64c3f1ced50365abad1f0d0d1ac",
+      "first_gate": "M0 attribution return is not verified/resolved",
+      "known_prefix_labels": 7940,
+      "missing_reached_prefix_labels": 1496,
+      "status": "blocked_as_required"
+    },
+    "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+    "schema": "filtered-ann-controller-rehearsal.v2",
+    "scripted_response_count": 3,
+    "status": "passed_scripted_only",
+    "synthetic_accounting_usd": "0.0009",
+    "terminal": "finalists_frozen_pending_live_measurement",
+    "tools": 3
+  },
+  "sealed_M0_unchanged": true,
+  "smokes": {
+    "partial": {
+      "conditions": [
+        {
+          "filter": -1,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 743,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 527,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 310,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 192,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 108,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 32,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        }
+      ],
+      "exact_serving_calls": 0,
+      "fixture": "synthetic8d partial graph, effort8192 to exercise all checkpoints; not original-graph/cost qualification",
+      "holdout_access": false,
+      "partial_stops_verified": 4,
+      "status": "passed",
+      "turnover_dependency_checks": 1,
+      "zero_observation_predicates_checked": 43
+    },
+    "zero": {
+      "conditions": [
+        {
+          "filter": -1,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 743,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 527,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 310,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 192,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 108,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        },
+        {
+          "filter": 32,
+          "first_stop_and_prefix_output_parity": true,
+          "masked_features_match_canonical": true,
+          "native_after_role_switch_parity": true,
+          "programs": 13
+        }
+      ],
+      "exact_serving_calls": 0,
+      "fixture": "synthetic8d partial graph, effort8192 to exercise all checkpoints; not original-graph/cost qualification",
+      "holdout_access": false,
+      "partial_stops_verified": 4,
+      "status": "passed",
+      "synthetic_high_vote_population": 0,
+      "turnover_dependency_checks": 1,
+      "zero_observation_predicates_checked": 43,
+      "zero_result_stops_verified": 4
+    }
+  },
+  "source_sha256": {
+    "build_evidence.py": "7cdf2b57b20ac9008e607524de662bc194e48275801d9fa94e8b67e171fcde45",
+    "fannproto/__init__.py": "917029f714d25b317bc72ca48fbf91f925c18a5cd59e5cd550fb66a9dc437bd7",
+    "fannproto/compiler.py": "197dcdbd41f22ac2d6c2a81ad4c7aa5d7204cae0e6f0a5b2f8687577c4f7f8dc",
+    "fannproto/controller.py": "480912dfd59fb0424ba45ee0bb85b29a924ff31703f5d4b6fbfbfc43a88385ef",
+    "fannproto/evidence.py": "69d017c06945d015f1e2414478ac77eaff362e65da7525e765671b0b9198eab3",
+    "fannproto/policy.py": "d1997e4b7ca74bf58907d0ba0f05105a35d1190d26a57ef63a0540cfc7058d78",
+    "fannproto/rehearsal.py": "82e5c737135dd4d7e408242c88319289c6790d24084ef85ec0d24b1f8fdc113b",
+    "fannproto/toolspec.py": "9ad817824497a4d9718e54426d3b8d7f6cef0eee3b0452c9507b4a6e4b65c896",
+    "prepare_runtime.py": "0d7faa29d9d3b21e7efd0f130f40f65516d7ec499585d5bbe29e28d5071315c6",
+    "run_rehearsal.py": "04edeccb9b9bbd1e36a0b8dde3566d7665059e9b9df1f63ddf693522ecd94989",
+    "runtime/policy_runtime_v2.inc": "52408e1781a0035699f32a339b3ba0617d9573a8dc7f56a8d497ab9394d78165",
+    "smoke_runtime.py": "671545ef2e7d86da033fc6e4a066491b9ac232487f17ce53369ba502d32c790d",
+    "tests/conftest.py": "8659c4f6af34a32f61ecc29774fd873cf628e7e0828ce9ff04773418357a6cc6",
+    "tests/test_controller.py": "8aa490de6504fbbae214f3a446619c8c3f04082b6d323ea9ac1f23388634720d",
+    "tests/test_evidence.py": "6998f99bfadb7fca7b5ae8080dbc64fc3b3335c476c15d2da20a16951aa86833",
+    "tests/test_policy.py": "b631fdfb1bd0f94810a87296effd09acba7dcb290d273d579099cf6feada2470"
+  },
+  "unit_tests": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 36
+  },
+  "validation_test_outcomes_opened": false
+}

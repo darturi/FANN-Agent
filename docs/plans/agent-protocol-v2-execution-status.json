@@ -1,0 +1,25 @@
+{
+  "Torch_submissions_by_Codex": 0,
+  "date": "2026-11-14",
+  "plan_commit": "8937e9e",
+  "provider_requests": 0,
+  "receipt": "experiments/filtered-ann-protocol-v2/receipts/local-implementation-2026-11-14.json",
+  "receipt_sha256": "f0ec9061539e25affc7bb34aab8d23df3a2eef0a7b70c912644cc47a92b95c87",
+  "roadmap_update": {
+    "sha256": "67c3c52cc7ba4f46e8dad9ab3250358eb8e6142313f39d3c897aa28fd6c56e88",
+    "tracked_delta": "docs/plans/agent-protocol-v2-execution-roadmap-update.md",
+    "workspace_path": "research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md"
+  },
+  "schema": "fannagent.protocol-v2-execution-status.v1",
+  "stages": {
+    "M0": "awaiting_user_submission_of_existing_sealed_diagnostic",
+    "M1": "implemented_and_synthetic_smoke_passed_original_graph_pending",
+    "M2": "raw_rescore_complete_missing1496_partial_labels_and_qualified_costs",
+    "M3": "local_scripted_controller_tests_and_end_to_end_rehearsal_passed",
+    "M4": "not_run_requires_qualified_evidence_and_new_provider_authorization",
+    "M5": "not_run",
+    "M6": "not_run_protected_outcomes_unopened"
+  },
+  "status": "local_implementation_ready_for_M0_submission",
+  "validation_test_outcomes_opened": false
+}
