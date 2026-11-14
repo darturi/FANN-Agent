@@ -1,0 +1,272 @@
+{
+  "activities_this_review": {
+    "database_connections": 0,
+    "fits": 0,
+    "native_searches": 0,
+    "policy_simulations": 0,
+    "production_or_experiment_code_changes": 0,
+    "protected_query_value_access": 0,
+    "provider_calls": 0,
+    "tests": 0,
+    "torch_calls": 0
+  },
+  "campaign": "reviews-native-effort-v1-20261025T014743Z.p_kspq5v",
+  "decision": {
+    "B1c_proceed": false,
+    "candidate_fixed_effort": 480,
+    "current_two_reader_router_go": false,
+    "effort_is_predicted_to_qualify": false,
+    "implemented": false,
+    "maximum_new_searches_if_quality_fails": 1830,
+    "maximum_new_searches_if_quality_passes": 59430,
+    "measured": false,
+    "proposed_allocations": 1,
+    "prospective_design_go": true,
+    "reference_fixed_effort": 640,
+    "review_complete": true,
+    "scope": "Quality-first, warm persistent native readers only; full startup/cleanup recorded separately.",
+    "unchanged_activation_calibration_go": false
+  },
+  "execution_rows_read": {
+    "0": 48000,
+    "1": 48000
+  },
+  "forced640_reuse_paired_timer_decomposition": {
+    "interpretation": "Timer categories only. Outside-SQL is not isolated validator cost, and SQL includes transport/decoding, not pure engine time.",
+    "matched_query_block_round_repetitions": 7200,
+    "outer_gap_ms": 0.20623488416666666,
+    "outside_sql_gap_ms": 0.12432944736111111,
+    "sql_gap_ms": 0.08190543680555556
+  },
+  "method": "Descriptive arithmetic means and matched label-averaged differences of existing retained raw timers; no new interval, model, policy or bootstrap calculation.",
+  "prior_verdict": "measurement_inconclusive",
+  "prospective_contract": {
+    "AA_assessed": false,
+    "activation_qualification": false,
+    "automatic_adoption_router_extra_effort_or_block": false,
+    "benefit_assessed": false,
+    "conditional_timing": {
+      "allocations": 1,
+      "conditioning_searches": 19200,
+      "discarded_warmups": 9600,
+      "fresh_AA_interval_checks": 16,
+      "gap_equivalence_ms": 0.1,
+      "log_ratio_equivalence": 0.01980262729617973,
+      "maximum_live_readers": 5,
+      "phase_searches": 57600,
+      "reader_admissions": 14,
+      "retained_searches": 28800,
+      "temporal_blocks_in_same_allocation": 2,
+      "total_campaign_search_ceiling": 59430,
+      "upper_gap_ci95_benefit_ms": -0.1,
+      "upper_log_ratio_ci95_benefit": -0.020202707317519466
+    },
+    "implemented": false,
+    "independent_confirmation": false,
+    "local_correctness_assessed": false,
+    "name": "NEXT-EFFORT-MID-01",
+    "native_assessed": false,
+    "quality_assessed": false,
+    "quality_screen": {
+      "cases": 600,
+      "complete_top_k": 10,
+      "conformance_searches": 30,
+      "early_stop_search_ceiling": 1830,
+      "independent_exposed_vectors": 200,
+      "lower_ci95_recall_delta_reserve": -0.0025,
+      "native_mean_recall_floor_per_filter": 0.95,
+      "overall_and_each_filter_required": true,
+      "reference_searches": 1800
+    },
+    "question": "One global fixed480 versus study640, warm native scope only",
+    "resources": {
+      "cpus": 4,
+      "database_max_connections": 16,
+      "memory_gib": 32,
+      "slurm_wall_seconds": 7200,
+      "work_deadline_seconds": 6600
+    },
+    "seeds": {
+      "bootstrap": 20261019,
+      "bootstrap_resamples": 10000,
+      "order": 20261025
+    }
+  },
+  "retained_component_means_by_block": {
+    "0": {
+      "original640/activation": {
+        "observations": 2400,
+        "outer_ms": 82.18818737291667,
+        "preparation_ms": 61.25427568083333,
+        "query_outer_ms": 20.93391169208333,
+        "query_outside_sql_ms": 0.424728985,
+        "sql_ms": 20.509182707083333
+      },
+      "original640/reuse": {
+        "observations": 7200,
+        "outer_ms": 5.744180187222223,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 5.744180187222223,
+        "query_outside_sql_ms": 0.31314314958333334,
+        "sql_ms": 5.431037037638889
+      },
+      "source/activation": {
+        "observations": 2400,
+        "outer_ms": 79.51535983500001,
+        "preparation_ms": 63.0012524825,
+        "query_outer_ms": 16.514107352499998,
+        "query_outside_sql_ms": 0.41899300666666667,
+        "sql_ms": 16.095114345833334
+      },
+      "source/reuse": {
+        "observations": 7200,
+        "outer_ms": 3.2246685219444444,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 3.2246685219444444,
+        "query_outside_sql_ms": 0.31190466791666666,
+        "sql_ms": 2.912763854027778
+      },
+      "wrapped320/activation": {
+        "observations": 2400,
+        "outer_ms": 134.6983769166667,
+        "preparation_ms": 117.06349002166665,
+        "query_outer_ms": 17.634886895,
+        "query_outside_sql_ms": 0.6473840254166667,
+        "sql_ms": 16.987502869583334
+      },
+      "wrapped320/reuse": {
+        "observations": 7200,
+        "outer_ms": 3.42418847375,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 3.42418847375,
+        "query_outside_sql_ms": 0.44159970138888893,
+        "sql_ms": 2.982588772361111
+      },
+      "wrapped640/activation": {
+        "observations": 2400,
+        "outer_ms": 138.7447312,
+        "preparation_ms": 114.38200565333332,
+        "query_outer_ms": 24.362725546666667,
+        "query_outside_sql_ms": 0.6478634666666667,
+        "sql_ms": 23.71486208
+      },
+      "wrapped640/reuse": {
+        "observations": 7200,
+        "outer_ms": 5.999942246944444,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 5.999942246944444,
+        "query_outside_sql_ms": 0.44539881277777776,
+        "sql_ms": 5.554543434166666
+      }
+    },
+    "1": {
+      "original640/activation": {
+        "observations": 2400,
+        "outer_ms": 84.41728374208333,
+        "preparation_ms": 66.49338595041667,
+        "query_outer_ms": 17.92389779166667,
+        "query_outside_sql_ms": 0.32935383791666667,
+        "sql_ms": 17.594543953749998
+      },
+      "original640/reuse": {
+        "observations": 7200,
+        "outer_ms": 5.294762150416667,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 5.294762150416667,
+        "query_outside_sql_ms": 0.2627343033333333,
+        "sql_ms": 5.0320278470833335
+      },
+      "source/activation": {
+        "observations": 2400,
+        "outer_ms": 76.7888468025,
+        "preparation_ms": 62.31189609291666,
+        "query_outer_ms": 14.476950709583335,
+        "query_outside_sql_ms": 0.3288986366666667,
+        "sql_ms": 14.148052072916668
+      },
+      "source/reuse": {
+        "observations": 7200,
+        "outer_ms": 2.9729225322222224,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 2.9729225322222224,
+        "query_outside_sql_ms": 0.2625398611111111,
+        "sql_ms": 2.710382671111111
+      },
+      "wrapped320/activation": {
+        "observations": 2400,
+        "outer_ms": 134.88633874875,
+        "preparation_ms": 119.59908009666665,
+        "query_outer_ms": 15.287258652083334,
+        "query_outside_sql_ms": 0.50464571875,
+        "sql_ms": 14.782612933333333
+      },
+      "wrapped320/reuse": {
+        "observations": 7200,
+        "outer_ms": 3.13960667875,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 3.13960667875,
+        "query_outside_sql_ms": 0.3850228373611111,
+        "sql_ms": 2.754583841388889
+      },
+      "wrapped640/activation": {
+        "observations": 2400,
+        "outer_ms": 137.86778560583335,
+        "preparation_ms": 117.98883580916666,
+        "query_outer_ms": 19.878949796666667,
+        "query_outside_sql_ms": 0.5035317104166667,
+        "sql_ms": 19.375418086249997
+      },
+      "wrapped640/reuse": {
+        "observations": 7200,
+        "outer_ms": 5.451469859027778,
+        "preparation_ms": 0.0,
+        "query_outer_ms": 5.451469859027778,
+        "query_outside_sql_ms": 0.37913753486111107,
+        "sql_ms": 5.072332324166667
+      }
+    }
+  },
+  "source_audit": {
+    "eager_product_readers": 2,
+    "excluded_from_next_effort_probe": [
+      "New query validator",
+      "Native-direct path",
+      "Pooling dependency",
+      "SQL/transport optimization",
+      "Policy installation or router",
+      "Index/module rebuild"
+    ],
+    "function_level_duration_identified": false,
+    "per_wrapped_query": [
+      "Check both connection/binding/origin identities",
+      "Snapshot.query strict schema/filter/k and float32 vector validation/owned conversion",
+      "Context/effort admission, budget reservation, native dispatch, route metadata"
+    ],
+    "preserve_for_future_interfaces": [
+      "Strict invalid input semantics",
+      "Private admitted request ownership",
+      "Immutable origin/effective settings",
+      "Bound connection identity and closed/stale-handle rejection",
+      "Rollback/close and explicit new-reader recovery",
+      "No replay after failure"
+    ],
+    "shared_native_work_not_isolated_as_wrapper_cause": [
+      "SQL/vector formatting",
+      "Nonce/context/group/begin-parameter construction",
+      "NativeBackend policy-cache/profile constructor"
+    ]
+  },
+  "static_startup_call_count": {
+    "bind_acknowledgements": 1,
+    "origin_settings": 14,
+    "original_explicit_startup_sql_execute_calls": 17,
+    "original_readers_per_activation": 1,
+    "reader_security_checks": 1,
+    "scope": "Ordinary reader startup only; excludes authentication, implicit protocol/internal server work, shared snapshot setup, audit and cleanup. Static calls are not function-level measured timings.",
+    "sql_execute_calls_per_reader": 17,
+    "timeout_settings": 1,
+    "wrapped_explicit_startup_sql_execute_calls": 34,
+    "wrapped_readers_per_activation": 2
+  },
+  "version": "effort-interface-review.v1"
+}

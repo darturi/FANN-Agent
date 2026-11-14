@@ -1,0 +1,17 @@
+{
+  "actual_usd": "0.561208",
+  "cap_usd": "15",
+  "disposition": "retain guarded native640; no candidate exists; version any subsequent method revision separately",
+  "episode_report": "../../reports/agent-episode-v1-2026-11-12.md",
+  "external_payload_approval_sha256": "c90ed3d83ae834bb58922041b2ce3dc472d08f2b807b24bcf884299cd0859ff0",
+  "final_policy_selected": false,
+  "model": "claude-sonnet-5-5",
+  "outstanding_reservations": 0,
+  "paid_calls": 1,
+  "provider": "Anthropic",
+  "requests_remaining_unused": 2,
+  "status": "episode_complete_explicit_abstention",
+  "unspent_episode_ceiling_usd": "14.438792",
+  "validation_test_outcomes_opened": false,
+  "verification_sha256": "2027da4c1800ed4930efe9feba2ae37d3eb50d047d0e9153a4ccf7c9c51d1312"
+}

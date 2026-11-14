@@ -1,0 +1,315 @@
+{
+  "activity": {
+    "bootstrap_replays": 0,
+    "database_native_calls": 0,
+    "documentation_writes_only": true,
+    "experiment_imports": 0,
+    "experiments": 0,
+    "fits": 0,
+    "index_builds": 0,
+    "local_correctness_tests": 0,
+    "new_allocations": 0,
+    "protected_query_value_access": 0,
+    "provider_calls": 0,
+    "scientific_code_changes": 0,
+    "simulations": 0,
+    "source_and_saved_evidence_read_only": true,
+    "ssh_or_torch_calls": 0
+  },
+  "carried_forward": {
+    "B1c": "deferred",
+    "adopted_execution": "original",
+    "b2b_campaign": "reviews-exact-topk-v1-catalog-fix-20261026T050859Z.jrmkwhuy",
+    "b2b_status": "verified_incomplete_budget_exhausted",
+    "block0_exact_to_native_ratio": 56.11259917498495,
+    "complete_aa_economics_final_integrity": "not_assessed",
+    "confirmation_vectors_consumed": 0,
+    "exact_fraction_warm_window": 0.93658069128673,
+    "phase_costs": {
+      "all_conditioning_calls_seconds": 205.40002214799998,
+      "all_recorded_plan_diagnostic_seconds": 19.760645042,
+      "all_warm_exact_calls_seconds": 4891.107725335,
+      "all_warm_native_calls_seconds": 92.762579188,
+      "block0_exact_fraction_of_block_wall": 0.9482136926950555,
+      "block0_exact_query_seconds": 3850.068992194,
+      "block0_observed_wall_seconds": 4060.338952975,
+      "exact10_reference_seconds": 322.08221845599996,
+      "full_truth_reference_seconds": 587.428665652,
+      "limits": "Search/diagnostic spans checked disjoint. Exact phase timings include query/transport/decoder; no CPU/IO/JIT causal attribution. Warm residual includes checks/serialization/catalogs/gaps. Different phase totals are not all one partition of the budget.",
+      "native640_reference_seconds": 178.08365993200002,
+      "observed_warm_window_until_cleanup_seconds": 5222.30254247,
+      "qualification_seconds": 13.185694450000002,
+      "restoration_full_charge_available": false,
+      "shared_initialization_seconds": 115.28751114,
+      "warm_exact_fraction_of_window": 0.93658069128673,
+      "warm_plan_diagnostic_seconds": 14.041516610999999,
+      "warm_unattributed_wall_seconds": 18.990699187999546
+    },
+    "quality_prefix_pass": true,
+    "reserved_vectors_consumed": 0
+  },
+  "completed_at_utc": "2026-10-26T14:49:27.333847+00:00",
+  "documents": {
+    "input_inventory_path": "research/fannagent-b2c-ann-alternatives-audit-2026-10-26/input-and-source-inventory.json",
+    "report_path": "research/fannagent-b2c-ann-alternatives-audit-2026-10-26.md",
+    "report_sha256": "b02ceb149c662091d4350b0cd89d2826d3c0dddf9be7a361efe10594f0d603dd"
+  },
+  "historical_build_costs": [
+    {
+      "index_build_seconds": 92.83534420374781,
+      "interpretation": "Historical different population/preparation; not partial-index or query-time prediction.",
+      "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/preparation/size-50000/build-timing.json",
+      "provision_seconds": 236.53532864293084,
+      "rows": 50000,
+      "sha256": "6534b95efe85bd4244dd983a3c6cb94f2658bea55b05655fa0983a2081c1d7c9"
+    },
+    {
+      "index_build_seconds": 273.5534633360803,
+      "interpretation": "Historical different population/preparation; not partial-index or query-time prediction.",
+      "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/preparation/size-100000/build-timing.json",
+      "provision_seconds": 433.1137646790594,
+      "rows": 100000,
+      "sha256": "026708cb3e0ef7076dfb50cda1e031f66d6d494ca13ea895187b639b5b4d3e49"
+    },
+    {
+      "index_build_seconds": 596.1387699022889,
+      "interpretation": "Historical different population/preparation; not partial-index or query-time prediction.",
+      "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/preparation/size-200000/build-timing.json",
+      "provision_seconds": 787.6391927669756,
+      "rows": 200000,
+      "sha256": "40a0df8f28c7bca5662baab12fdc4f41f79d24b22d09fc3ddd805f71b7ad4e7e"
+    },
+    {
+      "index_build_seconds": 764.0620716339909,
+      "interpretation": "Historical different population/preparation; not partial-index or query-time prediction.",
+      "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/preparation/size-247286/build-timing.json",
+      "provision_seconds": 990.6498837992549,
+      "rows": 247286,
+      "sha256": "b71ee7ccad5a7e20baa00780a5bdfcc18db05bd3db509aaa689ed9d1ff76ef38"
+    }
+  ],
+  "next_phase": "B2d",
+  "next_register": "NEXT-PARTIAL-ANN-01",
+  "next_status": "frozen_design_only_not_implemented_not_sealed_not_run",
+  "options": [
+    {
+      "decision": "no_repeat",
+      "option": "exact10 repeat"
+    },
+    {
+      "decision": "defer",
+      "option": "scalar B-tree plus exact distance sort"
+    },
+    {
+      "decision": "select_design_only",
+      "option": "single votes108 partial HNSW"
+    },
+    {
+      "decision": "excluded",
+      "option": "votes32 or additional partial indexes"
+    },
+    {
+      "decision": "defer_duplicate_data_identity_scope",
+      "option": "ordinary filtered shadow table"
+    },
+    {
+      "decision": "defer_layout_api_scope",
+      "option": "partitioned relation"
+    },
+    {
+      "decision": "defer_native_graph_predicate_scope",
+      "option": "ACORN/native predicate traversal"
+    },
+    {
+      "decision": "no_automatic_followup",
+      "option": "iterative scan/effort ladder"
+    }
+  ],
+  "preserved_files": 1364,
+  "preserved_source_files": 349,
+  "primary_sources": [
+    {
+      "id": "S26",
+      "url": "https://github.com/pgvector/pgvector/blob/v0.8.6/README.md#filtering"
+    },
+    {
+      "id": "S35",
+      "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+    },
+    {
+      "id": "S36",
+      "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+    },
+    {
+      "id": "S37",
+      "url": "https://www.postgresql.org/docs/17/sql-prepare.html"
+    },
+    {
+      "id": "S40",
+      "url": "https://github.com/psycopg/psycopg/blob/3.3.6/docs/advanced/prepare.rst"
+    },
+    {
+      "id": "S21",
+      "url": "https://arxiv.org/html/2403.04871v1#S5.SS3"
+    },
+    {
+      "id": "S43",
+      "url": "https://www.postgresql.org/docs/17/sql-createindex.html"
+    }
+  ],
+  "prospective_contract": {
+    "controls": {
+      "aa_gap_interval_bound_ms": 0.1,
+      "aa_log_interval_bound": "log(1.02)",
+      "benefit_bootstrap_upper_quantile": 0.99375,
+      "benefit_upper_gap_ms": -0.1,
+      "benefit_upper_log_ratio": "log(.98)",
+      "both_blocks_negative_required": true
+    },
+    "counts": {
+      "aa_interval_checks": 4,
+      "baseline_ann_searches": 8300,
+      "bootstrap_samples": 10000,
+      "bootstrap_seed": 20261019,
+      "candidate_ann_searches": 8300,
+      "cases": 200,
+      "conditioning_per_block": 3200,
+      "contexts": 1,
+      "discarded_warmups_per_block": 1600,
+      "exhaustive_truth_searches": 202,
+      "formal_searches": 16000,
+      "formal_searches_per_block": 8000,
+      "futility_stop_maximum": 202,
+      "maximum_live_readers": 6,
+      "observer_sql_cap": 20000,
+      "plan_packets": 5700,
+      "preview_searches": 192,
+      "preview_vectors": 24,
+      "qualification": 10,
+      "quality_searches": 600,
+      "quality_stop_maximum": 802,
+      "reader_admissions": 8,
+      "retained_per_block": 3200,
+      "searches_total": 16802,
+      "slots_per_block": 1600,
+      "startup_sql_cap": 1000,
+      "temporal_blocks": 2,
+      "truth_helper_sql_cap": 4040,
+      "vectors": 200
+    },
+    "design_path": "research/fannagent-partial-ann-v1-design-2026-10-26.md",
+    "design_sha256": "7a59792f2db41a4c88095231c1682695ab8a112943112bb2c82d774f22dbefcb",
+    "futility": {
+      "all_predicates_required": true,
+      "candidate_slower_pairs_minimum": 20,
+      "complete_pairs": 24,
+      "mean_gap_ms_minimum": 0.1,
+      "median_ratio_minimum": 2.0,
+      "positive_acceptance_permitted": false
+    },
+    "quality": {
+      "both_mean_recall_floor": 0.95,
+      "delta_lower_ci95_minimum": -0.0025,
+      "final_margin_diagnostic_only": -0.005,
+      "independent_confirmation": false
+    },
+    "resources": {
+      "allocated_in_this_audit": 0,
+      "cpus": 4,
+      "free_scratch_rule": "ceil(1.2 * (2*B + 1012678656 + 2GiB build scratch + 1GiB evidence)); measure B/quota first",
+      "index_bytes_cap": 1012678656,
+      "memory_gib": 32,
+      "native_resources_verified": false,
+      "proposed_allocations": 1,
+      "slurm_wall_seconds": 10800,
+      "stage_caps_seconds": {
+        "build": 1800,
+        "final_cleanup_reserved": 600,
+        "formal": 2400,
+        "qualification_preview": 600,
+        "quality": 2400,
+        "restore_verify": 1200
+      },
+      "stage_caps_sum_seconds": 9000,
+      "work_deadline_seconds": 10200,
+      "work_headroom_seconds": 1200
+    },
+    "unknowns": [
+      "actual live full catalog and module/graph final identity from a new study",
+      "experimental adapter and cached-plan qualification",
+      "one new partial graph build/size/recall/runtime",
+      "two-copy memory/quota/startup feasibility",
+      "complete A/A/economic/final-integrity result",
+      "update maintenance, shared-service integration and independent acceptance"
+    ]
+  },
+  "register": "NEXT-ANN-ALTERNATIVES-01",
+  "selected": {
+    "adapter": "isolated experimental target/catalog validator; public nonpartial inspector unchanged",
+    "baseline_contamination_control": "baseline copy has original full index only; candidate copy adds exactly one partial index",
+    "candidate_index_name": "reviews_hnsw_votes108_v1",
+    "candidate_keeps_full_table_and_original_graph": true,
+    "candidate_new_graph_and_catalog": true,
+    "candidate_scoped_statement_change": true,
+    "copies": 2,
+    "eligible_fraction": 0.20016499114385772,
+    "eligible_rows": 49498,
+    "full_rows": 247286,
+    "mechanism": "one partial cosine HNSW WHERE total_votes >= 108",
+    "native_compatibility_established": false,
+    "parameter_cache_handling": "Keep original parameter, add fixed >=108 conjunct under exact context guard, inspect fresh and matching cached plans, no cache-mode override",
+    "performance_improvement_established": false,
+    "public_api_support_established": false,
+    "unchanged_module_required": true,
+    "unsupported_contexts": "reject before dispatch; no router or fallback"
+  },
+  "source_findings": [
+    {
+      "finding": "Public inspector rejects partitioned/RLS relations and partial selected indexes. Do not weaken it.",
+      "id": "F1",
+      "lines": [
+        210,
+        249
+      ],
+      "path": "agent-pgvector/src/fannagent_pgvector/backend.py"
+    },
+    {
+      "finding": "C binding stores target after relation/index/key/type checks; no explicit partial predicate check, no planner hint. Source feasibility inference only.",
+      "id": "F2",
+      "lines": [
+        358,
+        385
+      ],
+      "path": "trials/torch-reviews-first/sources/pgvector/src/fannbench.c"
+    },
+    {
+      "finding": "Native scan hook returns before policy-path wrong-index guard; actual plans required.",
+      "id": "F3",
+      "lines": [
+        1585,
+        1593
+      ],
+      "path": "trials/torch-reviews-first/sources/pgvector/src/fannbench.c"
+    },
+    {
+      "finding": "Current filter is parameterized; candidate-only redundant fixed predicate after strict actual-AST guard is proposed for planning-time implication.",
+      "id": "F4",
+      "lines": [
+        989,
+        1003
+      ],
+      "path": "agent-pgvector/src/fannagent_pgvector/backend.py"
+    },
+    {
+      "finding": "Current neighbor diversity/pruning differs from ACORN-1 described unpruned construction. Query-only native adaptation not qualified.",
+      "id": "F5",
+      "lines": [
+        1172,
+        1250
+      ],
+      "path": "trials/torch-reviews-first/sources/pgvector/src/hnswutils.c"
+    }
+  ],
+  "status": "complete_scoped_design_go",
+  "version": "b2c-ann-alternatives-audit.v1"
+}

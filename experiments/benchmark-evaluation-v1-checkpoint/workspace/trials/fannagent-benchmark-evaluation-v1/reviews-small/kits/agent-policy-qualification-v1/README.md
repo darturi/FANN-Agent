@@ -1,0 +1,11 @@
+# Compiled three-policy development kit
+
+Active archive: `../kits/agent-policy-qualification-v1.tar.gz`; upload, submission, progress and collection commands: `../kits/AGENT-COMMANDS.txt`.
+
+Compiles unchanged model-authored JSON policies conservative_a, moderate_b_fixed and broad_c_fixed into confirmation arms7/8/9 on a copy of the extended-effort engine. `compile_policies.py` generates hexadecimal constants and binds predicate identity/checkpoint; missing turnover and insufficient counts continue. `compiled-policies.json` records the exact programs and source changes. Historical sources/results are preserved.
+
+Local checks: x86_64 PostgreSQL module build; generated-C replay on9,450 policy/case combinations; equality, unavailable-turnover, insufficient-count and omitted-filter checks; seven-condition real PostgreSQL synthetic smoke with shared/local capture, forced/continue/output parity and native/no-op common guard checks; seven common-guard unit checks; Python/shell syntax. The first build invocation omitted PG_CONFIG for make clean; the corrected build succeeded. The first smoke had an indentation error; corrected smoke succeeded. Both failed logs remain under checks/. These are local checks, not original-graph qualification or latency evidence.
+
+Torch work:450 frozen development groups x seven conditions, including all six scalar filters; live feature/first-stop/output qualification for all three programs against guarded native640;50,400 complete serving requests and1,120 warmups using two mirrored epochs and A/B labels. Same graph/snapshot and byte-identical completion guard on every family. Fresh exact references/fallback and native640 settings are checked. Four physical CPUs,48GiB,8-hour ceiling,160,000-attempt cap. No providers or validation/test access.
+
+`verify_return.py` reconstructs full quality, output identity, schedule, timing and attempt ledger. `check_verifier.py` exercises it against a full-size synthetic return with fabricated timers and deliberately corrupted records; this is checker testing, not runtime performance evidence. Complete Slurm evidence and the actual return are still required. See `../protocol/agent-policy-qualification-amendment-v1.md` for the fixed design and limitations. No policy is selected by preparing this kit.

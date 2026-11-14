@@ -1,0 +1,7 @@
+{
+  "local_python_checks": 8,
+  "module_build": "passed",
+  "qualification_status": "not yet qualified on original graph",
+  "synthetic_seven_filter_native_smoke": "passed",
+  "target_restore_loader": "pending native Torch execution; local amd64 emulation terminated with QEMU SIGSEGV"
+}

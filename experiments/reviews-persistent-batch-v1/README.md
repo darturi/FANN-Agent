@@ -107,3 +107,67 @@ Job `22445434` showed variation inside requests on an already-open reader. The d
 The client records the wall time of the driver execute call, fetching and decoding rows, and the remainder of the application request. The private PostgreSQL server records parse when present, bind, and execute durations. Match the records by backend PID and protocol order. The execute time left after subtracting the server durations includes driver work, transport, scheduling and logging costs. Report the difference between the two logged readers by workload and compare logged versus unlogged request time to assess the measurement's overhead. The PostgreSQL log stays on the private job filesystem. The return carries numeric spans with bound parameter logging disabled. [PostgreSQL logging parameters](https://www.postgresql.org/docs/16/runtime-config-logging.html)
 
 The diagnostic caps native searches at 1,800, opens 30 timed readers plus the snapshot reader, and uses zero policy installations or confirmation queries. It yields an attribution report for this instrumented workload. The held guest uses the existing memory checks, deadlines, and one-allocation launcher with four physical CPUs, 32 GiB, a two-hour wall limit, and no retry. [Sealed guest review](../../../trials/reviews-persistent-batch-native-v1/request-timing-v1/PACKAGE-REVIEW.json)
+
+## Qualifying distance shadow screen
+
+`rb_qualified_progress.py` reads the 200 exposed `votes108` queries from a
+verified shadow return. It checks that the full original light19 trace digest
+and native output match the pinned evidence. It joins checkpoint 32 to the
+saved measured stop and verifies agreement across static23 and progress34.
+The count-only rule stops when both checkpoints have ten qualifying rows. The
+distance rule also limits the absolute change in the tenth qualifying distance.
+It chooses among 0, 0.001, 0.005 and 0.01 cosine-distance units on four vector
+folds and evaluates that choice on the fifth, rotating across all five. The
+original overall and per-filter recall gates apply to the resulting replay.
+The other routes use the credited seed. Shadow collection costs are reported
+for all requests and separately for the requests the replay would stop or
+continue.
+
+```sh
+agent/.venv/bin/python -B agent/experiments/reviews-persistent-batch-v1/rb_qualified_progress.py \
+  /absolute/path/to/verified-shadow.jsonl --sha256 SHA_FROM_VERIFIED_RETURN_MANIFEST
+```
+
+The [native capture code](qualified-shadow/) stages an instrumented copy of
+the pinned engine source. The extended capture reads the retained HNSW result
+heap at checkpoints 16, 32, and 64 without changing it. One read-only transaction builds
+the membership map from snapshot-visible heap TIDs and reuses it for all
+requests. An index TID missing from that map aborts capture, including an
+unresolved HOT root. The observer uses resident lookups and reports the rank
+calculation time even when fewer than ten rows qualify. Map construction and
+reader setup have separate timers.
+
+Run `prepare_engine.py` with the experiment directory on `PYTHONPATH` and a
+new destination. Build the staged engine in the x86 research runtime with
+`make -j2 OPTFLAGS= PG_CONFIG=/opt/postgresql/bin/pg_config`. The disposable
+`smoke.sql` fixture exercises capture at all three checkpoints with the built
+module at its regular PostgreSQL library path. It checks native output parity and
+compares the traversal prefix and tenth distance against each forced stop.
+
+`run_guest.py references` stages the 200 output and traversal pins from the
+local development records. `run_guest.py capture` uses the original sealed
+development package, runtime image and prepared physical graph. Use a new
+private restore and the explicitly hashed shadow module. The guest enforces
+the original four-core and 32 GiB bounds and emits a receipt after output,
+traversal, data and physical-index verification. Original-graph qualification
+and the 200-query capture require access to the prepared restore on Torch.
+
+A return row has `query_id`, the actual `output` as an IDs/distances pair,
+`light19_trace_sha256` of the actual original trace fields, and a
+`checkpoints` list in traversal order. Each observation has `checkpoint`,
+`qualifying_count`, `tenth_distance` (null below ten qualifiers),
+`collection_ns`, and `extra_heap_fetches` (must be zero). A verified return
+must bind the capture module, graph, membership map, snapshot and row digest.
+The analyzer verifies the row digest and saved evidence parity. A screen
+pass is evidence to consider freezing one threshold. Native latency still
+requires the persistent-reader comparison with the original A/A controls.
+
+The extended return adds the nearest pending distance, top-ten turnover since
+the prior captured checkpoint, and a forced-stop record for each reached
+checkpoint. The observer breaks distance ties by heap tuple ID for turnover.
+Each forced stop must match the continue trace prefix and checkpoint
+observations before its output is scored against pinned exact truth. The
+receipt counts discrepancies against the previous saved stop outputs and
+replays the frozen checkpoint-32 gap threshold of 0.05 with the seed on the
+other routes. The replay command above applies to the original two-checkpoint
+capture from job 22508003.

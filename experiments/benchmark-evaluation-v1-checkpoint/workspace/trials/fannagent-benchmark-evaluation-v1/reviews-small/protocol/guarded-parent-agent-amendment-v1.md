@@ -1,0 +1,11 @@
+# Guarded parent and fresh episode execution configuration
+
+Date: November12,2026. The guarded qualification/timing return and scheduler success are verified. Pin guarded native640 and common guard SHA256 e5e3010ebf3d1ba90db28e4bfb09604f28e0c43241aa211502a7c64b61a91251 for the next agent episode. Preserve the original graph, all six filters/unfiltered control, k10, cosine metric and450/150/275/125 roles.
+
+Primary intervention comparison becomes new agent plus common guard versus this unchanged guarded native640 parent. The stronger practical comparison remains agent versus tuned static execution with the identical completion guard. Preserve unguarded native640 and the failed native-only extended grid as historical findings. The static tuning candidate grid is40/80/160/320/640/1000/2048/4096/8192; lower settings still need development qualification/live timing before validation selection. Do not advertise the selected parent as the best possible static baseline.
+
+The fresh episode uses Anthropic `claude-sonnet-5-5`, global standard-only, between_tools/high, up to3 serial rounds,3 policies/round,6000 output tokens/round,9 total proposals and$15. The payload byte/token conservative bound, driver/evaluator/evidence/parent hashes, usage reconciliation, exact feature schema and numerical/individual-loss criteria are recorded in `../development/agent-episode-v1/episode-contract.json`. All450 development groups may be used; folds are grouped diagnostics, not independent heldout estimates. Anonymous IDs/folds and labels are never runtime features.
+
+First-stop replay uses actual qualified stop outputs and the guarded parent recall. Forced-stop/no-op timings guide only a labeled development cost surrogate. Freeze the generated proposal pool, then compile/qualify/measure new executable programs on development before final candidate selection. Keep the single bounded validation batch and sealed final comparison gate unchanged. No new method change is justified by future validation/test feedback.
+
+Status: episode prepared, no paid generation dispatch. Automatic approval review requires explicit consent for the prepared nonpublic data egress to Anthropic. See the precise preview and disclosure manifest; no retry or alternate transport is permitted while that approval is absent.

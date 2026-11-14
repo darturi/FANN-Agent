@@ -1,0 +1,351 @@
+{
+  "status": "development-replay eligible; live compilation/qualification/timing pending",
+  "parent": "guarded native640",
+  "policies": [
+    {
+      "name": "conservative_a",
+      "rationale": "Very conservative stops at cp64 for the two filters with the most separable safe mass.",
+      "rules": {
+        "unfiltered": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.36
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes32": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.12
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.37
+              ]
+            ],
+            "cp": 64
+          }
+        ]
+      }
+    },
+    {
+      "name": "moderate_b_fixed",
+      "rationale": "Policy B with the lossy unfiltered cp64 clause replaced by the verified-clean tighter A clause (tenth_distance<=0.36 excludes both observed lossy cases).",
+      "rules": {
+        "unfiltered": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.34
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.36
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes108": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.08
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.38
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes192": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.07
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.36
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes32": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.1
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.35
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.08
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.38
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ]
+      }
+    },
+    {
+      "name": "broad_c_fixed",
+      "rationale": "Policy C with the lossy unfiltered cp64 clause removed. Other filters showed no losses in the evaluated batch, but this exact combination is unevaluated.",
+      "rules": {
+        "unfiltered": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.33
+              ]
+            ],
+            "cp": 16
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.34
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          }
+        ],
+        "votes108": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.06
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.4
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes192": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.05
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.38
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes310": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.05
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.4
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes32": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.08
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.37
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.06
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.4
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes527": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.03
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.42
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ]
+      }
+    }
+  ],
+  "source_summary_sha256": "0e4953cc20b05423b1062ffc1964a590f37e57e8bb6c30e3515257897d57bd8f",
+  "all_six_filters_retained": true,
+  "validation_test_outcomes_opened": false
+}

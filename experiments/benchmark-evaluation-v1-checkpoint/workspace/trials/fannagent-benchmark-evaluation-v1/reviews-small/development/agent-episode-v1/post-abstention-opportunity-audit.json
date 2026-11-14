@@ -1,0 +1,78 @@
+{
+  "status": "retrospective_development_opportunity_diagnostic",
+  "per_filter": {
+    "unfiltered": {
+      "queries": 450,
+      "queries_with_some_recall_preserving_forced_stop": 425,
+      "safe_forced_stops_by_checkpoint": {
+        "16": 370,
+        "32": 400,
+        "64": 423
+      },
+      "safe_stop_with_lower_probe_cost_than_parent": 424
+    },
+    "votes743": {
+      "queries": 450,
+      "queries_with_some_recall_preserving_forced_stop": 65,
+      "safe_forced_stops_by_checkpoint": {
+        "16": 9,
+        "32": 32,
+        "64": 63
+      },
+      "safe_stop_with_lower_probe_cost_than_parent": 64
+    },
+    "votes527": {
+      "queries": 450,
+      "queries_with_some_recall_preserving_forced_stop": 136,
+      "safe_forced_stops_by_checkpoint": {
+        "16": 21,
+        "32": 60,
+        "64": 135
+      },
+      "safe_stop_with_lower_probe_cost_than_parent": 135
+    },
+    "votes310": {
+      "queries": 450,
+      "queries_with_some_recall_preserving_forced_stop": 249,
+      "safe_forced_stops_by_checkpoint": {
+        "16": 63,
+        "32": 154,
+        "64": 246
+      },
+      "safe_stop_with_lower_probe_cost_than_parent": 249
+    },
+    "votes192": {
+      "queries": 450,
+      "queries_with_some_recall_preserving_forced_stop": 298,
+      "safe_forced_stops_by_checkpoint": {
+        "16": 123,
+        "32": 201,
+        "64": 296
+      },
+      "safe_stop_with_lower_probe_cost_than_parent": 297
+    },
+    "votes108": {
+      "queries": 450,
+      "queries_with_some_recall_preserving_forced_stop": 350,
+      "safe_forced_stops_by_checkpoint": {
+        "16": 208,
+        "32": 278,
+        "64": 348
+      },
+      "safe_stop_with_lower_probe_cost_than_parent": 349
+    },
+    "votes32": {
+      "queries": 450,
+      "queries_with_some_recall_preserving_forced_stop": 407,
+      "safe_forced_stops_by_checkpoint": {
+        "16": 325,
+        "32": 369,
+        "64": 405
+      },
+      "safe_stop_with_lower_probe_cost_than_parent": 406
+    }
+  },
+  "no_new_policy_generated": true,
+  "no_new_ann_exact_or_provider_calls": true,
+  "interpretation": "Safe stops are chosen using exact outcome labels; not a deployable rule or proof of feature-separability. Cross-phase cost probes are surrogates only. This diagnoses opportunity versus presentation/selection bottlenecks after abstention, without altering the bounded episode."
+}

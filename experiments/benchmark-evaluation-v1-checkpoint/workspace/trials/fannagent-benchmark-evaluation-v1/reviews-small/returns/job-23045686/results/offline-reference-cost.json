@@ -1,0 +1,6 @@
+{
+  "all_exact_connections_closed_before_approximate_quality_and_timing": true,
+  "included_in_serving_endpoint": false,
+  "queries": 3150,
+  "query_ns": 1010177074608
+}

@@ -1,0 +1,48 @@
+STRONGER NATIVE PARENT — DEVELOPMENT-ONLY SWEEP AND REQUALIFICATION
+Active kit: parent-qualification-v1.tar.gz
+4 physical CPUs / 48 GiB / 8-hour ceiling / at most 60,000 query attempts.
+No provider calls; no validation/test queries; all six scalar filters retained.
+
+MAC SFTP — paste into your working connection:
+
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/parent-qualification-v1.tar.gz /home/dar579/parent-qualification-v1.tar.gz
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/parent-qualification-v1.tar.gz.sha256 /home/dar579/parent-qualification-v1.tar.gz.sha256
+
+TORCH SSH — stage and submit once:
+
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c parent-qualification-v1.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/parent-qualification-v1
+tar -xzf parent-qualification-v1.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/parent-qualification-v1
+bash submit.sh
+)
+
+The job tests ef_search 640,1000,2048,4096,8192 on every development request,
+selects the smallest common setting with >=95% mean recall in every condition
+and ten results for every query, then repeats full runtime qualification there.
+The module extends only the effort ceiling; ef>1000 is explicitly a research
+runtime extension, not unmodified upstream pgvector. Graph/metric stay fixed.
+If no setting qualifies, it records no_adequate_parent and exits3 after cleanup;
+do not expand the grid or resubmit automatically. Collect the evidence.
+
+STATUS (TORCH):
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/parent-qualification-v1
+job=$(cat job-id)
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+tail -n 12 "slurm-$job.out"
+
+AFTER COMPLETION — print download commands on Torch, then paste their output
+into Mac SFTP. Collect failures too:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/parent-qualification-v1
+job=$(cat job-id)
+printf 'get %s/run-%s/qualification-%s.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz\n' "$PWD" "$job" "$job" "$job"
+printf 'get %s/run-%s/qualification-%s.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz.sha256\n' "$PWD" "$job" "$job" "$job"
+
+Send the job ID/output to Codex. No agent generation begins before this return
+passes local reconstruction and the selected parent is pinned in the protocol.

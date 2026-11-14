@@ -1,0 +1,20 @@
+{
+  "groups": 450,
+  "limitations": "Raw replay checks output identities/scores and receipts; actual forced-prefix/schema/eligibility/data/index checks are performed by the pinned native guest.",
+  "module_sha256": "2383b3faa99d199c631d3f3787e7ef1ebe067af982f5cba850d3de7208337da8",
+  "per_filter": {
+    "-1": 450,
+    "32": 450,
+    "108": 450,
+    "192": 450,
+    "310": 450,
+    "527": 450,
+    "743": 450
+  },
+  "protocol_sha256": "418b779beaa20650951904647e76e1f46b76e5fc92450e8f74a54ac0386b35be",
+  "provider_calls": 0,
+  "queries": 3150,
+  "receipt_sha256": "65e1167765acf76462d1f07f84b764386f07271b9b8ffefa01130da2e87a168b",
+  "status": "verified_original_graph_development_qualification",
+  "test_queries": 0
+}

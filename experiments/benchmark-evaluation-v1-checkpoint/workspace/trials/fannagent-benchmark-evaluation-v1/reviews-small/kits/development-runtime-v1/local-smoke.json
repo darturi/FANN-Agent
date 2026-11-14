@@ -1,0 +1,64 @@
+{
+  "architecture": "x86_64",
+  "conditions": [
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "threshold": -1,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "threshold": 743,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "threshold": 527,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "threshold": 310,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "threshold": 192,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "threshold": 108,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "threshold": 32,
+      "wrong_header_rejected": true
+    }
+  ],
+  "fixture": "synthetic 8-dimensional partial graph",
+  "original_graph_qualified": false,
+  "status": "passed"
+}

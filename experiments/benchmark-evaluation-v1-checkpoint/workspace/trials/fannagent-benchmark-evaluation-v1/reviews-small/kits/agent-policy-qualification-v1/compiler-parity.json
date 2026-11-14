@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "compiled_c_first_stop_cases": 9450,
+  "checkpoint_decisions": 23547,
+  "full_precision_saved_features": true,
+  "equality_missing_turnover_insufficient_count_omitted_filter_checks": "passed",
+  "generated_include_sha256": "56363cb5173d313c5b7977e32c73d91f85d1f102c797bacd34a227496dbaf8ca",
+  "holdout_access": false
+}

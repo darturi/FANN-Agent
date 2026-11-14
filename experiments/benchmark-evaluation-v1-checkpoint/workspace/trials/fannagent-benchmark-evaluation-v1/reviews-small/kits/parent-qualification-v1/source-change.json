@@ -1,0 +1,16 @@
+{
+  "only_source_changes": {
+    "src/hnsw.h": {
+      "before_sha256": "b1ed399758e6e80e18faa2359af295c33024eaad2bd639909f51411b7d4f973a",
+      "after_sha256": "94b7b8306e5364a53d5a4bd3569bccf049ff04140e7e9ef24bce2670c5f70afd"
+    },
+    "src/hnsw.c": {
+      "before_sha256": "05751fa1bc696cb82f813f222ba11731f4a88432ed438c7dc1dd3cb239dcac17",
+      "after_sha256": "3556cb9807d8bb33c571512b703c9d1919302fd85f3ed77ea944e49770cff0c6"
+    }
+  },
+  "algorithm_changes": false,
+  "graph_changes": false,
+  "stock_maximum_ef_search": 1000,
+  "research_maximum_ef_search": 8192
+}

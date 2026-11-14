@@ -1,0 +1,18 @@
+{
+  "all_E1_through_E75_links_exist": true,
+  "earlier_P3a_P3b_receipts_unchanged": true,
+  "existing_user_proposal_document_unchanged": true,
+  "final_document_hashes": {
+    "agent/docs/experiments/README.md": "99509ae53aecad899a9520b409ea8a2328b5bea1cf3563aa970e026a1cabdbb7",
+    "agent/docs/verification/risk-separated-stop-modeling-v1-postrun.json": "f103f3f0e793eb73edd430b862c406187754cfda10dce9bb958a7158456d0c57",
+    "research/fannagent-p3c-risk-separated-modeling-v1-results-2026-10-24.md": "1cbdca4196355cfdffe61765d64b3c6ac3035d11a4741380fb012fb118398aa0",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "9ec83f38949dffbdc576796131c07a639036be4ccfcfacca788f8f853c39c656"
+  },
+  "new_fits_or_measurements": 0,
+  "pinned_inputs_preserved": 919,
+  "postrun_receipt_and_all_bound_artifacts_match": true,
+  "report_index_links_and_markdown_table_shapes_pass": true,
+  "reviewed_at_utc": "2026-10-25T00:25:05.419574+00:00",
+  "source_files_preserved": 10,
+  "status": "passed"
+}

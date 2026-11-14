@@ -1,0 +1,153 @@
+{
+  "agent": {
+    "development_folds": 5,
+    "fold_seed": "reviews-clean-development-folds-v1",
+    "inference_geo": "global",
+    "max_cost_usd": 15,
+    "max_output_tokens_per_round": 6000,
+    "max_policies_per_round": 3,
+    "max_rounds": 3,
+    "max_total_policies": 9,
+    "model": "claude-sonnet-5-5",
+    "provider": "Anthropic",
+    "service_tier": "standard_only",
+    "usage_reconciliation": "not performed; gate before dispatch, no credential reads or provider calls in qualification",
+    "validation_feedback_for_revision": false
+  },
+  "checkpoints": [
+    16,
+    32,
+    64
+  ],
+  "dataset": "MoReVec Reviews Small",
+  "features": [
+    "checkpoint",
+    "qualifying_count",
+    "tenth_distance",
+    "frontier_gap",
+    "top10_new_since_previous"
+  ],
+  "filter_weighting": "equal across six scalar filters; unfiltered is separate control",
+  "filters": [
+    null,
+    743,
+    527,
+    310,
+    192,
+    108,
+    32
+  ],
+  "fixed_checkpoint_grid": [
+    16,
+    32,
+    64
+  ],
+  "k": 10,
+  "latency": {
+    "allocation_hardware": "compatible x86_64; record node and CPU, no arbitrary node pinning",
+    "allocations": 5,
+    "bootstrap": "20000 paired hierarchical draws: allocation then vector group; keep filters, arm labels and epochs paired",
+    "bootstrap_seed": 20261110,
+    "endpoint": "arithmetic mean complete request on persistent reader, including feature collection, policy evaluation, execution, continuation and decoding",
+    "epochs_per_allocation": 4,
+    "families": [
+      "native640",
+      "tuned_native",
+      "historical_gap32",
+      "historical_votes108_policy",
+      "tuned_fixed",
+      "tuned_turnover",
+      "new_agent"
+    ],
+    "identical_code_control": "90% two-sided paired hierarchical interval for each family/filter A/B mean ratio wholly inside [0.98,1.02]; every relevant control must pass",
+    "practical_ratio_upper_bound": 0.95,
+    "primary_comparisons": [
+      "agent/native640",
+      "agent/tuned_native"
+    ],
+    "primary_interval": "one-sided upper 97.5% percentile bound for each of two ratios (Bonferroni family .05)",
+    "reader_labels_per_family": 2,
+    "retry": "replace at most two independently documented infrastructure-invalid allocations with unchanged code; retain all returns; no statistical optional stopping",
+    "schedule": "14-label Williams rows, mirrored epochs; query order seeded independently, mirrored A/B, filter order rotated",
+    "secondary_per_filter": "Holm adjusted one-sided comparisons across 12 scalar-filter contrasts; descriptive unfiltered/other comparisons",
+    "seed": "reviews-clean-confirmatory-timing-v1",
+    "warmup_development_queries_per_reader": 10
+  },
+  "metric": "cosine",
+  "native_ef_grid": [
+    40,
+    80,
+    160,
+    320,
+    640
+  ],
+  "native_settings": {
+    "enable_seqscan": "off",
+    "hnsw.ef_search": 640,
+    "hnsw.iterative_scan": "off",
+    "max_parallel_workers_per_gather": 0
+  },
+  "primary_filters": [
+    743,
+    527,
+    310,
+    192,
+    108,
+    32
+  ],
+  "qualification": {
+    "cpus": 4,
+    "groups": 450,
+    "max_searches": 40000,
+    "memory_gib": 48,
+    "provider_calls": 0,
+    "requests": 3150,
+    "required": [
+      "original graph identity",
+      "schema and eligibility",
+      "exact scoring",
+      "no-stop native parity",
+      "shared/local membership parity",
+      "capture/forced-stop parity",
+      "checkpoint/feature semantics",
+      "output validity",
+      "all seven conditions",
+      "data/index integrity before and after",
+      "cleanup"
+    ],
+    "wall_hours": 3
+  },
+  "recall": {
+    "insufficient_eligible": "required_count=min(k,eligible_count); denominator=required_count; zero-eligible recall=1 with empty output",
+    "invalid_incomplete": "fails quality eligibility; retain record",
+    "loss_probability_bound": "exact one-sided Clopper-Pearson; individual alpha .05 and simultaneous alpha .05/7",
+    "native_floor": 0.95,
+    "paired_mean_margin": 0.0025,
+    "population_mean_noninferiority_claim": false,
+    "primary_claim": "fixed_test_workload_preservation",
+    "require_zero_query_level_losses": true,
+    "ties": "exact SQL FETCH FIRST 10 ROWS WITH TIES; up to k unique eligible results at or below the kth exact distance, tolerance 1e-6"
+  },
+  "schema": "fannagent-reviews-small-study.v1",
+  "selection": {
+    "agent_choice": "lowest complete-request mean among quality-eligible new proposals; ties within 1% choose fewer comparisons then fewer clauses then canonical hash",
+    "fallback": "native640; record negative selection and no successful agent claim",
+    "max_agent_policies": 9,
+    "native_choice": "lowest complete-request mean among quality-eligible grid candidates; ties within 1% choose higher ef then canonical hash",
+    "simple_choice": "lowest complete-request mean among quality-eligible fixed/turnover candidates; ties within 1% choose later checkpoint then stricter turnover then canonical hash",
+    "validation_batches": 1
+  },
+  "split_manifest_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "status": "protocol_fixed_runtime_qualification_pending",
+  "turnover_grid": {
+    "checkpoint": [
+      32,
+      64
+    ],
+    "maximum_new": [
+      0,
+      1,
+      2
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+# Pre-revamp study checkpoint
+
+This is a byte-preserving archival checkpoint of the research documents and current benchmark study before the requested agent-protocol revamp plan. Canonical working copies remain under the workspace research/ and trials/fannagent-benchmark-evaluation-v1/ paths. The workspace itself is not a Git repository; this checkpoint follows the existing agent/experiments/ archival convention.
+
+workspace/ preserves original workspace-relative paths. snapshot-manifest.json contains the SHA256 and size of every file in both source roots, with a flag for copied versus external artifacts. Large raw traces/query exports, binary modules, restore archives/build products and caches are not duplicated in Git. They remain at their recorded local workspace paths; hashes bind them to this checkpoint. This is a source/evidence checkpoint, not a self-contained dataset backup. To restore the complete state, combine the copied paths with those hash-verified external artifacts. Do not execute relocated scripts in place: their original relative-path assumptions target the canonical workspace layout and historical bundles.
+
+The checkpoint records all other repository HEADs. Existing pending agent experiment changes are committed alongside this snapshot. No remote push, new inference request, Torch submission or held-out access is performed. The pending reader-attribution-v1 kit remains sealed and unsubmitted by this chat.

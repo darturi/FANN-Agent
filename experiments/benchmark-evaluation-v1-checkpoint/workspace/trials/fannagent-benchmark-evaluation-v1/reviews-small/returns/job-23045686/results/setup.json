@@ -1,0 +1,226 @@
+[
+  {
+    "filter": -1,
+    "phase": "offline_reference",
+    "total_ns": 493232964713
+  },
+  {
+    "filter": 743,
+    "phase": "offline_reference",
+    "total_ns": 8967559119
+  },
+  {
+    "filter": 527,
+    "phase": "offline_reference",
+    "total_ns": 13431627891
+  },
+  {
+    "filter": 310,
+    "phase": "offline_reference",
+    "total_ns": 26802949352
+  },
+  {
+    "filter": 192,
+    "phase": "offline_reference",
+    "total_ns": 64463385427
+  },
+  {
+    "filter": 108,
+    "phase": "offline_reference",
+    "total_ns": 121114199544
+  },
+  {
+    "filter": 32,
+    "phase": "offline_reference",
+    "total_ns": 284572012639
+  },
+  {
+    "close_ns": 12267641,
+    "connections": 10,
+    "filter": -1,
+    "open_attach_ns": 831951400,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 16175856,
+    "connections": 10,
+    "filter": 743,
+    "open_attach_ns": 738415216,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 11223142,
+    "connections": 10,
+    "filter": 527,
+    "open_attach_ns": 863097889,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 11460628,
+    "connections": 10,
+    "filter": 310,
+    "open_attach_ns": 786302404,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 13217906,
+    "connections": 10,
+    "filter": 192,
+    "open_attach_ns": 910182076,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 9615710,
+    "connections": 10,
+    "filter": 108,
+    "open_attach_ns": 709839070,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 8466348,
+    "connections": 10,
+    "filter": 32,
+    "open_attach_ns": 769170712,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 24743878,
+    "connections": 18,
+    "epoch": 0,
+    "filter": -1,
+    "open_attach_ns": 1117340026,
+    "phase": "timing",
+    "warmup_ns": 4408675024,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 21998864,
+    "connections": 18,
+    "epoch": 0,
+    "filter": 743,
+    "open_attach_ns": 1349471874,
+    "phase": "timing",
+    "warmup_ns": 4440507432,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 22614610,
+    "connections": 18,
+    "epoch": 0,
+    "filter": 527,
+    "open_attach_ns": 1103554594,
+    "phase": "timing",
+    "warmup_ns": 4464822404,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 18799159,
+    "connections": 18,
+    "epoch": 0,
+    "filter": 310,
+    "open_attach_ns": 1312913911,
+    "phase": "timing",
+    "warmup_ns": 4488836170,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 23918082,
+    "connections": 18,
+    "epoch": 0,
+    "filter": 192,
+    "open_attach_ns": 1243768588,
+    "phase": "timing",
+    "warmup_ns": 4428476399,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 19378556,
+    "connections": 18,
+    "epoch": 0,
+    "filter": 108,
+    "open_attach_ns": 1204207048,
+    "phase": "timing",
+    "warmup_ns": 4442520696,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 20774567,
+    "connections": 18,
+    "epoch": 0,
+    "filter": 32,
+    "open_attach_ns": 1271427019,
+    "phase": "timing",
+    "warmup_ns": 4447125007,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 22181569,
+    "connections": 18,
+    "epoch": 1,
+    "filter": 743,
+    "open_attach_ns": 1160116944,
+    "phase": "timing",
+    "warmup_ns": 4784277776,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 23048282,
+    "connections": 18,
+    "epoch": 1,
+    "filter": 527,
+    "open_attach_ns": 1198738465,
+    "phase": "timing",
+    "warmup_ns": 4738637133,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 20210841,
+    "connections": 18,
+    "epoch": 1,
+    "filter": 310,
+    "open_attach_ns": 1251824122,
+    "phase": "timing",
+    "warmup_ns": 4720832867,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 22733652,
+    "connections": 18,
+    "epoch": 1,
+    "filter": 192,
+    "open_attach_ns": 1208074706,
+    "phase": "timing",
+    "warmup_ns": 4657410491,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 23110672,
+    "connections": 18,
+    "epoch": 1,
+    "filter": 108,
+    "open_attach_ns": 1774754917,
+    "phase": "timing",
+    "warmup_ns": 4802618067,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 17551699,
+    "connections": 18,
+    "epoch": 1,
+    "filter": 32,
+    "open_attach_ns": 1216249445,
+    "phase": "timing",
+    "warmup_ns": 4746179470,
+    "warmup_requests": 180
+  },
+  {
+    "close_ns": 19965515,
+    "connections": 18,
+    "epoch": 1,
+    "filter": -1,
+    "open_attach_ns": 1259964357,
+    "phase": "timing",
+    "warmup_ns": 4377168783,
+    "warmup_requests": 180
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "resume_initialization": {
+    "sandbox_created": true,
+    "sandbox_closed": false
+  },
+  "cleanup_after_profile_upgrade": "extension runtime profile changed; use a new run",
+  "session_failure_closed_backend": false,
+  "copy_dsn_retains_source_parameters": {
+    "user": "example",
+    "dbname": "example",
+    "host": "127.0.0.1",
+    "hostaddr": "192.0.2.20",
+    "port": "54321",
+    "sslmode": "disable",
+    "require_auth": "scram-sha-256"
+  },
+  "broker_shutdown_during_tool": {
+    "stop_requested": true,
+    "tool_thread_running": true,
+    "shutdown_waiting_for_tool": true
+  }
+}

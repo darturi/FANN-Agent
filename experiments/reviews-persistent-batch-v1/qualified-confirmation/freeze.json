@@ -1,0 +1,96 @@
+{
+  "baseline": [
+    {
+      "conditions": [
+        [
+          "frontier_gap",
+          ">=",
+          0.05
+        ]
+      ],
+      "cp": 32
+    }
+  ],
+  "candidate": [
+    {
+      "conditions": [
+        [
+          "frontier_gap",
+          ">=",
+          0.02
+        ],
+        [
+          "tenth_distance",
+          "<=",
+          0.44
+        ]
+      ],
+      "cp": 16
+    },
+    {
+      "conditions": [
+        [
+          "frontier_gap",
+          ">=",
+          0.025
+        ],
+        [
+          "tenth_distance",
+          "<=",
+          0.38
+        ]
+      ],
+      "cp": 32
+    },
+    {
+      "conditions": [
+        [
+          "frontier_gap",
+          ">=",
+          0.05
+        ]
+      ],
+      "cp": 64
+    }
+  ],
+  "development_capture_sha256": "409840bd8e5278eae85bd8d27bd6593b6f217ec9593ed97ae891ce210088037a",
+  "development_rank": {
+    "0": {
+      "layer0_saved": 363518,
+      "recall_losing_stops": 0,
+      "recall_pass": true,
+      "stops": 56
+    },
+    "1": {
+      "layer0_saved": 292963,
+      "recall_losing_stops": 0,
+      "recall_pass": true,
+      "stops": 50
+    },
+    "2": {
+      "layer0_saved": 376309,
+      "recall_losing_stops": 1,
+      "recall_pass": true,
+      "stops": 65
+    },
+    "3": {
+      "layer0_saved": 298383,
+      "recall_losing_stops": 0,
+      "recall_pass": true,
+      "stops": 51
+    },
+    "4": {
+      "layer0_saved": 308321,
+      "recall_losing_stops": 1,
+      "recall_pass": true,
+      "stops": 50
+    }
+  },
+  "fresh_confirmation_source_sha256": "278f37e328586c5e3237e3003026664d950da82b29f7926f18b73c9033c2bd6d",
+  "model": "claude-sonnet-5-5",
+  "schema": "votes108-confirmation-freeze-v1",
+  "selection": "Most saved layer-0 distances among the five training-selected proposals with zero recall-losing stops and a passing recall gate on the entire exposed development capture. Lower source fold breaks a tie.",
+  "source_fold": 0,
+  "source_round": 3,
+  "source_rule_file_sha256": "5200b60ec996bed74391672094445920f0f328a66cb72bbe662bd108e7ff746a"
+}

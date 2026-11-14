@@ -1,0 +1,1904 @@
+{
+  "chosen_inner_to_outer_transfers": [
+    {
+      "chosen": {
+        "benefit_floor_ms": 0.0,
+        "risk_cap": 0.005
+      },
+      "inner_oof": {
+        "actual_new_policy_latency": "unmeasured",
+        "canonical_acceptance": false,
+        "development_recall_pass": true,
+        "development_signal": true,
+        "first_stop_histogram": {
+          "128": 250,
+          "32": 12,
+          "64": 90,
+          "continue": 128
+        },
+        "original_tolerance_recall_replay_pass": true,
+        "overall": {
+          "activation_proxy_ms_saved": 0.38060298541666676,
+          "all_valid_complete_top10": true,
+          "development_recall_pass": true,
+          "incomplete_cases": 0,
+          "independent_vectors": 160,
+          "native_recall": 0.9910416666666666,
+          "original_tolerance_recall_replay_pass": true,
+          "policy_recall": 0.990625,
+          "query_filter_cases": 480,
+          "recall_delta": -0.0004166666666666666,
+          "recall_delta_ci95": [
+            -0.0012499999999999998,
+            0.0
+          ],
+          "recall_loss_cases": 2,
+          "reuse_proxy_ms_saved": 0.67787051875,
+          "stopped_cases": 352
+        },
+        "per_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": 0.7766447562500001,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.9931249999999998,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9925,
+            "query_filter_cases": 160,
+            "recall_delta": -0.0006249999999999999,
+            "recall_delta_ci95": [
+              -0.001875,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": 1.0736578124999998,
+            "stopped_cases": 131
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -0.44419655625,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.9887499999999999,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9887499999999999,
+            "query_filter_cases": 160,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.0014701187500000268,
+            "stopped_cases": 94
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": 0.80936075625,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.99125,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.990625,
+            "query_filter_cases": 160,
+            "recall_delta": -0.0006249999999999999,
+            "recall_delta_ci95": [
+              -0.001875,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": 0.9614238625,
+            "stopped_cases": 127
+          }
+        },
+        "utility_proxy_ms": 0.38060298541666676
+      },
+      "method": "extra_trees",
+      "outer_fold": 0,
+      "outer_heldout_descriptive": {
+        "activation_proxy_ms_saved": 0.738303025,
+        "cases": 120,
+        "distinct_vectors": 40,
+        "incomplete_cases": 0,
+        "loss_cases": 1,
+        "recall_delta": -0.0008333333333333332,
+        "reuse_proxy_ms_saved": 0.8681233333333334,
+        "stops": 89
+      },
+      "profile": "static23"
+    },
+    {
+      "chosen": {
+        "benefit_floor_ms": 0.5,
+        "risk_cap": 0.005
+      },
+      "inner_oof": {
+        "actual_new_policy_latency": "unmeasured",
+        "canonical_acceptance": false,
+        "development_recall_pass": true,
+        "development_signal": true,
+        "first_stop_histogram": {
+          "128": 158,
+          "32": 30,
+          "64": 93,
+          "continue": 199
+        },
+        "original_tolerance_recall_replay_pass": true,
+        "overall": {
+          "activation_proxy_ms_saved": 0.09204218750000003,
+          "all_valid_complete_top10": true,
+          "development_recall_pass": true,
+          "incomplete_cases": 0,
+          "independent_vectors": 160,
+          "native_recall": 0.9904166666666666,
+          "original_tolerance_recall_replay_pass": true,
+          "policy_recall": 0.9902083333333334,
+          "query_filter_cases": 480,
+          "recall_delta": -0.0002083333333333333,
+          "recall_delta_ci95": [
+            -0.0006249999999999999,
+            0.0
+          ],
+          "recall_loss_cases": 1,
+          "reuse_proxy_ms_saved": 0.4582260479166666,
+          "stopped_cases": 281
+        },
+        "per_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": 0.8409976562500001,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.9931249999999998,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9931249999999998,
+            "query_filter_cases": 160,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": 1.02863496875,
+            "stopped_cases": 125
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -1.2938927750000002,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.9862500000000001,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.985625,
+            "query_filter_cases": 160,
+            "recall_delta": -0.0006249999999999999,
+            "recall_delta_ci95": [
+              -0.001875,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": -0.4670759125,
+            "stopped_cases": 38
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": 0.7290216812500001,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.991875,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.991875,
+            "query_filter_cases": 160,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": 0.8131190874999998,
+            "stopped_cases": 118
+          }
+        },
+        "utility_proxy_ms": 0.09204218750000003
+      },
+      "method": "extra_trees",
+      "outer_fold": 2,
+      "outer_heldout_descriptive": {
+        "activation_proxy_ms_saved": -0.5690866916666667,
+        "cases": 120,
+        "distinct_vectors": 40,
+        "incomplete_cases": 0,
+        "loss_cases": 0,
+        "recall_delta": 0.0,
+        "reuse_proxy_ms_saved": 0.08294589166666667,
+        "stops": 47
+      },
+      "profile": "static23"
+    },
+    {
+      "chosen": {
+        "benefit_floor_ms": 0.25,
+        "risk_cap": 0.005
+      },
+      "inner_oof": {
+        "actual_new_policy_latency": "unmeasured",
+        "canonical_acceptance": false,
+        "development_recall_pass": true,
+        "development_signal": true,
+        "first_stop_histogram": {
+          "128": 274,
+          "32": 33,
+          "64": 87,
+          "continue": 86
+        },
+        "original_tolerance_recall_replay_pass": true,
+        "overall": {
+          "activation_proxy_ms_saved": 0.9226924062500002,
+          "all_valid_complete_top10": true,
+          "development_recall_pass": true,
+          "incomplete_cases": 0,
+          "independent_vectors": 160,
+          "native_recall": 0.9889583333333334,
+          "original_tolerance_recall_replay_pass": true,
+          "policy_recall": 0.9883333333333333,
+          "query_filter_cases": 480,
+          "recall_delta": -0.0006249999999999999,
+          "recall_delta_ci95": [
+            -0.001458333333333333,
+            0.0
+          ],
+          "recall_loss_cases": 3,
+          "reuse_proxy_ms_saved": 1.0546342229166668,
+          "stopped_cases": 394
+        },
+        "per_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": 1.6589399749999998,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.993125,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9925,
+            "query_filter_cases": 160,
+            "recall_delta": -0.0006249999999999999,
+            "recall_delta_ci95": [
+              -0.001875,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": 1.66718384375,
+            "stopped_cases": 156
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -0.37082112499999986,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.983125,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9824999999999999,
+            "query_filter_cases": 160,
+            "recall_delta": -0.0006249999999999999,
+            "recall_delta_ci95": [
+              -0.001875,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": 0.08054361874999998,
+            "stopped_cases": 83
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": 1.47995836875,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.990625,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.99,
+            "query_filter_cases": 160,
+            "recall_delta": -0.0006249999999999999,
+            "recall_delta_ci95": [
+              -0.001875,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": 1.4161752062499997,
+            "stopped_cases": 155
+          }
+        },
+        "utility_proxy_ms": 0.9226924062500002
+      },
+      "method": "extra_trees",
+      "outer_fold": 3,
+      "outer_heldout_descriptive": {
+        "activation_proxy_ms_saved": 1.3262142083333333,
+        "cases": 120,
+        "distinct_vectors": 40,
+        "incomplete_cases": 0,
+        "loss_cases": 6,
+        "recall_delta": -0.004999999999999999,
+        "reuse_proxy_ms_saved": 1.3484660833333335,
+        "stops": 100
+      },
+      "profile": "static23"
+    },
+    {
+      "chosen": {
+        "benefit_floor_ms": 0.1,
+        "risk_cap": 0.005
+      },
+      "inner_oof": {
+        "actual_new_policy_latency": "unmeasured",
+        "canonical_acceptance": false,
+        "development_recall_pass": true,
+        "development_signal": true,
+        "first_stop_histogram": {
+          "128": 252,
+          "32": 12,
+          "64": 83,
+          "continue": 133
+        },
+        "original_tolerance_recall_replay_pass": true,
+        "overall": {
+          "activation_proxy_ms_saved": 0.2898878708333334,
+          "all_valid_complete_top10": true,
+          "development_recall_pass": true,
+          "incomplete_cases": 0,
+          "independent_vectors": 160,
+          "native_recall": 0.9910416666666666,
+          "original_tolerance_recall_replay_pass": true,
+          "policy_recall": 0.9908333333333333,
+          "query_filter_cases": 480,
+          "recall_delta": -0.0002083333333333333,
+          "recall_delta_ci95": [
+            -0.0006249999999999999,
+            0.0
+          ],
+          "recall_loss_cases": 1,
+          "reuse_proxy_ms_saved": 0.51900164375,
+          "stopped_cases": 347
+        },
+        "per_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": 0.703873125,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.9931249999999998,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9925,
+            "query_filter_cases": 160,
+            "recall_delta": -0.0006249999999999999,
+            "recall_delta_ci95": [
+              -0.001875,
+              0.0
+            ],
+            "recall_loss_cases": 1,
+            "reuse_proxy_ms_saved": 0.8610304187500001,
+            "stopped_cases": 129
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -0.58557066875,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.9887499999999999,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.9887499999999999,
+            "query_filter_cases": 160,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": -0.12234354374999992,
+            "stopped_cases": 89
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": 0.75136115625,
+            "all_valid_complete_top10": true,
+            "development_recall_pass": true,
+            "incomplete_cases": 0,
+            "independent_vectors": 160,
+            "native_recall": 0.99125,
+            "original_tolerance_recall_replay_pass": true,
+            "policy_recall": 0.99125,
+            "query_filter_cases": 160,
+            "recall_delta": 0.0,
+            "recall_delta_ci95": [
+              0.0,
+              0.0
+            ],
+            "recall_loss_cases": 0,
+            "reuse_proxy_ms_saved": 0.8183180562500001,
+            "stopped_cases": 129
+          }
+        },
+        "utility_proxy_ms": 0.2898878708333334
+      },
+      "method": "extra_trees",
+      "outer_fold": 0,
+      "outer_heldout_descriptive": {
+        "activation_proxy_ms_saved": 0.6243853749999999,
+        "cases": 120,
+        "distinct_vectors": 40,
+        "incomplete_cases": 0,
+        "loss_cases": 1,
+        "recall_delta": -0.0008333333333333332,
+        "reuse_proxy_ms_saved": 0.7327107916666667,
+        "stops": 90
+      },
+      "profile": "progress34"
+    }
+  ],
+  "decision": "Close finite P3c formulation allowance negatively. Retain original execution; no qualifying family or universal information ceiling.",
+  "extra_trees_errors": {
+    "calibrated": {
+      "progress34": {
+        "by_checkpoint": {
+          "128": {
+            "activation_proxy_ms_saved": 0.6692440566037736,
+            "cases": 53,
+            "distinct_vectors": 24,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0018867924528301883,
+            "reuse_proxy_ms_saved": 0.715636320754717,
+            "stops": 53
+          },
+          "32": {
+            "activation_proxy_ms_saved": 3.0919096666666666,
+            "cases": 6,
+            "distinct_vectors": 3,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 2.6370853333333333,
+            "stops": 6
+          },
+          "64": {
+            "activation_proxy_ms_saved": 2.5560629354838706,
+            "cases": 31,
+            "distinct_vectors": 14,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 2.14214764516129,
+            "stops": 31
+          },
+          "None": {
+            "activation_proxy_ms_saved": -1.8747984254901962,
+            "cases": 510,
+            "distinct_vectors": 180,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -1.0047322039215685,
+            "stops": 0
+          }
+        },
+        "by_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": -1.12991646,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.50166447,
+            "stops": 35
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -1.763212625,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004999999999999999,
+            "reuse_proxy_ms_saved": -0.890658915,
+            "stops": 20
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": -1.2213101800000001,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.568954665,
+            "stops": 35
+          }
+        },
+        "by_native_work_descriptive_only": {
+          "0-4999": {
+            "activation_proxy_ms_saved": -1.7771878888888888,
+            "cases": 9,
+            "distinct_vectors": 3,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.8798622222222221,
+            "stops": 0
+          },
+          "10000-19999": {
+            "activation_proxy_ms_saved": -1.591712163841808,
+            "cases": 354,
+            "distinct_vectors": 118,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.8111284406779662,
+            "stops": 32
+          },
+          "5000-9999": {
+            "activation_proxy_ms_saved": -1.0271183797468355,
+            "cases": 237,
+            "distinct_vectors": 79,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004219409282700421,
+            "reuse_proxy_ms_saved": -0.4101155358649789,
+            "stops": 58
+          }
+        },
+        "loss_rows": [
+          {
+            "activation_proxy_ms_saved": -1.9400449999999996,
+            "benefit_floor_ms": 0.1,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0460",
+            "layer0_distances": 8207.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 9221,
+            "outer_fold": 0,
+            "phase": "calibrated",
+            "policy_recall": 0.9,
+            "profile": "progress34",
+            "query_id": "reviews-bounded-v0460-votes108",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": -0.3950659999999999,
+            "risk_cap": 0.005,
+            "stratum": "votes108",
+            "valid": true
+          }
+        ],
+        "overall": {
+          "activation_proxy_ms_saved": -1.3714797550000002,
+          "cases": 600,
+          "distinct_vectors": 200,
+          "incomplete_cases": 0,
+          "loss_cases": 1,
+          "recall_delta": -0.00016666666666666663,
+          "reuse_proxy_ms_saved": -0.65375935,
+          "stops": 90
+        }
+      },
+      "static23": {
+        "by_checkpoint": {
+          "128": {
+            "activation_proxy_ms_saved": 1.1265536616541354,
+            "cases": 133,
+            "distinct_vectors": 59,
+            "incomplete_cases": 0,
+            "loss_cases": 7,
+            "recall_delta": -0.005263157894736841,
+            "reuse_proxy_ms_saved": 1.0746287969924813,
+            "stops": 133
+          },
+          "16": {
+            "activation_proxy_ms_saved": 0.16331400000000018,
+            "cases": 1,
+            "distinct_vectors": 1,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 0.293477,
+            "stops": 1
+          },
+          "32": {
+            "activation_proxy_ms_saved": 3.2987100967741934,
+            "cases": 31,
+            "distinct_vectors": 19,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 2.8569717741935485,
+            "stops": 31
+          },
+          "64": {
+            "activation_proxy_ms_saved": 2.792054985915493,
+            "cases": 71,
+            "distinct_vectors": 41,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 2.441685028169014,
+            "stops": 71
+          },
+          "None": {
+            "activation_proxy_ms_saved": -2.2318149313186812,
+            "cases": 364,
+            "distinct_vectors": 147,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -1.059186456043956,
+            "stops": 0
+          }
+        },
+        "by_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": -0.10289643999999991,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 2,
+            "recall_delta": -0.0009999999999999998,
+            "reuse_proxy_ms_saved": 0.35364835000000006,
+            "stops": 93
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -1.391706585,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 3,
+            "recall_delta": -0.0014999999999999996,
+            "reuse_proxy_ms_saved": -0.5000205249999999,
+            "stops": 53
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": -0.31484581,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 2,
+            "recall_delta": -0.0009999999999999998,
+            "reuse_proxy_ms_saved": 0.24437716999999995,
+            "stops": 90
+          }
+        },
+        "by_native_work_descriptive_only": {
+          "0-4999": {
+            "activation_proxy_ms_saved": -2.111807111111111,
+            "cases": 9,
+            "distinct_vectors": 3,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.772767888888889,
+            "stops": 1
+          },
+          "10000-19999": {
+            "activation_proxy_ms_saved": -1.0632354830508475,
+            "cases": 354,
+            "distinct_vectors": 118,
+            "incomplete_cases": 0,
+            "loss_cases": 6,
+            "recall_delta": -0.0016949152542372877,
+            "reuse_proxy_ms_saved": -0.29184289548022596,
+            "stops": 114
+          },
+          "5000-9999": {
+            "activation_proxy_ms_saved": 0.14135805063291138,
+            "cases": 237,
+            "distinct_vectors": 79,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004219409282700421,
+            "reuse_proxy_ms_saved": 0.5479674894514768,
+            "stops": 121
+          }
+        },
+        "loss_rows": [
+          {
+            "activation_proxy_ms_saved": -1.819229,
+            "benefit_floor_ms": 0.0,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0460",
+            "layer0_distances": 8207.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 9221,
+            "outer_fold": 0,
+            "phase": "calibrated",
+            "policy_recall": 0.9,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0460-votes108",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": -0.42856899999999953,
+            "risk_cap": 0.005,
+            "stratum": "votes108",
+            "valid": true
+          },
+          {
+            "activation_proxy_ms_saved": 1.039245000000001,
+            "benefit_floor_ms": 0.25,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0253",
+            "layer0_distances": 8199.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 11968,
+            "outer_fold": 3,
+            "phase": "calibrated",
+            "policy_recall": 0.9,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0253-unfiltered",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": 1.6598579999999998,
+            "risk_cap": 0.005,
+            "stratum": "unfiltered",
+            "valid": true
+          },
+          {
+            "activation_proxy_ms_saved": 0.8626659999999999,
+            "benefit_floor_ms": 0.25,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0253",
+            "layer0_distances": 8199.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 11968,
+            "outer_fold": 3,
+            "phase": "calibrated",
+            "policy_recall": 0.9,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0253-votes32",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": 0.5524110000000002,
+            "risk_cap": 0.005,
+            "stratum": "votes32",
+            "valid": true
+          },
+          {
+            "activation_proxy_ms_saved": 4.877627,
+            "benefit_floor_ms": 0.25,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0253",
+            "layer0_distances": 8199.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 11968,
+            "outer_fold": 3,
+            "phase": "calibrated",
+            "policy_recall": 0.9,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0253-votes108",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": 2.5743720000000003,
+            "risk_cap": 0.005,
+            "stratum": "votes108",
+            "valid": true
+          },
+          {
+            "activation_proxy_ms_saved": 6.023922999999998,
+            "benefit_floor_ms": 0.25,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0459",
+            "layer0_distances": 8198.0,
+            "method": "extra_trees",
+            "native_recall": 0.9,
+            "native_work": 13069,
+            "outer_fold": 3,
+            "phase": "calibrated",
+            "policy_recall": 0.8,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0459-unfiltered",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": 3.30854,
+            "risk_cap": 0.005,
+            "stratum": "unfiltered",
+            "valid": true
+          },
+          {
+            "activation_proxy_ms_saved": 1.1717969999999998,
+            "benefit_floor_ms": 0.25,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0656",
+            "layer0_distances": 8192.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 12104,
+            "outer_fold": 3,
+            "phase": "calibrated",
+            "policy_recall": 0.9,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0656-votes108",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": 1.0153979999999994,
+            "risk_cap": 0.005,
+            "stratum": "votes108",
+            "valid": true
+          },
+          {
+            "activation_proxy_ms_saved": 0.3913569999999993,
+            "benefit_floor_ms": 0.25,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0999",
+            "layer0_distances": 8198.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 11622,
+            "outer_fold": 3,
+            "phase": "calibrated",
+            "policy_recall": 0.9,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0999-votes32",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": 1.4704040000000003,
+            "risk_cap": 0.005,
+            "stratum": "votes32",
+            "valid": true
+          }
+        ],
+        "overall": {
+          "activation_proxy_ms_saved": -0.6031496116666667,
+          "cases": 600,
+          "distinct_vectors": 200,
+          "incomplete_cases": 0,
+          "loss_cases": 7,
+          "recall_delta": -0.0011666666666666663,
+          "reuse_proxy_ms_saved": 0.03266833166666668,
+          "stops": 236
+        }
+      }
+    },
+    "fixed_diagnostic": {
+      "progress34": {
+        "by_checkpoint": {
+          "128": {
+            "activation_proxy_ms_saved": 0.44410504237288134,
+            "cases": 236,
+            "distinct_vectors": 104,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004237288135593219,
+            "reuse_proxy_ms_saved": 0.5381931398305085,
+            "stops": 236
+          },
+          "32": {
+            "activation_proxy_ms_saved": 2.0874699999999997,
+            "cases": 4,
+            "distinct_vectors": 3,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 1.5898534999999998,
+            "stops": 4
+          },
+          "64": {
+            "activation_proxy_ms_saved": 1.8383766551724137,
+            "cases": 58,
+            "distinct_vectors": 31,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 1.6579787413793103,
+            "stops": 58
+          },
+          "None": {
+            "activation_proxy_ms_saved": -1.918593,
+            "cases": 302,
+            "distinct_vectors": 147,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -1.0325819271523178,
+            "stops": 0
+          }
+        },
+        "by_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": -0.13898569,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 0.200001335,
+            "stops": 124
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -1.3668793,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004999999999999999,
+            "reuse_proxy_ms_saved": -0.626213805,
+            "stops": 57
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": -0.2922878600000001,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 0.014692570000000049,
+            "stops": 117
+          }
+        },
+        "by_native_work_descriptive_only": {
+          "0-4999": {
+            "activation_proxy_ms_saved": -1.1155914444444446,
+            "cases": 9,
+            "distinct_vectors": 3,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.5382045555555556,
+            "stops": 2
+          },
+          "10000-19999": {
+            "activation_proxy_ms_saved": -0.7595256355932203,
+            "cases": 354,
+            "distinct_vectors": 118,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.2271212542372881,
+            "stops": 145
+          },
+          "5000-9999": {
+            "activation_proxy_ms_saved": -0.34058300421940935,
+            "cases": 237,
+            "distinct_vectors": 79,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004219409282700421,
+            "reuse_proxy_ms_saved": 0.012408375527426163,
+            "stops": 151
+          }
+        },
+        "loss_rows": [
+          {
+            "activation_proxy_ms_saved": -1.9400449999999996,
+            "benefit_floor_ms": 0.0,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0460",
+            "layer0_distances": 8207.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 9221,
+            "outer_fold": 0,
+            "phase": "fixed_diagnostic",
+            "policy_recall": 0.9,
+            "profile": "progress34",
+            "query_id": "reviews-bounded-v0460-votes108",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": -0.3950659999999999,
+            "risk_cap": 0.0025,
+            "stratum": "votes108",
+            "valid": true
+          }
+        ],
+        "overall": {
+          "activation_proxy_ms_saved": -0.5993842833333334,
+          "cases": 600,
+          "distinct_vectors": 200,
+          "incomplete_cases": 0,
+          "loss_cases": 1,
+          "recall_delta": -0.00016666666666666663,
+          "reuse_proxy_ms_saved": -0.13717329999999997,
+          "stops": 298
+        }
+      },
+      "static23": {
+        "by_checkpoint": {
+          "128": {
+            "activation_proxy_ms_saved": 0.6552604144486692,
+            "cases": 263,
+            "distinct_vectors": 108,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0003802281368821292,
+            "reuse_proxy_ms_saved": 0.6365909239543726,
+            "stops": 263
+          },
+          "32": {
+            "activation_proxy_ms_saved": 2.3241802500000004,
+            "cases": 4,
+            "distinct_vectors": 3,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 2.06976325,
+            "stops": 4
+          },
+          "64": {
+            "activation_proxy_ms_saved": 2.1021297978723403,
+            "cases": 94,
+            "distinct_vectors": 51,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 1.8544912659574468,
+            "stops": 94
+          },
+          "None": {
+            "activation_proxy_ms_saved": -2.2897912719665268,
+            "cases": 239,
+            "distinct_vectors": 123,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -1.1243638075313807,
+            "stops": 0
+          }
+        },
+        "by_filter": {
+          "unfiltered": {
+            "activation_proxy_ms_saved": 0.2547914600000001,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 0.524974145,
+            "stops": 144
+          },
+          "votes108": {
+            "activation_proxy_ms_saved": -1.09659302,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004999999999999999,
+            "reuse_proxy_ms_saved": -0.43731345499999996,
+            "stops": 80
+          },
+          "votes32": {
+            "activation_proxy_ms_saved": 0.001653045000000013,
+            "cases": 200,
+            "distinct_vectors": 200,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": 0.31884778499999994,
+            "stops": 137
+          }
+        },
+        "by_native_work_descriptive_only": {
+          "0-4999": {
+            "activation_proxy_ms_saved": -1.485128888888889,
+            "cases": 9,
+            "distinct_vectors": 3,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.6486430000000001,
+            "stops": 2
+          },
+          "10000-19999": {
+            "activation_proxy_ms_saved": -0.640419929378531,
+            "cases": 354,
+            "distinct_vectors": 118,
+            "incomplete_cases": 0,
+            "loss_cases": 0,
+            "recall_delta": 0.0,
+            "reuse_proxy_ms_saved": -0.0636931271186441,
+            "stops": 174
+          },
+          "5000-9999": {
+            "activation_proxy_ms_saved": 0.3039878143459916,
+            "cases": 237,
+            "distinct_vectors": 79,
+            "incomplete_cases": 0,
+            "loss_cases": 1,
+            "recall_delta": -0.0004219409282700421,
+            "reuse_proxy_ms_saved": 0.46281370886075945,
+            "stops": 185
+          }
+        },
+        "loss_rows": [
+          {
+            "activation_proxy_ms_saved": -1.819229,
+            "benefit_floor_ms": 0.0,
+            "checkpoint": 128,
+            "group": "reviews-bounded-v0460",
+            "layer0_distances": 8207.0,
+            "method": "extra_trees",
+            "native_recall": 1.0,
+            "native_work": 9221,
+            "outer_fold": 0,
+            "phase": "fixed_diagnostic",
+            "policy_recall": 0.9,
+            "profile": "static23",
+            "query_id": "reviews-bounded-v0460-votes108",
+            "recall_delta": -0.09999999999999998,
+            "returned_count": 10,
+            "reuse_proxy_ms_saved": -0.42856899999999953,
+            "risk_cap": 0.0025,
+            "stratum": "votes108",
+            "valid": true
+          }
+        ],
+        "overall": {
+          "activation_proxy_ms_saved": -0.280049505,
+          "cases": 600,
+          "distinct_vectors": 200,
+          "incomplete_cases": 0,
+          "loss_cases": 1,
+          "recall_delta": -0.00016666666666666663,
+          "reuse_proxy_ms_saved": 0.135502825,
+          "stops": 361
+        }
+      }
+    }
+  },
+  "fit_summary": {
+    "extra_trees": {
+      "all_risk_prediction_parity_pass": true,
+      "estimator_fits": 50,
+      "individual_trees": 3200,
+      "nodes_after_group_pruning": 493734,
+      "nodes_before_group_pruning": 797118
+    },
+    "shallow_tree": {
+      "all_risk_prediction_parity_pass": true,
+      "estimator_fits": 50,
+      "individual_trees": 50,
+      "nodes_after_group_pruning": 718,
+      "nodes_before_group_pruning": 750
+    }
+  },
+  "inner_by_profile_method": {
+    "progress34": {
+      "extra_trees": {
+        "counts": {
+          "any_stop": 153,
+          "complete_top10": 245,
+          "positive_both_proxies": 37,
+          "positive_but_recall_fail": 34,
+          "qualified": 3,
+          "recall_pass": 192,
+          "recall_pass_but_nonpositive_proxy": 189,
+          "trials": 245
+        },
+        "failed_recall_gate_by_scope": {
+          "overall": 29,
+          "unfiltered": 53,
+          "votes108": 33,
+          "votes32": 28
+        }
+      },
+      "shallow_tree": {
+        "counts": {
+          "any_stop": 6,
+          "complete_top10": 245,
+          "positive_both_proxies": 0,
+          "positive_but_recall_fail": 0,
+          "qualified": 0,
+          "recall_pass": 239,
+          "recall_pass_but_nonpositive_proxy": 239,
+          "trials": 245
+        },
+        "failed_recall_gate_by_scope": {
+          "overall": 6,
+          "unfiltered": 6,
+          "votes108": 6,
+          "votes32": 6
+        }
+      }
+    },
+    "static23": {
+      "extra_trees": {
+        "counts": {
+          "any_stop": 157,
+          "complete_top10": 245,
+          "positive_both_proxies": 43,
+          "positive_but_recall_fail": 34,
+          "qualified": 9,
+          "recall_pass": 206,
+          "recall_pass_but_nonpositive_proxy": 197,
+          "trials": 245
+        },
+        "failed_recall_gate_by_scope": {
+          "overall": 25,
+          "unfiltered": 33,
+          "votes108": 31,
+          "votes32": 24
+        }
+      },
+      "shallow_tree": {
+        "counts": {
+          "any_stop": 0,
+          "complete_top10": 245,
+          "positive_both_proxies": 0,
+          "positive_but_recall_fail": 0,
+          "qualified": 0,
+          "recall_pass": 245,
+          "recall_pass_but_nonpositive_proxy": 245,
+          "trials": 245
+        },
+        "failed_recall_gate_by_scope": {}
+      }
+    }
+  },
+  "inner_totals": {
+    "any_stop": 316,
+    "complete_top10": 980,
+    "positive_both_proxies": 80,
+    "positive_but_recall_fail": 68,
+    "qualified": 12,
+    "recall_pass": 882,
+    "recall_pass_but_nonpositive_proxy": 870,
+    "trials": 980
+  },
+  "inputs_sha256": {
+    "design-lock.json": "f7021eded250d9c7bb7613cc621d48d15d93a88d5640d7fd664586172224622f",
+    "performance.json": "4465d0a7a3386ba2bcd6ed79d05208438ab4a939925ad72a0e35e17a48e0f8b1",
+    "verification-replay.json": "7a90291cffe38b861b5c8089757744aaa0cf1e2bf8cef8a91ad4ae7e197791fd",
+    "verification.json": "40aa6b2b850c8cad1b5eb913940eaa31faf02298c62317f6c1e093435e1a139f"
+  },
+  "new_fits": 0,
+  "new_measurements": 0,
+  "paired_p3c_minus_p3b": {
+    "calibrated": {
+      "progress34": {
+        "extra_trees": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              0.3407388325833333,
+              0.673128208
+            ],
+            "activation_proxy_saving_difference_ms": 0.4993593416666667,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.00016666666666666663,
+            "recall_delta_difference_ci95": [
+              -0.0004999999999999999,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.23406047866666668,
+              0.4621630393333333
+            ],
+            "reuse_proxy_saving_difference_ms": 0.34280755,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              0.44527469849999995,
+              0.89411414475
+            ],
+            "activation_proxy_saving_difference_ms": 0.66155557,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.304818497375,
+              0.6111177993749999
+            ],
+            "reuse_proxy_saving_difference_ms": 0.45078958999999996,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.08173984137500002,
+              0.296719874125
+            ],
+            "activation_proxy_saving_difference_ms": 0.17898305,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0004999999999999999,
+            "recall_delta_difference_ci95": [
+              -0.0014999999999999996,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.07557556725000002,
+              0.21755620699999997
+            ],
+            "reuse_proxy_saving_difference_ms": 0.1398321,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              0.43757028862499997,
+              0.8979677126250001
+            ],
+            "activation_proxy_saving_difference_ms": 0.657539405,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.29352999074999997,
+              0.5960276655
+            ],
+            "reuse_proxy_saving_difference_ms": 0.43780096,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        },
+        "shallow_tree": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        }
+      },
+      "static23": {
+        "extra_trees": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              1.36666062625,
+              1.9391889772916662
+            ],
+            "activation_proxy_saving_difference_ms": 1.64759881,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0011666666666666663,
+            "recall_delta_difference_ci95": [
+              -0.002499999999999999,
+              -0.00016666666666666663
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.9086050498333337,
+              1.2722491403333338
+            ],
+            "reuse_proxy_saving_difference_ms": 1.0883217833333334,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              1.7876053385000001,
+              2.62507033625
+            ],
+            "activation_proxy_saving_difference_ms": 2.195678085,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0009999999999999998,
+            "recall_delta_difference_ci95": [
+              -0.0024999999999999996,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              1.18614841275,
+              1.697231168125
+            ],
+            "reuse_proxy_saving_difference_ms": 1.43986678,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.6550591933749998,
+              1.208687206
+            ],
+            "activation_proxy_saving_difference_ms": 0.92002652,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0014999999999999996,
+            "recall_delta_difference_ci95": [
+              -0.003499999999999999,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.3971415177499999,
+              0.6870135169999999
+            ],
+            "reuse_proxy_saving_difference_ms": 0.53710363,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              1.4709939879999998,
+              2.205182849125
+            ],
+            "activation_proxy_saving_difference_ms": 1.8270918249999997,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0009999999999999998,
+            "recall_delta_difference_ci95": [
+              -0.0024999999999999996,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              1.0604037441249998,
+              1.5264197000000004
+            ],
+            "reuse_proxy_saving_difference_ms": 1.2879949400000001,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        },
+        "shallow_tree": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        }
+      }
+    },
+    "fixed_diagnostic": {
+      "progress34": {
+        "extra_trees": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              -1.0619846355416667,
+              -0.5339906047499999
+            ],
+            "activation_proxy_saving_difference_ms": -0.79393382,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0023333333333333335,
+            "recall_delta_difference_ci95": [
+              0.0006666666666666665,
+              0.0045
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              -0.9134076856666666,
+              -0.5229953339583333
+            ],
+            "reuse_proxy_saving_difference_ms": -0.7148978316666665,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              -2.832012922625,
+              -1.8812507029999987
+            ],
+            "activation_proxy_saving_difference_ms": -2.3474661599999997,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.006500000000000001,
+            "recall_delta_difference_ci95": [
+              0.0019999999999999996,
+              0.0125
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              -2.2774668383749996,
+              -1.5570580470000002
+            ],
+            "reuse_proxy_saving_difference_ms": -1.9133800650000001,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.20127784025,
+              0.600520092375
+            ],
+            "activation_proxy_saving_difference_ms": 0.395985695,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0004999999999999999,
+            "recall_delta_difference_ci95": [
+              -0.0014999999999999996,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.12709149725000002,
+              0.3909658268750001
+            ],
+            "reuse_proxy_saving_difference_ms": 0.25753562500000005,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              -0.8565714478750002,
+              -0.021120222750000025
+            ],
+            "activation_proxy_saving_difference_ms": -0.43032099500000015,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0009999999999999998,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0024999999999999996
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              -0.7923330013750001,
+              -0.19465125074999992
+            ],
+            "reuse_proxy_saving_difference_ms": -0.488849055,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        },
+        "shallow_tree": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        }
+      },
+      "static23": {
+        "extra_trees": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              -1.0062373805833333,
+              -0.46501318116666673
+            ],
+            "activation_proxy_saving_difference_ms": -0.7346624516666667,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0021666666666666666,
+            "recall_delta_difference_ci95": [
+              0.0008333333333333332,
+              0.0038333333333333327
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              -0.9699378768333334,
+              -0.6124684970833335
+            ],
+            "reuse_proxy_saving_difference_ms": -0.78888619,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              -2.901444923625,
+              -1.9169213811250003
+            ],
+            "activation_proxy_saving_difference_ms": -2.406640995,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.006499999999999999,
+            "recall_delta_difference_ci95": [
+              0.0024999999999999996,
+              0.011499999999999998
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              -2.3883280877499997,
+              -1.7030341528750006
+            ],
+            "reuse_proxy_saving_difference_ms": -2.041238935,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.539788638875,
+              1.159918079
+            ],
+            "activation_proxy_saving_difference_ms": 0.84471743,
+            "independent_vectors": 200,
+            "recall_delta_difference": -0.0004999999999999999,
+            "recall_delta_difference_ci95": [
+              -0.0014999999999999996,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.228862965625,
+              0.5230577075
+            ],
+            "reuse_proxy_saving_difference_ms": 0.37518817,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              -1.078138553625,
+              -0.20582802837500005
+            ],
+            "activation_proxy_saving_difference_ms": -0.64206379,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0004999999999999999,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0014999999999999996
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              -0.98924352125,
+              -0.42214276500000003
+            ],
+            "reuse_proxy_saving_difference_ms": -0.7006078050000002,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        },
+        "shallow_tree": {
+          "overall": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "unfiltered": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes108": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          },
+          "votes32": {
+            "activation_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "activation_proxy_saving_difference_ms": 0.0,
+            "independent_vectors": 200,
+            "recall_delta_difference": 0.0,
+            "recall_delta_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ci95": [
+              0.0,
+              0.0
+            ],
+            "reuse_proxy_saving_difference_ms": 0.0,
+            "scope": "Paired fixed-stop development proxies; not actual policy latency."
+          }
+        }
+      }
+    }
+  },
+  "rationale": "Risk-separated fixed diagnostics reduce observed recall losses but do not cover activation costs; calibrated risk gates fail the joint heldout gate, while shallow policies abstain. No new native timing exists. More tuning or indiscriminate label collection on the same scope is not justified; fresh development diversity remains an alternative requiring a precise hypothesis and new entitlement contract.",
+  "recommended_next_scope": "B1a: read-only feasibility/design audit of query-dependent search effort at fixed index, including actual backend knobs, cheap qualified inputs, timing boundary, matched native baseline and finite comparison. Proposed only; no B1 implementation/measurement authorized by this analysis.",
+  "scope": "Saved frozen outputs only. No new models, fits, thresholds, subgroup routing or measurements.",
+  "version": "risk-separated-stop-modeling.v1.descriptive-analysis"
+}

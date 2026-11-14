@@ -1,0 +1,14 @@
+{
+  "batch_exit_code": "0:0",
+  "batch_state": "COMPLETED",
+  "elapsed": "00:49:08",
+  "exit_code": "0:0",
+  "gate": "passed",
+  "job_id": "22928562",
+  "source": "user pasted sacct output from Torch",
+  "state": "COMPLETED",
+  "step_elapsed": "00:49:07",
+  "step_exit_code": "0:0",
+  "step_maxrss_kib": 6706152,
+  "step_state": "COMPLETED"
+}

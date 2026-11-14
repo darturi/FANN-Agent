@@ -1,0 +1,21 @@
+{
+  "available_before_split": 125,
+  "counts": {
+    "consumed_evaluation_development": 120,
+    "development": 200,
+    "historical_reserved": 37,
+    "historical_uncertain_excluded": 518,
+    "test": 100,
+    "validation": 25
+  },
+  "jsonl_files": 662,
+  "precision": {
+    "100": {
+      "zero_loss_one_sided_95pct_upper_probability": 0.029513049607039932
+    },
+    "125": {
+      "zero_loss_one_sided_95pct_upper_probability": 0.023680957510334832
+    }
+  },
+  "unique_jsonl_contents": 64
+}

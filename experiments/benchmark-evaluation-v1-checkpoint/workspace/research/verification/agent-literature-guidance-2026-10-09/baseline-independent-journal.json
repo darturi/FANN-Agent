@@ -1,0 +1,237 @@
+{
+  "mode": "baseline",
+  "backend": "independent",
+  "simulated": true,
+  "research": {
+    "mode": "baseline",
+    "research_protocol_version": null,
+    "guidance_recorded": false,
+    "primer_hash": null,
+    "system_prompt_hash": null,
+    "experiments": {
+      "open": 0,
+      "completed": 0,
+      "interrupted": 0
+    },
+    "operations": {
+      "pending": 0,
+      "success": 3,
+      "failed": 0,
+      "unknown": 0
+    },
+    "active_experiment": null,
+    "candidate_origins": []
+  },
+  "experiments": [],
+  "final_evaluation": {
+    "claims": "synthetic workload only",
+    "compatibility": {
+      "backend": "independent",
+      "data_profile": "5f8a696014fca2dd7163742454129f6bb52b90d52aa76f99af8bacf6b1078278",
+      "dataset_hash": "8b2cf33cd62aaa022249e8248e8cd97daa4bd0baadcea741994b7f3841d1b4be",
+      "index_identity": "independent-1",
+      "profile_hash": "09938b47e6ef38fbd0f53884df497fbbf0b03a933d9270f63592b0becee08f54",
+      "settings": {}
+    },
+    "diagnostics": "ee82b802d024da4ad0493fca08ca61632441cb47838098f407146fe5f934a854",
+    "extension_manifest": {
+      "extension": {
+        "api_versions": [
+          1
+        ],
+        "configuration_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "rows": {
+              "default": 500,
+              "maximum": 10000,
+              "minimum": 100,
+              "title": "Rows",
+              "type": "integer"
+            },
+            "seed": {
+              "default": 7,
+              "title": "Seed",
+              "type": "integer"
+            }
+          },
+          "title": "Options",
+          "type": "object"
+        },
+        "data_profile": {
+          "analysis_profile": "cosine_in_memory_v1",
+          "identifier_representation": "string",
+          "max_dimension": 8,
+          "max_k": 100,
+          "metric": "cosine",
+          "min_dimension": 1,
+          "name": "independent_string_cosine/v1",
+          "normalized": true,
+          "predicate_semantics": "portable_scalar_v2",
+          "representation": "float32"
+        },
+        "distribution": "fannagent-test-extension",
+        "limitations": [
+          "simulation only"
+        ],
+        "name": "independent",
+        "runtime_profile": {
+          "actions": [
+            "continue",
+            "stop"
+          ],
+          "checkpoint_interval": 5,
+          "checkpoint_semantics": "completed simulated batches",
+          "collection_groups": [],
+          "features": {
+            "other.batch": {
+              "availability": "when_observed",
+              "collection_cost": "declared_by_extension",
+              "description": "",
+              "group": "simulation",
+              "kind": "int",
+              "name": "other.batch",
+              "population": "query",
+              "provenance": "simulated",
+              "scope": "query",
+              "source": "extension",
+              "stage": "runtime",
+              "units": "batches"
+            },
+            "other.ready": {
+              "availability": "when_observed",
+              "collection_cost": "declared_by_extension",
+              "description": "",
+              "group": "simulation",
+              "kind": "bool",
+              "name": "other.ready",
+              "population": "query",
+              "provenance": "simulated",
+              "scope": "query",
+              "source": "extension",
+              "stage": "runtime",
+              "units": "boolean"
+            },
+            "other.requested": {
+              "availability": "when_observed",
+              "collection_cost": "declared_by_extension",
+              "description": "",
+              "group": "simulation",
+              "kind": "int",
+              "name": "other.requested",
+              "population": "query",
+              "provenance": "simulated",
+              "scope": "query",
+              "source": "extension",
+              "stage": "runtime",
+              "units": "neighbors"
+            }
+          },
+          "fingerprint": "09938b47e6ef38fbd0f53884df497fbbf0b03a933d9270f63592b0becee08f54",
+          "guidance": "Synthetic latency and five-block checkpoints. Stop when other.ready is true.",
+          "name": "independent_blocks/v1",
+          "native_protocol": "",
+          "native_registry_hash": null,
+          "numeric_semantics": "int64_float64_strict",
+          "policy_encoding": "bounded_tree_v1",
+          "scripted_policy": {
+            "name": "ready",
+            "root": {
+              "else": "continue",
+              "if": {
+                "feature": "other.ready"
+              },
+              "then": "stop"
+            }
+          },
+          "stopping_scope": "query",
+          "work_unit": "vector_blocks"
+        },
+        "version": "0.1.0"
+      },
+      "native_identity": {
+        "protocol": "",
+        "registry_hash": null
+      },
+      "profile_hash": "09938b47e6ef38fbd0f53884df497fbbf0b03a933d9270f63592b0becee08f54"
+    },
+    "failed_pairs": 0,
+    "groups": {
+      "easy": {
+        "independent_groups": 55,
+        "latency_assessment": "conclusive",
+        "latency_improved": true,
+        "log_latency_ratio_ci95": [
+          -1.1078164237432298,
+          -0.9797409642334108
+        ],
+        "mean_recall_delta": 0.0,
+        "recall_assessment": "conclusive",
+        "recall_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_noninferior": true
+      },
+      "hard": {
+        "independent_groups": 37,
+        "latency_assessment": "conclusive",
+        "latency_improved": true,
+        "log_latency_ratio_ci95": [
+          -0.47415270062115844,
+          -0.43092175753767176
+        ],
+        "mean_recall_delta": 0.0,
+        "recall_assessment": "conclusive",
+        "recall_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_noninferior": true
+      },
+      "overall": {
+        "independent_groups": 100,
+        "latency_assessment": "conclusive",
+        "latency_improved": true,
+        "log_latency_ratio_ci95": [
+          -0.8553717853712329,
+          -0.7264290715972875
+        ],
+        "mean_recall_delta": 0.0,
+        "recall_assessment": "conclusive",
+        "recall_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_noninferior": true
+      }
+    },
+    "latencies": {
+      "native": {
+        "median_ms": 2.8000000000000003,
+        "p95_ms": 4.8,
+        "sample_count": 200
+      },
+      "policy": {
+        "median_ms": 1.3,
+        "p95_ms": 3.3000000000000003,
+        "sample_count": 200
+      }
+    },
+    "measurement_schedule": {
+      "paired_passes": 1,
+      "warmups": 0
+    },
+    "pair_count": 200,
+    "per_query_regressions": [],
+    "policy_hash": "67a336878119edd1fda5c6e16ccb056aff1af61b3380881e664ce667726086e2",
+    "recall_tolerance": 0.005,
+    "regressed_pairs": 0,
+    "rows": "fb261d66d27b8a8feaa76b8eea8b1df790dc36aa02bd92b08aff31010a768d51",
+    "simulated": true,
+    "split": "test",
+    "status": "accepted",
+    "valid": true,
+    "workload_origin": "synthetic"
+  }
+}

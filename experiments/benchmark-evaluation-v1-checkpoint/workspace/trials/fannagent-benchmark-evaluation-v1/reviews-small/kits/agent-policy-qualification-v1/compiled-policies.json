@@ -1,0 +1,365 @@
+{
+  "arms": {
+    "7": {
+      "name": "conservative_a",
+      "rationale": "Very conservative stops at cp64 for the two filters with the most separable safe mass.",
+      "rules": {
+        "unfiltered": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.36
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes32": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.12
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.37
+              ]
+            ],
+            "cp": 64
+          }
+        ]
+      }
+    },
+    "8": {
+      "name": "moderate_b_fixed",
+      "rationale": "Policy B with the lossy unfiltered cp64 clause replaced by the verified-clean tighter A clause (tenth_distance<=0.36 excludes both observed lossy cases).",
+      "rules": {
+        "unfiltered": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.34
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.36
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes108": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.08
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.38
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes192": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.07
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.36
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes32": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.1
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.35
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.08
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.38
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ]
+      }
+    },
+    "9": {
+      "name": "broad_c_fixed",
+      "rationale": "Policy C with the lossy unfiltered cp64 clause removed. Other filters showed no losses in the evaluated batch, but this exact combination is unevaluated.",
+      "rules": {
+        "unfiltered": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.33
+              ]
+            ],
+            "cp": 16
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.15
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.34
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          }
+        ],
+        "votes108": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.06
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.4
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes192": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.05
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.38
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes310": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.05
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.4
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes32": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.08
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.37
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 32
+          },
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.06
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.4
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ],
+        "votes527": [
+          {
+            "conditions": [
+              [
+                "frontier_gap",
+                ">=",
+                0.03
+              ],
+              [
+                "tenth_distance",
+                "<=",
+                0.42
+              ],
+              [
+                "top10_new_since_previous",
+                "<=",
+                0
+              ]
+            ],
+            "cp": 64
+          }
+        ]
+      }
+    }
+  },
+  "changes": {
+    "src/fannbench.c": {
+      "after": "90ba5d8b0aa2c7c15f26d342eac6e6a4733547a6b041922dd2824e0282ee4f61",
+      "before": "ef59c9068c386ff76b0b459715729185fcc1d07e9324076114d35ac1369e1ead"
+    },
+    "src/fannbench.h": {
+      "after": "aa29c52cd59b223fabe6c54391c1c5fa935d8926f9b217bf70bab2b1feaf0685",
+      "before": "b214d086cc41d5daceeee503fce43408eac8d7d583a105947847a159ba89aa2d"
+    },
+    "src/hnswutils.c": {
+      "after": "99bd9b02f45357f46b9b12f577368aaf28c337952510abb88ae6014d48e7a74c",
+      "before": "51a7e3851a2ab1a4f73740a36a06457b0005fab440ebb351856a56094dcfc6f5"
+    }
+  },
+  "compiler": "hexadecimal double literals; unavailable turnover guarded; qualifying_count>=10; fixed filter/checkpoint branches",
+  "eligible_policy_export_sha256": "957d2bd79136ae5e06881abbeff78b8d46047b2018c95ff174e817c0a114ffcb",
+  "generated_include_sha256": "56363cb5173d313c5b7977e32c73d91f85d1f102c797bacd34a227496dbaf8ca",
+  "graph_changes": false,
+  "native_and_legacy_arms_unchanged": true
+}

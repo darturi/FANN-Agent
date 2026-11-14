@@ -1,0 +1,4 @@
+{
+  "label_after_recreate": "foreign",
+  "write_to_existing_empty_volume": "audit-marker"
+}

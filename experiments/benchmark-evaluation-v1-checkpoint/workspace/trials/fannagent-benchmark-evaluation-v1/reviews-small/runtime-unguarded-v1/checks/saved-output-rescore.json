@@ -1,0 +1,245 @@
+{
+  "cases_per_family": 3150,
+  "development_groups": 450,
+  "exact_reference": "offline scoring only; not returned as query output",
+  "latency": "NOT inferred by subtracting fallback cost; fresh unguarded measurement required",
+  "metrics": {
+    "broad_c_fixed": {
+      "-1": {
+        "mean_recall": 0.9964444444444442,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 72
+      },
+      "108": {
+        "mean_recall": 0.9891111111111108,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 56
+      },
+      "192": {
+        "mean_recall": 0.9788888888888884,
+        "mean_returned_count": 9.995555555555555,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 1,
+        "stops": 28
+      },
+      "310": {
+        "mean_recall": 0.9482222222222219,
+        "mean_returned_count": 9.846666666666666,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 23,
+        "stops": 13
+      },
+      "32": {
+        "mean_recall": 0.9937777777777776,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 181
+      },
+      "527": {
+        "mean_recall": 0.7897777777777784,
+        "mean_returned_count": 8.157777777777778,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 172,
+        "stops": 7
+      },
+      "743": {
+        "mean_recall": 0.5348888888888887,
+        "mean_returned_count": 5.444444444444445,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 345,
+        "stops": 0
+      }
+    },
+    "conservative_a": {
+      "-1": {
+        "mean_recall": 0.9964444444444442,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 98
+      },
+      "108": {
+        "mean_recall": 0.9891111111111108,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 0
+      },
+      "192": {
+        "mean_recall": 0.9788888888888884,
+        "mean_returned_count": 9.995555555555555,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 1,
+        "stops": 0
+      },
+      "310": {
+        "mean_recall": 0.9482222222222219,
+        "mean_returned_count": 9.846666666666666,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 23,
+        "stops": 0
+      },
+      "32": {
+        "mean_recall": 0.9937777777777776,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 43
+      },
+      "527": {
+        "mean_recall": 0.7897777777777784,
+        "mean_returned_count": 8.157777777777778,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 172,
+        "stops": 0
+      },
+      "743": {
+        "mean_recall": 0.5348888888888887,
+        "mean_returned_count": 5.444444444444445,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 345,
+        "stops": 0
+      }
+    },
+    "moderate_b_fixed": {
+      "-1": {
+        "mean_recall": 0.9964444444444442,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 102
+      },
+      "108": {
+        "mean_recall": 0.9891111111111108,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 29
+      },
+      "192": {
+        "mean_recall": 0.9788888888888884,
+        "mean_returned_count": 9.995555555555555,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 1,
+        "stops": 12
+      },
+      "310": {
+        "mean_recall": 0.9482222222222219,
+        "mean_returned_count": 9.846666666666666,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 23,
+        "stops": 0
+      },
+      "32": {
+        "mean_recall": 0.9937777777777776,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 95
+      },
+      "527": {
+        "mean_recall": 0.7897777777777784,
+        "mean_returned_count": 8.157777777777778,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 172,
+        "stops": 0
+      },
+      "743": {
+        "mean_recall": 0.5348888888888887,
+        "mean_returned_count": 5.444444444444445,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 345,
+        "stops": 0
+      }
+    },
+    "native640": {
+      "-1": {
+        "mean_recall": 0.9964444444444442,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 0
+      },
+      "108": {
+        "mean_recall": 0.9891111111111108,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 0
+      },
+      "192": {
+        "mean_recall": 0.9788888888888884,
+        "mean_returned_count": 9.995555555555555,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 1,
+        "stops": 0
+      },
+      "310": {
+        "mean_recall": 0.9482222222222219,
+        "mean_returned_count": 9.846666666666666,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 23,
+        "stops": 0
+      },
+      "32": {
+        "mean_recall": 0.9937777777777776,
+        "mean_returned_count": 10.0,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 0,
+        "stops": 0
+      },
+      "527": {
+        "mean_recall": 0.7897777777777784,
+        "mean_returned_count": 8.157777777777778,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 172,
+        "stops": 0
+      },
+      "743": {
+        "mean_recall": 0.5348888888888887,
+        "mean_returned_count": 5.444444444444445,
+        "queries": 450,
+        "recall_losses_to_raw_native640": 0,
+        "short_outputs": 345,
+        "stops": 0
+      }
+    }
+  },
+  "provenance": "Three policies were generated using guarded development labels. Reused unchanged, not a fresh unguarded-trained agent episode.",
+  "provider_calls": 0,
+  "source_receipt_sha256": "bc4b608599e23b6a3c3a3f113a5a83bc9f2f649389cbbb82c4876a5d485f79c2",
+  "status": "saved_pre_guard_outputs_rescored",
+  "validation_test_outcomes_opened": false
+}

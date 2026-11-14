@@ -1,0 +1,12 @@
+{
+  "agent_dispatch": "not started; usage reconciliation and original-graph qualification required",
+  "config_sha256": "9471e6e62f801b41aedd66a9a83286e5e95887a3c5106ef8dd0e21170e670bd4",
+  "parent_plan_sha256": "e96d285ca9d8d6c20d6463fad189c465d3786c023b02d77bf0caebcea0193ee3",
+  "prior_job": "22635567",
+  "protocol_sha256": "418b779beaa20650951904647e76e1f46b76e5fc92450e8f74a54ac0386b35be",
+  "qualification_archive_sha256": "b8a762821afb1724662ed95f1ab4df446cc58f301b7da3683d2e5ebf0b7456b2",
+  "qualification_module_sha256": "78c4e3baf183fc9b1746b771563ac21268bf1822b47f8ec032f23323e6532792",
+  "runtime_status": "native640 runtime verified; extended-effort parent sweep and qualification pending",
+  "schema": "reviews-clean-study-protocol-freeze.v1",
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0"
+}

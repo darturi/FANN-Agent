@@ -1,0 +1,191 @@
+[
+  {
+    "close_ns": 8433190,
+    "connections": 6,
+    "filter": -1,
+    "open_attach_ns": 390767752,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 9997096,
+    "connections": 6,
+    "filter": 743,
+    "open_attach_ns": 505904031,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 9866797,
+    "connections": 6,
+    "filter": 527,
+    "open_attach_ns": 571668266,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 9187639,
+    "connections": 6,
+    "filter": 310,
+    "open_attach_ns": 599405132,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 7691325,
+    "connections": 6,
+    "filter": 192,
+    "open_attach_ns": 532113393,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 7791104,
+    "connections": 6,
+    "filter": 108,
+    "open_attach_ns": 493059896,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 7311880,
+    "connections": 6,
+    "filter": 32,
+    "open_attach_ns": 528089828,
+    "phase": "quality"
+  },
+  {
+    "close_ns": 14674228,
+    "connections": 9,
+    "epoch": 0,
+    "filter": -1,
+    "open_attach_ns": 673109495,
+    "phase": "timing",
+    "warmup_ns": 2856051334,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 14040636,
+    "connections": 9,
+    "epoch": 0,
+    "filter": 743,
+    "open_attach_ns": 713486296,
+    "phase": "timing",
+    "warmup_ns": 4777158997,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 10721812,
+    "connections": 9,
+    "epoch": 0,
+    "filter": 527,
+    "open_attach_ns": 742134762,
+    "phase": "timing",
+    "warmup_ns": 4788044866,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 10230353,
+    "connections": 9,
+    "epoch": 0,
+    "filter": 310,
+    "open_attach_ns": 689927257,
+    "phase": "timing",
+    "warmup_ns": 3169509870,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 9825828,
+    "connections": 9,
+    "epoch": 0,
+    "filter": 192,
+    "open_attach_ns": 712376886,
+    "phase": "timing",
+    "warmup_ns": 2953593152,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 11227520,
+    "connections": 9,
+    "epoch": 0,
+    "filter": 108,
+    "open_attach_ns": 737135003,
+    "phase": "timing",
+    "warmup_ns": 2983609679,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 11095472,
+    "connections": 9,
+    "epoch": 0,
+    "filter": 32,
+    "open_attach_ns": 724738499,
+    "phase": "timing",
+    "warmup_ns": 2632513152,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 11897450,
+    "connections": 9,
+    "epoch": 1,
+    "filter": 743,
+    "open_attach_ns": 758823326,
+    "phase": "timing",
+    "warmup_ns": 4663355831,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 11149777,
+    "connections": 9,
+    "epoch": 1,
+    "filter": 527,
+    "open_attach_ns": 706007748,
+    "phase": "timing",
+    "warmup_ns": 4543031873,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 13860084,
+    "connections": 9,
+    "epoch": 1,
+    "filter": 310,
+    "open_attach_ns": 701298053,
+    "phase": "timing",
+    "warmup_ns": 2666774621,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 12461229,
+    "connections": 9,
+    "epoch": 1,
+    "filter": 192,
+    "open_attach_ns": 726306367,
+    "phase": "timing",
+    "warmup_ns": 2955773954,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 12004256,
+    "connections": 9,
+    "epoch": 1,
+    "filter": 108,
+    "open_attach_ns": 667495162,
+    "phase": "timing",
+    "warmup_ns": 2953426341,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 13411580,
+    "connections": 9,
+    "epoch": 1,
+    "filter": 32,
+    "open_attach_ns": 813359724,
+    "phase": "timing",
+    "warmup_ns": 2916179556,
+    "warmup_requests": 80
+  },
+  {
+    "close_ns": 11522206,
+    "connections": 9,
+    "epoch": 1,
+    "filter": -1,
+    "open_attach_ns": 981037296,
+    "phase": "timing",
+    "warmup_ns": 2978784565,
+    "warmup_requests": 80
+  }
+]

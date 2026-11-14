@@ -1,0 +1,158 @@
+{
+  "timing": {
+    "conditions": [
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": null,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": -1
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": null,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 743
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": null,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 527
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": null,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 310
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": null,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 192
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": null,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 108
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": null,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 32
+      }
+    ],
+    "cpus": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "exact_serving_calls": 0,
+    "fixture": "synthetic8d partial HNSW graph; not original graph/performance evidence",
+    "phase": "timing",
+    "separate_module_role": "unchanged timing",
+    "status": "passed"
+  },
+  "work": {
+    "conditions": [
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": true,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": -1
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": true,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 743
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": true,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 527
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": true,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 310
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": true,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 192
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": true,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 108
+      },
+      {
+        "all_roles_per_backend": 2,
+        "blocks": 10,
+        "cpu_pinning_and_role_output_parity": true,
+        "noop_graph_counters_equal_native": true,
+        "persistent_readers": 20,
+        "short_output_preserved": true,
+        "threshold": 32
+      }
+    ],
+    "cpus": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "exact_serving_calls": 0,
+    "fixture": "synthetic8d partial HNSW graph; not original graph/performance evidence",
+    "phase": "work",
+    "separate_module_role": "observation-only counters",
+    "status": "passed"
+  }
+}

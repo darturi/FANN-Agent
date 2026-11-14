@@ -1,0 +1,12 @@
+{
+  "all_quality_cases": 3150,
+  "attempt_ledger_reconstructed": true,
+  "compiled_policy_cases": 9450,
+  "first_stop_corruption_rejected": true,
+  "fixture": "synthetic return from frozen development references; fabricated timers; no live runtime/latency claim",
+  "holdout_access": false,
+  "schedule_corruption_rejected": true,
+  "status": "passed",
+  "timings": 50400,
+  "warmups": 1120
+}

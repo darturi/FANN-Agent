@@ -1,0 +1,79 @@
+{
+  "audit_sha256": "6da2bd9bf1d50d3af11f2d6faf5152fd945d39a696feee4910ef7dc39c35dc84",
+  "current_light19": {
+    "full_fixed_stop_cost_matrix_complete": false,
+    "missing_actual_stop_cells": 3621,
+    "old_binary_light19_observed_stop_cells": 2349,
+    "required_reachable_grid_cells": 4695,
+    "unique_observed_stop_cells": 1074
+  },
+  "incomplete_top10_cells": {
+    "progress34/votes108/1": 28,
+    "progress34/votes108/2": 2,
+    "static23/votes108/1": 28,
+    "static23/votes108/2": 2
+  },
+  "light19_projected_trajectories_identical_across_all_three_filters_vectors": 0,
+  "native_mean_recall_per_filter": {
+    "unfiltered": 0.9934999999999999,
+    "votes108": 0.986,
+    "votes32": 0.9915
+  },
+  "new_database_provider_or_Torch_calls": 0,
+  "new_fits_or_searches": 0,
+  "profile_totals": {
+    "progress34": {
+      "actual_stop_labels": 4695,
+      "all_features_available": 4695,
+      "both_fixed_stop_proxies_positive": 4478,
+      "cases": 4800,
+      "positive_activation_proxy": 4520,
+      "positive_reuse_proxy": 4576,
+      "reached": 4695,
+      "recall_below_native": 2108,
+      "recall_not_below_native": 2587,
+      "unreachable_search_finished": 105,
+      "valid_top10": 4665
+    },
+    "static23": {
+      "actual_stop_labels": 4695,
+      "all_features_available": 4695,
+      "both_fixed_stop_proxies_positive": 4502,
+      "cases": 4800,
+      "positive_activation_proxy": 4532,
+      "positive_reuse_proxy": 4587,
+      "reached": 4695,
+      "recall_below_native": 2108,
+      "recall_not_below_native": 2587,
+      "unreachable_search_finished": 105,
+      "valid_top10": 4665
+    }
+  },
+  "progress_features_change_between_allowed_grid_states_cases": 600,
+  "progress_features_change_through_full_trajectory_cases": 600,
+  "restricted_grid": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "static_probe_unchanged_throughout_full_trajectory_cases": 600,
+  "static_progress_actual_stop_ID_distance_matches": 4695,
+  "unrestricted_state_coverage": {
+    "progress34": {
+      "measured_grid_stops": 4695,
+      "observed_states": 95106,
+      "outside_grid_unknown_outcomes": 90411
+    },
+    "static23": {
+      "measured_grid_stops": 4695,
+      "observed_states": 95106,
+      "outside_grid_unknown_outcomes": 90411
+    }
+  },
+  "version": "p3a-coverage-summary.v1"
+}

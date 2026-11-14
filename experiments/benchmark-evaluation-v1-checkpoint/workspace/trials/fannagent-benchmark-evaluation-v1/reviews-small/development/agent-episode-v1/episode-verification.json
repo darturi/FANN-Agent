@@ -1,0 +1,21 @@
+{
+  "anonymous_development_cases": 3150,
+  "anonymous_vector_groups": 450,
+  "approved_request_match": true,
+  "cap_usd": 15,
+  "cost_usd": "0.561208",
+  "input_tokens": 278319,
+  "limits": "Abstention is one unsuccessful generation episode, not evidence of policy impossibility. No live new-program measurement or validation selection took place.",
+  "model": "claude-sonnet-5-5",
+  "output_tokens": 457,
+  "paid_calls": 1,
+  "proposal_count": 0,
+  "provider_charge_reconstructed": true,
+  "provider_failure": false,
+  "request_response_and_pool_hashes": "passed",
+  "round_cap": 3,
+  "schema_failure": false,
+  "status": "verified_agent_episode_explicit_abstention",
+  "stop_reason": "model explicitly returned empty policies; predeclared driver terminates on abstention",
+  "validation_test_outcomes_opened": false
+}

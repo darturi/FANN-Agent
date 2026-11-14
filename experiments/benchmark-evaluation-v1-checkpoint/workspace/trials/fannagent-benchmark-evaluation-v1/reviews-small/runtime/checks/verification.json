@@ -1,0 +1,18 @@
+{
+  "active_kit_sha256": "25bb60a12cfc3f3a762d42074b04ffd78597a5953391e155217e2085b25fa0de",
+  "capsule_hashes": "passed",
+  "development_folds_sha256": "437ca50be0977df85160cdb34f6c0d19ad5320d0d0e39c190761fc4a3c7c47a9",
+  "focused_checks": 8,
+  "inherited_query_scope": "200 historical groups all within frozen development",
+  "local_emulated_full_restore_loader": "failed: QEMU SIGSEGV; native loader check pending",
+  "module_sha256": "2383b3faa99d199c631d3f3787e7ef1ebe067af982f5cba850d3de7208337da8",
+  "native_seven_condition_synthetic_smoke": "passed",
+  "new_query_scope": "3150 requests / 450 development groups only",
+  "original_graph_runtime_qualified": false,
+  "protocol_finalized": true,
+  "provider_calls": 0,
+  "python_shell_syntax": "passed",
+  "remote_job_dispatched_by_codex": false,
+  "split_unchanged": true,
+  "validation_test_queries": 0
+}

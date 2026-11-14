@@ -1,0 +1,276 @@
+{
+  "adequate_parents": [],
+  "all_recall_scores_and_completeness_reconstructed": true,
+  "cells_verified": 35,
+  "conditions": 7,
+  "distance_order_diagnostics": [
+    {
+      "delta": 1.8468821916250988e-08,
+      "ef_search": 640,
+      "id": "reviews-clean-v0300-votes32"
+    },
+    {
+      "delta": 1.8468821916250988e-08,
+      "ef_search": 1000,
+      "id": "reviews-clean-v0300-votes32"
+    },
+    {
+      "delta": 1.8468821916250988e-08,
+      "ef_search": 2048,
+      "id": "reviews-clean-v0300-votes32"
+    },
+    {
+      "delta": 1.8468821916250988e-08,
+      "ef_search": 4096,
+      "id": "reviews-clean-v0300-votes32"
+    },
+    {
+      "delta": 1.8468821916250988e-08,
+      "ef_search": 8192,
+      "id": "reviews-clean-v0300-votes32"
+    }
+  ],
+  "distance_order_tolerance": 1e-06,
+  "effort_settings": 5,
+  "eligible_sets_match_original_job": true,
+  "incomplete_votes743_at8192": [
+    "reviews-clean-v0196-votes743"
+  ],
+  "independent_development_groups": 450,
+  "job_id": "22643346",
+  "limitations": "Negative branch emits no success receipt or new forced-stop qualification. Exit3 agrees with planned disposition and guest finally cleanup/index checks; independent local reconstruction verifies the sweep, not unreturned traversal traces.",
+  "native640_continuity_queries": 3150,
+  "provider_calls": 0,
+  "raw_sha256": {
+    "eligibility.json": "162d66684c17a753693e68108b4c45c6bf2cc97f9643e60cc8e88d37c9484ab5",
+    "host-exit.json": "2721a8ccb336ae4f6ac44be5973f881cec4f50e601f75101e288c69ace54f224",
+    "parent-selection.json": "d736b1b089fdf6220fb4fcc97f9486a46f81f0b6d620abda0203e25cebba6214",
+    "parent-sweep.jsonl": "e00de71758343e2eee1914bd7379a35a028b5ff2b8dd73dc67757460d5bc9aa2"
+  },
+  "selection_reconstructed": true,
+  "status": "verified_bounded_negative_no_adequate_parent",
+  "summary": {
+    "1000": {
+      "-1": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9984444444444445,
+        "queries": 450
+      },
+      "108": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9946666666666667,
+        "queries": 450
+      },
+      "192": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9902222222222222,
+        "queries": 450
+      },
+      "310": {
+        "adequate": false,
+        "complete": 447,
+        "mean_recall": 0.9791111111111112,
+        "queries": 450
+      },
+      "32": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.996,
+        "queries": 450
+      },
+      "527": {
+        "adequate": false,
+        "complete": 353,
+        "mean_recall": 0.8908888888888888,
+        "queries": 450
+      },
+      "743": {
+        "adequate": false,
+        "complete": 196,
+        "mean_recall": 0.6924444444444445,
+        "queries": 450
+      }
+    },
+    "2048": {
+      "-1": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9993333333333333,
+        "queries": 450
+      },
+      "108": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.998,
+        "queries": 450
+      },
+      "192": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9973333333333334,
+        "queries": 450
+      },
+      "310": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9937777777777778,
+        "queries": 450
+      },
+      "32": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9975555555555555,
+        "queries": 450
+      },
+      "527": {
+        "adequate": false,
+        "complete": 433,
+        "mean_recall": 0.9735555555555556,
+        "queries": 450
+      },
+      "743": {
+        "adequate": false,
+        "complete": 355,
+        "mean_recall": 0.8942222222222221,
+        "queries": 450
+      }
+    },
+    "4096": {
+      "-1": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9995555555555555,
+        "queries": 450
+      },
+      "108": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9993333333333333,
+        "queries": 450
+      },
+      "192": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9991111111111112,
+        "queries": 450
+      },
+      "310": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9975555555555555,
+        "queries": 450
+      },
+      "32": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9993333333333333,
+        "queries": 450
+      },
+      "527": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9953333333333333,
+        "queries": 450
+      },
+      "743": {
+        "adequate": false,
+        "complete": 433,
+        "mean_recall": 0.9815555555555555,
+        "queries": 450
+      }
+    },
+    "640": {
+      "-1": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9964444444444444,
+        "queries": 450
+      },
+      "108": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9891111111111112,
+        "queries": 450
+      },
+      "192": {
+        "adequate": false,
+        "complete": 449,
+        "mean_recall": 0.9788888888888889,
+        "queries": 450
+      },
+      "310": {
+        "adequate": false,
+        "complete": 427,
+        "mean_recall": 0.9482222222222222,
+        "queries": 450
+      },
+      "32": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9937777777777778,
+        "queries": 450
+      },
+      "527": {
+        "adequate": false,
+        "complete": 278,
+        "mean_recall": 0.7897777777777777,
+        "queries": 450
+      },
+      "743": {
+        "adequate": false,
+        "complete": 105,
+        "mean_recall": 0.5348888888888889,
+        "queries": 450
+      }
+    },
+    "8192": {
+      "-1": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9997777777777778,
+        "queries": 450
+      },
+      "108": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9995555555555555,
+        "queries": 450
+      },
+      "192": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9995555555555555,
+        "queries": 450
+      },
+      "310": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9995555555555555,
+        "queries": 450
+      },
+      "32": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9997777777777778,
+        "queries": 450
+      },
+      "527": {
+        "adequate": true,
+        "complete": 450,
+        "mean_recall": 0.9986666666666666,
+        "queries": 450
+      },
+      "743": {
+        "adequate": false,
+        "complete": 449,
+        "mean_recall": 0.9977777777777778,
+        "queries": 450
+      }
+    }
+  },
+  "sweep_rows_verified": 15750,
+  "validation_test_queries": 0
+}

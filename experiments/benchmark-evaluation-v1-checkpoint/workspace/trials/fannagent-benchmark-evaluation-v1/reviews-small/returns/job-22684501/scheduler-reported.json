@@ -1,0 +1,10 @@
+{
+  "source": "user supplied sacct transcript",
+  "job_id": "22684501",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "04:08:55",
+  "step_elapsed": "04:08:53",
+  "step_maxrss_kib": 6835548,
+  "verified_on": "2026-11-12"
+}

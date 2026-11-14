@@ -1,0 +1,14 @@
+{
+  "attempts": 150570,
+  "completion_exact_attempt_rejected": true,
+  "fixture": "fabricated full-size return from development outputs; no new ANN queries and no real timing claim",
+  "inflated_partial_result_recall_rejected": true,
+  "low_absolute_recall_does_not_disqualify_preservation": true,
+  "quality_family_results": 28350,
+  "schedule_corruption_rejected": true,
+  "short_outputs_score_normally": true,
+  "status": "passed",
+  "timed_requests": 113400,
+  "validation_test_outcomes_opened": false,
+  "warmups": 2520
+}

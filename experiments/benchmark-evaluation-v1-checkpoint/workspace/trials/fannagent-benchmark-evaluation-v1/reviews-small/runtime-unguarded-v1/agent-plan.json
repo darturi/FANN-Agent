@@ -1,0 +1,126 @@
+{
+  "95pct_absolute_recall_floor": "diagnostic only; not a gate",
+  "capture_queries": 3150,
+  "conditions": [
+    -1,
+    743,
+    527,
+    310,
+    192,
+    108,
+    32
+  ],
+  "confirmatory_claim": false,
+  "exact_reference_connections_closed_before_approximate_phases": true,
+  "exact_serving_calls": 0,
+  "families": {
+    "broad_c_fixed": {
+      "arm": 9,
+      "ef": 640
+    },
+    "conservative_a": {
+      "arm": 7,
+      "ef": 640
+    },
+    "moderate_b_fixed": {
+      "arm": 8,
+      "ef": 640
+    },
+    "native160": {
+      "arm": null,
+      "ef": 160
+    },
+    "native320": {
+      "arm": null,
+      "ef": 320
+    },
+    "native40": {
+      "arm": null,
+      "ef": 40
+    },
+    "native640": {
+      "arm": null,
+      "ef": 640
+    },
+    "native80": {
+      "arm": null,
+      "ef": 80
+    },
+    "noop640": {
+      "arm": 6,
+      "ef": 640
+    }
+  },
+  "final_policy_selected": false,
+  "groups": 450,
+  "iterative_scan": "off",
+  "labels": [
+    "native40-A",
+    "native40-B",
+    "native80-A",
+    "native80-B",
+    "native160-A",
+    "native160-B",
+    "native320-A",
+    "native320-B",
+    "native640-A",
+    "native640-B",
+    "noop640-A",
+    "noop640-B",
+    "conservative_a-A",
+    "conservative_a-B",
+    "moderate_b_fixed-A",
+    "moderate_b_fixed-B",
+    "broad_c_fixed-A",
+    "broad_c_fixed-B"
+  ],
+  "native_ef_grid": [
+    40,
+    80,
+    160,
+    320,
+    640
+  ],
+  "offline_exact_reference_queries": 3150,
+  "parent_ef_search": 640,
+  "planned_attempts": 150570,
+  "policy_provenance": "three unchanged programs generated using guarded development labels; no fresh agent episode",
+  "private_postgres_max_connections": 32,
+  "provider_calls": 0,
+  "quality_family_results": 28350,
+  "queries": 3150,
+  "query_attempt_cap": 160000,
+  "relative_quality": "zero query losses vsactual raw native640 in every condition",
+  "resource": {
+    "cpus": 4,
+    "memory_gib": 48,
+    "wall_hours": 8
+  },
+  "schedule_seed": "reviews-unguarded-development-v1",
+  "schema": "unguarded-development.v1",
+  "short_outputs": "return unchanged; score missing neighbors as misses",
+  "timed_requests": 113400,
+  "timing_epochs": 2,
+  "validation_test_queries": 0,
+  "warmup_requests": 2520,
+  "williams_base": [
+    0,
+    1,
+    17,
+    2,
+    16,
+    3,
+    15,
+    4,
+    14,
+    5,
+    13,
+    6,
+    12,
+    7,
+    11,
+    8,
+    10,
+    9
+  ]
+}

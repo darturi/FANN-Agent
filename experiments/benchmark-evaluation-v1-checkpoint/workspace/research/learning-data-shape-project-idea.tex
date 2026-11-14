@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setlist[itemize]{leftmargin=*,itemsep=0.25em,topsep=0.5em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7em}
+
+\title{Learning the Shape of Data to Improve Database Queries}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{The Idea in One Sentence}
+
+This project asks whether an AI agent can learn useful patterns about how a database's data is organized by observing past query executions, and then use those patterns to make future queries faster.
+
+\section{Motivation}
+
+Database systems make many decisions when executing a query. They may choose which index to use, which table to examine first, how much of an index to search, or when enough work has been done to return an answer. Making the right decision often depends on more than the database schema or the total number of matching records. It can depend on the deeper structure of the data.
+
+For example, a social network is not usually a tree as a whole, but parts of it may contain tree-shaped relationships. A reporting hierarchy, referral network, or discussion thread may form a tree even when the surrounding graph is much more complicated. If a database knows that such a structure exists, it may be able to answer certain path or ancestry queries using a specialized index instead of repeatedly traversing the graph.
+
+This suggests a broader principle:
+
+\begin{quote}
+Data often contains useful structure that is not fully represented by ordinary schema information or simple database statistics.
+\end{quote}
+
+Some of that structure consists of exact properties. A relationship may be guaranteed to form a tree, for example. Other structure is statistical. Records of a certain type may tend to cluster together, two attributes may be strongly related, or a particular kind of query may consistently be easier in one part of the data than another.
+
+The central idea of this project is that a database optimizer could learn these patterns from experience. As queries are executed, the system produces evidence about which records are encountered, where time is spent, which search strategies succeed, and when additional work stops being useful. An AI agent could examine that evidence, build a compact understanding of the data's shape, and turn that understanding into rules for future query execution.
+
+\section{What ``the Shape of the Data'' Means}
+
+The word \emph{shape} is being used broadly. It does not refer only to a literal graph or geometric shape. It refers to relationships and regularities that affect the cost of answering queries.
+
+Examples include:
+
+\begin{itemize}
+    \item A subgraph that forms a tree or directed acyclic graph.
+    \item Records with the same category clustering in one region of a vector space.
+    \item A value that is rare across the complete database but common near certain queries.
+    \item Two columns that are much more strongly related than their individual statistics suggest.
+    \item Queries from one part of a workload regularly requiring more exploration than queries from another part.
+    \item Early search behavior that reliably predicts whether additional search will improve the answer.
+\end{itemize}
+
+The important point is not merely to describe these patterns. The system should learn patterns that lead to better execution decisions.
+
+\section{The First Case Study: Filtered Vector Search}
+
+The initial project studies filtered approximate nearest-neighbor search.
+
+Suppose a database stores a large collection of documents. Each document has a vector representing its meaning, along with metadata such as its subject. A user might ask:
+
+\begin{quote}
+Find the ten documents most similar to this query, but only among documents whose subject is biology.
+\end{quote}
+
+The database could compare the query with every biology document and obtain the exact answer. With millions of documents, however, that may be too slow. Approximate nearest-neighbor search tries to find nearly the same answer while examining far fewer records.
+
+One common index, HNSW, connects similar vectors in a graph. The search algorithm moves through this graph toward records that appear close to the query. The HNSW graph is an index created from vector similarity; it is not the same thing as an application-level graph such as a social network.
+
+Filtering makes this search more difficult. Reaching vectors that are close to the query is not enough. The records must also satisfy the requested metadata condition.
+
+Imagine two categories that each occur in 1\% of the database. From a simple global statistic, they look equally selective. Their local behavior may be very different:
+
+\begin{itemize}
+    \item Biology documents might be tightly clustered near one another. Once the search reaches a biology-related region, it may quickly find ten strong results.
+    \item Documents in another category might be scattered throughout the vector space. The search may need to examine many more records to find ten good qualifying results.
+\end{itemize}
+
+The total frequency of the categories is identical, but the shape of their relationship with the vector space is different. That difference affects how the query should be executed.
+
+\section{What the Agent Would Learn}
+
+As development queries are run, the system records what happens during each search. It might observe:
+
+\begin{itemize}
+    \item How much of the index was explored.
+    \item How frequently visited records satisfied the filter.
+    \item How quickly qualifying results appeared.
+    \item Whether the best results continued to improve.
+    \item Which kinds of queries were easy or difficult.
+    \item How global filter frequency differed from local filter frequency.
+\end{itemize}
+
+For a limited number of development queries, the system would also compute the exact answer. This expensive step reveals whether the approximate search stopped too early or continued after it already had a sufficiently good result.
+
+The agent would use this evidence to construct a small, persistent model of data shape. This model might capture patterns such as:
+
+\begin{itemize}
+    \item A category is globally rare but concentrated in particular vector regions.
+    \item Early filter-hit rates are especially informative for one class of queries.
+    \item Queries in a particular region usually require more exploration.
+    \item Once result distances stabilize under certain conditions, further search rarely helps.
+    \item A simple global selectivity estimate is misleading for a particular category.
+\end{itemize}
+
+This learned model should be inspectable. It should take the form of a small collection of numerical summaries, tables, rules, or executable expressions. It should not be an unlimited block of text that cannot be tested or reproduced.
+
+The model also should not memorize the answers to individual queries. Its purpose is to describe patterns that apply to future queries the system has not seen before.
+
+\section{From Learned Structure to a Query Decision}
+
+Learning about the data is only useful if it changes how queries are executed. In the first case study, the learned shape model is used to decide when an ongoing HNSW search should stop.
+
+During a search, the system periodically chooses between two actions:
+
+\begin{verbatim}
+continue exploring the index
+or
+stop and return the current results
+\end{verbatim}
+
+Stopping too early saves time but may miss important neighbors. Continuing for too long may improve nothing and waste work. The desired policy stops easy queries early while allowing difficult queries to search longer.
+
+A simple generated rule might resemble:
+
+\begin{verbatim}
+If ten qualifying results have been found,
+and their distances have changed very little recently,
+and the learned shape model says this query belongs
+to a locally dense regime,
+then stop.
+Otherwise, continue.
+\end{verbatim}
+
+The actual rule may be numerical rather than written in English. It would be a small, inexpensive program executed by the search engine. The language model would not need to run during every user query.
+
+\section{Why Begin with Stopping}
+
+The larger vision is an agent that learns data structure and uses it across several database decisions. It could eventually choose indexes, change traversal strategies, rewrite queries, recommend physical structures, or recognize exact graph invariants.
+
+The first project deliberately gives the agent only the continue-or-stop decision. This keeps the central idea testable.
+
+If the agent were allowed to change the graph traversal, index, filtering strategy, and stopping point simultaneously, it would be difficult to determine why performance changed. Each decision would alter what the search sees next, creating many possible execution paths that would all need to be tested.
+
+Stopping provides a useful middle ground. It is narrow enough to study carefully, but it is not simply one fixed number. The policy makes a decision repeatedly during each query and can allocate different amounts of work to different queries. It therefore provides a meaningful test of whether accumulated knowledge about data shape improves execution.
+
+The project broadens what the agent learns while keeping what it controls narrow.
+
+\section{The Central Research Question}
+
+The project is built around the following question:
+
+\begin{quote}
+Can an AI agent learn a compact and reusable model of workload-relevant data shape from a limited stream of query executions, and can that model improve decisions on future queries?
+\end{quote}
+
+The filtered-ANN study makes that question concrete:
+
+\begin{quote}
+Can the agent learn relationships among filters, vector neighborhoods, and search progress, then use those relationships to stop unseen searches earlier without reducing retrieval quality below the chosen target?
+\end{quote}
+
+The project is not successful merely because the agent produces a plausible explanation or a complicated rule. The learned shape model must describe unseen query behavior, and using it must lead to better execution decisions.
+
+\section{What Would Count as a Meaningful Result}
+
+A strong result would show that the agent learned structural patterns that continued to hold on unseen queries. A stopping policy using those patterns would perform less search work while maintaining the same target level of answer quality.
+
+It would also be important to determine whether the explicit shape model is responsible for the improvement. An agent that learns a persistent model of the workload should be compared with an agent that generates a stopping rule directly from the same examples. This reveals whether learning structure as a separate step adds value.
+
+The agent should also be compared with conventional statistical or machine-learning methods given the same evidence. If a simple model learns the same patterns equally well, that is an important result. The scientific question is not whether an AI agent can produce \emph{some} policy; it is whether the agent provides a useful way to acquire and apply structural knowledge under limited evidence.
+
+\section{The Broader Vision}
+
+Filtered-ANN stopping is intended as the first controlled example of a larger research direction: \textbf{structure-aware query optimization learned from execution experience}.
+
+The same general framework could later be applied to other forms of structure and other database decisions. An agent might learn that a relationship behaves like a tree, identify correlations that make ordinary cardinality estimates inaccurate, select among different access paths, or recommend an index for a recurring workload. Exact properties could support correctness-preserving rewrites, while statistical properties could guide cost and resource decisions.
+
+The long-term goal is a database system that does more than treat each query as an isolated event. It would accumulate a tested understanding of how its data behaves, preserve that knowledge in an inspectable form, and use it to improve future execution.
+
+The first project asks whether that larger idea works in a setting where the data relationships, observations, decisions, and quality trade-offs can all be measured clearly.
+
+\end{document}

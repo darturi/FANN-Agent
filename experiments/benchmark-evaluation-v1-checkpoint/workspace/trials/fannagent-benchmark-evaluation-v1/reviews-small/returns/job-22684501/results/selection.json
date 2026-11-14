@@ -1,0 +1,1538 @@
+{
+  "grid": [
+    {
+      "adequate": true,
+      "ef": 640,
+      "equal_scalar_filter_mean_ns": 18872299.15185185,
+      "identical_code_mean_ratios": {
+        "-1": {
+          "native": 0.992982063117339,
+          "noop": 1.0063416929147517
+        },
+        "108": {
+          "native": 0.9835224165343273,
+          "noop": 1.0007378107518885
+        },
+        "192": {
+          "native": 1.0040370279288005,
+          "noop": 1.0097968009269813
+        },
+        "310": {
+          "native": 1.0140627656675927,
+          "noop": 0.9996344170966176
+        },
+        "32": {
+          "native": 0.9983539902330171,
+          "noop": 0.9934516729074111
+        },
+        "527": {
+          "native": 0.9936189146421426,
+          "noop": 0.9906415989429675
+        },
+        "743": {
+          "native": 1.0017557706940659,
+          "noop": 1.0068049083169006
+        }
+      },
+      "per_condition_native_mean_ns": {
+        "-1": 13198249.098888889,
+        "108": 12450923.545555556,
+        "192": 12692858.23,
+        "310": 17164091.992777776,
+        "32": 12546860.330555556,
+        "527": 28040220.526666667,
+        "743": 30338840.285555556
+      },
+      "quality": {
+        "-1": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9964444444444444,
+          "queries": 450
+        },
+        "108": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9891111111111112,
+          "queries": 450
+        },
+        "192": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 1,
+          "mean_recall": 0.9793333333333333,
+          "queries": 450
+        },
+        "310": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 23,
+          "mean_recall": 0.9655555555555555,
+          "queries": 450
+        },
+        "32": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9937777777777778,
+          "queries": 450
+        },
+        "527": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 172,
+          "mean_recall": 0.9753333333333333,
+          "queries": 450
+        },
+        "743": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 345,
+          "mean_recall": 0.9922222222222222,
+          "queries": 450
+        }
+      }
+    },
+    {
+      "adequate": true,
+      "ef": 1000,
+      "equal_scalar_filter_mean_ns": 23860753.210092593,
+      "identical_code_mean_ratios": {
+        "-1": {
+          "native": 1.011948349636008,
+          "noop": 1.0217477662650185
+        },
+        "108": {
+          "native": 0.9887842197341647,
+          "noop": 1.000177619295849
+        },
+        "192": {
+          "native": 0.9877503996376343,
+          "noop": 1.0086533286346773
+        },
+        "310": {
+          "native": 1.0010988553452784,
+          "noop": 0.9979309986943057
+        },
+        "32": {
+          "native": 1.0284202456761082,
+          "noop": 1.0095666791457958
+        },
+        "527": {
+          "native": 1.0289067823773088,
+          "noop": 0.9923655104231782
+        },
+        "743": {
+          "native": 0.9856893112186722,
+          "noop": 0.9952777410701646
+        }
+      },
+      "per_condition_native_mean_ns": {
+        "-1": 18775086.190555554,
+        "108": 18356103.578333333,
+        "192": 18197678.54111111,
+        "310": 19424543.255555555,
+        "32": 18248763.49388889,
+        "527": 30326918.008333333,
+        "743": 38610512.38333333
+      },
+      "quality": {
+        "-1": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9984444444444445,
+          "queries": 450
+        },
+        "108": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9946666666666667,
+          "queries": 450
+        },
+        "192": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9902222222222222,
+          "queries": 450
+        },
+        "310": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 3,
+          "mean_recall": 0.9797777777777777,
+          "queries": 450
+        },
+        "32": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.996,
+          "queries": 450
+        },
+        "527": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 97,
+          "mean_recall": 0.9768888888888889,
+          "queries": 450
+        },
+        "743": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 254,
+          "mean_recall": 0.9857777777777779,
+          "queries": 450
+        }
+      }
+    },
+    {
+      "adequate": true,
+      "ef": 2048,
+      "equal_scalar_filter_mean_ns": 58806867.77888889,
+      "identical_code_mean_ratios": {
+        "-1": {
+          "native": 0.9974808063377028,
+          "noop": 1.00393674735854
+        },
+        "108": {
+          "native": 0.9943707328261587,
+          "noop": 1.0069946509715932
+        },
+        "192": {
+          "native": 1.0125724055098364,
+          "noop": 1.0063249742629194
+        },
+        "310": {
+          "native": 1.0103614813305035,
+          "noop": 1.003917854653648
+        },
+        "32": {
+          "native": 0.9917087269035632,
+          "noop": 1.0011369096930847
+        },
+        "527": {
+          "native": 0.9984099699277128,
+          "noop": 1.001301101257463
+        },
+        "743": {
+          "native": 1.004860832027483,
+          "noop": 0.98991639671039
+        }
+      },
+      "per_condition_native_mean_ns": {
+        "-1": 56502348.83166666,
+        "108": 56724594.553333335,
+        "192": 57100827.245,
+        "310": 58597564.16111111,
+        "32": 55775666.76055556,
+        "527": 61147908.75833333,
+        "743": 63494645.195
+      },
+      "quality": {
+        "-1": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9993333333333333,
+          "queries": 450
+        },
+        "108": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.998,
+          "queries": 450
+        },
+        "192": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9973333333333334,
+          "queries": 450
+        },
+        "310": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9937777777777778,
+          "queries": 450
+        },
+        "32": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9975555555555555,
+          "queries": 450
+        },
+        "527": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 17,
+          "mean_recall": 0.9855555555555555,
+          "queries": 450
+        },
+        "743": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 95,
+          "mean_recall": 0.9848888888888888,
+          "queries": 450
+        }
+      }
+    },
+    {
+      "adequate": true,
+      "ef": 4096,
+      "equal_scalar_filter_mean_ns": 99639204.74055557,
+      "identical_code_mean_ratios": {
+        "-1": {
+          "native": 0.9924796372158194,
+          "noop": 0.9920897005093515
+        },
+        "108": {
+          "native": 0.9928126734753435,
+          "noop": 0.9993493077051242
+        },
+        "192": {
+          "native": 0.9973632040847646,
+          "noop": 1.001200380700368
+        },
+        "310": {
+          "native": 1.0096466912225204,
+          "noop": 1.0128455546271913
+        },
+        "32": {
+          "native": 0.9976140441099504,
+          "noop": 1.000842611194024
+        },
+        "527": {
+          "native": 1.0041356087408806,
+          "noop": 0.9952988185206786
+        },
+        "743": {
+          "native": 1.0114866106447031,
+          "noop": 1.0064548417730108
+        }
+      },
+      "per_condition_native_mean_ns": {
+        "-1": 90836042.16611111,
+        "108": 104662186.06555556,
+        "192": 107443133.35444444,
+        "310": 107601094.02222222,
+        "32": 92422955.88777778,
+        "527": 91518876.8911111,
+        "743": 94186982.22222222
+      },
+      "quality": {
+        "-1": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9995555555555555,
+          "queries": 450
+        },
+        "108": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9993333333333333,
+          "queries": 450
+        },
+        "192": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9991111111111112,
+          "queries": 450
+        },
+        "310": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9975555555555555,
+          "queries": 450
+        },
+        "32": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9993333333333333,
+          "queries": 450
+        },
+        "527": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9953333333333333,
+          "queries": 450
+        },
+        "743": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 17,
+          "mean_recall": 0.994,
+          "queries": 450
+        }
+      }
+    },
+    {
+      "adequate": true,
+      "ef": 8192,
+      "equal_scalar_filter_mean_ns": 163499269.70851853,
+      "identical_code_mean_ratios": {
+        "-1": {
+          "native": 1.000302105540632,
+          "noop": 1.0007395181675998
+        },
+        "108": {
+          "native": 0.993941633184451,
+          "noop": 0.9853870193250202
+        },
+        "192": {
+          "native": 1.0032080151781115,
+          "noop": 0.9972875176942357
+        },
+        "310": {
+          "native": 0.9921458008927836,
+          "noop": 0.9935207493596251
+        },
+        "32": {
+          "native": 0.9916278445249027,
+          "noop": 1.0002481046432028
+        },
+        "527": {
+          "native": 1.0119373262487594,
+          "noop": 0.9980451809634369
+        },
+        "743": {
+          "native": 1.0135684769636744,
+          "noop": 0.9944312698294173
+        }
+      },
+      "per_condition_native_mean_ns": {
+        "-1": 167399221.67833334,
+        "108": 157977358.41,
+        "192": 158023987.34111112,
+        "310": 163506338.60166666,
+        "32": 157436204.0627778,
+        "527": 170784785.58444443,
+        "743": 173266944.25111112
+      },
+      "quality": {
+        "-1": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9997777777777778,
+          "queries": 450
+        },
+        "108": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9995555555555555,
+          "queries": 450
+        },
+        "192": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9995555555555555,
+          "queries": 450
+        },
+        "310": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9995555555555555,
+          "queries": 450
+        },
+        "32": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9997777777777778,
+          "queries": 450
+        },
+        "527": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 0,
+          "mean_recall": 0.9986666666666666,
+          "queries": 450
+        },
+        "743": {
+          "adequate": true,
+          "complete": 450,
+          "fallbacks": 1,
+          "mean_recall": 0.9982222222222222,
+          "queries": 450
+        }
+      }
+    }
+  ],
+  "independent_groups": 450,
+  "provider_calls": 0,
+  "selected_ef_search": 640,
+  "selection": "lowest measured native guard equal-six-filter mean; within1% choose larger ef",
+  "setup": [
+    {
+      "close_ns": 3729689,
+      "connections": 3,
+      "ef": 640,
+      "filter": -1,
+      "open_attach_ns": 230753853,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2718858,
+      "connections": 3,
+      "ef": 640,
+      "filter": 743,
+      "open_attach_ns": 346262605,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2883479,
+      "connections": 3,
+      "ef": 640,
+      "filter": 527,
+      "open_attach_ns": 289161264,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2308014,
+      "connections": 3,
+      "ef": 640,
+      "filter": 310,
+      "open_attach_ns": 320277759,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3384062,
+      "connections": 3,
+      "ef": 640,
+      "filter": 192,
+      "open_attach_ns": 326437864,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2502846,
+      "connections": 3,
+      "ef": 640,
+      "filter": 108,
+      "open_attach_ns": 310528219,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2966724,
+      "connections": 3,
+      "ef": 640,
+      "filter": 32,
+      "open_attach_ns": 315112746,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3344557,
+      "connections": 3,
+      "ef": 1000,
+      "filter": -1,
+      "open_attach_ns": 370306100,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2552048,
+      "connections": 3,
+      "ef": 1000,
+      "filter": 743,
+      "open_attach_ns": 324620221,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2497690,
+      "connections": 3,
+      "ef": 1000,
+      "filter": 527,
+      "open_attach_ns": 347539821,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2336161,
+      "connections": 3,
+      "ef": 1000,
+      "filter": 310,
+      "open_attach_ns": 312227748,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3429920,
+      "connections": 3,
+      "ef": 1000,
+      "filter": 192,
+      "open_attach_ns": 352581741,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2758502,
+      "connections": 3,
+      "ef": 1000,
+      "filter": 108,
+      "open_attach_ns": 343128676,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3914705,
+      "connections": 3,
+      "ef": 1000,
+      "filter": 32,
+      "open_attach_ns": 316304180,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3525607,
+      "connections": 3,
+      "ef": 2048,
+      "filter": -1,
+      "open_attach_ns": 316504303,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3013367,
+      "connections": 3,
+      "ef": 2048,
+      "filter": 743,
+      "open_attach_ns": 310636990,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3068713,
+      "connections": 3,
+      "ef": 2048,
+      "filter": 527,
+      "open_attach_ns": 277082572,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2603966,
+      "connections": 3,
+      "ef": 2048,
+      "filter": 310,
+      "open_attach_ns": 275385013,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3892663,
+      "connections": 3,
+      "ef": 2048,
+      "filter": 192,
+      "open_attach_ns": 291685164,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2453606,
+      "connections": 3,
+      "ef": 2048,
+      "filter": 108,
+      "open_attach_ns": 286855634,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3116151,
+      "connections": 3,
+      "ef": 2048,
+      "filter": 32,
+      "open_attach_ns": 304591537,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 4367015,
+      "connections": 3,
+      "ef": 4096,
+      "filter": -1,
+      "open_attach_ns": 307485600,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3490229,
+      "connections": 3,
+      "ef": 4096,
+      "filter": 743,
+      "open_attach_ns": 331773944,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2978798,
+      "connections": 3,
+      "ef": 4096,
+      "filter": 527,
+      "open_attach_ns": 326509247,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 4162825,
+      "connections": 3,
+      "ef": 4096,
+      "filter": 310,
+      "open_attach_ns": 285867866,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3440997,
+      "connections": 3,
+      "ef": 4096,
+      "filter": 192,
+      "open_attach_ns": 283074953,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3296094,
+      "connections": 3,
+      "ef": 4096,
+      "filter": 108,
+      "open_attach_ns": 318165310,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 6223575,
+      "connections": 3,
+      "ef": 4096,
+      "filter": 32,
+      "open_attach_ns": 302962682,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 4933770,
+      "connections": 3,
+      "ef": 8192,
+      "filter": -1,
+      "open_attach_ns": 269215611,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 2762967,
+      "connections": 3,
+      "ef": 8192,
+      "filter": 743,
+      "open_attach_ns": 313509234,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 4118788,
+      "connections": 3,
+      "ef": 8192,
+      "filter": 527,
+      "open_attach_ns": 301913889,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3268406,
+      "connections": 3,
+      "ef": 8192,
+      "filter": 310,
+      "open_attach_ns": 268242674,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3838133,
+      "connections": 3,
+      "ef": 8192,
+      "filter": 192,
+      "open_attach_ns": 322287336,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3328695,
+      "connections": 3,
+      "ef": 8192,
+      "filter": 108,
+      "open_attach_ns": 276804502,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 3884620,
+      "connections": 3,
+      "ef": 8192,
+      "filter": 32,
+      "open_attach_ns": 294651348,
+      "phase": "quality"
+    },
+    {
+      "close_ns": 7544284,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 0,
+      "filter": -1,
+      "open_attach_ns": 394168763,
+      "phase": "timing",
+      "warmup_ns": 1484557725,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4309141,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 0,
+      "filter": 743,
+      "open_attach_ns": 363904727,
+      "phase": "timing",
+      "warmup_ns": 2432362231,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6932707,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 0,
+      "filter": 527,
+      "open_attach_ns": 482475666,
+      "phase": "timing",
+      "warmup_ns": 2221167431,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7630166,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 0,
+      "filter": 310,
+      "open_attach_ns": 408946988,
+      "phase": "timing",
+      "warmup_ns": 1854312671,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 8547109,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 0,
+      "filter": 192,
+      "open_attach_ns": 363055154,
+      "phase": "timing",
+      "warmup_ns": 1399342623,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6251578,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 0,
+      "filter": 108,
+      "open_attach_ns": 407472720,
+      "phase": "timing",
+      "warmup_ns": 1410027398,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5427041,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 0,
+      "filter": 32,
+      "open_attach_ns": 416045722,
+      "phase": "timing",
+      "warmup_ns": 1485590005,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 9420013,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 0,
+      "filter": 743,
+      "open_attach_ns": 367922287,
+      "phase": "timing",
+      "warmup_ns": 2660878566,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6314218,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 0,
+      "filter": 527,
+      "open_attach_ns": 403602150,
+      "phase": "timing",
+      "warmup_ns": 2575061963,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4434705,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 0,
+      "filter": 310,
+      "open_attach_ns": 398156949,
+      "phase": "timing",
+      "warmup_ns": 1941106071,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6149990,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 0,
+      "filter": 192,
+      "open_attach_ns": 414120393,
+      "phase": "timing",
+      "warmup_ns": 1814455076,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6339759,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 0,
+      "filter": 108,
+      "open_attach_ns": 381865756,
+      "phase": "timing",
+      "warmup_ns": 1831616094,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5232979,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 0,
+      "filter": 32,
+      "open_attach_ns": 398302479,
+      "phase": "timing",
+      "warmup_ns": 1869723805,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5310807,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 0,
+      "filter": -1,
+      "open_attach_ns": 398413000,
+      "phase": "timing",
+      "warmup_ns": 1941083569,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 10123866,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 0,
+      "filter": 527,
+      "open_attach_ns": 390221287,
+      "phase": "timing",
+      "warmup_ns": 3493228375,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6931352,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 0,
+      "filter": 310,
+      "open_attach_ns": 425993076,
+      "phase": "timing",
+      "warmup_ns": 3385153145,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7125407,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 0,
+      "filter": 192,
+      "open_attach_ns": 388133960,
+      "phase": "timing",
+      "warmup_ns": 3338048649,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4309804,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 0,
+      "filter": 108,
+      "open_attach_ns": 360274490,
+      "phase": "timing",
+      "warmup_ns": 3249503411,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5245641,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 0,
+      "filter": 32,
+      "open_attach_ns": 373259095,
+      "phase": "timing",
+      "warmup_ns": 3144756661,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5471301,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 0,
+      "filter": -1,
+      "open_attach_ns": 395561259,
+      "phase": "timing",
+      "warmup_ns": 3244674594,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7752218,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 0,
+      "filter": 743,
+      "open_attach_ns": 436823482,
+      "phase": "timing",
+      "warmup_ns": 3601323708,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7326908,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 0,
+      "filter": 310,
+      "open_attach_ns": 384421354,
+      "phase": "timing",
+      "warmup_ns": 5225156851,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 9418085,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 0,
+      "filter": 192,
+      "open_attach_ns": 378783548,
+      "phase": "timing",
+      "warmup_ns": 5415055998,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 8607664,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 0,
+      "filter": 108,
+      "open_attach_ns": 478471195,
+      "phase": "timing",
+      "warmup_ns": 5618097511,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5639467,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 0,
+      "filter": 32,
+      "open_attach_ns": 411088808,
+      "phase": "timing",
+      "warmup_ns": 4181970603,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 8272752,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 0,
+      "filter": -1,
+      "open_attach_ns": 512979854,
+      "phase": "timing",
+      "warmup_ns": 4161376986,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7283544,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 0,
+      "filter": 743,
+      "open_attach_ns": 379776557,
+      "phase": "timing",
+      "warmup_ns": 4109957895,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4546693,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 0,
+      "filter": 527,
+      "open_attach_ns": 397574652,
+      "phase": "timing",
+      "warmup_ns": 4075252710,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 9283530,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 0,
+      "filter": 192,
+      "open_attach_ns": 413510817,
+      "phase": "timing",
+      "warmup_ns": 7205776691,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5538345,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 0,
+      "filter": 108,
+      "open_attach_ns": 514903408,
+      "phase": "timing",
+      "warmup_ns": 6581256465,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5777876,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 0,
+      "filter": 32,
+      "open_attach_ns": 405814064,
+      "phase": "timing",
+      "warmup_ns": 6406823795,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 8099647,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 0,
+      "filter": -1,
+      "open_attach_ns": 438483223,
+      "phase": "timing",
+      "warmup_ns": 6478304514,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5177931,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 0,
+      "filter": 743,
+      "open_attach_ns": 423821151,
+      "phase": "timing",
+      "warmup_ns": 7613526000,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6196542,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 0,
+      "filter": 527,
+      "open_attach_ns": 390165854,
+      "phase": "timing",
+      "warmup_ns": 7771271301,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6392114,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 0,
+      "filter": 310,
+      "open_attach_ns": 377869177,
+      "phase": "timing",
+      "warmup_ns": 6911408935,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5811372,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 1,
+      "filter": 108,
+      "open_attach_ns": 372415444,
+      "phase": "timing",
+      "warmup_ns": 6917526116,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5573178,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 1,
+      "filter": 32,
+      "open_attach_ns": 381884019,
+      "phase": "timing",
+      "warmup_ns": 6928575405,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6325610,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 1,
+      "filter": -1,
+      "open_attach_ns": 407722719,
+      "phase": "timing",
+      "warmup_ns": 6957357108,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 9552600,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 1,
+      "filter": 743,
+      "open_attach_ns": 404019862,
+      "phase": "timing",
+      "warmup_ns": 6907677475,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6935599,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 1,
+      "filter": 527,
+      "open_attach_ns": 410101915,
+      "phase": "timing",
+      "warmup_ns": 6861749710,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7944651,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 1,
+      "filter": 310,
+      "open_attach_ns": 391370324,
+      "phase": "timing",
+      "warmup_ns": 6834532592,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7940658,
+      "connections": 5,
+      "ef": 8192,
+      "epoch": 1,
+      "filter": 192,
+      "open_attach_ns": 366452887,
+      "phase": "timing",
+      "warmup_ns": 6869769561,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7621823,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 1,
+      "filter": 192,
+      "open_attach_ns": 384036205,
+      "phase": "timing",
+      "warmup_ns": 4024834156,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 8098478,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 1,
+      "filter": 108,
+      "open_attach_ns": 451620372,
+      "phase": "timing",
+      "warmup_ns": 4023889930,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 8308710,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 1,
+      "filter": 32,
+      "open_attach_ns": 394602628,
+      "phase": "timing",
+      "warmup_ns": 4040216516,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 9606626,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 1,
+      "filter": -1,
+      "open_attach_ns": 402724886,
+      "phase": "timing",
+      "warmup_ns": 4069563967,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7395911,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 1,
+      "filter": 743,
+      "open_attach_ns": 522070340,
+      "phase": "timing",
+      "warmup_ns": 4194648226,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4727962,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 1,
+      "filter": 527,
+      "open_attach_ns": 473551513,
+      "phase": "timing",
+      "warmup_ns": 4133285086,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7175408,
+      "connections": 5,
+      "ef": 4096,
+      "epoch": 1,
+      "filter": 310,
+      "open_attach_ns": 414704912,
+      "phase": "timing",
+      "warmup_ns": 4101830313,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7015583,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 1,
+      "filter": 310,
+      "open_attach_ns": 375639490,
+      "phase": "timing",
+      "warmup_ns": 2277027512,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4592564,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 1,
+      "filter": 192,
+      "open_attach_ns": 380821129,
+      "phase": "timing",
+      "warmup_ns": 2276610237,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 3696346,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 1,
+      "filter": 108,
+      "open_attach_ns": 419508027,
+      "phase": "timing",
+      "warmup_ns": 2274533687,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4840123,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 1,
+      "filter": 32,
+      "open_attach_ns": 399559696,
+      "phase": "timing",
+      "warmup_ns": 2339955128,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6821213,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 1,
+      "filter": -1,
+      "open_attach_ns": 377424431,
+      "phase": "timing",
+      "warmup_ns": 2274939253,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7369900,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 1,
+      "filter": 743,
+      "open_attach_ns": 395678030,
+      "phase": "timing",
+      "warmup_ns": 2464017093,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7303465,
+      "connections": 5,
+      "ef": 2048,
+      "epoch": 1,
+      "filter": 527,
+      "open_attach_ns": 455456155,
+      "phase": "timing",
+      "warmup_ns": 2353950174,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5793906,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 1,
+      "filter": 527,
+      "open_attach_ns": 418135530,
+      "phase": "timing",
+      "warmup_ns": 1645497277,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5856976,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 1,
+      "filter": 310,
+      "open_attach_ns": 396154457,
+      "phase": "timing",
+      "warmup_ns": 1399088166,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7194496,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 1,
+      "filter": 192,
+      "open_attach_ns": 384977148,
+      "phase": "timing",
+      "warmup_ns": 1415049065,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6158493,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 1,
+      "filter": 108,
+      "open_attach_ns": 384555302,
+      "phase": "timing",
+      "warmup_ns": 1389167751,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 4375751,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 1,
+      "filter": 32,
+      "open_attach_ns": 389325451,
+      "phase": "timing",
+      "warmup_ns": 1502664252,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6416452,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 1,
+      "filter": -1,
+      "open_attach_ns": 472902446,
+      "phase": "timing",
+      "warmup_ns": 1519231137,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6661081,
+      "connections": 5,
+      "ef": 1000,
+      "epoch": 1,
+      "filter": 743,
+      "open_attach_ns": 484874397,
+      "phase": "timing",
+      "warmup_ns": 2317031200,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 8094223,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 1,
+      "filter": 743,
+      "open_attach_ns": 401185021,
+      "phase": "timing",
+      "warmup_ns": 1709882225,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5483512,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 1,
+      "filter": 527,
+      "open_attach_ns": 383218158,
+      "phase": "timing",
+      "warmup_ns": 1656566104,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 7361738,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 1,
+      "filter": 310,
+      "open_attach_ns": 497077963,
+      "phase": "timing",
+      "warmup_ns": 1096154055,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 3901561,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 1,
+      "filter": 192,
+      "open_attach_ns": 421349572,
+      "phase": "timing",
+      "warmup_ns": 1085054476,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6297787,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 1,
+      "filter": 108,
+      "open_attach_ns": 393637559,
+      "phase": "timing",
+      "warmup_ns": 1066904327,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 5064535,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 1,
+      "filter": 32,
+      "open_attach_ns": 418434529,
+      "phase": "timing",
+      "warmup_ns": 1074921276,
+      "warmup_requests": 40
+    },
+    {
+      "close_ns": 6076625,
+      "connections": 5,
+      "ef": 640,
+      "epoch": 1,
+      "filter": -1,
+      "open_attach_ns": 410228219,
+      "phase": "timing",
+      "warmup_ns": 1048164488,
+      "warmup_requests": 40
+    }
+  ],
+  "status": "selected",
+  "timing_claim": "development selection on one allocation, not confirmatory causal inference",
+  "validation_test_queries": 0
+}

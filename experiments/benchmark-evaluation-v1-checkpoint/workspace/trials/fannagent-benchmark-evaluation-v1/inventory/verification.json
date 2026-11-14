@@ -1,0 +1,8 @@
+{
+  "catalog_rows": 7000,
+  "unique_groups": 1000,
+  "per_group_roles_and_filters": "passed",
+  "assignments_and_counts": "passed",
+  "scan_errors": 0,
+  "source_id_mapping": "passed"
+}

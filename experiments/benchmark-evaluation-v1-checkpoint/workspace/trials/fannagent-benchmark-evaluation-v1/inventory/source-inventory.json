@@ -1,0 +1,333 @@
+{
+  "dimension": 768,
+  "errors": [],
+  "filters": [
+    "No_filter",
+    "total_votes >= 743.0",
+    "total_votes >= 527.0",
+    "total_votes >= 310.0",
+    "total_votes >= 192.0",
+    "total_votes >= 108.0",
+    "total_votes >= 32.0"
+  ],
+  "ground_truth": "Shapes/dtypes only; distances and rids outcomes not loaded",
+  "groups": 1000,
+  "jsonl_files_scanned": 662,
+  "matching": "float32 exact, normalized float32 exact, otherwise unique max-coordinate difference <=2e-7",
+  "metric": "cosine (retained runtime; source distance semantics require Phase 2 verification)",
+  "sources": [
+    {
+      "bytes": 1483561832,
+      "datasets": {
+        "train_likeshare": {
+          "dtype": "float64",
+          "shape": [
+            247286
+          ]
+        },
+        "train_mid": {
+          "dtype": "object",
+          "shape": [
+            247286
+          ]
+        },
+        "train_movierating": {
+          "dtype": "float64",
+          "shape": [
+            247286
+          ]
+        },
+        "train_quality": {
+          "dtype": "object",
+          "shape": [
+            247286
+          ]
+        },
+        "train_rid": {
+          "dtype": "object",
+          "shape": [
+            247286
+          ]
+        },
+        "train_rvector": {
+          "dtype": "float64",
+          "shape": [
+            247286,
+            768
+          ]
+        },
+        "train_total_votes": {
+          "dtype": "int64",
+          "shape": [
+            247286
+          ]
+        },
+        "train_uid": {
+          "dtype": "object",
+          "shape": [
+            247286
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/datasets/reviews_dataset_0.hdf5",
+      "sha256": "ff5f16995237b54b17ec92cf8022080177ba7d04e82f7277f37eeb93daae4768"
+    },
+    {
+      "bytes": 6312,
+      "datasets": {
+        "filters": {
+          "dtype": "object",
+          "shape": [
+            7
+          ]
+        },
+        "selectivities": {
+          "dtype": "float64",
+          "shape": [
+            7
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/filters/reviews_filters_0.hdf5",
+      "sha256": "c4455e5314b97d58ef1b7cba2304e83fd7ef4359982e955bccb4041e3dae36d2"
+    },
+    {
+      "bytes": 9296159,
+      "datasets": {
+        "distances": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "rid": {
+          "dtype": "object",
+          "shape": [
+            1000
+          ]
+        },
+        "rids": {
+          "dtype": "object",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "test": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            768
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/queries/queries_flex_reviews_sim_0_0.hdf5",
+      "sha256": "5ca5d0ac83e9431221770bef15fb86369974def2fa27eac37792efcfb1f856f8"
+    },
+    {
+      "bytes": 9329227,
+      "datasets": {
+        "distances": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "rid": {
+          "dtype": "object",
+          "shape": [
+            1000
+          ]
+        },
+        "rids": {
+          "dtype": "object",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "test": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            768
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/queries/queries_flex_reviews_sim_0_1.hdf5",
+      "sha256": "ccfa487102a16fad614bcc88250c24868ac832d6af800ee2743a84f4a5529764"
+    },
+    {
+      "bytes": 9324561,
+      "datasets": {
+        "distances": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "rid": {
+          "dtype": "object",
+          "shape": [
+            1000
+          ]
+        },
+        "rids": {
+          "dtype": "object",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "test": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            768
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/queries/queries_flex_reviews_sim_0_2.hdf5",
+      "sha256": "f30239d4364ff4fa7bfefea784cbbc0b2f7c7065f9661e538c2744e0021039e1"
+    },
+    {
+      "bytes": 9319261,
+      "datasets": {
+        "distances": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "rid": {
+          "dtype": "object",
+          "shape": [
+            1000
+          ]
+        },
+        "rids": {
+          "dtype": "object",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "test": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            768
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/queries/queries_flex_reviews_sim_0_3.hdf5",
+      "sha256": "336ea80cb912c9ee95a8451dd24e793e1f160f42806b0a3fbe00b5fb840be3d0"
+    },
+    {
+      "bytes": 9315301,
+      "datasets": {
+        "distances": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "rid": {
+          "dtype": "object",
+          "shape": [
+            1000
+          ]
+        },
+        "rids": {
+          "dtype": "object",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "test": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            768
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/queries/queries_flex_reviews_sim_0_4.hdf5",
+      "sha256": "fb9a20600e5daec8033d4a7a4c53149753b8da110884096192c672578ae794d0"
+    },
+    {
+      "bytes": 9310583,
+      "datasets": {
+        "distances": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "rid": {
+          "dtype": "object",
+          "shape": [
+            1000
+          ]
+        },
+        "rids": {
+          "dtype": "object",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "test": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            768
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/queries/queries_flex_reviews_sim_0_5.hdf5",
+      "sha256": "d873e9aac6b8a00af2838c83e9f8c741740a83696a87c71eaed4aad77a0999c9"
+    },
+    {
+      "bytes": 9303084,
+      "datasets": {
+        "distances": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "rid": {
+          "dtype": "object",
+          "shape": [
+            1000
+          ]
+        },
+        "rids": {
+          "dtype": "object",
+          "shape": [
+            1000,
+            100
+          ]
+        },
+        "test": {
+          "dtype": "float64",
+          "shape": [
+            1000,
+            768
+          ]
+        }
+      },
+      "path": "harness/downloads/morevec/MoRe_small/queries/queries_flex_reviews_sim_0_6.hdf5",
+      "sha256": "4e318fa15be0f02c6d04375d3d73aabc9567729800e684c9964815b5335c66e5"
+    }
+  ]
+}

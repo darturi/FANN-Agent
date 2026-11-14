@@ -1,0 +1,22 @@
+{
+  "status": "all_three_live_qualified_development_nominee_only",
+  "job_id": "22928562",
+  "scheduler_gate": "passed_user_reported_COMPLETED_0:0",
+  "all_six_filters_retained": true,
+  "development_groups": 450,
+  "qualified_agent_programs": 3,
+  "development_nominee": "broad_c_fixed",
+  "nominee_selection_rule": "lowest observed equal-six-filter complete-request mean; no other policy within1%",
+  "nominee_scalar_ratio": 0.9680508740214364,
+  "headline_practical_success_established": false,
+  "timing_limit": "single development allocation; broad A/B point imbalance at votes108/32; observed reduction3.19% below5% target",
+  "final_policy_selected": false,
+  "validation_test_outcomes_opened": false,
+  "next_step": "Prepare and seal complete comparator/three-agent pool and schedule for one bounded validation batch. Do not open holdouts yet.",
+  "qualification_verification_sha256": "4de94dfc293d7a60548a64361bffd37347b85debb7a8df4369be7fedc95409db",
+  "assessment_sha256": "e247d21e7b0443237a28c9a7c6bb9f0eb1e6cdb57eca418a1a76e10522ae4b5e",
+  "scheduler_evidence_sha256": "cc2bc36307aa1ae0a8497225665b7f1f9e55d660a83ad5722131297cc7cc73f2",
+  "receipt_sha256": "bc4b608599e23b6a3c3a3f113a5a83bc9f2f649389cbbb82c4876a5d485f79c2",
+  "report_sha256": "6fa2113024b813ca91fef2087bddfcf58c111304ba673566bd0f0df9048ead2a",
+  "assessment_code_sha256": "1fb4b85fdd473b76587a17338bfe8c5b9810fad0f91fa36f78b807b87c08bf95"
+}

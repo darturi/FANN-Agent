@@ -1,0 +1,29 @@
+{
+  "baseline_note": "lower efforts require development qualification/measurement; no claim that selected parent is globally fastest native tuning",
+  "future_baseline_grid": [
+    40,
+    80,
+    160,
+    320,
+    640,
+    1000,
+    2048,
+    4096,
+    8192
+  ],
+  "guard": "exact replacement if ANN returns fewer than min(k,eligible_count)",
+  "guard_source_sha256": "e5e3010ebf3d1ba90db28e4bfb09604f28e0c43241aa211502a7c64b61a91251",
+  "local_verification_sha256": "c79a1f7676e0ecb3bd8a601fac3eeda76806219c8b1f130013d3062b5847446f",
+  "module_sha256": "78c4e3baf183fc9b1746b771563ac21268bf1822b47f8ec032f23323e6532792",
+  "native_guard_mean_scalar_ms": 18.872299151851852,
+  "provider_calls": 0,
+  "receipt_sha256": "b30033f4f275cdc28dbe70aa28a21167c5f01e4131df4d4e5b7a194acb7af557",
+  "runtime_qualification": "passed",
+  "scheduler_evidence_sha256": "ac65b43888e1d74ddd830b38ccadcbed584d4da412d038ef4aff5a6f0e77bf77",
+  "scheduler_gate": "passed",
+  "schema": "reviews-guarded-parent-freeze.v1",
+  "selected_parent_ef_search": 640,
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "validation_test_outcomes_opened": false,
+  "verified_job_id": "22684501"
+}

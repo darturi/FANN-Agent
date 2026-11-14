@@ -1,0 +1,6 @@
+{
+  "inherited_start_function_sha256": "81a6776a25b46c4b6121779cb6429c13c88dbcfbc462f6fc63331e8f9951ff15",
+  "max_connections": 32,
+  "only_postgres_setting_change": "max_connections16->32",
+  "scope": "private copied restore only; inherited files unchanged"
+}

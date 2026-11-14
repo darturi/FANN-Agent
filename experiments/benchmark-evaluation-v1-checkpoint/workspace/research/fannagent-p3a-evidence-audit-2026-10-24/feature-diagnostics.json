@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "different_complete_recall_preservation_labels": 359,
+    "filtered_vector_pairs": 200,
+    "identical_light19_filtered_trajectory_pairs": 200,
+    "paired_measured_grid_states": 1565,
+    "vectors_with_any_different_complete_recall_preservation_label": 139
+  },
+  "interpretation": "Light19 aliases the two filtered trajectories. Static23/progress34 have validated actual query_predicate_threshold as qualified runtime input; learner must not substitute group/query ID or evaluator stratum. Composite routing remains a separate actual-predicate boundary. Dynamic progress observations are recorded but predictive value is untested.",
+  "new_fits_simulations_or_measurements": 0,
+  "target_definition": "Complete top-10 with recall at least this query native recall; descriptive per-state label, not final policy acceptance.",
+  "version": "p3a-feature-alias-diagnostics.v1"
+}

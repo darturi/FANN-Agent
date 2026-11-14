@@ -1,0 +1,10 @@
+{
+  "agent_dispatch": "not started; usage reconciliation and original-graph qualification required",
+  "config_sha256": "9471e6e62f801b41aedd66a9a83286e5e95887a3c5106ef8dd0e21170e670bd4",
+  "protocol_sha256": "418b779beaa20650951904647e76e1f46b76e5fc92450e8f74a54ac0386b35be",
+  "qualification_archive_sha256": "25bb60a12cfc3f3a762d42074b04ffd78597a5953391e155217e2085b25fa0de",
+  "qualification_module_sha256": "2383b3faa99d199c631d3f3787e7ef1ebe067af982f5cba850d3de7208337da8",
+  "runtime_status": "local synthetic smoke passed; original-graph Torch return pending",
+  "schema": "reviews-clean-study-protocol-freeze.v1",
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0"
+}

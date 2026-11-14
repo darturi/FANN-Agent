@@ -1,0 +1,17 @@
+{
+  "development_export_only": true,
+  "development_queries": 3150,
+  "evidence_hashes": "passed",
+  "freeze_sha256": "67cc8821422931c2177c04346fed210f4c7890fe23f3b626fcecd6803de962cd",
+  "idempotent_split_and_export": "passed",
+  "per_group_filters_and_vectors": "passed",
+  "python_syntax": "passed",
+  "role_counts": {
+    "development": 450,
+    "excluded_historical": 125,
+    "test": 275,
+    "validation": 150
+  },
+  "role_file_hashes": "passed",
+  "split_seal": "passed"
+}

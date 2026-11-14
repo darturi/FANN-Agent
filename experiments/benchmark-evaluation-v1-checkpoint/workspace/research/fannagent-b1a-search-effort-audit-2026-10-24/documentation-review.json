@@ -1,0 +1,20 @@
+{
+  "all_E1_through_E83_links_and_report_index_links_valid": true,
+  "code_source_files_unchanged": 324,
+  "consulted_reference_files_unchanged": 29,
+  "final_document_hashes": {
+    "agent/docs/experiments/README.md": "4790fa779d45ed3c4c49a07dbe8b91066573bcdc9e21d5ba2106d5f6f17bf4c8",
+    "agent/docs/verification/b1a-search-effort-audit-v1.json": "23b20ef84766584c89fff6da32654618ab4137f620d7393201f2368dd413d1f5",
+    "research/fannagent-b1a-search-effort-audit-2026-10-24.md": "b92e4d2e10f7657c8d84c3a542a0d7c47353de097baba24cef32a43aeb5a4228",
+    "research/fannagent-b1a-search-effort-audit-2026-10-24/audit.json": "268b830fdbd9189cf3393d254ee4da9199d46ab95c8be41d577efdde811cff7c",
+    "research/fannagent-b1a-search-effort-audit-2026-10-24/input-and-source-inventory.json": "938a2a6582bccc5565f9cfd18dcc625497034f6943a9400f5280431437b41ab1",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "5802031b04262b0a13585c1c9cc744fa408bb4fd735e3e1ea70aef9ab95e6252"
+  },
+  "historical_raw_input_hashes_match": 122,
+  "markdown_table_shapes_valid": true,
+  "prior_P3b_P3c_receipts_and_user_proposal_unchanged": true,
+  "reviewed_at_utc": "2026-10-25T00:43:48.013004+00:00",
+  "saved_historical_output_hashes_match": 6,
+  "status": "passed",
+  "zero_code_changes_tests_experiments_models_simulations_DB_provider_Torch_or_protected_access": true
+}

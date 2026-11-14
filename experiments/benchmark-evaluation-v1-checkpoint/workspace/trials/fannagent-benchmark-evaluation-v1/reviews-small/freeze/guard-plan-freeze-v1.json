@@ -1,0 +1,13 @@
+{
+  "agent_dispatch": "not started; usage reconciliation and original-graph qualification required",
+  "config_sha256": "9471e6e62f801b41aedd66a9a83286e5e95887a3c5106ef8dd0e21170e670bd4",
+  "guard_plan_sha256": "9e2d37fd37432afd5aebce225d7a4f29bef425eb23e258d19e9f570756497d38",
+  "guard_source_sha256": "e5e3010ebf3d1ba90db28e4bfb09604f28e0c43241aa211502a7c64b61a91251",
+  "prior_job": "22635567",
+  "protocol_sha256": "418b779beaa20650951904647e76e1f46b76e5fc92450e8f74a54ac0386b35be",
+  "qualification_archive_sha256": "10109ccce18af22e0cad5ba8f1431286ce1917956898f438c7cf80fc01ba8cf6",
+  "qualification_module_sha256": "78c4e3baf183fc9b1746b771563ac21268bf1822b47f8ec032f23323e6532792",
+  "runtime_status": "native-only sweep negative; common guard smoke passed; original-graph guard qualification/timing pending",
+  "schema": "reviews-clean-study-protocol-freeze.v1",
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0"
+}

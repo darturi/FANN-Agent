@@ -1,0 +1,53 @@
+FIXED READER/CPU/WORK ATTRIBUTION — DEVELOPMENT ONLY
+Active kit: reader-attribution-v1.tar.gz
+All450 development groups, all six scalar filters plus unfiltered, native640/noop640/three unchanged policies; every backend runs every role twice.
+4 physical CPUs /48GiB /8-hour ceiling /750,000 ANN/exact attempt cap.
+Exact search is offline reference scoring ONLY: never a serving fallback.
+Short answers are returned unchanged and missing neighbors reduce recall.
+No providers, validation or test queries. Old jobs/results remain unchanged.
+
+MAC SFTP — paste into your working connection:
+
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1.tar.gz /home/dar579/reader-attribution-v1.tar.gz
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1.tar.gz.sha256 /home/dar579/reader-attribution-v1.tar.gz.sha256
+
+TORCH SSH — verify, stage and submit once:
+
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c reader-attribution-v1.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1
+tar -xzf reader-attribution-v1.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1
+bash submit.sh
+)
+
+The script prints the actual job ID after a scheduler dry run. Send that output
+to Codex. Do not submit again after an error; retain and collect its evidence.
+
+STATUS ON TORCH:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1
+job=$(cat job-id)
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+tail -n 15 "slurm-$job.out"
+tail -n 15 "slurm-$job.err"
+
+AFTER THE JOB FINISHES — print the two download commands on Torch:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1
+job=$(cat job-id)
+printf 'get %s/run-%s/qualification-%s.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz\n' "$PWD" "$job" "$job" "$job"
+printf 'get %s/run-%s/qualification-%s.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz.sha256\n' "$PWD" "$job" "$job" "$job"
+
+Paste those printed get commands into Mac SFTP. Collect failed returns too.
+Codex will reconstruct630,000 original-module timing records,14,000 warmups,
+15,750 quality results,15,750 separately instrumented work queries and6,300
+offline exact references. Total684,950 attempts; zero serving exact calls.
+All20 backend PIDs/filter must run every role twice on the declared CPUs.
+Instrumented times must never enter primary timing estimates. Preserve negative
+and inconclusive results; this is one fixed diagnostic, not an automatic rerun loop.
+Paste the final sacct output too: COMPLETED 0:0 is a separate completion gate.
+No validation/test outcomes or new provider calls are authorized by this kit.

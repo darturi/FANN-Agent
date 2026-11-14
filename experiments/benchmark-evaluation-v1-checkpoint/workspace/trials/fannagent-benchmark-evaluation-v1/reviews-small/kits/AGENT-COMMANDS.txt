@@ -1,0 +1,48 @@
+THREE COMPILED AGENT POLICIES — DEVELOPMENT QUALIFICATION AND TIMING
+Active kit: agent-policy-qualification-v1.tar.gz
+All450 development groups, all six scalar filters plus unfiltered, guarded native640 and three frozen compiled policies.
+4 physical CPUs /48GiB /8-hour ceiling /160,000 ANN/exact attempt cap.
+No providers, validation or test queries. Old jobs/results remain unchanged.
+
+MAC SFTP — paste into your working connection:
+
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/agent-policy-qualification-v1.tar.gz /home/dar579/agent-policy-qualification-v1.tar.gz
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/agent-policy-qualification-v1.tar.gz.sha256 /home/dar579/agent-policy-qualification-v1.tar.gz.sha256
+
+TORCH SSH — verify, stage and submit once:
+
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c agent-policy-qualification-v1.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/agent-policy-qualification-v1
+tar -xzf agent-policy-qualification-v1.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/agent-policy-qualification-v1
+bash submit.sh
+)
+
+The script prints the actual job ID after a scheduler dry run. Send that output
+to Codex. Do not submit again after an error; retain and collect its evidence.
+
+STATUS ON TORCH:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/agent-policy-qualification-v1
+job=$(cat job-id)
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+tail -n 15 "slurm-$job.out"
+tail -n 15 "slurm-$job.err"
+
+AFTER THE JOB FINISHES — print the two download commands on Torch:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/agent-policy-qualification-v1
+job=$(cat job-id)
+printf 'get %s/run-%s/qualification-%s.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz\n' "$PWD" "$job" "$job" "$job"
+printf 'get %s/run-%s/qualification-%s.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz.sha256\n' "$PWD" "$job" "$job" "$job"
+
+Paste those printed get commands into Mac SFTP. Collect failed returns too.
+Codex will reconstruct 3,150 qualification rows (9,450 compiled-policy cases),
+50,400 timed requests,1,120 warmups, live feature/first-stop/output parity,
+full serving costs, A/B diagnostics, resource integrity and attempt accounting.
+Paste the final sacct output too: COMPLETED 0:0 is a separate completion gate.
+No validation/test outcomes or new provider calls are authorized by this kit.

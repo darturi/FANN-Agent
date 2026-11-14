@@ -1,0 +1,117 @@
+{
+  "allowed_physical_cpus": 4,
+  "arms": {
+    "broad_c_fixed": 9,
+    "conservative_a": 7,
+    "moderate_b_fixed": 8,
+    "native640": null,
+    "noop640": 6
+  },
+  "backend_readers_per_filter": 20,
+  "blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "conditions": [
+    -1,
+    743,
+    527,
+    310,
+    192,
+    108,
+    32
+  ],
+  "exact_serving_calls": 0,
+  "families": [
+    "native640",
+    "noop640",
+    "conservative_a",
+    "moderate_b_fixed",
+    "broad_c_fixed"
+  ],
+  "groups": 450,
+  "instrumented_work_queries": 15750,
+  "memory_gib": 48,
+  "negative_disposition": "preserve valid negative/inconclusive result; if policy cost benefit is weak, revisit agent evidence/objective in separate authorized version without holdout feedback",
+  "offline_reference_exact_queries": 6300,
+  "parent_ef_search": 640,
+  "phase_attempts": {
+    "timing": 666050,
+    "work": 18900
+  },
+  "planned_attempts": 684950,
+  "provider_calls": 0,
+  "purpose": "bounded diagnostic, not performance promotion or model rescue",
+  "query_attempt_cap": 750000,
+  "repeats_per_role_backend": 2,
+  "roles_per_backend": 5,
+  "schedule_seed": "reviews-reader-cpu-attribution-v1",
+  "schema": "reader-cpu-work-attribution.v1",
+  "timed_requests": 630000,
+  "timing_module": "unchanged original module; zero added counters",
+  "timing_quality_searches": 15750,
+  "validation_test_queries": 0,
+  "wall_hours": 8,
+  "warmup_requests": 14000,
+  "williams_base": [
+    0,
+    1,
+    19,
+    2,
+    18,
+    3,
+    17,
+    4,
+    16,
+    5,
+    15,
+    6,
+    14,
+    7,
+    13,
+    8,
+    12,
+    9,
+    11,
+    10
+  ],
+  "work_module": "separate observation-only module; its times never enter performance estimates"
+}

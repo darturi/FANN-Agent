@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-09",
+  "status": "deterministic_verification_passed",
+  "mini_bench_completed_at": "2026-10-09T14:54:31Z",
+  "core_tests": {
+    "passed": 147,
+    "integration_deselected": 1,
+    "focused_guidance_cases": 27
+  },
+  "pgvector_tests": {
+    "passed": 33,
+    "integration_deselected": 8
+  },
+  "lint": "passed for changed core modules, tests, and pgvector startup test",
+  "sdk_typing": {
+    "status": "passed",
+    "modules": 17
+  },
+  "installed_wheel_acceptance": {
+    "guided": {
+      "status": "passed",
+      "core_wheel_sha256": "e36cb8585791f31868ed9325ee9e52e5e1984a049479c2c394658db1d4b8e136",
+      "environments": [
+        "core",
+        "pgvector",
+        "independent"
+      ],
+      "research_mode": "guided"
+    },
+    "baseline": {
+      "status": "passed",
+      "core_wheel_sha256": "e36cb8585791f31868ed9325ee9e52e5e1984a049479c2c394658db1d4b8e136",
+      "environments": [
+        "core",
+        "pgvector",
+        "independent"
+      ],
+      "research_mode": "baseline"
+    },
+    "protocol_only": {
+      "status": "passed",
+      "core_wheel_sha256": "e36cb8585791f31868ed9325ee9e52e5e1984a049479c2c394658db1d4b8e136",
+      "environments": [
+        "core",
+        "pgvector",
+        "independent"
+      ],
+      "research_mode": "protocol_only"
+    }
+  },
+  "packaged_resources": "verified in core wheel and source distribution",
+  "packages": {
+    "agent/dist/research-guidance/fannagent-0.2.0-py3-none-any.whl": {
+      "sha256": "e36cb8585791f31868ed9325ee9e52e5e1984a049479c2c394658db1d4b8e136",
+      "bytes": 95691
+    },
+    "agent/dist/research-guidance/fannagent-0.2.0.tar.gz": {
+      "sha256": "4901575a021c6698155e549f537f02b6cf1935a4e88615da8b487a405298bbd5",
+      "bytes": 214891
+    },
+    "agent-pgvector/dist/research-guidance/fannagent_pgvector-0.1.0-py3-none-any.whl": {
+      "sha256": "fbaff8a66fff7ba1368fe89f3fefaf5ea44952b1a7f71b834443157cdb067649",
+      "bytes": 84154
+    },
+    "agent-pgvector/dist/research-guidance/fannagent_pgvector-0.1.0.tar.gz": {
+      "sha256": "16910d2ae97c92d42a7effcd8b1abc1527fc17623d2f7a603c4d77aa2af81075",
+      "bytes": 181599
+    }
+  },
+  "providers": "scripted or mocked only; no paid provider calls",
+  "paid_claude_smoke_test": "deferred at user request",
+  "comparative_effectiveness": "not run; no improvement claim",
+  "limits": [
+    "Fake and independent final evaluations use simulated latency.",
+    "Pgvector native database integration and container integration were not rerun for this revision.",
+    "No native engine change, publication, deployment, or traffic cutover."
+  ]
+}

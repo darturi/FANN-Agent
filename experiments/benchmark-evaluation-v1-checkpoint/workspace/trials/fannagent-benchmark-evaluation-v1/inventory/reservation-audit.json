@@ -1,0 +1,2897 @@
+{
+  "broker_states": [
+    {
+      "artifact_kind_counts": [
+        [
+          "backend_inspection",
+          "development",
+          1
+        ],
+        [
+          "candidate_policy",
+          "development",
+          1
+        ],
+        [
+          "experiment_observation",
+          "development",
+          243
+        ],
+        [
+          "experiment_record",
+          "development",
+          2
+        ],
+        [
+          "extension:pgvector:sidecar_manifest",
+          "private",
+          1
+        ],
+        [
+          "feature_registry",
+          "development",
+          1
+        ],
+        [
+          "ledger",
+          "private",
+          1
+        ],
+        [
+          "model_response",
+          "private",
+          12
+        ],
+        [
+          "probe",
+          "development",
+          243
+        ],
+        [
+          "research_guidance",
+          "development",
+          1
+        ],
+        [
+          "research_snapshot",
+          "private",
+          1
+        ],
+        [
+          "study",
+          "private",
+          1
+        ],
+        [
+          "trajectory",
+          "private",
+          13
+        ]
+      ],
+      "group_role_counts": {
+        "calibration": 150,
+        "development": 450,
+        "test": 150
+      },
+      "path": "trials/morevec-reviews-bounded/studies/prepared-20261011T211529Z/run/state.sqlite3",
+      "protected_state_keys": [],
+      "sha256": "49a0655981effb769216e57de923f2a1aa87c1e0b176cacc500dcaa829b9f3d0"
+    },
+    {
+      "artifact_kind_counts": [],
+      "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T035156Z/run/state.sqlite3",
+      "protected_state_keys": [],
+      "sha256": "efc58abfd7a0f97bd3a7b8d9808341a91851101b3bc668231abcd94b0a2a1de4"
+    },
+    {
+      "artifact_kind_counts": [
+        [
+          "backend_inspection",
+          "development",
+          1
+        ],
+        [
+          "candidate_policy",
+          "development",
+          2
+        ],
+        [
+          "development_query_catalog",
+          "development",
+          1
+        ],
+        [
+          "development_screen",
+          "development",
+          48
+        ],
+        [
+          "experiment_observation",
+          "development",
+          97
+        ],
+        [
+          "experiment_record",
+          "development",
+          2
+        ],
+        [
+          "extension:pgvector:sidecar_manifest",
+          "private",
+          1
+        ],
+        [
+          "feature_registry",
+          "development",
+          1
+        ],
+        [
+          "ledger",
+          "private",
+          1
+        ],
+        [
+          "model_response",
+          "private",
+          7
+        ],
+        [
+          "probe",
+          "development",
+          47
+        ],
+        [
+          "report",
+          "private",
+          1
+        ],
+        [
+          "research_guidance",
+          "development",
+          1
+        ],
+        [
+          "research_snapshot",
+          "private",
+          1
+        ],
+        [
+          "study",
+          "private",
+          1
+        ],
+        [
+          "trajectory",
+          "private",
+          14
+        ]
+      ],
+      "group_role_counts": {
+        "calibration": 150,
+        "development": 450,
+        "test": 150
+      },
+      "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/state.sqlite3",
+      "protected_state_keys": [],
+      "sha256": "5732dbf534bed775c8f89a6265797e8d8256c9481cafaf50b1d6631fe71224da"
+    },
+    {
+      "artifact_kind_counts": [
+        [
+          "backend_inspection",
+          "development",
+          1
+        ],
+        [
+          "cached_real_stop_labels",
+          "private",
+          1350
+        ],
+        [
+          "development_labels",
+          "development",
+          1
+        ],
+        [
+          "development_measurements",
+          "development",
+          1
+        ],
+        [
+          "development_query_catalog",
+          "development",
+          1
+        ],
+        [
+          "experiment_observation",
+          "development",
+          296
+        ],
+        [
+          "experiment_record",
+          "development",
+          4
+        ],
+        [
+          "extension:pgvector:sidecar_manifest",
+          "private",
+          1
+        ],
+        [
+          "feature_registry",
+          "development",
+          1
+        ],
+        [
+          "ledger",
+          "private",
+          1
+        ],
+        [
+          "model_response",
+          "private",
+          12
+        ],
+        [
+          "probe",
+          "development",
+          295
+        ],
+        [
+          "report",
+          "private",
+          1
+        ],
+        [
+          "research_guidance",
+          "development",
+          1
+        ],
+        [
+          "research_snapshot",
+          "private",
+          1
+        ],
+        [
+          "study",
+          "private",
+          1
+        ],
+        [
+          "trajectory",
+          "private",
+          24
+        ]
+      ],
+      "group_role_counts": {
+        "calibration": 150,
+        "development": 450,
+        "test": 150
+      },
+      "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/state.sqlite3",
+      "protected_state_keys": [],
+      "sha256": "542e68f94a9ec360aed25d5be4ceed1ca2592e56cf5846476ab9fa029fe0f8ef"
+    }
+  ],
+  "canonical_protected_groups": [
+    127,
+    133,
+    134,
+    136,
+    140,
+    142,
+    143,
+    145,
+    148,
+    152,
+    156,
+    158,
+    163,
+    165,
+    168,
+    171,
+    173,
+    174,
+    182,
+    185,
+    191,
+    197,
+    199,
+    201,
+    203,
+    207,
+    208,
+    218,
+    221,
+    224,
+    229,
+    231,
+    232,
+    233,
+    237,
+    238,
+    239,
+    240,
+    248,
+    251,
+    252,
+    255,
+    257,
+    258,
+    259,
+    260,
+    263,
+    268,
+    270,
+    275,
+    282,
+    285,
+    291,
+    293,
+    296,
+    298,
+    299,
+    308,
+    309,
+    313,
+    317,
+    320,
+    323,
+    329,
+    332,
+    336,
+    337,
+    341,
+    342,
+    343,
+    344,
+    346,
+    353,
+    354,
+    359,
+    364,
+    366,
+    368,
+    370,
+    373,
+    375,
+    377,
+    384,
+    386,
+    391,
+    392,
+    393,
+    397,
+    402,
+    404,
+    414,
+    417,
+    419,
+    423,
+    425,
+    433,
+    435,
+    436,
+    437,
+    443,
+    448,
+    452,
+    454,
+    456,
+    463,
+    465,
+    466,
+    467,
+    469,
+    470,
+    472,
+    475,
+    477,
+    481,
+    482,
+    484,
+    485,
+    494,
+    496,
+    497,
+    501,
+    502,
+    503,
+    507,
+    508,
+    514,
+    515,
+    517,
+    518,
+    522,
+    526,
+    528,
+    529,
+    530,
+    540,
+    541,
+    542,
+    549,
+    554,
+    555,
+    558,
+    560,
+    564,
+    567,
+    568,
+    572,
+    575,
+    576,
+    580,
+    585,
+    586,
+    587,
+    590,
+    594,
+    595,
+    600,
+    602,
+    607,
+    609,
+    611,
+    613,
+    616,
+    617,
+    619,
+    623,
+    626,
+    636,
+    641,
+    642,
+    647,
+    651,
+    653,
+    660,
+    661,
+    662,
+    663,
+    664,
+    669,
+    685,
+    687,
+    690,
+    693,
+    695,
+    697,
+    698,
+    700,
+    704,
+    705,
+    706,
+    707,
+    708,
+    713,
+    716,
+    717,
+    719,
+    720,
+    721,
+    723,
+    725,
+    726,
+    727,
+    729,
+    735,
+    739,
+    744,
+    746,
+    747,
+    748,
+    749,
+    752,
+    753,
+    758,
+    760,
+    763,
+    764,
+    768,
+    769,
+    771,
+    775,
+    776,
+    777,
+    781,
+    783,
+    790,
+    793,
+    794,
+    795,
+    801,
+    803,
+    809,
+    814,
+    817,
+    821,
+    824,
+    829,
+    832,
+    834,
+    835,
+    837,
+    838,
+    843,
+    844,
+    845,
+    850,
+    852,
+    855,
+    856,
+    857,
+    858,
+    859,
+    861,
+    865,
+    866,
+    869,
+    870,
+    872,
+    873,
+    875,
+    879,
+    880,
+    885,
+    886,
+    888,
+    890,
+    891,
+    893,
+    897,
+    899,
+    906,
+    909,
+    911,
+    915,
+    919,
+    922,
+    923,
+    925,
+    931,
+    932,
+    938,
+    940,
+    945,
+    948,
+    949,
+    953,
+    956,
+    959,
+    961,
+    962,
+    964,
+    965,
+    967,
+    968,
+    971,
+    972,
+    977,
+    981,
+    986,
+    989,
+    990,
+    994
+  ],
+  "canonical_protected_groups_with_outcome_hits": [],
+  "disposition": "recover canonical protected groups only if no outcome hits; late reservations with outcomes stay development",
+  "distinct_contents_scanned": 99,
+  "execution_summary_checks": [
+    {
+      "fields": {
+        "held_out_test_consumed": false
+      },
+      "path": "trials/morevec-reviews-bounded/execution-20261012T003700Z/status.json"
+    },
+    {
+      "fields": {
+        "held_out_test_consumed": false
+      },
+      "path": "trials/morevec-reviews-bounded/execution-20261012T003900Z/status.json"
+    },
+    {
+      "fields": {
+        "calibrations": 0,
+        "held_out_test_consumed": false
+      },
+      "path": "trials/morevec-reviews-fixed-bounded/execution-20261012T015808Z/status.json"
+    },
+    {
+      "fields": {
+        "calibrations": 0,
+        "held_out_test_consumed": false
+      },
+      "path": "trials/morevec-reviews-durable-bounded/execution-20261012T053001Z/status.json"
+    },
+    {
+      "fields": {
+        "backend_searches": 0,
+        "calibration_executions": 0,
+        "final_test_executions": 0,
+        "held_out_queries_executed": 0
+      },
+      "path": "trials/morevec-reviews-overhead-predictor/run-20261013T133737Z/audit.json"
+    }
+  ],
+  "historical_assignments": {
+    "126": "development",
+    "127": "test",
+    "128": "development",
+    "129": "development",
+    "133": "calibration",
+    "134": "test",
+    "135": "development",
+    "136": "calibration",
+    "137": "development",
+    "139": "development",
+    "140": "test",
+    "141": "development",
+    "142": "calibration",
+    "143": "calibration",
+    "144": "development",
+    "145": "test",
+    "146": "development",
+    "147": "development",
+    "148": "calibration",
+    "149": "development",
+    "150": "development",
+    "151": "development",
+    "152": "calibration",
+    "153": "development",
+    "154": "development",
+    "156": "calibration",
+    "157": "development",
+    "158": "calibration",
+    "159": "development",
+    "160": "development",
+    "161": "development",
+    "162": "development",
+    "163": "calibration",
+    "164": "development",
+    "165": "test",
+    "166": "development",
+    "167": "development",
+    "168": "calibration",
+    "169": "development",
+    "171": "test",
+    "172": "development",
+    "173": "test",
+    "174": "test",
+    "175": "development",
+    "176": "development",
+    "178": "development",
+    "179": "development",
+    "180": "development",
+    "181": "development",
+    "182": "test",
+    "183": "development",
+    "184": "development",
+    "185": "test",
+    "187": "development",
+    "188": "development",
+    "189": "development",
+    "190": "development",
+    "191": "test",
+    "192": "development",
+    "193": "development",
+    "194": "development",
+    "196": "development",
+    "197": "calibration",
+    "199": "test",
+    "200": "development",
+    "201": "test",
+    "202": "development",
+    "203": "calibration",
+    "204": "development",
+    "207": "test",
+    "208": "calibration",
+    "209": "development",
+    "210": "development",
+    "212": "development",
+    "215": "development",
+    "216": "development",
+    "218": "test",
+    "219": "development",
+    "221": "calibration",
+    "222": "development",
+    "223": "development",
+    "224": "test",
+    "225": "development",
+    "226": "development",
+    "227": "development",
+    "229": "calibration",
+    "230": "development",
+    "231": "test",
+    "232": "calibration",
+    "233": "calibration",
+    "234": "development",
+    "236": "development",
+    "237": "calibration",
+    "238": "calibration",
+    "239": "calibration",
+    "240": "calibration",
+    "241": "development",
+    "242": "development",
+    "243": "development",
+    "244": "development",
+    "246": "development",
+    "247": "development",
+    "248": "test",
+    "249": "development",
+    "250": "development",
+    "251": "test",
+    "252": "test",
+    "253": "development",
+    "254": "development",
+    "255": "calibration",
+    "256": "development",
+    "257": "test",
+    "258": "calibration",
+    "259": "test",
+    "260": "test",
+    "261": "development",
+    "262": "development",
+    "263": "test",
+    "264": "development",
+    "265": "development",
+    "266": "development",
+    "267": "development",
+    "268": "test",
+    "270": "test",
+    "272": "development",
+    "273": "development",
+    "274": "development",
+    "275": "calibration",
+    "276": "development",
+    "277": "development",
+    "278": "development",
+    "279": "development",
+    "280": "development",
+    "281": "development",
+    "282": "calibration",
+    "283": "development",
+    "284": "development",
+    "285": "test",
+    "286": "development",
+    "288": "development",
+    "289": "development",
+    "291": "test",
+    "292": "development",
+    "293": "calibration",
+    "294": "development",
+    "295": "development",
+    "296": "calibration",
+    "297": "development",
+    "298": "calibration",
+    "299": "calibration",
+    "300": "development",
+    "301": "development",
+    "302": "development",
+    "303": "development",
+    "304": "development",
+    "305": "development",
+    "306": "development",
+    "308": "calibration",
+    "309": "calibration",
+    "310": "development",
+    "312": "development",
+    "313": "calibration",
+    "314": "development",
+    "315": "development",
+    "316": "development",
+    "317": "calibration",
+    "319": "development",
+    "320": "test",
+    "321": "development",
+    "322": "development",
+    "323": "test",
+    "324": "development",
+    "325": "development",
+    "326": "development",
+    "328": "development",
+    "329": "calibration",
+    "330": "development",
+    "332": "test",
+    "333": "development",
+    "334": "development",
+    "335": "development",
+    "336": "calibration",
+    "337": "test",
+    "338": "development",
+    "339": "development",
+    "340": "development",
+    "341": "calibration",
+    "342": "test",
+    "343": "test",
+    "344": "test",
+    "346": "test",
+    "347": "development",
+    "349": "development",
+    "350": "development",
+    "351": "development",
+    "353": "test",
+    "354": "calibration",
+    "355": "development",
+    "356": "development",
+    "357": "development",
+    "358": "development",
+    "359": "calibration",
+    "360": "development",
+    "361": "development",
+    "363": "development",
+    "364": "calibration",
+    "365": "development",
+    "366": "calibration",
+    "367": "development",
+    "368": "calibration",
+    "370": "calibration",
+    "372": "development",
+    "373": "test",
+    "374": "development",
+    "375": "calibration",
+    "376": "development",
+    "377": "calibration",
+    "378": "development",
+    "379": "development",
+    "380": "development",
+    "381": "development",
+    "384": "test",
+    "385": "development",
+    "386": "calibration",
+    "388": "development",
+    "389": "development",
+    "390": "development",
+    "391": "test",
+    "392": "calibration",
+    "393": "calibration",
+    "394": "development",
+    "395": "development",
+    "396": "development",
+    "397": "calibration",
+    "398": "development",
+    "399": "development",
+    "400": "development",
+    "401": "development",
+    "402": "calibration",
+    "403": "development",
+    "404": "calibration",
+    "405": "development",
+    "407": "development",
+    "410": "development",
+    "411": "development",
+    "412": "development",
+    "413": "development",
+    "414": "calibration",
+    "416": "development",
+    "417": "calibration",
+    "418": "development",
+    "419": "calibration",
+    "420": "development",
+    "421": "development",
+    "422": "development",
+    "423": "calibration",
+    "424": "development",
+    "425": "calibration",
+    "426": "development",
+    "427": "development",
+    "429": "development",
+    "431": "development",
+    "432": "development",
+    "433": "calibration",
+    "434": "development",
+    "435": "calibration",
+    "436": "test",
+    "437": "test",
+    "438": "development",
+    "439": "development",
+    "443": "calibration",
+    "447": "development",
+    "448": "test",
+    "450": "development",
+    "451": "development",
+    "452": "test",
+    "453": "development",
+    "454": "test",
+    "455": "development",
+    "456": "test",
+    "457": "development",
+    "458": "development",
+    "459": "development",
+    "460": "development",
+    "462": "development",
+    "463": "calibration",
+    "465": "test",
+    "466": "test",
+    "467": "calibration",
+    "468": "development",
+    "469": "test",
+    "470": "calibration",
+    "472": "calibration",
+    "474": "development",
+    "475": "calibration",
+    "476": "development",
+    "477": "test",
+    "478": "development",
+    "479": "development",
+    "480": "development",
+    "481": "test",
+    "482": "test",
+    "483": "development",
+    "484": "test",
+    "485": "calibration",
+    "486": "development",
+    "488": "development",
+    "489": "development",
+    "490": "development",
+    "491": "development",
+    "492": "development",
+    "494": "test",
+    "495": "development",
+    "496": "test",
+    "497": "test",
+    "500": "development",
+    "501": "calibration",
+    "502": "test",
+    "503": "calibration",
+    "504": "development",
+    "505": "development",
+    "506": "development",
+    "507": "calibration",
+    "508": "calibration",
+    "509": "development",
+    "510": "development",
+    "511": "development",
+    "512": "development",
+    "513": "development",
+    "514": "test",
+    "515": "calibration",
+    "516": "development",
+    "517": "test",
+    "518": "test",
+    "521": "development",
+    "522": "calibration",
+    "523": "development",
+    "524": "development",
+    "525": "development",
+    "526": "test",
+    "528": "calibration",
+    "529": "calibration",
+    "530": "test",
+    "531": "development",
+    "532": "development",
+    "537": "development",
+    "539": "development",
+    "540": "test",
+    "541": "calibration",
+    "542": "test",
+    "543": "development",
+    "544": "development",
+    "547": "development",
+    "548": "development",
+    "549": "calibration",
+    "550": "development",
+    "552": "development",
+    "553": "development",
+    "554": "calibration",
+    "555": "test",
+    "556": "development",
+    "557": "development",
+    "558": "calibration",
+    "559": "development",
+    "560": "test",
+    "562": "development",
+    "564": "test",
+    "565": "development",
+    "566": "development",
+    "567": "test",
+    "568": "test",
+    "571": "development",
+    "572": "test",
+    "573": "development",
+    "574": "development",
+    "575": "test",
+    "576": "calibration",
+    "578": "development",
+    "579": "development",
+    "580": "calibration",
+    "581": "development",
+    "582": "development",
+    "583": "development",
+    "584": "development",
+    "585": "test",
+    "586": "test",
+    "587": "test",
+    "588": "development",
+    "589": "development",
+    "590": "calibration",
+    "591": "development",
+    "594": "calibration",
+    "595": "calibration",
+    "596": "development",
+    "597": "development",
+    "599": "development",
+    "600": "test",
+    "602": "calibration",
+    "604": "development",
+    "605": "development",
+    "606": "development",
+    "607": "calibration",
+    "608": "development",
+    "609": "test",
+    "610": "development",
+    "611": "calibration",
+    "612": "development",
+    "613": "calibration",
+    "614": "development",
+    "615": "development",
+    "616": "test",
+    "617": "calibration",
+    "619": "calibration",
+    "620": "development",
+    "621": "development",
+    "622": "development",
+    "623": "test",
+    "624": "development",
+    "626": "calibration",
+    "627": "development",
+    "628": "development",
+    "629": "development",
+    "630": "development",
+    "631": "development",
+    "632": "development",
+    "633": "development",
+    "634": "development",
+    "635": "development",
+    "636": "calibration",
+    "637": "development",
+    "638": "development",
+    "640": "development",
+    "641": "test",
+    "642": "calibration",
+    "643": "development",
+    "645": "development",
+    "646": "development",
+    "647": "test",
+    "649": "development",
+    "650": "development",
+    "651": "test",
+    "652": "development",
+    "653": "test",
+    "654": "development",
+    "655": "development",
+    "656": "development",
+    "657": "development",
+    "658": "development",
+    "659": "development",
+    "660": "calibration",
+    "661": "test",
+    "662": "test",
+    "663": "test",
+    "664": "test",
+    "665": "development",
+    "666": "development",
+    "667": "development",
+    "668": "development",
+    "669": "calibration",
+    "670": "development",
+    "672": "development",
+    "673": "development",
+    "674": "development",
+    "675": "development",
+    "676": "development",
+    "677": "development",
+    "678": "development",
+    "679": "development",
+    "680": "development",
+    "681": "development",
+    "682": "development",
+    "683": "development",
+    "684": "development",
+    "685": "calibration",
+    "686": "development",
+    "687": "test",
+    "688": "development",
+    "689": "development",
+    "690": "calibration",
+    "691": "development",
+    "692": "development",
+    "693": "calibration",
+    "694": "development",
+    "695": "test",
+    "697": "test",
+    "698": "calibration",
+    "699": "development",
+    "700": "calibration",
+    "701": "development",
+    "704": "calibration",
+    "705": "test",
+    "706": "test",
+    "707": "calibration",
+    "708": "calibration",
+    "709": "development",
+    "711": "development",
+    "712": "development",
+    "713": "calibration",
+    "715": "development",
+    "716": "calibration",
+    "717": "test",
+    "719": "calibration",
+    "720": "test",
+    "721": "test",
+    "723": "test",
+    "724": "development",
+    "725": "calibration",
+    "726": "calibration",
+    "727": "test",
+    "728": "development",
+    "729": "calibration",
+    "730": "development",
+    "733": "development",
+    "734": "development",
+    "735": "calibration",
+    "736": "development",
+    "737": "development",
+    "738": "development",
+    "739": "test",
+    "741": "development",
+    "742": "development",
+    "744": "calibration",
+    "745": "development",
+    "746": "calibration",
+    "747": "calibration",
+    "748": "test",
+    "749": "test",
+    "751": "development",
+    "752": "test",
+    "753": "test",
+    "754": "development",
+    "755": "development",
+    "756": "development",
+    "758": "test",
+    "760": "test",
+    "763": "test",
+    "764": "calibration",
+    "765": "development",
+    "766": "development",
+    "767": "development",
+    "768": "test",
+    "769": "calibration",
+    "770": "development",
+    "771": "test",
+    "772": "development",
+    "773": "development",
+    "774": "development",
+    "775": "test",
+    "776": "test",
+    "777": "calibration",
+    "778": "development",
+    "779": "development",
+    "780": "development",
+    "781": "test",
+    "782": "development",
+    "783": "test",
+    "784": "development",
+    "787": "development",
+    "788": "development",
+    "789": "development",
+    "790": "calibration",
+    "791": "development",
+    "792": "development",
+    "793": "calibration",
+    "794": "calibration",
+    "795": "calibration",
+    "796": "development",
+    "797": "development",
+    "798": "development",
+    "799": "development",
+    "800": "development",
+    "801": "calibration",
+    "802": "development",
+    "803": "calibration",
+    "804": "development",
+    "806": "development",
+    "807": "development",
+    "808": "development",
+    "809": "calibration",
+    "810": "development",
+    "811": "development",
+    "812": "development",
+    "813": "development",
+    "814": "test",
+    "815": "development",
+    "816": "development",
+    "817": "test",
+    "818": "development",
+    "819": "development",
+    "820": "development",
+    "821": "test",
+    "822": "development",
+    "823": "development",
+    "824": "calibration",
+    "825": "development",
+    "826": "development",
+    "828": "development",
+    "829": "test",
+    "831": "development",
+    "832": "test",
+    "833": "development",
+    "834": "calibration",
+    "835": "test",
+    "836": "development",
+    "837": "calibration",
+    "838": "calibration",
+    "840": "development",
+    "841": "development",
+    "842": "development",
+    "843": "test",
+    "844": "test",
+    "845": "test",
+    "846": "development",
+    "848": "development",
+    "849": "development",
+    "850": "test",
+    "851": "development",
+    "852": "test",
+    "853": "development",
+    "854": "development",
+    "855": "calibration",
+    "856": "test",
+    "857": "test",
+    "858": "calibration",
+    "859": "calibration",
+    "860": "development",
+    "861": "calibration",
+    "865": "calibration",
+    "866": "test",
+    "867": "development",
+    "868": "development",
+    "869": "test",
+    "870": "calibration",
+    "871": "development",
+    "872": "test",
+    "873": "calibration",
+    "874": "development",
+    "875": "test",
+    "876": "development",
+    "877": "development",
+    "878": "development",
+    "879": "test",
+    "880": "test",
+    "881": "development",
+    "882": "development",
+    "883": "development",
+    "884": "development",
+    "885": "calibration",
+    "886": "test",
+    "887": "development",
+    "888": "calibration",
+    "890": "test",
+    "891": "calibration",
+    "892": "development",
+    "893": "test",
+    "894": "development",
+    "896": "development",
+    "897": "calibration",
+    "898": "development",
+    "899": "calibration",
+    "900": "development",
+    "901": "development",
+    "902": "development",
+    "904": "development",
+    "905": "development",
+    "906": "test",
+    "908": "development",
+    "909": "calibration",
+    "910": "development",
+    "911": "test",
+    "912": "development",
+    "913": "development",
+    "915": "test",
+    "916": "development",
+    "918": "development",
+    "919": "test",
+    "920": "development",
+    "921": "development",
+    "922": "calibration",
+    "923": "calibration",
+    "924": "development",
+    "925": "test",
+    "926": "development",
+    "928": "development",
+    "929": "development",
+    "930": "development",
+    "931": "test",
+    "932": "test",
+    "933": "development",
+    "934": "development",
+    "935": "development",
+    "936": "development",
+    "937": "development",
+    "938": "calibration",
+    "939": "development",
+    "940": "calibration",
+    "942": "development",
+    "943": "development",
+    "944": "development",
+    "945": "test",
+    "946": "development",
+    "947": "development",
+    "948": "test",
+    "949": "calibration",
+    "951": "development",
+    "952": "development",
+    "953": "test",
+    "954": "development",
+    "955": "development",
+    "956": "calibration",
+    "957": "development",
+    "958": "development",
+    "959": "test",
+    "960": "development",
+    "961": "test",
+    "962": "calibration",
+    "964": "test",
+    "965": "calibration",
+    "966": "development",
+    "967": "calibration",
+    "968": "test",
+    "969": "development",
+    "970": "development",
+    "971": "test",
+    "972": "calibration",
+    "973": "development",
+    "974": "development",
+    "975": "development",
+    "976": "development",
+    "977": "test",
+    "979": "development",
+    "980": "development",
+    "981": "calibration",
+    "982": "development",
+    "983": "development",
+    "984": "development",
+    "985": "development",
+    "986": "test",
+    "987": "development",
+    "988": "development",
+    "989": "calibration",
+    "990": "calibration",
+    "991": "development",
+    "992": "development",
+    "994": "test",
+    "995": "development",
+    "996": "development",
+    "997": "development",
+    "998": "development",
+    "999": "development"
+  },
+  "late_reserved_groups": [
+    184,
+    192,
+    215,
+    241,
+    261,
+    300,
+    301,
+    304,
+    310,
+    334,
+    356,
+    361,
+    376,
+    458,
+    462,
+    488,
+    525,
+    532,
+    621,
+    632,
+    640,
+    650,
+    652,
+    686,
+    728,
+    779,
+    780,
+    789,
+    799,
+    813,
+    841,
+    867,
+    883,
+    913,
+    952,
+    983,
+    987
+  ],
+  "late_reserved_groups_with_prior_outcomes": [
+    184,
+    192,
+    215,
+    241,
+    261,
+    300,
+    301,
+    304,
+    310,
+    334,
+    356,
+    361,
+    376,
+    458,
+    462,
+    488,
+    525,
+    532,
+    621,
+    632,
+    640,
+    650,
+    652,
+    686,
+    728,
+    779,
+    780,
+    789,
+    799,
+    813,
+    841,
+    867,
+    883,
+    913,
+    952,
+    983,
+    987
+  ],
+  "matched_files_scanned": 125,
+  "outcome_evidence": {
+    "184": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "192": [
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/failed-unpaid-check/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/failed-unpaid-check/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "215": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "241": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "261": [
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/020bcb86257335fc6548dfc5ca794a3cfa4dfd279f12132e39bee9fa59e0da78.json",
+        "sha256": "020bcb86257335fc6548dfc5ca794a3cfa4dfd279f12132e39bee9fa59e0da78"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/8b6b396cff37aaee6c7b3448685f3d48795ea5665d20fff368c34ae06629873e.json",
+        "sha256": "8b6b396cff37aaee6c7b3448685f3d48795ea5665d20fff368c34ae06629873e"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/a403aef095061bac285ec14e84ce47cb6583c50aae9c3cd7f9b2cfa937e92a84.json",
+        "sha256": "a403aef095061bac285ec14e84ce47cb6583c50aae9c3cd7f9b2cfa937e92a84"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/a541e02db428ff803d70405cf7e8735e93ee2a2c4b07dbad619a45a20b023c67.json",
+        "sha256": "a541e02db428ff803d70405cf7e8735e93ee2a2c4b07dbad619a45a20b023c67"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/cf6355ef4bc7d52c6fa6a5164949c29c3de19759d5c9b508d552019eeec2373a.json",
+        "sha256": "cf6355ef4bc7d52c6fa6a5164949c29c3de19759d5c9b508d552019eeec2373a"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/ead8b7384cae5c3684b838f6d8401424b8dd7e0da8ce81a4d8cb27da6b7833bc.json",
+        "sha256": "ead8b7384cae5c3684b838f6d8401424b8dd7e0da8ce81a4d8cb27da6b7833bc"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/f186d8824dd20f0912037bfd2ab74b88a2095f717e060d1a8241d6a0a25b2816.json",
+        "sha256": "f186d8824dd20f0912037bfd2ab74b88a2095f717e060d1a8241d6a0a25b2816"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/ff2c86d1febb9da12891ac75fea41e0a3dc9ed10690af5e878c8bad7057a80d9.json",
+        "sha256": "ff2c86d1febb9da12891ac75fea41e0a3dc9ed10690af5e878c8bad7057a80d9"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "300": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "301": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "304": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "310": [
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/workspace/artifacts/63cac370c57b4a01b822d2b33e86683646565b070c2ae907b143d9d1ef73c3bf.json",
+        "sha256": "63cac370c57b4a01b822d2b33e86683646565b070c2ae907b143d9d1ef73c3bf"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "334": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "356": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "361": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "376": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "458": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "462": [
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/workspace/artifacts/372dae8a7b742bd09fe7ccc0115b4c42d360243884d1c440296bee58bde6370d.json",
+        "sha256": "372dae8a7b742bd09fe7ccc0115b4c42d360243884d1c440296bee58bde6370d"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "488": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "525": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "532": [
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/workspace/artifacts/edba6ce4693d36eddb2968d639afad43b599ceb8549e5e99bf920c9644335e71.json",
+        "sha256": "edba6ce4693d36eddb2968d639afad43b599ceb8549e5e99bf920c9644335e71"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "621": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "632": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "640": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "650": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "652": [
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/workspace/artifacts/689ee077b32a85a5a48cd3f46910da652484a31e7fc098ccba3db382e9aacaf0.json",
+        "sha256": "689ee077b32a85a5a48cd3f46910da652484a31e7fc098ccba3db382e9aacaf0"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "686": [
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/089ff41d89e3cd0c4a53aa5d0739af900a944b322e1fea9e2b28ff5d872b013d.json",
+        "sha256": "089ff41d89e3cd0c4a53aa5d0739af900a944b322e1fea9e2b28ff5d872b013d"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/3d808de805fff3cb32be966834eefa16b469aac64b61e8217dce25736a750f4d.json",
+        "sha256": "3d808de805fff3cb32be966834eefa16b469aac64b61e8217dce25736a750f4d"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/45b695416f37e143ccfcaf4d6e09188c3ee9750196e96e47a4c1bcaa2d4856af.json",
+        "sha256": "45b695416f37e143ccfcaf4d6e09188c3ee9750196e96e47a4c1bcaa2d4856af"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/592278be281bbc051425849128298bdd86b131a8f86ce8f8fc4d860e12985f57.json",
+        "sha256": "592278be281bbc051425849128298bdd86b131a8f86ce8f8fc4d860e12985f57"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/689eaa9d1550e0d882cb24e5c1ef38147afc6fb2c56e616f0312c8cad78a45db.json",
+        "sha256": "689eaa9d1550e0d882cb24e5c1ef38147afc6fb2c56e616f0312c8cad78a45db"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/6c0984539eaa0466a4f9d4c013ec4f709138bddff1291fd7ab69429e67c2c3e0.json",
+        "sha256": "6c0984539eaa0466a4f9d4c013ec4f709138bddff1291fd7ab69429e67c2c3e0"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/6c3d8b1582e2e0ccc9e6d8611ce1a472526d7f0cce311bff14efd749140c6f7e.json",
+        "sha256": "6c3d8b1582e2e0ccc9e6d8611ce1a472526d7f0cce311bff14efd749140c6f7e"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/cc98a259bb02f7deaa6bdc53c47ea1449d09fc898197a479492304518f6a4632.json",
+        "sha256": "cc98a259bb02f7deaa6bdc53c47ea1449d09fc898197a479492304518f6a4632"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "728": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "779": [
+      {
+        "outcome_keys": [
+          "checkpoints"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/workspace/artifacts/603840a776ba6d21bb05ce9a1228a8e9eff2e1e3859577a616e4cadc7db0e7f0.json",
+        "sha256": "603840a776ba6d21bb05ce9a1228a8e9eff2e1e3859577a616e4cadc7db0e7f0"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "780": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "789": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "policy_ms"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/installation-switching.json",
+        "sha256": "a184195895828c63f9d14464a0ed60014067e1087f9e6fd7b71fe4af14592959"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/overhead-unprofiled-pairs.jsonl",
+        "sha256": "5e262873ab331cf07585ab459efa1bf879b30b1b60e1ee3773d970c32606a2e9"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/predictor-training-pairs.jsonl",
+        "sha256": "b15afacdc1a19b6a59a9e709bf7a374966cc046a54b75f2f4750078b3f1a7707"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0789-unfiltered.json",
+        "sha256": "2133c5c237ead11d4717ad34020d1661ee264452d15ca820528a3fa9e7d61d76"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0789-votes108.json",
+        "sha256": "7a9f7cac556fa5465d5c93350399a0e0156ef429100c30e3ea282dcd3ece78f9"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0789-votes32.json",
+        "sha256": "3ffcf4c4f9fa60dbc256133fd32a5824a8456cda1bf39e70cfb79113a51be248"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T143007Z/predictor-training-pairs.jsonl",
+        "sha256": "86f356d2512b7b2257803457413d4011c1e0fce10f1266e7179f9814e0b61285"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "799": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "813": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "841": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/predictor-training-pairs.jsonl",
+        "sha256": "b15afacdc1a19b6a59a9e709bf7a374966cc046a54b75f2f4750078b3f1a7707"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0841-unfiltered.json",
+        "sha256": "faa21f17e558008d3e2acb3412e1ac2300e1415a39647bd9098e7470984e308d"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0841-votes108.json",
+        "sha256": "520edc71281ea62842d6cea00bd08db4e9fb7054878f8f99499fd80b20504166"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0841-votes32.json",
+        "sha256": "ede181cf27bd5318c0b1ed0409fbb3a18fdcfad72e3b9b0be8835cd9a5e5dfa0"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T143007Z/predictor-training-pairs.jsonl",
+        "sha256": "86f356d2512b7b2257803457413d4011c1e0fce10f1266e7179f9814e0b61285"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "867": [
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/failed-unpaid-check/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/failed-unpaid-check/development-preflight.json",
+        "sha256": "3e98f31c8f8d2e88e406bbfed3f3acbae08c1b53aded14e2ba326c49d2ab79a8"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "883": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/predictor-training-pairs.jsonl",
+        "sha256": "b15afacdc1a19b6a59a9e709bf7a374966cc046a54b75f2f4750078b3f1a7707"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0883-unfiltered.json",
+        "sha256": "b3f3066ef0ef72c99daf0a49592e3663e7346b149f086956c2398c7eb6a60628"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0883-votes108.json",
+        "sha256": "c5f25896ab796c94d21d785e255d0551a721535f8f20bf210957503f7ec25df0"
+      },
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T135722Z/stop-labels/reviews-bounded-v0883-votes32.json",
+        "sha256": "cf4b65bd4d619c3b40c04d5c2f247f55e3b8026ff4583d6474aeb4a9aff0e97f"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-overhead-predictor/run-20261013T143007Z/predictor-training-pairs.jsonl",
+        "sha256": "86f356d2512b7b2257803457413d4011c1e0fce10f1266e7179f9814e0b61285"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "913": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "952": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "983": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ],
+    "987": [
+      {
+        "outcome_keys": [
+          "labels"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502.json",
+        "sha256": "4f10db24954e943c843bb229e92fabfab819616f0f5854689ab82002b2b4d502"
+      },
+      {
+        "outcome_keys": [
+          "native_ms",
+          "native_recall",
+          "policy_ms",
+          "policy_recall",
+          "recall_delta"
+        ],
+        "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/workspace/artifacts/c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd.json",
+        "sha256": "c8018bc18d0d3a96d6f514ef4800ce7d4bce51092e68705fdef3c65da24a5ecd"
+      },
+      {
+        "outcome_keys": [
+          "distances",
+          "native_ms",
+          "native_recall"
+        ],
+        "path": "trials/morevec-reviews-runtime-fixes/run-20261013T151714Z/native-development.jsonl",
+        "sha256": "5c999a0d122a47be745f4e963711bc5399424281f17db2d356282d507e4393ca"
+      }
+    ]
+  },
+  "pins": {
+    "agent/src/fannagent/study.py": "0962ff60f5eb319c1d9a0e05a1bbc24154f5906f4c48e1a3a7583e55a1e46ebb",
+    "trials/morevec-reviews-bounded/execution-20261012T003700Z/status.json": "a6b053813ab9fc0efb5330918bf4da083a109f8249de104fae92e050a9a12980",
+    "trials/morevec-reviews-bounded/execution-20261012T003900Z/status.json": "36866bc808a6b878cc13b09a0e59f0113102f2adcd3191b15ce5fc5538574321",
+    "trials/morevec-reviews-bounded/studies/prepared-20261011T211529Z/run/private/artifacts/2a4fb8f99ee70e2bcf31366cc456e20d42efd3949c90313ebcc2ef6647852d89.json": "2a4fb8f99ee70e2bcf31366cc456e20d42efd3949c90313ebcc2ef6647852d89",
+    "trials/morevec-reviews-bounded/studies/prepared-20261011T211529Z/run/state.sqlite3": "49a0655981effb769216e57de923f2a1aa87c1e0b176cacc500dcaa829b9f3d0",
+    "trials/morevec-reviews-bounded/studies/prepared-20261011T211529Z/run/state.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trials/morevec-reviews-durable-bounded/execution-20261012T053001Z/status.json": "8d5a4b7d870cd0c6b040a78ddbf5e30d8fce6bb3eb4fb000f3c594bc32fe80d3",
+    "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T035156Z/run/state.sqlite3": "efc58abfd7a0f97bd3a7b8d9808341a91851101b3bc668231abcd94b0a2a1de4",
+    "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T035156Z/run/state.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/private/artifacts/2a4fb8f99ee70e2bcf31366cc456e20d42efd3949c90313ebcc2ef6647852d89.json": "2a4fb8f99ee70e2bcf31366cc456e20d42efd3949c90313ebcc2ef6647852d89",
+    "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/state.sqlite3": "5732dbf534bed775c8f89a6265797e8d8256c9481cafaf50b1d6631fe71224da",
+    "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/state.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trials/morevec-reviews-fixed-bounded/execution-20261012T015808Z/status.json": "9d4e406afdaeece4ee1b47cd482065820be14ad3cbdeba782ed9dac2c3762635",
+    "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/private/artifacts/2a4fb8f99ee70e2bcf31366cc456e20d42efd3949c90313ebcc2ef6647852d89.json": "2a4fb8f99ee70e2bcf31366cc456e20d42efd3949c90313ebcc2ef6647852d89",
+    "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/state.sqlite3": "542e68f94a9ec360aed25d5be4ceed1ca2592e56cf5846476ab9fa029fe0f8ef",
+    "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/state.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trials/morevec-reviews-overhead-predictor/run-20261013T133737Z/audit.json": "3eab318eb8369cc2f95d13edaf4aaa4fa4f3eee19a7f0a31255534c28da13152",
+    "trials/torch-reviews-results/feature-data-ablation-v1/torch-feature-data-ablation-v1/inputs/ablation-split.json": "873d6ad285d827d578ccac62862bc8a685c6784fd459969d0cc731e350b7e4ec"
+  },
+  "scan_errors": [],
+  "scope": "local broker states, study manifests, canonical aliases in saved JSON/JSONL outcomes; no complete remote/chat access log"
+}

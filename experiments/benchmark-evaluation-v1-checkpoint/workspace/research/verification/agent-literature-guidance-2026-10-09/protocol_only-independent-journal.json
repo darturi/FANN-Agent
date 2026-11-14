@@ -1,0 +1,547 @@
+{
+  "mode": "protocol_only",
+  "backend": "independent",
+  "simulated": true,
+  "research": {
+    "mode": "protocol_only",
+    "research_protocol_version": 1,
+    "guidance_recorded": true,
+    "primer_hash": "bca566acf2e6b651f4d793812589f7028e4c949c245d2b8a507297853f94fe55",
+    "system_prompt_hash": "2b46dd7318a7242b8625ff8cfed8409294a6455f3eb15b9ae239fb5304ca14ba",
+    "experiments": {
+      "open": 0,
+      "completed": 3,
+      "interrupted": 0
+    },
+    "operations": {
+      "pending": 0,
+      "success": 3,
+      "failed": 0,
+      "unknown": 0
+    },
+    "active_experiment": null,
+    "candidate_origins": [
+      {
+        "event_id": "evt_8234377aea854160a136ba396ff65449",
+        "experiment_id": "059b80b182ad4540817658018ab24aed",
+        "policy_hash": "67a336878119edd1fda5c6e16ccb056aff1af61b3380881e664ce667726086e2"
+      }
+    ]
+  },
+  "experiments": [
+    {
+      "artifact": "e139341879c12049b5a577ff3c3f2f9666ee2699250fd5479ff39766cadd0895",
+      "conclusion": {
+        "assessment": "inconclusive",
+        "decision": "Use the actual calibration result to decide candidate eligibility.",
+        "evidence_refs": [
+          "evt_8234377aea854160a136ba396ff65449"
+        ],
+        "observations": "Recorded deterministic demonstration evidence; study calibration remains authoritative."
+      },
+      "created_at": 1791563128.9595351,
+      "experiment_id": "059b80b182ad4540817658018ab24aed",
+      "finished_at": 1791563129.438455,
+      "plan": {
+        "basis": {
+          "evidence_refs": [],
+          "kind": "exploratory",
+          "principle_ids": []
+        },
+        "challenging_observation": "Recall loss, invalid results or no latency improvement.",
+        "client_key": "profile-calibration",
+        "comparison": "Compare ordinary default execution and the selected profile candidate.",
+        "decision_if_challenged": "Reject the candidate or abstain.",
+        "decision_if_supported": "Select the passing candidate after calibration.",
+        "expected_observation": "Calibration accepts the profile candidate.",
+        "hypothesis": "The profile candidate preserves default recall while stopping earlier.",
+        "measurements": "Inspect checkpoint evidence, recall and complete latency.",
+        "purpose": "calibration",
+        "why_now": "Check the provided candidate with actual permitted evidence."
+      },
+      "state": "completed",
+      "events": [
+        {
+          "artifact_refs": [],
+          "event_id": "evt_8234377aea854160a136ba396ff65449",
+          "experiment_id": "059b80b182ad4540817658018ab24aed",
+          "finished_at": 1791563129.429547,
+          "observation": {
+            "checkpoint_policy_hash": "67a336878119edd1fda5c6e16ccb056aff1af61b3380881e664ce667726086e2",
+            "groups": {
+              "easy": {
+                "independent_groups": 54,
+                "latency_assessment": "conclusive",
+                "latency_improved": true,
+                "log_latency_ratio_ci95": [
+                  -1.161881639212185,
+                  -1.0214087381569616
+                ],
+                "mean_recall_delta": 0.0,
+                "recall_assessment": "conclusive",
+                "recall_delta_ci95": [
+                  0.0,
+                  0.0
+                ],
+                "recall_noninferior": true
+              },
+              "hard": {
+                "independent_groups": 35,
+                "latency_assessment": "conclusive",
+                "latency_improved": true,
+                "log_latency_ratio_ci95": [
+                  -0.46686573214443045,
+                  -0.4191641362381411
+                ],
+                "mean_recall_delta": 0.0,
+                "recall_assessment": "conclusive",
+                "recall_delta_ci95": [
+                  0.0,
+                  0.0
+                ],
+                "recall_noninferior": true
+              },
+              "overall": {
+                "independent_groups": 100,
+                "latency_assessment": "conclusive",
+                "latency_improved": true,
+                "log_latency_ratio_ci95": [
+                  -0.8815980850720507,
+                  -0.7422906104254015
+                ],
+                "mean_recall_delta": 0.0,
+                "recall_assessment": "conclusive",
+                "recall_delta_ci95": [
+                  0.0,
+                  0.0
+                ],
+                "recall_noninferior": true
+              }
+            },
+            "latencies": {
+              "native": {
+                "median_ms": 2.8000000000000003,
+                "p95_ms": 5.2,
+                "sample_count": 200
+              },
+              "policy": {
+                "median_ms": 1.3,
+                "p95_ms": 3.7,
+                "sample_count": 200
+              }
+            },
+            "status": "accepted",
+            "valid": true
+          },
+          "observation_artifact": "a0933361e7ec152a4ae40cdb38b96f42c144d9b89d6579546ce7e915287f0b36",
+          "operation": "calibrate",
+          "policy_hash": "67a336878119edd1fda5c6e16ccb056aff1af61b3380881e664ce667726086e2",
+          "query_hash": null,
+          "sequence": 3,
+          "started_at": 1791563128.96843,
+          "state": "success"
+        }
+      ],
+      "total_events": 1,
+      "next_offset": null
+    },
+    {
+      "artifact": "4fcb9c0bde3c7c39b4a59f48b2396c642a4c79d5b0866d2de89a659ba75bc481",
+      "conclusion": {
+        "assessment": "inconclusive",
+        "decision": "Use the actual calibration result to decide candidate eligibility.",
+        "evidence_refs": [
+          "evt_f1881a0b1e1441c28862e33250a4708b"
+        ],
+        "observations": "Recorded deterministic demonstration evidence; study calibration remains authoritative."
+      },
+      "created_at": 1791563125.2858539,
+      "experiment_id": "59e188c75e3c4ac1bd19fc6fd1426bd8",
+      "finished_at": 1791563125.347898,
+      "interruption_reason": "interrupted",
+      "plan": {
+        "basis": {
+          "evidence_refs": [],
+          "kind": "exploratory",
+          "principle_ids": []
+        },
+        "challenging_observation": "Recall loss, invalid results or no latency improvement.",
+        "client_key": "initial-probe",
+        "comparison": "Compare ordinary default execution and the selected profile candidate.",
+        "decision_if_challenged": "Reject the candidate or abstain.",
+        "decision_if_supported": "Select the passing candidate after calibration.",
+        "expected_observation": "Calibration accepts the profile candidate.",
+        "hypothesis": "The profile candidate preserves default recall while stopping earlier.",
+        "measurements": "Inspect checkpoint evidence, recall and complete latency.",
+        "purpose": "investigation",
+        "why_now": "Check the provided candidate with actual permitted evidence."
+      },
+      "state": "completed",
+      "events": [
+        {
+          "artifact_refs": [
+            "d109856f80721bcab4a9b52b6e22c7d597b5d820939cbe0a4092e5a8424ee739"
+          ],
+          "event_id": "evt_f1881a0b1e1441c28862e33250a4708b",
+          "experiment_id": "59e188c75e3c4ac1bd19fc6fd1426bd8",
+          "finished_at": 1791563125.2980568,
+          "observation": {
+            "artifact": "d109856f80721bcab4a9b52b6e22c7d597b5d820939cbe0a4092e5a8424ee739",
+            "checkpoint_count": 4,
+            "metadata": {
+              "policy_opportunity": true,
+              "route": "simulation",
+              "simulated": true,
+              "stop_reason": "native_convergence",
+              "work": 25,
+              "work_unit": "vector_blocks"
+            },
+            "score": {
+              "duplicate_count": 0,
+              "predicate_violation_count": 0,
+              "recall": 1.0,
+              "returned_count": 10,
+              "valid": true
+            }
+          },
+          "observation_artifact": "39f7e54e8bd2b86a6e3f04ce3ddfe4dac8e749d7088eea762ea27f2f271016da",
+          "operation": "probe",
+          "policy_hash": null,
+          "query_hash": "088114cf11561b96ed55feff40af4dc2d9ebc54666cb704d332d2fc6fb7cf3f5",
+          "sequence": 1,
+          "started_at": 1791563125.2951858,
+          "state": "success"
+        }
+      ],
+      "total_events": 1,
+      "next_offset": null
+    },
+    {
+      "artifact": "544588ba41e025e39ce27a496befb92b95b47663f8006ff48583387463b00898",
+      "conclusion": {
+        "assessment": "inconclusive",
+        "decision": "Use the actual calibration result to decide candidate eligibility.",
+        "evidence_refs": [
+          "evt_f48d565e19884005ae4cca3f61d47ea2"
+        ],
+        "observations": "Recorded deterministic demonstration evidence; study calibration remains authoritative."
+      },
+      "created_at": 1791563125.357332,
+      "experiment_id": "d051eb1a20484b41a1bf2d1945180c3a",
+      "finished_at": 1791563128.949993,
+      "plan": {
+        "basis": {
+          "evidence_refs": [],
+          "kind": "exploratory",
+          "principle_ids": []
+        },
+        "challenging_observation": "Recall loss, invalid results or no latency improvement.",
+        "client_key": "premature-calibration",
+        "comparison": "Compare ordinary default execution and the selected profile candidate.",
+        "decision_if_challenged": "Reject the candidate or abstain.",
+        "decision_if_supported": "Select the passing candidate after calibration.",
+        "expected_observation": "Calibration accepts the profile candidate.",
+        "hypothesis": "The profile candidate preserves default recall while stopping earlier.",
+        "measurements": "Inspect checkpoint evidence, recall and complete latency.",
+        "purpose": "calibration",
+        "why_now": "Check the provided candidate with actual permitted evidence."
+      },
+      "state": "completed",
+      "events": [
+        {
+          "artifact_refs": [],
+          "event_id": "evt_f48d565e19884005ae4cca3f61d47ea2",
+          "experiment_id": "d051eb1a20484b41a1bf2d1945180c3a",
+          "finished_at": 1791563128.940692,
+          "observation": {
+            "checkpoint_policy_hash": null,
+            "groups": {
+              "easy": {
+                "independent_groups": 54,
+                "latency_assessment": "conclusive",
+                "latency_improved": true,
+                "log_latency_ratio_ci95": [
+                  -1.5752484112247374,
+                  -1.499514723786646
+                ],
+                "mean_recall_delta": -0.5607476635514018,
+                "recall_assessment": "conclusive",
+                "recall_delta_ci95": [
+                  -0.6822429906542056,
+                  -0.43802248677248784
+                ],
+                "recall_noninferior": false
+              },
+              "hard": {
+                "independent_groups": 35,
+                "latency_assessment": "conclusive",
+                "latency_improved": true,
+                "log_latency_ratio_ci95": [
+                  -2.1853678779484524,
+                  -2.0962802428890686
+                ],
+                "mean_recall_delta": -1.0,
+                "recall_assessment": "conclusive",
+                "recall_delta_ci95": [
+                  -1.0,
+                  -1.0
+                ],
+                "recall_noninferior": false
+              },
+              "overall": {
+                "independent_groups": 100,
+                "latency_assessment": "conclusive",
+                "latency_improved": true,
+                "log_latency_ratio_ci95": [
+                  -1.8443067616764879,
+                  -1.7264710142882636
+                ],
+                "mean_recall_delta": -0.765,
+                "recall_assessment": "conclusive",
+                "recall_delta_ci95": [
+                  -0.84,
+                  -0.685
+                ],
+                "recall_noninferior": false
+              }
+            },
+            "latencies": {
+              "native": {
+                "median_ms": 2.8000000000000003,
+                "p95_ms": 5.2,
+                "sample_count": 200
+              },
+              "policy": {
+                "median_ms": 0.5,
+                "p95_ms": 0.5,
+                "sample_count": 200
+              }
+            },
+            "status": "no_recommendation",
+            "valid": true
+          },
+          "observation_artifact": "c0a1c674049098ff476387d3f109b91a7d5faf5ad6a9840c32d9102fc8077083",
+          "operation": "calibrate",
+          "policy_hash": "87976178262a7851c0fefb5954c201764951eba10cb9ac4859dffb5348ec6fef",
+          "query_hash": null,
+          "sequence": 2,
+          "started_at": 1791563125.366063,
+          "state": "success"
+        }
+      ],
+      "total_events": 1,
+      "next_offset": null
+    }
+  ],
+  "final_evaluation": {
+    "claims": "synthetic workload only",
+    "compatibility": {
+      "backend": "independent",
+      "data_profile": "5f8a696014fca2dd7163742454129f6bb52b90d52aa76f99af8bacf6b1078278",
+      "dataset_hash": "8b2cf33cd62aaa022249e8248e8cd97daa4bd0baadcea741994b7f3841d1b4be",
+      "index_identity": "independent-1",
+      "profile_hash": "09938b47e6ef38fbd0f53884df497fbbf0b03a933d9270f63592b0becee08f54",
+      "settings": {}
+    },
+    "diagnostics": "ee82b802d024da4ad0493fca08ca61632441cb47838098f407146fe5f934a854",
+    "extension_manifest": {
+      "extension": {
+        "api_versions": [
+          1
+        ],
+        "configuration_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "rows": {
+              "default": 500,
+              "maximum": 10000,
+              "minimum": 100,
+              "title": "Rows",
+              "type": "integer"
+            },
+            "seed": {
+              "default": 7,
+              "title": "Seed",
+              "type": "integer"
+            }
+          },
+          "title": "Options",
+          "type": "object"
+        },
+        "data_profile": {
+          "analysis_profile": "cosine_in_memory_v1",
+          "identifier_representation": "string",
+          "max_dimension": 8,
+          "max_k": 100,
+          "metric": "cosine",
+          "min_dimension": 1,
+          "name": "independent_string_cosine/v1",
+          "normalized": true,
+          "predicate_semantics": "portable_scalar_v2",
+          "representation": "float32"
+        },
+        "distribution": "fannagent-test-extension",
+        "limitations": [
+          "simulation only"
+        ],
+        "name": "independent",
+        "runtime_profile": {
+          "actions": [
+            "continue",
+            "stop"
+          ],
+          "checkpoint_interval": 5,
+          "checkpoint_semantics": "completed simulated batches",
+          "collection_groups": [],
+          "features": {
+            "other.batch": {
+              "availability": "when_observed",
+              "collection_cost": "declared_by_extension",
+              "description": "",
+              "group": "simulation",
+              "kind": "int",
+              "name": "other.batch",
+              "population": "query",
+              "provenance": "simulated",
+              "scope": "query",
+              "source": "extension",
+              "stage": "runtime",
+              "units": "batches"
+            },
+            "other.ready": {
+              "availability": "when_observed",
+              "collection_cost": "declared_by_extension",
+              "description": "",
+              "group": "simulation",
+              "kind": "bool",
+              "name": "other.ready",
+              "population": "query",
+              "provenance": "simulated",
+              "scope": "query",
+              "source": "extension",
+              "stage": "runtime",
+              "units": "boolean"
+            },
+            "other.requested": {
+              "availability": "when_observed",
+              "collection_cost": "declared_by_extension",
+              "description": "",
+              "group": "simulation",
+              "kind": "int",
+              "name": "other.requested",
+              "population": "query",
+              "provenance": "simulated",
+              "scope": "query",
+              "source": "extension",
+              "stage": "runtime",
+              "units": "neighbors"
+            }
+          },
+          "fingerprint": "09938b47e6ef38fbd0f53884df497fbbf0b03a933d9270f63592b0becee08f54",
+          "guidance": "Synthetic latency and five-block checkpoints. Stop when other.ready is true.",
+          "name": "independent_blocks/v1",
+          "native_protocol": "",
+          "native_registry_hash": null,
+          "numeric_semantics": "int64_float64_strict",
+          "policy_encoding": "bounded_tree_v1",
+          "scripted_policy": {
+            "name": "ready",
+            "root": {
+              "else": "continue",
+              "if": {
+                "feature": "other.ready"
+              },
+              "then": "stop"
+            }
+          },
+          "stopping_scope": "query",
+          "work_unit": "vector_blocks"
+        },
+        "version": "0.1.0"
+      },
+      "native_identity": {
+        "protocol": "",
+        "registry_hash": null
+      },
+      "profile_hash": "09938b47e6ef38fbd0f53884df497fbbf0b03a933d9270f63592b0becee08f54"
+    },
+    "failed_pairs": 0,
+    "groups": {
+      "easy": {
+        "independent_groups": 55,
+        "latency_assessment": "conclusive",
+        "latency_improved": true,
+        "log_latency_ratio_ci95": [
+          -1.1078164237432298,
+          -0.9797409642334108
+        ],
+        "mean_recall_delta": 0.0,
+        "recall_assessment": "conclusive",
+        "recall_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_noninferior": true
+      },
+      "hard": {
+        "independent_groups": 37,
+        "latency_assessment": "conclusive",
+        "latency_improved": true,
+        "log_latency_ratio_ci95": [
+          -0.47415270062115844,
+          -0.43092175753767176
+        ],
+        "mean_recall_delta": 0.0,
+        "recall_assessment": "conclusive",
+        "recall_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_noninferior": true
+      },
+      "overall": {
+        "independent_groups": 100,
+        "latency_assessment": "conclusive",
+        "latency_improved": true,
+        "log_latency_ratio_ci95": [
+          -0.8553717853712329,
+          -0.7264290715972875
+        ],
+        "mean_recall_delta": 0.0,
+        "recall_assessment": "conclusive",
+        "recall_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_noninferior": true
+      }
+    },
+    "latencies": {
+      "native": {
+        "median_ms": 2.8000000000000003,
+        "p95_ms": 4.8,
+        "sample_count": 200
+      },
+      "policy": {
+        "median_ms": 1.3,
+        "p95_ms": 3.3000000000000003,
+        "sample_count": 200
+      }
+    },
+    "measurement_schedule": {
+      "paired_passes": 1,
+      "warmups": 0
+    },
+    "pair_count": 200,
+    "per_query_regressions": [],
+    "policy_hash": "67a336878119edd1fda5c6e16ccb056aff1af61b3380881e664ce667726086e2",
+    "recall_tolerance": 0.005,
+    "regressed_pairs": 0,
+    "rows": "fb261d66d27b8a8feaa76b8eea8b1df790dc36aa02bd92b08aff31010a768d51",
+    "simulated": true,
+    "split": "test",
+    "status": "accepted",
+    "valid": true,
+    "workload_origin": "synthetic"
+  }
+}

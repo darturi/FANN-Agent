@@ -1,0 +1,7 @@
+{
+  "interrupted_preparation": true,
+  "retry_qualified": true,
+  "retry_has_sidecar_manifest": false,
+  "copy_network_mode": "bridge",
+  "unauthenticated_peer_sql": "postgres|t"
+}

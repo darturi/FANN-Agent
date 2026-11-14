@@ -1,0 +1,332 @@
+{
+  "architecture": "x86_64",
+  "conditions": [
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "short_results_unmodified": [
+        {
+          "ann_calls": 1,
+          "arm": null,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 6,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 7,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 8,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 9,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        }
+      ],
+      "three_compiled_policy_first_stop_and_output_parity": true,
+      "threshold": -1,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "short_results_unmodified": [
+        {
+          "ann_calls": 1,
+          "arm": null,
+          "exact_serving_calls": 0,
+          "recall": 0.1,
+          "returned_count": 1
+        },
+        {
+          "ann_calls": 1,
+          "arm": 6,
+          "exact_serving_calls": 0,
+          "recall": 0.1,
+          "returned_count": 1
+        },
+        {
+          "ann_calls": 1,
+          "arm": 7,
+          "exact_serving_calls": 0,
+          "recall": 0.1,
+          "returned_count": 1
+        },
+        {
+          "ann_calls": 1,
+          "arm": 8,
+          "exact_serving_calls": 0,
+          "recall": 0.1,
+          "returned_count": 1
+        },
+        {
+          "ann_calls": 1,
+          "arm": 9,
+          "exact_serving_calls": 0,
+          "recall": 0.1,
+          "returned_count": 1
+        }
+      ],
+      "three_compiled_policy_first_stop_and_output_parity": true,
+      "threshold": 743,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "short_results_unmodified": [
+        {
+          "ann_calls": 1,
+          "arm": null,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 6,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 7,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 8,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 9,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        }
+      ],
+      "three_compiled_policy_first_stop_and_output_parity": true,
+      "threshold": 527,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "short_results_unmodified": [
+        {
+          "ann_calls": 1,
+          "arm": null,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 6,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 7,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 8,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 9,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        }
+      ],
+      "three_compiled_policy_first_stop_and_output_parity": true,
+      "threshold": 310,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "short_results_unmodified": [
+        {
+          "ann_calls": 1,
+          "arm": null,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 6,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 7,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 8,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 9,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        }
+      ],
+      "three_compiled_policy_first_stop_and_output_parity": true,
+      "threshold": 192,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "short_results_unmodified": [
+        {
+          "ann_calls": 1,
+          "arm": null,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 6,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 7,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 8,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 9,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        }
+      ],
+      "three_compiled_policy_first_stop_and_output_parity": true,
+      "threshold": 108,
+      "wrong_header_rejected": true
+    },
+    {
+      "checkpoints": 3,
+      "forced_stop_parity": true,
+      "no_stop_parity": true,
+      "shared_local_native_parity": true,
+      "short_results_unmodified": [
+        {
+          "ann_calls": 1,
+          "arm": null,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 6,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 7,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 8,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        },
+        {
+          "ann_calls": 1,
+          "arm": 9,
+          "exact_serving_calls": 0,
+          "recall": 0.2,
+          "returned_count": 2
+        }
+      ],
+      "three_compiled_policy_first_stop_and_output_parity": true,
+      "threshold": 32,
+      "wrong_header_rejected": true
+    }
+  ],
+  "eighteen_readers_plus_keeper_opened": true,
+  "fixture": "synthetic 8-dimensional partial graph",
+  "original_graph_qualified": false,
+  "private_max_connections": 32,
+  "status": "passed"
+}

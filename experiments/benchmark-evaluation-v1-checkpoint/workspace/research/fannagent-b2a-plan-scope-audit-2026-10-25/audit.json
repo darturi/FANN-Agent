@@ -1,0 +1,539 @@
+{
+  "activity": {
+    "code_changes": 0,
+    "existing_source_files_inventoried": 349,
+    "fits": 0,
+    "immutable_input_files": 907,
+    "native_db_torch_provider_calls": 0,
+    "new_experiments": 0,
+    "new_vector_or_protected_query_value_access": 0,
+    "policy_simulations": 0,
+    "tests": 0
+  },
+  "completed_at_utc": "2026-10-26T00:02:36.700495+00:00",
+  "eligible_row_fractions": {
+    "unfiltered": {
+      "fraction": 1.0,
+      "rows": 247286
+    },
+    "votes108": {
+      "fraction": 0.20016499114385772,
+      "rows": 49498
+    },
+    "votes32": {
+      "fraction": 0.5001981511286526,
+      "rows": 123692
+    }
+  },
+  "exposed_request_contexts": [
+    {
+      "cases": 200,
+      "request_metadata": {
+        "filter": null,
+        "k": 10
+      }
+    },
+    {
+      "cases": 200,
+      "request_metadata": {
+        "filter": {
+          "field": "m_000000",
+          "op": "gte",
+          "value": 108
+        },
+        "k": 10
+      }
+    },
+    {
+      "cases": 200,
+      "request_metadata": {
+        "filter": {
+          "field": "m_000000",
+          "op": "gte",
+          "value": 32
+        },
+        "k": 10
+      }
+    }
+  ],
+  "findings": [
+    {
+      "finding": "Native statement has WHERE plus cosine ORDER BY plus LIMIT k; frozen exact reference removes LIMIT, disables index access, fetches every eligible result and constructs full truth/ties.",
+      "id": "F01",
+      "inference": "A fresh exact-top-k execution endpoint can be investigated without altering truth generation or rebuilding the HNSW graph. Existing exhaustive-reference timers do not measure it.",
+      "line": 994,
+      "source": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1/frozen/vendor/fannagent_pgvector/backend.py",
+      "supplement": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1/frozen/reference_backend.py"
+    },
+    {
+      "finding": "All six saved480/640 qualification plans are Limit->Index Scan(reviews_hnsw); filters remain executor Filter fields. Plans are estimates, not EXPLAIN ANALYZE.",
+      "id": "F02",
+      "inference": "Existing plans confirm post-filter native mechanism for those fixtures; they do not measure distance-work attribution, exact plan, all600 case plans or actual time.",
+      "source": "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/run/qualification.json"
+    },
+    {
+      "finding": "Origin settings seqscan off, index/indexonly/bitmap on; source effort320, study reference640, iterative off.",
+      "id": "F03",
+      "inference": "Turning seqscan on alone is not proof of an exact route. Candidate must allow seqscan and disable index access on an explicitly owned binding, then verify actual no-ANN plans/output.",
+      "source": "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/run/shared-initialization.json"
+    },
+    {
+      "finding": "Provisioning DDL declares reviews primary key and one full HNSW; saved identities/inspection return selected index, not a full live index catalog.",
+      "id": "F04",
+      "inference": "No scalar total_votes index is declared by this recipe. Absence of later scalar indexes and complete catalog/statistics equality cannot be certified without additional native metadata at a future qualification.",
+      "line": 87,
+      "source": "trials/torch-reviews-size-sweep/database.py"
+    },
+    {
+      "finding": "Current and frozen inspection reject partitioned relations and partial/expression HNSW targets; native execution itself supports ordinary SQL without requiring an HNSW result in native mode.",
+      "id": "F05",
+      "inference": "Exact scan is source-feasible through a separately bound experimental reader on unchanged table/index. Partial/partitioned search needs new physical/catalog/backend compatibility scope.",
+      "line": 210,
+      "source": "agent-pgvector/src/fannagent_pgvector/backend.py"
+    },
+    {
+      "finding": "Request-context patch adds threshold feature to observations; it does not implement predicate-subgraph HNSW traversal. Current scan resumes only after candidates are exhausted.",
+      "id": "F06",
+      "inference": "Neither threshold features nor iterative mode are ACORN. All current outputs have10; iterative changes are not a demonstrated quality repair or selected next mechanism.",
+      "source": "agent-pgvector/src/fannagent_pgvector/engine/patches/0007-predicate-context.patch"
+    },
+    {
+      "finding": "ACORN-1 uses search-time neighbor expansion but its documented construction is an unpruned HNSW variant. Local pgvector SelectNeighbors applies a diversity/pruning heuristic.",
+      "id": "F07",
+      "inference": "Do not claim all ACORN variants necessarily require dense rebuilds, or that current pruned graph is ACORN-1 compatible. Any query-only adaptation would be a new native intervention needing its own proof/module identity.",
+      "line": 1172,
+      "primary_source": "https://arxiv.org/html/2403.04871v1#S5.SS3",
+      "source": "trials/torch-reviews-first/sources/pgvector/src/hnswutils.c"
+    },
+    {
+      "finding": "Only three exposed pre-query predicate contexts; raw vector present but no qualified within-context predictor. Broker count evaluates offline snapshot metadata.",
+      "id": "F08",
+      "inference": "Use validated predicate AST/k only for any later simple route; no query/group IDs, evaluator names, free exact selectivity, truth/timing/plan-outcome leakage or new feature learning now.",
+      "line": 284,
+      "source": "agent/src/fannagent/broker.py"
+    }
+  ],
+  "gate": {
+    "GB2a": "pass_scoped_source_feasibility",
+    "decision": "GO_new_exact_topk_design_only",
+    "implementation_or_measurement_performed": false,
+    "index_rebuild_authorized": false,
+    "performance_qualification": false,
+    "router_fitting_allowed": false
+  },
+  "id": "NEXT-PLAN-SCOPE-01",
+  "identities": {
+    "database": {
+      "completed_Torch_index_reused": false,
+      "dataset_parquet_sha256": "06eae31a43ecfd63a647f6fa93a9c00bcb2350ca6fe2f2bcd35d007c13b2e4ee",
+      "dimension": 768,
+      "filter_eligible_rows": {
+        "unfiltered": 247286,
+        "votes108": 49498,
+        "votes32": 123692
+      },
+      "index_build": {
+        "ef_construction": 64,
+        "fresh_index_at_every_size": true,
+        "insertion_order": "ascending source_id",
+        "m": 16,
+        "maintenance_work_mem": "65536",
+        "max_parallel_maintenance_workers": 0
+      },
+      "index_bytes": 1012678656,
+      "index_filepath": "base/16384/264013",
+      "index_files": {
+        "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+      },
+      "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+      "index_oid": 264013,
+      "row_count": 247286,
+      "source_arm64_index_reused": false,
+      "subset_ids_sha256": "a316caa7b4b5182028401195cb02f9813a3336d498b70248b2b32a3550c96c80",
+      "subset_seed": 20261019
+    },
+    "origin_settings": {
+      "effective_cache_size": "524288",
+      "enable_bitmapscan": "on",
+      "enable_indexonlyscan": "on",
+      "enable_indexscan": "on",
+      "enable_seqscan": "off",
+      "hnsw.ef_search": "320",
+      "hnsw.iterative_scan": "off",
+      "hnsw.max_scan_tuples": "20000",
+      "hnsw.scan_mem_multiplier": "1",
+      "jit": "on",
+      "max_parallel_workers_per_gather": "2",
+      "random_page_cost": "4",
+      "seq_page_cost": "1",
+      "work_mem": "16384"
+    },
+    "runtime": {
+      "image_sha256": "7cbaab49d5ed4772176df0c4fe0f64f0482ec972fb48d2af598b1b6c97857d9a",
+      "module_sha256": "e7dcace1f4dfd4ea233256d6cdfc17b3190f3f07cccb6406b479b5ebe8b85811",
+      "package_manifest_sha256": "b7ad5be746bfa26bcaf5fbd381b0523c518f3872bb8011d8d00331b399c34bc1",
+      "registry_hash": "fc42b1fb1441518b15123ed30ba2a0d0c96e9c74d4f0727ab9eb391597cdbf37",
+      "runtime_profile_hash": "b2974c2c65d40780d207109d9bbd298b2628ea58abde673c0dd479c1a0e52ed3"
+    },
+    "source_effort": 320,
+    "study_reference_effort": 640
+  },
+  "next_proposal": {
+    "budget_assigned": false,
+    "do_not_bundle": [
+      "new scalar/partial/partitioned indexes",
+      "JIT/parallel/work_mem tuning",
+      "new validators/direct-native transport",
+      "planner-cost fitting",
+      "router fitting",
+      "protected query samples",
+      "post-hoc subset rescue",
+      "extra effort values"
+    ],
+    "id": "NEXT-EXACT-TOPK-01",
+    "initial_intervention": "Same native cosine/top10 statement; owned exact reader effective settings seqscan on, indexscan/indexonlyscan/bitmapscan off. Preserve all other settings, vector formatting, truth generator, data/module/graph.",
+    "phase": "B2b",
+    "proposed_resource_ceiling_only": {
+      "allocations": 1,
+      "backend_search_attempts_maximum": 50000,
+      "cases": 600,
+      "confirmation_queries": 0,
+      "cpus": 4,
+      "exposed_vectors": 200,
+      "fits": 0,
+      "memory_gib": 32,
+      "new_vectors": 0,
+      "provider_calls": 0,
+      "wall_seconds": 7200,
+      "work_deadline_seconds": 6600
+    },
+    "question": "Can fixed exact top10 execution on the current relation preserve exact semantics and beat unchanged native640 in any predeclared predicate context after full costs?",
+    "scope_to_freeze": "Primary full-outer warm persistent-reader frontier diagnostic; startup/restore/admission/first-use/cleanup separate. Native640 and exact identical-path A/A replicas; two temporal blocks in one allocation. No activation/adoption inference. Exact schedule/call counts, equivalence/nonregression and context-benefit gates frozen before implementation.",
+    "status": "design_recommended_not_frozen_or_implemented",
+    "stop_rules": [
+      "Native/semantic/plan/integrity failure: close failed qualification; do not treat as scientific quality-negative or silently retry.",
+      "Complete valid output failing frozen quality: negative close before timing.",
+      "Insufficient A/A precision: inconclusive, no correction/additional block.",
+      "No qualified context economics or resource cap: finite closure; no automatic revision."
+    ],
+    "user_commands_needed_now": false
+  },
+  "option_matrix": [
+    {
+      "changes": [
+        "experimental effective planner settings",
+        "harness/protocol/plan identity"
+      ],
+      "classification": "GO_design_only",
+      "current_graph_reused": true,
+      "current_module_reused": true,
+      "next": "B2b/NEXT-EXACT-TOPK-01 prospective finite contract, no router",
+      "option": "Fixed exact top-k versus native640",
+      "unknowns": [
+        "actual exact top10 plan and timings",
+        "all600 complete/tie-aware output parity",
+        "new A/A and lifecycle costs",
+        "full catalog/statistics metadata"
+      ]
+    },
+    {
+      "classification": "not_selected",
+      "current_graph_reused": true,
+      "current_module_reused": true,
+      "option": "Planner-default seqscan on alone",
+      "reason": "May keep ANN; planner costs do not enforce quality-relative reserve. Adds ambiguous mechanism before fixed exact alternative is measured."
+    },
+    {
+      "classification": "deferred",
+      "current_graph_reused": "HNSW bytes may remain but catalog changes",
+      "current_module_reused": true,
+      "option": "Scalar B-tree on total_votes",
+      "reason": "New physical scalar index/build/catalog/stats and broad20/50percent filters; cannot assume cheap candidate reduction or ordered HNSW intersection."
+    },
+    {
+      "classification": "deferred_new_physical_and_compatibility_scope",
+      "current_graph_reused": false,
+      "current_module_reused": "possibly same module but target contract changes",
+      "option": "Partial HNSW indexes",
+      "reason": "New subset graphs; current inspection rejects partial selected targets. Must qualify predicate implication and custom/generic plans."
+    },
+    {
+      "classification": "deferred_new_physical_and_backend_scope",
+      "current_graph_reused": false,
+      "current_module_reused": "backend target support changes",
+      "option": "Partitioned relation/indexes",
+      "reason": "Current relation contract excludes partitioning; nested range predicates span disjoint partitions and need global top-k merge/recall accounting."
+    },
+    {
+      "classification": "deferred_native_research",
+      "current_graph_reused": "not established for current pruned graph",
+      "current_module_reused": false,
+      "option": "ACORN/predicate-subgraph traversal",
+      "reason": "No existing GUC/patch implements it; predicate visibility, MVCC/heap access, traversal/index assumptions and copy/security proof need separate scope."
+    },
+    {
+      "classification": "no_go_as_automatic_followup",
+      "current_graph_reused": true,
+      "current_module_reused": true,
+      "option": "Iterative scans/effort ladder or post-hoc480 subset",
+      "reason": "Different interventions; all current outputs complete; finite480 quality verdict unchanged; no retrospective router or effort search."
+    }
+  ],
+  "phase": "B2a",
+  "primary_sources": [
+    {
+      "id": "S21",
+      "role": "ACORN-1 construction and query-neighbor expansion differ from current pgvector; no drop-in guarantee",
+      "title": "ACORN v1, Section5.3",
+      "url": "https://arxiv.org/html/2403.04871v1#S5.SS3"
+    },
+    {
+      "id": "S26",
+      "role": "Supported filtering alternatives and completeness-oriented iterative resumption; no local performance inference",
+      "title": "pgvector0.8.6 filtering and iterative scans",
+      "url": "https://github.com/pgvector/pgvector/blob/v0.8.6/README.md"
+    },
+    {
+      "id": "S33",
+      "role": "Plan cost units and estimated versus actual behavior",
+      "title": "PostgreSQL17 Using EXPLAIN",
+      "url": "https://www.postgresql.org/docs/17/using-explain.html"
+    },
+    {
+      "id": "S34",
+      "role": "Planner settings are controls, not proof of actual plan; prepared-plan modes",
+      "title": "PostgreSQL17 Query Planning",
+      "url": "https://www.postgresql.org/docs/17/runtime-config-query.html"
+    },
+    {
+      "id": "S35",
+      "role": "Planning-time predicate implication; generic parameter hazards",
+      "title": "PostgreSQL17 Partial Indexes",
+      "url": "https://www.postgresql.org/docs/17/indexes-partial.html"
+    },
+    {
+      "id": "S36",
+      "role": "Bitmap combination loses ordering; not a free sorted HNSW/predicate intersection",
+      "title": "PostgreSQL17 Combining Multiple Indexes",
+      "url": "https://www.postgresql.org/docs/17/indexes-bitmap-scans.html"
+    },
+    {
+      "id": "S37",
+      "role": "Custom/generic plan distinction; actual cache behavior must be qualified",
+      "title": "PostgreSQL17 PREPARE",
+      "url": "https://www.postgresql.org/docs/17/sql-prepare.html"
+    },
+    {
+      "id": "S38",
+      "role": "LIMIT bounds returned results but nonmatching ordered scans still process candidate rows",
+      "title": "PostgreSQL17 Indexes and ORDER BY",
+      "url": "https://www.postgresql.org/docs/17/indexes-ordering.html"
+    }
+  ],
+  "remaining_gaps": [
+    {
+      "disposition": "Capture at future native qualification; fail closed on mismatch, no live query in audit.",
+      "gap": "Full restored index catalog, table/index statistics, current prepared-plan behavior and exact top10 plan are not archived as a complete current snapshot.",
+      "id": "U1"
+    },
+    {
+      "disposition": "One prospective B2b comparison before modeling.",
+      "gap": "No exact top10 execution latency or native640/exact A/A data; exhaustive truth acquisition cannot substitute.",
+      "id": "U2"
+    },
+    {
+      "disposition": "Defer rather than bundle into first comparison.",
+      "gap": "No economical or qualified predicate-aware traversal/module or partial/partitioned backend integration.",
+      "id": "U3"
+    }
+  ],
+  "saved_plan_summaries": {
+    "unfiltered": {
+      "native480": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 10,
+            "Plan Width": 24,
+            "Plans": [
+              {
+                "Alias": "reviews",
+                "Async Capable": false,
+                "Index Name": "reviews_hnsw",
+                "Node Type": "Index Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 247286,
+                "Plan Width": 24,
+                "Relation Name": "reviews",
+                "Scan Direction": "Forward",
+                "Startup Cost": 2152.04,
+                "Total Cost": 508483.93
+              }
+            ],
+            "Startup Cost": 2152.04,
+            "Total Cost": 2172.51
+          }
+        }
+      ],
+      "native640": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 10,
+            "Plan Width": 24,
+            "Plans": [
+              {
+                "Alias": "reviews",
+                "Async Capable": false,
+                "Index Name": "reviews_hnsw",
+                "Node Type": "Index Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 247286,
+                "Plan Width": 24,
+                "Relation Name": "reviews",
+                "Scan Direction": "Forward",
+                "Startup Cost": 2163.19,
+                "Total Cost": 508483.93
+              }
+            ],
+            "Startup Cost": 2163.19,
+            "Total Cost": 2183.67
+          }
+        }
+      ]
+    },
+    "votes108": {
+      "native480": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 10,
+            "Plan Width": 24,
+            "Plans": [
+              {
+                "Alias": "reviews",
+                "Async Capable": false,
+                "Filter": "(total_votes >= '108'::smallint)",
+                "Index Name": "reviews_hnsw",
+                "Node Type": "Index Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 49363,
+                "Plan Width": 24,
+                "Relation Name": "reviews",
+                "Scan Direction": "Forward",
+                "Startup Cost": 2152.04,
+                "Total Cost": 508112.54
+              }
+            ],
+            "Startup Cost": 2152.04,
+            "Total Cost": 2254.54
+          }
+        }
+      ],
+      "native640": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 10,
+            "Plan Width": 24,
+            "Plans": [
+              {
+                "Alias": "reviews",
+                "Async Capable": false,
+                "Filter": "(total_votes >= '108'::smallint)",
+                "Index Name": "reviews_hnsw",
+                "Node Type": "Index Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 49363,
+                "Plan Width": 24,
+                "Relation Name": "reviews",
+                "Scan Direction": "Forward",
+                "Startup Cost": 2163.19,
+                "Total Cost": 508112.54
+              }
+            ],
+            "Startup Cost": 2163.19,
+            "Total Cost": 2265.69
+          }
+        }
+      ]
+    },
+    "votes32": {
+      "native480": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 10,
+            "Plan Width": 24,
+            "Plans": [
+              {
+                "Alias": "reviews",
+                "Async Capable": false,
+                "Filter": "(total_votes >= '32'::smallint)",
+                "Index Name": "reviews_hnsw",
+                "Node Type": "Index Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 123934,
+                "Plan Width": 24,
+                "Relation Name": "reviews",
+                "Scan Direction": "Forward",
+                "Startup Cost": 2152.04,
+                "Total Cost": 508485.39
+              }
+            ],
+            "Startup Cost": 2152.04,
+            "Total Cost": 2192.89
+          }
+        }
+      ],
+      "native640": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 10,
+            "Plan Width": 24,
+            "Plans": [
+              {
+                "Alias": "reviews",
+                "Async Capable": false,
+                "Filter": "(total_votes >= '32'::smallint)",
+                "Index Name": "reviews_hnsw",
+                "Node Type": "Index Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 123934,
+                "Plan Width": 24,
+                "Relation Name": "reviews",
+                "Scan Direction": "Forward",
+                "Startup Cost": 2163.19,
+                "Total Cost": 508485.39
+              }
+            ],
+            "Startup Cost": 2163.19,
+            "Total Cost": 2204.05
+          }
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "user_phase_name_reconciliation": "User said B1a, already complete; explicitly stated assumption to handle next B2a read-only audit; original B1a unchanged.",
+  "version": "b2a-plan-scope-audit.v1"
+}

@@ -1,0 +1,7 @@
+{
+  "local_python_checks": 9,
+  "module_build": "passed",
+  "qualification_status": "not yet qualified on original graph",
+  "synthetic_seven_filter_native_smoke": "passed",
+  "target_restore_loader": "same inherited loader verified natively in job22635567; new parent target requalification pending"
+}

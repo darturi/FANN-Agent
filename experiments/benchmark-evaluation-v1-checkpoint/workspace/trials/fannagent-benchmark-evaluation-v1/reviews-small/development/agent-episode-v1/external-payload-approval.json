@@ -1,0 +1,11 @@
+{
+  "approved": true,
+  "approved_utc": "2026-11-12T15:13:25.829360+00:00",
+  "destination": "https://api.anthropic.com/v1/messages",
+  "model": "claude-sonnet-5-5",
+  "max_rounds": 3,
+  "max_usd": 15,
+  "first_round_payload_sha256": "2a467c08dd5658035437e98d2871ed1cb51a761358b764f4386a53c31b6a0d61",
+  "scope": "prepared anonymized development features, recall labels, timings and follow-up feedback/proposals; no validation/test data",
+  "user_authorization": "Yes, I approve sending the prepared anonymized development features, recall labels, timings, and follow-up feedback to Anthropic\u2019s Messages API using claude-sonnet-5-5 for up to three rounds and $15 total. Go ahead with the agent rerun."
+}

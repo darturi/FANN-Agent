@@ -1,0 +1,183 @@
+{
+  "status": "retrospective_development_replay_only_not_executed_serving_policy",
+  "rule": "if ANN returns fewer than10, replace with verified exact top10; otherwise retain ANN",
+  "latency_claim": false,
+  "no_new_searches": true,
+  "summary": {
+    "640": {
+      "fallback_count_all_conditions": 541,
+      "fallback_rate": 0.17174603174603176,
+      "all_conditions_recall_floor_pass_in_replay": true,
+      "conditions": {
+        "-1": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9964444444444444
+        },
+        "743": {
+          "fallback_count": 345,
+          "replayed_guarded_recall": 0.9922222222222222
+        },
+        "527": {
+          "fallback_count": 172,
+          "replayed_guarded_recall": 0.9753333333333333
+        },
+        "310": {
+          "fallback_count": 23,
+          "replayed_guarded_recall": 0.9655555555555555
+        },
+        "192": {
+          "fallback_count": 1,
+          "replayed_guarded_recall": 0.9793333333333333
+        },
+        "108": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9891111111111112
+        },
+        "32": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9937777777777778
+        }
+      }
+    },
+    "1000": {
+      "fallback_count_all_conditions": 354,
+      "fallback_rate": 0.11238095238095239,
+      "all_conditions_recall_floor_pass_in_replay": true,
+      "conditions": {
+        "-1": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9984444444444445
+        },
+        "743": {
+          "fallback_count": 254,
+          "replayed_guarded_recall": 0.9857777777777779
+        },
+        "527": {
+          "fallback_count": 97,
+          "replayed_guarded_recall": 0.9768888888888889
+        },
+        "310": {
+          "fallback_count": 3,
+          "replayed_guarded_recall": 0.9797777777777777
+        },
+        "192": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9902222222222222
+        },
+        "108": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9946666666666667
+        },
+        "32": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.996
+        }
+      }
+    },
+    "2048": {
+      "fallback_count_all_conditions": 112,
+      "fallback_rate": 0.035555555555555556,
+      "all_conditions_recall_floor_pass_in_replay": true,
+      "conditions": {
+        "-1": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9993333333333333
+        },
+        "743": {
+          "fallback_count": 95,
+          "replayed_guarded_recall": 0.9848888888888888
+        },
+        "527": {
+          "fallback_count": 17,
+          "replayed_guarded_recall": 0.9855555555555555
+        },
+        "310": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9937777777777778
+        },
+        "192": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9973333333333334
+        },
+        "108": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.998
+        },
+        "32": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9975555555555555
+        }
+      }
+    },
+    "4096": {
+      "fallback_count_all_conditions": 17,
+      "fallback_rate": 0.005396825396825397,
+      "all_conditions_recall_floor_pass_in_replay": true,
+      "conditions": {
+        "-1": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9995555555555555
+        },
+        "743": {
+          "fallback_count": 17,
+          "replayed_guarded_recall": 0.994
+        },
+        "527": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9953333333333333
+        },
+        "310": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9975555555555555
+        },
+        "192": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9991111111111112
+        },
+        "108": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9993333333333333
+        },
+        "32": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9993333333333333
+        }
+      }
+    },
+    "8192": {
+      "fallback_count_all_conditions": 1,
+      "fallback_rate": 0.00031746031746031746,
+      "all_conditions_recall_floor_pass_in_replay": true,
+      "conditions": {
+        "-1": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9997777777777778
+        },
+        "743": {
+          "fallback_count": 1,
+          "replayed_guarded_recall": 0.9982222222222222
+        },
+        "527": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9986666666666666
+        },
+        "310": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9995555555555555
+        },
+        "192": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9995555555555555
+        },
+        "108": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9995555555555555
+        },
+        "32": {
+          "fallback_count": 0,
+          "replayed_guarded_recall": 0.9997777777777778
+        }
+      }
+    }
+  }
+}

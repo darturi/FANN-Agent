@@ -1,0 +1,16 @@
+{
+  "agent_feedback": "query inputs only; no search or outcomes generated",
+  "filters_per_group": 7,
+  "groups": 450,
+  "qualification": "pending Phase 1 protocol and engine adapter checks",
+  "queries": 3150,
+  "queries_sha256": "5ab6d80d06c4bfbff025fd1d1b2191a315182ba0de57ddcd334e84e79061863b",
+  "roles": [
+    "development"
+  ],
+  "schema": "fannagent-development-inputs.v1",
+  "semantic_filter_field": "totalvotes",
+  "source_sha256": "5ca5d0ac83e9431221770bef15fb86369974def2fa27eac37792efcfb1f856f8",
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "vector_representation": "published query float64 converted to float32; serving normalization/formatter must be qualified"
+}

@@ -1,0 +1,26 @@
+{
+  "authorization": "user explicitly requested rerun after guard qualification passes",
+  "driver_sha256": "2deb92fe91f7ed91f476f13d5d1df465bb93ce2ed2af05aac2028433d80edd42",
+  "effort": "high",
+  "evaluator_sha256": "7fc77fca815af4e177ea0613fcfa7e8629da3d506c7b7b8cb0ab7292f218797f",
+  "evidence_sha256": "eb2aae4c9d429963d652020200b4ba1025c9b6ba26c81f78c47fda01a7a4f15a",
+  "external_payload_approval": "required following automatic review rejection; absent, so dispatch is disabled",
+  "feedback_scope": "450 frozen development groups only, grouped fold diagnostics; no validation/test",
+  "inference_geo": "global",
+  "input_token_bound": "serialized request bytes +8192 <=900000; conservative byte/token envelope",
+  "max_output_tokens": 6000,
+  "max_proposals": 9,
+  "max_rounds": 3,
+  "max_usd": 15,
+  "model": "claude-sonnet-5-5",
+  "parent_freeze_sha256": "1d2fad1ef6ce8c8650311aaffc184ae6a1acc1a1fd4dd1dfae702e70408bf3d5",
+  "pricing_source": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+  "rates_usd_per_million": [
+    2,
+    10
+  ],
+  "selection": "live new-program latency qualification required after generation; proxies never final selection",
+  "service_tier": "standard_only",
+  "thinking": "between_tools",
+  "usage_reconciliation_sha256": "182ebc5b4cc8aa81b85260fed68d450078848fc9d65295eecf93c178a9aa539c"
+}

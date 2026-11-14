@@ -1,0 +1,142 @@
+{
+  "scope": "recorded local research usage, not a provider billing/balance statement",
+  "deduplicated_sql_charge_ids": 31,
+  "sql_committed_including_reservations_usd": "2.288928",
+  "sqlite_sources": [
+    {
+      "path": "trials/morevec-reviews-bounded/studies/prepared-20261011T211529Z/run/state.sqlite3",
+      "unique_ids_in_file": 12
+    },
+    {
+      "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T035156Z/run/state.sqlite3",
+      "unique_ids_in_file": 0
+    },
+    {
+      "path": "trials/morevec-reviews-durable-bounded/studies/prepared-20261012T040319Z/run/state.sqlite3",
+      "unique_ids_in_file": 7
+    },
+    {
+      "path": "trials/morevec-reviews-fixed-bounded/studies/prepared-20261012T013157Z/run/state.sqlite3",
+      "unique_ids_in_file": 12
+    }
+  ],
+  "additional_direct_settlements": [
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/episode/attempt-settlement.json",
+      "usd": "0.125714",
+      "sha256": "36f4f5cad11fca3826ba1f0bb3dcf63ff06520785e6fa115d9a7cc601e3e103c"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-2-fold-1/settlement.json",
+      "usd": "0.07279",
+      "sha256": "452591cec2a8d05a6001d806963eceb1d1f4c4e35754b89b197842c46cb82d5d"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-3-fold-4/settlement.json",
+      "usd": "0.084358",
+      "sha256": "c239278c057218bc6e2cfdae0fb507b0e3a3a5efe4ba90a57978857b15d1a316"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-3-fold-3/settlement.json",
+      "usd": "0.064946",
+      "sha256": "99b676d817d1f29f0b00f03d5da0a81797729a2fef91642371038cda8fba2a71"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-3-fold-2/settlement.json",
+      "usd": "0.09572",
+      "sha256": "caccce68c8652c45bcf526944ce8f858cecdfe3d158eeeeddd32307cb3001a27"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-2-fold-0/settlement.json",
+      "usd": "0.107696",
+      "sha256": "17afa5ed7ae4d32ec83b89509a71b934ba2ce6ceef6954d3ccb507ccd398d088"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-1-fold-2/settlement.json",
+      "usd": "0.071712",
+      "sha256": "97635a588561eecd6fdfcbd1e17e6ac020cdf9bfdb4022e0197ec2365a31aac8"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-1-fold-3/settlement.json",
+      "usd": "0.072968",
+      "sha256": "fdd65fab57151979fadf3c8a40695db93a9601081bfcde2d23d99fbd0163e21c"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-1-fold-4/settlement.json",
+      "usd": "0.064034",
+      "sha256": "c7872ef62682353ea1e53718322836368c38d8565e6ff0c7de42120b5f5042ea"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-2-fold-2/settlement.json",
+      "usd": "0.080404",
+      "sha256": "5e25bf00e6b2071a635632f70295f9db366d4b089d9eae44415f546d93340973"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-3-fold-0/settlement.json",
+      "usd": "0.086678",
+      "sha256": "60a88dcda598f6b47a790e3f85c060e8c302f1b57887cbcfc56b4bea7a0fb2dc"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-3-fold-1/settlement.json",
+      "usd": "0.064266",
+      "sha256": "f246d0080bf81942484013e55d5cadfff07c3662fce2fe50bb4b4138fa86e6f2"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-2-fold-3/settlement.json",
+      "usd": "0.082652",
+      "sha256": "d84f04e980c3c64f80c18a917e02ea41abfeb3cd68ef8024d9b72786c97b554c"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-2-fold-4/settlement.json",
+      "usd": "0.085462",
+      "sha256": "b420be03401c344cb675d8a017a13dada57faf6208897fec1bb618f0fcd55b37"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-1-fold-1/settlement.json",
+      "usd": "0.07054",
+      "sha256": "5b5460d4f8161550b79e801736a960451322210337d2440f8149905dc12343ca"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-proposal-v1/extended-22556100-claude-v2/round-1-fold-0/settlement.json",
+      "usd": "0.075468",
+      "sha256": "f5baa756fdff2ce96d437269ef5daa636d0eb46eaf398cf87447989b5bc10f01"
+    }
+  ],
+  "additional_direct_usd": "1.305408",
+  "known_recorded_total_usd": "3.594336",
+  "other_later_budget_snapshots": [
+    {
+      "path": "trials/torch-reviews-results/aggressive-policy-proposals-v1/budget-after.json",
+      "fields": {
+        "allowance_usd": "0",
+        "ceiling_usd": "15",
+        "committed_usd": "5.763778"
+      }
+    },
+    {
+      "path": "trials/torch-reviews-results/aggressive-policy-proposals-v2/budget-after.json",
+      "fields": {
+        "allowance_usd": "0",
+        "ceiling_usd": "15",
+        "committed_usd": "8.78387"
+      }
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-policy-learning-20261019T145148Z.EJ34ct-agent-qualified/budget-after.json",
+      "fields": {
+        "ceiling_usd": "15",
+        "allowance_usd": "0",
+        "committed_usd": "3.174666"
+      }
+    }
+  ],
+  "existing_project_budget_usd": 400,
+  "new_episode_cap_usd": 15,
+  "account_wide_unrecorded_usage": "not observable from local records; no provider admin credential requested",
+  "source_read_policy": "charges tables and cost metadata only; no protected query/outcome state read",
+  "older_reported_cumulative_usd": "4.742988",
+  "conservative_overlapping_recorded_exposure_usd": "26.059638",
+  "overlap_policy": "sum known charges plus all cumulative snapshots, intentionally overcounting overlap to avoid claiming a precise live balance",
+  "new_cap_plus_conservative_recorded_exposure_usd": "41.059638",
+  "within_stated_project_budget_on_recorded_evidence": true
+}

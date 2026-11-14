@@ -1,0 +1,31 @@
+{
+  "status": "blocked_before_paid_dispatch_by_automatic_approval_review",
+  "destination": "https://api.anthropic.com/v1/messages",
+  "provider": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "first_round_payload_bytes": 477075,
+  "first_round_payload_sha256": "2a467c08dd5658035437e98d2871ed1cb51a761358b764f4386a53c31b6a0d61",
+  "first_round_maximum_reserved_usd": "1.030534",
+  "episode_maximum_rounds": 3,
+  "episode_maximum_usd": 15,
+  "payload_categories": [
+    "3150 anonymized development query/filter cases from450 vector groups",
+    "Causal count/distance/gap/turnover observations at checkpoints16/32/64",
+    "Guarded-parent and forced-stop recall labels and measured timing/proxy costs",
+    "Later rounds: generated policies and evaluator feedback from the same development groups"
+  ],
+  "not_in_payload": [
+    "review text",
+    "query vectors",
+    "source query/result IDs",
+    "credentials",
+    "validation/test cases or outcomes"
+  ],
+  "sensitivity": "Nonpublic internal study features, outcomes and timing measurements would leave the workspace for external Anthropic processing.",
+  "approval_needed": "Explicit approval to transmit this prepared payload and bounded same-scope follow-up feedback/proposals to this destination for up to3 requests/$15",
+  "review_rejection": "User authorized agent rerun, but automatic review requires explicit authorization of this specific nonpublic payload egress to Anthropic. No bypass attempted.",
+  "paid_generation_calls": 0,
+  "preflight_model_get": "passed; unpaid",
+  "guard_qualification": "passed including scheduler COMPLETED0:0",
+  "source_reviewable_payload": "round-1-request.preview.json"
+}

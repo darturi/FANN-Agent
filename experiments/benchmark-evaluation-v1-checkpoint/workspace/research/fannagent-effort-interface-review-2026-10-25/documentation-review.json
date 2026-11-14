@@ -1,0 +1,63 @@
+{
+  "contract_count_arithmetic": "passed",
+  "evidence_source_decision_ids_complete": {
+    "decisions": 36,
+    "evidence": 101,
+    "sources": 32
+  },
+  "execution_correctness_or_performance_established": false,
+  "existing_b1b_formal_verdict_unchanged": "measurement_inconclusive",
+  "immutable_files_verified": 685,
+  "immutable_mismatches": [],
+  "index_prior_content_preserved_exactly": true,
+  "links": {
+    "agent/docs/experiments/README.md": {
+      "local_links_checked": 235,
+      "reference_definitions": 0
+    },
+    "research/fannagent-effort-interface-review-2026-10-25.md": {
+      "local_links_checked": 12,
+      "reference_definitions": 0
+    },
+    "research/fannagent-native-effort-midpoint-v1-design-2026-10-25.md": {
+      "local_links_checked": 5,
+      "reference_definitions": 0
+    },
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": {
+      "local_links_checked": 106,
+      "reference_definitions": 133
+    }
+  },
+  "missing_links": [],
+  "prior_hash_checks": {
+    "code_and_source_files_sha256_before_document_updates": {
+      "files": 324,
+      "mismatches": []
+    },
+    "consulted_input_files_sha256": {
+      "files": 29,
+      "mismatches": []
+    },
+    "historical_ef_raw_and_saved_output_files_sha256": {
+      "files": 128,
+      "mismatches": []
+    }
+  },
+  "recorded_at_utc": "2026-10-25T16:12:49.559310+00:00",
+  "scope": "Saved-file hashes, Markdown links/references/tables and design arithmetic only; no execution tests or scientific qualification.",
+  "sealed_files_verified": 146,
+  "status": "passed",
+  "table_header_failures": {
+    "agent/docs/experiments/README.md": [],
+    "research/fannagent-effort-interface-review-2026-10-25.md": [],
+    "research/fannagent-native-effort-midpoint-v1-design-2026-10-25.md": [],
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": []
+  },
+  "undefined_references": {
+    "agent/docs/experiments/README.md": [],
+    "research/fannagent-effort-interface-review-2026-10-25.md": [],
+    "research/fannagent-native-effort-midpoint-v1-design-2026-10-25.md": [],
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": []
+  },
+  "version": "effort-interface-review-documentation.v1"
+}

@@ -1,0 +1,36 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "log": "attempt-1.log",
+      "reason": "Audit asserted every runtime feature was server_observed; query_predicate_threshold legitimately uses validated_query_predicate provenance. Corrected audit assertion; no evidence or scope changed. No model/DB/network operations occurred.",
+      "script": "attempt-1.py",
+      "script_sha256": "4ad5c355898d09816178e0ffdc8ae115152eca2b145125d7ae888db92031c308"
+    },
+    {
+      "attempt": 2,
+      "log": "attempt-2.log",
+      "reason": "Older query inputs name groups with catalog IDs, while evidence uses vector aliases. Corrected identity join to verify catalog ID plus exact query/vector equality against the newer input; no evidence, outcome or scope changed.",
+      "script": "attempt-2.py",
+      "script_sha256": "6f0cddcf13405cd381f4a1b6f4d57e6f5439d68c797db6730bdaf73149f01fba"
+    },
+    {
+      "attempt": 3,
+      "log": "attempt-3.log",
+      "reason": "Pilot reference states are a profile-keyed dictionary; later P1/P2 references use a light19 list. Audit now verifies all three pilot profiles explicitly and the later light19 lists, plus actual light19 prefix digests. No scientific data changed.",
+      "script": "attempt-3.py",
+      "script_sha256": "31fe92403b58616643d9819bb7fe3d1212ea231ac29a2d26f99396675bedc228"
+    },
+    {
+      "attempt": 4,
+      "log": "attempt-4.log",
+      "reason": "Pilot uses compact canonical JSON prefix hashing; P1/P2 use indented JSON plus newline. Audit now reconstructs each source format explicitly. This was a serialization mismatch, not an observed trajectory or outcome mismatch; no evidence changed.",
+      "script": "attempt-4.py",
+      "script_sha256": "7e3fe86d1bdad67b45bb7b4f2c356119c4727ab533a26caa4ef07c3beec138a1"
+    }
+  ],
+  "audit_script_sha256_before_execution": "278132a6737c64cf9de2ffa76b5010af34dd6f598fecc17ade5a16a71a0b5f75",
+  "contract_sha256": "e5570d5023bab53b37046d206ceec86c04aadfe298d8c465c863fff7bc5a31cf",
+  "current_attempt": 5,
+  "operations": "deterministic saved-data validation only"
+}

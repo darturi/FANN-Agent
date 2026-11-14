@@ -1,0 +1,167 @@
+{
+  "all_returned_are_exact_top10": true,
+  "evidence_limit": "Only native640 checkpoint traces are available; no checkpoint/local-selectivity trace at8192 and no global candidate ranks. Cannot prove which inner search stage omitted the two neighbors.",
+  "exact": [
+    [
+      83994,
+      0.47211146354675293
+    ],
+    [
+      18636,
+      0.4787473678588867
+    ],
+    [
+      2971,
+      0.4923131465911865
+    ],
+    [
+      100299,
+      0.4985499978065491
+    ],
+    [
+      14908,
+      0.49885714054107666
+    ],
+    [
+      119247,
+      0.5046403408050537
+    ],
+    [
+      7338,
+      0.5141754448413849
+    ],
+    [
+      11020,
+      0.5151025806397966
+    ],
+    [
+      33679,
+      0.5161810517311096
+    ],
+    [
+      10317,
+      0.5171828578223493
+    ]
+  ],
+  "history": [
+    {
+      "complete": false,
+      "ef_search": 640,
+      "id": "reviews-clean-v0196-votes743",
+      "output": [],
+      "recall": 0.0,
+      "request_ns": 23188049,
+      "threshold": 743
+    },
+    {
+      "complete": false,
+      "ef_search": 1000,
+      "id": "reviews-clean-v0196-votes743",
+      "output": [],
+      "recall": 0.0,
+      "request_ns": 31215408,
+      "threshold": 743
+    },
+    {
+      "complete": false,
+      "ef_search": 2048,
+      "id": "reviews-clean-v0196-votes743",
+      "output": [
+        [
+          83994,
+          0.47211146354675293
+        ],
+        [
+          18636,
+          0.4787473678588867
+        ]
+      ],
+      "recall": 0.2,
+      "request_ns": 58359245,
+      "threshold": 743
+    },
+    {
+      "complete": false,
+      "ef_search": 4096,
+      "id": "reviews-clean-v0196-votes743",
+      "output": [
+        [
+          83994,
+          0.47211146354675293
+        ],
+        [
+          18636,
+          0.4787473678588867
+        ],
+        [
+          2971,
+          0.4923131465911865
+        ],
+        [
+          100299,
+          0.4985499978065491
+        ],
+        [
+          14908,
+          0.49885714054107666
+        ]
+      ],
+      "recall": 0.5,
+      "request_ns": 101385897,
+      "threshold": 743
+    },
+    {
+      "complete": false,
+      "ef_search": 8192,
+      "id": "reviews-clean-v0196-votes743",
+      "output": [
+        [
+          83994,
+          0.47211146354675293
+        ],
+        [
+          18636,
+          0.4787473678588867
+        ],
+        [
+          2971,
+          0.4923131465911865
+        ],
+        [
+          100299,
+          0.4985499978065491
+        ],
+        [
+          14908,
+          0.49885714054107666
+        ],
+        [
+          119247,
+          0.5046403408050537
+        ],
+        [
+          11020,
+          0.5151025806397966
+        ],
+        [
+          10317,
+          0.5171828578223493
+        ]
+      ],
+      "recall": 0.8,
+      "request_ns": 183971051,
+      "threshold": 743
+    }
+  ],
+  "id": "reviews-clean-v0196-votes743",
+  "missing_exact_neighbors": [
+    [
+      7338,
+      0.5141754448413849
+    ],
+    [
+      33679,
+      0.5161810517311096
+    ]
+  ]
+}

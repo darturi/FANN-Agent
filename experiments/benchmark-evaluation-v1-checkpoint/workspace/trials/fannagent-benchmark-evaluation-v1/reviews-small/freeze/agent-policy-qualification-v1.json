@@ -1,0 +1,13 @@
+{
+  "agent_plan_sha256": "60b4cd1099d0cb3894e710cf8a6af1fcca212f336ece106c4c4e19cbcdac77ce",
+  "archive_sha256": "46d7f87b7c0ebedeaab5c766dda912df1a02f1a730800884aec8fc1c099876bf",
+  "binding_sha256": "b3c85a6e685e73beaca2c07f8f87d8440298b0150493b19925e1b99424c42fc1",
+  "development_groups": 450,
+  "module_sha256": "80f84dbace4c2af87894179abf1a96183a6c0bcd2940d0c07589dec01a2e6095",
+  "parent_freeze_sha256": "1d2fad1ef6ce8c8650311aaffc184ae6a1acc1a1fd4dd1dfae702e70408bf3d5",
+  "policies": 3,
+  "proposal_pool_freeze_sha256": "d3a36ea9c97276b024b04059c76c1c7612ba8047ada4018975634d71a2a0fa75",
+  "provider_calls": 0,
+  "status": "sealed development-only qualification/timing kit; original-graph gate pending",
+  "validation_test_outcomes_opened": false
+}

@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "path": "harness/data/morevec-reviews-small/manifest.yaml",
+      "bytes": 1192,
+      "sha256": "de24e4f7918b1815dd0c8a7468761ac165cff0dbe1524436cee1a80b21e62502"
+    },
+    {
+      "path": "harness/data/morevec-reviews-small/records.parquet",
+      "bytes": 707479292,
+      "sha256": "01aca665a5668c73e017d98e535d33e64e7d2d8c64880575b19385cc920478b6"
+    },
+    {
+      "path": "harness/data/morevec-reviews-small-v2/manifest.yaml",
+      "bytes": 1356,
+      "sha256": "1f52199a5d36cda435f7b1268eea92c81808a2a2720100d9599c28e5a9de5976"
+    },
+    {
+      "path": "harness/data/morevec-reviews-small-v2/records.parquet",
+      "bytes": 713051165,
+      "sha256": "f8b0ec1bf12775c104337726f30b47ce6e2bde7ebb942836b8235926b66be1f5"
+    },
+    {
+      "path": "harness/src/fannbench/datasets/morevec.py",
+      "sha256": "0fcfbd6c2f05acee3b97733d82f026df4f0cee89359a6ed3a4246875e063cb40"
+    },
+    {
+      "path": "harness/src/fannbench/data.py",
+      "sha256": "23ff184a727733c79b6da904c77e621a1af7f102318e381539d8214875790973"
+    },
+    {
+      "path": "agent/experiments/reviews-persistent-batch-v1/qualified-confirmation/freeze.json",
+      "sha256": "97356451b79ee0fbfec82018efb8e39fca38d4bf384741a03d63d0938e212c31"
+    },
+    {
+      "path": "agent/experiments/reviews-persistent-batch-v1/qualified-confirmation/stage_inputs.py",
+      "sha256": "0a24ad56417c4e75051c448069fbb59ad51275f5bec1647ad66384fe8e735039"
+    },
+    {
+      "path": "research/fannagent-controlled-reviews-batch-manifest-2026-11-08.json",
+      "sha256": "cd3b4d1344f7e15ec67c771cce8c427e1e96165db043c7397324d7e45ae68d63"
+    }
+  ],
+  "id_mapping": {
+    "corpus_rows": 247286,
+    "unique_source_ids": 247286,
+    "canonical_ids": "zero-based source row order; verified against v2 Parquet",
+    "queries_in_corpus": 1000,
+    "self_match": "Query source IDs are present in corpus. Preserve eligibility; no self-match removal introduced. Official ground-truth self-match/tie semantics require Phase 2 qualification."
+  },
+  "database_identity": "Historical original graph is referenced by existing freeze/kit manifests. No database started or restored; physical PG backup/index identity must be requalified before execution.",
+  "ground_truth": "HDF5 rid is query identity; rids (1000,100) are source-ID neighbors; distances (1000,100). Only schema was inspected, not held-out neighbor/distance outcomes."
+}

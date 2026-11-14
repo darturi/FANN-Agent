@@ -1,0 +1,32 @@
+{
+  "agent_within_one_percent_ties": [
+    "conservative_a",
+    "moderate_b_fixed"
+  ],
+  "all_six_filters_retained": true,
+  "all_three_zero_recall_losses_to_raw_native640": true,
+  "assessment_code_sha256": "cd61973769bd8f6f5276d3eb230d9bc1240f1f190719a3686e1822995af16aac",
+  "assessment_sha256": "eaf1432ae74faefb6029d5aa5678ed29c67da485d304dd1cca6508e171145054",
+  "attempts": 150570,
+  "confirmed_practical_success": false,
+  "exact_serving_calls": 0,
+  "final_policy_selected": false,
+  "groups": 450,
+  "job_id": "23045686",
+  "matched_quality_native_nominee": "native640",
+  "nominal_development_agent_nominee": "conservative_a",
+  "offline_reference_exact_queries": 3150,
+  "performance_promotion": false,
+  "quality_family_results": 28350,
+  "reason": "Native A/B point gaps2.20%-4.50% across conditions; other large A/B effects; noop6.54% faster without stopping; causal timing attribution not established.",
+  "receipt_sha256": "8113456eefca63fa2dcc32fae47eb6f26a40a6800b105df8aab33974ae3f83d3",
+  "recommendation": "Prepare one fixed development-only timing-attribution diagnostic before any holdout access; unchanged policies, graph, all filters and unguarded scoring. Retain this allocation.",
+  "report_sha256": "20f5778b34564f9617f8726efd832b066c28c0502cffc952481408d51e2fc045",
+  "scheduler_evidence_sha256": "98733f082a79cab4d5a392bac9cf7e2f1eef9d162f9a65b2069385814313040b",
+  "scheduler_gate": "passed_user_reported_COMPLETED_0:0",
+  "status": "unguarded_runtime_verified_performance_inconclusive",
+  "timed_requests": 113400,
+  "validation_test_outcomes_opened": false,
+  "verification_sha256": "8383e0845be3e32d1f2dcf192e4ef079939a946709db4ae6d87a4357138c5021",
+  "warmups": 2520
+}

@@ -158,7 +158,7 @@ def make_backend(runner, base, meter, bundle, work):
     return rb_calibration.make_backend(runner, DiagnosticReader, meter, bundle, work)
 
 
-def server_timings(log, readers):
+def server_timings(log, readers, *, requests_per_reader=rb_persistent.REQUESTS):
     """Read numeric timings only, with one extended-query sequence per native request."""
     events = defaultdict(list)
     pending = {}
@@ -187,7 +187,7 @@ def server_timings(log, readers):
     require(not pending, "Incomplete server duration sequence")
     require(
         set(events) == {pid for pid, enabled in readers.items() if enabled}
-        and all(len(rows) == rb_persistent.REQUESTS for rows in events.values()),
+        and all(len(rows) == requests_per_reader for rows in events.values()),
         "Expected one server timing sequence per logged request",
     )
     return events

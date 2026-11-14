@@ -1,0 +1,68 @@
+{
+  "analysis_date": "2026-10-24",
+  "decision_rule": {
+    "close_or_narrow": "If incompatible identities or permissions prevent a valid join, exclude that source/scope transparently; never synthesize labels.",
+    "no_modeling_run_in_this_audit": true,
+    "proceed_to_modeling": "Identity-consistent decision-time features and actual outcomes cover every reachable allowed first-stop choice for the declared restricted model task, with all missing/unavailable states explicit and group leakage controlled. This permits a separately frozen development comparison, not new policy timing or independent confirmation.",
+    "targeted_measurements": "If a proposed model information/action/cost scope lacks actual outcomes or qualified feature/cost evidence, name the exact gaps and minimal future acquisition scope. Do not require blanket reacquisition if a supported restricted comparison can proceed."
+  },
+  "experiment_register_id": "NEXT-INFO-01",
+  "frozen_utc": "2026-10-24T22:50:05.213373+00:00",
+  "kind": "data_only_audit_no_experiment",
+  "local_ceiling": {
+    "database_calls": 0,
+    "memory_gib": 4,
+    "model_fits": 0,
+    "provider_calls": 0,
+    "simultaneous_processes": 1,
+    "source_bytes_read_gib": 16,
+    "torch_allocations": 0,
+    "wall_minutes": 60
+  },
+  "operations": [
+    "hash and identity checks",
+    "deterministic joins/counts and existing-output consistency checks",
+    "feature availability/type/causal-prefix audit",
+    "observed versus unknown outcome coverage by profile/filter/stage",
+    "existing acquisition cost coverage; no new scoring/fit/search",
+    "group overlap/exposure accounting without exporting query values"
+  ],
+  "outputs": [
+    "coverage/identity/feature JSON and human-readable report",
+    "input hash inventory and preservation checks",
+    "audit implementation/source pin for reproducibility",
+    "post-audit receipt",
+    "roadmap/index progress and gate update"
+  ],
+  "owner": "Codex",
+  "phase": "P3a",
+  "prohibited": [
+    "model fitting or hyperparameter search",
+    "new policy simulation/search or selection",
+    "new database/native calls, local or Torch",
+    "provider/network calls or remote submissions",
+    "new labels, interpolation or inferred counterfactual stop outcomes",
+    "protected evaluation access",
+    "rewriting frozen inputs or old receipts"
+  ],
+  "reviewer": "Codex evidence review; user receives permanent report",
+  "scope": {
+    "excluded": "Raw consumed-confirmation records, unexecuted 60-vector selective confirmation query values, 37 reserved-vector values, canonical calibration/final-test workloads, provider transcripts/credentials and unrelated workloads. Metadata receipt counts/hashes may be read without opening their raw protected data.",
+    "permitted_inputs": "Development-only trajectories, stop proofs, acquisition pairs, qualification records, sealed local definitions/profiles/manifests, raw locks, existing analysis/receipts and exposure metadata from the eight named source families.",
+    "primary": "Previously exposed 200 development vectors / 600 cases from feature-data and selective studies; original 100-vector four-condition subset is audited separately.",
+    "retained_execution": "Original execution. Preserve original/P2a/P2b and P2c conditioned timing scopes separately."
+  },
+  "source_receipt_sha256": {
+    "agent/docs/verification/activation-timing-calibration-v1-postrun.json": "533adf3dd53e10966c7edb74fbfd570e0e3bdbe8127ccc2f54f393bb893e6aec",
+    "agent/docs/verification/admission-profile-identity-v1-postrun.json": "ba3f5116ab2583d61fac024dbb899112803fcc7fad18687a9ed64bc5f374a88f",
+    "agent/docs/verification/execution-cost-attribution-v1-postrun.json": "16647a2486df6f191a764f4600e17ee2437f01352edc76eb3646490ca3b90378",
+    "agent/docs/verification/feature-data-ablation-v1-postrun.json": "04f1ca692bfae165761fa09be739cdec45a6b0dd49d26b8598b2df8de80ff620",
+    "agent/docs/verification/four-condition-training-v1-postrun.json": "a313e38cb694548d86598cae4b6d18ed933b1766610193f3ebbe049301cda94d",
+    "agent/docs/verification/offline-first-stop-fitter-v1-postrun.json": "a48409becdc34e6cf09c6a63fafce2711cdd663b81e58e7dd5a8236e290252ec",
+    "agent/docs/verification/prepared-policy-lifecycle-v1-postrun.json": "5b2449a02ec55ad4c4670e210dbff9ab51ec9b50a9b7c2312306c206826bfdb5",
+    "agent/docs/verification/selective-agent-v1-pilot-postrun.json": "f5ee1f8a9a5090b687d619487c9a02883441c8e1e993673b030b2ff230e04d91"
+  },
+  "stop_rule": "One bounded data-only audit. Preserve failures/unknowns. No experiment, modeling, runtime change or automatic measurement follows. Freeze any subsequent modeling/acquisition contract separately.",
+  "timezone": "America/New_York",
+  "version": "p3a-existing-evidence-audit.v1"
+}

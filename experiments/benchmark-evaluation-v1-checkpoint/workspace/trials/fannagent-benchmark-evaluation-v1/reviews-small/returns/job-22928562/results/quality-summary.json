@@ -1,0 +1,184 @@
+{
+  "-1": {
+    "broad_c_fixed": {
+      "fallbacks": 0,
+      "mean_recall": 0.9964444444444444,
+      "queries": 450,
+      "stops": 72
+    },
+    "conservative_a": {
+      "fallbacks": 0,
+      "mean_recall": 0.9964444444444444,
+      "queries": 450,
+      "stops": 98
+    },
+    "moderate_b_fixed": {
+      "fallbacks": 0,
+      "mean_recall": 0.9964444444444444,
+      "queries": 450,
+      "stops": 102
+    },
+    "native": {
+      "fallbacks": 0,
+      "mean_recall": 0.9964444444444444,
+      "queries": 450,
+      "stops": 0
+    }
+  },
+  "108": {
+    "broad_c_fixed": {
+      "fallbacks": 0,
+      "mean_recall": 0.9891111111111112,
+      "queries": 450,
+      "stops": 56
+    },
+    "conservative_a": {
+      "fallbacks": 0,
+      "mean_recall": 0.9891111111111112,
+      "queries": 450,
+      "stops": 0
+    },
+    "moderate_b_fixed": {
+      "fallbacks": 0,
+      "mean_recall": 0.9891111111111112,
+      "queries": 450,
+      "stops": 29
+    },
+    "native": {
+      "fallbacks": 0,
+      "mean_recall": 0.9891111111111112,
+      "queries": 450,
+      "stops": 0
+    }
+  },
+  "192": {
+    "broad_c_fixed": {
+      "fallbacks": 1,
+      "mean_recall": 0.9793333333333333,
+      "queries": 450,
+      "stops": 28
+    },
+    "conservative_a": {
+      "fallbacks": 1,
+      "mean_recall": 0.9793333333333333,
+      "queries": 450,
+      "stops": 0
+    },
+    "moderate_b_fixed": {
+      "fallbacks": 1,
+      "mean_recall": 0.9793333333333333,
+      "queries": 450,
+      "stops": 12
+    },
+    "native": {
+      "fallbacks": 1,
+      "mean_recall": 0.9793333333333333,
+      "queries": 450,
+      "stops": 0
+    }
+  },
+  "310": {
+    "broad_c_fixed": {
+      "fallbacks": 23,
+      "mean_recall": 0.9655555555555555,
+      "queries": 450,
+      "stops": 13
+    },
+    "conservative_a": {
+      "fallbacks": 23,
+      "mean_recall": 0.9655555555555555,
+      "queries": 450,
+      "stops": 0
+    },
+    "moderate_b_fixed": {
+      "fallbacks": 23,
+      "mean_recall": 0.9655555555555555,
+      "queries": 450,
+      "stops": 0
+    },
+    "native": {
+      "fallbacks": 23,
+      "mean_recall": 0.9655555555555555,
+      "queries": 450,
+      "stops": 0
+    }
+  },
+  "32": {
+    "broad_c_fixed": {
+      "fallbacks": 0,
+      "mean_recall": 0.9937777777777778,
+      "queries": 450,
+      "stops": 181
+    },
+    "conservative_a": {
+      "fallbacks": 0,
+      "mean_recall": 0.9937777777777778,
+      "queries": 450,
+      "stops": 43
+    },
+    "moderate_b_fixed": {
+      "fallbacks": 0,
+      "mean_recall": 0.9937777777777778,
+      "queries": 450,
+      "stops": 95
+    },
+    "native": {
+      "fallbacks": 0,
+      "mean_recall": 0.9937777777777778,
+      "queries": 450,
+      "stops": 0
+    }
+  },
+  "527": {
+    "broad_c_fixed": {
+      "fallbacks": 172,
+      "mean_recall": 0.9753333333333333,
+      "queries": 450,
+      "stops": 7
+    },
+    "conservative_a": {
+      "fallbacks": 172,
+      "mean_recall": 0.9753333333333333,
+      "queries": 450,
+      "stops": 0
+    },
+    "moderate_b_fixed": {
+      "fallbacks": 172,
+      "mean_recall": 0.9753333333333333,
+      "queries": 450,
+      "stops": 0
+    },
+    "native": {
+      "fallbacks": 172,
+      "mean_recall": 0.9753333333333333,
+      "queries": 450,
+      "stops": 0
+    }
+  },
+  "743": {
+    "broad_c_fixed": {
+      "fallbacks": 345,
+      "mean_recall": 0.9922222222222222,
+      "queries": 450,
+      "stops": 0
+    },
+    "conservative_a": {
+      "fallbacks": 345,
+      "mean_recall": 0.9922222222222222,
+      "queries": 450,
+      "stops": 0
+    },
+    "moderate_b_fixed": {
+      "fallbacks": 345,
+      "mean_recall": 0.9922222222222222,
+      "queries": 450,
+      "stops": 0
+    },
+    "native": {
+      "fallbacks": 345,
+      "mean_recall": 0.9922222222222222,
+      "queries": 450,
+      "stops": 0
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "archive_sha256": "10109ccce18af22e0cad5ba8f1431286ce1917956898f438c7cf80fc01ba8cf6",
+  "capsule_hashes_and_source_parity": "passed",
+  "development_groups": 450,
+  "grid": [
+    640,
+    1000,
+    2048,
+    4096,
+    8192
+  ],
+  "module_reused_from_parent_sweep": true,
+  "new_remote_jobs": 0,
+  "original_graph_guard_qualified": false,
+  "postgres_synthetic_conditions": 7,
+  "provider_calls": 0,
+  "python_syntax": "passed",
+  "quality_rows_planned": 15750,
+  "shared_exported_snapshot_smoke": "passed",
+  "shared_guard_both_paths": true,
+  "short_and_full_guard_branches_native_and_noop": "passed",
+  "timed_requests_planned": 126000,
+  "unit_checks": 7,
+  "validation_test_queries": 0
+}

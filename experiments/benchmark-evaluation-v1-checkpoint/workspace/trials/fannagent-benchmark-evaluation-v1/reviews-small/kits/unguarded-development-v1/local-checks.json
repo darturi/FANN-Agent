@@ -1,0 +1,9 @@
+{
+  "all_seven_condition_synthetic_postgresql_smoke": "passed; short native/noop/policy outputs unchanged; exact only scores separately",
+  "compiled_c_first_stop_cases": 9450,
+  "holdout_access": false,
+  "module": "unchanged x86_64 module qualified in job22928562",
+  "original_graph_unguarded_timing": "pending",
+  "reader_capacity": "18 concurrent readers plus keeper passed under max_connections32",
+  "unguarded_serving_unit_checks": 10
+}

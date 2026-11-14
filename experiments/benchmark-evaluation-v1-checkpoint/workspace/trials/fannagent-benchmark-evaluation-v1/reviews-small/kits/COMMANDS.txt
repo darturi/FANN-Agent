@@ -1,0 +1,55 @@
+DEVELOPMENT-ONLY QUALIFICATION — VERSION 2
+No provider calls; no validation or test queries.
+4 physical CPUs, 48 GiB, 3 hours, at most 40,000 search attempts.
+The original graph and prepared backup are restored privately and preserved.
+Version 1 was an undispatched local packaging draft. Use version 2 only.
+
+1. ON YOUR MAC — open your working SFTP connection:
+
+sftp dar579@login.torch.hpc.nyu.edu
+
+Then paste these two SFTP commands:
+
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v2.tar.gz /home/dar579/development-runtime-v2.tar.gz
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v2.tar.gz.sha256 /home/dar579/development-runtime-v2.tar.gz.sha256
+
+2. IN YOUR EXISTING TORCH SSH SESSION — verify, stage, and submit once:
+
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c development-runtime-v2.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/development-runtime-v2
+tar -xzf development-runtime-v2.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/development-runtime-v2
+bash submit.sh
+)
+
+The script checks the runtime/backup paths and scheduler dry run before dispatch.
+It prints the job ID. Send the output to Codex; do not resubmit after an error.
+
+3. STATUS ON TORCH:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/development-runtime-v2
+job=$(cat job-id)
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+/opt/slurm/bin/squeue --local -j "$job"
+tail -n 12 "slurm-$job.out"
+
+A completed job may be absent from squeue; sacct is authoritative for completion.
+If it fails, retain the return and stderr. Send the output; do not repeat it.
+
+4. AFTER THE JOB FINISHES, ON TORCH — print the two download commands:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/development-runtime-v2
+job=$(cat job-id)
+printf 'get %s/run-%s/qualification-%s.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz\n' "$PWD" "$job" "$job" "$job"
+printf 'get %s/run-%s/qualification-%s.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz.sha256\n' "$PWD" "$job" "$job" "$job"
+
+Paste those two generated get commands into your Mac SFTP session.
+Codex will verify the archive, reconstruct all 3,150 development results locally,
+check job completion/integrity, and only then mark the runtime qualified.
+
+A returned receipt is not yet a policy success result. Native incomplete or low-
+recall outputs are retained as development findings, not silently excluded.

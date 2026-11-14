@@ -1,0 +1,89 @@
+{
+  "nominee": [
+    "broad_c_fixed"
+  ],
+  "metrics": {
+    "native": {
+      "equal_scalar_mean_ms": 19.27489252601852,
+      "scalar_ratio": 1.0,
+      "scalar_reduction_percent": 0.0,
+      "conditional_group_bootstrap_scalar_ratio_95pct": [
+        1.0,
+        1.0
+      ]
+    },
+    "conservative_a": {
+      "equal_scalar_mean_ms": 19.25148346222222,
+      "scalar_ratio": 0.998785515210282,
+      "scalar_reduction_percent": 0.12144847897179734,
+      "conditional_group_bootstrap_scalar_ratio_95pct": [
+        0.9883781872644241,
+        1.0091258280906175
+      ]
+    },
+    "moderate_b_fixed": {
+      "equal_scalar_mean_ms": 19.15375351787037,
+      "scalar_ratio": 0.9937151915122417,
+      "scalar_reduction_percent": 0.6284808487758253,
+      "conditional_group_bootstrap_scalar_ratio_95pct": [
+        0.9856686895977538,
+        1.0018195142652517
+      ]
+    },
+    "broad_c_fixed": {
+      "equal_scalar_mean_ms": 18.65907655648148,
+      "scalar_ratio": 0.9680508740214364,
+      "scalar_reduction_percent": 3.1949125978563586,
+      "conditional_group_bootstrap_scalar_ratio_95pct": [
+        0.9579896560782429,
+        0.9777529694211782
+      ]
+    }
+  },
+  "phase_attempts": {
+    "timing.jsonl.ann": 50400,
+    "timing.jsonl.completion_exact": 8656,
+    "warmup.jsonl.ann": 1120,
+    "warmup.jsonl.completion_exact": 216
+  },
+  "machine": {
+    "architecture": "x86_64",
+    "cpu_model": [
+      "INTEL(R) XEON(R) PLATINUM 8592+"
+    ],
+    "hostname": "cs640.hpc.nyu.edu"
+  },
+  "bad_ab_intervals": {
+    "native": [
+      "-1",
+      "527",
+      "310",
+      "192",
+      "108",
+      "32"
+    ],
+    "conservative_a": [
+      "-1",
+      "743",
+      "310",
+      "192",
+      "108",
+      "32"
+    ],
+    "moderate_b_fixed": [
+      "-1",
+      "527",
+      "310",
+      "192",
+      "32"
+    ],
+    "broad_c_fixed": [
+      "-1",
+      "743",
+      "310",
+      "192",
+      "108",
+      "32"
+    ]
+  }
+}

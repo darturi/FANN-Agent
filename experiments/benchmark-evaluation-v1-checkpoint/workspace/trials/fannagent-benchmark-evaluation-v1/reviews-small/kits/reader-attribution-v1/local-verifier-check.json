@@ -1,0 +1,14 @@
+{
+  "exact_scoring_only": true,
+  "fixture": "full-size fabricated timing/counter return from development outputs; no real performance claim",
+  "full_reader_role_CPU_crossover_verified": true,
+  "incorrect_CPU_assignment_rejected": true,
+  "instrumented_primary_timing_rejected": true,
+  "paired_analysis_executed": true,
+  "status": "passed",
+  "timing_records": 630000,
+  "total_attempts": 684950,
+  "validation_test_outcomes_opened": false,
+  "warmups": 14000,
+  "work_records": 15750
+}

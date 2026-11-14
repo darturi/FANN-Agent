@@ -1,0 +1,10 @@
+{
+  "approved_payload_matches_preview": true,
+  "driver_evaluator_evidence_hashes": "passed",
+  "no_prior_attempts": true,
+  "approval_sha256": "c90ed3d83ae834bb58922041b2ce3dc472d08f2b807b24bcf884299cd0859ff0",
+  "episode_contract_sha256": "911baabc5e5c4274f237f324c266a766f1749ce07f0364368cbce1155dc41c03",
+  "model": "claude-sonnet-5-5",
+  "max_rounds": 3,
+  "max_usd": 15
+}

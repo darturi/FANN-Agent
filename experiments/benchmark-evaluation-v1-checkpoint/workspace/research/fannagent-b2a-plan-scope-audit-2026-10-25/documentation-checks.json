@@ -1,0 +1,628 @@
+{
+  "checks": {
+    "B2a_progress_complete": true,
+    "B2b_planned_and_gate_pending": true,
+    "all_907_immutable_hashes_match": true,
+    "local_link_targets_valid": 147,
+    "new_context_metadata_acquisition": false,
+    "new_effort_or_index_run": false,
+    "proposed_ceiling_not_assigned": {
+      "allocations": 1,
+      "backend_search_attempts_maximum": 50000,
+      "cases": 600,
+      "confirmation_queries": 0,
+      "cpus": 4,
+      "exposed_vectors": 200,
+      "fits": 0,
+      "memory_gib": 32,
+      "new_vectors": 0,
+      "provider_calls": 0,
+      "wall_seconds": 7200,
+      "work_deadline_seconds": 6600
+    },
+    "qualified_router_or_speed_claim": false,
+    "roadmap_evidence_refs": 119,
+    "roadmap_primary_refs": 38,
+    "six_saved_native_plan_shapes_checked": true,
+    "source_truth_vs_LIMIT_distinction": true
+  },
+  "code_or_experiment_test_claim": false,
+  "document_sha256": {
+    "agent/docs/experiments/README.md": "dd4bc55fbe240f844cd6db1ee94c580f7aebb6078a14de23cf34d8e878a7878c",
+    "research/fannagent-b2a-plan-scope-audit-2026-10-25.md": "33286593cc9d3e4ff66c43e091a0fbfd22a8869962d94c7ab397450f813245e9",
+    "research/fannagent-performance-research-roadmap-2026-10-22.md": "5e1f0abcde822ac0e43498399b5f17e121d3c6cff7947c5f6d144e6c931d989f"
+  },
+  "immutable_paths_verified": 907,
+  "local_link_targets": [
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "research/fannagent-b1a-search-effort-audit-2026-10-24.md"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25/audit.json"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25/input-and-source-inventory.json"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "agent/docs/verification/b2a-plan-scope-audit-v1.json"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25/documentation-checks.json"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "research/fannagent-performance-research-roadmap-2026-10-22.md"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1/frozen/vendor/fannagent_pgvector/backend.py"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1/frozen/reference_backend.py"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1/frozen/legacy_execution.py"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/run/qualification.json"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "trials/torch-reviews-size-sweep/database.py"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "agent-pgvector/src/fannagent_pgvector/backend.py"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "agent-pgvector/src/fannagent_pgvector/engine/patches/0007-predicate-context.patch"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "agent-pgvector/src/fannagent_pgvector/engine/postgresql-17.11-executor.patch"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "trials/torch-reviews-first/sources/pgvector/src/hnswutils.c"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "trials/torch-reviews-first/sources/pgvector/src/hnswscan.c"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "agent/src/fannagent/snapshot.py"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "agent-pgvector/src/fannagent_pgvector/native/filters.py"
+    },
+    {
+      "document": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md",
+      "target": "agent/src/fannagent/broker.py"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/selective-agent-v1-pilot-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/measurements/pilot/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/selective-agent-v1-implementation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk-analysis/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y-analysis/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/selective-agent-v1/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/OFFLINE_LEARNING.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/agent-design.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/experiments/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/execution-cost-attribution-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-execution-cost-attribution-v1-results-2026-10-23.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-execution-cost-attribution-v1/analysis-local/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-execution-cost-attribution-v1/analysis-local/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/attribution.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-execution-cost-attribution-v1/analysis-local/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-execution-cost-attribution-v1/analysis-local/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/verification.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/prepared-policy-lifecycle-v1-implementation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/prepared-policy-lifecycle-v1/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/prepared-policy-lifecycle-v1/DESIGN.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-prepared-policy-lifecycle-v1/COMMANDS.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/prepared-policy-lifecycle-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-prepared-policy-lifecycle-v1-results-2026-10-23.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-prepared-policy-lifecycle-v1/analysis-local/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-prepared-policy-lifecycle-v1/analysis-local/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-prepared-policy-lifecycle-v1/analysis-local/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/verification.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-prepared-policy-lifecycle-v1/analysis-local/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/attribution.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/admission-profile-identity-v1-implementation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/admission-profile-identity-v1/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/admission-profile-identity-v1/DESIGN.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/admission-profile-identity-v1/PRECISION.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-admission-profile-identity-v1/COMMANDS.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-admission-profile-identity-v1/transfer.sh"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/admission-profile-identity-v1-torch-status.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/admission-profile-identity-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-admission-profile-identity-v1-results-2026-10-23.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-admission-profile-identity-v1/analysis-review/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-admission-profile-identity-v1/analysis-review/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-admission-profile-identity-v1/analysis-review/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/verification.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-admission-profile-identity-v1/analysis-review/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/attribution.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-admission-profile-identity-v1-order-audit-2026-10-23.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/activation-timing-calibration-v1-implementation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/activation-timing-calibration-v1/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/activation-timing-calibration-v1/DESIGN.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-activation-timing-calibration-v1/COMMANDS.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-activation-timing-calibration-v1/transfer.sh"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/activation-timing-calibration-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-activation-timing-calibration-v1-results-2026-10-24.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-activation-timing-calibration-v1/analysis-review/reviews-activation-calibration-v1-20261024T025706Z.c8557262/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-activation-timing-calibration-v1/analysis-review/reviews-activation-calibration-v1-20261024T025706Z.c8557262/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-activation-timing-calibration-v1/analysis-review/reviews-activation-calibration-v1-20261024T025706Z.c8557262/verification.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-activation-timing-calibration-v1/analysis-review/reviews-activation-calibration-v1-20261024T025706Z.c8557262/calibration.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3a-evidence-audit-2026-10-24/contract.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3a-evidence-audit-2026-10-24/audit.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3a-evidence-audit-2026-10-24.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/p3a-evidence-audit-v1.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3a-evidence-audit-2026-10-24/audit.py"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3a-evidence-audit-2026-10-24/coverage.csv"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3a-evidence-audit-2026-10-24/feature-diagnostics.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3a-evidence-audit-2026-10-24/coverage-summary.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/grouped-stop-modeling-v1/contract.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/grouped-stop-modeling-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3b-grouped-modeling-v1-results-2026-10-24.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-grouped-stop-modeling-v1/runs/p3b-20261024-local-v1/verification-replay.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3b-grouped-modeling-2026-10-24/analysis.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-grouped-stop-modeling-v1/local-checks.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-grouped-stop-modeling-v1/preflight-repair.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/risk-separated-stop-modeling-v1/contract.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/risk-separated-stop-modeling-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3c-risk-separated-modeling-v1-results-2026-10-24.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-risk-separated-stop-modeling-v1/runs/p3c-20261024-local-v1/verification-replay.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-p3c-risk-separated-modeling-2026-10-24/analysis.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-risk-separated-stop-modeling-v1/local-checks.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/risk-separated-stop-modeling-v1/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-b1a-search-effort-audit-2026-10-24.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/b1a-search-effort-audit-v1.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-b1a-search-effort-audit-2026-10-24/input-and-source-inventory.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-results/analysis-reviews-ef-sweep-20261019T004327Z.dcFzo0/report.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-results/analysis-reviews-ef-sweep-20261019T004327Z.dcFzo0/verification.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-results/analysis-reviews-ef-sweep-20261019T004327Z.dcFzo0/analysis.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-activation-timing-calibration-v1/torch-activation-timing-calibration-v1/frozen/source-index.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-b1a-search-effort-audit-2026-10-24/audit.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/native-effort-frontier-v1/DESIGN.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/native-effort-frontier-v1/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/native-effort-frontier-v1-implementation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-frontier-v1/COMMANDS.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-frontier-v1/torch-native-effort-frontier-v1/manifest.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-frontier-v1/local-checks"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/native-effort-frontier-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-native-effort-frontier-v1-results-2026-10-25.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-frontier-v1/analysis-review/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-frontier-v1/analysis-review/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/verification.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/native-effort-frontier-v1/recover_campaign_identity.py"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-frontier-v1/analysis-review/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/descriptive-analysis.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-effort-interface-review-2026-10-25.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-native-effort-midpoint-v1-design-2026-10-25.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-effort-interface-review-2026-10-25/audit.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-effort-interface-review-2026-10-25/input-inventory.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/effort-interface-review-v1.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-effort-interface-review-2026-10-25/documentation-review.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/native-effort-midpoint-v1/README.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/native-effort-midpoint-v1-implementation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1/manifest.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/COMMANDS.txt"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/local-checks"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/native-effort-midpoint-v1-postrun.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-native-effort-midpoint-v1-results-2026-10-25.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/replay/performance.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/verification.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/descriptive.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/input-inventory.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/archive-preservation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "trials/torch-reviews-native-effort-midpoint-v1/analysis-review/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/documentation-checks.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25/audit.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25/input-and-source-inventory.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/b2a-plan-scope-audit-v1.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25/documentation-checks.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/execution-cost-attribution-v1/DESIGN.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/execution-cost-attribution-v1-implementation.json"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/execution-cost-attribution-v1/DESIGN.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/experiments/execution-cost-attribution-v1/DESIGN.md"
+    },
+    {
+      "document": "research/fannagent-performance-research-roadmap-2026-10-22.md",
+      "target": "agent/docs/verification/execution-cost-attribution-v1-implementation.json"
+    },
+    {
+      "document": "agent/docs/experiments/README.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25.md"
+    },
+    {
+      "document": "agent/docs/experiments/README.md",
+      "target": "research/fannagent-b2a-plan-scope-audit-2026-10-25/audit.json"
+    },
+    {
+      "document": "agent/docs/experiments/README.md",
+      "target": "agent/docs/verification/b2a-plan-scope-audit-v1.json"
+    },
+    {
+      "document": "agent/docs/experiments/README.md",
+      "target": "research/fannagent-performance-research-roadmap-2026-10-22.md"
+    }
+  ],
+  "status": "passed",
+  "version": "b2a-plan-scope-documentation-checks.v1"
+}

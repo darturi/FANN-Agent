@@ -1,0 +1,379 @@
+{
+  "source_verification_sha256": "8383e0845be3e32d1f2dcf192e4ef079939a946709db4ae6d87a4357138c5021",
+  "eligibility_sha256": "162d66684c17a753693e68108b4c45c6bf2cc97f9643e60cc8e88d37c9484ab5",
+  "job": "23045686",
+  "definition": "100 * (1 - search mean latency / native640 mean latency in same filter condition)",
+  "columns": [
+    "-1",
+    "32",
+    "108",
+    "192",
+    "310",
+    "527",
+    "743"
+  ],
+  "rows": [
+    "native640",
+    "noop640",
+    "conservative_a",
+    "moderate_b_fixed",
+    "broad_c_fixed"
+  ],
+  "order": "unfiltered then increasing restriction, total_votes>=32/108/192/310/527/743",
+  "limits": "single development allocation; controls do not establish equivalence; not confirmed causal speedups",
+  "groups": 450,
+  "all_six_filters_retained": true,
+  "validation_test_outcomes_opened": false,
+  "values": [
+    {
+      "search": "native640",
+      "filter": "No_filter",
+      "eligible_records": 247286,
+      "eligible_percent": 100.0,
+      "mean_ms": 11.293730875,
+      "native640_mean_ms": 11.293730875,
+      "latency_reduction_percent": 0.0,
+      "latency_ratio_to_native640": 1.0
+    },
+    {
+      "search": "native640",
+      "filter": "total_votes >= 32",
+      "eligible_records": 123692,
+      "eligible_percent": 50.01981511286527,
+      "mean_ms": 11.977197333333335,
+      "native640_mean_ms": 11.977197333333335,
+      "latency_reduction_percent": 0.0,
+      "latency_ratio_to_native640": 1.0
+    },
+    {
+      "search": "native640",
+      "filter": "total_votes >= 108",
+      "eligible_records": 49498,
+      "eligible_percent": 20.016499114385773,
+      "mean_ms": 11.938649003333333,
+      "native640_mean_ms": 11.938649003333333,
+      "latency_reduction_percent": 0.0,
+      "latency_ratio_to_native640": 1.0
+    },
+    {
+      "search": "native640",
+      "filter": "total_votes >= 192",
+      "eligible_records": 24871,
+      "eligible_percent": 10.057585144326811,
+      "mean_ms": 11.83163142111111,
+      "native640_mean_ms": 11.83163142111111,
+      "latency_reduction_percent": 0.0,
+      "latency_ratio_to_native640": 1.0
+    },
+    {
+      "search": "native640",
+      "filter": "total_votes >= 310",
+      "eligible_records": 12367,
+      "eligible_percent": 5.001091853157882,
+      "mean_ms": 11.660738366111111,
+      "native640_mean_ms": 11.660738366111111,
+      "latency_reduction_percent": 0.0,
+      "latency_ratio_to_native640": 1.0
+    },
+    {
+      "search": "native640",
+      "filter": "total_votes >= 527",
+      "eligible_records": 4948,
+      "eligible_percent": 2.0009220093333226,
+      "mean_ms": 11.758653777222221,
+      "native640_mean_ms": 11.758653777222221,
+      "latency_reduction_percent": 0.0,
+      "latency_ratio_to_native640": 1.0
+    },
+    {
+      "search": "native640",
+      "filter": "total_votes >= 743",
+      "eligible_records": 2475,
+      "eligible_percent": 1.000865394725136,
+      "mean_ms": 11.755579352777778,
+      "native640_mean_ms": 11.755579352777778,
+      "latency_reduction_percent": 0.0,
+      "latency_ratio_to_native640": 1.0
+    },
+    {
+      "search": "noop640",
+      "filter": "No_filter",
+      "eligible_records": 247286,
+      "eligible_percent": 100.0,
+      "mean_ms": 11.030897478888889,
+      "native640_mean_ms": 11.293730875,
+      "latency_reduction_percent": 2.3272503924537724,
+      "latency_ratio_to_native640": 0.9767274960754623
+    },
+    {
+      "search": "noop640",
+      "filter": "total_votes >= 32",
+      "eligible_records": 123692,
+      "eligible_percent": 50.01981511286527,
+      "mean_ms": 11.456917662777778,
+      "native640_mean_ms": 11.977197333333335,
+      "latency_reduction_percent": 4.3439183314412215,
+      "latency_ratio_to_native640": 0.9565608166855878
+    },
+    {
+      "search": "noop640",
+      "filter": "total_votes >= 108",
+      "eligible_records": 49498,
+      "eligible_percent": 20.016499114385773,
+      "mean_ms": 11.217761610555556,
+      "native640_mean_ms": 11.938649003333333,
+      "latency_reduction_percent": 6.038266076643195,
+      "latency_ratio_to_native640": 0.939617339233568
+    },
+    {
+      "search": "noop640",
+      "filter": "total_votes >= 192",
+      "eligible_records": 24871,
+      "eligible_percent": 10.057585144326811,
+      "mean_ms": 11.033499702777776,
+      "native640_mean_ms": 11.83163142111111,
+      "latency_reduction_percent": 6.745745281662785,
+      "latency_ratio_to_native640": 0.9325425471833722
+    },
+    {
+      "search": "noop640",
+      "filter": "total_votes >= 310",
+      "eligible_records": 12367,
+      "eligible_percent": 5.001091853157882,
+      "mean_ms": 10.653783968333334,
+      "native640_mean_ms": 11.660738366111111,
+      "latency_reduction_percent": 8.63542570086494,
+      "latency_ratio_to_native640": 0.9136457429913506
+    },
+    {
+      "search": "noop640",
+      "filter": "total_votes >= 527",
+      "eligible_records": 4948,
+      "eligible_percent": 2.0009220093333226,
+      "mean_ms": 10.889011647777776,
+      "native640_mean_ms": 11.758653777222221,
+      "latency_reduction_percent": 7.395762694612507,
+      "latency_ratio_to_native640": 0.9260423730538749
+    },
+    {
+      "search": "noop640",
+      "filter": "total_votes >= 743",
+      "eligible_records": 2475,
+      "eligible_percent": 1.000865394725136,
+      "mean_ms": 11.035568145555557,
+      "native640_mean_ms": 11.755579352777778,
+      "latency_reduction_percent": 6.124846641880621,
+      "latency_ratio_to_native640": 0.9387515335811938
+    },
+    {
+      "search": "conservative_a",
+      "filter": "No_filter",
+      "eligible_records": 247286,
+      "eligible_percent": 100.0,
+      "mean_ms": 9.480855951111112,
+      "native640_mean_ms": 11.293730875,
+      "latency_reduction_percent": 16.052046431369284,
+      "latency_ratio_to_native640": 0.8394795356863072
+    },
+    {
+      "search": "conservative_a",
+      "filter": "total_votes >= 32",
+      "eligible_records": 123692,
+      "eligible_percent": 50.01981511286527,
+      "mean_ms": 10.916977256111112,
+      "native640_mean_ms": 11.977197333333335,
+      "latency_reduction_percent": 8.851988054597381,
+      "latency_ratio_to_native640": 0.9114801194540262
+    },
+    {
+      "search": "conservative_a",
+      "filter": "total_votes >= 108",
+      "eligible_records": 49498,
+      "eligible_percent": 20.016499114385773,
+      "mean_ms": 11.108438114444445,
+      "native640_mean_ms": 11.938649003333333,
+      "latency_reduction_percent": 6.9539768583286925,
+      "latency_ratio_to_native640": 0.9304602314167131
+    },
+    {
+      "search": "conservative_a",
+      "filter": "total_votes >= 192",
+      "eligible_records": 24871,
+      "eligible_percent": 10.057585144326811,
+      "mean_ms": 10.918088992777777,
+      "native640_mean_ms": 11.83163142111111,
+      "latency_reduction_percent": 7.7211873478690745,
+      "latency_ratio_to_native640": 0.9227881265213093
+    },
+    {
+      "search": "conservative_a",
+      "filter": "total_votes >= 310",
+      "eligible_records": 12367,
+      "eligible_percent": 5.001091853157882,
+      "mean_ms": 10.68082896277778,
+      "native640_mean_ms": 11.660738366111111,
+      "latency_reduction_percent": 8.403493608785384,
+      "latency_ratio_to_native640": 0.9159650639121462
+    },
+    {
+      "search": "conservative_a",
+      "filter": "total_votes >= 527",
+      "eligible_records": 4948,
+      "eligible_percent": 2.0009220093333226,
+      "mean_ms": 10.808695918333333,
+      "native640_mean_ms": 11.758653777222221,
+      "latency_reduction_percent": 8.07879776789635,
+      "latency_ratio_to_native640": 0.9192120223210365
+    },
+    {
+      "search": "conservative_a",
+      "filter": "total_votes >= 743",
+      "eligible_records": 2475,
+      "eligible_percent": 1.000865394725136,
+      "mean_ms": 10.809135017222221,
+      "native640_mean_ms": 11.755579352777778,
+      "latency_reduction_percent": 8.051022473272806,
+      "latency_ratio_to_native640": 0.9194897752672719
+    },
+    {
+      "search": "moderate_b_fixed",
+      "filter": "No_filter",
+      "eligible_records": 247286,
+      "eligible_percent": 100.0,
+      "mean_ms": 9.279709155555556,
+      "native640_mean_ms": 11.293730875,
+      "latency_reduction_percent": 17.83309467646973,
+      "latency_ratio_to_native640": 0.8216690532353027
+    },
+    {
+      "search": "moderate_b_fixed",
+      "filter": "total_votes >= 32",
+      "eligible_records": 123692,
+      "eligible_percent": 50.01981511286527,
+      "mean_ms": 10.472430024444444,
+      "native640_mean_ms": 11.977197333333335,
+      "latency_reduction_percent": 12.563601208281206,
+      "latency_ratio_to_native640": 0.874363987917188
+    },
+    {
+      "search": "moderate_b_fixed",
+      "filter": "total_votes >= 108",
+      "eligible_records": 49498,
+      "eligible_percent": 20.016499114385773,
+      "mean_ms": 11.111102262222223,
+      "native640_mean_ms": 11.938649003333333,
+      "latency_reduction_percent": 6.931661537918188,
+      "latency_ratio_to_native640": 0.9306833846208181
+    },
+    {
+      "search": "moderate_b_fixed",
+      "filter": "total_votes >= 192",
+      "eligible_records": 24871,
+      "eligible_percent": 10.057585144326811,
+      "mean_ms": 11.069008996111112,
+      "native640_mean_ms": 11.83163142111111,
+      "latency_reduction_percent": 6.445623581877779,
+      "latency_ratio_to_native640": 0.9355437641812222
+    },
+    {
+      "search": "moderate_b_fixed",
+      "filter": "total_votes >= 310",
+      "eligible_records": 12367,
+      "eligible_percent": 5.001091853157882,
+      "mean_ms": 10.894714523333333,
+      "native640_mean_ms": 11.660738366111111,
+      "latency_reduction_percent": 6.569256754821174,
+      "latency_ratio_to_native640": 0.9343074324517883
+    },
+    {
+      "search": "moderate_b_fixed",
+      "filter": "total_votes >= 527",
+      "eligible_records": 4948,
+      "eligible_percent": 2.0009220093333226,
+      "mean_ms": 11.048470316111112,
+      "native640_mean_ms": 11.758653777222221,
+      "latency_reduction_percent": 6.039666398604327,
+      "latency_ratio_to_native640": 0.9396033360139567
+    },
+    {
+      "search": "moderate_b_fixed",
+      "filter": "total_votes >= 743",
+      "eligible_records": 2475,
+      "eligible_percent": 1.000865394725136,
+      "mean_ms": 11.13137497888889,
+      "native640_mean_ms": 11.755579352777778,
+      "latency_reduction_percent": 5.309856325723262,
+      "latency_ratio_to_native640": 0.9469014367427674
+    },
+    {
+      "search": "broad_c_fixed",
+      "filter": "No_filter",
+      "eligible_records": 247286,
+      "eligible_percent": 100.0,
+      "mean_ms": 10.747515800555556,
+      "native640_mean_ms": 11.293730875,
+      "latency_reduction_percent": 4.836444931174643,
+      "latency_ratio_to_native640": 0.9516355506882536
+    },
+    {
+      "search": "broad_c_fixed",
+      "filter": "total_votes >= 32",
+      "eligible_records": 123692,
+      "eligible_percent": 50.01981511286527,
+      "mean_ms": 9.956140019444446,
+      "native640_mean_ms": 11.977197333333335,
+      "latency_reduction_percent": 16.874209029387476,
+      "latency_ratio_to_native640": 0.8312579097061252
+    },
+    {
+      "search": "broad_c_fixed",
+      "filter": "total_votes >= 108",
+      "eligible_records": 49498,
+      "eligible_percent": 20.016499114385773,
+      "mean_ms": 12.155015736111112,
+      "native640_mean_ms": 11.938649003333333,
+      "latency_reduction_percent": -1.8123217519617763,
+      "latency_ratio_to_native640": 1.0181232175196178
+    },
+    {
+      "search": "broad_c_fixed",
+      "filter": "total_votes >= 192",
+      "eligible_records": 24871,
+      "eligible_percent": 10.057585144326811,
+      "mean_ms": 12.385003163888888,
+      "native640_mean_ms": 11.83163142111111,
+      "latency_reduction_percent": -4.67705359541879,
+      "latency_ratio_to_native640": 1.046770535954188
+    },
+    {
+      "search": "broad_c_fixed",
+      "filter": "total_votes >= 310",
+      "eligible_records": 12367,
+      "eligible_percent": 5.001091853157882,
+      "mean_ms": 12.27610886388889,
+      "native640_mean_ms": 11.660738366111111,
+      "latency_reduction_percent": -5.277285866958414,
+      "latency_ratio_to_native640": 1.0527728586695841
+    },
+    {
+      "search": "broad_c_fixed",
+      "filter": "total_votes >= 527",
+      "eligible_records": 4948,
+      "eligible_percent": 2.0009220093333226,
+      "mean_ms": 12.541469593333334,
+      "native640_mean_ms": 11.758653777222221,
+      "latency_reduction_percent": -6.65735917514223,
+      "latency_ratio_to_native640": 1.0665735917514223
+    },
+    {
+      "search": "broad_c_fixed",
+      "filter": "total_votes >= 743",
+      "eligible_records": 2475,
+      "eligible_percent": 1.000865394725136,
+      "mean_ms": 12.763486005,
+      "native640_mean_ms": 11.755579352777778,
+      "latency_reduction_percent": -8.573857757032277,
+      "latency_ratio_to_native640": 1.0857385775703228
+    }
+  ]
+}

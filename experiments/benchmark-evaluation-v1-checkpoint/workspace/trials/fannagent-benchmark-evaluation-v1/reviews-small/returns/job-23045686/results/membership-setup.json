@@ -1,0 +1,51 @@
+[
+  {
+    "build_ns": 208460939,
+    "bytes": 263832,
+    "qualifying": 247286,
+    "sha256": "78f86a9c58ae104b6a5a29eaef6cfa2ddd120d60315521f8429a3bddf14f8270",
+    "threshold": -1
+  },
+  {
+    "build_ns": 213091082,
+    "bytes": 263832,
+    "qualifying": 2475,
+    "sha256": "e414d57862ec02862605b200d1cbe880ab4446d88d76fdb035cb8b53dd6711a5",
+    "threshold": 743
+  },
+  {
+    "build_ns": 209329908,
+    "bytes": 263832,
+    "qualifying": 4948,
+    "sha256": "56d61624587863e612b58d9c82b5f462a9334ffba7fdc3e5e0acb3e3fd616635",
+    "threshold": 527
+  },
+  {
+    "build_ns": 199224486,
+    "bytes": 263832,
+    "qualifying": 12367,
+    "sha256": "6bac8ee9eeb94afe80147105487c06e26e037759d2a5e5651fddd21a3ded00e2",
+    "threshold": 310
+  },
+  {
+    "build_ns": 201731237,
+    "bytes": 263832,
+    "qualifying": 24871,
+    "sha256": "8a0c43ae48630a390c35efa3c0eae3dc7d0df9c03bfa2117c33cac24388ac4f2",
+    "threshold": 192
+  },
+  {
+    "build_ns": 202516984,
+    "bytes": 263832,
+    "qualifying": 49498,
+    "sha256": "f7ed60acf64f7f8b63b2469452a0f677da859bed151cbcd896195a6a4a56021d",
+    "threshold": 108
+  },
+  {
+    "build_ns": 207759096,
+    "bytes": 263832,
+    "qualifying": 123692,
+    "sha256": "6879df18f2336f968606c31b2b05cc2dc9c89a4a1e4caa60fe4471b6f4f61ed5",
+    "threshold": 32
+  }
+]

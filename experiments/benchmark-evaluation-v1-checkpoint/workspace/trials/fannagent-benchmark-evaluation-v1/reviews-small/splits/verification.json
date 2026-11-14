@@ -1,0 +1,17 @@
+{
+  "all_input_hashes_verified": true,
+  "catalog_rows": 7000,
+  "disjoint_groups": 1000,
+  "freeze_sha256": "67cc8821422931c2177c04346fed210f4c7890fe23f3b626fcecd6803de962cd",
+  "historical_consumed_groups_all_development": true,
+  "late_reservations_with_outcomes_excluded_from_holdout": 37,
+  "outcome_scan_hits_in_recovered_holdout": 0,
+  "recovered_canonical_protected_groups": 300,
+  "role_file_hashes_verified": true,
+  "roles": {
+    "development": 450,
+    "excluded_historical": 125,
+    "test": 275,
+    "validation": 150
+  }
+}

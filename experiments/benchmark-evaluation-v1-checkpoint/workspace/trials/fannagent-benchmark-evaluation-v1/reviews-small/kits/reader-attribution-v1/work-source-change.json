@@ -1,0 +1,30 @@
+{
+  "added_include_sha256": "5ca69b6f1348bc5fec6b5f579c44866c196deb346056231cc209d2fce95be6ad",
+  "changed_existing_source": {
+    "src/fannbench.c": {
+      "after": "ed4b5835600f361c2f4f95c9668819c37c5f146d49e0ffb9b941ddf66eae66f8",
+      "before": "90ba5d8b0aa2c7c15f26d342eac6e6a4733547a6b041922dd2824e0282ee4f61"
+    }
+  },
+  "counter_definitions": {
+    "feature_passes": "checkpoint retained-heap feature passes",
+    "layer0_adjacencies_examined": "layer0 neighbor TIDs examined before visited dedup",
+    "layer0_neighbor_scores": "non-entry neighbor scores recorded by existing HnswLayerScore(level0) hook",
+    "layer0_queue_pops": "existing layer0 queue-pop hook, including terminal pop",
+    "membership_probes": "retained-TID predicate/dedup membership checks",
+    "upper_neighbor_scores": "non-entry scores at upper HNSW layers",
+    "vector_calls": "all negative-inner-product/cosine vector score function calls in one search SELECT, including graph and SQL result scoring"
+  },
+  "hooks": {
+    "FannbenchHnswAdjacencyExamined(void)": "diagAdjacency++;",
+    "FannbenchHnswLayerScore(int level)": "if (level == 0) diagLayer0Scores++; else diagUpperScores++;",
+    "FannbenchHnswQueuePop(void)": "diagQueuePops++;",
+    "FannbenchShadowQualifies(ItemPointer tid)": "diagMembershipProbes++;",
+    "FannbenchShadowStart(void)": "diagFeaturePasses++;",
+    "FannbenchVectorDistanceComputed(void)": "diagVectorCalls++;"
+  },
+  "policy_changes": false,
+  "schema": "diagnostic-observers-only.v1",
+  "search_algorithm_changes": false,
+  "timing_module": "original job23045686 binary; instrumentation module only for separate work-count stage"
+}

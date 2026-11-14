@@ -1,0 +1,406 @@
+{
+  "by_semantic_arm_and_filter": {
+    "candidate/unfiltered": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": -0.018423654999999955,
+          "mean_native_gap_ms": -0.01828599000000005
+        },
+        "1": {
+          "mean_gap_ms": -0.18639977500000005,
+          "mean_native_gap_ms": -0.23880031000000002
+        },
+        "2": {
+          "mean_gap_ms": -0.018762200000000104,
+          "mean_native_gap_ms": 0.0028254250000000303
+        },
+        "3": {
+          "mean_gap_ms": -0.002749385000000033,
+          "mean_native_gap_ms": -0.07466173499999998
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.04234895999999999,
+          "mean_native_gap_ms": 0.05565697250000004,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.15551646750000006,
+          "mean_native_gap_ms": -0.22011827750000001,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": -0.05658375375000004,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 5.302488000000002,
+        "min": -7.323767999999999,
+        "p01": -3.0728411300000005,
+        "p50": 0.0024535000000005525,
+        "p99": 2.6379964499999997
+      },
+      "vector_mean_gap_sd_ms": 0.5037505443379982
+    },
+    "candidate/votes108": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": -0.007798295000000053,
+          "mean_native_gap_ms": -0.029787560000000015
+        },
+        "1": {
+          "mean_gap_ms": -0.03680702499999998,
+          "mean_native_gap_ms": -0.005896599999999994
+        },
+        "2": {
+          "mean_gap_ms": 0.004565144999999968,
+          "mean_native_gap_ms": -0.026455320000000046
+        },
+        "3": {
+          "mean_gap_ms": 0.10084498999999994,
+          "mean_native_gap_ms": 0.027947559999999996
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.3183006675,
+          "mean_native_gap_ms": 0.3412781775,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.2878982600000001,
+          "mean_native_gap_ms": -0.3583741375,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": 0.01520120374999997,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 4.025622000000001,
+        "min": -3.914961999999999,
+        "p01": -3.0445939899999988,
+        "p50": 0.008912999999999727,
+        "p99": 3.1785509300000006
+      },
+      "vector_mean_gap_sd_ms": 0.4371519584443268
+    },
+    "candidate/votes32": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": -0.229151325,
+          "mean_native_gap_ms": -0.11560323499999996
+        },
+        "1": {
+          "mean_gap_ms": 0.04896856999999992,
+          "mean_native_gap_ms": 0.072890545
+        },
+        "2": {
+          "mean_gap_ms": -0.060087330000000154,
+          "mean_native_gap_ms": -0.06707588000000003
+        },
+        "3": {
+          "mean_gap_ms": 0.11560347499999989,
+          "mean_native_gap_ms": 0.061921754999999995
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.07236178749999997,
+          "mean_native_gap_ms": 0.17137700250000001,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.1346950925000001,
+          "mean_native_gap_ms": -0.19531041000000002,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": -0.03116665250000009,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 4.835674999999998,
+        "min": -5.339241999999999,
+        "p01": -3.1002894799999994,
+        "p50": -0.0018574999999994013,
+        "p99": 2.631806939999997
+      },
+      "vector_mean_gap_sd_ms": 0.5101515683106641
+    },
+    "matched-continue/unfiltered": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": 0.08888778500000007,
+          "mean_native_gap_ms": 0.07999289500000004
+        },
+        "1": {
+          "mean_gap_ms": 0.02005324999999993,
+          "mean_native_gap_ms": 0.06526394499999999
+        },
+        "2": {
+          "mean_gap_ms": 0.014361305,
+          "mean_native_gap_ms": 0.03225809499999998
+        },
+        "3": {
+          "mean_gap_ms": -0.02011348000000017,
+          "mean_native_gap_ms": 0.006337150000000022
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.23463110999999998,
+          "mean_native_gap_ms": 0.209369795,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.18303668,
+          "mean_native_gap_ms": -0.11744375249999997,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": 0.025797214999999957,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 5.042402000000001,
+        "min": -6.295956,
+        "p01": -3.180579950000001,
+        "p50": 0.051273000000000124,
+        "p99": 3.3244234799999957
+      },
+      "vector_mean_gap_sd_ms": 0.6611212759535005
+    },
+    "matched-continue/votes108": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": 0.00864433500000001,
+          "mean_native_gap_ms": -0.006247445000000027
+        },
+        "1": {
+          "mean_gap_ms": -0.044030244999999996,
+          "mean_native_gap_ms": 0.026849045000000023
+        },
+        "2": {
+          "mean_gap_ms": -0.011723155000000016,
+          "mean_native_gap_ms": 0.028001340000000017
+        },
+        "3": {
+          "mean_gap_ms": 0.054108205,
+          "mean_native_gap_ms": 0.09198425500000003
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.2882616575,
+          "mean_native_gap_ms": 0.35965923000000005,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.2847620875,
+          "mean_native_gap_ms": -0.2893656325,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": 0.001749784999999998,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 4.5027729999999995,
+        "min": -6.273407000000002,
+        "p01": -3.21506895,
+        "p50": 0.005845499999999504,
+        "p99": 2.8587708599999986
+      },
+      "vector_mean_gap_sd_ms": 0.42975494067568787
+    },
+    "matched-continue/votes32": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": -0.09945256000000009,
+          "mean_native_gap_ms": -0.13582595000000003
+        },
+        "1": {
+          "mean_gap_ms": -0.0409804,
+          "mean_native_gap_ms": 0.007405170000000049
+        },
+        "2": {
+          "mean_gap_ms": -0.14545273500000006,
+          "mean_native_gap_ms": -0.125544045
+        },
+        "3": {
+          "mean_gap_ms": -0.05222121000000032,
+          "mean_native_gap_ms": 0.10658836000000012
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.09185640749999986,
+          "mean_native_gap_ms": 0.09861532750000006,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.2609098600000001,
+          "mean_native_gap_ms": -0.17230356,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": -0.08452672625000013,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 4.397424000000001,
+        "min": -6.166301000000001,
+        "p01": -3.977038510000003,
+        "p50": -0.0084344999999999,
+        "p99": 3.3776909099999988
+      },
+      "vector_mean_gap_sd_ms": 0.6318392284606403
+    },
+    "routed-native/unfiltered": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": 0.027967395000000065,
+          "mean_native_gap_ms": 0.0013683200000000272
+        },
+        "1": {
+          "mean_gap_ms": 0.013386020000000063,
+          "mean_native_gap_ms": 0.02982508499999998
+        },
+        "2": {
+          "mean_gap_ms": -0.09047715500000005,
+          "mean_native_gap_ms": -0.058042365
+        },
+        "3": {
+          "mean_gap_ms": 0.11492378500000008,
+          "mean_native_gap_ms": 0.02446164499999994
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.3400760199999999,
+          "mean_native_gap_ms": 0.3651889975,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.3071759974999999,
+          "mean_native_gap_ms": -0.366382655,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": 0.016450011250000042,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 4.187611000000001,
+        "min": -3.9384249999999996,
+        "p01": -3.04312256,
+        "p50": 4.2500000000167404e-05,
+        "p99": 3.4900280899999996
+      },
+      "vector_mean_gap_sd_ms": 0.4466176327224415
+    },
+    "routed-native/votes108": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": -0.08944888000000006,
+          "mean_native_gap_ms": -0.08815993500000001
+        },
+        "1": {
+          "mean_gap_ms": 0.10127512500000002,
+          "mean_native_gap_ms": 0.029640105000000014
+        },
+        "2": {
+          "mean_gap_ms": 0.05834919500000001,
+          "mean_native_gap_ms": -0.10064755499999999
+        },
+        "3": {
+          "mean_gap_ms": 0.07795750499999989,
+          "mean_native_gap_ms": 0.09615604499999993
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.3561266725,
+          "mean_native_gap_ms": 0.26163656500000004,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.2820602000000001,
+          "mean_native_gap_ms": -0.29314223500000003,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": 0.03703323624999997,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 4.301536999999998,
+        "min": -4.589606000000002,
+        "p01": -2.99518648,
+        "p50": -0.0039794999999993586,
+        "p99": 3.3785575199999984
+      },
+      "vector_mean_gap_sd_ms": 0.4877296840325637
+    },
+    "routed-native/votes32": {
+      "by_block": {
+        "0": {
+          "mean_gap_ms": -0.02580774500000003,
+          "mean_native_gap_ms": 0.042193890000000005
+        },
+        "1": {
+          "mean_gap_ms": 0.02067187000000005,
+          "mean_native_gap_ms": 0.14673920499999993
+        },
+        "2": {
+          "mean_gap_ms": -0.018160495000000103,
+          "mean_native_gap_ms": 0.0009674599999999955
+        },
+        "3": {
+          "mean_gap_ms": -0.12614901,
+          "mean_native_gap_ms": -0.034594440000000004
+        }
+      },
+      "by_orientation": {
+        "B_earlier": {
+          "mean_gap_ms": 0.34360763250000004,
+          "mean_native_gap_ms": 0.43727312249999994,
+          "pairs": 400
+        },
+        "B_later": {
+          "mean_gap_ms": -0.4183303225000001,
+          "mean_native_gap_ms": -0.359620065,
+          "pairs": 400
+        }
+      },
+      "independent_vectors": 200,
+      "mean_gap_ms": -0.03736134500000002,
+      "pairs": 800,
+      "single_pair_gap_quantiles_ms": {
+        "max": 4.314485000000001,
+        "min": -6.707313000000003,
+        "p01": -3.4382245799999995,
+        "p50": -0.007664500000001073,
+        "p99": 3.405974919999999
+      },
+      "vector_mean_gap_sd_ms": 0.45149467025053275
+    }
+  },
+  "campaign": "reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0",
+  "independent_unit": "vector; repetitions/blocks/A-A labels do not create independent samples",
+  "interpretation": "Later-versus-earlier associations and wide single-pair variation justify calibration. Position balance is verified but does not guarantee equivalence. These descriptive conditional means do not isolate cache, drift, transport, or code causes and are never subtracted from treatment gaps.",
+  "no_outlier_exclusion_or_threshold_change": true,
+  "raw_rows_retained": true,
+  "recorded_utc": "2026-10-24T01:26:10.974761+00:00",
+  "scope": "Descriptive postrun audit of all existing activation A/A rows. Not a new experiment, estimator correction, selection filter, or causal effect.",
+  "source_pair_files_sha256": {
+    "blocks/block-0/pairs.jsonl": "bdf14de6dfceb53656156a2fade7451ac23acc61b1bdc01780c9c2b18e96a847",
+    "blocks/block-1/pairs.jsonl": "cbe675c3c7a55ae45df4570116ddd64cb5faa81aeaac126576bd1a9577e2d239",
+    "blocks/block-2/pairs.jsonl": "7604275a35b446507a940e1752d6531222f40c6aba8d106afef7091cb28728bf",
+    "blocks/block-3/pairs.jsonl": "381c942a094f01c281beb64eafa533398fe5dac91697185ee83f9da63e5e6c70"
+  },
+  "source_performance_sha256": "0bdd3f2cf3211c1f4d2d62f73bf894c542bedbbc52ea49a6a359cb0af445b257",
+  "version": "p2b-activation-order-audit.v1"
+}

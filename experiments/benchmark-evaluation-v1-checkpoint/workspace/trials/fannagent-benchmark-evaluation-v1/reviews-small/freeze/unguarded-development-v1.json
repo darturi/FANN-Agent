@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "ada50f6577839f3c659a8db4d9da1a5e0f86cdbd283640b777dc6bbf14b5f75a",
+  "binding_sha256": "a24dcab525a8c5b7b122677a5af40bd18dae2770f6ef7e76fa1992800dede157",
+  "config_sha256": "6a0016a358e5b8b86cd4f0ed20f00ebd2c6ad6ecf3ec0e63fd7057f5bdc7df0e",
+  "exact_serving_calls": 0,
+  "module_sha256": "80f84dbace4c2af87894179abf1a96183a6c0bcd2940d0c07589dec01a2e6095",
+  "partial_output_handling": "score normally; no serving completion",
+  "plan_sha256": "a41d4fc2b2ea5fe384fae29285c1e3bad84bebd0ad4655f5f3e74236b13133ac",
+  "protocol_sha256": "c37dcfcf06880b168cc34d6ee3477956af1883c030990e7c552691e9cae44119",
+  "provider_calls": 0,
+  "quality_reference": "actual unguarded native640",
+  "serving_source_sha256": "b2d5bc7907df565a1f6abf816be903452feedbd265acd2578a9a7b8d07daebac",
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "startup_source_sha256": "8c1325ce0d097e2c49289062160026b11aec7b7e3a755e767262d79c12b449bb",
+  "status": "sealed_unguarded_development_kit_pending_Torch_return",
+  "validation_test_outcomes_opened": false
+}
