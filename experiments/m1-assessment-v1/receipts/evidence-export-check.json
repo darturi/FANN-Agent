@@ -1,0 +1,249 @@
+{
+  "cost_ranking_enabled": false,
+  "development_fold_algorithm_reconstructed": true,
+  "missing_prefix_labels": 0,
+  "source_export_sha256": "b084a6af0f80534b10e8f67ce5e3d5c05b926a5859991ae63008f2b7766edb28",
+  "status": "passed",
+  "summary": {
+    "cost_status": "unqualified_pending_M2_serving_cost_model_binding",
+    "evidence_hash": "50a84692da959374d7163611bf916ca2ecccc59b4f46ece1240ea3ccec3a3262",
+    "groups": 450,
+    "limit": "No measured v2 serving costs implied; incomplete prefix evidence never yields a quality pass.",
+    "per_filter": {
+      "unfiltered": {
+        "checkpoints": {
+          "16": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "32": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "64": {
+            "missing_prefixes": 0,
+            "observed": 448,
+            "qualified_prefixes": 448
+          }
+        },
+        "native_mean_recall": 0.9964444444444444,
+        "queries": 450,
+        "short_native": 0
+      },
+      "votes108": {
+        "checkpoints": {
+          "16": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "32": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "64": {
+            "missing_prefixes": 0,
+            "observed": 448,
+            "qualified_prefixes": 448
+          }
+        },
+        "native_mean_recall": 0.9891111111111112,
+        "queries": 450,
+        "short_native": 0
+      },
+      "votes192": {
+        "checkpoints": {
+          "16": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "32": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "64": {
+            "missing_prefixes": 0,
+            "observed": 448,
+            "qualified_prefixes": 448
+          }
+        },
+        "native_mean_recall": 0.9788888888888889,
+        "queries": 450,
+        "short_native": 1
+      },
+      "votes310": {
+        "checkpoints": {
+          "16": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "32": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "64": {
+            "missing_prefixes": 0,
+            "observed": 448,
+            "qualified_prefixes": 448
+          }
+        },
+        "native_mean_recall": 0.9482222222222222,
+        "queries": 450,
+        "short_native": 23
+      },
+      "votes32": {
+        "checkpoints": {
+          "16": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "32": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "64": {
+            "missing_prefixes": 0,
+            "observed": 448,
+            "qualified_prefixes": 448
+          }
+        },
+        "native_mean_recall": 0.9937777777777778,
+        "queries": 450,
+        "short_native": 0
+      },
+      "votes527": {
+        "checkpoints": {
+          "16": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "32": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "64": {
+            "missing_prefixes": 0,
+            "observed": 448,
+            "qualified_prefixes": 448
+          }
+        },
+        "native_mean_recall": 0.7897777777777777,
+        "queries": 450,
+        "short_native": 172
+      },
+      "votes743": {
+        "checkpoints": {
+          "16": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "32": {
+            "missing_prefixes": 0,
+            "observed": 450,
+            "qualified_prefixes": 450
+          },
+          "64": {
+            "missing_prefixes": 0,
+            "observed": 448,
+            "qualified_prefixes": 448
+          }
+        },
+        "native_mean_recall": 0.5348888888888889,
+        "queries": 450,
+        "short_native": 345
+      }
+    },
+    "runtime_profile": {
+      "actions": [
+        "continue",
+        "stop"
+      ],
+      "checkpoint_interval": 64,
+      "checkpoint_semantics": "expanded-neighborhood checkpoints16/32/64; previous scheduled checkpoint, not last collected checkpoint",
+      "collection_groups": [],
+      "features": {
+        "frontier_gap": {
+          "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+          "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+          "description": "",
+          "group": "checkpoint_heap",
+          "kind": "float",
+          "name": "frontier_gap",
+          "population": "query",
+          "provenance": "server_observed",
+          "scope": "query",
+          "source": "extension",
+          "stage": "runtime",
+          "units": "count"
+        },
+        "qualifying_count": {
+          "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+          "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+          "description": "",
+          "group": "checkpoint_heap",
+          "kind": "int",
+          "name": "qualifying_count",
+          "population": "query",
+          "provenance": "server_observed",
+          "scope": "query",
+          "source": "extension",
+          "stage": "runtime",
+          "units": "count"
+        },
+        "tenth_distance": {
+          "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+          "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+          "description": "",
+          "group": "checkpoint_heap",
+          "kind": "float",
+          "name": "tenth_distance",
+          "population": "query",
+          "provenance": "server_observed",
+          "scope": "query",
+          "source": "extension",
+          "stage": "runtime",
+          "units": "count"
+        },
+        "top10_new_since_previous": {
+          "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+          "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+          "description": "",
+          "group": "checkpoint_heap",
+          "kind": "int",
+          "name": "top10_new_since_previous",
+          "population": "query",
+          "provenance": "server_observed",
+          "scope": "query",
+          "source": "extension",
+          "stage": "runtime",
+          "units": "count"
+        }
+      },
+      "fingerprint": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+      "guidance": "",
+      "name": "filtered-ann-partial-checkpoints/v2",
+      "native_protocol": "",
+      "native_registry_hash": null,
+      "numeric_semantics": "int64_float64_strict",
+      "policy_encoding": "filtered_ann_checkpoint_v2",
+      "scripted_policy": null,
+      "stopping_scope": "original noniterative search prefix; actual0..10 SQL results; no completion",
+      "work_unit": "graph score/queue work"
+    },
+    "scope": "development"
+  },
+  "typed_evidence_identity": "50a84692da959374d7163611bf916ca2ecccc59b4f46ece1240ea3ccec3a3262",
+  "validation_test_outcomes_opened": false
+}

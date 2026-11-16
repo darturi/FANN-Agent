@@ -1,0 +1,164 @@
+{
+  "aggregate_and_bootstrap_checks": 1946,
+  "all_three_transfers_zero_per_query_recall_losses": true,
+  "artifacts": {
+    "agent/experiments/m1-assessment-v1/README.md": {
+      "bytes": 1309,
+      "sha256": "438da9c99ac54c09c009305338481ca0e0bb818253cc295a718f565de969cbdc"
+    },
+    "agent/experiments/m1-assessment-v1/REPORT.md": {
+      "bytes": 10958,
+      "sha256": "76d5974511855c65ffb7e726d250d6a62ea1a39ec6f600a76ce94e5163a334cd"
+    },
+    "agent/experiments/m1-assessment-v1/assess.py": {
+      "bytes": 19185,
+      "sha256": "50b919373cf7285fb3defb33db5c546becb868613d0bba9533bce3d2c7e466a2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/analysis.log": {
+      "bytes": 608,
+      "sha256": "b859de3b2b86e1a79daa15f1878601c9355f75c41a6af83724fb02ea917bc4a9"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/independent-assessment.log": {
+      "bytes": 856,
+      "sha256": "ad0b116a3f6acca254d82a827b44cef7b0024ad9159d954e15f4df71711e3378"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/development-prefix-evidence.json": {
+      "bytes": 3206947,
+      "sha256": "b084a6af0f80534b10e8f67ce5e3d5c05b926a5859991ae63008f2b7766edb28"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/evidence-export-check.json": {
+      "bytes": 7958,
+      "sha256": "3aef0a613c23c3e63e5fdc3a1c74103c9d88dc690af798a65dbd0ead500ce032"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/independent-assessment.json": {
+      "bytes": 164944,
+      "sha256": "62e0c33e06e2df5b73f34b70e685ee8b10d07e0bec49b36efc58a2b8966deeb5"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/local-verification.json": {
+      "bytes": 15542,
+      "sha256": "6362765d787c2ee9a42e8a16db4cd3e1d65d69da1939aa7f9a8dfccd9bff5269"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/serving-cost-library.json": {
+      "bytes": 112758,
+      "sha256": "fcf73ff5a75f8c7ce9269bf302976ea670d08e4466ab4af94f914dbe4c75ed65"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/verification.log": {
+      "bytes": 15542,
+      "sha256": "7c4ef486e541d07f26d6792cac6ad24530d4ee3a654486cb69dc0c0044928699"
+    }
+  },
+  "attempts": {
+    "timing": {
+      "capture": 3150,
+      "forced_prefix": 9436,
+      "native_bridge": 6300,
+      "quality_ann": 78750,
+      "reference_exact": 3150,
+      "timed_ann": 781200,
+      "total": 899346,
+      "warmup_ann": 17360
+    },
+    "total": 984396,
+    "work": {
+      "reference_exact": 3150,
+      "total": 85050,
+      "work_ann": 81900
+    }
+  },
+  "cost_status": "unqualified_pending_M2_serving_cost_model_binding",
+  "date": "2026-11-16",
+  "development_groups": 450,
+  "downloaded_files": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-23376796-preflight-timing.json": {
+      "bytes": 739,
+      "sha256": "ec3423a0304b99955a24c47d82d90987f35a781ca7a454ad871a185bb93c3c55"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-23376796-preflight-work.json": {
+      "bytes": 737,
+      "sha256": "234ddeab55e90548a069108d5a7a9bd3281e991bb19cce18148f4a0c997c33ba"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-23376796-sacct.txt": {
+      "bytes": 336,
+      "sha256": "54a0d76501e84ce10888be0d9bce5b1150f8db9c9deea9e96d1450c9686a816c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-23376796.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-23376796.out": {
+      "bytes": 42262,
+      "sha256": "dbc6efba69d32dcdb1fb2fa5058b8625449a4cc5024830599f6cd64073ab270f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23376796.tar.gz": {
+      "bytes": 66334510,
+      "sha256": "8a180f046da12d943bea1bb9bea36b3839044876606c13beb1783e5f47bba53d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23376796.tar.gz.sha256": {
+      "bytes": 96,
+      "sha256": "5038c22842579ce932a8991927cf7ece54cfe633629df546d86c39255131fb44"
+    }
+  },
+  "exact_serving_calls": 0,
+  "export_correction": {
+    "Torch_rerun_needed": false,
+    "frozen_development_fold_algorithm_reconstructed": true,
+    "original_error": "KeyError: '0126'",
+    "original_failure_log_sha256": "b859de3b2b86e1a79daa15f1878601c9355f75c41a6af83724fb02ea917bc4a9",
+    "repaired_export_sha256": "b084a6af0f80534b10e8f67ce5e3d5c05b926a5859991ae63008f2b7766edb28",
+    "sealed_script_unchanged": true,
+    "type": "host_analysis_fold_lookup_ID_padding_only",
+    "typed_evidence_identity": "50a84692da959374d7163611bf916ca2ecccc59b4f46ece1240ea3ccec3a3262"
+  },
+  "feature_masks_first_stops_actual_outputs_and_legacy_parity": true,
+  "final_policy_promoted": false,
+  "job_id": "23376796",
+  "limitations": [
+    "One allocation and exposed development only.",
+    "Same-block native/matched controls; repeated native anchors differ across blocks.",
+    "Complete-plan differences are descriptive and not universal additive operation prices.",
+    "M2 cost-model qualification remains before cost ranking or a newly authorized provider episode."
+  ],
+  "missing_prefix_labels": 0,
+  "native_graph_bridge_and_continue_parity": true,
+  "native_preflight_both_full_backend_imports": true,
+  "next_step": "Local M2 evidence/cost-guidance qualification and M3 rehearsal; no new Torch job now.",
+  "offline_exact_queries": 6300,
+  "operational_M1_passed": true,
+  "partial_prefix_labels": 1496,
+  "physical_CPU_ids": [
+    0,
+    12,
+    13,
+    33
+  ],
+  "prefix_labels": 9436,
+  "provider_calls": 0,
+  "reader_assignments": 1736,
+  "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+  "safe_extraction": {
+    "members": 47,
+    "only_regular_files_and_directories_under_results": true,
+    "root": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796",
+    "uncompressed_bytes": 562220590
+  },
+  "scalar_filters": 6,
+  "scheduler": {
+    "MaxRSS_K": 7452548,
+    "elapsed": "04:43:55",
+    "exit_code": "0:0",
+    "file_sha256": "54a0d76501e84ce10888be0d9bce5b1150f8db9c9deea9e96d1450c9686a816c",
+    "state": "COMPLETED"
+  },
+  "schema": "fannagent.M1-assessment-receipt.v1",
+  "scored_quality_family_results": 81900,
+  "sealed_deployment_freeze_sha256": "c0842a0c6bf5e719ee16502b881c33b81d76cdf4c41530ee931c1fa910a2e883",
+  "status": "M1_original_graph_runtime_labels_and_measured_cost_library_verified",
+  "timed_requests": 781200,
+  "timing_backend_PIDs": 168,
+  "timing_module_sha256": "ab2a4d53d65ef58923e54e5293b7458ba02330ca6f9d5c5cc8a39a5256b8b79a",
+  "unfiltered_control": true,
+  "validation_test_outcomes_opened": false,
+  "work_module_sha256": "c369263d46729d506ad3aaf1a39ea4d0da0c92a554ae089e47a4212362867601",
+  "work_queries": 81900,
+  "zero_output_prefixes": 95
+}

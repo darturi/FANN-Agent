@@ -1,0 +1,32 @@
+{
+  "M0": {
+    "job_id": "23303080",
+    "limits": "Current diagnostic shows counterbalanced reader/CPU/cycle-consistent Broad improvement with reduced work, and no native/continue graph-count mismatch. It does not uniquely identify the earlier allocation control anomaly or establish cross-allocation generalization.",
+    "receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
+    "status": "verified_attribution_resolved"
+  },
+  "M1": {
+    "export_correction": "local fold-lookup padding normalization; original sealed script/error preserved; typed evidence passes",
+    "job_id": "23376796",
+    "outcome_freeze_sha256": "7e2f4a2fb312b5d74ac5fe566db9da62e87b8d9ef20d132178a90c6db8550e27",
+    "receipt_sha256": "40cf8fcf245a8bc2a337a88aa8b2eadfcf26f1d8a3887ce2df05c097e845bee5",
+    "status": "verified_original_graph_runtime_partial_prefix_labels_and_empirical_serving_cost_library"
+  },
+  "M2": {
+    "actual_prefix_labels": 9436,
+    "cost_ranking_enabled": false,
+    "measured_program_costs_available": true,
+    "missing_partial_prefix_labels": 0,
+    "reason": "Costs depend on measurement block and complete plan; additive surrogate not automatically qualified.",
+    "status": "pending_cost_guidance_qualification_with_complete_M1_labels"
+  },
+  "date": "2026-11-16",
+  "generation_blocked_by": [
+    "M2 cost-guidance qualification and bound M3 rehearsal",
+    "New concrete provider episode authorization"
+  ],
+  "provider_authorization": "new episode not authorized or started",
+  "provider_calls": 0,
+  "schema": "filtered-ann-generation-gates.v2",
+  "validation_test_outcomes_opened": false
+}

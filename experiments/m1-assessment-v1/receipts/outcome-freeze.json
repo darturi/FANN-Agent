@@ -1,0 +1,34 @@
+{
+  "M1_repeat": false,
+  "all_six_filters": true,
+  "cost_model_automatically_qualified": false,
+  "date": "2026-11-16",
+  "deployment_freeze_sha256": "c0842a0c6bf5e719ee16502b881c33b81d76cdf4c41530ee931c1fa910a2e883",
+  "exact_serving_calls": 0,
+  "final_policy_selected": false,
+  "host_export_only_correction": {
+    "Torch_rerun_needed": false,
+    "frozen_development_fold_algorithm_reconstructed": true,
+    "original_error": "KeyError: '0126'",
+    "original_failure_log_sha256": "b859de3b2b86e1a79daa15f1878601c9355f75c41a6af83724fb02ea917bc4a9",
+    "repaired_export_sha256": "b084a6af0f80534b10e8f67ce5e3d5c05b926a5859991ae63008f2b7766edb28",
+    "sealed_script_unchanged": true,
+    "type": "host_analysis_fold_lookup_ID_padding_only",
+    "typed_evidence_identity": "50a84692da959374d7163611bf916ca2ecccc59b4f46ece1240ea3ccec3a3262"
+  },
+  "job_id": "23376796",
+  "provider_calls": 0,
+  "raw_phase_receipt_sha256": {
+    "timing": "91b5d413a17389b154ad13cdc080dd6c8c00abc8969022c29c0a3a08fcf0e40c",
+    "work": "61c92d9133051c4b985a8f8faf29267c5d0aff263a605b1082294c19ab501f71"
+  },
+  "receipt_sha256": "40cf8fcf245a8bc2a337a88aa8b2eadfcf26f1d8a3887ce2df05c097e845bee5",
+  "repaired_evidence_sha256": "b084a6af0f80534b10e8f67ce5e3d5c05b926a5859991ae63008f2b7766edb28",
+  "report_sha256": "76d5974511855c65ffb7e726d250d6a62ea1a39ec6f600a76ce94e5163a334cd",
+  "return_archive_sha256": "8a180f046da12d943bea1bb9bea36b3839044876606c13beb1783e5f47bba53d",
+  "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+  "schema": "fannagent.M1-outcome-freeze.v1",
+  "status": "M1_runtime_prefix_and_empirical_cost_library_verified_M2_surrogate_pending",
+  "typed_evidence_identity": "50a84692da959374d7163611bf916ca2ecccc59b4f46ece1240ea3ccec3a3262",
+  "validation_test_outcomes_opened": false
+}

@@ -4,7 +4,7 @@
     "generation_gates": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/protocol-v2-gates-after-M0.json",
     "job_id": "23303080",
     "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-assessment-v1.json",
-    "proceed_next": "run native startup preflights and submit sealed M1 runtime/prefix/cost kit once before further agent calls",
+    "proceed_next": "M1 complete; local M2 cost-guidance qualification and bound M3 rehearsal before new generation",
     "receipt": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.json",
     "receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
     "repeat_M0": false
@@ -18,6 +18,22 @@
     "original_job": "23074287",
     "scope": "namespace-only deployment repair and pre-sbatch native import checks; experiment unchanged"
   },
+  "M1_assessment": {
+    "actual_prefix_labels": 9436,
+    "cost_ranking_enabled": false,
+    "export_correction": "Separate local normalized fold lookup; original sealed script and failed log retained.",
+    "final_policy_selected": false,
+    "generation_gates": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/protocol-v2-gates-after-M1.json",
+    "job_id": "23376796",
+    "missing_prefix_labels": 0,
+    "original_graph_qualified": true,
+    "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/m1-assessment-v1.json",
+    "partial_prefix_labels": 1496,
+    "receipt": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/m1-assessment-23376796.json",
+    "receipt_sha256": "40cf8fcf245a8bc2a337a88aa8b2eadfcf26f1d8a3887ce2df05c097e845bee5",
+    "repeat_M1": false,
+    "status": "verified_runtime_labels_and_empirical_cost_library_M2_model_pending"
+  },
   "M1_kit": {
     "archive_sha256": "e8dc0c5cf480ab71de51b791e1ca684df5e37082fabb90c8d76bca94d08bf515",
     "commands": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/M1-COMMANDS.txt",
@@ -27,7 +43,7 @@
     "global_cap": 1000000,
     "kit": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2.tar.gz",
     "memory_gib": 48,
-    "original_graph_qualified": false,
+    "original_graph_qualified": true,
     "physical_CPU_summary_regression_comparisons": 248,
     "planned_attempts": 984396,
     "preparation_checkpoint": "f96e02d",
@@ -48,20 +64,20 @@
   "receipt": "experiments/filtered-ann-protocol-v2/receipts/local-implementation-2026-11-14.json",
   "receipt_sha256": "f0ec9061539e25affc7bb34aab8d23df3a2eef0a7b70c912644cc47a92b95c87",
   "roadmap_update": {
-    "sha256": "650a634754b483e5f7a65c00746967b6d9891213585b1cb6c2d0b906c61a399a",
-    "tracked_delta": "docs/plans/agent-protocol-v2-M1-kit-roadmap-update.md",
+    "sha256": "22b943d843cf9b438195ae557bcdeb761f0abe3e1f32e5192b42af3a0c30f8e1",
+    "tracked_delta": "docs/plans/agent-protocol-v2-M1-assessment-roadmap-update.md",
     "workspace_path": "research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md"
   },
   "schema": "fannagent.protocol-v2-execution-status.v1",
   "stages": {
     "M0": "job23303080_verified_current_role_work_attribution_resolved_one_allocation_not_final_performance",
-    "M1": "kit_sealed_local_checks_passed_original_graph_qualification_pending",
-    "M2": "raw_rescore_complete_missing1496_partial_labels_and_qualified_costs",
-    "M3": "local_scripted_controller_tests_and_end_to_end_rehearsal_passed",
+    "M1": "job23376796_original_graph_runtime_labels_and_empirical_cost_library_verified",
+    "M2": "complete9436_actual_labels_available_pending_cost_guidance_qualification_and_binding",
+    "M3": "local_scripted_rehearsal_passed_repeat_with_M2_bound_evidence_before_generation",
     "M4": "not_run_requires_qualified_evidence_and_new_provider_authorization",
     "M5": "not_run",
     "M6": "not_run_protected_outcomes_unopened"
   },
-  "status": "M1_kit_sealed_pending_native_preflight_and_user_Torch_submission",
+  "status": "M1_verified_pending_local_M2_cost_guidance_and_bound_M3_rehearsal",
   "validation_test_outcomes_opened": false
 }

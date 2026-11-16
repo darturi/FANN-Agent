@@ -1,15 +1,16 @@
 # Filtered ANN protocol v2: local implementation
 
 This implements the local portion of [the revamp plan](../../docs/AGENT_PROTOCOL_REVAMP_V2.md).
-M0 job23303080 is verified. The bounded M1 runtime/prefix/cost kit is sealed and ready for upload.
-The v2 runtime has **synthetic qualification only**. No new model episode, original-graph
-v2 qualification, validation or test has run.
+M0 job23303080 and [M1 job23376796](../m1-assessment-v1/REPORT.md) are verified.
+The v2 runtime and all9,436 reached-prefix labels are qualified on the original development graph.
+The empirical cost library is available; M2 surrogate qualification remains pending.
+No new model episode, validation or test has run.
 
 | Stage | Current evidence | Remaining work |
 | --- | --- | --- |
 | M0 attribution | Job23303080 verified: counterbalanced Broad benefit with reduced work; continue advantage did not reproduce; failed23074287 retained | Complete diagnostic; no repeat or final policy promotion. Use its evidence to freeze M1 measurement design |
-| M1 runtime | Compiler/masks/partial stops pass local tests; sealed M1 kit includes CPU-balanced cost blocks, native work bridge and return verifier | Run native startup preflights and submit the M1 kit once; original-graph qualification remains pending |
-| M2 evidence | All 3,150 development rows rebuilt against raw native640; 7,940 known full-prefix labels; 1,496 missing partial-prefix labels | Measure missing prefixes and component costs, including uncertainty, on the original graph; qualify provenance before enabling cost ranking |
+| M1 runtime | Job23376796 verifies masks, partial outputs, native/legacy work bridge,781,200 timings and984,396 attempts; both native preflights pass | Complete; preserve the original export error and local ID-lookup correction; no rerun |
+| M2 evidence | All3,150 rows now have complete actual labels:7,940 full and1,496 partial; typed export and frozen folds pass | Bind compact evidence and qualify cost guidance against measured plans/context/uncertainty before enabling cost ranking |
 | M3 controller | Typed tool dispatcher, durable accounting, registry, deterministic compilation and scripted end-to-end rehearsal pass | Bind the eventual qualified cost library, approved episode and pinned provider transport/rate contract |
 | M4–M6 | No requests or protected evaluation run | Follow the gates in the plan; retain negative/inconclusive outcomes |
 
@@ -32,11 +33,12 @@ disabled during eventual serving timing. This prototype adds no per-distance wor
 `build_evidence.py` checks returned-file hashes, the frozen development membership, vector-group
 fold algorithm and full seven-condition inventory. It exports anonymous groups, exposed fold
 labels, causal observations and evaluator-only recall labels. It never infers a missing prefix's
-recall from its count. The 1,964 cases with some known recall-preserving full stop describe oracle
-opportunity, not an executable policy or a measured speedup. The bundle remains explicitly cost
-unqualified. The component-cost estimator is a development surrogate interface; its values are
-never described as a new policy's measured latency. Its real uncertainty and timing contract
-must be completed from M0/M1 before use.
+recall from its count. This initial builder is preserved separately from the complete M1 export.
+M1's [assessor/exporter](../m1-assessment-v1/assess.py) adds the actual partial labels:2,313 cases
+have some raw-native-relative recall-preserving reached prefix, versus1,964 using full prefixes
+alone. These are oracle diagnostics, not executable policies or measured speedups. Both bundles
+remain explicitly cost unqualified. The component estimator is a development surrogate interface;
+M2 must validate its cost assumptions against the measured plan/context evidence before use.
 
 `fannproto/controller.py` reuses the general agent's `Store` and `Budget`. Its five native tools
 inspect development, explain bounded cases, evaluate programs, compare registered candidates
@@ -85,7 +87,7 @@ synthetic SQL, smoke script, copied engine and supporting modules. In the pinned
 `SYNTHETIC_HIGH_VOTE_COUNT=0` for the zero-output case; default7 exercises partial results.
 Keep `--network none`. Preserve failed evidence rather than overwriting it.
 
-## Next Torch action
+## Current qualification and next action
 
 The [M0 assessment](../reader-attribution-assessment-v1/REPORT.md) verifies all630,000 original-module
 timings, reader/CPU assignments, work counters and684,950 attempts. Native/continue graph counters
@@ -93,14 +95,17 @@ match on every query; Broad saves3.77% aggregate latency and5.30% vector-score w
 allocation, concentrated in votes32. The full native startup checks passed and the failed first
 allocation's empty measurement return is preserved. No M0 rerun is recommended.
 
-The [M1 kit](../m1-runtime-qualification-v1/README.md) is now sealed:984,396 attempts under a
-1,000,000 ceiling, four CPUs/48GiB/eight hours,21 v2 bindings and26 quality/work families.
-Six blocks with four persistent readers each preserve CPU/role crossover within the32-connection
-capacity. Requalify all9,436 reached prefixes, including1,496 currently missing partial labels;
-measure complete-request costs and compatible native/legacy/continue work before binding M2.
-All six filters remain; exact search is offline scoring only. Use the [M1 commands](../m1-runtime-qualification-v1/COMMANDS.txt).
-Native full-backend preflight under both modules is mandatory before submission. No job or
-provider episode has been launched by preparation; original-graph qualification is pending.
+The [M1 assessment](../m1-assessment-v1/REPORT.md) verifies the original-graph runtime, all labels,
+781,200 measured requests and the exact984,396-attempt ledger. Three historical transfers retain
+all outputs/recalls with fewer feature passes. Broad saves5.55% versus same-block native (conditional
+95% interval4.58–6.57%), concentrated in votes32; this is development engineering evidence, not
+final policy promotion. Native anchors differ across blocks, so their costs must not be pooled.
+The packaged export failed on zero-padded IDs after writing the cost library; its original log is
+preserved and a separate local normalized fold lookup passes typed evidence/fold validation.
+
+Next is local M2 evidence/cost-guidance qualification, then M3 rehearsal. No further Torch job is
+needed now. The empirical library does not automatically qualify an additive estimator. All six
+filters remain; exact search is offline scoring only; new provider generation remains gated.
 
 Compact local receipts and external-artifact hashes are in `receipts/`. Generated engines,
 binaries, full evidence, SQLite trajectories and logs remain under the study's workspace paths.
