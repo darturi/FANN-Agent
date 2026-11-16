@@ -1,13 +1,13 @@
 # Filtered ANN protocol v2: local implementation
 
 This implements the local portion of [the revamp plan](../../docs/AGENT_PROTOCOL_REVAMP_V2.md).
-The next Torch submission is the `reader-attribution-v1-startup-fix` deployment of M0.
+M0 job23303080 is verified; the next Torch work is the bounded M1 runtime/prefix/cost qualification.
 The v2 runtime has **synthetic qualification only**. No new model episode, original-graph
 v2 qualification, validation or test has run.
 
 | Stage | Current evidence | Remaining work |
 | --- | --- | --- |
-| M0 attribution | Job23074287 failed at the startup import guard; repaired deployment prepared; original kit/freeze preserved | Native startup preflights, one manual corrected submission, independent return verification and attribution |
+| M0 attribution | Job23303080 verified: counterbalanced Broad benefit with reduced work; continue advantage did not reproduce; failed23074287 retained | Complete diagnostic; no repeat or final policy promotion. Use its evidence to freeze M1 measurement design |
 | M1 runtime | Deterministic compiler, feature masks and partial/zero stops pass local tests and synthetic PostgreSQL smokes | Freeze an M0-informed schedule and one bounded original-graph qualification/cost kit; qualify native/legacy bridge and every reached prefix |
 | M2 evidence | All 3,150 development rows rebuilt against raw native640; 7,940 known full-prefix labels; 1,496 missing partial-prefix labels | Measure missing prefixes and component costs, including uncertainty, on the original graph; qualify provenance before enabling cost ranking |
 | M3 controller | Typed tool dispatcher, durable accounting, registry, deterministic compilation and scripted end-to-end rehearsal pass | Bind the eventual qualified cost library, approved episode and pinned provider transport/rate contract |
@@ -87,13 +87,17 @@ Keep `--network none`. Preserve failed evidence rather than overwriting it.
 
 ## Next Torch action
 
-Use the existing workspace file
-`trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/ATTRIBUTION-STARTUP-FIX-COMMANDS.txt`.
-Collect the failed job23074287 return. Upload the repaired archive and SHA sidecar, verify,
-pass the mandatory native startup preflights, submit once, and return the actual job
-ID. Its four-CPU/48GiB/eight-hour ceiling, attempt ledger, original timing module, counter module
-and all six filters are unchanged. It permits exact search only for offline scoring. The next
-v2 Torch kit will be sealed after this diagnostic determines the measurement contract.
+The [M0 assessment](../reader-attribution-assessment-v1/REPORT.md) verifies all630,000 original-module
+timings, reader/CPU assignments, work counters and684,950 attempts. Native/continue graph counters
+match on every query; Broad saves3.77% aggregate latency and5.30% vector-score work on this one
+allocation, concentrated in votes32. The full native startup checks passed and the failed first
+allocation's empty measurement return is preserved. No M0 rerun is recommended.
+
+Seal one bounded M1 original-graph qualification/cost package next, with an exact variant pool,
+resource-feasible counterbalanced reader/CPU schedule and attempt ceiling. Requalify all reached
+prefixes, including1,496 currently missing partial labels; measure the required feature plans and
+complete-request costs before binding the new evidence/tools. All six filters remain; exact
+search is offline scoring only. No new kit or paid episode is dispatched by the M0 assessment.
 
 Compact local receipts and external-artifact hashes are in `receipts/`. Generated engines,
 binaries, full evidence, SQLite trajectories and logs remain under the study's workspace paths.

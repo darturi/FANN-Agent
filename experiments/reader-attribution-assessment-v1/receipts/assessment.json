@@ -1,0 +1,608 @@
+{
+  "M0_repeat_recommended": false,
+  "M1_original_graph_qualification_pending": true,
+  "M2_new_prefix_cost_evidence_pending": true,
+  "M4_generation_authorized_or_started": false,
+  "agent_nominee_changed": false,
+  "assignments": {
+    "all_work_start_end_cpu_samples_match": true,
+    "cpus": [
+      110,
+      122,
+      123,
+      125
+    ],
+    "distinct_physical_cores": 4,
+    "distinct_timing_backend_pids": 140,
+    "every_role_twice_per_backend": true,
+    "independent_scheduler_trace_retained": false,
+    "per_condition_readers": 20,
+    "per_filter_family_cpu_timing_records": 4500
+  },
+  "broad_votes32_share_of_net_scalar_ms_saving": 0.8247403668058507,
+  "date": "2026-11-16",
+  "failed_original_job": {
+    "archive_checksum_verified": true,
+    "host_exit": 1,
+    "job_id": "23074287",
+    "measurement_files": 0,
+    "retained": true,
+    "traceback_matches_startup_guard": true
+  },
+  "final_policy_selected": false,
+  "job_id": "23303080",
+  "meaning_of_resolved": "Current diagnostic shows counterbalanced reader/CPU/cycle-consistent Broad improvement with reduced work, and no native/continue graph-count mismatch. It does not uniquely identify the earlier allocation control anomaly or establish cross-allocation generalization.",
+  "native_startup_preflights": {
+    "queries": 0,
+    "timing_full_backend_passed": true,
+    "work_full_backend_passed": true
+  },
+  "primary_summary": {
+    "broad_c_fixed": {
+      "conditional_group_95pct_speedup_interval_pct": [
+        3.009823052637073,
+        4.5923743258610035
+      ],
+      "cycle_ratios": {
+        "0": 0.9619911165267991,
+        "1": 0.9625400197694326
+      },
+      "mean_ms": 13.675626217064815,
+      "per_cpu": {
+        "110": {
+          "mean_ms": 13.70018464174074,
+          "ratio_to_native640": 0.9614858573847975,
+          "ratio_to_noop640": 0.9515936373964404
+        },
+        "122": {
+          "mean_ms": 13.569117778925925,
+          "ratio_to_native640": 0.9622847109646766,
+          "ratio_to_noop640": 0.9488382009798991
+        },
+        "123": {
+          "mean_ms": 13.706102751518518,
+          "ratio_to_native640": 0.9627188077991952,
+          "ratio_to_noop640": 0.9503985584663629
+        },
+        "125": {
+          "mean_ms": 13.727099696074076,
+          "ratio_to_native640": 0.9625832823992952,
+          "ratio_to_noop640": 0.9533521929672657
+        }
+      },
+      "reader_slot_limit": "Slots aggregate distinct backend PIDs across filters, not 20 allocation replicates.",
+      "reader_slot_scalar_pooled_ratios": [
+        0.9828081234050366,
+        0.945727531868409,
+        0.9542941138659834,
+        0.9655576753289719,
+        0.9655563369694884,
+        0.989153940873135,
+        0.9402760593343681,
+        0.9516958849270685,
+        0.9656452101773395,
+        0.956052673990065,
+        0.9769480302574657,
+        0.9494426105868145,
+        0.959978599659046,
+        0.9638784667814546,
+        0.969503668100852,
+        0.9842130519436807,
+        0.9364139285057754,
+        0.9525423036055017,
+        0.9704342361470338,
+        0.9671386559225129
+      ],
+      "speedup_vs_native_pct": 3.7731909434439603,
+      "speedup_vs_noop_pct": 4.895086231686574
+    },
+    "conservative_a": {
+      "conditional_group_95pct_speedup_interval_pct": [
+        -0.7620366140025148,
+        -0.07783447077105432
+      ],
+      "cycle_ratios": {
+        "0": 1.0044302031238383,
+        "1": 1.0039726509283249
+      },
+      "mean_ms": 14.271547339648148,
+      "per_cpu": {
+        "110": {
+          "mean_ms": 14.283563089814814,
+          "ratio_to_native640": 1.0024276506521212,
+          "ratio_to_noop640": 0.9921142021843148
+        },
+        "122": {
+          "mean_ms": 14.166277308703703,
+          "ratio_to_native640": 1.0046336311284088,
+          "ratio_to_noop640": 0.99059535742616
+        },
+        "123": {
+          "mean_ms": 14.305509933148148,
+          "ratio_to_native640": 1.0048212622858157,
+          "ratio_to_noop640": 0.9919622131159
+        },
+        "125": {
+          "mean_ms": 14.330839026925927,
+          "ratio_to_native640": 1.0049192018339839,
+          "ratio_to_noop640": 0.9952821146398544
+        }
+      },
+      "reader_slot_limit": "Slots aggregate distinct backend PIDs across filters, not 20 allocation replicates.",
+      "reader_slot_scalar_pooled_ratios": [
+        0.9937616221069057,
+        0.9791769912385163,
+        1.0001129068053052,
+        1.03823224572909,
+        1.0085003756068582,
+        0.9926979962711344,
+        0.9781073144222151,
+        1.004640980856548,
+        1.0303131886169308,
+        0.9968997398185199,
+        0.9930598366955669,
+        0.9850014810565586,
+        1.0074567281724403,
+        1.036065673436186,
+        1.0086636677755099,
+        0.9961775793177932,
+        0.9815122203795905,
+        1.0107989106241935,
+        1.0369616804529098,
+        1.0092340651823555
+      ],
+      "speedup_vs_native_pct": -0.41993244011562236,
+      "speedup_vs_noop_pct": 0.7508499037527372
+    },
+    "moderate_b_fixed": {
+      "conditional_group_95pct_speedup_interval_pct": [
+        0.7105800915055194,
+        1.8322024649288782
+      ],
+      "cycle_ratios": {
+        "0": 0.9883613470674267,
+        "1": 0.9865852532949143
+      },
+      "mean_ms": 14.033723311620369,
+      "per_cpu": {
+        "110": {
+          "mean_ms": 14.067905320481481,
+          "ratio_to_native640": 0.9872926797979761,
+          "ratio_to_noop640": 0.9771349470487699
+        },
+        "122": {
+          "mean_ms": 13.933226529222223,
+          "ratio_to_native640": 0.9881063074197348,
+          "ratio_to_noop640": 0.9742989786974262
+        },
+        "123": {
+          "mean_ms": 14.081909774185187,
+          "ratio_to_native640": 0.989115552036658,
+          "ratio_to_noop640": 0.9764574943345015
+        },
+        "125": {
+          "mean_ms": 14.051851622592592,
+          "ratio_to_native640": 0.9853558113613375,
+          "ratio_to_noop640": 0.9759063353696348
+        }
+      },
+      "reader_slot_limit": "Slots aggregate distinct backend PIDs across filters, not 20 allocation replicates.",
+      "reader_slot_scalar_pooled_ratios": [
+        0.9889194345074682,
+        0.9598293098971108,
+        0.9788621531889946,
+        0.9964840815930407,
+        1.0229920044911962,
+        0.9853966051853363,
+        0.9530432579134823,
+        0.9856310564957007,
+        0.9937939062683395,
+        1.0032283239315982,
+        0.9827413602249476,
+        0.9682943247525446,
+        0.9873475577587906,
+        0.9977319933849792,
+        1.0180766157963683,
+        0.9808374046464742,
+        0.9582424510175537,
+        0.9891648677709849,
+        0.9950731470159355,
+        1.0068601083895246
+      ],
+      "speedup_vs_native_pct": 1.2534861639650896,
+      "speedup_vs_noop_pct": 2.404758347769087
+    },
+    "native640": {
+      "conditional_group_95pct_speedup_interval_pct": [
+        0.0,
+        0.0
+      ],
+      "cycle_ratios": {
+        "0": 1.0,
+        "1": 1.0
+      },
+      "mean_ms": 14.211867099351851,
+      "per_cpu": {
+        "110": {
+          "mean_ms": 14.248971564703705,
+          "ratio_to_native640": 1.0,
+          "ratio_to_noop640": 0.9897115283471111
+        },
+        "122": {
+          "mean_ms": 14.100938759925926,
+          "ratio_to_native640": 1.0,
+          "ratio_to_noop640": 0.9860264744606639
+        },
+        "123": {
+          "mean_ms": 14.236870247555556,
+          "ratio_to_native640": 1.0,
+          "ratio_to_noop640": 0.9872026502099852
+        },
+        "125": {
+          "mean_ms": 14.260687825222224,
+          "ratio_to_native640": 1.0,
+          "ratio_to_noop640": 0.9904100875209254
+        }
+      },
+      "reader_slot_limit": "Slots aggregate distinct backend PIDs across filters, not 20 allocation replicates.",
+      "reader_slot_scalar_pooled_ratios": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "speedup_vs_native_pct": 0.0,
+      "speedup_vs_noop_pct": 1.1658864086236398
+    },
+    "noop640": {
+      "conditional_group_95pct_speedup_interval_pct": [
+        -1.3690330276778129,
+        -0.9918039941289702
+      ],
+      "cycle_ratios": {
+        "0": 1.0114287340784163,
+        "1": 1.0121573626191016
+      },
+      "mean_ms": 14.379515921101852,
+      "per_cpu": {
+        "110": {
+          "mean_ms": 14.397095675444445,
+          "ratio_to_native640": 1.010395424685081,
+          "ratio_to_noop640": 1.0
+        },
+        "122": {
+          "mean_ms": 14.300770947999998,
+          "ratio_to_native640": 1.0141715520843182,
+          "ratio_to_noop640": 1.0
+        },
+        "123": {
+          "mean_ms": 14.421426284185186,
+          "ratio_to_native640": 1.0129632449703134,
+          "ratio_to_noop640": 1.0
+        },
+        "125": {
+          "mean_ms": 14.398770776777779,
+          "ratio_to_native640": 1.0096827693900805,
+          "ratio_to_noop640": 1.0
+        }
+      },
+      "reader_slot_limit": "Slots aggregate distinct backend PIDs across filters, not 20 allocation replicates.",
+      "reader_slot_scalar_pooled_ratios": [
+        1.0065677361909027,
+        0.9893816238327994,
+        1.0295895946501252,
+        1.0228662732593126,
+        1.0028891744307045,
+        1.013974987924552,
+        0.9869330457398723,
+        1.0354986017438235,
+        1.0151075876735676,
+        1.003308313570794,
+        1.009437122837827,
+        0.9975875772232906,
+        1.0347291053988472,
+        1.0196087168638064,
+        1.0137748652433096,
+        1.0028862413897262,
+        0.9859642606574017,
+        1.032670090596365,
+        1.0261451265971326,
+        1.00923746868927
+      ],
+      "speedup_vs_native_pct": -1.1796396671739595,
+      "speedup_vs_noop_pct": -2.220446049250313e-14
+    }
+  },
+  "quality_losses_to_raw_native": {
+    "broad_c_fixed": 0,
+    "conservative_a": 0,
+    "moderate_b_fixed": 0,
+    "native640": 0,
+    "noop640": 0
+  },
+  "report": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.md",
+  "scheduler_gate": {
+    "all_reported_steps_completed": true,
+    "elapsed": "03:42:45",
+    "exit_code": "0:0",
+    "source": "user-pasted independent sacct output",
+    "state": "COMPLETED",
+    "task_max_rss_K": 7069264
+  },
+  "schema": "fannagent.reader-attribution-assessment.v1",
+  "scope": {
+    "development_groups": 450,
+    "new_Torch_jobs_submitted_by_Codex": 0,
+    "new_provider_calls": 0,
+    "scalar_filters": 6,
+    "unfiltered_separate": true,
+    "validation_test_outcomes_opened": false
+  },
+  "short_outputs_per_family": 541,
+  "source_and_artifact_sha256": {
+    "agent/experiments/reader-attribution-assessment-v1/assess.py": {
+      "bytes": 10218,
+      "sha256": "f2cd1575453708a3b75f0d5edd1aa4d47e078669d9f8a70cd7e59fb088864990"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-startup-fix-v1.json": {
+      "bytes": 1113,
+      "sha256": "ba9292e7dcba9bcf6e9fc920339d482a283edd98aa1f19d3844ee9a600d84df6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-v1.json": {
+      "bytes": 904,
+      "sha256": "c8e4079c62a22e22c0e831152b82c2756fd3c2e4e502e2fb20a76dd933648d73"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix/analyse.py": {
+      "bytes": 4040,
+      "sha256": "a618ebcfe7b25eaca92b18a9a6bbdebafd6719ca412830a5d69379caca12ada3"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix/binding.json": {
+      "bytes": 6692,
+      "sha256": "b0e8c8843bb386d684c33f126c558f11e36ede3bb61d0bfb514ca7efc6927e7d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix/verify_return.py": {
+      "bytes": 13539,
+      "sha256": "21c3627459897a51061b160115d177d0d0097b1c5f8334ee27dc50ff1a351af6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-23303080-per-condition.csv": {
+      "bytes": 3560,
+      "sha256": "63605b46ae0fb55dbdefcd7b374a10a1082952e7132d5a3a8433433f54fef5d0"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-23303080-scheduler.txt": {
+      "bytes": 328,
+      "sha256": "835245d56dff6fba73839b42f2190eaf8ee297b6f5b6aa1760492465283cd705"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.md": {
+      "bytes": 13715,
+      "sha256": "8ac41b55b8d4d4331abd60a49dbc07e260d1429ea3558ca4cb8b1bd506a2ff0f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23045686/results/local-verification.json": {
+      "bytes": 24595,
+      "sha256": "8383e0845be3e32d1f2dcf192e4ef079939a946709db4ae6d87a4357138c5021"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23045686/results/receipt.json": {
+      "bytes": 16867,
+      "sha256": "8113456eefca63fa2dcc32fae47eb6f26a40a6800b105df8aab33974ae3f83d3"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23303080/results/diagnostic-analysis.json": {
+      "bytes": 101583,
+      "sha256": "767d52dcf820d31f710e97463a35fa8f807d9c8187454368e5194226da6e1166"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23303080/results/independent-assessment.json": {
+      "bytes": 61821,
+      "sha256": "093d8e027e2076f8b5875c1ea85b444177f09344f719cf2c52d425cfc5021a8d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23303080/results/local-verification.json": {
+      "bytes": 23881,
+      "sha256": "127ad6014b05be08862d5838bc54249ae4395dc9e60bec8a0838d09a30a25e1a"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23303080/results/timing/receipt.json": {
+      "bytes": 9646,
+      "sha256": "8914576302f2dc02643950ee0d992e46726481d623eef363d31ea03e9af1bb3d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23303080/results/work/receipt.json": {
+      "bytes": 4683,
+      "sha256": "0bcf1793817398d48515fb8cd486c6e62af5a018ba9f7fd5a3c13304a460a1fb"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23074287.tar.gz": {
+      "bytes": 228,
+      "sha256": "dc94d7e28b3dc850a362abee7170c152aba2b6e8fc50a2fa2f50b07f355cb5ce"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23074287.tar.gz.sha256": {
+      "bytes": 96,
+      "sha256": "1bd0f30f650119d9d0723a1c46860d508dc92237165f06797ec3a53d43077407"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23303080.tar.gz": {
+      "bytes": 32042842,
+      "sha256": "09b1a5efbf3fb31434f20780f09b15e31ac975a7042e64b323cc6103612b6c02"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23303080.tar.gz.sha256": {
+      "bytes": 96,
+      "sha256": "f47cb5fcf458fb4fbce4fa05b785a1870ef091d1f116898f0f30e2c786d8d23d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23074287.err": {
+      "bytes": 771,
+      "sha256": "8028763773f205c8c331d163debfa6339375c462a432939fe28ce9b0d1ef4eb9"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23074287.out": {
+      "bytes": 1036,
+      "sha256": "6bfd34e33eab56834a3bee469c7b8f0d574bc70d7affccf22070f7116a089a4a"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23303080-preflight-timing.json": {
+      "bytes": 1912,
+      "sha256": "f8802052249e5be53533b9b409e5d184588e6e0c9f2e3d4416507ba3a7f992c4"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23303080-preflight-work.json": {
+      "bytes": 1910,
+      "sha256": "08e0320f306a1ffdcd38559ea004c255f425c7ec66233dd837db6a9b694f48ad"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23303080.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23303080.out": {
+      "bytes": 11624,
+      "sha256": "01b6792ac034c901184c831d90c7858aeced73a8bf46f6cd3612662172f4a95e"
+    }
+  },
+  "status": "verified_attribution_resolved",
+  "verification": {
+    "exact_serving_calls": 0,
+    "offline_exact_reference_queries": 6300,
+    "original_module_timing_requests": 630000,
+    "quality_family_results": 15750,
+    "repetitions_per_role_backend": 2,
+    "role_assignments": 1400,
+    "roles_per_backend": 5,
+    "status": "counterbalanced_attribution_return_verified",
+    "timing_attempts": {
+      "ann": 659750,
+      "capture": 3150,
+      "reference_exact": 3150,
+      "total": 666050
+    },
+    "total_attempts": 684950,
+    "warmups": 14000,
+    "work_attempts": {
+      "ann": 15750,
+      "reference_exact": 3150,
+      "total": 18900
+    },
+    "work_queries": 15750
+  },
+  "work_counter_mismatches_native_noop": {
+    "layer0_adjacencies_examined": 0,
+    "layer0_neighbor_scores": 0,
+    "layer0_queue_pops": 0,
+    "upper_neighbor_scores": 0,
+    "vector_calls": 0
+  },
+  "work_counter_summary": {
+    "broad_c_fixed": {
+      "feature_passes": {
+        "equal_scalar_mean_count": 2.9751851851851856,
+        "ratio_to_native640": null
+      },
+      "layer0_neighbor_scores": {
+        "equal_scalar_mean_count": 9627.43148148148,
+        "ratio_to_native640": 0.9463688637631266
+      },
+      "layer0_queue_pops": {
+        "equal_scalar_mean_count": 602.1118518518518,
+        "ratio_to_native640": 0.9384893901240812
+      },
+      "membership_probes": {
+        "equal_scalar_mean_count": 1904.4685185185183,
+        "ratio_to_native640": null
+      },
+      "vector_calls": {
+        "equal_scalar_mean_count": 9741.948518518519,
+        "ratio_to_native640": 0.9469658655008597
+      }
+    },
+    "conservative_a": {
+      "feature_passes": {
+        "equal_scalar_mean_count": 2.995555555555556,
+        "ratio_to_native640": null
+      },
+      "layer0_neighbor_scores": {
+        "equal_scalar_mean_count": 10089.156666666668,
+        "ratio_to_native640": 0.9917560825363818
+      },
+      "layer0_queue_pops": {
+        "equal_scalar_mean_count": 636.0959259259258,
+        "ratio_to_native640": 0.9914591047271357
+      },
+      "membership_probes": {
+        "equal_scalar_mean_count": 1917.5088888888888,
+        "ratio_to_native640": null
+      },
+      "vector_calls": {
+        "equal_scalar_mean_count": 10203.673703703704,
+        "ratio_to_native640": 0.9918478507403923
+      }
+    },
+    "moderate_b_fixed": {
+      "feature_passes": {
+        "equal_scalar_mean_count": 2.983703703703704,
+        "ratio_to_native640": null
+      },
+      "layer0_neighbor_scores": {
+        "equal_scalar_mean_count": 9923.603703703704,
+        "ratio_to_native640": 0.9754823578411457
+      },
+      "layer0_queue_pops": {
+        "equal_scalar_mean_count": 623.384074074074,
+        "ratio_to_native640": 0.9716456131722021
+      },
+      "membership_probes": {
+        "equal_scalar_mean_count": 1909.9225925925923,
+        "ratio_to_native640": null
+      },
+      "vector_calls": {
+        "equal_scalar_mean_count": 10038.12074074074,
+        "ratio_to_native640": 0.9757552790582033
+      }
+    },
+    "native640": {
+      "feature_passes": {
+        "equal_scalar_mean_count": 0.0,
+        "ratio_to_native640": null
+      },
+      "layer0_neighbor_scores": {
+        "equal_scalar_mean_count": 10173.022222222222,
+        "ratio_to_native640": 1.0
+      },
+      "layer0_queue_pops": {
+        "equal_scalar_mean_count": 641.5755555555555,
+        "ratio_to_native640": 1.0
+      },
+      "membership_probes": {
+        "equal_scalar_mean_count": 0.0,
+        "ratio_to_native640": null
+      },
+      "vector_calls": {
+        "equal_scalar_mean_count": 10287.53925925926,
+        "ratio_to_native640": 1.0
+      }
+    },
+    "noop640": {
+      "feature_passes": {
+        "equal_scalar_mean_count": 2.995555555555556,
+        "ratio_to_native640": null
+      },
+      "layer0_neighbor_scores": {
+        "equal_scalar_mean_count": 10173.022222222222,
+        "ratio_to_native640": 1.0
+      },
+      "layer0_queue_pops": {
+        "equal_scalar_mean_count": 641.5755555555555,
+        "ratio_to_native640": 1.0
+      },
+      "membership_probes": {
+        "equal_scalar_mean_count": 1917.5088888888888,
+        "ratio_to_native640": null
+      },
+      "vector_calls": {
+        "equal_scalar_mean_count": 10287.53925925926,
+        "ratio_to_native640": 1.0
+      }
+    }
+  }
+}

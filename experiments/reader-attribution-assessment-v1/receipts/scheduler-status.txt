@@ -1,0 +1,6 @@
+Source: user-pasted sacct output for job23303080, received in this conversation.
+JobIDRaw       State       ExitCode Elapsed  MaxRSS
+23303080       COMPLETED   0:0      03:42:45
+23303080.ba+   COMPLETED   0:0      03:42:45 5852K
+23303080.ex+   COMPLETED   0:0      03:42:45
+23303080.0     COMPLETED   0:0      03:42:42 7069264K
