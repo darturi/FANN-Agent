@@ -7,19 +7,19 @@ Full native backend/import/module preflights must pass BEFORE sbatch.
 
 MAC SFTP — upload the archive and sidecar using your working connection:
 
-put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz /home/dar579/m1-runtime-qualification-v1.tar.gz
-put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz.sha256 /home/dar579/m1-runtime-qualification-v1.tar.gz.sha256
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2.tar.gz /home/dar579/m1-runtime-qualification-v2.tar.gz
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2.tar.gz.sha256 /home/dar579/m1-runtime-qualification-v2.tar.gz.sha256
 
 TORCH — verify, stage in a fresh directory and submit once:
 
 (
 set -euo pipefail
 cd /home/dar579
-sha256sum -c m1-runtime-qualification-v1.tar.gz.sha256
+sha256sum -c m1-runtime-qualification-v2.tar.gz.sha256
 mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
-test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
-tar -xzf m1-runtime-qualification-v1.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
-cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v2
+tar -xzf m1-runtime-qualification-v2.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v2
 bash submit.sh
 )
 
@@ -29,7 +29,7 @@ Do not delete the stage, alter SHA256SUMS or resubmit after an error without rev
 
 TORCH STATUS:
 
-cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v2
 if [ -f job-id ]; then
   job=$(cat job-id)
   /opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
@@ -42,7 +42,7 @@ fi
 
 AFTER COMPLETION — print SFTP download commands on Torch (collect failures too):
 
-cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v2
 job=$(cat job-id)
 printf 'get %s/run-%s/qualification-%s.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz\n' "$PWD" "$job" "$job" "$job"
 printf 'get %s/run-%s/qualification-%s.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz.sha256\n' "$PWD" "$job" "$job" "$job"

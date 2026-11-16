@@ -9,7 +9,7 @@ from pathlib import Path
 
 import numpy as np
 from common import require, sha, write
-from m1_design import ARMS, FEATURES, FILTERS, GROUPS
+from m1_design import ARMS, FEATURES, FILTERS, GROUPS, cpu_for
 from m1_verify import lines
 
 
@@ -26,6 +26,8 @@ def analyse(results, kit):
         key=lambda name: int(name.rsplit("-v", 1)[1]),
     )
     gi = {g: i for i, g in enumerate(groups)}
+    cpus = json.loads((results / "timing/allowed-cpus.json").read_text())
+    require(len(cpus) == len(set(cpus)) == 4, "four physical CPUs required")
     arrays = [np.full((len(groups), 7, 4, 2, len(names)), np.nan) for names in GROUPS]
     for r in lines(results / "timing/timing.jsonl"):
         g = r["group"]
@@ -53,6 +55,13 @@ def analyse(results, kit):
         a = arrays[group]
         means = a.mean(axis=(0, 2, 3))
         primary = scalar[group].mean(axis=0)
+        cpu_primary = {}
+        for cpu in cpus:
+            per_filter = []
+            for ti in range(1, len(FILTERS)):
+                reader = next(r for r in range(4) if cpu_for(r, ti, group, cpus) == cpu)
+                per_filter.append(a[:, ti, reader, :, :].mean(axis=(0, 1)))
+            cpu_primary[cpu] = np.mean(per_filter, axis=0)
         stats = {}
         for fi, name in enumerate(names):
             ratio = boot[group][:, fi] / boot[group][:, 0]
@@ -69,6 +78,12 @@ def analyse(results, kit):
                     str(r): float(a[:, 1:, r, :, fi].mean() / a[:, 1:, r, :, 0].mean())
                     for r in range(4)
                 },
+                "per_cpu_primary_mean_ms": {
+                    str(cpu): float(values[fi]) for cpu, values in cpu_primary.items()
+                },
+                "per_cpu_primary_native_ratio": {
+                    str(cpu): float(values[fi] / values[0]) for cpu, values in cpu_primary.items()
+                },
                 "per_cycle_primary_native_ratio": {
                     str(c): float(a[:, 1:, :, c, fi].mean() / a[:, 1:, :, c, 0].mean())
                     for c in (0, 1)
@@ -81,7 +96,12 @@ def analyse(results, kit):
                 stats[name]["matched_ratio_conditional95pct_interval"] = np.quantile(
                     relative, [0.025, 0.975]
                 ).tolist()
-        summaries[str(group)] = {"families": stats, "native_anchor_not_pooled_across_blocks": True}
+        summaries[str(group)] = {
+            "families": stats,
+            "native_anchor_not_pooled_across_blocks": True,
+            "reader_slot_limit": "Reader slots map to different physical CPUs and PIDs across "
+            "filter blocks; use per_cpu summaries for physical CPU consistency.",
+        }
     # Within the single calibration block: do not subtract unpaired cross-block/control gaps.
     component_pairs = (
         ("decision_plan_minus_native", 1, 0),

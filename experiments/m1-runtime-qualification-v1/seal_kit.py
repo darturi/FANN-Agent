@@ -28,7 +28,7 @@ def smoke(path):
 
 def main():
     archive = KIT.with_suffix(".tar.gz")
-    freeze = STUDY / "freeze/m1-runtime-qualification-v1.json"
+    freeze = STUDY / "freeze/m1-runtime-qualification-v2.json"
     assert not archive.exists() and not freeze.exists(), "preserve sealed deployment"
     for p in HERE.iterdir():
         if p.name.startswith("m1_") and p.suffix == ".py" or p.suffix == ".sh":
@@ -36,7 +36,7 @@ def main():
     shutil.copyfile(HERE / "PROTOCOL.md", KIT / "m1-protocol.md")
     shutil.copyfile(HERE / "README.md", KIT / "README.md")
     shutil.copyfile(HERE / "COMMANDS.txt", KIT / "COMMANDS.txt")
-    (STUDY / "protocol/m1-runtime-qualification-v1.md").write_text(
+    (STUDY / "protocol/m1-runtime-qualification-v2.md").write_text(
         (HERE / "PROTOCOL.md").read_text()
     )
     checks = RUNTIME / "checks"
@@ -61,6 +61,8 @@ def main():
         and verifier["production_scope_rejects_fixture"]
         and len(verifier["bad_CPU_order_missing_prefix_work_sample_and_module_rejected"]) == 5
     )
+    cpu_analysis = json.loads((checks / "cpu-analysis-regression.json").read_text())
+    assert cpu_analysis["status"] == "passed" and cpu_analysis["comparisons"] == 248
     loaders = {
         phase: json.loads((checks / ("preflight-" + phase + "-loader.log")).read_text())
         for phase in ("timing", "work")
@@ -77,6 +79,12 @@ def main():
         assert b"fannbench_v2_audit_read" in data
     assert b"fannbench_diagnostic_reset" not in (KIT / "timing-module.so").read_bytes()
     assert b"fannbench_diagnostic_reset" in (KIT / "work-module.so").read_bytes()
+    previous = STUDY / "kits/m1-runtime-qualification-v1"
+    assert sha(previous.with_suffix(".tar.gz")) == (
+        "c4e0c46e04dd1796f063b94c257e48f31bba487594ab222717098d1e7aede532"
+    )
+    for name in ("timing-module.so", "work-module.so", "compiled-programs.json", "m1-plan.json"):
+        assert sha(KIT / name) == sha(previous / name), "analysis amendment changed workload"
     subprocess.run(
         [
             "bash",
@@ -102,6 +110,7 @@ def main():
         "smokes": smokes,
         "loader_checks": loaders,
         "return_verifier": verifier,
+        "physical_CPU_analysis_regression": cpu_analysis,
         "native_full_backend_preflight_required_before_sbatch": True,
         "original_graph_qualified": False,
         "all_six_filters": True,
@@ -131,6 +140,14 @@ def main():
         "date": "2026-11-16",
         "status": "sealed_pending_native_preflight_and_user_Torch_submission",
         "pre_M1_commit": "f96e02d",
+        "deployment_version": 2,
+        "supersedes_unsubmitted_deployment": {
+            "archive": "m1-runtime-qualification-v1.tar.gz",
+            "sha256": "c4e0c46e04dd1796f063b94c257e48f31bba487594ab222717098d1e7aede532",
+            "source_commit": "9f85f72",
+            "reason": "Add physical-CPU analysis summaries; runtime, workload, caps unchanged.",
+            "prior_archive_and_freeze_preserved": True,
+        },
         "archive_sha256": sha(archive),
         "binding_sha256": sha(KIT / "binding.json"),
         "plan_sha256": sha(KIT / "m1-plan.json"),
@@ -155,7 +172,7 @@ def main():
         "final_policy_selected": False,
     }
     write(freeze, frozen)
-    receipts = HERE / "receipts"
+    receipts = HERE / "receipts-v2"
     receipts.mkdir(exist_ok=False)
     for source, name in (
         (freeze, "M1-freeze.json"),

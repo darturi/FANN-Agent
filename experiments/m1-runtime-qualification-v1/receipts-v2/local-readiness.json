@@ -1,0 +1,257 @@
+{
+  "all_six_filters": true,
+  "date": "2026-11-16",
+  "exact_serving_calls": 0,
+  "external_checks": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/cpu-analysis-regression.json": {
+      "bytes": 438,
+      "sha256": "3c112b5fb86d591cc64b308db754e67752b6fc02f43b425ef6b3d06aa44c348f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/local-verifier-2.log": {
+      "bytes": 946,
+      "sha256": "d8f339df95378e02bf181e99a81bd41dac4d35ae2805a648a26059d62eba9ebc"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/local-verifier-check.json": {
+      "bytes": 1000,
+      "sha256": "f61c1f17609bebd472fdfd14f6e339388147c18b006e6e24bee379efbbd4576c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/local-verifier.log": {
+      "bytes": 436,
+      "sha256": "c4a22ea42a5da298c8136861d590485bc9df5bbed5d1dd0ebc172859ed25de96"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/preflight-timing-loader.log": {
+      "bytes": 728,
+      "sha256": "0bd1e48f747631e98224efab02a03a82bde578806e8450d54f63c77aede6cec8"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/preflight-work-loader.log": {
+      "bytes": 726,
+      "sha256": "3e3d2b3cf6c1e19cfb90f48022dd8b8f9c5823fcb2ddcea681cbf050ca0ab872"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-timing-2.log": {
+      "bytes": 39873,
+      "sha256": "60984151f9428c65d9419b3771669d0f048dc5a2ba6c14b38687d94b20fe51ed"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-timing.log": {
+      "bytes": 291,
+      "sha256": "641c92949a161de85e7d4956d99116313f3580618b012983006c3548d0bb7ed7"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-work.log": {
+      "bytes": 1461,
+      "sha256": "b6559ca52d9709de537f3fd925c883e973cf77fbafed6cff8b7e51c741a438cd"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-zero.log": {
+      "bytes": 1602,
+      "sha256": "167f365904e7deea2834d2c7bdb7669e86eb4cbc55f798b6e96c2b99db85db42"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/unit-tests.log": {
+      "bytes": 1082,
+      "sha256": "9f0a45238cfb847248bc853f1426ea2f1e9884fbf74348e86023174f516a43a3"
+    }
+  },
+  "loader_checks": {
+    "timing": {
+      "backend": null,
+      "backend_import_exercised": false,
+      "module_sha256": "ab2a4d53d65ef58923e54e5293b7458ba02330ca6f9d5c5cc8a39a5256b8b79a",
+      "phase": "timing",
+      "private_startup": {
+        "inherited_start_function_sha256": "81a6776a25b46c4b6121779cb6429c13c88dbcfbc462f6fc63331e8f9951ff15",
+        "max_connections": 32,
+        "only_postgres_setting_change": "max_connections16->32",
+        "scope": "private copied restore only; inherited files unchanged"
+      },
+      "programs_sha256": "7b386b983e03abd46908a87abe48ffde53eb4a7db133c1217475015e65a5b150",
+      "provider_calls": 0,
+      "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+      "search_attempts": 0,
+      "status": "M1_local_loader_only_passed",
+      "validation_test_outcomes_opened": false
+    },
+    "work": {
+      "backend": null,
+      "backend_import_exercised": false,
+      "module_sha256": "c369263d46729d506ad3aaf1a39ea4d0da0c92a554ae089e47a4212362867601",
+      "phase": "work",
+      "private_startup": {
+        "inherited_start_function_sha256": "81a6776a25b46c4b6121779cb6429c13c88dbcfbc462f6fc63331e8f9951ff15",
+        "max_connections": 32,
+        "only_postgres_setting_change": "max_connections16->32",
+        "scope": "private copied restore only; inherited files unchanged"
+      },
+      "programs_sha256": "7b386b983e03abd46908a87abe48ffde53eb4a7db133c1217475015e65a5b150",
+      "provider_calls": 0,
+      "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+      "search_attempts": 0,
+      "status": "M1_local_loader_only_passed",
+      "validation_test_outcomes_opened": false
+    }
+  },
+  "local_failed_check_disposition": "Missing-session-helper and host helper-path failures retained; missing helper and host import path corrected before sealing. No failed study allocation or provider call was made.",
+  "native_full_backend_preflight_required_before_sbatch": true,
+  "original_graph_qualified": false,
+  "physical_CPU_analysis_regression": {
+    "SQL_searches_or_provider_calls": 0,
+    "check": "Independent raw CPU-keyed aggregation matches tensor-based physical-CPU means/ratios",
+    "comparisons": 248,
+    "conditions": "all six scalar filters, equal weight; unfiltered excluded from primary",
+    "fixture_only": true,
+    "source_timings_sha256": "789f40cadd2bdcc83e6ae68864a590cda6bc18fd5ba9d3a65d20608a495d928f",
+    "status": "passed",
+    "validation_test_outcomes_opened": false
+  },
+  "pre_M1_commit": "f96e02d",
+  "provider_calls": 0,
+  "return_verifier": {
+    "all_seven_conditions": true,
+    "attempts": {
+      "timing": {
+        "capture": 28,
+        "forced_prefix": 84,
+        "native_bridge": 56,
+        "quality_ann": 700,
+        "reference_exact": 28,
+        "timed_ann": 6944,
+        "total": 14784,
+        "warmup_ann": 6944
+      },
+      "total": 15540,
+      "work": {
+        "reference_exact": 28,
+        "total": 756,
+        "work_ann": 728
+      }
+    },
+    "bad_CPU_order_missing_prefix_work_sample_and_module_rejected": [
+      "role/CPU assignment differs",
+      "mirrored Williams order differs",
+      "missing actual prefix label",
+      "work CPU/counter schema differs",
+      "instrumented timing module rejected"
+    ],
+    "fixture": "Actual synthetic PostgreSQL outputs, not fabricated study performance",
+    "full_prefix_labels": 72,
+    "paired_cost_analysis_executed": true,
+    "partial_prefix_labels": 12,
+    "prefix_labels": 84,
+    "production_scope_rejects_fixture": true,
+    "status": "passed",
+    "timing_records": 6944,
+    "validation_test_outcomes_opened": false
+  },
+  "schema": "fannagent.M1-local-readiness.v1",
+  "smokes": {
+    "timing": {
+      "conditions": [
+        -1,
+        743,
+        527,
+        310,
+        192,
+        108,
+        32
+      ],
+      "exact_serving_calls": 0,
+      "fixture": "synthetic8d same graph under both modules; not original graph or performance qualification",
+      "phase": "timing",
+      "population": 7,
+      "production_loops_exercised": true,
+      "programs": 21,
+      "provider_calls": 0,
+      "queries": 28,
+      "searches": {
+        "capture": 28,
+        "forced_prefix": 84,
+        "native_bridge": 56,
+        "quality_ann": 700,
+        "reference_exact": 28,
+        "timed_ann": 6944,
+        "total": 14784,
+        "warmup_ann": 6944
+      },
+      "status": "passed",
+      "validation_test_outcomes_opened": false,
+      "zero_output_stops_verified": false
+    },
+    "work": {
+      "conditions": [
+        -1,
+        743,
+        527,
+        310,
+        192,
+        108,
+        32
+      ],
+      "exact_serving_calls": 0,
+      "fixture": "synthetic8d same graph under both modules; not original graph or performance qualification",
+      "phase": "work",
+      "population": 7,
+      "production_loops_exercised": true,
+      "programs": 21,
+      "provider_calls": 0,
+      "queries": 28,
+      "searches": {
+        "reference_exact": 28,
+        "total": 756,
+        "work_ann": 728
+      },
+      "status": "passed",
+      "validation_test_outcomes_opened": false,
+      "zero_output_stops_verified": false
+    },
+    "zero": {
+      "conditions": [
+        -1,
+        743,
+        527,
+        310,
+        192,
+        108,
+        32
+      ],
+      "exact_serving_calls": 0,
+      "fixture": "synthetic8d same graph under both modules; not original graph or performance qualification",
+      "phase": "timing",
+      "population": 0,
+      "production_loops_exercised": true,
+      "programs": 21,
+      "provider_calls": 0,
+      "queries": 28,
+      "searches": {
+        "capture": 28,
+        "forced_prefix": 84,
+        "native_bridge": 56,
+        "quality_ann": 700,
+        "reference_exact": 28,
+        "total": 896
+      },
+      "status": "passed",
+      "validation_test_outcomes_opened": false,
+      "zero_output_stops_verified": true
+    }
+  },
+  "source_sha256": {
+    "COMMANDS.txt": "6b74c36f983301a3e61db26c6661011bf8692cb3cf44cb4eaee152a9ee2869f1",
+    "PROTOCOL.md": "81b8348235a302efc8fa8b9d9849fa27af1358f7aedc5bf80ae82f7256048fa3",
+    "README.md": "f2fa0588fb9841a4d5d337e5bda9a532ddc5a2a9202d5d390c112d216f4d43b4",
+    "build_runtime.py": "be0fb064affc70345ab1ccd6636105764ffa79668c61a705b9c59aa756c3b53e",
+    "check_cpu_analysis.py": "86455ba6450c3d6e46e53414223f44577d63558f7feb42fe6e8dce040c21134c",
+    "check_local_return.py": "f1623084a39f18404bc3c5ae860fab7459dcc104896840e09e5e2c63c32e3c52",
+    "m1_analyse.py": "7251f4c47b98dc46eeb71dcdd85f1f9e83f3d3336f0d6741146975221860eaad",
+    "m1_design.py": "711b25d29e9d2298d12f6f9f67f8285d0164b8b0c901921e2a6186755eafc156",
+    "m1_experiment.py": "95db9d833906daeecb07c243d33a5f069cec575fb69adae37917cf220f7cea9a",
+    "m1_preflight.py": "343790540e3fd3878e53c733495d1c5120d5cee66375c58dd83ed6e563a794f7",
+    "m1_run.py": "18ca3ed1400f072c251d4f641e377f0e4ff3ec825ede1cc6b394cc850b491359",
+    "m1_smoke.py": "986ce558e6b231bd8155e5f5d7de6926dce4ec4d96547014a8e32b51498c70a3",
+    "m1_verify.py": "1771335bd1b6953e45c7ff830d28ff0966e458a2f6a7dcac4dc4934c4b5ba139",
+    "package_kit.py": "47da0ea5b66a8996a3593a78e655edd5eff2cf93a55009ce9093a96df5321842",
+    "run-on-compute.sh": "ae6a9dc0acd095bbc4c97699fde57d0595d66977487a6baf714f4d467590d372",
+    "seal_kit.py": "1def58eeb4e8adbabd27acc1c3d738bc04d58ca57836ae1e2db900c96030b57e",
+    "startup-preflight.sh": "6c614bd6c94a2000d02cda8a86ca8e7632d91f0d779e0dc683f1ebbeeb30e42f",
+    "submit.sh": "d531d89a689ff722293fa5497518fd397a2a68f943450ac4a2bfdf715493ac51",
+    "test_m1.py": "232834523f6ef048db8b36791edced0f1757d20730e628328677e86951d0b1d9"
+  },
+  "status": "local_semantic_schedule_CPU_work_verifier_passed_native_preflight_and_original_graph_pending",
+  "unit_tests": 8,
+  "validation_test_outcomes_opened": false
+}

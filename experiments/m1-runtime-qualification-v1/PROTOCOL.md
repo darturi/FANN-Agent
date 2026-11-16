@@ -129,6 +129,11 @@ behavior and same-block native/matched-control contrasts. This is one allocation
 allocation-level or held-out inference. Timing improvement is not required for a valid negative
 qualification/cost result. No policy is promoted or selected by M1.
 
+Physical-CPU summaries follow the recorded CPU assignment across all six scalar filters; reader
+slot summaries are separate because slot-to-CPU mapping changes by filter/block. Deployment v2
+adds these explicit physical-CPU summaries before dispatch. The undispatched v1 seal is preserved;
+runtime modules, programs, workload, statistical method and resource ceilings are unchanged.
+
 The feature calibration block reports paired COMPLETE-plan differences: decision minus native,
 count minus decision, ranked minus count, turnover minus ranked, and four-comparison minus
 turnover. These include code/availability/short-circuit/cache effects. Keep negative/noisy

@@ -1,0 +1,3486 @@
+{
+  "artifact_hash": "4ab0e1f118f2941b9ae7fd094ffae0d28d80d785409e59fe58e6611340cf3ef9",
+  "bindings": [
+    {
+      "arm": 20,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "conservative_a",
+        "rationale": "Very conservative stops at cp64 for the two filters with the most separable safe mass.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.36
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.37
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "b625d883b5dce7d63ae6d92cf7a8ded5b0aeca8bdfcf51ea8aae8b40526d9683"
+    },
+    {
+      "arm": 30,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "conservative_a",
+        "rationale": "Very conservative stops at cp64 for the two filters with the most separable safe mass.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.36
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.37
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "b625d883b5dce7d63ae6d92cf7a8ded5b0aeca8bdfcf51ea8aae8b40526d9683"
+    },
+    {
+      "arm": 21,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 3,
+          "32": 15,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes192": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 3,
+          "32": 15,
+          "64": 15
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "moderate_b_fixed",
+        "rationale": "Policy B with the lossy unfiltered cp64 clause replaced by the verified-clean tighter A clause (tenth_distance<=0.36 excludes both observed lossy cases).",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.36
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.08
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.38
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.07
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.36
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.35
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.08
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.38
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "41c297eb813f941bc836efb0dd0748e8fe30a000b43ad5caeb4f8784e6a9f2e5"
+    },
+    {
+      "arm": 31,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 3,
+          "32": 15,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes192": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 3,
+          "32": 15,
+          "64": 15
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "moderate_b_fixed",
+        "rationale": "Policy B with the lossy unfiltered cp64 clause replaced by the verified-clean tighter A clause (tenth_distance<=0.36 excludes both observed lossy cases).",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.36
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.08
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.38
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.07
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.36
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.35
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.08
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.38
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "41c297eb813f941bc836efb0dd0748e8fe30a000b43ad5caeb4f8784e6a9f2e5"
+    },
+    {
+      "arm": 22,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 11,
+          "32": 15,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes192": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes310": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes32": {
+          "16": 3,
+          "32": 15,
+          "64": 15
+        },
+        "votes527": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "broad_c_fixed",
+        "rationale": "Policy C with the lossy unfiltered cp64 clause removed. Other filters showed no losses in the evaluated batch, but this exact combination is unevaluated.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.06
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.4
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.05
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.38
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.05
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.4
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.08
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.37
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.06
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.4
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.03
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.42
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "4a55dab32c87884b9a67b12af70f7e0a6550e3c40810159ddf10f1a9c1e9c8ec"
+    },
+    {
+      "arm": 32,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 11,
+          "32": 15,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes192": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes310": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes32": {
+          "16": 3,
+          "32": 15,
+          "64": 15
+        },
+        "votes527": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "broad_c_fixed",
+        "rationale": "Policy C with the lossy unfiltered cp64 clause removed. Other filters showed no losses in the evaluated batch, but this exact combination is unevaluated.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.15
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.06
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.4
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.05
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.38
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.05
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.4
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.08
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.37
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.06
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.4
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.03
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.42
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "4a55dab32c87884b9a67b12af70f7e0a6550e3c40810159ddf10f1a9c1e9c8ec"
+    },
+    {
+      "arm": 40,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        },
+        "votes108": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        },
+        "votes527": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "qualification_partial16",
+        "rationale": "researcher qualification probe only; not an agent proposal",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "d73bfb1ee971d53e04aab1230ecf079749e0b5b124cadc0e4aaa77e8e6795165"
+    },
+    {
+      "arm": 41,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 9,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 9,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 9,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 9,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 9,
+          "64": 0
+        },
+        "votes527": {
+          "16": 0,
+          "32": 9,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 9,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "qualification_partial32",
+        "rationale": "researcher qualification probe only; not an agent proposal",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "d4e0914efaf5158b2bc4c4050d6a0aaa34cfd905ade9bb11e22d9e8dd91e299f"
+    },
+    {
+      "arm": 42,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 9
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 9
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 9
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 9
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 9
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 9
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 9
+        }
+      },
+      "policy": {
+        "name": "qualification_partial64",
+        "rationale": "researcher qualification probe only; not an agent proposal",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "821ddd3b93920dbf886c431394819483c2cfd56f2c85a4f0e59552ea279c8eb5"
+    },
+    {
+      "arm": 43,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "qualification_empty",
+        "rationale": "researcher qualification probe only; not an agent proposal",
+        "rules": {},
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "b6d4a2778fe18144e2aabf5a4c3a5af3fa7ebc39639cad162e39a7169351a853"
+    },
+    {
+      "arm": 44,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 3,
+          "64": 15
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "qualification_turnover_dependency",
+        "rationale": "researcher qualification probe only; not an agent proposal",
+        "rules": {
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "c6efea49113f5b8e29300fad169f09b59ed338cf4ff046ad331494009fad567b"
+    },
+    {
+      "arm": 45,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 9,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "qualification_partial_condition",
+        "rationale": "researcher qualification probe only; not an agent proposal",
+        "rules": {
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  "<=",
+                  9
+                ]
+              ],
+              "cp": 16
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "e96c07304c34986bc07da2bbff1ae785f12c782ec4bc4a560fa770a714e525a6"
+    },
+    {
+      "arm": 46,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "qualification_distance_only",
+        "rationale": "researcher qualification probe only; not an agent proposal",
+        "rules": {
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  "<=",
+                  2.0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "eade4194e617f48c0cb21f9c808f6789425f9fc89a7bb67c6f989ad2e2d77992"
+    },
+    {
+      "arm": 47,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 9,
+          "32": 9,
+          "64": 9
+        },
+        "votes108": {
+          "16": 9,
+          "32": 9,
+          "64": 9
+        },
+        "votes192": {
+          "16": 9,
+          "32": 9,
+          "64": 9
+        },
+        "votes310": {
+          "16": 9,
+          "32": 9,
+          "64": 9
+        },
+        "votes32": {
+          "16": 9,
+          "32": 9,
+          "64": 9
+        },
+        "votes527": {
+          "16": 9,
+          "32": 9,
+          "64": 9
+        },
+        "votes743": {
+          "16": 9,
+          "32": 9,
+          "64": 9
+        }
+      },
+      "policy": {
+        "name": "M1_count_continue",
+        "rationale": "Researcher cost/semantic probe only; not an agent candidate.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "056394fd64be95cbc8f4698645ebe6b3da8b52f25a3f698e258ba93a809f3277"
+    },
+    {
+      "arm": 48,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 11,
+          "32": 11,
+          "64": 11
+        },
+        "votes108": {
+          "16": 11,
+          "32": 11,
+          "64": 11
+        },
+        "votes192": {
+          "16": 11,
+          "32": 11,
+          "64": 11
+        },
+        "votes310": {
+          "16": 11,
+          "32": 11,
+          "64": 11
+        },
+        "votes32": {
+          "16": 11,
+          "32": 11,
+          "64": 11
+        },
+        "votes527": {
+          "16": 11,
+          "32": 11,
+          "64": 11
+        },
+        "votes743": {
+          "16": 11,
+          "32": 11,
+          "64": 11
+        }
+      },
+      "policy": {
+        "name": "M1_ranked_continue",
+        "rationale": "Researcher cost/semantic probe only; not an agent candidate.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "e90ae8acecf65beb0a0b1c5891d5c49447ee04cecc20e0a26e70ce014e25342e"
+    },
+    {
+      "arm": 49,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes108": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes192": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes310": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes32": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes527": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes743": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        }
+      },
+      "policy": {
+        "name": "M1_turnover_continue",
+        "rationale": "Researcher cost/semantic probe only; not an agent candidate.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "48871cc02caba139934e3c2abdb0965672fea1016d1f0e23abeec7914c323187"
+    },
+    {
+      "arm": 50,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 8,
+          "32": 8,
+          "64": 8
+        },
+        "votes108": {
+          "16": 8,
+          "32": 8,
+          "64": 8
+        },
+        "votes192": {
+          "16": 8,
+          "32": 8,
+          "64": 8
+        },
+        "votes310": {
+          "16": 8,
+          "32": 8,
+          "64": 8
+        },
+        "votes32": {
+          "16": 8,
+          "32": 8,
+          "64": 8
+        },
+        "votes527": {
+          "16": 8,
+          "32": 8,
+          "64": 8
+        },
+        "votes743": {
+          "16": 8,
+          "32": 8,
+          "64": 8
+        }
+      },
+      "policy": {
+        "name": "M1_decision_continue",
+        "rationale": "Researcher cost/semantic probe only; not an agent candidate.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [],
+              "cp": 16
+            },
+            {
+              "conditions": [],
+              "cp": 32
+            },
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [],
+              "cp": 16
+            },
+            {
+              "conditions": [],
+              "cp": 32
+            },
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [],
+              "cp": 16
+            },
+            {
+              "conditions": [],
+              "cp": 32
+            },
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [],
+              "cp": 16
+            },
+            {
+              "conditions": [],
+              "cp": 32
+            },
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [],
+              "cp": 16
+            },
+            {
+              "conditions": [],
+              "cp": 32
+            },
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [],
+              "cp": 16
+            },
+            {
+              "conditions": [],
+              "cp": 32
+            },
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [],
+              "cp": 16
+            },
+            {
+              "conditions": [],
+              "cp": 32
+            },
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "f930f745542df0e0c355e59f55664d5688b64ac9442bcc7c1566268592c498a7"
+    },
+    {
+      "arm": 54,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes108": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes192": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes310": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes32": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes527": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        },
+        "votes743": {
+          "16": 15,
+          "32": 15,
+          "64": 15
+        }
+      },
+      "policy": {
+        "name": "M1_four_compare_continue",
+        "rationale": "Researcher cost/semantic probe only; not an agent candidate.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 16
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 32
+            },
+            {
+              "conditions": [
+                [
+                  "qualifying_count",
+                  ">=",
+                  0
+                ],
+                [
+                  "tenth_distance",
+                  ">=",
+                  0.0
+                ],
+                [
+                  "frontier_gap",
+                  ">=",
+                  -2.0
+                ],
+                [
+                  "top10_new_since_previous",
+                  "<=",
+                  10
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "a3de46a59b5a74b639a17fe9a23c8da5fa825ee6d9ff02a3ae27f4e0f298787b"
+    },
+    {
+      "arm": 51,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 8,
+          "32": 0,
+          "64": 0
+        },
+        "votes108": {
+          "16": 8,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 8,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 8,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 8,
+          "32": 0,
+          "64": 0
+        },
+        "votes527": {
+          "16": 8,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 8,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "M1_bare_stop16",
+        "rationale": "Researcher no-observation prefix cost/label probe; actual0..10 output.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [],
+              "cp": 16
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [],
+              "cp": 16
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [],
+              "cp": 16
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [],
+              "cp": 16
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [],
+              "cp": 16
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [],
+              "cp": 16
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [],
+              "cp": 16
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "d82d9e1666ba2a2428724e05012ef31dc43229f1b6e899ab2d3491e474e41eb3"
+    },
+    {
+      "arm": 52,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 8,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 8,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 8,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 8,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 8,
+          "64": 0
+        },
+        "votes527": {
+          "16": 0,
+          "32": 8,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 8,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "M1_bare_stop32",
+        "rationale": "Researcher no-observation prefix cost/label probe; actual0..10 output.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [],
+              "cp": 32
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [],
+              "cp": 32
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [],
+              "cp": 32
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [],
+              "cp": 32
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [],
+              "cp": 32
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [],
+              "cp": 32
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [],
+              "cp": 32
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "736d1af3b01f82d521799d13da7cbcf9aefdbcc69e45d9f76a52124adf59dde9"
+    },
+    {
+      "arm": 53,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 8
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 8
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 8
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 8
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 8
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 8
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 8
+        }
+      },
+      "policy": {
+        "name": "M1_bare_stop64",
+        "rationale": "Researcher no-observation prefix cost/label probe; actual0..10 output.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes108": [
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes192": [
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes310": [
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes527": [
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ],
+          "votes743": [
+            {
+              "conditions": [],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "bec1c46bc6c8c3c318509fa43fbc86169293946a8bd27da8d89746ca1da995f3"
+    }
+  ],
+  "exact_serving_calls": 0,
+  "mask_semantics": "previous scheduled checkpoint dependency; predicate with no clause has zero observation mask",
+  "partial_stops": true,
+  "profile": {
+    "actions": [
+      "continue",
+      "stop"
+    ],
+    "checkpoint_interval": 64,
+    "checkpoint_semantics": "expanded-neighborhood checkpoints16/32/64; previous scheduled checkpoint, not last collected checkpoint",
+    "collection_groups": [],
+    "features": {
+      "frontier_gap": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "float",
+        "name": "frontier_gap",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "qualifying_count": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "int",
+        "name": "qualifying_count",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "tenth_distance": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "float",
+        "name": "tenth_distance",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "top10_new_since_previous": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "int",
+        "name": "top10_new_since_previous",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      }
+    },
+    "fingerprint": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+    "guidance": "",
+    "name": "filtered-ann-partial-checkpoints/v2",
+    "native_protocol": "",
+    "native_registry_hash": null,
+    "numeric_semantics": "int64_float64_strict",
+    "policy_encoding": "filtered_ann_checkpoint_v2",
+    "scripted_policy": null,
+    "stopping_scope": "original noniterative search prefix; actual0..10 SQL results; no completion",
+    "work_unit": "graph score/queue work"
+  },
+  "schema": "filtered-ann-compiler.v2",
+  "source_hash": "3194e577afb9ca58cd357e7c533fa2a963ede72b77b585d72625d2d52c7a40c9"
+}

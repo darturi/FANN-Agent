@@ -13,7 +13,7 @@ ROOT = HERE.parents[2]
 STUDY = ROOT / "trials/fannagent-benchmark-evaluation-v1/reviews-small"
 RUNTIME = STUDY / "runtime-m1-v1"
 OLD = STUDY / "kits/reader-attribution-v1-startup-fix"
-KIT = STUDY / "kits/m1-runtime-qualification-v1"
+KIT = STUDY / "kits/m1-runtime-qualification-v2"
 
 
 def sha(path):
@@ -88,7 +88,7 @@ def stage():
         if p.name.startswith("m1_") and p.suffix == ".py" or p.suffix == ".sh":
             shutil.copyfile(p, KIT / p.name)
     shutil.copyfile(HERE / "PROTOCOL.md", KIT / "m1-protocol.md")
-    (STUDY / "protocol/m1-runtime-qualification-v1.md").write_text(
+    (STUDY / "protocol/m1-runtime-qualification-v2.md").write_text(
         (HERE / "PROTOCOL.md").read_text()
     )
     queries = [json.loads(line) for line in (KIT / "queries.jsonl").read_text().splitlines()]

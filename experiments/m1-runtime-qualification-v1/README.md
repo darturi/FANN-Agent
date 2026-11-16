@@ -4,7 +4,10 @@ The starting state was committed first at `f96e02d`. This prepares one bounded o
 development allocation after verified M0 job23303080. The kit is **prepared, not run on Torch**.
 Local synthetic results do not qualify original-graph semantics or establish performance.
 
-Active kit: `trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz`.
+Active kit: `trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2.tar.gz`.
+The undispatched v1 archive/freeze and its source checkpoint `9f85f72` are preserved. Deployment v2
+adds explicit physical-CPU analysis summaries, since reader slots map to different CPUs across
+filter blocks. The runtime modules, programs, workload and resource limits are unchanged.
 The full prospective [protocol](PROTOCOL.md) fixes450 development groups, all six scalar predicates
 plus unfiltered, ef_search640, actual0..10 outputs, offline exact scoring only and no guard.
 Validation/test remain unopened. No provider request or new agent policy is included.
@@ -38,7 +41,8 @@ pure operation timings or evidence of an unmeasured new rule's latency. M1 selec
 
 Local checks include eight design/capability/source tests, timing and observer smokes on the
 same synthetic8d graph across all seven conditions, an additional zero-result qualification,
-and full verification/paired analysis of that actual synthetic return. Re-signed corrupt CPU,
+and full verification/paired analysis of that actual synthetic return. All248 physical-CPU mean/
+native-ratio summaries are independently checked against raw record CPU assignments. Re-signed corrupt CPU,
 order, missing-prefix, work-sample and wrong-module cases are rejected. Synthetic scope cannot
 pass the production verifier. Loader-only checks use the actual frozen inherited package.
 Full backend imports under both modules are mandatory on native Torch **before sbatch**.
