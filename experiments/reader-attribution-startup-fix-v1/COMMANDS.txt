@@ -1,0 +1,52 @@
+READER ATTRIBUTION V1 — STARTUP REPAIR OF JOB 23074287
+
+The old job failed at the frozen import guard before restore/search; collect its failed evidence.
+The experiment, all six filters, unfiltered, both search modules, schedule and limits are unchanged.
+No provider call, exact serving fallback, validation or test access.
+The corrected submission requires full native startup imports under both modules BEFORE sbatch.
+If preflight fails, it prints the error and retains .startup-preflight; no job is submitted.
+Do not delete or overwrite the old stage or run. No automatic retry.
+
+MAC SFTP — collect failure evidence, then upload the new kit:
+
+get /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1/run-23074287/qualification-23074287.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23074287.tar.gz
+get /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1/run-23074287/qualification-23074287.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23074287.tar.gz.sha256
+get /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1/slurm-23074287.out /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23074287.out
+get /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1/slurm-23074287.err /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/reader-attribution-23074287.err
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix.tar.gz /home/dar579/reader-attribution-v1-startup-fix.tar.gz
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix.tar.gz.sha256 /home/dar579/reader-attribution-v1-startup-fix.tar.gz.sha256
+
+TORCH — verify and stage in a NEW directory; native preflight runs before submission:
+
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c reader-attribution-v1-startup-fix.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1-startup-fix
+tar -xzf reader-attribution-v1-startup-fix.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1-startup-fix
+bash submit.sh
+)
+
+Send the complete preflight/submission output and actual job ID.
+If preflight fails, preserve its directory and send the error before trying again.
+
+TORCH STATUS:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1-startup-fix
+job=$(cat job-id)
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+for file in "slurm-$job.out" "slurm-$job.err"; do
+  if [ -f "$file" ]; then tail -n 20 "$file"; fi
+done
+
+AFTER COMPLETION — print SFTP download commands on Torch:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/reader-attribution-v1-startup-fix
+job=$(cat job-id)
+printf 'get %s/run-%s/qualification-%s.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz\n' "$PWD" "$job" "$job" "$job"
+printf 'get %s/run-%s/qualification-%s.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz.sha256\n' "$PWD" "$job" "$job" "$job"
+
+Also return final sacct output and both logs, including failed jobs.
+Collect both native preflight JSON/error files if either preflight fails.

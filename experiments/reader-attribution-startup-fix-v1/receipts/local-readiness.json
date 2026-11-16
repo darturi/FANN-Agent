@@ -1,0 +1,151 @@
+{
+  "checks_sha256": {
+    "host-verifier.log": "f512f53a62f464917171b6c070f175b7117360006556052170dfaffcd37ff7e9",
+    "original-startup.log": "19c75a824ededd52e4bd46325b964132647057611e56e11ae71f69cfe620b2d4",
+    "repair-unit-tests.log": "3b4125dbd5e7f4356789c8aaf8a361dce9b02e49454dbb719b1a5f10e6f016e4",
+    "repaired-timing-loader.log": "3b8522fa90b07228b683addcadd3e545322eb38ad8e9f2afe8bd563af78ff8c2",
+    "repaired-timing-startup.log": "354ad20c5dd86b42b08bd20ed0044750cb3c8ee7a3b05171cb143171d62c5945",
+    "repaired-timing-thread-bounds.log": "6b1a0a70a2570808c23cbebe3e796565b61a5679ce344a562a6efb818d5d165d",
+    "repaired-work-loader.log": "82e35331117dea7547577991a1ec983b8b9ce34511d3059f7410eedb4a63410d",
+    "verifier-check.json": "dfb9308b42aeaf7da60316187a272e8038ed95218f70f0827fea66cf52f36697"
+  },
+  "date": "2026-11-15",
+  "fabricated_full_size_return_verifier": {
+    "exact_scoring_only": true,
+    "fixture": "full-size fabricated timing/counter return from development outputs; no real performance claim",
+    "full_reader_role_CPU_crossover_verified": true,
+    "incorrect_CPU_assignment_rejected": true,
+    "instrumented_primary_timing_rejected": true,
+    "paired_analysis_executed": true,
+    "status": "passed",
+    "timing_records": 630000,
+    "total_attempts": 684950,
+    "validation_test_outcomes_opened": false,
+    "warmups": 14000,
+    "work_records": 15750
+  },
+  "local_full_backend_import": "crashed in PyArrow under Mac x86 QEMU; not a pass",
+  "native_backend_preflight_required_before_sbatch": true,
+  "new_Torch_jobs_submitted_by_Codex": 0,
+  "original_failure": {
+    "conflicting_module": "/qual/design.py",
+    "error": "Use a clean process",
+    "phase": "timing",
+    "provider_calls": 0,
+    "search_attempts": 0,
+    "status": "original_failure_reproduced"
+  },
+  "phase_loader_checks": {
+    "timing": {
+      "backend": null,
+      "backend_import_exercised": false,
+      "diagnostic_design_module": "/qual/reader_attribution_design.py",
+      "frozen_design_module": "/patch/inputs/trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/packages/pilot/torch-selective-agent-v1-pilot-20261022T192817Z-66ed81d6/design.py",
+      "graph_identity": {
+        "completed_Torch_index_reused": false,
+        "dataset_parquet_sha256": "06eae31a43ecfd63a647f6fa93a9c00bcb2350ca6fe2f2bcd35d007c13b2e4ee",
+        "dimension": 768,
+        "filter_eligible_rows": {
+          "unfiltered": 247286,
+          "votes108": 49498,
+          "votes32": 123692
+        },
+        "index_build": {
+          "ef_construction": 64,
+          "fresh_index_at_every_size": true,
+          "insertion_order": "ascending source_id",
+          "m": 16,
+          "maintenance_work_mem": "65536",
+          "max_parallel_maintenance_workers": 0
+        },
+        "index_bytes": 1012678656,
+        "index_filepath": "base/16384/264013",
+        "index_files": {
+          "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+        },
+        "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+        "index_oid": 264013,
+        "row_count": 247286,
+        "source_arm64_index_reused": false,
+        "subset_ids_sha256": "a316caa7b4b5182028401195cb02f9813a3336d498b70248b2b32a3550c96c80",
+        "subset_seed": 20261019
+      },
+      "limit": "Startup/import readiness only; no original-graph experiment executed.",
+      "package_manifest_sha256": "b596c69bbab0bb49d720df02b820e5a9f2c1652a47e67b6b327f16f8769663bc",
+      "phase": "timing",
+      "phase_module_sha256": "80f84dbace4c2af87894179abf1a96183a6c0bcd2940d0c07589dec01a2e6095",
+      "private_startup": {
+        "inherited_start_function_sha256": "81a6776a25b46c4b6121779cb6429c13c88dbcfbc462f6fc63331e8f9951ff15",
+        "max_connections": 32,
+        "only_postgres_setting_change": "max_connections16->32",
+        "scope": "private copied restore only; inherited files unchanged"
+      },
+      "provider_calls": 0,
+      "search_attempts": 0,
+      "status": "repaired_entrypoint_and_frozen_loader_passed",
+      "validation_test_outcomes_opened": false
+    },
+    "work": {
+      "backend": null,
+      "backend_import_exercised": false,
+      "diagnostic_design_module": "/qual/reader_attribution_design.py",
+      "frozen_design_module": "/patch/inputs/trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/packages/pilot/torch-selective-agent-v1-pilot-20261022T192817Z-66ed81d6/design.py",
+      "graph_identity": {
+        "completed_Torch_index_reused": false,
+        "dataset_parquet_sha256": "06eae31a43ecfd63a647f6fa93a9c00bcb2350ca6fe2f2bcd35d007c13b2e4ee",
+        "dimension": 768,
+        "filter_eligible_rows": {
+          "unfiltered": 247286,
+          "votes108": 49498,
+          "votes32": 123692
+        },
+        "index_build": {
+          "ef_construction": 64,
+          "fresh_index_at_every_size": true,
+          "insertion_order": "ascending source_id",
+          "m": 16,
+          "maintenance_work_mem": "65536",
+          "max_parallel_maintenance_workers": 0
+        },
+        "index_bytes": 1012678656,
+        "index_filepath": "base/16384/264013",
+        "index_files": {
+          "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+        },
+        "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+        "index_oid": 264013,
+        "row_count": 247286,
+        "source_arm64_index_reused": false,
+        "subset_ids_sha256": "a316caa7b4b5182028401195cb02f9813a3336d498b70248b2b32a3550c96c80",
+        "subset_seed": 20261019
+      },
+      "limit": "Startup/import readiness only; no original-graph experiment executed.",
+      "package_manifest_sha256": "b596c69bbab0bb49d720df02b820e5a9f2c1652a47e67b6b327f16f8769663bc",
+      "phase": "work",
+      "phase_module_sha256": "2b2d8b02dc840859fdec46e3717976117069631f9144ed62dfc4ef300d0edacc",
+      "private_startup": {
+        "inherited_start_function_sha256": "81a6776a25b46c4b6121779cb6429c13c88dbcfbc462f6fc63331e8f9951ff15",
+        "max_connections": 32,
+        "only_postgres_setting_change": "max_connections16->32",
+        "scope": "private copied restore only; inherited files unchanged"
+      },
+      "provider_calls": 0,
+      "search_attempts": 0,
+      "status": "repaired_entrypoint_and_frozen_loader_passed",
+      "validation_test_outcomes_opened": false
+    }
+  },
+  "provider_calls": 0,
+  "repair_source_sha256": {
+    "README.md": "475ccb5eceea48f6b4017a2b5c94f012fee2d95209e0a960a08eef57881a6bc2",
+    "build_repair.py": "9b4c6af668cd7aa4071831af1720293dcb4e9202b0dd8a70822c57a46ee8b914",
+    "seal_repair.py": "00cf583d2990a9e9ff271c14033bfb1bac6b158dc9061afe1a18fbe46e039390",
+    "startup-preflight.sh": "10e3f1c1f82196654da9cc48577e96cf91d6199e47ad7f107cb7b1a0c00254be",
+    "startup_preflight.py": "628a6be080a3f63016235a0c441a7debfe6e1562535d6accffe5ac44af3bb3ff",
+    "test_repair.py": "89d442fa6001b55bb1ba61c904c403dedb73f0bbb362b326159c32f45e11ea34"
+  },
+  "schema": "reader-attribution-startup-repair-checks.v1",
+  "status": "local_loader_and_host_checks_passed_native_backend_preflight_pending",
+  "unit_tests_passed": 6,
+  "validation_test_outcomes_opened": false
+}

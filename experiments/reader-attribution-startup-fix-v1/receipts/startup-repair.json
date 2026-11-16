@@ -1,0 +1,45 @@
+{
+  "additional_native_preflight_launcher": "10e3f1c1f82196654da9cc48577e96cf91d6199e47ad7f107cb7b1a0c00254be",
+  "additional_preflight": "628a6be080a3f63016235a0c441a7debfe6e1562535d6accffe5ac44af3bb3ff",
+  "automatic_submission": false,
+  "binding_sha256_unchanged": "b0e8c8843bb386d684c33f126c558f11e36ede3bb61d0bfb514ca7efc6927e7d",
+  "changed_python_files": {
+    "analyse.py": {
+      "after": "a618ebcfe7b25eaca92b18a9a6bbdebafd6719ca412830a5d69379caca12ada3",
+      "before": "8ff79c16ae9be9d217fabbee9fdabc8a2e2b9e8337ae018f81d42a6bc6cc03f0"
+    },
+    "experiment.py": {
+      "after": "c0632f715f0cb56c8de21c737ea68eb09c7beaf31261cde4c3e7554ed56261d5",
+      "before": "9a49fa3fb5ba95f7bca1876f371490beaf924122faf6b35f1037ce55f7100e6e"
+    },
+    "verify_return.py": {
+      "after": "21c3627459897a51061b160115d177d0d0097b1c5f8334ee27dc50ff1a351af6",
+      "before": "3b4089acb736f84be06a328860c64d5cd5a59f5689e3b836d6245102cbb83580"
+    }
+  },
+  "evidence_source": "user-pasted scheduler/log output; failed archive verification pending",
+  "failed_job_id": "23074287",
+  "failure": "frozen loader rejects diagnostic's already-imported design module",
+  "local_backend_import_limit": "PyArrow extension segfault under Mac x86 QEMU; preserved logs; native Torch preflight must pass before submission",
+  "local_readiness_receipt_sha256": "292a3ddf2897616fe123a90721dd1557aa278a6abae0b01f9287562b4634be35",
+  "old_kit_and_failed_run_preserved": true,
+  "original_archive_sha256": "5ea46c974ea9e6e2a6d367ab72e025528e08eda9b63834e4cd1b6128d4de826f",
+  "original_freeze_sha256": "c8e4079c62a22e22c0e831152b82c2756fd3c2e4e502e2fb20a76dd933648d73",
+  "provider_calls": 0,
+  "rename": {
+    "content_sha256": "757bd72215263dc6fce2b903232e0a6b88d81877e245ac6fbb9d9a89af6359bc",
+    "from": "design.py",
+    "to": "reader_attribution_design.py"
+  },
+  "schedule_policies_data_filters_scoring_analysis_changed": false,
+  "scheduler_exit_code": "1:0",
+  "scheduler_state": "FAILED",
+  "schema": "reader-attribution-startup-repair.v1",
+  "serving_timing_work_modules_changed": false,
+  "submit_change": {
+    "after": "d350c9c24477ec1c8ada9301132809c33505df6f5068c87836e96b36b2937e50",
+    "before": "453f2941577772d36efca41d42672599e7a218460635b0233a66283c0b4ee9e0",
+    "only_change": "require full timing/work backend startup preflights on native Torch before sbatch"
+  },
+  "validation_test_outcomes_opened": false
+}

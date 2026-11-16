@@ -1,18 +1,26 @@
 {
+  "M0_deployment_repair": {
+    "commands": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/ATTRIBUTION-STARTUP-FIX-COMMANDS.txt",
+    "failed_return_verification": "pending_download",
+    "freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-startup-fix-v1.json",
+    "new_kit": "reader-attribution-v1-startup-fix",
+    "original_job": "23074287",
+    "scope": "namespace-only deployment repair and pre-sbatch native import checks; experiment unchanged"
+  },
   "Torch_submissions_by_Codex": 0,
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "plan_commit": "8937e9e",
   "provider_requests": 0,
   "receipt": "experiments/filtered-ann-protocol-v2/receipts/local-implementation-2026-11-14.json",
   "receipt_sha256": "f0ec9061539e25affc7bb34aab8d23df3a2eef0a7b70c912644cc47a92b95c87",
   "roadmap_update": {
-    "sha256": "67c3c52cc7ba4f46e8dad9ab3250358eb8e6142313f39d3c897aa28fd6c56e88",
-    "tracked_delta": "docs/plans/agent-protocol-v2-execution-roadmap-update.md",
+    "sha256": "9dbeecf222f3ecd779875bd0649b6ef11bfb6a346b0d4bbc85651903b511d213",
+    "tracked_delta": "docs/plans/agent-protocol-v2-startup-repair-roadmap-update.md",
     "workspace_path": "research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md"
   },
   "schema": "fannagent.protocol-v2-execution-status.v1",
   "stages": {
-    "M0": "awaiting_user_submission_of_existing_sealed_diagnostic",
+    "M0": "job23074287_failed_at_startup_no_benchmark_results_repaired_kit_waits_native_preflight_and_manual_submission",
     "M1": "implemented_and_synthetic_smoke_passed_original_graph_pending",
     "M2": "raw_rescore_complete_missing1496_partial_labels_and_qualified_costs",
     "M3": "local_scripted_controller_tests_and_end_to_end_rehearsal_passed",
@@ -20,6 +28,6 @@
     "M5": "not_run",
     "M6": "not_run_protected_outcomes_unopened"
   },
-  "status": "local_implementation_ready_for_M0_submission",
+  "status": "M0_startup_failure_repair_ready_native_preflight_required",
   "validation_test_outcomes_opened": false
 }
