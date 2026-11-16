@@ -18,6 +18,20 @@
     "original_job": "23074287",
     "scope": "namespace-only deployment repair and pre-sbatch native import checks; experiment unchanged"
   },
+  "M1_kit": {
+    "archive_sha256": "c4e0c46e04dd1796f063b94c257e48f31bba487594ab222717098d1e7aede532",
+    "commands": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/M1-COMMANDS.txt",
+    "cpus": 4,
+    "freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/m1-runtime-qualification-v1.json",
+    "global_cap": 1000000,
+    "kit": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz",
+    "memory_gib": 48,
+    "original_graph_qualified": false,
+    "planned_attempts": 984396,
+    "preparation_checkpoint": "f96e02d",
+    "provider_calls": 0,
+    "wall_hours": 8
+  },
   "Torch_submissions_by_Codex": 0,
   "date": "2026-11-16",
   "plan_commit": "8937e9e",
@@ -25,20 +39,20 @@
   "receipt": "experiments/filtered-ann-protocol-v2/receipts/local-implementation-2026-11-14.json",
   "receipt_sha256": "f0ec9061539e25affc7bb34aab8d23df3a2eef0a7b70c912644cc47a92b95c87",
   "roadmap_update": {
-    "sha256": "bf1d0152e645a791c6d1edf47d52ce6452aba493a4d8aa2ecede400b717616fe",
-    "tracked_delta": "docs/plans/agent-protocol-v2-M0-assessment-roadmap-update.md",
+    "sha256": "997a4ea155ea0b729d4289835b53f9ed12e824d6573d5f94d1324861355f714c",
+    "tracked_delta": "docs/plans/agent-protocol-v2-M1-kit-roadmap-update.md",
     "workspace_path": "research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md"
   },
   "schema": "fannagent.protocol-v2-execution-status.v1",
   "stages": {
     "M0": "job23303080_verified_current_role_work_attribution_resolved_one_allocation_not_final_performance",
-    "M1": "implemented_and_synthetic_smoke_passed_original_graph_pending",
+    "M1": "kit_sealed_local_checks_passed_original_graph_qualification_pending",
     "M2": "raw_rescore_complete_missing1496_partial_labels_and_qualified_costs",
     "M3": "local_scripted_controller_tests_and_end_to_end_rehearsal_passed",
     "M4": "not_run_requires_qualified_evidence_and_new_provider_authorization",
     "M5": "not_run",
     "M6": "not_run_protected_outcomes_unopened"
   },
-  "status": "M0_verified_proceed_to_bounded_M1_M2_qualification_no_generation_yet",
+  "status": "M1_kit_sealed_pending_native_preflight_and_user_Torch_submission",
   "validation_test_outcomes_opened": false
 }

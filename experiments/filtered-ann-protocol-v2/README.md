@@ -1,14 +1,14 @@
 # Filtered ANN protocol v2: local implementation
 
 This implements the local portion of [the revamp plan](../../docs/AGENT_PROTOCOL_REVAMP_V2.md).
-M0 job23303080 is verified; the next Torch work is the bounded M1 runtime/prefix/cost qualification.
+M0 job23303080 is verified. The bounded M1 runtime/prefix/cost kit is sealed and ready for upload.
 The v2 runtime has **synthetic qualification only**. No new model episode, original-graph
 v2 qualification, validation or test has run.
 
 | Stage | Current evidence | Remaining work |
 | --- | --- | --- |
 | M0 attribution | Job23303080 verified: counterbalanced Broad benefit with reduced work; continue advantage did not reproduce; failed23074287 retained | Complete diagnostic; no repeat or final policy promotion. Use its evidence to freeze M1 measurement design |
-| M1 runtime | Deterministic compiler, feature masks and partial/zero stops pass local tests and synthetic PostgreSQL smokes | Freeze an M0-informed schedule and one bounded original-graph qualification/cost kit; qualify native/legacy bridge and every reached prefix |
+| M1 runtime | Compiler/masks/partial stops pass local tests; sealed M1 kit includes CPU-balanced cost blocks, native work bridge and return verifier | Run native startup preflights and submit the M1 kit once; original-graph qualification remains pending |
 | M2 evidence | All 3,150 development rows rebuilt against raw native640; 7,940 known full-prefix labels; 1,496 missing partial-prefix labels | Measure missing prefixes and component costs, including uncertainty, on the original graph; qualify provenance before enabling cost ranking |
 | M3 controller | Typed tool dispatcher, durable accounting, registry, deterministic compilation and scripted end-to-end rehearsal pass | Bind the eventual qualified cost library, approved episode and pinned provider transport/rate contract |
 | M4–M6 | No requests or protected evaluation run | Follow the gates in the plan; retain negative/inconclusive outcomes |
@@ -93,11 +93,14 @@ match on every query; Broad saves3.77% aggregate latency and5.30% vector-score w
 allocation, concentrated in votes32. The full native startup checks passed and the failed first
 allocation's empty measurement return is preserved. No M0 rerun is recommended.
 
-Seal one bounded M1 original-graph qualification/cost package next, with an exact variant pool,
-resource-feasible counterbalanced reader/CPU schedule and attempt ceiling. Requalify all reached
-prefixes, including1,496 currently missing partial labels; measure the required feature plans and
-complete-request costs before binding the new evidence/tools. All six filters remain; exact
-search is offline scoring only. No new kit or paid episode is dispatched by the M0 assessment.
+The [M1 kit](../m1-runtime-qualification-v1/README.md) is now sealed:984,396 attempts under a
+1,000,000 ceiling, four CPUs/48GiB/eight hours,21 v2 bindings and26 quality/work families.
+Six blocks with four persistent readers each preserve CPU/role crossover within the32-connection
+capacity. Requalify all9,436 reached prefixes, including1,496 currently missing partial labels;
+measure complete-request costs and compatible native/legacy/continue work before binding M2.
+All six filters remain; exact search is offline scoring only. Use the [M1 commands](../m1-runtime-qualification-v1/COMMANDS.txt).
+Native full-backend preflight under both modules is mandatory before submission. No job or
+provider episode has been launched by preparation; original-graph qualification is pending.
 
 Compact local receipts and external-artifact hashes are in `receipts/`. Generated engines,
 binaries, full evidence, SQLite trajectories and logs remain under the study's workspace paths.

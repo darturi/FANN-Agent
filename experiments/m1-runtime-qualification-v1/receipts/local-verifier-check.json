@@ -1,0 +1,37 @@
+{
+  "all_seven_conditions": true,
+  "attempts": {
+    "timing": {
+      "capture": 28,
+      "forced_prefix": 84,
+      "native_bridge": 56,
+      "quality_ann": 700,
+      "reference_exact": 28,
+      "timed_ann": 6944,
+      "total": 14784,
+      "warmup_ann": 6944
+    },
+    "total": 15540,
+    "work": {
+      "reference_exact": 28,
+      "total": 756,
+      "work_ann": 728
+    }
+  },
+  "bad_CPU_order_missing_prefix_work_sample_and_module_rejected": [
+    "role/CPU assignment differs",
+    "mirrored Williams order differs",
+    "missing actual prefix label",
+    "work CPU/counter schema differs",
+    "instrumented timing module rejected"
+  ],
+  "fixture": "Actual synthetic PostgreSQL outputs, not fabricated study performance",
+  "full_prefix_labels": 72,
+  "paired_cost_analysis_executed": true,
+  "partial_prefix_labels": 12,
+  "prefix_labels": 84,
+  "production_scope_rejects_fixture": true,
+  "status": "passed",
+  "timing_records": 6944,
+  "validation_test_outcomes_opened": false
+}

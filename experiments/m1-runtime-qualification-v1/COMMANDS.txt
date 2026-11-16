@@ -1,0 +1,58 @@
+M1 RUNTIME / ACTUAL PREFIX / SERVING-COST QUALIFICATION — DEVELOPMENT ONLY
+Pre-M1 checkpoint: f96e02d. One allocation, four CPUs/48GiB/eight hours.
+984,396 planned ANN/exact attempts; hard global cap1,000,000. No retry/requeue.
+All450 development groups, six scalar filters plus unfiltered. Exact scoring only.
+No provider call, serving exact repair, validation or test access. No final policy selection.
+Full native backend/import/module preflights must pass BEFORE sbatch.
+
+MAC SFTP — upload the archive and sidecar using your working connection:
+
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz /home/dar579/m1-runtime-qualification-v1.tar.gz
+put /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz.sha256 /home/dar579/m1-runtime-qualification-v1.tar.gz.sha256
+
+TORCH — verify, stage in a fresh directory and submit once:
+
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c m1-runtime-qualification-v1.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
+tar -xzf m1-runtime-qualification-v1.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
+bash submit.sh
+)
+
+Send the complete native-preflight/submission output and actual job ID.
+If a preflight fails, no Slurm job is queued; preserve .startup-preflight and send the error.
+Do not delete the stage, alter SHA256SUMS or resubmit after an error without review.
+
+TORCH STATUS:
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
+if [ -f job-id ]; then
+  job=$(cat job-id)
+  /opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+  for file in "slurm-$job.out" "slurm-$job.err"; do
+    if [ -f "$file" ]; then tail -n 20 "$file"; fi
+  done
+else
+  tail -n 20 .startup-preflight/*.json .startup-preflight/*.err 2>/dev/null
+fi
+
+AFTER COMPLETION — print SFTP download commands on Torch (collect failures too):
+
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m1-runtime-qualification-v1
+job=$(cat job-id)
+printf 'get %s/run-%s/qualification-%s.tar.gz /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz\n' "$PWD" "$job" "$job" "$job"
+printf 'get %s/run-%s/qualification-%s.tar.gz.sha256 /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-%s.tar.gz.sha256\n' "$PWD" "$job" "$job" "$job"
+printf 'get %s/slurm-%s.out /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-%s.out\n' "$PWD" "$job" "$job"
+printf 'get %s/slurm-%s.err /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-%s.err\n' "$PWD" "$job" "$job"
+printf 'get %s/.startup-preflight/timing.json /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-%s-preflight-timing.json\n' "$PWD" "$job"
+printf 'get %s/.startup-preflight/work.json /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/M1-%s-preflight-work.json\n' "$PWD" "$job"
+
+Paste the printed get commands into Mac SFTP. Also paste final sacct output.
+Verification requires every timing/label/audit/CPU/counter row and the exact attempt ledger,
+the native work bridge, both modules/source pins and independent Slurm COMPLETED0:0.
+Negative/noisy timings and probe recall losses are retained. They are not filtered out.
+M1 does not authorize an additive cost estimator or a new provider episode automatically.
