@@ -42,4 +42,3 @@ Measured costs and actual labels are available; cost ranking remains disabled un
 and uncertainty are validated. No new Torch job/provider call is launched by this assessment.
 The old provider allowance is exhausted; prepare a concrete newly authorized M4 episode only
 after M2/M3. Validation/test outcomes remain unopened and old freezes unchanged.
-

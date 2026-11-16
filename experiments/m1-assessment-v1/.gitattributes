@@ -1,0 +1,2 @@
+# Preserve the downloaded Slurm table byte for byte, including column padding.
+receipts/scheduler-status.txt -whitespace
