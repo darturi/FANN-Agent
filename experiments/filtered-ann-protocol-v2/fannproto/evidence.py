@@ -8,6 +8,7 @@ from copy import deepcopy
 from fannagent.store import digest
 
 from .policy import FEATURES, FILTERS, POINTS, PROFILE
+from .uncertainty import COST_STATUS, proxy_estimate, validate_contract, validate_proxy_costs
 
 
 class Evidence:
@@ -96,6 +97,8 @@ class Evidence:
                     raise ValueError("invalid prefix label")
             if bundle.get("cost_status") == "qualified":
                 validate_costs(r.get("costs"), r["observations"])
+            if bundle.get("cost_status") == COST_STATUS:
+                validate_proxy_costs(r.get("costs"), r["observations"])
             if "work" in r:
                 validate_work(r["work"], r["observations"])
         if not fixture and (
@@ -110,6 +113,12 @@ class Evidence:
             "[a-f0-9]{64}", bundle.get("cost_qualification_receipt_sha256", "")
         ):
             raise ValueError("cost qualification receipt required")
+        if bundle.get("cost_status") == COST_STATUS:
+            validate_contract(bundle.get("shortlist_contract", {}))
+            if not re.fullmatch(
+                "[a-f0-9]{64}", bundle["shortlist_contract"]["qualification_receipt_sha256"]
+            ):
+                raise ValueError("shortlist qualification receipt required")
         self.identity = digest(bundle)
 
     def summary(self):
@@ -141,6 +150,20 @@ class Evidence:
             "evidence_hash": self.identity,
             "cost_status": self.bundle["cost_status"],
             "cost_ranking_enabled": self.bundle["cost_status"] == "qualified",
+            "uncertainty_shortlisting_enabled": self.bundle["cost_status"] == COST_STATUS,
+            "shortlist_contract": {
+                key: self.bundle["shortlist_contract"][key]
+                for key in (
+                    "schema",
+                    "error_radius",
+                    "regret_limit",
+                    "max_live_nominees",
+                    "point_model_precision_qualified",
+                    "qualification_receipt_sha256",
+                )
+            }
+            if self.bundle["cost_status"] == COST_STATUS
+            else None,
             "cost_guidance": deepcopy(self.bundle.get("cost_guidance")),
             "limit": "Measured plan costs describe their stated contexts. New-program costs "
             "need qualification; incomplete prefix evidence never yields a quality pass.",
@@ -238,6 +261,8 @@ class Evidence:
 
     def estimate(self, p):
         """Qualified component proxy only; never a measured new-program latency."""
+        if self.bundle["cost_status"] == COST_STATUS:
+            return proxy_estimate(p, self.rows, self.bundle["shortlist_contract"])
         if self.bundle["cost_status"] != "qualified":
             return None
         import math

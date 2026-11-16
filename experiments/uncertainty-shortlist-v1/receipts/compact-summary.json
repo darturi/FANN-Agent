@@ -1,0 +1,362 @@
+{
+  "cost_guidance": {
+    "conditional_regret_limit": 0.01,
+    "engineering_error_radius": 0.035363846399260816,
+    "failed_model_hypotheses": [
+      "ridge_work_observation",
+      "signed_additive"
+    ],
+    "limits": "M2 point-precision qualification remains failed. Empirical engineering envelopes support a bounded M5 measurement shortlist only, conditional on support and costs in the intervals. Abstain when more than three ambiguous nominees cannot meet the regret limit. No future coverage or final performance guarantee; actual M5 program/matched-control timing remains required.",
+    "measured_historical_transfers": {
+      "v2_broad": {
+        "conditional95pct_interval": [
+          0.9342545894248452,
+          0.9541693519966346
+        ],
+        "per_filter_native_ratio": {
+          "unfiltered": 0.8704888101510279,
+          "votes108": 0.9498549536789074,
+          "votes192": 0.9791541791470402,
+          "votes310": 0.9884073747523171,
+          "votes32": 0.7785784916486929,
+          "votes527": 0.9855673599670561,
+          "votes743": 1.0034554016286479
+        },
+        "same_block_native_ratio": 0.944538107443307
+      },
+      "v2_conservative": {
+        "conditional95pct_interval": [
+          0.989551850509839,
+          0.9964335468491887
+        ],
+        "per_filter_native_ratio": {
+          "unfiltered": 0.868290448011326,
+          "votes108": 1.001351821934231,
+          "votes192": 1.005049117540958,
+          "votes310": 0.9990409475421199,
+          "votes32": 0.9548830912362195,
+          "votes527": 1.0022854754884412,
+          "votes743": 0.9989657962425694
+        },
+        "same_block_native_ratio": 0.9930902163652414
+      },
+      "v2_moderate": {
+        "conditional95pct_interval": [
+          0.9687334038457759,
+          0.98160332113646
+        ],
+        "per_filter_native_ratio": {
+          "unfiltered": 0.8472889724196194,
+          "votes108": 0.9725397918805735,
+          "votes192": 0.9948140495599757,
+          "votes310": 1.0025404537848233,
+          "votes32": 0.8926029312900331,
+          "votes527": 0.9979772834178384,
+          "votes743": 0.9991619802795799
+        },
+        "same_block_native_ratio": 0.9753132439487698
+      }
+    },
+    "native_primary_ms_range_across_blocks": [
+      14.64135407092592,
+      22.455695485046306
+    ],
+    "paired_complete_plan_differences": {
+      "count_plan_minus_decision_plan": {
+        "conditional95pct_interval_ms": [
+          0.08919059065971738,
+          0.1683657433611289
+        ],
+        "definition": "Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.",
+        "mean_complete_request_difference_ms": 0.1338643216203721,
+        "negative_estimates_retained": true
+      },
+      "decision_plan_minus_native": {
+        "conditional95pct_interval_ms": [
+          -0.03616347494676671,
+          0.03632448439467259
+        ],
+        "definition": "Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.",
+        "mean_complete_request_difference_ms": -0.004640505185184551,
+        "negative_estimates_retained": true
+      },
+      "four_compare_plan_minus_turnover_plan": {
+        "conditional95pct_interval_ms": [
+          -0.03272792524768327,
+          0.01422425167593409
+        ],
+        "definition": "Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.",
+        "mean_complete_request_difference_ms": -0.009399987453704739,
+        "negative_estimates_retained": true
+      },
+      "ranked_plan_minus_count_plan": {
+        "conditional95pct_interval_ms": [
+          0.007428142046295605,
+          0.051489823519676785
+        ],
+        "definition": "Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.",
+        "mean_complete_request_difference_ms": 0.029219901851851304,
+        "negative_estimates_retained": true
+      },
+      "turnover_plan_minus_ranked_plan": {
+        "conditional95pct_interval_ms": [
+          0.00040189463195519095,
+          0.04630175040278279
+        ],
+        "definition": "Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.",
+        "mean_complete_request_difference_ms": 0.023388847777779276,
+        "negative_estimates_retained": true
+      }
+    },
+    "point_model_precision_qualified": false,
+    "status": "qualified_uncertainty_aware_M5_experiment_selection_only"
+  },
+  "cost_ranking_enabled": false,
+  "cost_status": "qualified_uncertainty_shortlist_v1",
+  "evidence_hash": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "groups": 450,
+  "limit": "Measured plan costs describe their stated contexts. New-program costs need qualification; incomplete prefix evidence never yields a quality pass.",
+  "per_filter": {
+    "unfiltered": {
+      "checkpoints": {
+        "16": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "32": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "64": {
+          "missing_prefixes": 0,
+          "observed": 448,
+          "qualified_prefixes": 448
+        }
+      },
+      "native_mean_recall": 0.9964444444444444,
+      "queries": 450,
+      "short_native": 0
+    },
+    "votes108": {
+      "checkpoints": {
+        "16": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "32": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "64": {
+          "missing_prefixes": 0,
+          "observed": 448,
+          "qualified_prefixes": 448
+        }
+      },
+      "native_mean_recall": 0.9891111111111112,
+      "queries": 450,
+      "short_native": 0
+    },
+    "votes192": {
+      "checkpoints": {
+        "16": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "32": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "64": {
+          "missing_prefixes": 0,
+          "observed": 448,
+          "qualified_prefixes": 448
+        }
+      },
+      "native_mean_recall": 0.9788888888888889,
+      "queries": 450,
+      "short_native": 1
+    },
+    "votes310": {
+      "checkpoints": {
+        "16": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "32": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "64": {
+          "missing_prefixes": 0,
+          "observed": 448,
+          "qualified_prefixes": 448
+        }
+      },
+      "native_mean_recall": 0.9482222222222222,
+      "queries": 450,
+      "short_native": 23
+    },
+    "votes32": {
+      "checkpoints": {
+        "16": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "32": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "64": {
+          "missing_prefixes": 0,
+          "observed": 448,
+          "qualified_prefixes": 448
+        }
+      },
+      "native_mean_recall": 0.9937777777777778,
+      "queries": 450,
+      "short_native": 0
+    },
+    "votes527": {
+      "checkpoints": {
+        "16": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "32": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "64": {
+          "missing_prefixes": 0,
+          "observed": 448,
+          "qualified_prefixes": 448
+        }
+      },
+      "native_mean_recall": 0.7897777777777777,
+      "queries": 450,
+      "short_native": 172
+    },
+    "votes743": {
+      "checkpoints": {
+        "16": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "32": {
+          "missing_prefixes": 0,
+          "observed": 450,
+          "qualified_prefixes": 450
+        },
+        "64": {
+          "missing_prefixes": 0,
+          "observed": 448,
+          "qualified_prefixes": 448
+        }
+      },
+      "native_mean_recall": 0.5348888888888889,
+      "queries": 450,
+      "short_native": 345
+    }
+  },
+  "runtime_profile": {
+    "actions": [
+      "continue",
+      "stop"
+    ],
+    "checkpoint_interval": 64,
+    "checkpoint_semantics": "expanded-neighborhood checkpoints16/32/64; previous scheduled checkpoint, not last collected checkpoint",
+    "collection_groups": [],
+    "features": {
+      "frontier_gap": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "float",
+        "name": "frontier_gap",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "qualifying_count": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "int",
+        "name": "qualifying_count",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "tenth_distance": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "float",
+        "name": "tenth_distance",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "top10_new_since_previous": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "int",
+        "name": "top10_new_since_previous",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      }
+    },
+    "fingerprint": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+    "guidance": "",
+    "name": "filtered-ann-partial-checkpoints/v2",
+    "native_protocol": "",
+    "native_registry_hash": null,
+    "numeric_semantics": "int64_float64_strict",
+    "policy_encoding": "filtered_ann_checkpoint_v2",
+    "scripted_policy": null,
+    "stopping_scope": "original noniterative search prefix; actual0..10 SQL results; no completion",
+    "work_unit": "graph score/queue work"
+  },
+  "scope": "development",
+  "shortlist_contract": {
+    "error_radius": 0.035363846399260816,
+    "max_live_nominees": 3,
+    "point_model_precision_qualified": false,
+    "qualification_receipt_sha256": "7cfb01f2d5bf3175d23ec411adeb2e3d92e5d09a46f4b69eb7c22bfe8f324f09",
+    "regret_limit": 0.01,
+    "schema": "filtered-ann.uncertainty-shortlist.v1"
+  },
+  "uncertainty_shortlisting_enabled": true
+}

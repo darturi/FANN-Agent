@@ -1,0 +1,587 @@
+{
+  "M3_ambiguous_pool": {
+    "admissible_intervals": {
+      "candidate-1": [
+        0.9586220787533433,
+        1.029349771551865
+      ],
+      "candidate-2": [
+        0.9455079451800721,
+        1.0162356379785937
+      ],
+      "candidate-3": [
+        0.9182207039322999,
+        0.9889483967308216
+      ],
+      "candidate-4": [
+        0.9586367517052443,
+        1.029364444503766
+      ]
+    },
+    "best_attainable_bound": 0.03031164502557726,
+    "candidate_ids": [],
+    "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+    "conditional_regret_bound": null,
+    "exclusions": {},
+    "max_live_nominees": 3,
+    "no_performance_promotion": true,
+    "regret_limit": 0.01,
+    "schema": "filtered-ann.uncertainty-shortlist.v1",
+    "status": "abstain_uncertainty_exceeds_cap"
+  },
+  "M3_native_abstention": "certified_native_abstention",
+  "M3_positive": {
+    "nominee_ids": [
+      "candidate-1",
+      "candidate-2",
+      "candidate-3"
+    ],
+    "request_bytes": [
+      4900,
+      19714,
+      35731
+    ],
+    "scripted_requests": 3,
+    "selection_decision": {
+      "admissible_intervals": {
+        "candidate-1": [
+          0.9586220787533433,
+          1.029349771551865
+        ],
+        "candidate-2": [
+          0.9455079451800721,
+          1.0162356379785937
+        ],
+        "candidate-3": [
+          0.9182207039322999,
+          0.9889483967308216
+        ]
+      },
+      "best_attainable_bound": 0.0,
+      "candidate_ids": [
+        "candidate-1",
+        "candidate-2",
+        "candidate-3"
+      ],
+      "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+      "conditional_regret_bound": 0.0,
+      "exclusions": {},
+      "max_live_nominees": 3,
+      "no_performance_promotion": true,
+      "regret_limit": 0.01,
+      "schema": "filtered-ann.uncertainty-shortlist.v1",
+      "status": "selected_for_M5"
+    },
+    "submitted_known_policies": 3,
+    "synthetic_accounting_usd": "0.0009",
+    "tools": 3
+  },
+  "SQL_searches": 0,
+  "active_binding_revision": 2,
+  "actual_API_spend_usd": "0",
+  "actual_finalist_performance_promoted": false,
+  "artifacts": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2.log": {
+      "bytes": 4431,
+      "sha256": "015601e72e2b909f72a3da376e78513ac648886566a9c0822ca29d742b865e22"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/state.sqlite3": {
+      "bytes": 36864,
+      "sha256": "5d72ef927588fee5396820e27c4ae83865423da6842a9864dcd174d3cf0b638e"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/0058404bb21eee87c09cdd1d147314f2c2b3ce10c6328aeffea487583d04a93d.json": {
+      "bytes": 12124,
+      "sha256": "0058404bb21eee87c09cdd1d147314f2c2b3ce10c6328aeffea487583d04a93d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32.json": {
+      "bytes": 6916,
+      "sha256": "109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6.json": {
+      "bytes": 4398,
+      "sha256": "351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/392ba1ca30ebc56df59b20363b2cefdb52cce99f1f3ce33098c4f2c9058ce462.json": {
+      "bytes": 4546,
+      "sha256": "392ba1ca30ebc56df59b20363b2cefdb52cce99f1f3ce33098c4f2c9058ce462"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d.json": {
+      "bytes": 6820,
+      "sha256": "5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/6f9cd9a1980ec92f09ab15c9ac8e5d99fc87eb83bf1446b40d7aa364b6b84633.json": {
+      "bytes": 6884,
+      "sha256": "6f9cd9a1980ec92f09ab15c9ac8e5d99fc87eb83bf1446b40d7aa364b6b84633"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2.json": {
+      "bytes": 8071,
+      "sha256": "7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d.json": {
+      "bytes": 7581,
+      "sha256": "742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c.json": {
+      "bytes": 6150,
+      "sha256": "857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/9a4fb0a3a7af0f19fbd869548813ba3d0dbefda2e6557ea6e903d24b637d96b0.json": {
+      "bytes": 3991,
+      "sha256": "9a4fb0a3a7af0f19fbd869548813ba3d0dbefda2e6557ea6e903d24b637d96b0"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace/artifacts/d75c0b676773e8b3b79f8abf084726d5fff7c09cbc8bd8e44e0bbc38eeddb018.json": {
+      "bytes": 819,
+      "sha256": "d75c0b676773e8b3b79f8abf084726d5fff7c09cbc8bd8e44e0bbc38eeddb018"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/cap-bound-campaign/state.sqlite3": {
+      "bytes": 36864,
+      "sha256": "5ac5c679f09437a0886c3aa39f2f42121fb4f567612977ea921e463aa63503f5"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/cap-bound-campaign/workspace/artifacts/3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2.json": {
+      "bytes": 13396,
+      "sha256": "3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/state.sqlite3": {
+      "bytes": 36864,
+      "sha256": "cc01a21e3b6809f482fb14c6f5993555f13c472078c28a59c822a3bfc6751284"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32.json": {
+      "bytes": 6916,
+      "sha256": "109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0.json": {
+      "bytes": 56,
+      "sha256": "1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/12f0f76394e77bd91fe69012c062b42431f35fa73a4f34c2515989af38b2aee5.json": {
+      "bytes": 8375,
+      "sha256": "12f0f76394e77bd91fe69012c062b42431f35fa73a4f34c2515989af38b2aee5"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/2647f8a0264b638c638fd56b2c987ddf8abeb9ce5542c141a85b044e72ea0d89.json": {
+      "bytes": 1600,
+      "sha256": "2647f8a0264b638c638fd56b2c987ddf8abeb9ce5542c141a85b044e72ea0d89"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/3e0bf7a814d1de45280a61af4d6577bb469bccb307e3864fa629b3449b57b8e6.json": {
+      "bytes": 1598,
+      "sha256": "3e0bf7a814d1de45280a61af4d6577bb469bccb307e3864fa629b3449b57b8e6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/419247b8dbe371063dbc9625c93245d908bc607686f5f1694f98dd50180a3a41.json": {
+      "bytes": 5548,
+      "sha256": "419247b8dbe371063dbc9625c93245d908bc607686f5f1694f98dd50180a3a41"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/5723c1b0eaaf604b9d9fd466050a55140b64a77fc3e142e1039aa50acb106f8f.json": {
+      "bytes": 4123,
+      "sha256": "5723c1b0eaaf604b9d9fd466050a55140b64a77fc3e142e1039aa50acb106f8f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/5c814d8513a06d61060e9cebdf8a52e29ea8d4f0f3dc7607ed23089054b3be9f.json": {
+      "bytes": 7131,
+      "sha256": "5c814d8513a06d61060e9cebdf8a52e29ea8d4f0f3dc7607ed23089054b3be9f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/5f58eb6b8259163b670cd28d0a5f9f4138392666f4de98c08d8c41a76585aa32.json": {
+      "bytes": 1598,
+      "sha256": "5f58eb6b8259163b670cd28d0a5f9f4138392666f4de98c08d8c41a76585aa32"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2.json": {
+      "bytes": 8071,
+      "sha256": "7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/9d32e507a4bfac13e1d1d078e9c92f67587aefd8f9e5d76f7d1461fad98a688a.json": {
+      "bytes": 33,
+      "sha256": "9d32e507a4bfac13e1d1d078e9c92f67587aefd8f9e5d76f7d1461fad98a688a"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/a5f63b2438f8fb7a700b73b9ccff1aeece78abe91224effb6d381feedd6ac38d.json": {
+      "bytes": 4021,
+      "sha256": "a5f63b2438f8fb7a700b73b9ccff1aeece78abe91224effb6d381feedd6ac38d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/c1bcb10c926e8e5f17070fdb8ff4220219f000ffec5d20fd562c375d539ff0d3.json": {
+      "bytes": 7279,
+      "sha256": "c1bcb10c926e8e5f17070fdb8ff4220219f000ffec5d20fd562c375d539ff0d3"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/c84124fe16e8025b9ad599e7266b086dc110a4d0dee05feb947614060476cf2f.json": {
+      "bytes": 3999,
+      "sha256": "c84124fe16e8025b9ad599e7266b086dc110a4d0dee05feb947614060476cf2f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/cc5cb9c4f07cc83330bab4c0170c043dbce71300e2043aa2508cd58ff36c5d15.json": {
+      "bytes": 76,
+      "sha256": "cc5cb9c4f07cc83330bab4c0170c043dbce71300e2043aa2508cd58ff36c5d15"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace/artifacts/defaab2e9a5d13d9409fd22a4c63297a2e94c2796d3018a62716b0a342cef384.json": {
+      "bytes": 12226,
+      "sha256": "defaab2e9a5d13d9409fd22a4c63297a2e94c2796d3018a62716b0a342cef384"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/native-bound-campaign/state.sqlite3": {
+      "bytes": 36864,
+      "sha256": "eca586d876bd6856d438082450e1b1ce0d55554ef4ac011eb8d68f2ca083a99b"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/native-bound-campaign/workspace/artifacts/59b5c594afb5438260d215fd496cacd43e227f96dcb7dfb567b8667c43feda4b.json": {
+      "bytes": 3793,
+      "sha256": "59b5c594afb5438260d215fd496cacd43e227f96dcb7dfb567b8667c43feda4b"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/native-bound-campaign/workspace/artifacts/7ef02ba019e51e233ae2c54bac6a12d6900833710dd5593b1f3d9a45e465cb52.json": {
+      "bytes": 6382,
+      "sha256": "7ef02ba019e51e233ae2c54bac6a12d6900833710dd5593b1f3d9a45e465cb52"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/native-bound-campaign/workspace/artifacts/885e9a803b04a5715b5a0441e89f1685b34835fa2fa9249d728f7389d9c60f52.json": {
+      "bytes": 3852,
+      "sha256": "885e9a803b04a5715b5a0441e89f1685b34835fa2fa9249d728f7389d9c60f52"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/native-bound-campaign/workspace/artifacts/baf14b893cc5654048c4fbe961bcb3855ca6e818356df1dcfc9815fb697dab43.json": {
+      "bytes": 637,
+      "sha256": "baf14b893cc5654048c4fbe961bcb3855ca6e818356df1dcfc9815fb697dab43"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/1a73c25fb58c29c3a671ec42e5c63756c975172588a1669a0f8e8255274b478c.json": {
+      "bytes": 927,
+      "sha256": "1a73c25fb58c29c3a671ec42e5c63756c975172588a1669a0f8e8255274b478c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9.json": {
+      "bytes": 152,
+      "sha256": "25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/2b9d5abcbfe8879099ba4ee5311e14de14cbf224075b63d499374a76dc83731c.json": {
+      "bytes": 2708,
+      "sha256": "2b9d5abcbfe8879099ba4ee5311e14de14cbf224075b63d499374a76dc83731c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/54e1d674cb2744c33e9ee3f0eaf00d93d91ace32d01e559ae81f93ac76bd1ecd.json": {
+      "bytes": 13511,
+      "sha256": "54e1d674cb2744c33e9ee3f0eaf00d93d91ace32d01e559ae81f93ac76bd1ecd"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/6f3bfc7430ddd21d6df9664d1dc314467d2a7abe3acde85af2b15954bc90c0ce.json": {
+      "bytes": 4900,
+      "sha256": "6f3bfc7430ddd21d6df9664d1dc314467d2a7abe3acde85af2b15954bc90c0ce"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/8f0d70aefec1774d87a8c9c0ec96e7e7695419b60013c86c4fa58885ea6b0ce1.json": {
+      "bytes": 19714,
+      "sha256": "8f0d70aefec1774d87a8c9c0ec96e7e7695419b60013c86c4fa58885ea6b0ce1"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/abdeae14d5ffddf0c50a3940e4ea2ec6bd5a18191ed1c22c134f8268393e91ff.json": {
+      "bytes": 167,
+      "sha256": "abdeae14d5ffddf0c50a3940e4ea2ec6bd5a18191ed1c22c134f8268393e91ff"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/c81104aca83018c1c71b733603b7450757c69fa1cfddeb6c50cbc0e022ad0555.json": {
+      "bytes": 12240,
+      "sha256": "c81104aca83018c1c71b733603b7450757c69fa1cfddeb6c50cbc0e022ad0555"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/private/artifacts/f6bd7790779f957f9b730fb7539e1ef774a473b283322988c8864a7eb99b86ce.json": {
+      "bytes": 35731,
+      "sha256": "f6bd7790779f957f9b730fb7539e1ef774a473b283322988c8864a7eb99b86ce"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/state.sqlite3": {
+      "bytes": 73728,
+      "sha256": "529eae216d1a5d13ca997598e77a559bd09e6d55e1bf6e02386af562ec06ac49"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/0058404bb21eee87c09cdd1d147314f2c2b3ce10c6328aeffea487583d04a93d.json": {
+      "bytes": 12124,
+      "sha256": "0058404bb21eee87c09cdd1d147314f2c2b3ce10c6328aeffea487583d04a93d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32.json": {
+      "bytes": 6916,
+      "sha256": "109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6.json": {
+      "bytes": 4398,
+      "sha256": "351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2.json": {
+      "bytes": 13396,
+      "sha256": "3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d.json": {
+      "bytes": 6820,
+      "sha256": "5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2.json": {
+      "bytes": 8071,
+      "sha256": "7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d.json": {
+      "bytes": 7581,
+      "sha256": "742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c.json": {
+      "bytes": 6150,
+      "sha256": "857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/workspace/artifacts/9da184c51fd6ac8d73a90b7d952dadec18226673f78f590a75d7c55e17b0bdea.json": {
+      "bytes": 866,
+      "sha256": "9da184c51fd6ac8d73a90b7d952dadec18226673f78f590a75d7c55e17b0bdea"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/receipt.json": {
+      "bytes": 16021,
+      "sha256": "9b11e6b5a522443b0482bcaf81c6ed760812cd3a4f4e4ad8f3a6b5eff4417411"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/unauthorized-provider-bound-campaign/state.sqlite3": {
+      "bytes": 36864,
+      "sha256": "d78b211d12feae14b0572526480781d30717dd1b8ed1eec962eefc0e2620a5fe"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound.log": {
+      "bytes": 707,
+      "sha256": "fd694841814b396b65a90a593c09c629929e7eb62b0cfacd206f263befee6799"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/private/artifacts/25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9.json": {
+      "bytes": 152,
+      "sha256": "25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/private/artifacts/2b9d5abcbfe8879099ba4ee5311e14de14cbf224075b63d499374a76dc83731c.json": {
+      "bytes": 2708,
+      "sha256": "2b9d5abcbfe8879099ba4ee5311e14de14cbf224075b63d499374a76dc83731c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/private/artifacts/6b31a663622f6ff6570a107f6bbf19a0942c1959ddc6bd910935d0a36426ac83.json": {
+      "bytes": 13511,
+      "sha256": "6b31a663622f6ff6570a107f6bbf19a0942c1959ddc6bd910935d0a36426ac83"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/private/artifacts/6f3bfc7430ddd21d6df9664d1dc314467d2a7abe3acde85af2b15954bc90c0ce.json": {
+      "bytes": 4900,
+      "sha256": "6f3bfc7430ddd21d6df9664d1dc314467d2a7abe3acde85af2b15954bc90c0ce"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/private/artifacts/8f0d70aefec1774d87a8c9c0ec96e7e7695419b60013c86c4fa58885ea6b0ce1.json": {
+      "bytes": 19714,
+      "sha256": "8f0d70aefec1774d87a8c9c0ec96e7e7695419b60013c86c4fa58885ea6b0ce1"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/private/artifacts/a76f57b07e85b27b591bf1a4bb3687d96afe8c0f53002a97b8ecae8e3272368d.json": {
+      "bytes": 20164,
+      "sha256": "a76f57b07e85b27b591bf1a4bb3687d96afe8c0f53002a97b8ecae8e3272368d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/state.sqlite3": {
+      "bytes": 81920,
+      "sha256": "4f9a4b90e02be9a1d69ef1aac1ce756d5bb04687af4e7a1d973bd32fc8ed6994"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32.json": {
+      "bytes": 6916,
+      "sha256": "109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6.json": {
+      "bytes": 4398,
+      "sha256": "351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2.json": {
+      "bytes": 13396,
+      "sha256": "3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d.json": {
+      "bytes": 6820,
+      "sha256": "5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/654dd0a9851a1c9a1bd74d50389178cb09d8b4dffda0d33a8398c2dbe4de713a.json": {
+      "bytes": 20048,
+      "sha256": "654dd0a9851a1c9a1bd74d50389178cb09d8b4dffda0d33a8398c2dbe4de713a"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2.json": {
+      "bytes": 8071,
+      "sha256": "7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d.json": {
+      "bytes": 7581,
+      "sha256": "742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/workspace/artifacts/857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c.json": {
+      "bytes": 6150,
+      "sha256": "857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-local-context-failure.json": {
+      "bytes": 790,
+      "sha256": "750afcfd2fef52c66c27c5cee11e38a4641f9e72863b966b675648ebc94419e0"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/binding-inputs.json": {
+      "bytes": 9174740,
+      "sha256": "7d7b68c4c46ec08c03614f7c31c3c8a6d94d5d6db0aa4816f65b7cf51bdaf64d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/binding-receipt-v2.json": {
+      "bytes": 2317,
+      "sha256": "a9ca24a339b54a65f66237295768e987d6edfab6d93c787ebd6ed93acca4c326"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/binding-receipt.json": {
+      "bytes": 1959,
+      "sha256": "1c6dd00721f26403606cbc14b93c08d844dcc1909253622beaa80d92d81e8b47"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/binding.log": {
+      "bytes": 1959,
+      "sha256": "afb897fa6c0ab516460b3e1d6dc53a62f36f10a49f5ba75174291eb382c3f241"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/bound-evidence.json": {
+      "bytes": 9188972,
+      "sha256": "586036abab76337746e3a15c353cb5b7162ac550411cc4f5efcfce626828c594"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/bound-gates.json": {
+      "bytes": 2106,
+      "sha256": "5aae1f0da168a5228853f766037092a3540c9e4e2fba9db696095998168e812a"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/compact-summary.json": {
+      "bytes": 12285,
+      "sha256": "fed1365b03214b35cd8df46837cb0164d8bc73f429679766dfd1ac6cf59a4606"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/failed-M3-v1-source/controller.py": {
+      "bytes": 24268,
+      "sha256": "ef1a0e141bbf2bf909f72c73e01cd4d427a3bea367640eb87432746d81bf2630"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/failed-M3-v1-source/rehearse.py": {
+      "bytes": 10900,
+      "sha256": "bc1ffd9a2f3397b0b2e19d35f3d7c0952f50a2cffa601379c27ade3cb6697c65"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/local-tests-v2.log": {
+      "bytes": 99,
+      "sha256": "b69de592f2e256947d0763092cb093ea3feb57f6468186a97a84ad41ebd1b859"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/local-tests-v2.xml": {
+      "bytes": 10695,
+      "sha256": "c1a453414c12ef522f279cffefd054636530f2fce660dc33b4da2a8a63783e41"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/local-tests.log": {
+      "bytes": 99,
+      "sha256": "18092df798975178fa5e155b2a68bea263e89e47ba7e5e59df07831c7a245a23"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/local-tests.xml": {
+      "bytes": 10508,
+      "sha256": "ccd83f6388099b5ef1647e44fa6371a791de4fb78689f59b7a948fac295f8c9f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/plan-freeze.json": {
+      "bytes": 3189,
+      "sha256": "ef45b7d1f4d0006bc3338ab30b362fa47c34e566370a8c17e54f8a90a235b328"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/__init__.py": {
+      "bytes": 66,
+      "sha256": "917029f714d25b317bc72ca48fbf91f925c18a5cd59e5cd550fb66a9dc437bd7"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/compiler.py": {
+      "bytes": 3643,
+      "sha256": "197dcdbd41f22ac2d6c2a81ad4c7aa5d7204cae0e6f0a5b2f8687577c4f7f8dc"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/controller.py": {
+      "bytes": 21342,
+      "sha256": "6a07139cd378d10cd514baf3ec052e9e0871a142a0eb215279d6f7192b4e8e0e"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/costmodel.py": {
+      "bytes": 2864,
+      "sha256": "1bd83b795fe01829a4943326533db220fd5d8e503c22782b90d830c1a132d450"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/evidence.py": {
+      "bytes": 14330,
+      "sha256": "c57d7dc60f6d6d7617293051a130f88b143bd507270d1bbd8116b93f45f759a4"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/policy.py": {
+      "bytes": 8007,
+      "sha256": "d1997e4b7ca74bf58907d0ba0f05105a35d1190d26a57ef63a0540cfc7058d78"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/rehearsal.py": {
+      "bytes": 3830,
+      "sha256": "82e5c737135dd4d7e408242c88319289c6790d24084ef85ec0d24b1f8fdc113b"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/fannproto/toolspec.py": {
+      "bytes": 5423,
+      "sha256": "f835d38e0138d5da14b67b9e9b1f35b457b24083a6ca7055b7cd11f345bfc9af"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/tests/conftest.py": {
+      "bytes": 98,
+      "sha256": "8659c4f6af34a32f61ecc29774fd873cf628e7e0828ce9ff04773418357a6cc6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/tests/test_controller.py": {
+      "bytes": 10228,
+      "sha256": "8aa490de6504fbbae214f3a446619c8c3f04082b6d323ea9ac1f23388634720d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/tests/test_costmodel.py": {
+      "bytes": 2689,
+      "sha256": "b23865d57e5e94dbe7b5353226c3cac4d6782e9aa1664df0b2ddc3bbe13c7744"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/tests/test_evidence.py": {
+      "bytes": 3439,
+      "sha256": "3c7b014a730a2a2d16b8c91c161db709f1d84ca16c42f99a6baabe1d44087743"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/predecessor-source/tests/test_policy.py": {
+      "bytes": 5120,
+      "sha256": "b631fdfb1bd0f94810a87296effd09acba7dcb290d273d579099cf6feada2470"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/primer.md": {
+      "bytes": 1180,
+      "sha256": "5b2e48a1968d2e0de6fb0aa99e24e71902ccaec33b9c349366752966487aba79"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/qualification.json": {
+      "bytes": 11135,
+      "sha256": "7cfb01f2d5bf3175d23ec411adeb2e3d92e5d09a46f4b69eb7c22bfe8f324f09"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/qualification.log": {
+      "bytes": 632,
+      "sha256": "0ef07e3f5c03c835f013a7720054329fa93d5c39d497417132923280a87d9124"
+    }
+  },
+  "bound_evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "conditional_regret_limit": 0.01,
+  "counts": {
+    "conditions": 7,
+    "groups": 450,
+    "missing": 0,
+    "partial_prefixes": 1496,
+    "prefixes": 9436,
+    "rows": 3150
+  },
+  "date": "2026-11-16",
+  "diagnostic_conditional_regret": 0.0,
+  "diagnostic_historical_shortlist": [
+    "v2_broad",
+    "v2_conservative",
+    "v2_moderate"
+  ],
+  "engineering_error_radius": 0.035363846399260816,
+  "exact_serving_calls": 0,
+  "external_provider_requests": 0,
+  "known_M2_results_inform_method_version": true,
+  "limits": [
+    "Empirical exposed-development engineering envelope; no future predictive coverage guarantee.",
+    "Conditional oracle-M5 regret assumes costs in envelopes and ideal measurement/choice; excludes allocation/measurement noise.",
+    "Supported scalar-stopping candidates only; abstain when the live cap cannot satisfy the regret bound.",
+    "M2 point-precision failure remains unchanged; concrete M4/provider authorization still required."
+  ],
+  "local_feedback_failure": {
+    "SQL_searches": 0,
+    "actual_API_spend_usd": "0",
+    "conservative_input_bound": 50000,
+    "external_provider_requests": 0,
+    "original_binding_sha256": "1c6dd00721f26403606cbc14b93c08d844dcc1909253622beaa80d92d81e8b47",
+    "original_log_sha256": "fd694841814b396b65a90a593c09c629929e7eb62b0cfacd206f263befee6799",
+    "request_bytes": 44027,
+    "reserved_feedback_headroom_bytes": 8192,
+    "schema": "filtered-ann.M3-local-context-failure.v1",
+    "scripted_calls": 2,
+    "source_sha256": {
+      "controller.py": "ef1a0e141bbf2bf909f72c73e01cd4d427a3bea367640eb87432746d81bf2630",
+      "rehearse.py": "bc1ffd9a2f3397b0b2e19d35f3d7c0952f50a2cffa601379c27ade3cb6697c65"
+    },
+    "status": "preserved_input_bound_rejection_before_third_scripted_transport",
+    "validation_test_outcomes_opened": false
+  },
+  "local_tests_passed": 61,
+  "max_live_nominees": 3,
+  "new_agent_discovery": false,
+  "outer_pair_checks": {
+    "broad": {
+      "passed": true,
+      "radius": 0.0348885891282471
+    },
+    "conservative": {
+      "passed": true,
+      "radius": 0.035363846399260816
+    },
+    "moderate": {
+      "passed": true,
+      "radius": 0.035363846399260816
+    }
+  },
+  "point_cost_ranking_enabled": false,
+  "point_model_precision_qualified": false,
+  "point_model_refit": false,
+  "predecessor_commit": "0614157",
+  "provider_authorized": false,
+  "report_sha256": "3e7462cd1d2f32a551d20b526f1c800d158f8fc571200e32bdc7c2c1b38a5770",
+  "schema": "fannagent.uncertainty-shortlist-assessment.v1",
+  "source_sha256": {
+    "agent/experiments/uncertainty-shortlist-v1/FEEDBACK-AMENDMENT.md": "ef4eef870f86bfebb77c981b3e1656d92fc85d293b833517b973e2c5631e7488",
+    "agent/experiments/uncertainty-shortlist-v1/PLAN.md": "3dad1d27b9a3b075b75c80389553c8697ce86f1828cec686a396597e65b4637f",
+    "agent/experiments/uncertainty-shortlist-v1/README.md": "4a39afdd34ddba7684033f4457ff89fb35fb8d6186367a662c2255f42e523f0b",
+    "agent/experiments/uncertainty-shortlist-v1/REPORT.md": "3e7462cd1d2f32a551d20b526f1c800d158f8fc571200e32bdc7c2c1b38a5770",
+    "agent/experiments/uncertainty-shortlist-v1/bind.py": "bafc5f1a9a26a1e7fcdc7e0df0865fd5c7c72183503bf17a812c0a62d1a2e670",
+    "agent/experiments/uncertainty-shortlist-v1/qualify.py": "2020bd121514aa9ac06122d0d65e1c49a14ab0d66090623b1963d00995fcff1f",
+    "agent/experiments/uncertainty-shortlist-v1/rehearse.py": "bc1ffd9a2f3397b0b2e19d35f3d7c0952f50a2cffa601379c27ade3cb6697c65",
+    "agent/experiments/uncertainty-shortlist-v1/rehearse_v2.py": "29109d4f4b20ff34e154e992642c68e5cc4286006612c407c22d74a099997ae8"
+  },
+  "status": "qualified_conditional_uncertainty_shortlist_bound_M3_passed",
+  "uncertainty_shortlisting_enabled": true,
+  "validation_test_outcomes_opened": false
+}

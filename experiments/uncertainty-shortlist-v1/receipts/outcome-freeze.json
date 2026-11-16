@@ -1,0 +1,21 @@
+{
+  "active_M3_receipt_sha256": "9b11e6b5a522443b0482bcaf81c6ed760812cd3a4f4e4ad8f3a6b5eff4417411",
+  "active_binding_receipt_sha256": "a9ca24a339b54a65f66237295768e987d6edfab6d93c787ebd6ed93acca4c326",
+  "bound_evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "bound_evidence_sha256": "586036abab76337746e3a15c353cb5b7162ac550411cc4f5efcfce626828c594",
+  "contract_protocol_sha256": "3dad1d27b9a3b075b75c80389553c8697ce86f1828cec686a396597e65b4637f",
+  "date": "2026-11-16",
+  "external_provider_requests": 0,
+  "plan_freeze_sha256": "ef45b7d1f4d0006bc3338ab30b362fa47c34e566370a8c17e54f8a90a235b328",
+  "point_model_precision_qualified": false,
+  "predecessor_M2_M3_freeze_sha256": "dfd1a5ab9c69a8b1b613a985c3467bd2871be7f67016aa7b1e3e25e6f7a21375",
+  "preserved_local_failure_sha256": "750afcfd2fef52c66c27c5cee11e38a4641f9e72863b966b675648ebc94419e0",
+  "provider_authorized": false,
+  "qualification_sha256": "7cfb01f2d5bf3175d23ec411adeb2e3d92e5d09a46f4b69eb7c22bfe8f324f09",
+  "receipt_sha256": "30711e80c1f45ee8602393452a4bf4b3828ab3b182c50b738f3d031ec1167700",
+  "report_sha256": "3e7462cd1d2f32a551d20b526f1c800d158f8fc571200e32bdc7c2c1b38a5770",
+  "schema": "fannagent.uncertainty-shortlist-outcome.v1",
+  "status": "qualified_conditional_uncertainty_shortlist_bound_M3_passed",
+  "uncertainty_shortlisting_enabled": true,
+  "validation_test_outcomes_opened": false
+}

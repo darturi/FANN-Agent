@@ -3,17 +3,17 @@
 This implements the local portion of [the revamp plan](../../docs/AGENT_PROTOCOL_REVAMP_V2.md).
 M0 job23303080 and [M1 job23376796](../m1-assessment-v1/REPORT.md) are verified.
 The v2 runtime and all9,436 reached-prefix labels are qualified on the original development graph.
-The [M2/M3 assessment](../m2-evidence-cost-v1/REPORT.md) binds complete labels and measured-prefix
-work. Both fixed latency models fail the frozen qualification limits; cost ranking stays disabled.
-M3 passes on real bound evidence through the required cost gate and abstention. No new external
-model episode, validation or test has run.
+The [M2/M3 assessment](../m2-evidence-cost-v1/REPORT.md) binds complete labels/work and preserves
+both failed precision models. The new [uncertainty-aware contract](../uncertainty-shortlist-v1/REPORT.md)
+qualifies conditional M5 experiment selection with explicit abstention. Bound M3 positive and
+negative paths pass;61 tests pass. No external model episode, validation or test has run.
 
 | Stage | Current evidence | Remaining work |
 | --- | --- | --- |
 | M0 attribution | Job23303080 verified: counterbalanced Broad benefit with reduced work; continue advantage did not reproduce; failed23074287 retained | Complete diagnostic; no repeat or final policy promotion. Use its evidence to freeze M1 measurement design |
 | M1 runtime | Job23376796 verifies masks, partial outputs, native/legacy work bridge,781,200 timings and984,396 attempts; both native preflights pass | Complete; preserve the original export error and local ID-lookup correction; no rerun |
-| M2 evidence | Complete3,150-row/9,436-prefix/work binding;66,150 operation and1,029 measured-work checks; both declared latency models fail qualification | Preserve negative results and disabled ranking; revise the prospective cost/shortlist contract before M4 |
-| M3 controller | All46 tests, actual-bound negative-cost/abstention rehearsal and separate positive fixture pass | A positive actual-data cost-ranked episode still needs a supported selection contract and concrete provider authorization |
+| M2 evidence/shortlist | Complete labels/work; point precision remains failed; whole-pair envelope checks qualify conditional<=3 M5 nominees with<=1-point interval regret | Actual M5 cost remains mandatory; prepare the concrete M4 payload/rates/transport/budget |
+| M3 controller | All61 tests; real-bound positive selection, four-way/native abstention, unsupported estimates, quotas/resume and unauthorized-paid blocking pass | Concrete new provider authorization remains required |
 | M4–M6 | No requests or protected evaluation run | Follow the gates in the plan; retain negative/inconclusive outcomes |
 
 ## What is implemented
@@ -43,6 +43,9 @@ remain explicitly cost unqualified. M2 binds the complete export and evaluator-o
 The fixed additive and ridge hypotheses failed their prospective limits. Their signed
 coefficients/errors and measured plan facts remain available; no unsupported surrogate ranks
 programs. Added partial/preserving/zero/lossy categories and work feedback remain bounded tools.
+The new [uncertainty contract](../uncertainty-shortlist-v1/PLAN.md) reuses the signed model without
+refitting, adds a3.5364-point empirical envelope and qualifies only conditional experiment
+selection. It does not mark the point model accurate or forecast new-program latency as measured.
 
 `fannproto/controller.py` reuses the general agent's `Store` and `Budget`. Its five native tools
 inspect development, explain bounded cases, evaluate programs, compare registered candidates
@@ -114,9 +117,18 @@ fails primary error checks. Limits are not relaxed. M3 verifies nine tools/six s
 bounded counterexamples/work, quotas, resume, pre-transport blocking and explicit abstention with
 the real binding; the separate positive fixture never becomes actual-data qualification.
 
-Next is a prospective uncertainty-aware or work-based shortlist revision, then its qualification/
-rehearsal before M4. No further Torch job is needed now. All six filters remain; exact search is
-offline scoring only; validation/test remain unopened and new provider generation is gated.
+The [uncertainty-aware revision](../uncertainty-shortlist-v1/REPORT.md) now passes outer whole-pair
+coverage and bound M3. It retains all three known policies as diagnostic nominees; a fourth
+ambiguous semantic test variant causes abstention. The selector proves its conditional bound
+against exhaustive interval corners. The deployed envelope is3.5364 native-ratio points; its
+coverage for new programs/allocations is unproven and actual M5 timings remain required.
+
+The first positive M3 context overflow is preserved. Compact evaluate/compare views keep full
+registry records; active feedback deploymentv2 completes the same three scripted responses at
+4,900/19,714/35,731 request bytes under the unchanged50,000 bound plus8,192 reserved headroom.
+Next is concrete M4 payload/rates/transport/budget preparation and new provider authorization.
+No further Torch job is needed now. All six filters and scoring-only exact search remain;
+validation/test stay unopened. Precise point-cost ranking remains disabled.
 
 Compact local receipts and external-artifact hashes are in `receipts/`. Generated engines,
 binaries, full evidence, SQLite trajectories and logs remain under the study's workspace paths.

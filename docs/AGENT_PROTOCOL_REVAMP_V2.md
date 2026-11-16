@@ -197,6 +197,25 @@ Deliverables after execution: complete trajectory/candidate registry; frozen fin
 
 Done means a reproducible, honestly classified result—not necessarily a faster policy. The protocol revamp succeeds operationally when another researcher can tell what the model chose, what the controller engineered, what data were exposed, what each measurement means, and why the method succeeded, failed or remained inconclusive.
 
+## November16 implementation amendment: uncertainty-aware development shortlist
+
+The user authorized the [new shortlist contract](../experiments/uncertainty-shortlist-v1/PLAN.md)
+after both M2 precision models failed. Its [qualification and M3 report](../experiments/uncertainty-shortlist-v1/REPORT.md)
+supersedes section8's lowest-point-estimate/one-percent-tie rule for DEVELOPMENT M5 nominations.
+The earlier failed model qualification remains intact. Reuse the signed proxy without refitting;
+qualify an empirical engineering envelope through excluded whole policy/control pairs and
+explicit support checks. Enumerate subsets of at most3 among at most9 submitted records and
+accept only a conditional interval regret bound<=one native percentage point, with native
+available. Overlarge ambiguous pools cause abstention. The certificate assumes interval coverage
+and ideal M5 comparison; it does not include future measurement/allocation uncertainty or prove
+new-program cost accuracy. All six scalar filters remain equally represented in the primary
+objective; unfiltered is secondary and checked. Full M5 finalist/matched-control timings and
+the later frozen protected-selection procedure remain required.
+
+The active feedback revision uses compact evaluate/compare views with full canonical registry
+records. The first local context overflow and original source are preserved; v2 passes under
+the unchanged input bound. No external provider episode is authorized by this amendment.
+
 ## 13. Replication and procedure-level robustness
 
 A successful selected policy is not by itself evidence that the agent procedure is reliable. After the Small Reviews protocol is adopted, freeze the generation/tool/policy-selection method before applying it to additional sizes and the two additional datasets in the roadmap. Dataset-specific feature costs, schemas, splits and native settings may be qualified, but unsuccessful episodes must not trigger unreported prompt/action-space changes within that method version.

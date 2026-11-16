@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-16",
+  "external_requests": 0,
+  "inputs": {
+    "agent/experiments/uncertainty-shortlist-v1/PLAN.md": "3dad1d27b9a3b075b75c80389553c8697ce86f1828cec686a396597e65b4637f",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/binding-receipt.json": "a938dec2a7c45189a821e16393f35541e151394b19fb11c9e76c91fdeb6c71af",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/bound-evidence.json": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/evaluator-cost-inputs.json": "56eb36a0c4c38bc130765337244ef4d192fefb3cc8e049bb7b39b25554a30f70",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/model-qualification.json": "3ac6581d08a3556358ec267d3d8bb70cb8f3ddc2ebe1e0e8f6d617e14f73b0c5",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/protocol-v2-M2-M3-v1.json": "dfd1a5ab9c69a8b1b613a985c3467bd2871be7f67016aa7b1e3e25e6f7a21375",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2/compiled-programs.json": "7b386b983e03abd46908a87abe48ffde53eb4a7db133c1217475015e65a5b150",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/serving-cost-library.json": "fcf73ff5a75f8c7ce9269bf302976ea670d08e4466ab4af94f914dbe4c75ed65"
+  },
+  "known_M2_results_adaptively_inform_method": true,
+  "predecessor_commit": "0614157",
+  "predecessor_source_sha256": {
+    "predecessor-source/fannproto/__init__.py": "917029f714d25b317bc72ca48fbf91f925c18a5cd59e5cd550fb66a9dc437bd7",
+    "predecessor-source/fannproto/compiler.py": "197dcdbd41f22ac2d6c2a81ad4c7aa5d7204cae0e6f0a5b2f8687577c4f7f8dc",
+    "predecessor-source/fannproto/controller.py": "6a07139cd378d10cd514baf3ec052e9e0871a142a0eb215279d6f7192b4e8e0e",
+    "predecessor-source/fannproto/costmodel.py": "1bd83b795fe01829a4943326533db220fd5d8e503c22782b90d830c1a132d450",
+    "predecessor-source/fannproto/evidence.py": "c57d7dc60f6d6d7617293051a130f88b143bd507270d1bbd8116b93f45f759a4",
+    "predecessor-source/fannproto/policy.py": "d1997e4b7ca74bf58907d0ba0f05105a35d1190d26a57ef63a0540cfc7058d78",
+    "predecessor-source/fannproto/rehearsal.py": "82e5c737135dd4d7e408242c88319289c6790d24084ef85ec0d24b1f8fdc113b",
+    "predecessor-source/fannproto/toolspec.py": "f835d38e0138d5da14b67b9e9b1f35b457b24083a6ca7055b7cd11f345bfc9af",
+    "predecessor-source/tests/conftest.py": "8659c4f6af34a32f61ecc29774fd873cf628e7e0828ce9ff04773418357a6cc6",
+    "predecessor-source/tests/test_controller.py": "8aa490de6504fbbae214f3a446619c8c3f04082b6d323ea9ac1f23388634720d",
+    "predecessor-source/tests/test_costmodel.py": "b23865d57e5e94dbe7b5353226c3cac4d6782e9aa1664df0b2ddc3bbe13c7744",
+    "predecessor-source/tests/test_evidence.py": "3c7b014a730a2a2d16b8c91c161db709f1d84ca16c42f99a6baabe1d44087743",
+    "predecessor-source/tests/test_policy.py": "b631fdfb1bd0f94810a87296effd09acba7dcb290d273d579099cf6feada2470"
+  },
+  "protected_outcomes_opened": false,
+  "schema": "filtered-ann.uncertainty-shortlist-plan.v1",
+  "status": "fixed_before_new_envelope_computation"
+}

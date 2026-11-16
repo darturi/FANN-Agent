@@ -1,0 +1,18 @@
+{
+  "SQL_searches": 0,
+  "actual_API_spend_usd": "0",
+  "conservative_input_bound": 50000,
+  "external_provider_requests": 0,
+  "original_binding_sha256": "1c6dd00721f26403606cbc14b93c08d844dcc1909253622beaa80d92d81e8b47",
+  "original_log_sha256": "fd694841814b396b65a90a593c09c629929e7eb62b0cfacd206f263befee6799",
+  "request_bytes": 44027,
+  "reserved_feedback_headroom_bytes": 8192,
+  "schema": "filtered-ann.M3-local-context-failure.v1",
+  "scripted_calls": 2,
+  "source_sha256": {
+    "controller.py": "ef1a0e141bbf2bf909f72c73e01cd4d427a3bea367640eb87432746d81bf2630",
+    "rehearse.py": "bc1ffd9a2f3397b0b2e19d35f3d7c0952f50a2cffa601379c27ade3cb6697c65"
+  },
+  "status": "preserved_input_bound_rejection_before_third_scripted_transport",
+  "validation_test_outcomes_opened": false
+}

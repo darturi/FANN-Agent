@@ -1,0 +1,291 @@
+{
+  "M2_negative_qualification_sha256": "3ac6581d08a3556358ec267d3d8bb70cb8f3ddc2ebe1e0e8f6d617e14f73b0c5",
+  "SQL_searches": 0,
+  "all_six_filters": true,
+  "binding_inputs_sha256": "7d7b68c4c46ec08c03614f7c31c3c8a6d94d5d6db0aa4816f65b7cf51bdaf64d",
+  "date": "2026-11-16",
+  "deployment_error_radius": 0.035363846399260816,
+  "diagnostic_observed_regret": 0.0,
+  "diagnostic_selected_hashes": [
+    "b625d883b5dce7d63ae6d92cf7a8ded5b0aeca8bdfcf51ea8aae8b40526d9683",
+    "41c297eb813f941bc836efb0dd0748e8fe30a000b43ad5caeb4f8784e6a9f2e5",
+    "4a55dab32c87884b9a67b12af70f7e0a6550e3c40810159ddf10f1a9c1e9c8ec"
+  ],
+  "diagnostic_shortlist": {
+    "admissible_intervals": {
+      "v2_broad": [
+        0.9182207039322999,
+        0.9889483967308216
+      ],
+      "v2_conservative": [
+        0.9586220787533433,
+        1.029349771551865
+      ],
+      "v2_moderate": [
+        0.9455079451800721,
+        1.0162356379785937
+      ]
+    },
+    "best_attainable_bound": 0.0,
+    "candidate_ids": [
+      "v2_broad",
+      "v2_conservative",
+      "v2_moderate"
+    ],
+    "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+    "conditional_regret_bound": 0.0,
+    "exclusions": {
+      "matched_broad": "control_not_a_learned_stopping_nominee",
+      "matched_conservative": "control_not_a_learned_stopping_nominee",
+      "matched_moderate": "control_not_a_learned_stopping_nominee"
+    },
+    "max_live_nominees": 3,
+    "no_performance_promotion": true,
+    "regret_limit": 0.01,
+    "schema": "filtered-ann.uncertainty-shortlist.v1",
+    "status": "selected_for_M5"
+  },
+  "diagnostics": {
+    "matched_broad": {
+      "max_absolute_error": 0.018282213431294547,
+      "primary_observed": 1.0068745049576393,
+      "primary_proxy": 1.0099224530521334,
+      "signed_errors": {
+        "CPU_slot:0": -0.003348722042576746,
+        "CPU_slot:1": -4.553410675400826e-06,
+        "CPU_slot:2": 0.010195473992501092,
+        "CPU_slot:3": 0.005285377886708131,
+        "cycle:0": 0.0073793003108872934,
+        "cycle:1": -0.0012247296918210804,
+        "filter:unfiltered": 0.009898613366623454,
+        "filter:votes108": -0.0054420878996974675,
+        "filter:votes192": -0.011176571121406687,
+        "filter:votes310": 0.010082250496258882,
+        "filter:votes32": 0.008902664470858968,
+        "filter:votes527": 0.018282213431294547,
+        "filter:votes743": -0.003189231681240301,
+        "fold:0": 0.0015515323309451823,
+        "fold:1": 0.003348800050867906,
+        "fold:2": 0.0031481664551102906,
+        "fold:3": 0.0024927750889516265,
+        "fold:4": 0.004641942049632863,
+        "primary": 0.0030479480944940462,
+        "primary_bootstrap_high": 0.004877902085905144,
+        "primary_bootstrap_low": 0.001224115137653986
+      }
+    },
+    "matched_conservative": {
+      "max_absolute_error": 0.00723846747957313,
+      "primary_observed": 1.0027869238522082,
+      "primary_proxy": 1.0021857302689992,
+      "signed_errors": {
+        "CPU_slot:0": -0.0008880778270627943,
+        "CPU_slot:1": -0.0037943097585622088,
+        "CPU_slot:2": -0.0019916733113423124,
+        "CPU_slot:3": 0.0042528062125550825,
+        "cycle:0": -0.0013160353227368304,
+        "cycle:1": 0.0001157630003167931,
+        "filter:unfiltered": 0.0037499113296597386,
+        "filter:votes108": -0.00723846747957313,
+        "filter:votes192": 0.004303514142144582,
+        "filter:votes310": -0.0036338176387697985,
+        "filter:votes32": 0.0052560273846600225,
+        "filter:votes527": -0.0008882231756239811,
+        "filter:votes743": -0.001810264374231485,
+        "fold:0": -0.00309199120234549,
+        "fold:1": -0.0004386085868408607,
+        "fold:2": -0.0009886125760560915,
+        "fold:3": 0.0008842326761955288,
+        "fold:4": 0.0005780347757144977,
+        "primary": -0.000601193583209092,
+        "primary_bootstrap_high": 0.0009273308497431182,
+        "primary_bootstrap_low": -0.0021550225801162002
+      }
+    },
+    "matched_moderate": {
+      "max_absolute_error": 0.016075662179062533,
+      "primary_observed": 1.00318665170792,
+      "primary_proxy": 1.006662107483798,
+      "signed_errors": {
+        "CPU_slot:0": 0.016075662179062533,
+        "CPU_slot:1": 0.0012622097617569494,
+        "CPU_slot:2": -0.006818292699157791,
+        "CPU_slot:3": 0.0031029440739935854,
+        "cycle:0": 0.0040275444593722565,
+        "cycle:1": 0.002925335626849934,
+        "filter:unfiltered": 0.012238662053914773,
+        "filter:votes108": 0.003495032213641336,
+        "filter:votes192": -0.0032142228515543714,
+        "filter:votes310": 0.008435158387866126,
+        "filter:votes32": 0.007026473859890858,
+        "filter:votes527": 0.002437544041191786,
+        "filter:votes743": 0.0023725067084258145,
+        "fold:0": 0.0036791286324129313,
+        "fold:1": 0.004756394857353685,
+        "fold:2": 0.0038336931299010057,
+        "fold:3": 0.0011256476417316197,
+        "fold:4": 0.003927831397911641,
+        "primary": 0.0034754557758780447,
+        "primary_bootstrap_high": 0.005202496175391022,
+        "primary_bootstrap_low": 0.001742809124271727
+      }
+    },
+    "v2_broad": {
+      "max_absolute_error": 0.025363846399260814,
+      "primary_observed": 0.9445381074433084,
+      "primary_proxy": 0.9535845503315605,
+      "signed_errors": {
+        "CPU_slot:0": -0.008882660595535552,
+        "CPU_slot:1": 0.009948631156876941,
+        "CPU_slot:2": 0.025363846399260814,
+        "CPU_slot:3": 0.00971161683269528,
+        "cycle:0": 0.01319890962958159,
+        "cycle:1": 0.004950227314524547,
+        "filter:unfiltered": 0.019104559660207188,
+        "filter:votes108": 0.008773587801731098,
+        "filter:votes192": -0.0011697498265101913,
+        "filter:votes310": 0.00395176858617996,
+        "filter:votes32": 0.01829212288067439,
+        "filter:votes527": 0.020939488072201362,
+        "filter:votes743": -0.003455401628648991,
+        "fold:0": 0.007253784839725497,
+        "fold:1": 0.011602840066350373,
+        "fold:2": 0.007120055825025617,
+        "fold:3": 0.007846501797483363,
+        "fold:4": 0.01126246089666294,
+        "primary": 0.009046442888252182,
+        "primary_bootstrap_high": 0.011063614685770324,
+        "primary_bootstrap_low": 0.007025710769175972
+      }
+    },
+    "v2_conservative": {
+      "max_absolute_error": 0.024618443848993476,
+      "primary_observed": 0.9930902163652406,
+      "primary_proxy": 0.993985925152604,
+      "signed_errors": {
+        "CPU_slot:0": 0.004005691511855147,
+        "CPU_slot:1": -0.005713409009898585,
+        "CPU_slot:2": 0.004361217272947138,
+        "CPU_slot:3": 0.0007608809044966636,
+        "cycle:0": 0.0007141816902579423,
+        "cycle:1": 0.0010777729285030846,
+        "filter:unfiltered": 0.024618443848993476,
+        "filter:votes108": -0.0013518219342307791,
+        "filter:votes192": -0.00504911754095505,
+        "filter:votes310": 0.0009590524578796389,
+        "filter:votes32": 0.010732810773331436,
+        "filter:votes527": -0.002285475488438715,
+        "filter:votes743": 0.0010342037574285756,
+        "fold:0": -0.002115192425158785,
+        "fold:1": 0.0032593688920886654,
+        "fold:2": -0.002205556072943593,
+        "fold:3": 0.005116899401319541,
+        "fold:4": 0.0004235949575316367,
+        "primary": 0.0008957087873633363,
+        "primary_bootstrap_high": 0.0026521995731044186,
+        "primary_bootstrap_low": -0.0008212913532102461
+      }
+    },
+    "v2_moderate": {
+      "max_absolute_error": 0.024888589128247096,
+      "primary_observed": 0.9753132439487704,
+      "primary_proxy": 0.9808717915793325,
+      "signed_errors": {
+        "CPU_slot:0": 0.017109322073790567,
+        "CPU_slot:1": 0.006611081527224338,
+        "CPU_slot:2": -0.002561429291763395,
+        "CPU_slot:3": 0.0008107741218962294,
+        "cycle:0": 0.00630298145692787,
+        "cycle:1": 0.00481676816696186,
+        "filter:unfiltered": 0.024888589128247096,
+        "filter:votes108": 0.012101666780991005,
+        "filter:votes192": -0.0029322453106851443,
+        "filter:votes310": -0.0025404537848243702,
+        "filter:votes32": 0.02071906673290136,
+        "filter:votes527": 0.002022716582163131,
+        "filter:votes743": 0.0008380197204171935,
+        "fold:0": 0.006718664847277123,
+        "fold:1": 0.00706538093969844,
+        "fold:2": 0.007520511501005855,
+        "fold:3": 0.0007888993619085127,
+        "fold:4": 0.005562910820529843,
+        "primary": 0.005558547630562072,
+        "primary_bootstrap_high": 0.007350189910363475,
+        "primary_bootstrap_low": 0.003750487373099348
+      }
+    }
+  },
+  "known_M2_results_inform_this_method_version": true,
+  "limits": "Empirical exposed-development engineering qualification, not a prediction coverage guarantee for unseen programs/queries/allocations. The conditional regret certificate assumes costs inside envelopes and ideal M5 measurement/choice. All M1/M2 evidence and their earlier precision failures remain unchanged.",
+  "outer_pair_coverage": {
+    "broad": {
+      "calibration_programs": [
+        "matched_conservative",
+        "matched_moderate",
+        "v2_conservative",
+        "v2_moderate"
+      ],
+      "excluded_pair": [
+        "matched_broad",
+        "v2_broad"
+      ],
+      "failures": {
+        "matched_broad": {},
+        "v2_broad": {}
+      },
+      "passed": true,
+      "radius": 0.0348885891282471
+    },
+    "conservative": {
+      "calibration_programs": [
+        "matched_broad",
+        "matched_moderate",
+        "v2_broad",
+        "v2_moderate"
+      ],
+      "excluded_pair": [
+        "matched_conservative",
+        "v2_conservative"
+      ],
+      "failures": {
+        "matched_conservative": {},
+        "v2_conservative": {}
+      },
+      "passed": true,
+      "radius": 0.035363846399260816
+    },
+    "moderate": {
+      "calibration_programs": [
+        "matched_broad",
+        "matched_conservative",
+        "v2_broad",
+        "v2_conservative"
+      ],
+      "excluded_pair": [
+        "matched_moderate",
+        "v2_moderate"
+      ],
+      "failures": {
+        "matched_moderate": {},
+        "v2_moderate": {}
+      },
+      "passed": true,
+      "radius": 0.035363846399260816
+    }
+  },
+  "plan_freeze_sha256": "ef45b7d1f4d0006bc3338ab30b362fa47c34e566370a8c17e54f8a90a235b328",
+  "point_model_precision_qualified": false,
+  "point_model_refit": false,
+  "prefix_labels": 9436,
+  "provider_calls": 0,
+  "radius_limit": 0.05,
+  "regret_limit": 0.01,
+  "schema": "filtered-ann.uncertainty-shortlist-qualification.v1",
+  "source_sha256": {
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/uncertainty.py": "f7d12999676b7275d6dfe94a8ecf09e336a1167881e9027c6e360e774930ecc4",
+    "agent/experiments/uncertainty-shortlist-v1/qualify.py": "2020bd121514aa9ac06122d0d65e1c49a14ab0d66090623b1963d00995fcff1f"
+  },
+  "status": "qualified_conditional_experiment_selection",
+  "unfiltered": true,
+  "validation_test_outcomes_opened": false
+}

@@ -1,0 +1,41 @@
+{
+  "SQL_searches": 0,
+  "all_row_proofs_features_work_and_folds_preserved": true,
+  "artifact_sha256": {
+    "bound-evidence.json": "586036abab76337746e3a15c353cb5b7162ac550411cc4f5efcfce626828c594",
+    "bound-gates.json": "5aae1f0da168a5228853f766037092a3540c9e4e2fba9db696095998168e812a",
+    "compact-summary.json": "fed1365b03214b35cd8df46837cb0164d8bc73f429679766dfd1ac6cf59a4606",
+    "primer.md": "5b2e48a1968d2e0de6fb0aa99e24e71902ccaec33b9c349366752966487aba79"
+  },
+  "counts": {
+    "conditions": 7,
+    "groups": 450,
+    "missing": 0,
+    "partial_prefixes": 1496,
+    "prefixes": 9436,
+    "rows": 3150
+  },
+  "date": "2026-11-16",
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "feedback_amendment_sha256": "ef4eef870f86bfebb77c981b3e1656d92fc85d293b833517b973e2c5631e7488",
+  "feedback_revision": "compact_candidate_feedback_v1",
+  "point_cost_ranking_enabled": false,
+  "point_model_precision_qualified": false,
+  "predecessor_evidence_sha256": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0",
+  "preserved_local_failure_sha256": "750afcfd2fef52c66c27c5cee11e38a4641f9e72863b966b675648ebc94419e0",
+  "provider_authorized": false,
+  "provider_calls": 0,
+  "qualification_sha256": "7cfb01f2d5bf3175d23ec411adeb2e3d92e5d09a46f4b69eb7c22bfe8f324f09",
+  "schema": "filtered-ann.uncertainty-shortlist-binding.v1",
+  "shortlist_contract_hash": "7eb34cc11b75fbf2f6e5e6b763ce7e5407f6341faa1dd1a7634d3384608c6705",
+  "source_sha256": {
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/controller.py": "206de9c331c2f0576e8e751988aa386a23749c8964f3b25cc52c787ce646af9b",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/evidence.py": "68d2957544e75159be3730ebd1d428d63f49fca2889b3c51e934fc6295e1243f",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/uncertainty.py": "f7d12999676b7275d6dfe94a8ecf09e336a1167881e9027c6e360e774930ecc4",
+    "agent/experiments/uncertainty-shortlist-v1/bind.py": "bafc5f1a9a26a1e7fcdc7e0df0865fd5c7c72183503bf17a812c0a62d1a2e670"
+  },
+  "status": "bound_qualified_conditional_experiment_selection",
+  "supersedes_binding_sha256": "1c6dd00721f26403606cbc14b93c08d844dcc1909253622beaa80d92d81e8b47",
+  "uncertainty_shortlisting_enabled": true,
+  "validation_test_outcomes_opened": false
+}

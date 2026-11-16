@@ -26,8 +26,13 @@ predicate while retaining its contribution to the all-filter objective.
 The fixed allowance is6 paid requests,$15,12 domain tools and9 candidate
 submissions TOTAL, at most3 per batch. Invalid/duplicate/repair programs consume
 slots. Stop with explicit submit_or_abstain; an empty exploratory batch is not a
-permission for unbounded retries. Finalist ranking is controller-enforced from
-fully qualified registered candidates; at most3 receive live measurements.
+permission for unbounded retries. Finalist selection is controller-enforced from
+qualified registered candidates. The uncertainty contract uses empirical
+engineering envelopes, not measured latency or future-program confidence
+intervals. It selects at most3 for M5 only when the conditional interval regret
+bound is at most one native percentage point; overlapping point estimates never
+break ties. Native or uncertainty-cap abstention is valid. Unsupported estimates
+and no-scalar-stop controls cannot be nominated. M5 must measure actual programs.
 All folds are exposed development diagnostics, not independent holdouts. No
 validation/test access, hidden threshold fitter, shell, SQL or network tool exists.
 Retain failures and abstain when evidence does not support a candidate. A negative

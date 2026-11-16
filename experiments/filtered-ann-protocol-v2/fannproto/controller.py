@@ -12,6 +12,7 @@ from fannagent.store import Store, canonical, digest
 
 from .compiler import compile_programs
 from .policy import PROFILE, observation_plan, replay, rule_hash, validate
+from .uncertainty import COST_STATUS, select_shortlist, validate_contract
 
 LIMITS = {
     "paid_requests": 6,
@@ -24,6 +25,42 @@ LIMITS = {
 
 class ProtocolError(ValueError):
     pass
+
+
+def candidate_feedback(record):
+    """Compact agent view; full canonical records remain in the durable registry."""
+    result = {
+        k: deepcopy(record[k])
+        for k in ("rejected", "rule_hash", "evaluation", "observation_plan")
+        if k in record
+    }
+    if "cost_estimate" in record:
+        cost = record["cost_estimate"]
+        result["cost_estimate"] = (
+            {
+                k: deepcopy(v)
+                for k, v in cost.items()
+                if k not in ("limits", "qualification_receipt_sha256")
+            }
+            if cost is not None
+            else None
+        )
+    if "work_estimate" in record:
+        work = record["work_estimate"]
+        fields = ("vector_calls", "feature_passes", "membership_probes")
+        result["work_estimate"] = (
+            {
+                "status": "measured-prefix work proxy; not new-program latency",
+                "equal_scalar_means": {k: work["equal_scalar_means"][k] for k in fields},
+                "per_filter_means": {
+                    f: {k: means[k] for k in fields}
+                    for f, means in work["per_filter_means"].items()
+                },
+            }
+            if work is not None
+            else None
+        )
+    return result
 
 
 def parse_final(text):
@@ -57,10 +94,19 @@ def generation_ready(evidence, gates):
         raise ProtocolError("M1 original-graph v2 runtime qualification is pending")
     if evidence.bundle.get("cost_status") == "unqualified_M2_models_failed":
         raise ProtocolError("M2 cost models failed qualification; ranking and generation blocked")
-    if (
-        evidence.bundle.get("cost_status") != "qualified"
-        or gates.get("M2", {}).get("evidence_hash") != evidence.identity
-    ):
+    if evidence.bundle.get("cost_status") == COST_STATUS:
+        contract = evidence.bundle["shortlist_contract"]
+        validate_contract(contract)
+        if (
+            gates.get("M2", {}).get("uncertainty_shortlisting_enabled") is not True
+            or gates["M2"].get("shortlist_contract_hash") != digest(contract)
+            or gates["M2"].get("shortlist_qualification_sha256")
+            != contract["qualification_receipt_sha256"]
+        ):
+            raise ProtocolError("uncertainty shortlist qualification binding differs")
+    elif evidence.bundle.get("cost_status") != "qualified":
+        raise ProtocolError("M2 qualified cost/prefix evidence is pending")
+    if gates.get("M2", {}).get("evidence_hash") != evidence.identity:
         raise ProtocolError("M2 qualified cost/prefix evidence is pending")
     if any(cp not in r["proofs"] for r in evidence.rows for cp in r["observations"]):
         raise ProtocolError("missing partial-prefix proof blocks generation")
@@ -184,9 +230,7 @@ class Campaign:
                         record = {"rejected": str(error)[:300]}
                     artifact = self.store.put("v2_candidate", record, scope="development")
                     state["registry"][cid] = artifact
-                    evaluations.append(
-                        {"candidate_id": cid, **{k: v for k, v in record.items() if k != "policy"}}
-                    )
+                    evaluations.append({"candidate_id": cid, **candidate_feedback(record)})
                 answer = {
                     "evaluations": evaluations,
                     "candidate_submissions_remaining": 9 - state["candidate_submissions"],
@@ -200,7 +244,7 @@ class Campaign:
                     raise ProtocolError("one..nine registered candidate IDs required")
                 answer = {
                     "candidates": {
-                        cid: self.store.read(state["registry"][cid], agent=True)
+                        cid: candidate_feedback(self.store.read(state["registry"][cid], agent=True))
                         for cid in arguments["candidate_ids"]
                     }
                 }
@@ -226,7 +270,18 @@ class Campaign:
                     }
                 else:
                     generation_ready(self.evidence, self.gates)
-                    ranked = self.shortlist(state)
+                    decision = self.shortlist_decision(state)
+                    ranked = decision["candidate_ids"] if decision else self.shortlist(state)
+                    if decision and not ranked:
+                        if ids:
+                            raise ProtocolError("uncertainty contract requires abstention")
+                        state["terminal"] = "uncertainty_shortlist_abstention"
+                        answer = {
+                            "status": "abstained",
+                            "selection_decision": decision,
+                            "no_performance_promotion": True,
+                        }
+                        return self._complete_tool(state, identity, signature, answer)
                     if not ranked:
                         raise ProtocolError("no fully qualified cost-ranked candidate; abstain")
                     if ids and set(ids) != set(ranked):
@@ -247,12 +302,17 @@ class Campaign:
                         "candidate_ids": ids,
                         "no_performance_promotion": True,
                     }
+                    if decision:
+                        answer["selection_decision"] = decision
             else:
                 raise ProtocolError(
                     "unknown operation; no shell/SQL/file/network/holdout tool exists"
                 )
         except (ValueError, TypeError, KeyError, OverflowError) as error:
             answer = {"error": str(error)[:400]}
+        return self._complete_tool(state, identity, signature, answer)
+
+    def _complete_tool(self, state, identity, signature, answer):
         artifact = self.store.put("v2_tool_result", answer, scope="development")
         state["receipts"][identity] = {
             "signature": signature,
@@ -262,7 +322,20 @@ class Campaign:
         self.store.set("v2_state", state)
         return answer
 
+    def shortlist_decision(self, state=None):
+        if self.evidence.bundle.get("cost_status") != COST_STATUS:
+            return None
+        state = state or self.store.get("v2_state")
+        records = [
+            {"candidate_id": cid, **self.store.read(artifact, agent=True)}
+            for cid, artifact in state["registry"].items()
+        ]
+        return select_shortlist(records)
+
     def shortlist(self, state=None):
+        decision = self.shortlist_decision(state)
+        if decision is not None:
+            return decision["candidate_ids"]
         state = state or self.store.get("v2_state")
         remaining = []
         seen = set()
@@ -307,6 +380,19 @@ class Campaign:
                 raise ProtocolError("interrupted model round requires audit, not automatic retry")
             if self.evidence.fixture and self.model_config.model != "scripted":
                 raise ProtocolError("fixture cannot authorize a paid model")
+            if self.model_config.model != "scripted":
+                authorization = self.gates.get("provider_authorization")
+                if (
+                    type(authorization) is not dict
+                    or authorization.get("status") != "authorized"
+                    or authorization.get("model") != self.model_config.model
+                    or authorization.get("evidence_hash") != self.evidence.identity
+                    or authorization.get("max_requests") != 6
+                    or authorization.get("max_output_tokens")
+                    != self.model_config.output_token_limit
+                    or authorization.get("ceiling_usd") != str(self.model_config.ceiling_usd)
+                ):
+                    raise ProtocolError("new concrete provider authorization required")
             frozen = {
                 k: request.get(k)
                 for k in (
