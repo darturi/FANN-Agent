@@ -1,0 +1,19 @@
+{
+  "archive_sha256": "53935023770b6ed68145d490579b5a68c57efbd7b3f2014a8b22ad487be0800f",
+  "automatic_submission": false,
+  "date": "2026-11-15",
+  "failed_job_id": "23074287",
+  "failed_return_archive_verification": "pending_download",
+  "kit": "reader-attribution-v1-startup-fix",
+  "local_readiness_receipt_sha256": "292a3ddf2897616fe123a90721dd1557aa278a6abae0b01f9287562b4634be35",
+  "original_archive_sha256": "5ea46c974ea9e6e2a6d367ab72e025528e08eda9b63834e4cd1b6128d4de826f",
+  "original_freeze_sha256": "c8e4079c62a22e22c0e831152b82c2756fd3c2e4e502e2fb20a76dd933648d73",
+  "planned_attempts_unchanged": 684950,
+  "provider_calls": 0,
+  "repair_metadata_sha256": "5a3471657290d78ece1c84e16092870e1c4ec6528910636b4b08d08c6bff9608",
+  "schema": "reader-attribution-deployment-repair-freeze.v1",
+  "search_modules_schedule_policy_scoring_analysis_unchanged": true,
+  "status": "replacement_sealed_native_startup_preflight_required_before_manual_submission",
+  "study_binding_sha256_unchanged": "b0e8c8843bb386d684c33f126c558f11e36ede3bb61d0bfb514ca7efc6927e7d",
+  "validation_test_outcomes_opened": false
+}

@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "development": 450,
+    "excluded_historical": 125,
+    "test": 275,
+    "validation": 150
+  },
+  "manifest_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/splits/split-manifest.json",
+  "manifest_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "policy_and_analysis_freeze": "pending Phase 1 and subsequent development; split freeze is already binding",
+  "role_file_hashes": {
+    "development.jsonl": "375de700bc24c4159b44b811abe4c049d86a09d136cfd28568d07a003f2abbe0",
+    "excluded_historical.jsonl": "5bf99e042b869c9bcf7ea9fbd05b8b26889d03dfa9d5204f3530dc8393f805ea",
+    "test.jsonl": "fda55f022cef9157272658e61b663cd2ca5e24d3b6f24a0aa4345de0b9d3158f",
+    "validation.jsonl": "31f707a674cf7f4e86203693ae7619e22dbceebe54b98639bd5d956f238e8474"
+  },
+  "schema": "fannagent-split-freeze.v1"
+}

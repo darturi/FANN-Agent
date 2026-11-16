@@ -1,0 +1,17 @@
+{
+  "M0": {
+    "job_id": "23303080",
+    "limits": "Current diagnostic shows counterbalanced reader/CPU/cycle-consistent Broad improvement with reduced work, and no native/continue graph-count mismatch. It does not uniquely identify the earlier allocation control anomaly or establish cross-allocation generalization.",
+    "receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
+    "status": "verified_attribution_resolved"
+  },
+  "M1": {
+    "status": "pending_original_graph_qualification"
+  },
+  "M2": {
+    "status": "pending_new_prefix_and_qualified_cost_evidence"
+  },
+  "date": "2026-11-16",
+  "provider_authorization": "new episode not authorized or started",
+  "schema": "filtered-ann-generation-gates.v2"
+}

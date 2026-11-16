@@ -1,0 +1,14 @@
+{
+  "agent_outcome": "no established robust latency success; unchanged programs; negative/inconclusive result is valid",
+  "archive_sha256": "5ea46c974ea9e6e2a6d367ab72e025528e08eda9b63834e4cd1b6128d4de826f",
+  "binding_sha256": "b0e8c8843bb386d684c33f126c558f11e36ede3bb61d0bfb514ca7efc6927e7d",
+  "planned_attempts": 684950,
+  "protocol_sha256": "7cee4f3c20194aab15f4f7c82c4b14b53fe97ba53c25f48a2e79a3958c121826",
+  "provider_calls": 0,
+  "purpose": "single attribution diagnostic, no automatic resubmission/promotion",
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "status": "fixed_development_diagnostic_sealed_pending_Torch",
+  "timing_module_sha256": "80f84dbace4c2af87894179abf1a96183a6c0bcd2940d0c07589dec01a2e6095",
+  "validation_test_outcomes_opened": false,
+  "work_module_sha256": "2b2d8b02dc840859fdec46e3717976117069631f9144ed62dfc4ef300d0edacc"
+}

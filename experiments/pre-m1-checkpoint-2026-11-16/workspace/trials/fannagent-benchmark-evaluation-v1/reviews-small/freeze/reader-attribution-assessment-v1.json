@@ -1,0 +1,20 @@
+{
+  "M0_repeat_recommended": false,
+  "assessment_receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
+  "assessment_report_sha256": "8ac41b55b8d4d4331abd60a49dbc07e260d1429ea3558ca4cb8b1bd506a2ff0f",
+  "date": "2026-11-16",
+  "exact_serving_calls": 0,
+  "final_policy_selected": false,
+  "gates_sha256": "45cb06f553b56dc4b6efa4a317775bcf5c37a42ea43bf75846ae207a4f4156bd",
+  "job_id": "23303080",
+  "provider_calls": 0,
+  "return_archive_sha256": "09b1a5efbf3fb31434f20780f09b15e31ac975a7042e64b323cc6103612b6c02",
+  "schema": "fannagent.reader-attribution-outcome-freeze.v1",
+  "status": "verified_diagnostic_M0_complete_no_final_policy_promotion",
+  "study_binding_sha256": "b0e8c8843bb386d684c33f126c558f11e36ede3bb61d0bfb514ca7efc6927e7d",
+  "study_split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "timing_module_sha256": "80f84dbace4c2af87894179abf1a96183a6c0bcd2940d0c07589dec01a2e6095",
+  "total_attempts": 684950,
+  "validation_test_outcomes_opened": false,
+  "work_module_sha256": "2b2d8b02dc840859fdec46e3717976117069631f9144ed62dfc4ef300d0edacc"
+}

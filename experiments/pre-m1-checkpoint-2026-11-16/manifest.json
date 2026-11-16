@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-16",
+  "files": {
+    "research/fannagent-agent-protocol-revamp-2026-11-13.md": {
+      "bytes": 32771,
+      "sha256": "e87ad77feff7d14b249e84f97f6fe3ab89408c70013af3ed81bd7b0b20a504e6"
+    },
+    "research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md": {
+      "bytes": 78180,
+      "sha256": "bf1d0152e645a791c6d1edf47d52ce6452aba493a4d8aa2ecede400b717616fe"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-assessment-v1.json": {
+      "bytes": 1127,
+      "sha256": "fabd347888c34cf96d3a2650cc54ec9b9ecbf9f363723805fc6fc9f226fabdc6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-startup-fix-v1.json": {
+      "bytes": 1113,
+      "sha256": "ba9292e7dcba9bcf6e9fc920339d482a283edd98aa1f19d3844ee9a600d84df6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-v1.json": {
+      "bytes": 904,
+      "sha256": "c8e4079c62a22e22c0e831152b82c2756fd3c2e4e502e2fb20a76dd933648d73"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/split-freeze.json": {
+      "bytes": 862,
+      "sha256": "67cc8821422931c2177c04346fed210f4c7890fe23f3b626fcecd6803de962cd"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/protocol/config-unguarded-v1.json": {
+      "bytes": 6301,
+      "sha256": "6a0016a358e5b8b86cd4f0ed20f00ebd2c6ad6ecf3ec0e63fd7057f5bdc7df0e"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/protocol/study-protocol-unguarded-v1.md": {
+      "bytes": 16993,
+      "sha256": "c37dcfcf06880b168cc34d6ee3477956af1883c030990e7c552691e9cae44119"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/protocol-v2-gates-after-M0.json": {
+      "bytes": 750,
+      "sha256": "45cb06f553b56dc4b6efa4a317775bcf5c37a42ea43bf75846ae207a4f4156bd"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.json": {
+      "bytes": 20924,
+      "sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.md": {
+      "bytes": 13715,
+      "sha256": "8ac41b55b8d4d4331abd60a49dbc07e260d1429ea3558ca4cb8b1bd506a2ff0f"
+    }
+  },
+  "new_provider_calls": 0,
+  "repository_heads_before_M1": {
+    "agent": "7756b1f8df534fd872ed05eb9ef232280f4cd7b1",
+    "agent-pgvector": "09590fd1937295e69503b92dab3841124aa123c0",
+    "harness": "2fd3af8d921dbafbc3a72dd8ff46e8701c6373f7",
+    "mini-bench": "7a99e9362c85630ffb18eec136b15a8ce0882c71"
+  },
+  "schema": "fannagent.pre-M1-checkpoint.v1",
+  "scope": "Checkpoint of verified M0 outcome, current roadmap and protocol before preparing M1. No validation/test outcomes read."
+}
