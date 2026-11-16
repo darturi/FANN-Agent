@@ -1,0 +1,31 @@
+{
+  "SQL_searches": 0,
+  "artifact_sha256": {
+    "bound-evidence.json": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0",
+    "bound-gates.json": "76296d4c2ee2acd66522c3325060010feedecf84c35cdfbc4e77f2204a04e4cc",
+    "compact-summary.json": "6ff9b79965b601c6b607677648c45abfcc17e066dcc1f76223c9074714db8496",
+    "primer.md": "b8f23193e115d9af8a26177b98fae144e7bba4738d9a8cdcc4cf687da39d0108"
+  },
+  "cost_ranking_enabled": false,
+  "counts": {
+    "conditions": 7,
+    "groups": 450,
+    "missing": 0,
+    "partial_prefixes": 1496,
+    "prefixes": 9436,
+    "rows": 3150
+  },
+  "date": "2026-11-16",
+  "empirical_per_filter_work_checks": 1029,
+  "evidence_identity": "7aa94d19fef1ab153a1bac272d0b2ed82e20d034074ec9ab82f0416edc379d31",
+  "evidence_sha256": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0",
+  "external_requests": 0,
+  "model_qualification_sha256": "3ac6581d08a3556358ec267d3d8bb70cb8f3ddc2ebe1e0e8f6d617e14f73b0c5",
+  "schema": "filtered-ann.M2-evidence-binding.v1",
+  "source_sha256": {
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/evidence.py": "c57d7dc60f6d6d7617293051a130f88b143bd507270d1bbd8116b93f45f759a4",
+    "agent/experiments/m2-evidence-cost-v1/bind.py": "a8cc4690f86629ced3d22d8e8c0f5dc02f7e24df84c4de4d1d7e277b65bdeabc"
+  },
+  "status": "complete_labels_and_work_bound_cost_qualification_negative",
+  "validation_test_outcomes_opened": false
+}

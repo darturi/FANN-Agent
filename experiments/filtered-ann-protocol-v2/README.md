@@ -3,15 +3,17 @@
 This implements the local portion of [the revamp plan](../../docs/AGENT_PROTOCOL_REVAMP_V2.md).
 M0 job23303080 and [M1 job23376796](../m1-assessment-v1/REPORT.md) are verified.
 The v2 runtime and all9,436 reached-prefix labels are qualified on the original development graph.
-The empirical cost library is available; M2 surrogate qualification remains pending.
-No new model episode, validation or test has run.
+The [M2/M3 assessment](../m2-evidence-cost-v1/REPORT.md) binds complete labels and measured-prefix
+work. Both fixed latency models fail the frozen qualification limits; cost ranking stays disabled.
+M3 passes on real bound evidence through the required cost gate and abstention. No new external
+model episode, validation or test has run.
 
 | Stage | Current evidence | Remaining work |
 | --- | --- | --- |
 | M0 attribution | Job23303080 verified: counterbalanced Broad benefit with reduced work; continue advantage did not reproduce; failed23074287 retained | Complete diagnostic; no repeat or final policy promotion. Use its evidence to freeze M1 measurement design |
 | M1 runtime | Job23376796 verifies masks, partial outputs, native/legacy work bridge,781,200 timings and984,396 attempts; both native preflights pass | Complete; preserve the original export error and local ID-lookup correction; no rerun |
-| M2 evidence | All3,150 rows now have complete actual labels:7,940 full and1,496 partial; typed export and frozen folds pass | Bind compact evidence and qualify cost guidance against measured plans/context/uncertainty before enabling cost ranking |
-| M3 controller | Typed tool dispatcher, durable accounting, registry, deterministic compilation and scripted end-to-end rehearsal pass | Bind the eventual qualified cost library, approved episode and pinned provider transport/rate contract |
+| M2 evidence | Complete3,150-row/9,436-prefix/work binding;66,150 operation and1,029 measured-work checks; both declared latency models fail qualification | Preserve negative results and disabled ranking; revise the prospective cost/shortlist contract before M4 |
+| M3 controller | All46 tests, actual-bound negative-cost/abstention rehearsal and separate positive fixture pass | A positive actual-data cost-ranked episode still needs a supported selection contract and concrete provider authorization |
 | M4–M6 | No requests or protected evaluation run | Follow the gates in the plan; retain negative/inconclusive outcomes |
 
 ## What is implemented
@@ -37,8 +39,10 @@ recall from its count. This initial builder is preserved separately from the com
 M1's [assessor/exporter](../m1-assessment-v1/assess.py) adds the actual partial labels:2,313 cases
 have some raw-native-relative recall-preserving reached prefix, versus1,964 using full prefixes
 alone. These are oracle diagnostics, not executable policies or measured speedups. Both bundles
-remain explicitly cost unqualified. The component estimator is a development surrogate interface;
-M2 must validate its cost assumptions against the measured plan/context evidence before use.
+remain explicitly cost unqualified. M2 binds the complete export and evaluator-only prefix work.
+The fixed additive and ridge hypotheses failed their prospective limits. Their signed
+coefficients/errors and measured plan facts remain available; no unsupported surrogate ranks
+programs. Added partial/preserving/zero/lossy categories and work feedback remain bounded tools.
 
 `fannproto/controller.py` reuses the general agent's `Store` and `Budget`. Its five native tools
 inspect development, explain bounded cases, evaluate programs, compare registered candidates
@@ -103,9 +107,16 @@ final policy promotion. Native anchors differ across blocks, so their costs must
 The packaged export failed on zero-padded IDs after writing the cost library; its original log is
 preserved and a separate local normalized fold lookup passes typed evidence/fold validation.
 
-Next is local M2 evidence/cost-guidance qualification, then M3 rehearsal. No further Torch job is
-needed now. The empirical library does not automatically qualify an additive estimator. All six
-filters remain; exact search is offline scoring only; new provider generation remains gated.
+The [M2/M3 assessment](../m2-evidence-cost-v1/REPORT.md) is complete: all labels/work are bound,
+but neither fixed latency model qualifies. The additive proxy is a near miss (Broad votes527
+error2.024 points, CPU13 error2.232 points versus the declared2-point limit); the ridge proxy also
+fails primary error checks. Limits are not relaxed. M3 verifies nine tools/six scripted submissions,
+bounded counterexamples/work, quotas, resume, pre-transport blocking and explicit abstention with
+the real binding; the separate positive fixture never becomes actual-data qualification.
+
+Next is a prospective uncertainty-aware or work-based shortlist revision, then its qualification/
+rehearsal before M4. No further Torch job is needed now. All six filters remain; exact search is
+offline scoring only; validation/test remain unopened and new provider generation is gated.
 
 Compact local receipts and external-artifact hashes are in `receipts/`. Generated engines,
 binaries, full evidence, SQLite trajectories and logs remain under the study's workspace paths.

@@ -4,7 +4,7 @@
     "generation_gates": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/protocol-v2-gates-after-M0.json",
     "job_id": "23303080",
     "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-assessment-v1.json",
-    "proceed_next": "M1 complete; local M2 cost-guidance qualification and bound M3 rehearsal before new generation",
+    "proceed_next": "M2/M3 complete with negative cost qualification; prospective selection-contract revision before M4",
     "receipt": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.json",
     "receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
     "repeat_M0": false
@@ -57,6 +57,20 @@
     },
     "wall_hours": 8
   },
+  "M2_M3_assessment": {
+    "bound_M3": "passed_negative_cost_gate_and_abstention",
+    "cost_ranking_enabled": false,
+    "evidence_identity": "7aa94d19fef1ab153a1bac272d0b2ed82e20d034074ec9ab82f0416edc379d31",
+    "generation_gates": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/protocol-v2-gates-after-M2-M3.json",
+    "local_tests_passed": 46,
+    "model_qualification": "both_predeclared_models_failed",
+    "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/protocol-v2-M2-M3-v1.json",
+    "provider_requests": 0,
+    "receipt": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/protocol-v2-M2-M3-2026-11-16.json",
+    "receipt_sha256": "2c82f1176a6051b64056c0b7318f50d8afd22f9d4a1b1c579fee255bb2719791",
+    "status": "complete_evidence_binding_negative_cost_qualification_bound_M3_passed",
+    "validation_test_outcomes_opened": false
+  },
   "Torch_submissions_by_Codex": 0,
   "date": "2026-11-16",
   "plan_commit": "8937e9e",
@@ -64,20 +78,20 @@
   "receipt": "experiments/filtered-ann-protocol-v2/receipts/local-implementation-2026-11-14.json",
   "receipt_sha256": "f0ec9061539e25affc7bb34aab8d23df3a2eef0a7b70c912644cc47a92b95c87",
   "roadmap_update": {
-    "sha256": "22b943d843cf9b438195ae557bcdeb761f0abe3e1f32e5192b42af3a0c30f8e1",
-    "tracked_delta": "docs/plans/agent-protocol-v2-M1-assessment-roadmap-update.md",
+    "sha256": "49237ce66243b8591124225ab06424ad9fb78a64c1777d7950aa789815a26e82",
+    "tracked_delta": "docs/plans/agent-protocol-v2-M2-M3-roadmap-update.md",
     "workspace_path": "research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md"
   },
   "schema": "fannagent.protocol-v2-execution-status.v1",
   "stages": {
     "M0": "job23303080_verified_current_role_work_attribution_resolved_one_allocation_not_final_performance",
     "M1": "job23376796_original_graph_runtime_labels_and_empirical_cost_library_verified",
-    "M2": "complete9436_actual_labels_available_pending_cost_guidance_qualification_and_binding",
-    "M3": "local_scripted_rehearsal_passed_repeat_with_M2_bound_evidence_before_generation",
-    "M4": "not_run_requires_qualified_evidence_and_new_provider_authorization",
+    "M2": "complete_evidence_and_work_bound_two_cost_models_failed_qualification",
+    "M3": "passed_actual_bound_negative_cost_gate_and_abstention_46_tests_positive_fixture_separate",
+    "M4": "blocked_by_negative_cost_qualification_requires_new_selection_contract_and_provider_authorization",
     "M5": "not_run",
     "M6": "not_run_protected_outcomes_unopened"
   },
-  "status": "M1_verified_pending_local_M2_cost_guidance_and_bound_M3_rehearsal",
+  "status": "M2_M3_complete_cost_ranking_disabled_generation_gated",
   "validation_test_outcomes_opened": false
 }

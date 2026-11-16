@@ -1,0 +1,20 @@
+{
+  "M1_aggregate_results_already_known": true,
+  "date": "2026-11-16",
+  "external_requests": 0,
+  "inputs": {
+    "agent/experiments/m2-evidence-cost-v1/PLAN.md": "c15b4135eeafd5361ad96f82f216187d60a578a17ed12d78c33e50643e28c24b",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/m1-assessment-v1.json": "7e2f4a2fb312b5d74ac5fe566db9da62e87b8d9ef20d132178a90c6db8550e27",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2/compiled-programs.json": "7b386b983e03abd46908a87abe48ffde53eb4a7db133c1217475015e65a5b150",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/m1-assessment-23376796.json": "40cf8fcf245a8bc2a337a88aa8b2eadfcf26f1d8a3887ce2df05c097e845bee5",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/development-prefix-evidence.json": "b084a6af0f80534b10e8f67ce5e3d5c05b926a5859991ae63008f2b7766edb28",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/job-23376796/results/serving-cost-library.json": "fcf73ff5a75f8c7ce9269bf302976ea670d08e4466ab4af94f914dbe4c75ed65"
+  },
+  "models": [
+    "signed_additive",
+    "ridge_work_observation"
+  ],
+  "protected_outcomes_opened": false,
+  "schema": "filtered-ann.M2-plan-freeze.v1",
+  "status": "fixed_before_M2_model_fitting"
+}

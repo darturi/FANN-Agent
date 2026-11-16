@@ -1,0 +1,81 @@
+{
+  "SQL_searches": 0,
+  "actual_api_spend_usd": "0",
+  "artifacts": {
+    "actual-bound-campaign/state.sqlite3": "b904425eca679d93c90366cdfe0e222dcc61aed4733f17f496599d98450c2aac",
+    "actual-bound-campaign/workspace/artifacts/0144b948878cf77b0fddaa8eb8298a6ad4af643ce23860ca0c44dfc01ed8061d.json": "0144b948878cf77b0fddaa8eb8298a6ad4af643ce23860ca0c44dfc01ed8061d",
+    "actual-bound-campaign/workspace/artifacts/109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32.json": "109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32",
+    "actual-bound-campaign/workspace/artifacts/1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0.json": "1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0",
+    "actual-bound-campaign/workspace/artifacts/2647f8a0264b638c638fd56b2c987ddf8abeb9ce5542c141a85b044e72ea0d89.json": "2647f8a0264b638c638fd56b2c987ddf8abeb9ce5542c141a85b044e72ea0d89",
+    "actual-bound-campaign/workspace/artifacts/3e0bf7a814d1de45280a61af4d6577bb469bccb307e3864fa629b3449b57b8e6.json": "3e0bf7a814d1de45280a61af4d6577bb469bccb307e3864fa629b3449b57b8e6",
+    "actual-bound-campaign/workspace/artifacts/4a828d01533eb99ee8520f412f0f023fe92d3bf581c9df6b118a296c0c34f5c3.json": "4a828d01533eb99ee8520f412f0f023fe92d3bf581c9df6b118a296c0c34f5c3",
+    "actual-bound-campaign/workspace/artifacts/50a0b09d110b97a0076cb24dc0c24e8f38e230823c858afc70ff55d06dba8fb3.json": "50a0b09d110b97a0076cb24dc0c24e8f38e230823c858afc70ff55d06dba8fb3",
+    "actual-bound-campaign/workspace/artifacts/59b5c594afb5438260d215fd496cacd43e227f96dcb7dfb567b8667c43feda4b.json": "59b5c594afb5438260d215fd496cacd43e227f96dcb7dfb567b8667c43feda4b",
+    "actual-bound-campaign/workspace/artifacts/5f58eb6b8259163b670cd28d0a5f9f4138392666f4de98c08d8c41a76585aa32.json": "5f58eb6b8259163b670cd28d0a5f9f4138392666f4de98c08d8c41a76585aa32",
+    "actual-bound-campaign/workspace/artifacts/62442f93b478f48cbef158ad01f8d0aa1c6d432f169c843494651cd2b3f94819.json": "62442f93b478f48cbef158ad01f8d0aa1c6d432f169c843494651cd2b3f94819",
+    "actual-bound-campaign/workspace/artifacts/a5f63b2438f8fb7a700b73b9ccff1aeece78abe91224effb6d381feedd6ac38d.json": "a5f63b2438f8fb7a700b73b9ccff1aeece78abe91224effb6d381feedd6ac38d",
+    "actual-bound-campaign/workspace/artifacts/b6584335c7789e14f037919a718d007d8b29d9e1683e6c8351a7243e4e38c208.json": "b6584335c7789e14f037919a718d007d8b29d9e1683e6c8351a7243e4e38c208",
+    "actual-bound-campaign/workspace/artifacts/c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493.json": "c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493",
+    "actual-bound-campaign/workspace/artifacts/c84124fe16e8025b9ad599e7266b086dc110a4d0dee05feb947614060476cf2f.json": "c84124fe16e8025b9ad599e7266b086dc110a4d0dee05feb947614060476cf2f",
+    "actual-bound-campaign/workspace/artifacts/cc5cb9c4f07cc83330bab4c0170c043dbce71300e2043aa2508cd58ff36c5d15.json": "cc5cb9c4f07cc83330bab4c0170c043dbce71300e2043aa2508cd58ff36c5d15",
+    "actual-bound-campaign/workspace/artifacts/cfea9cc415eb084abf5ed8ce33daa23410c7caf6aeabd9dc93fc31bf6cbac816.json": "cfea9cc415eb084abf5ed8ce33daa23410c7caf6aeabd9dc93fc31bf6cbac816",
+    "actual-bound-campaign/workspace/artifacts/d102caced36063367a7fa820b8448f165f1d5aedfe7bf4386c20376f183a9f3d.json": "d102caced36063367a7fa820b8448f165f1d5aedfe7bf4386c20376f183a9f3d",
+    "actual-bound-campaign/workspace/artifacts/e9c10353b52693c6c69f577a3512d64891d6a33807125f8804a454f8055025e6.json": "e9c10353b52693c6c69f577a3512d64891d6a33807125f8804a454f8055025e6",
+    "actual-bound-cap-scenario/state.sqlite3": "b2b3a011a809c13ef81c22c193c0fe998e9e2b786210938dffc3e17c1c494124",
+    "actual-bound-cap-scenario/workspace/artifacts/c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493.json": "c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493"
+  },
+  "binding_receipt_sha256": "a938dec2a7c45189a821e16393f35541e151394b19fb11c9e76c91fdeb6c71af",
+  "blocked_reason": "M2 cost models failed qualification; ranking and generation blocked",
+  "checks": [
+    "all_seven_conditions",
+    "complete_partial_zero_and_preserving_examples",
+    "exact_full_precision_quality_replay",
+    "bounded_counterexamples",
+    "compiled_artifact_and_work_feedback",
+    "invalid_duplicate_slots",
+    "idempotent_delivery",
+    "no_unknown_SQL_capability",
+    "contract_preserving_resume",
+    "tampered_resume_rejected",
+    "cost_gate_before_transport_and_budget",
+    "empty_cost_shortlist",
+    "explicit_abstention_and_terminal",
+    "real_bound_tool_quota"
+  ],
+  "cost_ranking_enabled": false,
+  "evidence_identity": "7aa94d19fef1ab153a1bac272d0b2ed82e20d034074ec9ab82f0416edc379d31",
+  "evidence_sha256": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0",
+  "external_provider_requests": 0,
+  "gates_sha256": "76296d4c2ee2acd66522c3325060010feedecf84c35cdfbc4e77f2204a04e4cc",
+  "generation_ready": false,
+  "main_campaign": {
+    "candidate_submissions_including_invalid_duplicate": 6,
+    "finalists": [],
+    "model_transport_invocations": 0,
+    "quality_loss_examples": [
+      200,
+      43
+    ],
+    "terminal": "explicit_abstention",
+    "tools": 9
+  },
+  "positive_fixture_tests_separate": true,
+  "schema": "filtered-ann.M3-bound-evidence-rehearsal.v1",
+  "separate_bound_tool_cap_scenario": {
+    "overflow_rejected": true,
+    "tools": 12
+  },
+  "source_sha256": {
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/__init__.py": "917029f714d25b317bc72ca48fbf91f925c18a5cd59e5cd550fb66a9dc437bd7",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/compiler.py": "197dcdbd41f22ac2d6c2a81ad4c7aa5d7204cae0e6f0a5b2f8687577c4f7f8dc",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/controller.py": "6a07139cd378d10cd514baf3ec052e9e0871a142a0eb215279d6f7192b4e8e0e",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/costmodel.py": "1bd83b795fe01829a4943326533db220fd5d8e503c22782b90d830c1a132d450",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/evidence.py": "c57d7dc60f6d6d7617293051a130f88b143bd507270d1bbd8116b93f45f759a4",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/policy.py": "d1997e4b7ca74bf58907d0ba0f05105a35d1190d26a57ef63a0540cfc7058d78",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/rehearsal.py": "82e5c737135dd4d7e408242c88319289c6790d24084ef85ec0d24b1f8fdc113b",
+    "agent/experiments/filtered-ann-protocol-v2/fannproto/toolspec.py": "f835d38e0138d5da14b67b9e9b1f35b457b24083a6ca7055b7cd11f345bfc9af",
+    "agent/experiments/m2-evidence-cost-v1/rehearse_bound.py": "4987051e6df4bf626af6bd874ffb63d1c152764e2e6ea63a299c1b79d461560e"
+  },
+  "status": "passed_actual_bound_evidence_negative_cost_gate_and_abstention",
+  "validation_test_outcomes_opened": false
+}

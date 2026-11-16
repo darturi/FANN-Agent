@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+from copy import deepcopy
 from decimal import Decimal
 
 from fannagent.budget import Budget
@@ -54,6 +55,8 @@ def generation_ready(evidence, gates):
         or gates["M1"].get("runtime_profile") != PROFILE.fingerprint
     ):
         raise ProtocolError("M1 original-graph v2 runtime qualification is pending")
+    if evidence.bundle.get("cost_status") == "unqualified_M2_models_failed":
+        raise ProtocolError("M2 cost models failed qualification; ranking and generation blocked")
     if (
         evidence.bundle.get("cost_status") != "qualified"
         or gates.get("M2", {}).get("evidence_hash") != evidence.identity
@@ -130,6 +133,10 @@ class Campaign:
                 if arguments:
                     raise ProtocolError("inspect takes no arguments")
                 answer = self.evidence.summary()
+                if "development_prefix_summary" in self.evidence.bundle:
+                    answer["prefix_opportunity"] = deepcopy(
+                        self.evidence.bundle["development_prefix_summary"]
+                    )
             elif operation == "explain_cases":
                 if set(arguments) != {"category", "filter", "limit"}:
                     raise ProtocolError("category/filter/limit required")
@@ -170,6 +177,7 @@ class Campaign:
                             "observation_plan": observation_plan(p),
                             "evaluation": evaluation,
                             "cost_estimate": self.evidence.estimate(p),
+                            "work_estimate": self.evidence.work_estimate(p),
                             "compiled_artifact": compiled,
                         }
                     except (ValueError, TypeError, KeyError, OverflowError) as error:

@@ -1,0 +1,42 @@
+{
+  "M0": {
+    "job_id": "23303080",
+    "limits": "Current diagnostic shows counterbalanced reader/CPU/cycle-consistent Broad improvement with reduced work, and no native/continue graph-count mismatch. It does not uniquely identify the earlier allocation control anomaly or establish cross-allocation generalization.",
+    "receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
+    "status": "verified_attribution_resolved"
+  },
+  "M1": {
+    "export_correction": "local fold-lookup padding normalization; original sealed script/error preserved; typed evidence passes",
+    "job_id": "23376796",
+    "outcome_freeze_sha256": "7e2f4a2fb312b5d74ac5fe566db9da62e87b8d9ef20d132178a90c6db8550e27",
+    "receipt_sha256": "40cf8fcf245a8bc2a337a88aa8b2eadfcf26f1d8a3887ce2df05c097e845bee5",
+    "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+    "status": "verified_original_graph",
+    "upstream_status": "verified_original_graph_runtime_partial_prefix_labels_and_empirical_serving_cost_library"
+  },
+  "M2": {
+    "cost_ranking_enabled": false,
+    "evidence_hash": "7aa94d19fef1ab153a1bac272d0b2ed82e20d034074ec9ab82f0416edc379d31",
+    "model_qualification_sha256": "3ac6581d08a3556358ec267d3d8bb70cb8f3ddc2ebe1e0e8f6d617e14f73b0c5",
+    "partial_prefix_labels": 1496,
+    "prefix_labels": 9436,
+    "receipt_sha256": "2c82f1176a6051b64056c0b7318f50d8afd22f9d4a1b1c579fee255bb2719791",
+    "status": "complete_evidence_bound_cost_model_qualification_failed"
+  },
+  "M3": {
+    "evidence_hash": "7aa94d19fef1ab153a1bac272d0b2ed82e20d034074ec9ab82f0416edc379d31",
+    "positive_bound_generation_ready": false,
+    "receipt_sha256": "2f6569a11f5020a5f079b8e52f6debf231c5d521cee4ad2ddaabac2a79a61cb8",
+    "status": "passed_bound_evidence_negative_cost_path"
+  },
+  "date": "2026-11-16",
+  "generation_blocked_by": [
+    "No M2 cost model met the frozen qualification limits",
+    "New concrete provider episode not authorized"
+  ],
+  "outcome_freeze_sha256": "dfd1a5ab9c69a8b1b613a985c3467bd2871be7f67016aa7b1e3e25e6f7a21375",
+  "provider_authorization": "new episode not authorized or started",
+  "provider_calls": 0,
+  "schema": "filtered-ann-generation-gates.v2",
+  "validation_test_outcomes_opened": false
+}

@@ -1,0 +1,36 @@
+{
+  "actual_api_spend_usd": "0",
+  "artifacts": {
+    "scripted-campaign/private/artifacts/01367440e63d20c1ea03d4e0317ecc57ee37c5eed66adb7472914c2f492ebb92.json": "01367440e63d20c1ea03d4e0317ecc57ee37c5eed66adb7472914c2f492ebb92",
+    "scripted-campaign/private/artifacts/25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9.json": "25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9",
+    "scripted-campaign/private/artifacts/25f24daa21faca2985aebcc347c5961140b16a63b314ccf9dc67b9518bc6c51d.json": "25f24daa21faca2985aebcc347c5961140b16a63b314ccf9dc67b9518bc6c51d",
+    "scripted-campaign/private/artifacts/3ca02b5a4f72f7e1c190cc827f0648d6b703bfa446925e6e82e363be4efbac1c.json": "3ca02b5a4f72f7e1c190cc827f0648d6b703bfa446925e6e82e363be4efbac1c",
+    "scripted-campaign/private/artifacts/51515cef20050dbc524ee537737c32e96a0fbceafdab23ddc98ed0ea4ca86daa.json": "51515cef20050dbc524ee537737c32e96a0fbceafdab23ddc98ed0ea4ca86daa",
+    "scripted-campaign/private/artifacts/5b140b67d32d1aa150ce37709faa65f4f38b0c0263160a72530ece71ca1f9ae6.json": "5b140b67d32d1aa150ce37709faa65f4f38b0c0263160a72530ece71ca1f9ae6",
+    "scripted-campaign/private/artifacts/a3d5cf312e84a02c455419ea0e5a435aa6bb6bf523c70ec837f2629827c30b3b.json": "a3d5cf312e84a02c455419ea0e5a435aa6bb6bf523c70ec837f2629827c30b3b",
+    "scripted-campaign/private/artifacts/b3d5d1997d0d4a6cd64fecce8d647dc55eb7b33cbc47150d72939bea0457bc8e.json": "b3d5d1997d0d4a6cd64fecce8d647dc55eb7b33cbc47150d72939bea0457bc8e",
+    "scripted-campaign/private/artifacts/dbd4d89fd4c40da4bd1036eeba5c27aa8b3e3a9bc12f5abc5fe71798b13149aa.json": "dbd4d89fd4c40da4bd1036eeba5c27aa8b3e3a9bc12f5abc5fe71798b13149aa",
+    "scripted-campaign/state.sqlite3": "c56b0b317b1c3813f2b02fb81c82883d7a58c9e2fbd0a4ccf08eabd1fcccdc9f",
+    "scripted-campaign/workspace/artifacts/1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0.json": "1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0",
+    "scripted-campaign/workspace/artifacts/94ae0a8033471a57e3ee577409b3a4a3a20def37961bd68fb7932b0d3dc84650.json": "94ae0a8033471a57e3ee577409b3a4a3a20def37961bd68fb7932b0d3dc84650",
+    "scripted-campaign/workspace/artifacts/bcb5721cca6bb9443fc385acd0ade7f4b1823701630adf3706d47e284c67a8c7.json": "bcb5721cca6bb9443fc385acd0ade7f4b1823701630adf3706d47e284c67a8c7",
+    "scripted-campaign/workspace/artifacts/d488912f81835478814788c01b13f86641e892db90477cf1a51e3fcb7ed7b7eb.json": "d488912f81835478814788c01b13f86641e892db90477cf1a51e3fcb7ed7b7eb",
+    "scripted-campaign/workspace/artifacts/d6ee0979441cda5945343a2052d1b6016f21a58201db8977aa76da0bc7f0b9f1.json": "d6ee0979441cda5945343a2052d1b6016f21a58201db8977aa76da0bc7f0b9f1",
+    "scripted-campaign/workspace/artifacts/e2d933631c5653dc5e613824043fafea51c4bdf8b14b13da2ae45ea577b4ae1f.json": "e2d933631c5653dc5e613824043fafea51c4bdf8b14b13da2ae45ea577b4ae1f"
+  },
+  "candidate_submissions_including_invalid_duplicate": 3,
+  "external_provider_requests": 0,
+  "finalists": [
+    "candidate-1"
+  ],
+  "fixture_evidence_hash": "489c3dbef6e89da28cac89d9ed287ce25b900b1cef4c46cb3a32ede24de40b4f",
+  "holdout_access": false,
+  "limits": "Synthetic labels, costs and rate card. No study performance or qualification.",
+  "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+  "schema": "filtered-ann-controller-rehearsal.v2",
+  "scripted_response_count": 3,
+  "status": "passed_scripted_only",
+  "synthetic_accounting_usd": "0.0009",
+  "terminal": "finalists_frozen_pending_live_measurement",
+  "tools": 3
+}

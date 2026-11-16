@@ -1,0 +1,284 @@
+{
+  "M2_cost_model_qualification": "both_predeclared_models_failed_no_ranking",
+  "M2_evidence": "complete_original_graph_labels_and_prefix_work_bound",
+  "M3": "passed_real_bound_negative_cost_gate_and_abstention_positive_fixture_separate",
+  "SQL_searches": 0,
+  "actual_API_spend_usd": "0",
+  "artifacts": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound.log": {
+      "bytes": 1693,
+      "sha256": "84d265f13908a916e43f761518dd929ffd5908ca52d33d1418999fabb6905839"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/state.sqlite3": {
+      "bytes": 36864,
+      "sha256": "b904425eca679d93c90366cdfe0e222dcc61aed4733f17f496599d98450c2aac"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/0144b948878cf77b0fddaa8eb8298a6ad4af643ce23860ca0c44dfc01ed8061d.json": {
+      "bytes": 5900,
+      "sha256": "0144b948878cf77b0fddaa8eb8298a6ad4af643ce23860ca0c44dfc01ed8061d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32.json": {
+      "bytes": 6916,
+      "sha256": "109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0.json": {
+      "bytes": 56,
+      "sha256": "1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/2647f8a0264b638c638fd56b2c987ddf8abeb9ce5542c141a85b044e72ea0d89.json": {
+      "bytes": 1600,
+      "sha256": "2647f8a0264b638c638fd56b2c987ddf8abeb9ce5542c141a85b044e72ea0d89"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/3e0bf7a814d1de45280a61af4d6577bb469bccb307e3864fa629b3449b57b8e6.json": {
+      "bytes": 1598,
+      "sha256": "3e0bf7a814d1de45280a61af4d6577bb469bccb307e3864fa629b3449b57b8e6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/4a828d01533eb99ee8520f412f0f023fe92d3bf581c9df6b118a296c0c34f5c3.json": {
+      "bytes": 17909,
+      "sha256": "4a828d01533eb99ee8520f412f0f023fe92d3bf581c9df6b118a296c0c34f5c3"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/50a0b09d110b97a0076cb24dc0c24e8f38e230823c858afc70ff55d06dba8fb3.json": {
+      "bytes": 126,
+      "sha256": "50a0b09d110b97a0076cb24dc0c24e8f38e230823c858afc70ff55d06dba8fb3"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/59b5c594afb5438260d215fd496cacd43e227f96dcb7dfb567b8667c43feda4b.json": {
+      "bytes": 3793,
+      "sha256": "59b5c594afb5438260d215fd496cacd43e227f96dcb7dfb567b8667c43feda4b"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/5f58eb6b8259163b670cd28d0a5f9f4138392666f4de98c08d8c41a76585aa32.json": {
+      "bytes": 1598,
+      "sha256": "5f58eb6b8259163b670cd28d0a5f9f4138392666f4de98c08d8c41a76585aa32"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/62442f93b478f48cbef158ad01f8d0aa1c6d432f169c843494651cd2b3f94819.json": {
+      "bytes": 16643,
+      "sha256": "62442f93b478f48cbef158ad01f8d0aa1c6d432f169c843494651cd2b3f94819"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/a5f63b2438f8fb7a700b73b9ccff1aeece78abe91224effb6d381feedd6ac38d.json": {
+      "bytes": 4021,
+      "sha256": "a5f63b2438f8fb7a700b73b9ccff1aeece78abe91224effb6d381feedd6ac38d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/b6584335c7789e14f037919a718d007d8b29d9e1683e6c8351a7243e4e38c208.json": {
+      "bytes": 6050,
+      "sha256": "b6584335c7789e14f037919a718d007d8b29d9e1683e6c8351a7243e4e38c208"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493.json": {
+      "bytes": 12897,
+      "sha256": "c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/c84124fe16e8025b9ad599e7266b086dc110a4d0dee05feb947614060476cf2f.json": {
+      "bytes": 3999,
+      "sha256": "c84124fe16e8025b9ad599e7266b086dc110a4d0dee05feb947614060476cf2f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/cc5cb9c4f07cc83330bab4c0170c043dbce71300e2043aa2508cd58ff36c5d15.json": {
+      "bytes": 76,
+      "sha256": "cc5cb9c4f07cc83330bab4c0170c043dbce71300e2043aa2508cd58ff36c5d15"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/cfea9cc415eb084abf5ed8ce33daa23410c7caf6aeabd9dc93fc31bf6cbac816.json": {
+      "bytes": 11281,
+      "sha256": "cfea9cc415eb084abf5ed8ce33daa23410c7caf6aeabd9dc93fc31bf6cbac816"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/d102caced36063367a7fa820b8448f165f1d5aedfe7bf4386c20376f183a9f3d.json": {
+      "bytes": 6766,
+      "sha256": "d102caced36063367a7fa820b8448f165f1d5aedfe7bf4386c20376f183a9f3d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/workspace/artifacts/e9c10353b52693c6c69f577a3512d64891d6a33807125f8804a454f8055025e6.json": {
+      "bytes": 5182,
+      "sha256": "e9c10353b52693c6c69f577a3512d64891d6a33807125f8804a454f8055025e6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-cap-scenario/state.sqlite3": {
+      "bytes": 36864,
+      "sha256": "b2b3a011a809c13ef81c22c193c0fe998e9e2b786210938dffc3e17c1c494124"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-cap-scenario/workspace/artifacts/c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493.json": {
+      "bytes": 12897,
+      "sha256": "c4913617df329abbe404f4ce2eeaf76b81335717dec19ea84f5dba46990da493"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/receipt.json": {
+      "bytes": 6775,
+      "sha256": "2f6569a11f5020a5f079b8e52f6debf231c5d521cee4ad2ddaabac2a79a61cb8"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture.log": {
+      "bytes": 704,
+      "sha256": "b213909771cc24cac8ccdbd490c6d5ffb838196dcbd3c0f0531ac6ee7b0f90c7"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/receipt.json": {
+      "bytes": 3559,
+      "sha256": "7d466ef9c3887a96718d8abf1f24b8c240a793b915beac2afe1340a40cb516ad"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/01367440e63d20c1ea03d4e0317ecc57ee37c5eed66adb7472914c2f492ebb92.json": {
+      "bytes": 4499,
+      "sha256": "01367440e63d20c1ea03d4e0317ecc57ee37c5eed66adb7472914c2f492ebb92"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9.json": {
+      "bytes": 152,
+      "sha256": "25b3e9464e87498ffb57117eef1a59f9f0df5cfb3b2c72356579b3622c7dfca9"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/25f24daa21faca2985aebcc347c5961140b16a63b314ccf9dc67b9518bc6c51d.json": {
+      "bytes": 1415,
+      "sha256": "25f24daa21faca2985aebcc347c5961140b16a63b314ccf9dc67b9518bc6c51d"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/3ca02b5a4f72f7e1c190cc827f0648d6b703bfa446925e6e82e363be4efbac1c.json": {
+      "bytes": 9972,
+      "sha256": "3ca02b5a4f72f7e1c190cc827f0648d6b703bfa446925e6e82e363be4efbac1c"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/51515cef20050dbc524ee537737c32e96a0fbceafdab23ddc98ed0ea4ca86daa.json": {
+      "bytes": 179,
+      "sha256": "51515cef20050dbc524ee537737c32e96a0fbceafdab23ddc98ed0ea4ca86daa"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/5b140b67d32d1aa150ce37709faa65f4f38b0c0263160a72530ece71ca1f9ae6.json": {
+      "bytes": 4869,
+      "sha256": "5b140b67d32d1aa150ce37709faa65f4f38b0c0263160a72530ece71ca1f9ae6"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/a3d5cf312e84a02c455419ea0e5a435aa6bb6bf523c70ec837f2629827c30b3b.json": {
+      "bytes": 4862,
+      "sha256": "a3d5cf312e84a02c455419ea0e5a435aa6bb6bf523c70ec837f2629827c30b3b"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/b3d5d1997d0d4a6cd64fecce8d647dc55eb7b33cbc47150d72939bea0457bc8e.json": {
+      "bytes": 143,
+      "sha256": "b3d5d1997d0d4a6cd64fecce8d647dc55eb7b33cbc47150d72939bea0457bc8e"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/private/artifacts/dbd4d89fd4c40da4bd1036eeba5c27aa8b3e3a9bc12f5abc5fe71798b13149aa.json": {
+      "bytes": 16767,
+      "sha256": "dbd4d89fd4c40da4bd1036eeba5c27aa8b3e3a9bc12f5abc5fe71798b13149aa"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/state.sqlite3": {
+      "bytes": 49152,
+      "sha256": "c56b0b317b1c3813f2b02fb81c82883d7a58c9e2fbd0a4ccf08eabd1fcccdc9f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/workspace/artifacts/1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0.json": {
+      "bytes": 56,
+      "sha256": "1255e3d90b52ee0f77f5c4915dfd973d71d8fd000c652f02ee8c4119ee88d2b0"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/workspace/artifacts/94ae0a8033471a57e3ee577409b3a4a3a20def37961bd68fb7932b0d3dc84650.json": {
+      "bytes": 5162,
+      "sha256": "94ae0a8033471a57e3ee577409b3a4a3a20def37961bd68fb7932b0d3dc84650"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/workspace/artifacts/bcb5721cca6bb9443fc385acd0ade7f4b1823701630adf3706d47e284c67a8c7.json": {
+      "bytes": 118,
+      "sha256": "bcb5721cca6bb9443fc385acd0ade7f4b1823701630adf3706d47e284c67a8c7"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/workspace/artifacts/d488912f81835478814788c01b13f86641e892db90477cf1a51e3fcb7ed7b7eb.json": {
+      "bytes": 4747,
+      "sha256": "d488912f81835478814788c01b13f86641e892db90477cf1a51e3fcb7ed7b7eb"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/workspace/artifacts/d6ee0979441cda5945343a2052d1b6016f21a58201db8977aa76da0bc7f0b9f1.json": {
+      "bytes": 4753,
+      "sha256": "d6ee0979441cda5945343a2052d1b6016f21a58201db8977aa76da0bc7f0b9f1"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/workspace/artifacts/e2d933631c5653dc5e613824043fafea51c4bdf8b14b13da2ae45ea577b4ae1f.json": {
+      "bytes": 2908,
+      "sha256": "e2d933631c5653dc5e613824043fafea51c4bdf8b14b13da2ae45ea577b4ae1f"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/binding-receipt.json": {
+      "bytes": 1427,
+      "sha256": "a938dec2a7c45189a821e16393f35541e151394b19fb11c9e76c91fdeb6c71af"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/binding.log": {
+      "bytes": 1427,
+      "sha256": "7b412c4f0a5112b43df5d0415ec86ec46a5367206dfa77967726a616a7ae38be"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/bound-evidence.json": {
+      "bytes": 6724538,
+      "sha256": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/bound-gates.json": {
+      "bytes": 1784,
+      "sha256": "76296d4c2ee2acd66522c3325060010feedecf84c35cdfbc4e77f2204a04e4cc"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/compact-summary.json": {
+      "bytes": 19743,
+      "sha256": "6ff9b79965b601c6b607677648c45abfcc17e066dcc1f76223c9074714db8496"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/evaluator-cost-inputs.json": {
+      "bytes": 1922252,
+      "sha256": "56eb36a0c4c38bc130765337244ef4d192fefb3cc8e049bb7b39b25554a30f70"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/local-tests.log": {
+      "bytes": 99,
+      "sha256": "85002cac33b156395a3988facb1b8f9567992ff6e2a58f65dd860640bf610993"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/local-tests.xml": {
+      "bytes": 7938,
+      "sha256": "b5d598351075641f667be9b10b5ddd84478e840d679160dfc5d9bb9c796df339"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/model-qualification.json": {
+      "bytes": 57146,
+      "sha256": "3ac6581d08a3556358ec267d3d8bb70cb8f3ddc2ebe1e0e8f6d617e14f73b0c5"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/primer.md": {
+      "bytes": 1593,
+      "sha256": "b8f23193e115d9af8a26177b98fae144e7bba4738d9a8cdcc4cf687da39d0108"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/prospective-plan.json": {
+      "bytes": 1326,
+      "sha256": "42e676987410b683d6961d534f57ec289582cfe98ad3226b34f72fff202c95c5"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/qualification.log": {
+      "bytes": 2513,
+      "sha256": "9a6ffc3f22ad4f2072b5e2bdd86f29ab259423fe1f86f92b8c22624ee57273af"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/ridge_work_observation-predictions.npz": {
+      "bytes": 16071,
+      "sha256": "5a3ee41c50031dc4ae4899caba808da5b00fc814dea5a6d7573e24dbff30e442"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/signed_additive-predictions.npz": {
+      "bytes": 16065,
+      "sha256": "99087b6c4c5e72e57873535a4b748b83e2e0ae8e7461e2d3fe762ccf4bbf4b2b"
+    }
+  },
+  "automatic_Torch_submission": false,
+  "cost_ranking_enabled": false,
+  "counts": {
+    "conditions": 7,
+    "groups": 450,
+    "missing": 0,
+    "partial_prefixes": 1496,
+    "prefixes": 9436,
+    "rows": 3150
+  },
+  "date": "2026-11-16",
+  "empirical_work_mean_checks": 1029,
+  "evidence_identity": "7aa94d19fef1ab153a1bac272d0b2ed82e20d034074ec9ab82f0416edc379d31",
+  "evidence_sha256": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0",
+  "exact_serving_calls": 0,
+  "feature_arithmetic_checks": 66150,
+  "fixture_accounting_only_usd": "0.0009",
+  "fixture_response_count": 3,
+  "generation_ready": false,
+  "local_tests_passed": 46,
+  "new_agent_discoveries": 0,
+  "outcome_limits": [
+    "M1 aggregate evidence already known before M2 plan.",
+    "All folds and base-probe costs exposed; complete target programs excluded from fitting.",
+    "Additive near miss retained without relaxing limits; no third model fitted.",
+    "M3 actual-data negative path passes; positive bound cost-ranked episode remains unqualified."
+  ],
+  "provider_requests": 0,
+  "real_bound_main_rehearsal": {
+    "candidate_submissions_including_invalid_duplicate": 6,
+    "finalists": [],
+    "model_transport_invocations": 0,
+    "quality_loss_examples": [
+      200,
+      43
+    ],
+    "terminal": "explicit_abstention",
+    "tools": 9
+  },
+  "report_sha256": "9b6c376d619f1925bab07820c80205ac093175a3de5ea115a849ccb4188b3a23",
+  "schema": "fannagent.M2-M3-assessment.v1",
+  "separate_bound_cap_scenario": {
+    "overflow_rejected": true,
+    "tools": 12
+  },
+  "source_sha256": {
+    "agent/experiments/m2-evidence-cost-v1/PLAN.md": "c15b4135eeafd5361ad96f82f216187d60a578a17ed12d78c33e50643e28c24b",
+    "agent/experiments/m2-evidence-cost-v1/README.md": "1d8005393f133f8211f53e659ac2aeb83f65d7e957493431cca331fafeb0f79b",
+    "agent/experiments/m2-evidence-cost-v1/REPORT.md": "9b6c376d619f1925bab07820c80205ac093175a3de5ea115a849ccb4188b3a23",
+    "agent/experiments/m2-evidence-cost-v1/bind.py": "a8cc4690f86629ced3d22d8e8c0f5dc02f7e24df84c4de4d1d7e277b65bdeabc",
+    "agent/experiments/m2-evidence-cost-v1/qualify.py": "52b8fff0101b08ce4d941cabfd32cef9613d578ae6c044fe72803c3f141e1fe1",
+    "agent/experiments/m2-evidence-cost-v1/rehearse_bound.py": "4987051e6df4bf626af6bd874ffb63d1c152764e2e6ea63a299c1b79d461560e"
+  },
+  "status": "complete_evidence_binding_negative_cost_qualification_bound_M3_passed",
+  "validation_test_outcomes_opened": false
+}

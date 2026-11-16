@@ -1,0 +1,20 @@
+{
+  "M1_outcome_freeze_sha256": "7e2f4a2fb312b5d74ac5fe566db9da62e87b8d9ef20d132178a90c6db8550e27",
+  "binding_receipt_sha256": "a938dec2a7c45189a821e16393f35541e151394b19fb11c9e76c91fdeb6c71af",
+  "bound_M3_receipt_sha256": "2f6569a11f5020a5f079b8e52f6debf231c5d521cee4ad2ddaabac2a79a61cb8",
+  "bound_evidence_identity": "7aa94d19fef1ab153a1bac272d0b2ed82e20d034074ec9ab82f0416edc379d31",
+  "bound_evidence_sha256": "5f05c684de2608e5119f01630b98e747c70be99b722a6a69639e591c998d75d0",
+  "cost_qualification_sha256": "3ac6581d08a3556358ec267d3d8bb70cb8f3ddc2ebe1e0e8f6d617e14f73b0c5",
+  "cost_ranking_enabled": false,
+  "date": "2026-11-16",
+  "fixture_M3_receipt_sha256": "7d466ef9c3887a96718d8abf1f24b8c240a793b915beac2afe1340a40cb516ad",
+  "generation_ready": false,
+  "new_Torch_job": false,
+  "prospective_plan_sha256": "42e676987410b683d6961d534f57ec289582cfe98ad3226b34f72fff202c95c5",
+  "provider_requests": 0,
+  "receipt_sha256": "2c82f1176a6051b64056c0b7318f50d8afd22f9d4a1b1c579fee255bb2719791",
+  "report_sha256": "9b6c376d619f1925bab07820c80205ac093175a3de5ea115a849ccb4188b3a23",
+  "schema": "fannagent.M2-M3-outcome-freeze.v1",
+  "status": "complete_evidence_binding_negative_cost_qualification_bound_M3_passed",
+  "validation_test_outcomes_opened": false
+}

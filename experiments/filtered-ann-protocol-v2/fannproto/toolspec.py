@@ -16,7 +16,9 @@ are permitted runtime features. Three ordered clauses/predicate and four ANDed
 {"cp":32,"conditions":[["qualifying_count",">=",7]]}]},"rationale":"..."}.
 This illustrates schema, not a recommended threshold. Choose your own hypotheses,
 features and thresholds. Use inspection and exact full-development replay. The
-cost tool is a measured-component surrogate, NOT actual latency of your new rule.
+cost tool returns a qualified surrogate only when its cost-model checks pass;
+otherwise cost ranking is unavailable. Measured plan facts and search-work replay
+remain diagnostic guidance, NOT actual latency of your new rule.
 Require actual live cost and matched continue-only controls before a speed claim.
 Do not treat hindsight safe stops as an executable oracle. Prefer useful work
 savings that repay observation/decision overhead; it is legal to continue on any
@@ -56,7 +58,15 @@ TOOLS = [
             {
                 "category": {
                     "type": "string",
-                    "enum": ["short_native", "qualified_full_prefix", "missing_partial_prefix"],
+                    "enum": [
+                        "short_native",
+                        "qualified_full_prefix",
+                        "missing_partial_prefix",
+                        "qualified_partial_prefix",
+                        "preserving_partial_prefix",
+                        "zero_prefix",
+                        "lossy_prefix",
+                    ],
                 },
                 "filter": {"type": "string"},
                 "limit": {"type": "integer", "minimum": 1, "maximum": 12},

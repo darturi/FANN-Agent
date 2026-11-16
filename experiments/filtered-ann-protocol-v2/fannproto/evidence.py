@@ -27,7 +27,7 @@ class Evidence:
         cells = Counter()
         folds = {}
         for r in self.rows:
-            if set(r) - {"costs"} != {
+            if set(r) - {"costs", "work"} != {
                 "group",
                 "fold",
                 "filter",
@@ -96,6 +96,8 @@ class Evidence:
                     raise ValueError("invalid prefix label")
             if bundle.get("cost_status") == "qualified":
                 validate_costs(r.get("costs"), r["observations"])
+            if "work" in r:
+                validate_work(r["work"], r["observations"])
         if not fixture and (
             len(self.rows) != 3150
             or groups != set(range(450))
@@ -138,13 +140,24 @@ class Evidence:
             "runtime_profile": PROFILE.describe(),
             "evidence_hash": self.identity,
             "cost_status": self.bundle["cost_status"],
-            "limit": "No measured v2 serving costs implied; incomplete prefix evid"
-            "ence never yields a quality pass.",
+            "cost_ranking_enabled": self.bundle["cost_status"] == "qualified",
+            "cost_guidance": deepcopy(self.bundle.get("cost_guidance")),
+            "limit": "Measured plan costs describe their stated contexts. New-program costs "
+            "need qualification; incomplete prefix evidence never yields a quality pass.",
         }
 
     def examples(self, category, filter_, limit):
         if (
-            category not in ("short_native", "qualified_full_prefix", "missing_partial_prefix")
+            category
+            not in (
+                "short_native",
+                "qualified_full_prefix",
+                "missing_partial_prefix",
+                "qualified_partial_prefix",
+                "preserving_partial_prefix",
+                "zero_prefix",
+                "lossy_prefix",
+            )
             or filter_ not in FILTERS
             or type(limit) is not int
             or not 1 <= limit <= 12
@@ -159,6 +172,17 @@ class Evidence:
             "missing_partial_prefix": lambda r: any(
                 cp not in r["proofs"] and o["qualifying_count"] < 10
                 for cp, o in r["observations"].items()
+            ),
+            "qualified_partial_prefix": lambda r: any(
+                p["returned_count"] < 10 for p in r["proofs"].values()
+            ),
+            "preserving_partial_prefix": lambda r: any(
+                p["returned_count"] < 10 and p["recall"] >= r["native_recall"] - 1e-12
+                for p in r["proofs"].values()
+            ),
+            "zero_prefix": lambda r: any(p["returned_count"] == 0 for p in r["proofs"].values()),
+            "lossy_prefix": lambda r: any(
+                p["recall"] < r["native_recall"] - 1e-12 for p in r["proofs"].values()
             ),
         }[category]
         return [
@@ -177,6 +201,40 @@ class Evidence:
             for r in rows
             if predicate(r)
         ][:limit]
+
+    def work_estimate(self, p, *, force_continue=False):
+        """Replay measured prefix graph counts and causal mask work; never infer milliseconds."""
+        if not all("work" in r for r in self.rows):
+            return None
+        from .costmodel import operations
+
+        per = {f: [] for f in FILTERS}
+        for row in self.rows:
+            stop, ops = operations(p, row, force_continue=force_continue)
+            key = str(stop) if stop is not None else "full"
+            value = dict(row["work"]["graph"][key])
+            value["feature_passes"] = sum(ops["count"])
+            value["membership_probes"] = sum(
+                n * row["work"]["membership_per_checkpoint"].get(str(cp), 0)
+                for cp, n in zip(POINTS, ops["count"], strict=True)
+            )
+            value["ranked_passes"] = sum(ops["ranked"])
+            value["available_turnover_passes"] = sum(ops["turnover"])
+            value["numeric_comparisons"] = sum(ops["comparison"])
+            per[row["filter"]].append(value)
+        means = {
+            f: {k: sum(v[k] for v in values) / len(values) for k in values[0]}
+            for f, values in per.items()
+            if values
+        }
+        return {
+            "status": "measured-prefix work replay; not live new-program work or latency",
+            "per_filter_means": means,
+            "equal_scalar_means": {
+                k: sum(means[f][k] for f in FILTERS if f != "unfiltered") / 6
+                for k in next(iter(means.values()))
+            },
+        }
 
     def estimate(self, p):
         """Qualified component proxy only; never a measured new-program latency."""
@@ -251,3 +309,33 @@ def validate_costs(costs, observations):
         values = v.values() if k == "search_ms" else (v,)
         if any(not numeric(x, 0, 1e9) or k == "search_ms" and x <= 0 for x in values):
             raise ValueError("finite nonnegative component costs required")
+
+
+GRAPH = (
+    "vector_calls",
+    "layer0_neighbor_scores",
+    "upper_neighbor_scores",
+    "layer0_queue_pops",
+    "layer0_adjacencies_examined",
+)
+
+
+def validate_work(work, observations):
+    if (
+        type(work) is not dict
+        or set(work) != {"graph", "membership_per_checkpoint"}
+        or type(work["graph"]) is not dict
+        or set(work["graph"]) != {"full", *observations}
+        or type(work["membership_per_checkpoint"]) is not dict
+        or set(work["membership_per_checkpoint"]) != set(observations)
+    ):
+        raise ValueError("complete evaluator-only prefix work required")
+    for counters in work["graph"].values():
+        if type(counters) is not dict or set(counters) != set(GRAPH):
+            raise ValueError("prefix graph counter schema differs")
+        if any(type(v) is not int or v < 0 for v in counters.values()):
+            raise ValueError("nonnegative integer graph counts required")
+        if counters["vector_calls"] <= 0 or counters["layer0_queue_pops"] <= 0:
+            raise ValueError("positive native/prefix search work required")
+    if any(type(n) is not int or n < 0 for n in work["membership_per_checkpoint"].values()):
+        raise ValueError("nonnegative integer membership counts required")
