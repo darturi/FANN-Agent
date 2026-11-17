@@ -1,0 +1,108 @@
+{
+  "allocation_repetitions": 1,
+  "arms": {
+    "candidate7": 20,
+    "candidate8": 21,
+    "empty": 43,
+    "matched7": 30,
+    "matched8": 31,
+    "native640": null
+  },
+  "attempts": {
+    "timing": {
+      "capture": 3150,
+      "forced_prefix": 9436,
+      "native_bridge": 6300,
+      "quality_ann": 15750,
+      "reference_exact": 3150,
+      "timed_ann": 151200,
+      "total": 192346,
+      "warmup_ann": 3360
+    },
+    "total": 214396,
+    "work": {
+      "reference_exact": 3150,
+      "total": 22050,
+      "work_ann": 18900
+    }
+  },
+  "automatic_retry": false,
+  "bootstrap_seed": 20261116,
+  "bound_nominee_stop_counts": {
+    "candidate7": {
+      "-1": 135,
+      "32": 41
+    },
+    "candidate8": {
+      "-1": 102,
+      "32": 22
+    }
+  },
+  "candidate_thresholds_modified": false,
+  "conditions": [
+    -1,
+    743,
+    527,
+    310,
+    192,
+    108,
+    32
+  ],
+  "cpus": 4,
+  "cycles": 2,
+  "date": "2026-11-16",
+  "empty_native_diagnostic": {
+    "interval_probability": 0.9,
+    "ratio_band": [
+      0.98,
+      1.02
+    ]
+  },
+  "exact_serving_calls": 0,
+  "final_policy_selection": false,
+  "global_attempt_cap": 225000,
+  "group_bootstrap_draws": 20000,
+  "iterative_scan": "off",
+  "memory_gib": 48,
+  "native_ef_search": 640,
+  "new_v2_bindings": 5,
+  "nominees": [
+    "candidate-7",
+    "candidate-8"
+  ],
+  "observations_per_query_family": 8,
+  "offline_exact_queries": 6300,
+  "partial_prefixes": 1496,
+  "phase_attempt_caps": {
+    "timing": 200000,
+    "work": 25000
+  },
+  "phase_watchdog_seconds": {
+    "timing": 15300,
+    "work": 4500
+  },
+  "pre_M5_commit": "bdbcab4",
+  "primary": "equal mean complete-request latency over six scalar filters",
+  "provider_calls": 0,
+  "quality_gate": "zero per-case losses vs raw native640",
+  "quality_work_timed_families": 6,
+  "queries": 3150,
+  "reached_prefixes": 9436,
+  "reader_pids_per_group": 4,
+  "roles_per_pid": "each role twice",
+  "schedule_seed": "M5-frozen-nominees-20261116-v1",
+  "schema": "fannagent.M5-plan.v1",
+  "source_groups": 450,
+  "timing_groups": [
+    [
+      "native640",
+      "candidate7",
+      "candidate8",
+      "matched7",
+      "matched8",
+      "empty"
+    ]
+  ],
+  "validation_test_queries": 0,
+  "wall_hours": 6
+}

@@ -1,0 +1,16 @@
+{
+  "changed": {
+    "engine": [
+      "src/compiled_v2.inc"
+    ],
+    "observer-engine": [
+      "src/compiled_v2.inc"
+    ]
+  },
+  "compiled_source_sha256": "f1c71b342a0cb77e217c63066df17ebd2c9ca65872216d78ba1972145cef3b9f",
+  "graph_algorithm_changed": false,
+  "inherited_observer_delta_sha256": "a5d218dd136c29a1c5784847e65f7246f0db02315155fb2077cb0da4bafb4e37",
+  "nominees_sha256": "48bf2eca1a66950a68701cd89cd646daa499f9243223a6b9301ea7f2d9befef1",
+  "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+  "source": "qualified M1 runtime; only compiled nominee pool replaced"
+}

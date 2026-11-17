@@ -1,0 +1,50 @@
+# On your Mac: upload the sealed kit and checksum using your trusted SSH route.
+cd /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits
+shasum -a 256 -c m5-policy-qualification-v1.tar.gz.sha256
+scp m5-policy-qualification-v1.tar.gz m5-policy-qualification-v1.tar.gz.sha256 dar579@login.torch.hpc.nyu.edu:/home/dar579/
+ssh dar579@login.torch.hpc.nyu.edu
+
+# On Torch: verify, extract into a new directory, preflight both modules, submit once.
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c m5-policy-qualification-v1.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/m5-policy-qualification-v1
+tar -xzf m5-policy-qualification-v1.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m5-policy-qualification-v1
+bash submit.sh
+)
+
+# On Torch: check queue, progress and final status. Pending jobs have no log files yet.
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m5-policy-qualification-v1
+if [ -f job-id ]; then
+  job=$(cat job-id)
+  /opt/slurm/bin/squeue --local -j "$job" -o "%.18i %.12T %.30R"
+  /opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+  for file in "slurm-$job.out" "slurm-$job.err"; do
+    if [ -f "$file" ]; then tail -n 20 "$file"; fi
+  done
+else
+  echo "No job ID recorded. Startup preflight output:"
+  tail -n 20 .startup-preflight/*.json .startup-preflight/*.err 2>/dev/null
+fi
+
+# After completion, on Torch: capture independent scheduler status and return checksum.
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/m5-policy-qualification-v1
+job=$(cat job-id)
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS > "run-$job/sacct-$job.txt"
+cd "run-$job"
+sha256sum -c "qualification-$job.tar.gz.sha256"
+
+# On your Mac, in a separate terminal: download all files (including failure returns).
+# Enter the numeric job ID printed by submit.sh when prompted.
+read "job?Torch M5 job ID: "
+mkdir -p /Users/danielarturi/Downloads/m5-policy-qualification-v1
+cd /Users/danielarturi/Downloads/m5-policy-qualification-v1
+remote="dar579@login.torch.hpc.nyu.edu:/scratch/dar579/fannagent-benchmark-evaluation-v1/m5-policy-qualification-v1/run-$job"
+scp "$remote/qualification-$job.tar.gz" "$remote/qualification-$job.tar.gz.sha256" "$remote/sacct-$job.txt" .
+shasum -a 256 -c "qualification-$job.tar.gz.sha256"
+
+# Preserve the downloaded archive/checksum/status for local independent verification.
+# A PASSED banner is provisional until all raw records and sacct COMPLETED/0:0 verify.

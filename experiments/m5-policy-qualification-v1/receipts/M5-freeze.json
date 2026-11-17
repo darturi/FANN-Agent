@@ -1,0 +1,47 @@
+{
+  "archive_bytes": 8248804,
+  "archive_sha256": "3c4a0bd267d743e7abff9790beff7a7af510bc350cf079dda1c45d24e984b3b1",
+  "attempts": {
+    "timing": {
+      "capture": 3150,
+      "forced_prefix": 9436,
+      "native_bridge": 6300,
+      "quality_ann": 15750,
+      "reference_exact": 3150,
+      "timed_ann": 151200,
+      "total": 192346,
+      "warmup_ann": 3360
+    },
+    "total": 214396,
+    "work": {
+      "reference_exact": 3150,
+      "total": 22050,
+      "work_ann": 18900
+    }
+  },
+  "automatic_submission_or_retry": false,
+  "binding_sha256": "aa18dbba923872f97d73b24d12a4078860c61c489e1f6aabe17e0385877f742c",
+  "date": "2026-11-16",
+  "exact_serving_calls": 0,
+  "final_policy_selected": false,
+  "full_native_startup_preflight_required": true,
+  "global_attempt_cap": 225000,
+  "nominees_sha256": "48bf2eca1a66950a68701cd89cd646daa499f9243223a6b9301ea7f2d9befef1",
+  "plan_sha256": "982c950fe2033b3f28b18ad10c9c588bf07f47d3ac2a1f600541e9c981c4c429",
+  "pre_M5_commit": "bdbcab4",
+  "protocol_sha256": "099f5b299823489bfe9364c823a0731250aa74b765b60b57b8733e84bfdeea00",
+  "provider_calls": 0,
+  "readiness_sha256": "9ac5b713ca963ef0202cc2d3248d682280b68083dbaabdb4fc4d5291db241f8c",
+  "resource_ceiling": {
+    "memory_gib": 48,
+    "physical_cpus": 4,
+    "wall_hours": 6
+  },
+  "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+  "schema": "fannagent.M5-freeze.v1",
+  "split_sha256": "d48d341f3252e24c7eadf5b13e81b66063b25a0dff2d6b6ddd72cb4af418eec0",
+  "status": "sealed_pending_native_preflight_and_user_Torch_submission",
+  "timing_module_sha256": "17d8f5b5044cb438fcc7eaeb237ed25debed327086fee00fcc0c95a5fa2afa15",
+  "validation_test_outcomes_opened": false,
+  "work_module_sha256": "bc6ed28a3dd7003ef3cced0996c27bb7d4a10df3af1e53a1e172813585da2527"
+}

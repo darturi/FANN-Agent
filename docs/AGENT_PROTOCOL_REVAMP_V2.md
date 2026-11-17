@@ -216,6 +216,20 @@ The active feedback revision uses compact evaluate/compare views with full canon
 records. The first local context overflow and original source are preserved; v2 passes under
 the unchanged input bound. No external provider episode is authorized by this amendment.
 
+## November16 M5 deployment
+
+The November16 [M5 deployment](../experiments/m5-policy-qualification-v1/REPORT.md)
+now freezes the two formally submitted candidates7/8 and their exact matched
+continue-only controls, native640 and an empty-policy diagnostic. One development
+allocation uses four physical CPUs/48GiB/six hours,214,396 planned attempts,
+151,200 uninstrumented timed requests and a separate work-counter phase. The
+[prospective protocol](../experiments/m5-policy-qualification-v1/PROTOCOL.md) fixes
+all seven conditions, quality/first-stop/prefix gates, counterbalanced reader/CPU
+assignments, complete-request endpoints, group bootstrap analysis and independent
+scheduler verification. Local engineering checks pass; original-graph M5 and
+native Torch startup checks remain pending. No Torch submission, additional
+provider call, automatic retry or held-out access occurs during kit preparation.
+
 ## 13. Replication and procedure-level robustness
 
 A successful selected policy is not by itself evidence that the agent procedure is reliable. After the Small Reviews protocol is adopted, freeze the generation/tool/policy-selection method before applying it to additional sizes and the two additional datasets in the roadmap. Dataset-specific feature costs, schemas, splits and native settings may be qualified, but unsuccessful episodes must not trigger unreported prompt/action-space changes within that method version.

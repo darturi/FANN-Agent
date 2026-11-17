@@ -1,0 +1,467 @@
+{
+  "artifact_hash": "049daa157334161f39c0af53b6a7630c6fe0ceba706fdf0e465ee668de610e65",
+  "bindings": [
+    {
+      "arm": 20,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "u_v32_gap_td_noturn",
+        "rationale": "cp64 only, no turnover: wide gap and low tenth_distance, to stay in supported observation masks.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "992a54ec6d5ba92f7170ef78c310f5bde730531847a8cc01e6a28c9c870f5a8f"
+    },
+    {
+      "arm": 30,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "u_v32_gap_td_noturn",
+        "rationale": "cp64 only, no turnover: wide gap and low tenth_distance, to stay in supported observation masks.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "992a54ec6d5ba92f7170ef78c310f5bde730531847a8cc01e6a28c9c870f5a8f"
+    },
+    {
+      "arm": 21,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "u_v32_gap_td_noturn_strict",
+        "rationale": "cp64 only, no turnover, stricter gap/td.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "8ba220eee385358cbad957c085494612792d6b6964319674be136847a9ca19e2"
+    },
+    {
+      "arm": 31,
+      "force_continue": true,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 11
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "u_v32_gap_td_noturn_strict",
+        "rationale": "cp64 only, no turnover, stricter gap/td.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "8ba220eee385358cbad957c085494612792d6b6964319674be136847a9ca19e2"
+    },
+    {
+      "arm": 43,
+      "force_continue": false,
+      "observation_plan": {
+        "unfiltered": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes108": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes192": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes310": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes32": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes527": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        },
+        "votes743": {
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      "policy": {
+        "name": "M5_empty",
+        "rationale": "Researcher empty-policy bypass control; not an agent nominee.",
+        "rules": {},
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "b6d4a2778fe18144e2aabf5a4c3a5af3fa7ebc39639cad162e39a7169351a853"
+    }
+  ],
+  "exact_serving_calls": 0,
+  "mask_semantics": "previous scheduled checkpoint dependency; predicate with no clause has zero observation mask",
+  "partial_stops": true,
+  "profile": {
+    "actions": [
+      "continue",
+      "stop"
+    ],
+    "checkpoint_interval": 64,
+    "checkpoint_semantics": "expanded-neighborhood checkpoints16/32/64; previous scheduled checkpoint, not last collected checkpoint",
+    "collection_groups": [],
+    "features": {
+      "frontier_gap": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "float",
+        "name": "frontier_gap",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "qualifying_count": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "int",
+        "name": "qualifying_count",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "tenth_distance": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "float",
+        "name": "tenth_distance",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      },
+      "top10_new_since_previous": {
+        "availability": "count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full",
+        "collection_cost": "compiler-derived predicate/checkpoint dependency mask",
+        "description": "",
+        "group": "checkpoint_heap",
+        "kind": "int",
+        "name": "top10_new_since_previous",
+        "population": "query",
+        "provenance": "server_observed",
+        "scope": "query",
+        "source": "extension",
+        "stage": "runtime",
+        "units": "count"
+      }
+    },
+    "fingerprint": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+    "guidance": "",
+    "name": "filtered-ann-partial-checkpoints/v2",
+    "native_protocol": "",
+    "native_registry_hash": null,
+    "numeric_semantics": "int64_float64_strict",
+    "policy_encoding": "filtered_ann_checkpoint_v2",
+    "scripted_policy": null,
+    "stopping_scope": "original noniterative search prefix; actual0..10 SQL results; no completion",
+    "work_unit": "graph score/queue work"
+  },
+  "schema": "filtered-ann-compiler.v2",
+  "source_hash": "f1c71b342a0cb77e217c63066df17ebd2c9ca65872216d78ba1972145cef3b9f"
+}
