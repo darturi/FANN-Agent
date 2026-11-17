@@ -1,0 +1,24 @@
+{
+  "SQL_searches": 0,
+  "compared_candidate_ids": 20,
+  "cumulative_candidate_submissions": 20,
+  "cumulative_domain_tools": 32,
+  "ending_reason": "finalists_frozen_pending_live_measurement",
+  "fixture_note": "Existing candidate7 duplicated to exercise growth; no new discovery.",
+  "new_count_requests": 0,
+  "new_paid_requests": 0,
+  "original_outcome_unchanged": true,
+  "prior_charge_ids_preserved": true,
+  "prior_history_preserved": true,
+  "prior_real_requests": 8,
+  "prior_real_spend_usd": "0.403114",
+  "scripted_cumulative_requests": 30,
+  "scripted_finalists": [
+    "candidate-11",
+    "candidate-8"
+  ],
+  "scripted_new_requests": 22,
+  "scripted_total_spend_usd": "0.411914",
+  "status": "passed_open_exploration_actual_bound_rehearsal",
+  "validation_test_outcomes_opened": false
+}

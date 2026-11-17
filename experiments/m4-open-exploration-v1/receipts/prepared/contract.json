@@ -1,0 +1,51 @@
+{
+  "config": {
+    "allowance_usd": "0",
+    "assistant_message_bytes": 524288,
+    "automatic_retries": false,
+    "billing_input_token_bound": 1000000,
+    "candidate_submissions": null,
+    "ceiling_usd": "15",
+    "closing_reservation_usd": "2.06",
+    "count_preflight": "one_per_message",
+    "counted_input_token_limit": 900000,
+    "domain_tools": null,
+    "headroom_bytes": 8192,
+    "max_count_requests": null,
+    "max_output_tokens": 6000,
+    "max_requests": null,
+    "maximum_reservation_usd": "2.06",
+    "prior_Messages_requests": 8,
+    "prior_spend_usd": "0.403114",
+    "remaining_USD": "14.596886",
+    "request_byte_bound": 8388608,
+    "reserved_closing_tools": null,
+    "spending_policy": "dollar_ceiling",
+    "tool_result_block_bytes": 524288
+  },
+  "date": "2026-11-17",
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "evidence_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/bound-evidence.json",
+  "first_request_sha256": "5ee1eb6992ec1a0b7e4cd9d8a33d3143f75d887b56ce65d877ad0d2ec607a66c",
+  "new_count_requests": 0,
+  "new_paid_requests": 0,
+  "phase_prompt_hashes": {
+    "closing": "861516149c7da1768a4f8b92cf895a5871da0c30e5ff16610af490fb4e76cfa5",
+    "research": "2a4575bc6789771f915bea5941eda03da985659ea3190bedf3bd72be9c264d4b"
+  },
+  "prior_Messages_requests": 8,
+  "prior_candidate_submissions": 8,
+  "prior_domain_tools": 10,
+  "prior_history_sha256": "c4285c26bece7f2114ae2253fb5f23e6dda0c04bc4347a8c017e6b0eda53f3f9",
+  "prior_outcome_sha256": "87328f79ec8cd0354bc03111951763bda48863dde5bfae246f034ef3a6b36948",
+  "prior_spend_usd": "0.403114",
+  "remaining_USD": "14.596886",
+  "schema": "filtered-ann.M4-open-exploration.v1",
+  "scope": {
+    "development_groups": 450,
+    "exact_scoring_only": true,
+    "scalar_filters": 6,
+    "unfiltered": true,
+    "validation_test_outcomes_opened": false
+  }
+}

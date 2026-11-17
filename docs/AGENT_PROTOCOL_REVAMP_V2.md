@@ -230,6 +230,26 @@ scheduler verification. Local engineering checks pass; original-graph M5 and
 native Torch startup checks remain pending. No Torch submission, additional
 provider call, automatic retry or held-out access occurs during kit preparation.
 
+## November17 allowance amendment: open development exploration
+
+The user-directed [open-exploration controller](../experiments/m4-open-exploration-v1/README.md)
+supersedes this plan's nine-candidate/twelve-tool episode limits for future
+execution of this version. Cumulative model, token-count, candidate-submission
+and domain-tool counts have no ceiling. Three candidates per batch and at most
+three live-measurement finalists remain. The exact uncertainty selector now
+handles a registry of arbitrary size, preserving every quality/cost-support gate
+and the existing conditional regret certificate; it never truncates the pool to
+nine candidates. Scientific quotas do not trigger closing.
+
+The original cumulative $15 ledger carries forward all eight settled calls,
+$0.403114 spent, eight candidates, ten tools and full conversation. Voluntary
+submission or abstention remains available; spending the allowance is not a goal.
+Funding for a closing call, bounded context/output, no automatic retry, all
+development conditions, zero observed per-case recall loss and the holdout
+boundaries remain. Previous terminal outcomes and the sealed M5 kit are unchanged.
+This is a prospective configuration amendment; no new inference, live measurement
+or protected evaluation is performed while implementing it.
+
 ## 13. Replication and procedure-level robustness
 
 A successful selected policy is not by itself evidence that the agent procedure is reliable. After the Small Reviews protocol is adopted, freeze the generation/tool/policy-selection method before applying it to additional sizes and the two additional datasets in the roadmap. Dataset-specific feature costs, schemas, splits and native settings may be qualified, but unsuccessful episodes must not trigger unreported prompt/action-space changes within that method version.

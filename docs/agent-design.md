@@ -13,6 +13,14 @@ Start with the [showcase overview](showcase/README.md) for a shorter introductio
 This is a source walkthrough prepared on October 22, 2026; linked tests describe
 existing coverage and were not executed for this documentation pass.
 
+The current filtered-ANN benchmark campaign uses the November 17
+[open-exploration controller](../experiments/m4-open-exploration-v1/README.md).
+Its five typed tools replay frozen development evidence, with no cumulative
+candidate, tool-call or model-request caps. The cumulative $15 ledger, quality
+and holdout gates remain enforced, and voluntary submission/abstention can end
+research before spending the allowance. The general sandbox architecture below
+and previously sealed campaign versions retain their original contracts.
+
 ## Research and serving
 
 During research, a model chooses queries, analyses, experiments, and candidate
