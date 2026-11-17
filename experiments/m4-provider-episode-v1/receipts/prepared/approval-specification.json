@@ -1,0 +1,14 @@
+{
+  "ceiling_usd": "15",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "episode_contract_sha256": "99f3cf2c7d051113905d85abb822308e9a54f01e31788036575eb484fc494619",
+  "evidence_hash": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "first_request_sha256": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+  "max_output_tokens": 6000,
+  "max_requests": 6,
+  "model": "claude-sonnet-5-5",
+  "prompt_tools_inference_hash": "98515b72e88b293fbdd2caf34050436b81546f141a352a1c6fc40b0dd9ee0910",
+  "requested_authority": "Send the frozen compact development payload and allowed follow-up feedback to Anthropic Messages using the pinned contract, at most six requests/$15 total, without validation/test access or automatic retry.",
+  "status": "pending_user_approval_not_dispatchable",
+  "user_approval_record": null
+}

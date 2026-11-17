@@ -425,7 +425,12 @@ class Campaign:
                 or request.get("max_tokens") != self.model_config.output_token_limit
             ):
                 raise ProtocolError("request model/output cap differs from frozen contract")
-            if len(canonical(request)) + 8192 > self.model_config.input_token_bound:
+            byte_bound = self.gates.get("execution_contract", {}).get(
+                "request_byte_bound", self.model_config.input_token_bound
+            )
+            if type(byte_bound) is not int or byte_bound <= 8192:
+                raise ProtocolError("invalid operational request byte bound")
+            if len(canonical(request)) + 8192 > byte_bound:
                 raise ProtocolError("request bytes exceed conservative input bound")
             self.store.set("v2_prompt_contract", digest(frozen))
             maximum = self.budget.maximum_call()
@@ -473,12 +478,26 @@ class Campaign:
             ids = [x.get("id") for x in uses]
             if any(type(i) is not str for i in ids) or len(ids) != len(set(ids)):
                 return self._invalid_response("invalid_tool_envelope")
-            if any(
-                x.get("type") not in ("text", "tool_use")
-                or x.get("type") == "text"
-                and type(x.get("text")) is not str
-                for x in content
-            ):
+
+            def valid_block(block):
+                kind = block.get("type")
+                if kind == "text":
+                    return type(block.get("text")) is str
+                if kind == "tool_use":
+                    return True  # Typed tool envelope/arguments are checked by the dispatcher.
+                if request.get("thinking", {}).get("type") not in ("between_tools", "adaptive"):
+                    return False
+                if kind == "thinking":
+                    return (
+                        type(block.get("thinking")) is str
+                        and type(block.get("signature")) is str
+                        and bool(block["signature"])
+                    )
+                if kind == "redacted_thinking":
+                    return type(block.get("data")) is str and bool(block["data"])
+                return False
+
+            if not all(valid_block(block) for block in content):
                 return self._invalid_response("invalid_content_envelope")
             if uses:
                 results = []

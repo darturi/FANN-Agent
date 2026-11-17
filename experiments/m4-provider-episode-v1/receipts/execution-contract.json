@@ -1,0 +1,14 @@
+{
+  "allowance_usd": "0",
+  "automatic_retries": false,
+  "billing_input_token_bound": 1000000,
+  "ceiling_usd": "15",
+  "max_output_tokens": 6000,
+  "max_requests": 6,
+  "maximum_reserved_usd_per_request": "2.06",
+  "request_byte_bound": 50000,
+  "reserved_protocol_headroom_bytes": 8192,
+  "schema": "filtered-ann.M4-execution.v1",
+  "six_maximal_requests_usd": "12.36",
+  "thinking_progress_preserved": true
+}

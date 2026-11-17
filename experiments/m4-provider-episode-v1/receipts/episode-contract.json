@@ -1,0 +1,84 @@
+{
+  "api_version": "2023-06-01",
+  "approval_required": true,
+  "date": "2026-11-16",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "evidence_file_sha256": "586036abab76337746e3a15c353cb5b7162ac550411cc4f5efcfce626828c594",
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "evidence_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/bound-evidence.json",
+  "files_sha256": {
+    "bound-gates.json": "492e651442efabd8709eb11ccee9deac26284298d2a42d0268cfb38fd544b6c8",
+    "development-summary.json": "9a807badb49ef9fa924b3e48cbc749ad924d3713ddea5a25a31e1d746d022252",
+    "execution-contract.json": "f4f96d856dc333db9883495e25527621f8b348661a1b53792f86923b06dd18b2",
+    "first-request.json": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+    "first-request.preview.json": "1cb36af3640131727b148e927b2107b5888acb81ec840799aa687b08160d657a",
+    "initial-user-message.json": "dc2c4fdc004c7dea5f063dad157eccbb882897e1a64a97c8308c07b91e0e3d82",
+    "model-config.json": "de743863f1b5e0fbf10dfd0b5c3a21c8ea5e9a13064a0b8d6c144cfbb544a23b",
+    "system-prompt.md": "500457c72635d1d17e8cab47a189c8fe0989f0b33d00a9e0a7474d20608f408b",
+    "tools.json": "d889913a4d70705e007fc8845c9128d7bf9001dea1002ce2a6fec1157018135b"
+  },
+  "first_request_bytes": 14472,
+  "first_request_sha256": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+  "limits": {
+    "allowance_usd": "0",
+    "automatic_retries": false,
+    "billing_input_token_bound": 1000000,
+    "ceiling_usd": "15",
+    "max_output_tokens": 6000,
+    "max_requests": 6,
+    "maximum_reserved_usd_per_request": "2.06",
+    "request_byte_bound": 50000,
+    "reserved_protocol_headroom_bytes": 8192,
+    "schema": "filtered-ann.M4-execution.v1",
+    "six_maximal_requests_usd": "12.36",
+    "thinking_progress_preserved": true
+  },
+  "model": "claude-sonnet-5-5",
+  "model_config": {
+    "allowance_usd": "0",
+    "bound_verified": true,
+    "ceiling_usd": "15",
+    "input_token_bound": 1000000,
+    "input_usd_per_million": "2",
+    "max_attempts": 1,
+    "model": "claude-sonnet-5-5",
+    "output_limit_parameter": "max_tokens",
+    "output_token_limit": 6000,
+    "output_usd_per_million": "10",
+    "pricing_revision": "anthropic-sonnet-5-5-global-standard-2026-11-16"
+  },
+  "paid_requests": 0,
+  "payload_egress": "Compact anonymized development summaries and bounded case/recall/feature/work/cost feedback only. No source IDs, vectors, neighbors, credentials or holdouts.",
+  "prompt_tools_inference_hash": "98515b72e88b293fbdd2caf34050436b81546f141a352a1c6fc40b0dd9ee0910",
+  "provider_authorized": false,
+  "provider_preflight_sha256": "210185e7f3ec8453443861ab021f9a2577bfc625eb3df724fefd00fb844666ec",
+  "qualified_uncertainty_outcome_sha256": "b272314edc0141afea998b4315fbbe25b59830156ae0ed8cde22c32c4207cfa8",
+  "request_fields": {
+    "inference_geo": "global",
+    "max_tokens": 6000,
+    "model": "claude-sonnet-5-5",
+    "output_config": {
+      "effort": "high"
+    },
+    "service_tier": "standard_only",
+    "thinking": {
+      "type": "between_tools"
+    }
+  },
+  "research_limits": {
+    "batch_size": 3,
+    "case_limit": 12,
+    "live_nominees": 3,
+    "submissions": 9,
+    "tools": 12
+  },
+  "schema": "filtered-ann.M4-proposal.v1",
+  "scope": {
+    "development_groups": 450,
+    "exact_scoring_only": true,
+    "scalar_filters": 6,
+    "unfiltered": true,
+    "validation_test_outcomes_opened": false
+  },
+  "status": "prepared_pending_explicit_user_approval"
+}

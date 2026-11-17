@@ -1,0 +1,72 @@
+{
+  "SQL_searches": 0,
+  "actual_API_spend_usd": "0",
+  "artifacts_sha256": {
+    "pending-approval-campaign/state.sqlite3": "01707ba213fc02e9805bd1e29ea92daf26a4c019f46c3dca31f3ed7aa1e174e8",
+    "scripted-campaign/private/artifacts/0e8fbdf7056181e2a596f7edc0c0f33b81136f4226d7808c43ac9e4fa3d2db0b.json": "0e8fbdf7056181e2a596f7edc0c0f33b81136f4226d7808c43ac9e4fa3d2db0b",
+    "scripted-campaign/private/artifacts/2d171eebdc13003045ab9de63afef37bbe7ee4533e3858e13022b7bfecdc38f7.json": "2d171eebdc13003045ab9de63afef37bbe7ee4533e3858e13022b7bfecdc38f7",
+    "scripted-campaign/private/artifacts/404535ef5f270c717efa41d821b02956917fcdfd0020b6618bca10e8fee6bd01.json": "404535ef5f270c717efa41d821b02956917fcdfd0020b6618bca10e8fee6bd01",
+    "scripted-campaign/private/artifacts/6c92b90f02ce5010d4199ed38079e55cfb040fb93b3fa1540d0e23e3ce32fb53.json": "6c92b90f02ce5010d4199ed38079e55cfb040fb93b3fa1540d0e23e3ce32fb53",
+    "scripted-campaign/private/artifacts/ad7186966d7e0871a684052e34d5c96b46f6d1edee34412072bec9be00f874dd.json": "ad7186966d7e0871a684052e34d5c96b46f6d1edee34412072bec9be00f874dd",
+    "scripted-campaign/private/artifacts/b44b6227eb1aab5666f014c11dca96f53fac4b05bcb661b9f65f90a66a6f8d45.json": "b44b6227eb1aab5666f014c11dca96f53fac4b05bcb661b9f65f90a66a6f8d45",
+    "scripted-campaign/state.sqlite3": "5c1a2d2cf7bbf6ba3da5b0ec47fe7f40cfb0ce330e901465b1712f8d387fd749",
+    "scripted-campaign/workspace/artifacts/0058404bb21eee87c09cdd1d147314f2c2b3ce10c6328aeffea487583d04a93d.json": "0058404bb21eee87c09cdd1d147314f2c2b3ce10c6328aeffea487583d04a93d",
+    "scripted-campaign/workspace/artifacts/109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32.json": "109c2dbc3e096acb7bd55bd9a45fcd3f66462d59b630a0027b895e71daa0da32",
+    "scripted-campaign/workspace/artifacts/351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6.json": "351cd6989e0dc0e4d812564937c6b1bddf57a6aecb82e2897a0c8f9624f64de6",
+    "scripted-campaign/workspace/artifacts/5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d.json": "5fadce23bf038acbaa47e9c6286bdb50e958d8d041c5fb549854e7db6b55998d",
+    "scripted-campaign/workspace/artifacts/7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2.json": "7119f89dafbb5188897e849f661ce51058248e42c9cce4711a3b9d1558be2fa2",
+    "scripted-campaign/workspace/artifacts/742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d.json": "742f84ae7fe71d46b39c2fea6e917ad9c3e37cc71168ab200728d0c9487aaa7d",
+    "scripted-campaign/workspace/artifacts/857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c.json": "857ca0f678bc1a657618d1391695ef8b541bec49522e22c7596bc544d791c58c",
+    "scripted-campaign/workspace/artifacts/9da184c51fd6ac8d73a90b7d952dadec18226673f78f590a75d7c55e17b0bdea.json": "9da184c51fd6ac8d73a90b7d952dadec18226673f78f590a75d7c55e17b0bdea"
+  },
+  "conditional_shortlist": {
+    "admissible_intervals": {
+      "candidate-1": [
+        0.9586220787533433,
+        1.029349771551865
+      ],
+      "candidate-2": [
+        0.9455079451800721,
+        1.0162356379785937
+      ],
+      "candidate-3": [
+        0.9182207039322999,
+        0.9889483967308216
+      ]
+    },
+    "best_attainable_bound": 0.0,
+    "candidate_ids": [
+      "candidate-1",
+      "candidate-2",
+      "candidate-3"
+    ],
+    "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+    "conditional_regret_bound": 0.0,
+    "exclusions": {},
+    "max_live_nominees": 3,
+    "no_performance_promotion": true,
+    "regret_limit": 0.01,
+    "schema": "filtered-ann.uncertainty-shortlist.v1",
+    "status": "selected_for_M5"
+  },
+  "date": "2026-11-16",
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "first_real_request_sha256": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+  "known_policy_nominees_are_scripted_fixtures_not_new_discovery": true,
+  "maximum_financial_reservation_usd": "2.06",
+  "pending_real_approval_blocks_transport_and_reservation": true,
+  "progress_blocks_preserved_unchanged": true,
+  "provider_generation_requests": 0,
+  "real_runner_blocks_before_credentials_or_live_state": true,
+  "request_bytes": [
+    14463,
+    30595
+  ],
+  "schema": "filtered-ann.M4-preparation-rehearsal.v1",
+  "scripted_requests": 2,
+  "simulation_difference": "Only wire/config model ID becomes scripted; prompt/tools/inference/evidence/byte bound/billing ceilings are the prepared real contract.",
+  "six_maximal_reservations_usd": "12.36",
+  "status": "passed_no_network_real_evidence_pending_approval_and_progress_checks",
+  "synthetic_accounting_usd": "0.0006",
+  "validation_test_outcomes_opened": false
+}

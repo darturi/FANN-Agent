@@ -1,0 +1,50 @@
+{
+  "api_version": "2023-06-01",
+  "authenticated_model_GETs": 1,
+  "billing_input_token_bound": 1000000,
+  "cache_control": "none",
+  "checked_utc": "2026-11-17T01:16:44.221435+00:00",
+  "credential": "existing local minisweagent dotenv reference; never persisted",
+  "date": "2026-11-16",
+  "development_payloads_sent": 0,
+  "documented_context_bound": 1000000,
+  "effort": "high",
+  "inference_geo": "global",
+  "input_bound_source": "Models API max_input_tokens or official1M context ceiling",
+  "input_usd_per_million": "2",
+  "model": "claude-sonnet-5-5",
+  "model_response_sha256": "6b7ce4412b3cd83cd2753ddf91329385b655ad837cfba7a6d6c466e0b212e92d",
+  "official_documents": {
+    "messages": {
+      "sha256": "0b43fb1b7ff31ac8448ebb3b63babbd5db3ecbb04a7731fb9a17b68de4815b5d",
+      "url": "https://platform.claude.com/docs/en/api/messages/create.md"
+    },
+    "model": {
+      "sha256": "0067a54f2d41feecd82eb7c5d34a9efdf96ac81fd90692b4408df8a03292deac",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md"
+    },
+    "pricing": {
+      "sha256": "048ccb65c7aa39a16f8475d92bec1730bc9e42c63b79085e2f0f1e6e5f867cd1",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md"
+    },
+    "thinking": {
+      "sha256": "7017002bb0a8d33fdf63c676f1117db41c854587ca80ef13697482cde7c4879b",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/thinking.md"
+    },
+    "versioning": {
+      "sha256": "19e1425eda664b74206a891efa4d9a901640f65d8e8fd71b1faeb8a05de8d8e1",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions.md"
+    }
+  },
+  "output_usd_per_million": "10",
+  "paid_Messages_requests": 0,
+  "provider_calls_for_generation": 0,
+  "schema": "filtered-ann.M4-provider-preflight.v1",
+  "server_tools": [],
+  "service_tier": "standard_only",
+  "status": "official_prices_and_account_model_GET_verified",
+  "thinking": {
+    "type": "between_tools"
+  },
+  "validation_test_outcomes_opened": false
+}

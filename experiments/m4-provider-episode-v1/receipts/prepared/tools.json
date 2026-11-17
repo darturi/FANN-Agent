@@ -1,0 +1,113 @@
+[
+  {
+    "description": "Frozen development scope/profile and qualified evidence/cost status.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "name": "inspect_workload"
+  },
+  {
+    "description": "At most12 anonymous development cases by an allowed diagnostic category. Never runtime inputs.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "enum": [
+            "short_native",
+            "qualified_full_prefix",
+            "missing_partial_prefix",
+            "qualified_partial_prefix",
+            "preserving_partial_prefix",
+            "zero_prefix",
+            "lossy_prefix"
+          ],
+          "type": "string"
+        },
+        "filter": {
+          "type": "string"
+        },
+        "limit": {
+          "maximum": 12,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "category",
+        "filter",
+        "limit"
+      ],
+      "type": "object"
+    },
+    "name": "explain_cases"
+  },
+  {
+    "description": "Compile/validate and replay at most3 causal DSL programs on all frozen development cases. Partial unknown prefixes fail evidence completeness.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "policies": {
+          "items": {
+            "type": "object"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "policies"
+      ],
+      "type": "object"
+    },
+    "name": "evaluate_candidates"
+  },
+  {
+    "description": "Read already-registered program quality/cost summaries; no new program/search.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 9,
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "candidate_ids"
+      ],
+      "type": "object"
+    },
+    "name": "compare_candidates"
+  },
+  {
+    "description": "Freeze the deterministic qualified shortlist (empty list means use controller ranking) or explicitly abstain. No holdout query.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "abstain": {
+          "type": "boolean"
+        },
+        "candidate_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "type": "array"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "name": "submit_or_abstain"
+  }
+]
