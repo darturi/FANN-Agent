@@ -1,0 +1,13 @@
+{
+  "Messages_requests": 0,
+  "api_version": "2023-06-01",
+  "development_count_requests": 0,
+  "input_tokens": 393,
+  "paid_spend_usd": "0",
+  "request_sha256": "e419b7650432045740b7f711cde676875b1b22718cec57bcc4f7a44d46356f13",
+  "response_sha256": "1d544763e21183a3dbf46437364938b6ad679850124b6c4a3ca2b9b8a76f48de",
+  "source_sha256": "1795db79fcd81f4e77c2a77c01c739748a9202eda51dd0fccc857488fa242c85",
+  "status": "verified_free_count_endpoint_pinned_model_version_and_fields",
+  "study_data_sent": false,
+  "synthetic_count_requests": 1
+}

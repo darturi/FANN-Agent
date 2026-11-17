@@ -1,0 +1,15 @@
+{
+  "ceiling_usd": "15",
+  "contract_sha256": "6804d3c264706e4f39d29266d4440d66ebcb83a3643b88952c4f278e4d5ee797",
+  "count_tokens_endpoint": "https://api.anthropic.com/v1/messages/count_tokens",
+  "evidence_hash": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "first_request_sha256": "016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d",
+  "max_count_tokens_requests": 4,
+  "max_output_tokens": 6000,
+  "max_requests": 6,
+  "model": "claude-sonnet-5-5",
+  "prior_spend_usd": "0.038798",
+  "remaining_requests": 4,
+  "status": "pending_user_approval_not_dispatchable",
+  "user_approval_record": null
+}

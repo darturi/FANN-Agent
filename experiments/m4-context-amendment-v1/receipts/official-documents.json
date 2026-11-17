@@ -1,0 +1,19 @@
+{
+  "count_tokens_requests": 0,
+  "data_payloads_sent": 0,
+  "documents": {
+    "context-windows": {
+      "sha256": "aa289e55ec1ee55ec7c1fc3d609372707bd09e5fc4d5c0b11f5fd816ce7382cc",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows.md"
+    },
+    "count-tokens-api": {
+      "sha256": "fd1c67c60dcc6d15133b567a919675365bbb94353171119344a4deb6d705efb1",
+      "url": "https://platform.claude.com/docs/en/api/messages/count_tokens.md"
+    },
+    "token-counting": {
+      "sha256": "5802f8a3b0e4981b598cd81bb9f2cb863c042efc9f053007279260a3c890ee7a",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/token-counting.md"
+    }
+  },
+  "paid_requests": 0
+}

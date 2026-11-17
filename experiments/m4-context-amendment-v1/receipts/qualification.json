@@ -1,0 +1,336 @@
+{
+  "SQL_searches": 0,
+  "actual_new_API_spend_usd": "0",
+  "all_category_filter_combinations": 49,
+  "capacity_certificate": "Conditional on hard assistant/tool-result envelope and cumulative feedback-slot caps. No guarantee for oversized/malformed provider output or token-estimate failure. Count preflight protects model context independently.",
+  "category_filter_sizes": [
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "short_native",
+      "filter": "unfiltered"
+    },
+    {
+      "bytes": 8431,
+      "cases": 12,
+      "category": "qualified_full_prefix",
+      "filter": "unfiltered"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "missing_partial_prefix",
+      "filter": "unfiltered"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "qualified_partial_prefix",
+      "filter": "unfiltered"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "preserving_partial_prefix",
+      "filter": "unfiltered"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "zero_prefix",
+      "filter": "unfiltered"
+    },
+    {
+      "bytes": 8453,
+      "cases": 12,
+      "category": "lossy_prefix",
+      "filter": "unfiltered"
+    },
+    {
+      "bytes": 7336,
+      "cases": 12,
+      "category": "short_native",
+      "filter": "votes743"
+    },
+    {
+      "bytes": 8180,
+      "cases": 12,
+      "category": "qualified_full_prefix",
+      "filter": "votes743"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "missing_partial_prefix",
+      "filter": "votes743"
+    },
+    {
+      "bytes": 7336,
+      "cases": 12,
+      "category": "qualified_partial_prefix",
+      "filter": "votes743"
+    },
+    {
+      "bytes": 7306,
+      "cases": 12,
+      "category": "preserving_partial_prefix",
+      "filter": "votes743"
+    },
+    {
+      "bytes": 7309,
+      "cases": 12,
+      "category": "zero_prefix",
+      "filter": "votes743"
+    },
+    {
+      "bytes": 7707,
+      "cases": 12,
+      "category": "lossy_prefix",
+      "filter": "votes743"
+    },
+    {
+      "bytes": 7670,
+      "cases": 12,
+      "category": "short_native",
+      "filter": "votes527"
+    },
+    {
+      "bytes": 8331,
+      "cases": 12,
+      "category": "qualified_full_prefix",
+      "filter": "votes527"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "missing_partial_prefix",
+      "filter": "votes527"
+    },
+    {
+      "bytes": 7528,
+      "cases": 12,
+      "category": "qualified_partial_prefix",
+      "filter": "votes527"
+    },
+    {
+      "bytes": 7400,
+      "cases": 12,
+      "category": "preserving_partial_prefix",
+      "filter": "votes527"
+    },
+    {
+      "bytes": 4939,
+      "cases": 8,
+      "category": "zero_prefix",
+      "filter": "votes527"
+    },
+    {
+      "bytes": 8081,
+      "cases": 12,
+      "category": "lossy_prefix",
+      "filter": "votes527"
+    },
+    {
+      "bytes": 7871,
+      "cases": 12,
+      "category": "short_native",
+      "filter": "votes310"
+    },
+    {
+      "bytes": 8415,
+      "cases": 12,
+      "category": "qualified_full_prefix",
+      "filter": "votes310"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "missing_partial_prefix",
+      "filter": "votes310"
+    },
+    {
+      "bytes": 7725,
+      "cases": 12,
+      "category": "qualified_partial_prefix",
+      "filter": "votes310"
+    },
+    {
+      "bytes": 7595,
+      "cases": 12,
+      "category": "preserving_partial_prefix",
+      "filter": "votes310"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "zero_prefix",
+      "filter": "votes310"
+    },
+    {
+      "bytes": 8408,
+      "cases": 12,
+      "category": "lossy_prefix",
+      "filter": "votes310"
+    },
+    {
+      "bytes": 867,
+      "cases": 1,
+      "category": "short_native",
+      "filter": "votes192"
+    },
+    {
+      "bytes": 8407,
+      "cases": 12,
+      "category": "qualified_full_prefix",
+      "filter": "votes192"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "missing_partial_prefix",
+      "filter": "votes192"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "qualified_partial_prefix",
+      "filter": "votes192"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "preserving_partial_prefix",
+      "filter": "votes192"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "zero_prefix",
+      "filter": "votes192"
+    },
+    {
+      "bytes": 8401,
+      "cases": 12,
+      "category": "lossy_prefix",
+      "filter": "votes192"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "short_native",
+      "filter": "votes108"
+    },
+    {
+      "bytes": 8418,
+      "cases": 12,
+      "category": "qualified_full_prefix",
+      "filter": "votes108"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "missing_partial_prefix",
+      "filter": "votes108"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "qualified_partial_prefix",
+      "filter": "votes108"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "preserving_partial_prefix",
+      "filter": "votes108"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "zero_prefix",
+      "filter": "votes108"
+    },
+    {
+      "bytes": 8428,
+      "cases": 12,
+      "category": "lossy_prefix",
+      "filter": "votes108"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "short_native",
+      "filter": "votes32"
+    },
+    {
+      "bytes": 8407,
+      "cases": 12,
+      "category": "qualified_full_prefix",
+      "filter": "votes32"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "missing_partial_prefix",
+      "filter": "votes32"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "qualified_partial_prefix",
+      "filter": "votes32"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "preserving_partial_prefix",
+      "filter": "votes32"
+    },
+    {
+      "bytes": 183,
+      "cases": 0,
+      "category": "zero_prefix",
+      "filter": "votes32"
+    },
+    {
+      "bytes": 8424,
+      "cases": 12,
+      "category": "lossy_prefix",
+      "filter": "votes32"
+    }
+  ],
+  "ceiling_usd": "15",
+  "configured_wire_limit_bytes": 8388608,
+  "cumulative_requests": 6,
+  "date": "2026-11-16",
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "formerly_blocked_request_bytes": 42382,
+  "full_four_round_request_bytes": [
+    42373,
+    82061,
+    140686,
+    176071
+  ],
+  "known_fixture_policies_not_new_discovery": true,
+  "max_cases_per_explanation": 12,
+  "maximum_cumulative_commitment_usd": "8.278798",
+  "maximum_observed_tool_result_bytes": 35100,
+  "new_count_requests": 0,
+  "new_paid_requests": 0,
+  "original_episode_unchanged": true,
+  "pending_approval_blocks_before_live_state_and_network": true,
+  "prior_actual_spend_retained_usd": "0.038798",
+  "resumed_exact_first_request_sha256": "016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d",
+  "schema": "filtered-ann.M4-context-qualification.v1",
+  "simulated_known_nominees": [
+    "candidate-1",
+    "candidate-2",
+    "candidate-3"
+  ],
+  "simulated_submissions_cumulative": 9,
+  "simulated_tools_cumulative": 12,
+  "status": "passed_actual_bound_transcript_migration_tool_capacity_and_cumulative_budget",
+  "structural_wire_bound_including_headroom_bytes": 5818766,
+  "synthetic_full_remaining_envelope_bytes": 5809645,
+  "validation_test_outcomes_opened": false
+}
