@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-10-21T11:32:18-04:00",
+  "observed_at": "2026-11-17T01:50:24-05:00",
   "scope": "Archives under the same pruned scan roots as run-inventory.json; runtime/dependency caches and private stores excluded",
-  "archive_count": 207,
-  "total_bytes": 19666947473,
+  "archive_count": 373,
+  "total_bytes": 22045221476,
   "checksum_counts": {
-    "no usable sidecar": 171,
-    "matches": 36
+    "no usable sidecar": 214,
+    "matches": 159
   },
   "archives": [
     {
@@ -1540,6 +1540,600 @@
       "backup_status": "local bytes verified; independent backup not verified"
     },
     {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/agent-policy-qualification-v1/engine-source.tar.gz",
+      "bytes": 116925,
+      "sha256": "48666b5a39c1cd9f3f56ded78a83f782dba971ff5f1603f5e6dbfe01be580cfb",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/agent-policy-qualification-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/agent-policy-qualification-v1.tar.gz",
+      "bytes": 7700041,
+      "sha256": "46d7f87b7c0ebedeaab5c766dda912df1a02f1a730800884aec8fc1c099876bf",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/agent-policy-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "46d7f87b7c0ebedeaab5c766dda912df1a02f1a730800884aec8fc1c099876bf",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v1.tar.gz",
+      "bytes": 6478936,
+      "sha256": "3b15ac1e2e764df30758f483e91fafedeeae837f30dc85fdf03685e5ca02e953",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v1.tar.gz.sha256",
+      "expected_sha256": "3b15ac1e2e764df30758f483e91fafedeeae837f30dc85fdf03685e5ca02e953",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v2.tar.gz",
+      "bytes": 6479640,
+      "sha256": "25bb60a12cfc3f3a762d42074b04ffd78597a5953391e155217e2085b25fa0de",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/development-runtime-v2.tar.gz.sha256",
+      "expected_sha256": "25bb60a12cfc3f3a762d42074b04ffd78597a5953391e155217e2085b25fa0de",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/guard-qualification-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/guard-qualification-v1.tar.gz",
+      "bytes": 8971951,
+      "sha256": "10109ccce18af22e0cad5ba8f1431286ce1917956898f438c7cf80fc01ba8cf6",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/guard-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "10109ccce18af22e0cad5ba8f1431286ce1917956898f438c7cf80fc01ba8cf6",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1/engine-sources.tar.gz",
+      "bytes": 242581,
+      "sha256": "8f9ce55b9e78ab2c6a17bb6853e73e279f007d15c765f50e8cfad74c1eeb03a6",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz",
+      "bytes": 8198097,
+      "sha256": "c4e0c46e04dd1796f063b94c257e48f31bba487594ab222717098d1e7aede532",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "c4e0c46e04dd1796f063b94c257e48f31bba487594ab222717098d1e7aede532",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2/engine-sources.tar.gz",
+      "bytes": 242581,
+      "sha256": "f1f9e867bc293f229c571c8d3d18ea05935e0b907224577dc5c39725baf60e8e",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2.tar.gz",
+      "bytes": 8198963,
+      "sha256": "e8dc0c5cf480ab71de51b791e1ca684df5e37082fabb90c8d76bca94d08bf515",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m1-runtime-qualification-v2.tar.gz.sha256",
+      "expected_sha256": "e8dc0c5cf480ab71de51b791e1ca684df5e37082fabb90c8d76bca94d08bf515",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m5-policy-qualification-v1/engine-sources.tar.gz",
+      "bytes": 238763,
+      "sha256": "29107d0fdce68d22e41e97e40488e5294564fa5991e487cdf939c490f9259699",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m5-policy-qualification-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m5-policy-qualification-v1.tar.gz",
+      "bytes": 8248804,
+      "sha256": "3c4a0bd267d743e7abff9790beff7a7af510bc350cf079dda1c45d24e984b3b1",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m5-policy-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "3c4a0bd267d743e7abff9790beff7a7af510bc350cf079dda1c45d24e984b3b1",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/parent-qualification-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/parent-qualification-v1.tar.gz",
+      "bytes": 6925569,
+      "sha256": "b8a762821afb1724662ed95f1ab4df446cc58f301b7da3683d2e5ebf0b7456b2",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/parent-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "b8a762821afb1724662ed95f1ab4df446cc58f301b7da3683d2e5ebf0b7456b2",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1/observer-source.tar.gz",
+      "bytes": 117578,
+      "sha256": "f264b70167cead79646fab138b045150f16ab5e96c7ecca7b67607f3a550557b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix/observer-source.tar.gz",
+      "bytes": 117578,
+      "sha256": "f264b70167cead79646fab138b045150f16ab5e96c7ecca7b67607f3a550557b",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix.tar.gz",
+      "bytes": 7988246,
+      "sha256": "53935023770b6ed68145d490579b5a68c57efbd7b3f2014a8b22ad487be0800f",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1-startup-fix.tar.gz.sha256",
+      "expected_sha256": "53935023770b6ed68145d490579b5a68c57efbd7b3f2014a8b22ad487be0800f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1.tar.gz",
+      "bytes": 7982390,
+      "sha256": "5ea46c974ea9e6e2a6d367ab72e025528e08eda9b63834e4cd1b6128d4de826f",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/reader-attribution-v1.tar.gz.sha256",
+      "expected_sha256": "5ea46c974ea9e6e2a6d367ab72e025528e08eda9b63834e4cd1b6128d4de826f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/unguarded-development-v1/engine-source.tar.gz",
+      "bytes": 116925,
+      "sha256": "48666b5a39c1cd9f3f56ded78a83f782dba971ff5f1603f5e6dbfe01be580cfb",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/unguarded-development-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/unguarded-development-v1.tar.gz",
+      "bytes": 7844769,
+      "sha256": "ada50f6577839f3c659a8db4d9da1a5e0f86cdbd283640b777dc6bbf14b5f75a",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/unguarded-development-v1.tar.gz.sha256",
+      "expected_sha256": "ada50f6577839f3c659a8db4d9da1a5e0f86cdbd283640b777dc6bbf14b5f75a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22635567.tar.gz",
+      "bytes": 2376880,
+      "sha256": "afbd7b5dec020bc004e92f0063c5181f768f6a0f79d46515989f372fa2698c45",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22635567.tar.gz.sha256",
+      "expected_sha256": "afbd7b5dec020bc004e92f0063c5181f768f6a0f79d46515989f372fa2698c45",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22643346.tar.gz",
+      "bytes": 3192541,
+      "sha256": "a95c14aa66223d640cad8197c4f800261fe85d1f5fb8486be78faa410c50d0ee",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22643346.tar.gz.sha256",
+      "expected_sha256": "a95c14aa66223d640cad8197c4f800261fe85d1f5fb8486be78faa410c50d0ee",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22684501.tar.gz",
+      "bytes": 13942816,
+      "sha256": "1d6a27f5e7f10e3554ed6168ff4358c3b02dc42feb15298e8d66432cd8fb21a8",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22684501.tar.gz.sha256",
+      "expected_sha256": "1d6a27f5e7f10e3554ed6168ff4358c3b02dc42feb15298e8d66432cd8fb21a8",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22928562.tar.gz",
+      "bytes": 5133026,
+      "sha256": "fe78d98a9777c5c0af4860744cb55b3330b2299831db7d5f446b4de0715aa5f9",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22928562.tar.gz.sha256",
+      "expected_sha256": "fe78d98a9777c5c0af4860744cb55b3330b2299831db7d5f446b4de0715aa5f9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23045686.tar.gz",
+      "bytes": 7664930,
+      "sha256": "103b091af5c7c8ea618fe0a88aadb4bd2159a808fe8179ea939fd79ee4201fc0",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23045686.tar.gz.sha256",
+      "expected_sha256": "103b091af5c7c8ea618fe0a88aadb4bd2159a808fe8179ea939fd79ee4201fc0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23074287.tar.gz",
+      "bytes": 228,
+      "sha256": "dc94d7e28b3dc850a362abee7170c152aba2b6e8fc50a2fa2f50b07f355cb5ce",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23074287.tar.gz.sha256",
+      "expected_sha256": "dc94d7e28b3dc850a362abee7170c152aba2b6e8fc50a2fa2f50b07f355cb5ce",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23303080.tar.gz",
+      "bytes": 32042842,
+      "sha256": "09b1a5efbf3fb31434f20780f09b15e31ac975a7042e64b323cc6103612b6c02",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23303080.tar.gz.sha256",
+      "expected_sha256": "09b1a5efbf3fb31434f20780f09b15e31ac975a7042e64b323cc6103612b6c02",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23376796.tar.gz",
+      "bytes": 66334510,
+      "sha256": "8a180f046da12d943bea1bb9bea36b3839044876606c13beb1783e5f47bba53d",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-23376796.tar.gz.sha256",
+      "expected_sha256": "8a180f046da12d943bea1bb9bea36b3839044876606c13beb1783e5f47bba53d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/staging-draft/engine-source.tar.gz",
+      "bytes": 116925,
+      "sha256": "cc0a30e1221b653edcf54dc4748dc45700efdb2eebba3859da4cf5c4a09e6328",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/staging-draft/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/staging-draft.tar.gz",
+      "bytes": 7696004,
+      "sha256": "c605d9a5f71c6b2f6762cebb43347efb209b6e49e2f54a96b54215b8b431b9e0",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/staging-draft.tar.gz.sha256",
+      "expected_sha256": "c605d9a5f71c6b2f6762cebb43347efb209b6e49e2f54a96b54215b8b431b9e0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/conditioned-aa-v1/CONDITIONED-AA-RETURN.tar.gz",
+      "bytes": 698815,
+      "sha256": "28335520e778b1c58f3d773560477dce74a7b1399c16a0c2c65ab2f64a42f0cd",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/conditioned-aa-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/conditioned-aa-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/confirmation-attribution-v1/fannagent-votes108-attribution-kit.tar.gz",
+      "bytes": 3238224,
+      "sha256": "fcc7133ad0419bd9fdd1d8b5525536576fd79a577810d114fc8b418e910659ad",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/confirmation-attribution-v1/fannagent-votes108-attribution-kit.tar.gz.sha256",
+      "expected_sha256": "fcc7133ad0419bd9fdd1d8b5525536576fd79a577810d114fc8b418e910659ad",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/confirmation-calibration-v1/fannagent-votes108-calibration-kit.tar.gz",
+      "bytes": 3237059,
+      "sha256": "9f9c1309bf1ac484b446dfa351abe0dd463df90ecee911bba017682d3190699f",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/confirmation-calibration-v1/fannagent-votes108-calibration-kit.tar.gz.sha256",
+      "expected_sha256": "9f9c1309bf1ac484b446dfa351abe0dd463df90ecee911bba017682d3190699f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/confirmation-shared-v1/fannagent-votes108-shared-kit.tar.gz",
+      "bytes": 3232139,
+      "sha256": "74ceb601fe4336bc9d86607efcada4deb90a7674d2c259acc59fc6affbe1b4f1",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/confirmation-shared-v1/fannagent-votes108-shared-kit.tar.gz.sha256",
+      "expected_sha256": "74ceb601fe4336bc9d86607efcada4deb90a7674d2c259acc59fc6affbe1b4f1",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/confirmation-v1/fannagent-votes108-confirmation-kit.tar.gz",
+      "bytes": 3217076,
+      "sha256": "d478d92e58c2149e7a95ee139eaa4e4568e4012996bd882d8b9816ff7b8f507f",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/confirmation-v1/fannagent-votes108-confirmation-kit.tar.gz.sha256",
+      "expected_sha256": "d478d92e58c2149e7a95ee139eaa4e4568e4012996bd882d8b9816ff7b8f507f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/confirmation-warmup-v1/fannagent-votes108-warmup-kit.tar.gz",
+      "bytes": 3235564,
+      "sha256": "ebec2373d5d9a78a5ff282ade3bff2a49a69e04a1722f118edf01e17f9992674",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/confirmation-warmup-v1/fannagent-votes108-warmup-kit.tar.gz.sha256",
+      "expected_sha256": "ebec2373d5d9a78a5ff282ade3bff2a49a69e04a1722f118edf01e17f9992674",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/guest-path-fix-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3271801,
+      "sha256": "49143cc283810ecdb7bc514fbe29467f4aa1c5ac0685bdd52c5a3508c5fdb225",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/guest-path-fix-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "49143cc283810ecdb7bc514fbe29467f4aa1c5ac0685bdd52c5a3508c5fdb225",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/interleaved-aa-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3281508,
+      "sha256": "46b9229e1f9fbd2b64480a18495ae21e84ddd0a51a9e332296ba9fe9f992c8ba",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/interleaved-aa-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "46b9229e1f9fbd2b64480a18495ae21e84ddd0a51a9e332296ba9fe9f992c8ba",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/oracle-persistent-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3374195,
+      "sha256": "9f29abebe1f79343143b341af07491f3fb532535b34382c41fb522ae19967b9c",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/oracle-persistent-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "9f29abebe1f79343143b341af07491f3fb532535b34382c41fb522ae19967b9c",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/persistent-reader-v1/reviews-job-22445434-return.tar.gz",
+      "bytes": 826030,
+      "sha256": "76328442da13f994827ea253bb9710cb07ae1ab60c9b5ba20a04c39109e0303f",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/persistent-reader-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3276533,
+      "sha256": "955a95204e5a3a0b48a8d778789eb11d75d13360567c11e19d036d45b47cc201",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/persistent-reader-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "955a95204e5a3a0b48a8d778789eb11d75d13360567c11e19d036d45b47cc201",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/qualified-shadow-extended/fannagent-votes108-extended-kit.tar.gz",
+      "bytes": 2816982,
+      "sha256": "b8fed3c3c22748fcb85f60b59d554d2f505a88a76ebcc7cb1a90c16644d552ad",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/reader-switch-v1/READER-SWITCH-RETURN.tar.gz",
+      "bytes": 289502,
+      "sha256": "0df9149620fc075f4c3e45f55fbc9bc5c55e0332a4a8ee9801bf9865e5939181",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/reader-switch-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3285911,
+      "sha256": "fd7d794e3bf31cb5db921abc5918c3101c0b13b029c3ac4161a13dd162c6b53a",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/reader-switch-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "fd7d794e3bf31cb5db921abc5918c3101c0b13b029c3ac4161a13dd162c6b53a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/request-timing-v1/reviews-job-22458503-return.tar.gz",
+      "bytes": 251568,
+      "sha256": "878bffb9b026fdff4d4eb881cc12dad900667f35849f028eeff90e5b3da1361a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/request-timing-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3280496,
+      "sha256": "1016d9f9f35f53153aa2121cf1caf6371be903023bf2859db7e78d82aa2cfe74",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/request-timing-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "1016d9f9f35f53153aa2121cf1caf6371be903023bf2859db7e78d82aa2cfe74",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3271734,
+      "sha256": "0dad1756bd9d8ef0c0886e81ec07650bf780b95c30ece6f868a6a984ffbd1d7c",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "0dad1756bd9d8ef0c0886e81ec07650bf780b95c30ece6f868a6a984ffbd1d7c",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/startup-memory-gate-v1/reviews-job-22426332-return.tar.gz",
+      "bytes": 631321,
+      "sha256": "1f34cb7e19ea2ec7427b20caaf2e76d116480bdf4fe407f163421c3b933f7de3",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/startup-memory-gate-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3271959,
+      "sha256": "9a5b6d88c515d9fdddd554e29952de863de787637936c71bb05e89f9b06f2b00",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/startup-memory-gate-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "9a5b6d88c515d9fdddd554e29952de863de787637936c71bb05e89f9b06f2b00",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/timing-calibration-v1/reviews-job-22437411-return.tar.gz",
+      "bytes": 345784,
+      "sha256": "a51989d327b71f85c3f30220bdc6c158c4fe9b537fe0be3e4de43196c32c88b5",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/reviews-persistent-batch-native-v1/timing-calibration-v1/reviews-persistent-batch-native-v1.tar.gz",
+      "bytes": 3274259,
+      "sha256": "0c7f30a2ef40c3e71109ca9366616c7d0027a99a99f5877a8a775a53c5894960",
+      "checksum_sidecar": "trials/reviews-persistent-batch-native-v1/timing-calibration-v1/reviews-persistent-batch-native-v1.tar.gz.sha256",
+      "expected_sha256": "0c7f30a2ef40c3e71109ca9366616c7d0027a99a99f5877a8a775a53c5894960",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-activation-timing-calibration-v1/reviews-activation-calibration-v1-20261024T025706Z.c8557262.tar.gz",
+      "bytes": 36631198,
+      "sha256": "22813fb22742b7dec45903594c41e752dc3ee64e6ebe076cccf4d60257d0f599",
+      "checksum_sidecar": "trials/torch-reviews-activation-timing-calibration-v1/reviews-activation-calibration-v1-20261024T025706Z.c8557262.tar.gz.sha256",
+      "expected_sha256": "22813fb22742b7dec45903594c41e752dc3ee64e6ebe076cccf4d60257d0f599",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-activation-timing-calibration-v1/torch-activation-timing-calibration-v1.tar.gz",
+      "bytes": 13984321,
+      "sha256": "f3c442757195476d5d50ff833f8e852114e90bbd6747e78a69b14e1c06302032",
+      "checksum_sidecar": "trials/torch-reviews-activation-timing-calibration-v1/torch-activation-timing-calibration-v1.tar.gz.sha256",
+      "expected_sha256": "f3c442757195476d5d50ff833f8e852114e90bbd6747e78a69b14e1c06302032",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-admission-profile-identity-v1/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0.tar.gz",
+      "bytes": 39711905,
+      "sha256": "4c1b7cef11d40f64a65b2488a1afc0df884be12d10e96c89d50be50083d09a7e",
+      "checksum_sidecar": "trials/torch-reviews-admission-profile-identity-v1/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0.tar.gz.sha256",
+      "expected_sha256": "4c1b7cef11d40f64a65b2488a1afc0df884be12d10e96c89d50be50083d09a7e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-admission-profile-identity-v1/torch-admission-profile-identity-v1.tar.gz",
+      "bytes": 13897058,
+      "sha256": "c81d06d230dc8df26df7092a211dcc4a976a50b9f12e9a7da4f6f9ca7026ab2f",
+      "checksum_sidecar": "trials/torch-reviews-admission-profile-identity-v1/torch-admission-profile-identity-v1.tar.gz.sha256",
+      "expected_sha256": "c81d06d230dc8df26df7092a211dcc4a976a50b9f12e9a7da4f6f9ca7026ab2f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
       "path": "trials/torch-reviews-aggressive-proposals-v1-source.tar.gz",
       "bytes": 4433531,
       "sha256": "4d2065172852554a215df0615c888977b1fb7c9c75d7b5e22f5fd01ba5ed9b04",
@@ -1581,6 +2175,69 @@
       "sha256": "04aeeba7298765eda906afb90a10c7e92d774054476c58843aa7850c6909e4b0",
       "checksum_sidecar": "trials/torch-reviews-ef-sweep.tar.gz.sha256",
       "expected_sha256": "04aeeba7298765eda906afb90a10c7e92d774054476c58843aa7850c6909e4b0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-exact-topk-v1/reviews-exact-topk-v1-20261026T032153Z.9khasec1.tar.gz",
+      "bytes": 153662,
+      "sha256": "6773f88b361e01c5ed6fb7b4f15ba687329636bf62c1c18dff7fc5224312c25c",
+      "checksum_sidecar": "trials/torch-reviews-exact-topk-v1/reviews-exact-topk-v1-20261026T032153Z.9khasec1.tar.gz.sha256",
+      "expected_sha256": "6773f88b361e01c5ed6fb7b4f15ba687329636bf62c1c18dff7fc5224312c25c",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-exact-topk-v1/torch-exact-topk-v1.tar.gz",
+      "bytes": 14841564,
+      "sha256": "01c6d272ac5de658e72c7c8e0bd5c2038a44fa5b5181d83039bf16c79f47b65d",
+      "checksum_sidecar": "trials/torch-reviews-exact-topk-v1/torch-exact-topk-v1.tar.gz.sha256",
+      "expected_sha256": "01c6d272ac5de658e72c7c8e0bd5c2038a44fa5b5181d83039bf16c79f47b65d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-exact-topk-v1-catalog-fix/reviews-exact-topk-v1-catalog-fix-20261026T050859Z.jrmkwhuy.tar.gz",
+      "bytes": 2219553,
+      "sha256": "6856a060b01166ac53ba3993caf9affe3e5d49892dbbc5536eca35e7b102ceaf",
+      "checksum_sidecar": "trials/torch-reviews-exact-topk-v1-catalog-fix/reviews-exact-topk-v1-catalog-fix-20261026T050859Z.jrmkwhuy.tar.gz.sha256",
+      "expected_sha256": "6856a060b01166ac53ba3993caf9affe3e5d49892dbbc5536eca35e7b102ceaf",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix.tar.gz",
+      "bytes": 14855087,
+      "sha256": "b15b0b4b43708dbd891ae0b11a380591bdf2b192b731010398ba3fb7be75f95b",
+      "checksum_sidecar": "trials/torch-reviews-exact-topk-v1-catalog-fix/torch-exact-topk-v1-catalog-fix.tar.gz.sha256",
+      "expected_sha256": "b15b0b4b43708dbd891ae0b11a380591bdf2b192b731010398ba3fb7be75f95b",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-execution-cost-attribution-v1/drafts/initial-preflight/torch-execution-cost-attribution-v1.tar.gz",
+      "bytes": 13833214,
+      "sha256": "034f99374892c33509a3e1effde2a2f8eba0a69d7973a03039c3d0fc86db0028",
+      "checksum_sidecar": "trials/torch-reviews-execution-cost-attribution-v1/drafts/initial-preflight/torch-execution-cost-attribution-v1.tar.gz.sha256",
+      "expected_sha256": "034f99374892c33509a3e1effde2a2f8eba0a69d7973a03039c3d0fc86db0028",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-execution-cost-attribution-v1/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi.tar.gz",
+      "bytes": 20981136,
+      "sha256": "0c4dc6e995891a488de502cd11ffaed549a65a233064decf4a692fe638704d3e",
+      "checksum_sidecar": "trials/torch-reviews-execution-cost-attribution-v1/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi.tar.gz.sha256",
+      "expected_sha256": "0c4dc6e995891a488de502cd11ffaed549a65a233064decf4a692fe638704d3e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-execution-cost-attribution-v1/torch-execution-cost-attribution-v1.tar.gz",
+      "bytes": 13833477,
+      "sha256": "ea4138893adac4619fd3eb2a00da525bc09b6ec8ebc9ce8acbaaa20c713cf192",
+      "checksum_sidecar": "trials/torch-reviews-execution-cost-attribution-v1/torch-execution-cost-attribution-v1.tar.gz.sha256",
+      "expected_sha256": "ea4138893adac4619fd3eb2a00da525bc09b6ec8ebc9ce8acbaaa20c713cf192",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },
@@ -1630,11 +2287,173 @@
       "backup_status": "local bytes verified; independent backup not verified"
     },
     {
+      "path": "trials/torch-reviews-native-effort-frontier-v1/reviews-native-effort-v1-20261025T014743Z.p_kspq5v.tar.gz",
+      "bytes": 8879374,
+      "sha256": "d338a6a1ed7c85cec9c1677ef6070ae4705b73b2692b63d52d651b2ce68eac3d",
+      "checksum_sidecar": "trials/torch-reviews-native-effort-frontier-v1/reviews-native-effort-v1-20261025T014743Z.p_kspq5v.tar.gz.sha256",
+      "expected_sha256": "d338a6a1ed7c85cec9c1677ef6070ae4705b73b2692b63d52d651b2ce68eac3d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-native-effort-frontier-v1/torch-native-effort-frontier-v1.tar.gz",
+      "bytes": 14810618,
+      "sha256": "2a25b90da962d8a2e0d0883dd90528c9783d5652e8c872fc3c1e62a242e37291",
+      "checksum_sidecar": "trials/torch-reviews-native-effort-frontier-v1/torch-native-effort-frontier-v1.tar.gz.sha256",
+      "expected_sha256": "2a25b90da962d8a2e0d0883dd90528c9783d5652e8c872fc3c1e62a242e37291",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-native-effort-frontier-v1-preflight-01/torch-native-effort-frontier-v1.tar.gz",
+      "bytes": 14810079,
+      "sha256": "d3fc3c15c67d1057558b1c3cdd76ea21fb593f6bb78a2726c8f6b4ddfe9b86da",
+      "checksum_sidecar": "trials/torch-reviews-native-effort-frontier-v1-preflight-01/torch-native-effort-frontier-v1.tar.gz.sha256",
+      "expected_sha256": "d3fc3c15c67d1057558b1c3cdd76ea21fb593f6bb78a2726c8f6b4ddfe9b86da",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-native-effort-midpoint-v1/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki.tar.gz",
+      "bytes": 329356,
+      "sha256": "f32a9f23b543999150a82651ee0cf5320cba30ae8c460f47fcd89edc72f27c04",
+      "checksum_sidecar": "trials/torch-reviews-native-effort-midpoint-v1/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki.tar.gz.sha256",
+      "expected_sha256": "f32a9f23b543999150a82651ee0cf5320cba30ae8c460f47fcd89edc72f27c04",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1.tar.gz",
+      "bytes": 14831467,
+      "sha256": "fbd7ac0654bb9ff99f6add7011127caf01c008cd08fb142abe56783ea94e6185",
+      "checksum_sidecar": "trials/torch-reviews-native-effort-midpoint-v1/torch-native-effort-midpoint-v1.tar.gz.sha256",
+      "expected_sha256": "fbd7ac0654bb9ff99f6add7011127caf01c008cd08fb142abe56783ea94e6185",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
       "path": "trials/torch-reviews-operations.tar.gz",
       "bytes": 27108,
       "sha256": "27bd0698355d8b482b809e1e6f6adeeff73c119028c1f3588cf7babc632f0a3d",
       "checksum_sidecar": "trials/torch-reviews-operations.tar.gz.sha256",
       "expected_sha256": "27bd0698355d8b482b809e1e6f6adeeff73c119028c1f3588cf7babc632f0a3d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1/internal-review-1/torch-partial-ann-v1.tar.gz",
+      "bytes": 16315831,
+      "sha256": "0c92a1ed8fa5fe19acd2fcf446268e6257ef2c65f0c38526895d3704b819dacc",
+      "checksum_sidecar": "trials/torch-reviews-partial-ann-v1/internal-review-1/torch-partial-ann-v1.tar.gz.sha256",
+      "expected_sha256": "0c92a1ed8fa5fe19acd2fcf446268e6257ef2c65f0c38526895d3704b819dacc",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1/torch-partial-ann-v1.tar.gz",
+      "bytes": 16315887,
+      "sha256": "b2f7730a24a98ea2a3d29474298064a2500eab8e61911c83130bf705bc97755c",
+      "checksum_sidecar": "trials/torch-reviews-partial-ann-v1/torch-partial-ann-v1.tar.gz.sha256",
+      "expected_sha256": "b2f7730a24a98ea2a3d29474298064a2500eab8e61911c83130bf705bc97755c",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1-quota-fix/reviews-partial-ann-v1-20261027T000432Z.9haq3pyt.tar.gz",
+      "bytes": 163151,
+      "sha256": "60ae88ccf64c9f23e15af96d304c1b63f326f8ee52f01a2374ac02a289a20a82",
+      "checksum_sidecar": "trials/torch-reviews-partial-ann-v1-quota-fix/reviews-partial-ann-v1-20261027T000432Z.9haq3pyt.tar.gz.sha256",
+      "expected_sha256": "60ae88ccf64c9f23e15af96d304c1b63f326f8ee52f01a2374ac02a289a20a82",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1-quota-fix/torch-partial-ann-v1-quota-fix.tar.gz",
+      "bytes": 16319190,
+      "sha256": "b142e1159078e746be26442a7fd374b6e45f2f46379e023b7d1122a5f137142a",
+      "checksum_sidecar": "trials/torch-reviews-partial-ann-v1-quota-fix/torch-partial-ann-v1-quota-fix.tar.gz.sha256",
+      "expected_sha256": "b142e1159078e746be26442a7fd374b6e45f2f46379e023b7d1122a5f137142a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs.tar.gz",
+      "bytes": 1630143,
+      "sha256": "0bb845dea4a0f1668a8dc46ebe93ba25f6c0ead65a629606de628bf4219ae055",
+      "checksum_sidecar": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs.tar.gz.sha256",
+      "expected_sha256": "0bb845dea4a0f1668a8dc46ebe93ba25f6c0ead65a629606de628bf4219ae055",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/torch-partial-ann-v1-settings-fix-collection-v1.tar.gz",
+      "bytes": 3337,
+      "sha256": "ab56c7feeb20cfb48d76840392ca2a4c4085243c7cc4a837e6d5210f514cce9e",
+      "checksum_sidecar": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/torch-partial-ann-v1-settings-fix-collection-v1.tar.gz.sha256",
+      "expected_sha256": "ab56c7feeb20cfb48d76840392ca2a4c4085243c7cc4a837e6d5210f514cce9e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix.tar.gz",
+      "bytes": 16340359,
+      "sha256": "55ebd8f3ff57fc73c61a8945337a13818c048c8f6a1a5b0eec84c887a7f21d92",
+      "checksum_sidecar": "trials/torch-reviews-partial-ann-v1-settings-fix/torch-partial-ann-v1-settings-fix.tar.gz.sha256",
+      "expected_sha256": "55ebd8f3ff57fc73c61a8945337a13818c048c8f6a1a5b0eec84c887a7f21d92",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-calibration-v1/reviews-partial-calibration-v1-20261027T155119Z.6rd0lmkp.tar.gz",
+      "bytes": 67580,
+      "sha256": "1385637e3657038dba52140fce58260dc74484bcb40847ace9a9714f372fb543",
+      "checksum_sidecar": "trials/torch-reviews-partial-calibration-v1/reviews-partial-calibration-v1-20261027T155119Z.6rd0lmkp.tar.gz.sha256",
+      "expected_sha256": "1385637e3657038dba52140fce58260dc74484bcb40847ace9a9714f372fb543",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-calibration-v1/torch-partial-calibration-v1.tar.gz",
+      "bytes": 18839880,
+      "sha256": "aee3441ea7d0f9ade26caaa680833062729bb475ecf89d365212fa126bfdcb93",
+      "checksum_sidecar": "trials/torch-reviews-partial-calibration-v1/torch-partial-calibration-v1.tar.gz.sha256",
+      "expected_sha256": "aee3441ea7d0f9ade26caaa680833062729bb475ecf89d365212fa126bfdcb93",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-calibration-v1-launch-fix/reviews-partial-calibration-v1-launch-fix-20261027T185901Z.98dd224c.tar.gz",
+      "bytes": 411246,
+      "sha256": "4619d2c984843aa6c47eafddd39c293782334cda1cfa096f17e0fb2526cd2dff",
+      "checksum_sidecar": "trials/torch-reviews-partial-calibration-v1-launch-fix/reviews-partial-calibration-v1-launch-fix-20261027T185901Z.98dd224c.tar.gz.sha256",
+      "expected_sha256": "4619d2c984843aa6c47eafddd39c293782334cda1cfa096f17e0fb2526cd2dff",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-calibration-v1-launch-fix/torch-partial-calibration-v1-launch-fix.tar.gz",
+      "bytes": 18844852,
+      "sha256": "9ab287b9079bf2a8f75c857540528765c13131ade4f1ed1387c7e0eaaa1bc25f",
+      "checksum_sidecar": "trials/torch-reviews-partial-calibration-v1-launch-fix/torch-partial-calibration-v1-launch-fix.tar.gz.sha256",
+      "expected_sha256": "9ab287b9079bf2a8f75c857540528765c13131ade4f1ed1387c7e0eaaa1bc25f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-calibration-v1-metadata-fix/reviews-partial-calibration-v1-metadata-fix-20261028T000153Z.y1p9092a.tar.gz",
+      "bytes": 409941,
+      "sha256": "7e383c42372f1953700dd0743f737d3b83f65be301c31d7bda8863d6006ba21e",
+      "checksum_sidecar": "trials/torch-reviews-partial-calibration-v1-metadata-fix/reviews-partial-calibration-v1-metadata-fix-20261028T000153Z.y1p9092a.tar.gz.sha256",
+      "expected_sha256": "7e383c42372f1953700dd0743f737d3b83f65be301c31d7bda8863d6006ba21e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-partial-calibration-v1-metadata-fix/torch-partial-calibration-v1-metadata-fix.tar.gz",
+      "bytes": 18857689,
+      "sha256": "6eff4071caa6092c064945d0e2a05391388f3219f23737afa66bbbf1162d759c",
+      "checksum_sidecar": "trials/torch-reviews-partial-calibration-v1-metadata-fix/torch-partial-calibration-v1-metadata-fix.tar.gz.sha256",
+      "expected_sha256": "6eff4071caa6092c064945d0e2a05391388f3219f23737afa66bbbf1162d759c",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },
@@ -1666,11 +2485,74 @@
       "backup_status": "local bytes verified; independent backup not verified"
     },
     {
+      "path": "trials/torch-reviews-prepared-policy-lifecycle-v1/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr.tar.gz",
+      "bytes": 23560510,
+      "sha256": "94a38fb68e593948daceba890182d720bad64c3485f13a357d7adab32fe03319",
+      "checksum_sidecar": "trials/torch-reviews-prepared-policy-lifecycle-v1/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr.tar.gz.sha256",
+      "expected_sha256": "94a38fb68e593948daceba890182d720bad64c3485f13a357d7adab32fe03319",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-prepared-policy-lifecycle-v1/torch-prepared-policy-lifecycle-v1.tar.gz",
+      "bytes": 13863594,
+      "sha256": "44a00454b8ae5d739a055e2001a1d8c376ef198a58beda24bff01fd442438ab1",
+      "checksum_sidecar": "trials/torch-reviews-prepared-policy-lifecycle-v1/torch-prepared-policy-lifecycle-v1.tar.gz.sha256",
+      "expected_sha256": "44a00454b8ae5d739a055e2001a1d8c376ef198a58beda24bff01fd442438ab1",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
       "path": "trials/torch-reviews-reference-fix.tar.gz",
       "bytes": 17984,
       "sha256": "d6653d7bd211c885b2845b9b502ceffedb59192917395cb0471a95443d9361fb",
       "checksum_sidecar": "trials/torch-reviews-reference-fix.tar.gz.sha256",
       "expected_sha256": "d6653d7bd211c885b2845b9b502ceffedb59192917395cb0471a95443d9361fb",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/feature-data-ablation-v1/feature-data-ablation-v1-source.tar.gz",
+      "bytes": 57360,
+      "sha256": "53e844583bdc0a891b5fb4fe2ec7330a19e75c9262700b454f036abab924c00a",
+      "checksum_sidecar": "trials/torch-reviews-results/feature-data-ablation-v1/feature-data-ablation-v1-source.tar.gz.sha256",
+      "expected_sha256": "53e844583bdc0a891b5fb4fe2ec7330a19e75c9262700b454f036abab924c00a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/feature-data-ablation-v1/torch-feature-data-ablation-v1.tar.gz",
+      "bytes": 5038670,
+      "sha256": "fb3041f867f2a2407ded295bdf5865dd2d70e7da6a1b09fbd7b6f6d76a3889a5",
+      "checksum_sidecar": "trials/torch-reviews-results/feature-data-ablation-v1/torch-feature-data-ablation-v1.tar.gz.sha256",
+      "expected_sha256": "fb3041f867f2a2407ded295bdf5865dd2d70e7da6a1b09fbd7b6f6d76a3889a5",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/feature-data-ablation-v1/validation/synthetic-native-raw.tar.gz",
+      "bytes": 23742862,
+      "sha256": "0af178c7a764b83b16ab69b6c04e222dc589c5fc1e22d4cac80d1e5bf8665a34",
+      "checksum_sidecar": "trials/torch-reviews-results/feature-data-ablation-v1/validation/synthetic-native-raw.tar.gz.sha256",
+      "expected_sha256": "0af178c7a764b83b16ab69b6c04e222dc589c5fc1e22d4cac80d1e5bf8665a34",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/four-condition-training-v1/four-condition-training-v1-source.tar.gz",
+      "bytes": 46935,
+      "sha256": "2dc54123c7fecc757af43ce57b04f884409d3884db99987e1f4a4c45c3d3c47d",
+      "checksum_sidecar": "trials/torch-reviews-results/four-condition-training-v1/four-condition-training-v1-source.tar.gz.sha256",
+      "expected_sha256": "2dc54123c7fecc757af43ce57b04f884409d3884db99987e1f4a4c45c3d3c47d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/four-condition-training-v1/torch-four-condition-training-v1.tar.gz",
+      "bytes": 3773048,
+      "sha256": "3e4a013fb2530dab3d85dc94b1fcf5b3e133b3c1e0d8ecea75bbdd2f360af05b",
+      "checksum_sidecar": "trials/torch-reviews-results/four-condition-training-v1/torch-four-condition-training-v1.tar.gz.sha256",
+      "expected_sha256": "3e4a013fb2530dab3d85dc94b1fcf5b3e133b3c1e0d8ecea75bbdd2f360af05b",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },
@@ -1684,11 +2566,38 @@
       "backup_status": "local bytes verified; independent backup not verified"
     },
     {
+      "path": "trials/torch-reviews-results/frozen-proposals-timing-v1-runtime-fix/torch-frozen-proposals-timing-v1-runtime-fix-confirmation.tar.gz",
+      "bytes": 3354995,
+      "sha256": "ba779549080f9dc509a6b8e6ea6428b42e1e74c39cceaca7add333f0a600e153",
+      "checksum_sidecar": "trials/torch-reviews-results/frozen-proposals-timing-v1-runtime-fix/torch-frozen-proposals-timing-v1-runtime-fix-confirmation.tar.gz.sha256",
+      "expected_sha256": "ba779549080f9dc509a6b8e6ea6428b42e1e74c39cceaca7add333f0a600e153",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
       "path": "trials/torch-reviews-results/frozen-proposals-timing-v1-runtime-fix/torch-frozen-proposals-timing-v1-runtime-fix-training.tar.gz",
       "bytes": 7267674,
       "sha256": "20b073cda164e27b5cbbaa3d4fdf60c1121bec14b060ed0aeecd4ba64ef38bd8",
       "checksum_sidecar": "trials/torch-reviews-results/frozen-proposals-timing-v1-runtime-fix/torch-frozen-proposals-timing-v1-runtime-fix-training.tar.gz.sha256",
       "expected_sha256": "20b073cda164e27b5cbbaa3d4fdf60c1121bec14b060ed0aeecd4ba64ef38bd8",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022-source.tar.gz",
+      "bytes": 19935,
+      "sha256": "9b3303934da17396b24bb373c8b96d71694b316a36bf531a88887e5b2d3f7cb4",
+      "checksum_sidecar": "trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022-source.tar.gz.sha256",
+      "expected_sha256": "9b3303934da17396b24bb373c8b96d71694b316a36bf531a88887e5b2d3f7cb4",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022.tar.gz",
+      "bytes": 726372,
+      "sha256": "62b666772fa4e8cc00438548c01fc8a00c0029074c52949ccb609a0c7535ca5f",
+      "checksum_sidecar": "trials/torch-reviews-results/offline-first-stop-fitter-v1-20261022.tar.gz.sha256",
+      "expected_sha256": "62b666772fa4e8cc00438548c01fc8a00c0029074c52949ccb609a0c7535ca5f",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },
@@ -1716,6 +2625,33 @@
       "sha256": "8623d347bdcf4d519cd14f8667c98429693316b66884c8b0631d7b924bf4a378",
       "checksum_sidecar": "trials/torch-reviews-results/reviews-ef-sweep-20261019T004327Z.dcFzo0.tar.gz.sha256",
       "expected_sha256": "8623d347bdcf4d519cd14f8667c98429693316b66884c8b0631d7b924bf4a378",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y.tar.gz",
+      "bytes": 34619575,
+      "sha256": "074cb469a65cce5776adcb2ae0441a1cf5d83bf7134c9183877253ba32ccadb5",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y.tar.gz.sha256",
+      "expected_sha256": "074cb469a65cce5776adcb2ae0441a1cf5d83bf7134c9183877253ba32ccadb5",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp.tar.gz",
+      "bytes": 29337528,
+      "sha256": "d26318ddf306109fc885711a461b512c6f6c5ed55c1f694f160f57737af8a521",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp.tar.gz.sha256",
+      "expected_sha256": "d26318ddf306109fc885711a461b512c6f6c5ed55c1f694f160f57737af8a521",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk.tar.gz",
+      "bytes": 30985830,
+      "sha256": "64d3e3196250d130b397802b8ef241f78d1cb1dd4d7d46726cac88e44eaeaf8d",
+      "checksum_sidecar": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk.tar.gz.sha256",
+      "expected_sha256": "64d3e3196250d130b397802b8ef241f78d1cb1dd4d7d46726cac88e44eaeaf8d",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },
@@ -1846,11 +2782,569 @@
       "backup_status": "local bytes verified; independent backup not verified"
     },
     {
+      "path": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/reviews-selective-agent-v1-pilot-20261022T202240Z.j9ackcxc.tar.gz",
+      "bytes": 57499203,
+      "sha256": "c3948d569d62ba2973016f5825e847530c93ceb864b4c6eb15de72ab6b7cefe6",
+      "checksum_sidecar": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/reviews-selective-agent-v1-pilot-20261022T202240Z.j9ackcxc.tar.gz.sha256",
+      "expected_sha256": "c3948d569d62ba2973016f5825e847530c93ceb864b4c6eb15de72ab6b7cefe6",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-selective-agent-v1/selective-agent-v1-source.tar.gz",
+      "bytes": 81499,
+      "sha256": "70c9bd52c98bbf6218fff4feaffaa3458830cc8b0f3ce9a660818f30fb5fbc23",
+      "checksum_sidecar": "trials/torch-reviews-selective-agent-v1/selective-agent-v1-source.tar.gz.sha256",
+      "expected_sha256": "70c9bd52c98bbf6218fff4feaffaa3458830cc8b0f3ce9a660818f30fb5fbc23",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
       "path": "trials/torch-reviews-size-sweep.tar.gz",
       "bytes": 53091,
       "sha256": "17fdcead55cfa387d2e73bd4435619a66e8ad2dc280b36583e0dd68eab489378",
       "checksum_sidecar": "trials/torch-reviews-size-sweep.tar.gz.sha256",
       "expected_sha256": "17fdcead55cfa387d2e73bd4435619a66e8ad2dc280b36583e0dd68eab489378",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v1/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v2/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v3/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v3/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736320,
+      "sha256": "639f8145c7a87f1d94b24ac5fa6409258f690e1779f08f47d6684570f23efde9",
+      "checksum_sidecar": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v3/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "639f8145c7a87f1d94b24ac5fa6409258f690e1779f08f47d6684570f23efde9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v4/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v4/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736219,
+      "sha256": "1387eebfe22ef3c4a015573c4c896640951d1d6ea9b307f4d0532878bf005855",
+      "checksum_sidecar": "trials/torch-reviews-startup-adaptive-budget-storage-v1/full-local-replay-20261101-v4/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "1387eebfe22ef3c4a015573c4c896640951d1d6ea9b307f4d0532878bf005855",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-fixture-cost-v1/local-final/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736169,
+      "sha256": "e141d320fb67084fc24862aee3e1d785f8e8f3cf60c4e68f51155fbc319d50c0",
+      "checksum_sidecar": "trials/torch-reviews-startup-adaptive-fixture-cost-v1/local-final/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "e141d320fb67084fc24862aee3e1d785f8e8f3cf60c4e68f51155fbc319d50c0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/local-full-initial/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736302,
+      "sha256": "93e40c763710730fe6416e83bb2439ea9da8edb4a8dfe4208436c49e2054255a",
+      "checksum_sidecar": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/local-full-initial/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "93e40c763710730fe6416e83bb2439ea9da8edb4a8dfe4208436c49e2054255a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/local-full-verified/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736264,
+      "sha256": "1193c878781cd611bbace3ae91864864e944646becea442f74c20f4b05d3a60b",
+      "checksum_sidecar": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/local-full-verified/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "1193c878781cd611bbace3ae91864864e944646becea442f74c20f4b05d3a60b",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/reviews-startup-adaptive-x86-qualification-v1-20261101T182247Z.svgouzfl.tar.gz",
+      "bytes": 47804,
+      "sha256": "334bedf6fcec3de2afe39d4c7001de62fcda73df676ca94b369893acc62eb8bf",
+      "checksum_sidecar": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/reviews-startup-adaptive-x86-qualification-v1-20261101T182247Z.svgouzfl.tar.gz.sha256",
+      "expected_sha256": "334bedf6fcec3de2afe39d4c7001de62fcda73df676ca94b369893acc62eb8bf",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": "trials/torch-reviews-startup-adaptive-x86-qualification-v1/torch-startup-adaptive-x86-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1/review-candidates/before-entry-point-matrix/torch-startup-attribution-compatibility-v1.tar.gz",
+      "bytes": 20330938,
+      "sha256": "2d19058664e3dab054475b0f6f87f55ebb7516cd42c0bfeba7b9b48c66302bdd",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1/review-candidates/before-entry-point-matrix/torch-startup-attribution-compatibility-v1.tar.gz.sha256",
+      "expected_sha256": "2d19058664e3dab054475b0f6f87f55ebb7516cd42c0bfeba7b9b48c66302bdd",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1/review-candidates/before-sealed-overlay-fix/torch-startup-attribution-compatibility-v1.tar.gz",
+      "bytes": 20330821,
+      "sha256": "18a81249d030b80ce62af55b6689f95357460a75d83b2db490a16b93c410ffe3",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1/review-candidates/before-sealed-overlay-fix/torch-startup-attribution-compatibility-v1.tar.gz.sha256",
+      "expected_sha256": "18a81249d030b80ce62af55b6689f95357460a75d83b2db490a16b93c410ffe3",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1/reviews-startup-attribution-compatibility-v1-20261029T172935Z.e69x0afy.tar.gz",
+      "bytes": 5996,
+      "sha256": "f694e12e1cd91f3caa5d3da8c51595e4eb595c11c84f5c8b0ba498021359f623",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1/reviews-startup-attribution-compatibility-v1-20261029T172935Z.e69x0afy.tar.gz.sha256",
+      "expected_sha256": "f694e12e1cd91f3caa5d3da8c51595e4eb595c11c84f5c8b0ba498021359f623",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1/torch-startup-attribution-compatibility-v1.tar.gz",
+      "bytes": 20332368,
+      "sha256": "987c1611a354aca2080218e7ba40cc7fd086801e4004681ed66ad9f30b07f0e2",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1/torch-startup-attribution-compatibility-v1.tar.gz.sha256",
+      "expected_sha256": "987c1611a354aca2080218e7ba40cc7fd086801e4004681ed66ad9f30b07f0e2",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1-budget-fix/reviews-startup-attribution-compatibility-v1-budget-fix-20261030T182723Z.5bm_ut00.tar.gz",
+      "bytes": 44693,
+      "sha256": "d14c18156de50e163f69917802c779e0f64b087220ff7e1aaa1baa593712ffb4",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1-budget-fix/reviews-startup-attribution-compatibility-v1-budget-fix-20261030T182723Z.5bm_ut00.tar.gz.sha256",
+      "expected_sha256": "d14c18156de50e163f69917802c779e0f64b087220ff7e1aaa1baa593712ffb4",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1-budget-fix/torch-startup-attribution-compatibility-v1-budget-fix.tar.gz",
+      "bytes": 20344412,
+      "sha256": "4d26345217a1e0a6df205b00e3266fde5c14d4c07b9eb46cea979169820d20a4",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1-budget-fix/torch-startup-attribution-compatibility-v1-budget-fix.tar.gz.sha256",
+      "expected_sha256": "4d26345217a1e0a6df205b00e3266fde5c14d4c07b9eb46cea979169820d20a4",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1-fixture-fix/reviews-startup-attribution-compatibility-v1-fixture-fix-20261029T213607Z.drh59xwh.tar.gz",
+      "bytes": 10975,
+      "sha256": "6fd2a830378bc21be90378169aa72855cb1caf791cd73320b440a63629169a62",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1-fixture-fix/reviews-startup-attribution-compatibility-v1-fixture-fix-20261029T213607Z.drh59xwh.tar.gz.sha256",
+      "expected_sha256": "6fd2a830378bc21be90378169aa72855cb1caf791cd73320b440a63629169a62",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1-fixture-fix/torch-startup-attribution-compatibility-v1-fixture-fix.tar.gz",
+      "bytes": 20336687,
+      "sha256": "5309b3d09eb35e0f12fbc1e47570d039c21ebbb8613691ba3dc0a101b7a7fbda",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1-fixture-fix/torch-startup-attribution-compatibility-v1-fixture-fix.tar.gz.sha256",
+      "expected_sha256": "5309b3d09eb35e0f12fbc1e47570d039c21ebbb8613691ba3dc0a101b7a7fbda",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1-prepared-fixtures/review-candidates/async-watchdog-stall/torch-startup-attribution-compatibility-v1-prepared-fixtures.tar.gz",
+      "bytes": 20337243,
+      "sha256": "a8d2b978398f9cdf1d636c8f168b6d0a567b6c816346b3ce1ff0637d8d5de4ad",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1-prepared-fixtures/review-candidates/async-watchdog-stall/torch-startup-attribution-compatibility-v1-prepared-fixtures.tar.gz.sha256",
+      "expected_sha256": "a8d2b978398f9cdf1d636c8f168b6d0a567b6c816346b3ce1ff0637d8d5de4ad",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1-prepared-fixtures/reviews-startup-attribution-compatibility-v1-prepared-fixtures-20261030T005654Z.5i2e3ef7.tar.gz",
+      "bytes": 12545,
+      "sha256": "5dda69a42a36775b5c9b9b17c253e2e45be6d181d8217944284b57db4fa8e214",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1-prepared-fixtures/reviews-startup-attribution-compatibility-v1-prepared-fixtures-20261030T005654Z.5i2e3ef7.tar.gz.sha256",
+      "expected_sha256": "5dda69a42a36775b5c9b9b17c253e2e45be6d181d8217944284b57db4fa8e214",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-compatibility-v1-prepared-fixtures/torch-startup-attribution-compatibility-v1-prepared-fixtures.tar.gz",
+      "bytes": 20337593,
+      "sha256": "32376aa634572c8f5abe037a5c3f2b8198d4ed7fb82490cd02ea6090085e2eb7",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-compatibility-v1-prepared-fixtures/torch-startup-attribution-compatibility-v1-prepared-fixtures.tar.gz.sha256",
+      "expected_sha256": "32376aa634572c8f5abe037a5c3f2b8198d4ed7fb82490cd02ea6090085e2eb7",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-v1/review-candidates/pre-query-conversion-fix/torch-startup-attribution-v1.tar.gz",
+      "bytes": 19708516,
+      "sha256": "8ffa19d094c1af5c5c82eb32329c323ffc882111daeb8bb0a03d906e7eaa3aee",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-v1/review-candidates/pre-query-conversion-fix/torch-startup-attribution-v1.tar.gz.sha256",
+      "expected_sha256": "8ffa19d094c1af5c5c82eb32329c323ffc882111daeb8bb0a03d906e7eaa3aee",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-v1/torch-startup-attribution-v1.tar.gz",
+      "bytes": 19708626,
+      "sha256": "d399c84f81f4069b0e63ee539f893f6498ddea1874db02cf1efd779c5bb42e94",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-v1/torch-startup-attribution-v1.tar.gz.sha256",
+      "expected_sha256": "d399c84f81f4069b0e63ee539f893f6498ddea1874db02cf1efd779c5bb42e94",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-v1-image-reference/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo.tar.gz",
+      "bytes": 1274259,
+      "sha256": "1da3b40f9c92c4b234c22361f1225404170447ed142beccc32865e077a7687a7",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-v1-image-reference/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo.tar.gz.sha256",
+      "expected_sha256": "1da3b40f9c92c4b234c22361f1225404170447ed142beccc32865e077a7687a7",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-v1-image-reference/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19744012,
+      "sha256": "f2a7f4e5117dc84fa5758bcba8a941ac8ff9d4456ebca0c10e5fa8f487f07ff1",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-v1-image-reference/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "f2a7f4e5117dc84fa5758bcba8a941ac8ff9d4456ebca0c10e5fa8f487f07ff1",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-attribution-v1-release/torch-startup-attribution-image-preflight-v1.tar.gz",
+      "bytes": 219647,
+      "sha256": "ccfab40dcd5325e9391f0ffdf76f3e8d73a7e2a343bcae8eed0d35ea6ac76fcb",
+      "checksum_sidecar": "trials/torch-reviews-startup-attribution-v1-release/torch-startup-attribution-image-preflight-v1.tar.gz.sha256",
+      "expected_sha256": "ccfab40dcd5325e9391f0ffdf76f3e8d73a7e2a343bcae8eed0d35ea6ac76fcb",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-compatibility-v1/reviews-startup-exact-vector-compatibility-v1-20261031T014056Z.3twju78d.tar.gz",
+      "bytes": 52187,
+      "sha256": "3edd0524f864aa97869a0ee71fe034c60a36b3cf37e24dfe8995dce455b2e2d3",
+      "checksum_sidecar": "trials/torch-reviews-startup-exact-vector-compatibility-v1/reviews-startup-exact-vector-compatibility-v1-20261031T014056Z.3twju78d.tar.gz.sha256",
+      "expected_sha256": "3edd0524f864aa97869a0ee71fe034c60a36b3cf37e24dfe8995dce455b2e2d3",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-compatibility-v1/torch-startup-exact-vector-compatibility-v1.tar.gz",
+      "bytes": 20595024,
+      "sha256": "540af999770eeebbca80aa29c228b978a0101b11adf4e0dc4b424c4b4b5f5865",
+      "checksum_sidecar": "trials/torch-reviews-startup-exact-vector-compatibility-v1/torch-startup-exact-vector-compatibility-v1.tar.gz.sha256",
+      "expected_sha256": "540af999770eeebbca80aa29c228b978a0101b11adf4e0dc4b424c4b4b5f5865",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-integration-v1/legacy-candidate/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736283,
+      "sha256": "cde3de678f44005008c41fd96bcb386b377303b88fbff9f6332c786592e457e9",
+      "checksum_sidecar": "trials/torch-reviews-startup-exact-vector-integration-v1/legacy-candidate/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "cde3de678f44005008c41fd96bcb386b377303b88fbff9f6332c786592e457e9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-resource-v1/local-sealed-final.before-fixture-storage.tar.gz",
+      "bytes": 39055907,
+      "sha256": "bb159e9759ddc1c691d97ced6f43f297a88778c28555a15760f8f3b8a9b27de1",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-resource-v1/local-sealed.before-explicit-recipes.tar.gz",
+      "bytes": 39055297,
+      "sha256": "119301f4fa6054ccfb06eaff3309c13e1da495bac7238658880211dd2df27cce",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-resource-v1/torch-startup-exact-vector-resource-v1.tar.gz",
+      "bytes": 39063874,
+      "sha256": "9702d0fe3a81efb1051e16d18be63977541d447587335208a6f584e770409044",
+      "checksum_sidecar": "trials/torch-reviews-startup-exact-vector-resource-v1/torch-startup-exact-vector-resource-v1.tar.gz.sha256",
+      "expected_sha256": "9702d0fe3a81efb1051e16d18be63977541d447587335208a6f584e770409044",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reviews-startup-exact-vector-resource-v1-20261031T203754Z.0lyxk3k2.tar.gz",
+      "bytes": 1111266,
+      "sha256": "cd5949c3c4bfe660f83ce01698972316d1358e2ddbd94ded6bb8c89bbf6d7091",
+      "checksum_sidecar": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/reviews-startup-exact-vector-resource-v1-20261031T203754Z.0lyxk3k2.tar.gz.sha256",
+      "expected_sha256": "cd5949c3c4bfe660f83ce01698972316d1358e2ddbd94ded6bb8c89bbf6d7091",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/torch-startup-exact-vector-resource-v1.tar.gz",
+      "bytes": 39067447,
+      "sha256": "92333e1785d0510c45146d359724a55b482d96db44e383b56b88ee20040b4b90",
+      "checksum_sidecar": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/torch-startup-exact-vector-resource-v1.tar.gz.sha256",
+      "expected_sha256": "92333e1785d0510c45146d359724a55b482d96db44e383b56b88ee20040b4b90",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-harness-integration-v1/failure-proof/persistent-raw/failure-payload.tar.gz",
+      "bytes": 92295,
+      "sha256": "8167600cb558301a2b74a876e2a34295a1ec8ec807a0e44b5767f9eae99cee1d",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-harness-integration-v1/local-job/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-harness-integration-v1/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736245,
+      "sha256": "f6e5d9961f94d3d75e765a02c7b8b846c791684ab58f643e1042f18bff2eec94",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-harness-integration-v1/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "f6e5d9961f94d3d75e765a02c7b8b846c791684ab58f643e1042f18bff2eec94",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-integrated-release-v1/final/local-job/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-integrated-release-v1/final/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736217,
+      "sha256": "3d9d72feac40fd8ce80cceff9174e08ae1540d0ab961aa1ccdd999a5a5775d39",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-integrated-release-v1/final/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "3d9d72feac40fd8ce80cceff9174e08ae1540d0ab961aa1ccdd999a5a5775d39",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-integrated-release-v1/final/pre-seal/torch-startup-native-integrated-qualification-v1.tar.gz",
+      "bytes": 63507680,
+      "sha256": "b7771099d9600dc8ae73a6103a4aa3585f33e38775fdf86b00bdf2f913059aee",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-integrated-release-v1/final/pre-seal/torch-startup-native-integrated-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "b7771099d9600dc8ae73a6103a4aa3585f33e38775fdf86b00bdf2f913059aee",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-integrated-release-v1/final/torch-startup-native-integrated-qualification-v1/original.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-integrated-release-v1/final/torch-startup-native-integrated-qualification-v1.tar.gz",
+      "bytes": 63508101,
+      "sha256": "718dace53b35c08347fc00d6263a3da95ed889b63a62e920355f4639b2b0f017",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-integrated-release-v1/final/torch-startup-native-integrated-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "718dace53b35c08347fc00d6263a3da95ed889b63a62e920355f4639b2b0f017",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-integrated-release-v1/local-job/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-integrated-release-v1/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736286,
+      "sha256": "9ce2e7f1b257f31ccb2720dbe7a7d30bb709df5ebd3649cc43b5d63529b726fa",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-integrated-release-v1/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "9ce2e7f1b257f31ccb2720dbe7a7d30bb709df5ebd3649cc43b5d63529b726fa",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/package-attempt-1/torch-startup-native-integrated-qualification-v1/original.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/package-attempt-1/torch-startup-native-integrated-qualification-v1.tar.gz",
+      "bytes": 63572019,
+      "sha256": "6c62690aac0296af5d4478268b44f8807e0266abf8a24f45537df5d2d49cc81f",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/package-attempt-1/torch-startup-native-integrated-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "6c62690aac0296af5d4478268b44f8807e0266abf8a24f45537df5d2d49cc81f",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/package-attempt-2/torch-startup-native-integrated-qualification-v1/original.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/package-attempt-2/torch-startup-native-integrated-qualification-v1.tar.gz",
+      "bytes": 63580742,
+      "sha256": "6d3beb809a7b24e8f0799cdd837f07add1b4d05ffcb89d949b38893525ae0c1e",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/package-attempt-2/torch-startup-native-integrated-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "6d3beb809a7b24e8f0799cdd837f07add1b4d05ffcb89d949b38893525ae0c1e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/torch-startup-native-integrated-qualification-v1/original.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/torch-startup-native-integrated-qualification-v1.tar.gz",
+      "bytes": 63581253,
+      "sha256": "dda1c97651cfcf2b0480e440c7865f658738c050b798f048290799e8abbb9fb4",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-pinned-client-config-v1/native-config-integration-v1/torch-startup-native-integrated-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "dda1c97651cfcf2b0480e440c7865f658738c050b798f048290799e8abbb9fb4",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-release-review-v1/local-job/exact-stage/torch-startup-adaptive-x86-qualification-v1.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-release-review-v1/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz",
+      "bytes": 19736337,
+      "sha256": "aee3771c774a4386f21459c849b21412eff5f47c19601a207fee23eaa5edae44",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-release-review-v1/local-job/work/candidate-main/torch-startup-attribution-v1-image-reference.tar.gz.sha256",
+      "expected_sha256": "aee3771c774a4386f21459c849b21412eff5f47c19601a207fee23eaa5edae44",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-site-compatibility-v1/submission-21756110/failure-review-2026-11-03/returned-21756110.G1uzFpNf/native-integrated-08a9293c3c4e4386118be6a3.tar.gz",
+      "bytes": 3870,
+      "sha256": "3fcbdbd793766cb70a6c916f066a87949331fd145a8c66e107a871b4f8f4d467",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-site-compatibility-v1/submission-21756110/failure-review-2026-11-03/returned-21756110.G1uzFpNf/native-integrated-08a9293c3c4e4386118be6a3.tar.gz.sha256",
+      "expected_sha256": "3fcbdbd793766cb70a6c916f066a87949331fd145a8c66e107a871b4f8f4d467",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-site-compatibility-v1/torch-startup-native-integrated-qualification-v1/original.tar.gz",
+      "bytes": 33552852,
+      "sha256": "1e894ff2bd4455d0f8751484242bcd5defb789c658bf7a8b11b1273287d7cb3a",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-native-site-compatibility-v1/torch-startup-native-integrated-qualification-v1.tar.gz",
+      "bytes": 63519368,
+      "sha256": "619d4288ca7aac5ee4f2c6b07051539dd51420a895a7eac1025e7d7fbf1cde2e",
+      "checksum_sidecar": "trials/torch-reviews-startup-native-site-compatibility-v1/torch-startup-native-integrated-qualification-v1.tar.gz.sha256",
+      "expected_sha256": "619d4288ca7aac5ee4f2c6b07051539dd51420a895a7eac1025e7d7fbf1cde2e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-resource-stream-v1/reviews-startup-resource-stream-v1-20261028T151219Z.hmj9cwut.tar.gz",
+      "bytes": 829195,
+      "sha256": "63ff9b4800faab0a0ece6955ccabfb9c512548a35909cbca0e9b175a73ab3fef",
+      "checksum_sidecar": "trials/torch-reviews-startup-resource-stream-v1/reviews-startup-resource-stream-v1-20261028T151219Z.hmj9cwut.tar.gz.sha256",
+      "expected_sha256": "63ff9b4800faab0a0ece6955ccabfb9c512548a35909cbca0e9b175a73ab3fef",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-resource-stream-v1/torch-startup-resource-stream-v1.tar.gz",
+      "bytes": 19175143,
+      "sha256": "5fa2e92e7b87a4a8fff0ac7cb897e9f116ad8ecf07c4675e185c51f17ffb8689",
+      "checksum_sidecar": "trials/torch-reviews-startup-resource-stream-v1/torch-startup-resource-stream-v1.tar.gz.sha256",
+      "expected_sha256": "5fa2e92e7b87a4a8fff0ac7cb897e9f116ad8ecf07c4675e185c51f17ffb8689",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-resource-v1/reviews-startup-resource-v1-20261028T020546Z.zdsnk75c.tar.gz",
+      "bytes": 934849,
+      "sha256": "312bf5c02959a1e90514f6ec556914303095eb30c2f87acd9b182010a28320e7",
+      "checksum_sidecar": "trials/torch-reviews-startup-resource-v1/reviews-startup-resource-v1-20261028T020546Z.zdsnk75c.tar.gz.sha256",
+      "expected_sha256": "312bf5c02959a1e90514f6ec556914303095eb30c2f87acd9b182010a28320e7",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1.tar.gz",
+      "bytes": 18917673,
+      "sha256": "df8a7a8cbebd549ffd9ab5acfc0ee6d2e49c74cb0bd46d00e636fcc3d0269ab6",
+      "checksum_sidecar": "trials/torch-reviews-startup-resource-v1/torch-startup-resource-v1.tar.gz.sha256",
+      "expected_sha256": "df8a7a8cbebd549ffd9ab5acfc0ee6d2e49c74cb0bd46d00e636fcc3d0269ab6",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },

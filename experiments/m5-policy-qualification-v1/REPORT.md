@@ -10,8 +10,10 @@ Archive: `trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/m5-policy-
 relative to the workspace;8,248,804 bytes. SHA256:
 `3c4a0bd267d743e7abff9790beff7a7af510bc350cf079dda1c45d24e984b3b1`.
 The [freeze receipt](receipts/M5-freeze.json) binds the modules, plan, protocol,
-nominees, source graph/split and local readiness. [COMMANDS.txt](COMMANDS.txt)
-provides Mac upload, Torch submission/progress, and return-download commands.
+nominees, source graph/split and local readiness. Use [SFTP-UPLOAD.txt](SFTP-UPLOAD.txt)
+for Mac upload; this transport-only supplement supersedes the original SCP upload
+block. [COMMANDS.txt](COMMANDS.txt) provides Torch submission/progress and
+return-download commands. The sealed archive and its checksum are unchanged.
 
 One job: four physical CPUs,48GiB,six-hour wall limit. Expected214,396 searches
 under225,000 total reserved attempts. Compare native640, candidate7, candidate8,

@@ -18,22 +18,44 @@ from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-ROOTS = ["trials", "agent/runs", "agent-pgvector/verification", "harness/results",
-         "harness/docs/qualification", "mini-bench/qualification", "research/verification",
-         "research/agent-audit-2026-10-06", "release"]
+ROOTS = ["trials", "agent/experiments", "agent/runs", "agent/docs/verification",
+         "agent-pgvector/verification", "harness/results", "harness/docs/qualification",
+         "mini-bench/qualification", "research", "release"]
 SKIP = {".git", ".venv", "venv", "node_modules", "__pycache__", ".mypy_cache",
         ".ruff_cache", ".pytest_cache", "site-packages", "lib", "lib64", "bin", "include",
         "cache", "offline-cache", "wheelhouse", "wheels", "wheels-v2", "wheels-final",
         "sources", "source", "source-before", "engine-source", "core", "adapter", "engine",
         "images", "releases", "sandbox-build", "sandbox-build-v2", "private", "artifacts",
-        "inputs", "evidence", "reference", "packages", "measurement"}
+        "inputs", "evidence", "reference", "packages", "measurement",
+        "workspace", "vendor", "frozen", "snapshot"}
 MARKERS = {"state.sqlite3", "status.json", "failure.json", "host-failure.json", "error.json",
            "result.json", "results.json", "run.json", "summary.json", "report.txt", "study.json",
            "study-report.txt", "selection.json", "agent-status.json", "verification.json",
-           "native-summary.json", "smoke-result.json", "audit.json", "progress.json"}
+           "native-summary.json", "smoke-result.json", "audit.json", "progress.json",
+           "receipt.json", "host-exit.json", "assessment.json", "outcome.json",
+           "binding.json", "nominees.json", "local-readiness.json", "scheduler-reported.json",
+           "README.md", "REPORT.md", "PROTOCOL.md", "COMMANDS.txt", "SFTP-UPLOAD.txt"}
+MARKERS_LOWER = {name.lower() for name in MARKERS}
+METADATA_NAME = re.compile(
+    r"(?:^|[-_])(verification|receipt|assessment|readiness|freeze|failure|outcome|gates|review|checks?|summary|reconciliation|reported)(?:[-_.]|$)",
+    re.IGNORECASE)
+FLAT_METADATA_DIRS = {"reports", "freeze", "receipts"}
 FIELDS = {"status", "outcome", "stage", "accepted", "candidate_accepted", "termination_reason",
           "reason", "error", "type", "message", "censored", "failure", "canonical_acceptance_established",
-          "confirmation_queries", "selected_policy", "provider_calls", "model_calls"}
+          "confirmation_queries", "selected_policy", "provider_calls", "model_calls",
+          "disposition", "final_policy_selected", "original_graph_M5_qualified",
+          "native_qualification", "validation_test_outcomes_opened", "exact_serving_calls"}
+
+
+def is_evidence(path, name):
+    """Select public report/receipt metadata, never request bodies or private inputs."""
+    lower = name.lower()
+    if lower in MARKERS_LOWER or lower.endswith(("failure.json", "-journal.json")):
+        return True
+    if lower.endswith(".json") and (METADATA_NAME.search(name) or "authentication-check" in lower):
+        return True
+    flat = path.name in FLAT_METADATA_DIRS or path in {ROOT / "research", ROOT / "agent/docs/verification"}
+    return flat and Path(name).suffix.lower() in {".json", ".md", ".txt"}
 
 
 def sha(path):
@@ -74,7 +96,18 @@ def recipe(path):
                    ("collector-ab", "torch-reviews-collector-ab"), ("size-sweep", "torch-reviews-size-sweep"),
                    ("ef-sweep", "torch-reviews-ef-sweep"), ("reference-", "torch-reviews-reference-fix")]
         family = next((package for term, package in mapping if term in name), family)
-    candidates = [ROOT / "trials" / family / "README.md"]
+    candidates = []
+    # A result campaign has a separate source recipe; otherwise prefer the
+    # closest experiment README rather than a broad campaign landing page.
+    if path.startswith("trials/torch-reviews-results/"):
+        candidates.append(ROOT / "trials" / family / "README.md")
+    for ancestor in [p, *p.parents]:
+        if ancestor == ROOT:
+            break
+        candidates += [ancestor / name for name in ["README.md", "PROTOCOL.md", "COMMANDS.txt",
+                       "study.sh", "study_entry.py", "run_authorized_study.py",
+                       "report_results.py", "report.py", "report_investigation.py"]]
+    candidates.append(ROOT / "trials" / family / "README.md")
     if family == "morevec-movies-small":
         candidates += [ROOT / "trials" / family / "latency-diagnosis-README.txt",
                        ROOT / "trials" / family / "research-instructions.txt"]
@@ -90,11 +123,8 @@ def recipe(path):
         candidates += [ROOT / "harness/docs/methodology.md", ROOT / "harness/README.md"]
     if path.startswith("mini-bench/"):
         candidates += [ROOT / "mini-bench/qualification/REPORT.md"]
-    for ancestor in [p, *p.parents]:
-        if ancestor == ROOT:
-            break
-        candidates += [ancestor / name for name in ["README.md", "study.sh", "study_entry.py",
-                       "run_authorized_study.py", "report_results.py", "report.py", "report_investigation.py"]]
+    if path.startswith("research/") or path.startswith("agent/docs/verification/"):
+        candidates.append(ROOT / "agent/docs/experiments/README.md")
     if path.startswith("release/"):
         candidates += [ROOT / "agent/README.md"]
     found = next((q for q in candidates if q.is_file()), None)
@@ -108,8 +138,7 @@ def evidence_record(path, files, kind="saved evidence directory"):
         q = path / name
         if q.is_symlink() or not q.is_file():
             continue
-        if (name in MARKERS or name.endswith("failure.json") or name.endswith("-journal.json")
-                or ("authentication-check" in name and name.endswith(".json"))):
+        if is_evidence(path, name):
             item = {"path": rel(q)}
             if name != "state.sqlite3":
                 item["sha256"] = sha(q)
@@ -124,13 +153,20 @@ def evidence_record(path, files, kind="saved evidence directory"):
                                          if v is not None and k in {"status", "outcome", "stage", "error", "failure"}]
                 except (ValueError, UnicodeError):
                     item["parse_status"] = "unreadable JSON"
-            if name in {"report.txt", "study-report.txt"}:
+            if q.suffix.lower() in {".md", ".txt"}:
                 lines = q.read_text(errors="replace").splitlines()
                 item["headline"] = next((x.strip() for x in lines if x.strip()), "")[:400]
             evidence.append(item)
+    # Raw rows/logs remain linked without interpreting them as successful runs.
+    raw_artifacts = [{"path": rel(path / name), "bytes": (path / name).stat().st_size}
+                     for name in sorted(files)
+                     if Path(name).suffix.lower() in {".jsonl", ".csv", ".log"}
+                     and not (path / name).is_symlink() and (path / name).is_file()]
     record = {"path": rel(path), "kind": kind, "evidence": evidence,
               "recorded_outcome": "; ".join(dict.fromkeys(observations)) or "No terminal status inferred; inspect linked evidence",
               "reproduction_reference": recipe(rel(path))}
+    if raw_artifacts:
+        record["raw_artifacts"] = raw_artifacts
     db = path / "state.sqlite3"
     if db.is_file():
         try:
@@ -163,14 +199,26 @@ def scan():
             ds[:] = sorted(d for d in ds if d not in removed and not (path / d).is_symlink())
             exclusions += [rel(path / d) for d in removed]
             archives += [path / f for f in fs if f.endswith((".tar.gz", ".tgz", ".zip")) and not (path / f).is_symlink()]
-            found = set(fs) & MARKERS
-            found |= {f for f in fs if f.endswith("failure.json") or f.endswith("-journal.json")}
+            found = {f for f in fs if is_evidence(path, f) and not (path / f).is_symlink()}
             top_trial = path.parent == ROOT / "trials"
+            top_experiment = path.parent == ROOT / "agent/experiments"
             result_root = path.parent == ROOT / "trials/torch-reviews-results"
             attempt = bool(re.match(r"(?:run|execution|prepared|qualification|oracle-preflight|quiet|settings-screen|stopping-feasibility|policy-stall|docker-stability|sequential-fix|latency-fix-recheck)-", path.name))
             verification_root = base in {"agent-pgvector/verification", "mini-bench/qualification", "research/agent-audit-2026-10-06"} and path == start
-            if found or top_trial or result_root or attempt or verification_root:
+            # Flat report/freeze/receipt collections get one searchable row per
+            # file instead of an enormous row hiding distinct outcomes.
+            flat = path.name in FLAT_METADATA_DIRS or path in {ROOT / "research", ROOT / "agent/docs/verification"}
+            if flat:
+                for name in sorted(found - {"state.sqlite3"}):
+                    record = evidence_record(path, [name], "report, decision or provenance receipt")
+                    record["path"] = rel(path / name)
+                    record["reproduction_reference"] = recipe(record["path"])
+                    records.append(record)
+                found &= {"state.sqlite3"}
+            if found or top_trial or top_experiment or result_root or attempt or verification_root:
                 kind = "package or study family" if top_trial else "saved evidence directory"
+                if top_experiment:
+                    kind = "experiment definition or preparation"
                 if "integration-only" in path.parts or base == "release" or path.name == "validation":
                     kind = "engineering/synthetic verification"
                 elif "blocks" in path.parts or path.name.startswith("cohort-"):
@@ -212,13 +260,15 @@ def main():
     args = parser.parse_args()
     stamp = datetime.now(ZoneInfo("America/New_York")).isoformat(timespec="seconds")
     records, archive_paths, exclusions = scan()
-    data = {"schema_version": 1, "observed_at": stamp, "workspace_root": str(ROOT), "scope_roots": ROOTS,
+    data = {"schema_version": 2, "observed_at": stamp, "workspace_root": str(ROOT), "scope_roots": ROOTS,
             "scope_limit": "Saved workspace evidence only; remote-only/missing/deleted runs cannot be exhaustively enumerated. Blocks, analyses and fixtures are identified separately.",
+            "discovery_rules": "Case-insensitive report/status/receipt markers and named verification/review/freeze metadata; one row per file in reports/freeze/receipts, research documents and agent/docs/verification. Experiment definitions and top-level trial families are retained without implying execution. Raw JSONL/CSV/log files are linked, not interpreted or reanalyzed.",
             "excluded_directories": exclusions, "record_count": len(records),
             "journaled_experiment_count": sum(len(r.get("journaled_experiments", [])) for r in records), "records": records}
     (HERE / "run-inventory.json").write_text(json.dumps(data, indent=2) + "\n")
     lines = ["# Saved run and evidence catalog", "", f"Observed {stamp}. {len(records)} evidence records; these are **not** {len(records)} independent experiments.", "",
-             "See [master index](README.md) for conclusions, missing remote failures and reproduction procedures. This catalog includes every discovered family, attempt, block, conversation, analysis and engineering fixture under the documented scan roots. No terminal status is inferred from a filename or a report's existence. JSON outcomes are observations, not scientific acceptance decisions.", "",
+             "See [master index](README.md) for current conclusions, supersession, missing remote failures and reproduction procedures. This catalog includes discovered families, definitions/preparations, attempts, blocks, conversations, reports, freezes, receipts, analyses and engineering fixtures under the documented scan roots. No terminal status is inferred from a filename or a report's existence. JSON outcomes are observations, not scientific acceptance decisions; use the latest linked assessment rather than an earlier preparation status.", "",
+             "Discovery now includes agent/experiments, agent/docs/verification and research reports as well as saved trial returns. Copied workspace/vendor/frozen/snapshot source trees, dependencies, private stores and input/reference data are pruned. The complete roots, exclusions and discovery rules are in [run-inventory.json](run-inventory.json). Counts therefore differ from the October 21 catalog in both coverage and saved work.", "",
              "Artifact links require the original sibling workspace directories. Historical reruns need the linked recipe, saved configuration/manifest, original inputs and runtime. A missing recipe means exact invocation recovery is incomplete; inspect the directory's source/status/logs. Reading reports or regenerating this catalog runs no experiment.", ""]
     last_group = None
     for r in records:
@@ -231,6 +281,8 @@ def main():
         if "database_status" in r:
             outcome += "; database status=" + str(r["database_status"])
         artifacts = ", ".join(link(e["path"]) for e in r["evidence"] if Path(e["path"]).name != "state.sqlite3") or link(r["path"], "directory / saved state")
+        if r.get("raw_artifacts"):
+            artifacts += "; " + link(r["path"], f"raw rows/logs ({len(r['raw_artifacts'])} files)")
         repro = link(r["reproduction_reference"]) if r["reproduction_reference"] else "Exact invocation not recovered; inspect saved files"
         label = r.get("run_id", '/'.join(parts[2:]) or parts[-1])
         lines.append(f"| {link(r['path'], label)} | {r['kind']}; {outcome} | {artifacts} | {repro} |")

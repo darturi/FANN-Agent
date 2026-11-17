@@ -1,6 +1,7 @@
 # Master experiment index
 
-Snapshot: October 21, 2026, America/New_York. This is the entry point for the
+Updated: November 17, 2026, America/New_York. Saved work reviewed through
+November 16, including the current M5 upload handoff. This is the entry point for the
 saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
 paths are relative to this document and require the sibling workspace folders;
 cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data.
@@ -14,24 +15,58 @@ cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data
 - [Backup audit](BACKUP_AUDIT.md): verified local integrity, missing artifacts,
   remote-check results and outstanding backup coverage.
 
-The initial inventory contains 292 saved evidence records and 15 experiments
-registered inside saved agent journals. Locations include repeated blocks,
-analysis directories, packages and synthetic checks; they are not a count of
-independent scientific experiments. The 207 discovered archives include source,
-runtime, engineering and result archives. Seventeen result tarballs sit directly
-under `trials/torch-reviews-results/`; the manifest also covers nested training
-packages and archives elsewhere in the scan roots.
+The refreshed inventory contains 1,857 saved evidence records and 15 experiments
+registered inside saved agent journals. Locations include definitions, receipts,
+repeated blocks, analyses, packages and synthetic checks; they are not a count of
+independent scientific experiments. The 373 discovered archives include source,
+runtime, engineering and result archives, totaling 22,045,221,476 bytes. All 159
+with usable checksum sidecars match; 214 have no usable earlier sidecar. The
+October 21 inventory had 292 records and 207 archives. The increased record count
+reflects both later work and expanded discovery of Markdown reports, receipts,
+freezes and experiment definitions; it is not a count of new launches.
+
+## Current study status — November 17, 2026
+
+The active benchmark study uses raw ANN outputs with **exact search for offline
+scoring only**. All six scalar filters plus unfiltered remain in scope. The
+450 development / 150 validation / 275 test / 125 historical-exclusion split is
+frozen; validation and test outcomes remain unopened in the latest assessments.
+Earlier completion-guard results and older timing criteria below are historical
+records, with their original conclusions preserved.
+
+| Stage | Latest recorded disposition | Authoritative evidence |
+|---|---|---|
+| M0 reader/CPU/search-work attribution | Job 23303080 verified; failed startup job 23074287 retained separately. Broad has a modest allocation-conditional development benefit, without a final performance claim. | [M0 assessment](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.md) |
+| M1 runtime, prefix and cost qualification | Job 23376796 verified; all 9,436 reached prefixes labeled, including 1,496 partial prefixes. Runtime qualified; universal additive cost precision does not follow. | [M1 assessment](../../experiments/m1-assessment-v1/REPORT.md) |
+| M2/M3 evidence and controller | Complete evidence bound. Both point-cost models fail their fixed precision limits; the separately qualified uncertainty-aware shortlist and bound positive/abstention rehearsals pass. | [M2/M3 report](../../experiments/m2-evidence-cost-v1/REPORT.md), [shortlist report](../../experiments/uncertainty-shortlist-v1/REPORT.md) |
+| M4 agent episode and amendments | Initial payload-limit abstention and six-call closed outcome preserved. Dollar-governed continuation formally submits candidates 7/8; eight cumulative Messages calls cost $0.403114 under the original $15 ceiling. Both nominees preserve development recall and have supported uncertain cost estimates; estimated costs are not measured speedups. | [Final M4 assessment](../../experiments/m4-dollar-assessment-v1/REPORT.md), [nominees](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/assessment-v1/nominees.json) |
+| M5 live policy/control comparison | Sealed for one user-submitted development job. Native startup preflight, original-graph qualification and actual timings remain pending. No final policy selected. | [M5 preparation report](../../experiments/m5-policy-qualification-v1/REPORT.md), [freeze](../../experiments/m5-policy-qualification-v1/receipts/M5-freeze.json), [SFTP upload](../../experiments/m5-policy-qualification-v1/SFTP-UPLOAD.txt), [Torch/return commands](../../experiments/m5-policy-qualification-v1/COMMANDS.txt) |
+
+The next evidence gate is the returned M5 archive and independent scheduler
+accounting. Native remains a valid outcome. No held-out, replicated, or final
+5% practical latency benefit has been established. The historical three-request
+episode remains exhausted at $0.725544 and is separate from the current M4 ledger.
+
+See the [November 5–16 log additions](#experiment-log-update--november-516-2026)
+for intervening work and the [benchmark roadmap](../../../research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md)
+for the longer narrative. Read dated later assessments when an older preparation
+paragraph or roadmap header still describes a pending stage.
 
 ## Coverage and interpretation
 
-The catalog enumerates persisted evidence under `trials/`, `agent/runs/`,
+The catalog enumerates persisted evidence under `trials/`, `agent/experiments/`,
+`agent/runs/`, `agent/docs/verification/`,
 `agent-pgvector/verification/`, `harness/results/`, `harness/docs/qualification/`,
-`mini-bench/qualification/`, the two research verification roots listed in the
-inventory, and `release/`. It excludes dependency installations, vendor/source
-copies, private stores, cached artifacts, input/reference corpora and copied
-packages inside results. The precise roots and excluded directories are recorded
-in JSON. Unit tests are supporting verification, not additional research trials.
-Journaled subexperiments are listed under their parent saved run.
+`mini-bench/qualification/`, `research/`, and `release/`. It excludes dependency
+installations, copied workspace/vendor/frozen/snapshot source trees, private
+stores, caches and input/reference corpora. Case-insensitive report/status/receipt
+markers and named verification/review/freeze metadata discover evidence. Flat
+report, freeze and receipt collections, research documents and agent verification
+receipts receive individual file records. Raw JSONL/CSV/log paths are linked
+without reanalysis. The exact rules, roots and excluded directories are recorded
+in JSON. Unit tests are supporting verification, not additional research trials;
+an experiment definition or sealed kit does not establish execution. Journaled
+subexperiments are listed under their parent saved run.
 
 The inventory is exhaustive for these discovery rules and this local snapshot.
 Remote-only, deleted, unrecorded or differently named runs cannot be certified
@@ -162,10 +197,10 @@ fannagent experiments --run /absolute/path/to/saved/run --experiment-id RECORDED
 The inventory reads SQLite in read-only mode and lists each discovered registered
 experiment ID; it does not dump configuration, credentials or provider responses.
 
-### Independently reanalyze the latest completed campaign
+### Archived October 21 campaign reanalysis
 
-The following is the archived recipe, provided for future reproduction. Creating
-this index did not execute it or reopen confirmation data:
+The following is the historical October 21 recipe, rather than the latest study.
+Refreshing this index did not execute it or reopen confirmation data:
 
 ```sh
 cd /Users/danielarturi/Developer/JinyangLiWork

@@ -1,0 +1,20 @@
+# On your Mac, connected to the NYU network/VPN: verify the sealed kit.
+# NYU documents the changed-key warning for Torch's multiple login nodes:
+# https://services.rt.nyu.edu/docs/hpc/connecting_to_hpc/connecting_to_hpc/
+# The options below follow its workaround for this connection only. They disable
+# host-key verification; they do not verify the presented fingerprint or edit known_hosts.
+cd /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/kits
+shasum -a 256 -c m5-policy-qualification-v1.tar.gz.sha256
+sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ForwardAgent=no dar579@login.torch.hpc.nyu.edu
+
+# At the sftp> prompt, after authentication:
+cd /home/dar579
+put m5-policy-qualification-v1.tar.gz
+put m5-policy-qualification-v1.tar.gz.sha256
+bye
+
+# Back at your Mac shell: log in and use the Torch submission block in COMMANDS.txt.
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ForwardAgent=no dar579@login.torch.hpc.nyu.edu
+
+# This supplement replaces only the SCP upload instructions in COMMANDS.txt.
+# The sealed archive, checksum, study protocol and Torch submission are unchanged.
