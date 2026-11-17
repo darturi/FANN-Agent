@@ -1,0 +1,156 @@
+{
+  "M5_nominees": 0,
+  "SQL_searches": 0,
+  "actual_bound_feedback_recomputed": true,
+  "actual_spend_usd": "0.038798",
+  "audit_source_sha256": "d2bed6692b2dca8e5889f82ac7616dcafbae38fbd72411297c0b41a4f026559b",
+  "authorization_sha256": "028c29097c98e156846a7eeb29d375d3938f1f06ed8dc9cef57ea1b7cd4be3f0",
+  "candidate_submissions": 0,
+  "ceiling_usd": "15",
+  "data_sent": "Frozen compact initial payload and aggregate inspect_workload feedback; the 18 locally prepared case examples never reached a third request.",
+  "date": "2026-11-16",
+  "domain_tool_count": 4,
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "exact_search_calls": 0,
+  "exact_truth_use": "Existing offline development recall labels only; no serving repair",
+  "excess_bytes": 574,
+  "execution_commit": "ee1ad72",
+  "frozen_artifact_files_verified": 65,
+  "frozen_source_files_verified": 32,
+  "input_tokens_total": 17434,
+  "interpretation": "Host operational payload capacity failed on a valid permitted tool sequence. This episode provides no evidence of agent policy quality or robustness.",
+  "live_artifacts_sha256": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/private/artifacts/52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4.json": "52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/private/artifacts/524224b68212eaaaef53f500d2d1b993cb0c90a2c5f5693c04f84faa73bc8dd0.json": "524224b68212eaaaef53f500d2d1b993cb0c90a2c5f5693c04f84faa73bc8dd0",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/private/artifacts/67749f9a1de7e7708b3449d3ab1e09042fd44c98756ab59134d8d35ec7ff7c2c.json": "67749f9a1de7e7708b3449d3ab1e09042fd44c98756ab59134d8d35ec7ff7c2c",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/private/artifacts/85b4e8485cf7630ce0b7d6faef9bfce00731f16fc8fa790f1b9a6eb1b1659406.json": "85b4e8485cf7630ce0b7d6faef9bfce00731f16fc8fa790f1b9a6eb1b1659406",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/private/artifacts/bd6d9a67f629b644eda5465575dc36c8b72e0803afa76699c098eea47767c5a7.json": "bd6d9a67f629b644eda5465575dc36c8b72e0803afa76699c098eea47767c5a7",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/private/artifacts/e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8.json": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/state.sqlite3": "4dda3e9f9d41829b7fc65e6d138d09551715293d732e370d019d594e72d03957",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/state.sqlite3-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/state.sqlite3-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/workspace/artifacts/2d2f6108df9f6f5b646687993669a7d36fbd5eb984683f895298845e5eb94957.json": "2d2f6108df9f6f5b646687993669a7d36fbd5eb984683f895298845e5eb94957",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/workspace/artifacts/3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2.json": "3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/workspace/artifacts/c18299e82f7c74ed498829b8093bb2cc1df409addae4c5df00964efe3fd350ef.json": "c18299e82f7c74ed498829b8093bb2cc1df409addae4c5df00964efe3fd350ef",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/campaign/workspace/artifacts/c785e0fff3a051cfb7323a01f5554613c19d45c93d564d5c669d15536614e01f.json": "c785e0fff3a051cfb7323a01f5554613c19d45c93d564d5c669d15536614e01f",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/dispatch-preflight/model-overview.md": "0067a54f2d41feecd82eb7c5d34a9efdf96ac81fd90692b4408df8a03292deac",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/dispatch-preflight/model.json": "6b7ce4412b3cd83cd2753ddf91329385b655ad837cfba7a6d6c466e0b212e92d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/dispatch-preflight/pricing.md": "048ccb65c7aa39a16f8475d92bec1730bc9e42c63b79085e2f0f1e6e5f867cd1",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/dispatch-preflight/receipt.json": "ba788797430684c83cb9b9eccabc3dc8ab34beae04f3a87e1479a42e6aee534a",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/episode-disposition.json": "3ab994c43866abf6dfdf889b936fe83b2b60ccfbc8e12fdfdc02a62b9c37f0d3",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/local-stop.json": "8ca8dbb6b678cdc56b4c417858b63c50324f19db3b146bfbad526342e202ccb7",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-1/attempt.json": "b40fee331f38d4edbf5b740cea69f606f680605b349a089f0d202da7fb05ca51",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-1/http.json": "af616f7bd1537edbbcfb6bfccd924a37d5aaecfa2d9f936e64232e705ccc2c84",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-1/request.json": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-1/response.json": "fc58d9781b47ad815071e7e25e112f5567b6144b0c4ff9fa883aeb3deda4923e",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-2/attempt.json": "f190488f3575a176240b1c6ec963cda22a240d43b317cb4fd7cbdf3acd1005b7",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-2/http.json": "0890843f0fd6ab74146b97f2406e5861d7f70d590e10781dc3b19a645ef64e72",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-2/request.json": "52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/live-episode/provider/request-2/response.json": "06263e3d534fa8bd960efa41cf510e0b2b0c7b2dbc11d2f0dbe98f036f4cd078"
+  },
+  "live_policy_timing_measured": false,
+  "locally_prepared_case_feedback_not_sent": 18,
+  "maximum_requests": 6,
+  "new_generation_provider_metadata_GETs": 1,
+  "next_request_reserved_or_sent": false,
+  "next_step": "Amend and locally qualify context/feedback capacity before a separately approved continuation; retain these two requests and spend in any cumulative cap.",
+  "next_unsent_request_bytes": 42382,
+  "operational_limit_bytes": 50000,
+  "output_tokens_total": 393,
+  "package_sha256": "1338109962e544a4f6e969b2ec33993139248ddfd1b13df67c8300fb9d025660",
+  "request_count": 2,
+  "requests": [
+    {
+      "actual_usd": "0.012064",
+      "http_status": 200,
+      "input_tokens": 5797,
+      "ordinal": 1,
+      "output_tokens": 47,
+      "request_bytes": 14472,
+      "request_sha256": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+      "response_sha256": "fc58d9781b47ad815071e7e25e112f5567b6144b0c4ff9fa883aeb3deda4923e",
+      "thinking_output_tokens": 0
+    },
+    {
+      "actual_usd": "0.026734",
+      "http_status": 200,
+      "input_tokens": 11637,
+      "ordinal": 2,
+      "output_tokens": 346,
+      "request_bytes": 29438,
+      "request_sha256": "52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4",
+      "response_sha256": "06263e3d534fa8bd960efa41cf510e0b2b0c7b2dbc11d2f0dbe98f036f4cd078",
+      "thinking_output_tokens": 0
+    }
+  ],
+  "reserved_headroom_bytes": 8192,
+  "retries": 0,
+  "runner_generic_M5_next_step_is_eligible": false,
+  "schema": "filtered-ann.M4-episode-assessment.v1",
+  "scope": {
+    "development_groups": 450,
+    "exact_scoring_only": true,
+    "scalar_filters": 6,
+    "unfiltered": true,
+    "validation_test_outcomes_opened": false
+  },
+  "status": "verified_terminal_host_payload_limit_abstention_no_policy_candidates",
+  "tool_result_sizes": [
+    {
+      "after_request": 1,
+      "name": "inspect_workload",
+      "tool_result_block_bytes": 14703
+    },
+    {
+      "after_request": 2,
+      "name": "explain_cases",
+      "tool_result_block_bytes": 3705
+    },
+    {
+      "after_request": 2,
+      "name": "explain_cases",
+      "tool_result_block_bytes": 4247
+    },
+    {
+      "after_request": 2,
+      "name": "explain_cases",
+      "tool_result_block_bytes": 4239
+    }
+  ],
+  "tools": [
+    {
+      "arguments": {},
+      "cases": 0,
+      "name": "inspect_workload"
+    },
+    {
+      "arguments": {
+        "category": "preserving_partial_prefix",
+        "filter": "votes527",
+        "limit": 6
+      },
+      "cases": 6,
+      "name": "explain_cases"
+    },
+    {
+      "arguments": {
+        "category": "lossy_prefix",
+        "filter": "unfiltered",
+        "limit": 6
+      },
+      "cases": 6,
+      "name": "explain_cases"
+    },
+    {
+      "arguments": {
+        "category": "qualified_full_prefix",
+        "filter": "unfiltered",
+        "limit": 6
+      },
+      "cases": 6,
+      "name": "explain_cases"
+    }
+  ],
+  "uncertain_calls": 0,
+  "validation_test_outcomes_opened": false
+}

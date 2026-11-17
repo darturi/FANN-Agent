@@ -1,0 +1,13 @@
+{
+  "actual_spend_usd": "0.038798",
+  "date": "2026-11-16",
+  "nominees": 0,
+  "package_sha256": "1338109962e544a4f6e969b2ec33993139248ddfd1b13df67c8300fb9d025660",
+  "receipt_sha256": "f03f9e99baed45e4528d1c702aff6d10c538aa196cabf29c3aa272a57ef71f14",
+  "receipt_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/assessment-v1/receipt.json",
+  "requests": 2,
+  "schema": "filtered-ann.M4-outcome-freeze.v1",
+  "status": "verified_terminal_host_payload_limit_abstention_no_policy_candidates",
+  "terminal": "bounded_M4_abstention_local_contract_limit",
+  "validation_test_outcomes_opened": false
+}
