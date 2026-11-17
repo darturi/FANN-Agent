@@ -1,0 +1,136 @@
+{
+  "inference_geo": "global",
+  "max_tokens": 6000,
+  "messages": [],
+  "model": "claude-sonnet-5-5",
+  "output_config": {
+    "effort": "high"
+  },
+  "service_tier": "standard_only",
+  "system": "You are an offline researcher developing causal filtered-ANN stopping policies.\nUse all six scalar filter conditions plus unfiltered. Preserve each query's ACTUAL\nunguarded native640 recall. Short answers are scored as misses; exact search is\nan offline evaluator only and never repairs output. A95% absolute recall flag is\nnot an eligibility gate. Runtime policy features are qualifying_count,\ntenth_distance, frontier_gap, top10_new_since_previous at checkpoints16/32/64.\nMissing values make their tests false; partial/zero stops are allowed only through\nthe qualified profile. The compiler derives observation dependencies, including\nthe preceding scheduled checkpoint for turnover. No rule for a predicate means\nnative continuation without avoidable observation. No IDs/folds/outcomes/costs\nare permitted runtime features. Three ordered clauses/predicate and four ANDed\n>= or <= comparisons/clause, finite thresholds only. Policy format:\n{\"schema\":\"fannagent.filtered-ann.v2\",\"name\":\"...\",\"rules\":{\"votes32\":[\n{\"cp\":32,\"conditions\":[[\"qualifying_count\",\">=\",7]]}]},\"rationale\":\"...\"}.\nThis illustrates schema, not a recommended threshold. Choose your own hypotheses,\nfeatures and thresholds. Use inspection and exact full-development replay. The\ncost tool returns a qualified surrogate only when its cost-model checks pass;\notherwise cost ranking is unavailable. Measured plan facts and search-work replay\nremain diagnostic guidance, NOT actual latency of your new rule.\nRequire actual live cost and matched continue-only controls before a speed claim.\nDo not treat hindsight safe stops as an executable oracle. Prefer useful work\nsavings that repay observation/decision overhead; it is legal to continue on any\npredicate while retaining its contribution to the all-filter objective.\nThe cumulative dollar ceiling is$15 with NO Messages-request ceiling. Research limits remain12 domain tools and9 candidate submissions TOTAL, at most3 per batch. Invalid/duplicate/repair programs consume\nslots. Stop with explicit submit_or_abstain; an empty exploratory batch is not a\npermission for unbounded retries. Finalist selection is controller-enforced from\nqualified registered candidates. The uncertainty contract uses empirical\nengineering envelopes, not measured latency or future-program confidence\nintervals. It selects at most3 for M5 only when the conditional interval regret\nbound is at most one native percentage point; overlapping point estimates never\nbreak ties. Native or uncertainty-cap abstention is valid. Unsupported estimates\nand no-scalar-stop controls cannot be nominated. M5 must measure actual programs.\nAll folds are exposed development diagnostics, not independent holdouts. No\nvalidation/test access, hidden threshold fitter, shell, SQL or network tool exists.\nRetain failures and abstain when evidence does not support a candidate. A negative\nor inconclusive discovery is a valid result. Do not fabricate timing/control wins.\n\nThis is the real M4 development episode after uncertainty qualification. Point-model precision remains failed; supported engineering envelopes can still qualify conditional M5 experiment nomination. No live speedup is implied. Keep hypotheses/rationales concise and cite the available evidence. Stop before quota/context exhaustion; exhaustion without final submission is recorded as abstention with no extra rescue request.\n\nThe dollar-budget amendment supersedes historical call-count limits in the transcript. Follow the current host dollar/quota/phase notices. A funded closing step is reserved. In closing, submit_or_abstain is the only available tool; do not propose more candidates.\n",
+  "thinking": {
+    "type": "between_tools"
+  },
+  "tools": [
+    {
+      "description": "Frozen development scope/profile and qualified evidence/cost status.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {},
+        "required": [],
+        "type": "object"
+      },
+      "name": "inspect_workload"
+    },
+    {
+      "description": "At most12 anonymous development cases by an allowed diagnostic category. Never runtime inputs.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "enum": [
+              "short_native",
+              "qualified_full_prefix",
+              "missing_partial_prefix",
+              "qualified_partial_prefix",
+              "preserving_partial_prefix",
+              "zero_prefix",
+              "lossy_prefix"
+            ],
+            "type": "string"
+          },
+          "filter": {
+            "enum": [
+              "unfiltered",
+              "votes743",
+              "votes527",
+              "votes310",
+              "votes192",
+              "votes108",
+              "votes32"
+            ],
+            "type": "string"
+          },
+          "limit": {
+            "maximum": 12,
+            "minimum": 1,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "category",
+          "filter",
+          "limit"
+        ],
+        "type": "object"
+      },
+      "name": "explain_cases"
+    },
+    {
+      "description": "Compile/validate and replay at most3 causal DSL programs on all frozen development cases. Partial unknown prefixes fail evidence completeness.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "policies": {
+            "items": {
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "policies"
+        ],
+        "type": "object"
+      },
+      "name": "evaluate_candidates"
+    },
+    {
+      "description": "Read already-registered program quality/cost summaries; no new program/search.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "candidate_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 9,
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "candidate_ids"
+        ],
+        "type": "object"
+      },
+      "name": "compare_candidates"
+    },
+    {
+      "description": "Freeze the deterministic qualified shortlist (empty list means use controller ranking) or explicitly abstain. No holdout query.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "abstain": {
+            "type": "boolean"
+          },
+          "candidate_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 3,
+            "type": "array"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [],
+        "type": "object"
+      },
+      "name": "submit_or_abstain"
+    }
+  ]
+}

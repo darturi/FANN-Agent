@@ -1,0 +1,70 @@
+{
+  "changes": [
+    "Remove paid and free-count ordinal ceilings",
+    "Preserve cumulative$15 and prior debt/history/candidates",
+    "Reserve funded closing step and final tool slot",
+    "Explicit filter enum, cost-support disclosure and current quota notices"
+  ],
+  "config": {
+    "allowance_usd": "0",
+    "assistant_message_bytes": 524288,
+    "automatic_retries": false,
+    "billing_input_token_bound": 1000000,
+    "candidate_submissions": 9,
+    "ceiling_usd": "15",
+    "closing_reservation_usd": "2.06",
+    "count_preflight": "one_per_message",
+    "counted_input_token_limit": 900000,
+    "domain_tools": 12,
+    "headroom_bytes": 8192,
+    "max_count_requests": null,
+    "max_output_tokens": 6000,
+    "max_requests": null,
+    "maximum_reservation_usd": "2.06",
+    "prior_Messages_requests": 6,
+    "prior_spend_usd": "0.244308",
+    "remaining_USD": "14.755692",
+    "request_byte_bound": 8388608,
+    "reserved_closing_tools": 1,
+    "spending_policy": "dollar_ceiling",
+    "tool_result_block_bytes": 524288
+  },
+  "date": "2026-11-16",
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "evidence_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/bound-evidence.json",
+  "first_request_bytes": 85582,
+  "first_request_sha256": "6164ddd3a05b3813c3f55ee6c5ead433082701feea67e8939e1cfbd53e7d7ef6",
+  "model": "claude-sonnet-5-5",
+  "new_count_requests": 0,
+  "new_paid_requests": 0,
+  "original_closed_outcome_sha256": "1b744bdbb292815f7a292040764a140e976151c52c43cd5664ca7f0e99848001",
+  "phase_prompt_hashes": {
+    "closing": "e4dbb5da9dc9283308c856498e0e2a1fce3bb6dd48a515790f2168a5876a5109",
+    "research": "b49afdea67010b224bf81b6d5b08bbbbd94fd81b62c2ce7052194aeafb9de143"
+  },
+  "prior_Messages_requests": 6,
+  "prior_candidate_submissions": 6,
+  "prior_charge_ids": [
+    "01e0cfafcbb3464c888a2243c490291e",
+    "ae54f2f2cac4466998ed1ae720b40d76",
+    "a9c4acfd937a4aa9be012b69a0515e7f",
+    "064362b5c2234591bc37925087923154",
+    "0bbdbaa3b4804262a9ce25ec41fb09c7",
+    "fb4bae673e3a43409a9f17d2352047ff"
+  ],
+  "prior_history_sha256": "01e8e793359ad919bff4948409db9e8a21c8700457a189b4f859c98c659ab0d4",
+  "prior_spend_usd": "0.244308",
+  "prior_tools": 8,
+  "remaining_USD": "14.755692",
+  "remaining_candidate_submissions": 3,
+  "remaining_domain_tools": 4,
+  "schema": "filtered-ann.M4-dollar-budget.v1",
+  "scope": {
+    "development_groups": 450,
+    "exact_scoring_only": true,
+    "scalar_filters": 6,
+    "unfiltered": true,
+    "validation_test_outcomes_opened": false
+  },
+  "status": "configured_dollar_ceiling_no_inference_dispatched"
+}

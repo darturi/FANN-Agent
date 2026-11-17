@@ -1,0 +1,645 @@
+{
+  "inference_geo": "global",
+  "max_tokens": 6000,
+  "messages": [
+    {
+      "content": "{\"development_summary\":{\"interpretation\":\"All prefix outcomes are actual offline labels. Preserving/lossy counts are oracle diagnostics, not separating rules. Plan differences are contextual complete-request measurements, not pure additive operation prices. Engineering envelopes do not guarantee future predictive coverage or measured new-policy speed.\",\"native_primary_ms_range_across_blocks\":[14.64135407092592,22.455695485046306],\"paired_complete_plan_differences\":{\"count_plan_minus_decision_plan\":{\"conditional95pct_interval_ms\":[0.08919059065971738,0.1683657433611289],\"mean_complete_request_difference_ms\":0.1338643216203721},\"decision_plan_minus_native\":{\"conditional95pct_interval_ms\":[-0.03616347494676671,0.03632448439467259],\"mean_complete_request_difference_ms\":-0.004640505185184551},\"four_compare_plan_minus_turnover_plan\":{\"conditional95pct_interval_ms\":[-0.03272792524768327,0.01422425167593409],\"mean_complete_request_difference_ms\":-0.009399987453704739},\"ranked_plan_minus_count_plan\":{\"conditional95pct_interval_ms\":[0.007428142046295605,0.051489823519676785],\"mean_complete_request_difference_ms\":0.029219901851851304},\"turnover_plan_minus_ranked_plan\":{\"conditional95pct_interval_ms\":[0.00040189463195519095,0.04630175040278279],\"mean_complete_request_difference_ms\":0.023388847777779276}},\"per_filter\":{\"unfiltered\":{\"eligible_rows\":247286,\"native_mean_recall\":0.9964444444444444,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":80,\"partial\":0,\"preserving\":370,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":50,\"partial\":0,\"preserving\":400,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":25,\"partial\":0,\"preserving\":423,\"reached\":448,\"zero\":0}},\"queries\":450,\"short_native\":0},\"votes108\":{\"eligible_rows\":49498,\"native_mean_recall\":0.9891111111111112,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":242,\"partial\":0,\"preserving\":208,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":172,\"partial\":0,\"preserving\":278,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":100,\"partial\":0,\"preserving\":348,\"reached\":448,\"zero\":0}},\"queries\":450,\"short_native\":0},\"votes192\":{\"eligible_rows\":24871,\"native_mean_recall\":0.9788888888888889,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":327,\"partial\":0,\"preserving\":123,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":249,\"partial\":0,\"preserving\":201,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":152,\"partial\":0,\"preserving\":296,\"reached\":448,\"zero\":0}},\"queries\":450,\"short_native\":1},\"votes310\":{\"eligible_rows\":12367,\"native_mean_recall\":0.9482222222222222,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":439,\"qualifying_count\":450,\"tenth_distance\":439,\"top10_new_since_previous\":0},\"losing\":382,\"partial\":11,\"preserving\":68,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":435,\"qualifying_count\":450,\"tenth_distance\":435,\"top10_new_since_previous\":433},\"losing\":289,\"partial\":15,\"preserving\":161,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":430,\"qualifying_count\":448,\"tenth_distance\":430,\"top10_new_since_previous\":426},\"losing\":188,\"partial\":18,\"preserving\":260,\"reached\":448,\"zero\":0}},\"queries\":450,\"short_native\":23},\"votes32\":{\"eligible_rows\":123692,\"native_mean_recall\":0.9937777777777778,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":125,\"partial\":0,\"preserving\":325,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":81,\"partial\":0,\"preserving\":369,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":43,\"partial\":0,\"preserving\":405,\"reached\":448,\"zero\":0}},\"queries\":450,\"short_native\":0},\"votes527\":{\"eligible_rows\":4948,\"native_mean_recall\":0.7897777777777777,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":307,\"qualifying_count\":450,\"tenth_distance\":307,\"top10_new_since_previous\":0},\"losing\":379,\"partial\":143,\"preserving\":71,\"reached\":450,\"zero\":1},\"32\":{\"feature_available\":{\"frontier_gap\":294,\"qualifying_count\":450,\"tenth_distance\":294,\"top10_new_since_previous\":281},\"losing\":309,\"partial\":156,\"preserving\":141,\"reached\":450,\"zero\":7},\"64\":{\"feature_available\":{\"frontier_gap\":287,\"qualifying_count\":448,\"tenth_distance\":287,\"top10_new_since_previous\":274},\"losing\":202,\"partial\":161,\"preserving\":246,\"reached\":448,\"zero\":6}},\"queries\":450,\"short_native\":172},\"votes743\":{\"eligible_rows\":2475,\"native_mean_recall\":0.5348888888888889,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":124,\"qualifying_count\":450,\"tenth_distance\":124,\"top10_new_since_previous\":0},\"losing\":310,\"partial\":326,\"preserving\":140,\"reached\":450,\"zero\":22},\"32\":{\"feature_available\":{\"frontier_gap\":122,\"qualifying_count\":450,\"tenth_distance\":122,\"top10_new_since_previous\":104},\"losing\":222,\"partial\":328,\"preserving\":228,\"reached\":450,\"zero\":30},\"64\":{\"feature_available\":{\"frontier_gap\":110,\"qualifying_count\":448,\"tenth_distance\":110,\"top10_new_since_previous\":100},\"losing\":141,\"partial\":338,\"preserving\":307,\"reached\":448,\"zero\":29}},\"queries\":450,\"short_native\":345}},\"scope\":\"450 exposed development groups; all five folds are diagnostics\",\"uncertainty_contract\":{\"error_radius\":0.035363846399260816,\"max_live_nominees\":3,\"point_model_precision_qualified\":false,\"qualification_receipt_sha256\":\"7cfb01f2d5bf3175d23ec411adeb2e3d92e5d09a46f4b69eb7c22bfe8f324f09\",\"regret_limit\":0.01,\"schema\":\"filtered-ann.uncertainty-shortlist.v1\"}},\"episode\":\"M4 fresh bounded policy discovery, version1\",\"instruction\":\"Choose your own causal hypotheses, features and thresholds. Use bounded inspection/evaluation feedback, preserve raw-native recall on every development case and retain all six scalar conditions. The compact orientation is already supplied; avoid redundant full inspection. Prefer bounded cases and concise speculative batches, then conclude via submit_or_abstain before request/tool/context capacity ends. Six requests and nine submissions are upper limits, not targets. No prior policy is supplied as a seed.\",\"limits\":{\"M5_nominees\":3,\"Messages_requests\":6,\"candidate_submissions\":9,\"domain_tools\":12,\"policies_per_batch\":3,\"total_USD\":15},\"primer\":\"# Uncertainty-aware development research contract\\n\\n450 exposed development groups; all six scalar filters plus unfiltered; frozen folds.\\nAll9,436 actual prefix labels, including1,496 partials; zero unknown reached labels.\\nPreserve each query's raw native640 recall. Exact truth is scoring only, never repair.\\nPolicies see only qualified causal features; IDs, folds, costs and outcomes are evaluator-only.\\n\\nThe engineering native-ratio envelope is plus/minus 3.5364 percentage points.\\nIt is not a prediction confidence interval or measured new-policy latency. M2 precision remains failed.\\nThe controller enumerates subsets of at most3 supported zero-loss scalar-stopping policies.\\nIt accepts only a conditional interval regret bound<=one native percentage point, with native available.\\nClose point estimates never break interval ties. An ambiguous pool larger than the cap can force abstention.\\nUnsupported comparisons retain quality/work feedback but cannot be nominated through this contract.\\nAny nominated programs require actual M5 timings and matched continue controls before speed claims.\\nNo validation/test access. External episode authorization is enforced by the host.\\n\"}",
+      "role": "user"
+    },
+    {
+      "content": [
+        {
+          "text": "I'll start with a bounded inspection of the workload.",
+          "type": "text"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_01NJrmdM695VQjzh4AznbgiV",
+          "input": {},
+          "name": "inspect_workload",
+          "type": "tool_use"
+        }
+      ],
+      "role": "assistant"
+    },
+    {
+      "content": [
+        {
+          "content": "{\"cost_guidance\":{\"conditional_regret_limit\":0.01,\"engineering_error_radius\":0.035363846399260816,\"failed_model_hypotheses\":[\"ridge_work_observation\",\"signed_additive\"],\"limits\":\"M2 point-precision qualification remains failed. Empirical engineering envelopes support a bounded M5 measurement shortlist only, conditional on support and costs in the intervals. Abstain when more than three ambiguous nominees cannot meet the regret limit. No future coverage or final performance guarantee; actual M5 program/matched-control timing remains required.\",\"measured_historical_transfers\":{\"v2_broad\":{\"conditional95pct_interval\":[0.9342545894248452,0.9541693519966346],\"per_filter_native_ratio\":{\"unfiltered\":0.8704888101510279,\"votes108\":0.9498549536789074,\"votes192\":0.9791541791470402,\"votes310\":0.9884073747523171,\"votes32\":0.7785784916486929,\"votes527\":0.9855673599670561,\"votes743\":1.0034554016286479},\"same_block_native_ratio\":0.944538107443307},\"v2_conservative\":{\"conditional95pct_interval\":[0.989551850509839,0.9964335468491887],\"per_filter_native_ratio\":{\"unfiltered\":0.868290448011326,\"votes108\":1.001351821934231,\"votes192\":1.005049117540958,\"votes310\":0.9990409475421199,\"votes32\":0.9548830912362195,\"votes527\":1.0022854754884412,\"votes743\":0.9989657962425694},\"same_block_native_ratio\":0.9930902163652414},\"v2_moderate\":{\"conditional95pct_interval\":[0.9687334038457759,0.98160332113646],\"per_filter_native_ratio\":{\"unfiltered\":0.8472889724196194,\"votes108\":0.9725397918805735,\"votes192\":0.9948140495599757,\"votes310\":1.0025404537848233,\"votes32\":0.8926029312900331,\"votes527\":0.9979772834178384,\"votes743\":0.9991619802795799},\"same_block_native_ratio\":0.9753132439487698}},\"native_primary_ms_range_across_blocks\":[14.64135407092592,22.455695485046306],\"paired_complete_plan_differences\":{\"count_plan_minus_decision_plan\":{\"conditional95pct_interval_ms\":[0.08919059065971738,0.1683657433611289],\"definition\":\"Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.\",\"mean_complete_request_difference_ms\":0.1338643216203721,\"negative_estimates_retained\":true},\"decision_plan_minus_native\":{\"conditional95pct_interval_ms\":[-0.03616347494676671,0.03632448439467259],\"definition\":\"Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.\",\"mean_complete_request_difference_ms\":-0.004640505185184551,\"negative_estimates_retained\":true},\"four_compare_plan_minus_turnover_plan\":{\"conditional95pct_interval_ms\":[-0.03272792524768327,0.01422425167593409],\"definition\":\"Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.\",\"mean_complete_request_difference_ms\":-0.009399987453704739,\"negative_estimates_retained\":true},\"ranked_plan_minus_count_plan\":{\"conditional95pct_interval_ms\":[0.007428142046295605,0.051489823519676785],\"definition\":\"Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.\",\"mean_complete_request_difference_ms\":0.029219901851851304,\"negative_estimates_retained\":true},\"turnover_plan_minus_ranked_plan\":{\"conditional95pct_interval_ms\":[0.00040189463195519095,0.04630175040278279],\"definition\":\"Paired difference of complete compiled serving plans; includes dispatch, conditions and cache effects, not an isolated pure-operation timer.\",\"mean_complete_request_difference_ms\":0.023388847777779276,\"negative_estimates_retained\":true}},\"point_model_precision_qualified\":false,\"status\":\"qualified_uncertainty_aware_M5_experiment_selection_only\"},\"cost_ranking_enabled\":false,\"cost_status\":\"qualified_uncertainty_shortlist_v1\",\"evidence_hash\":\"5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d\",\"groups\":450,\"limit\":\"Measured plan costs describe their stated contexts. New-program costs need qualification; incomplete prefix evidence never yields a quality pass.\",\"per_filter\":{\"unfiltered\":{\"checkpoints\":{\"16\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"32\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"64\":{\"missing_prefixes\":0,\"observed\":448,\"qualified_prefixes\":448}},\"native_mean_recall\":0.9964444444444444,\"queries\":450,\"short_native\":0},\"votes108\":{\"checkpoints\":{\"16\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"32\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"64\":{\"missing_prefixes\":0,\"observed\":448,\"qualified_prefixes\":448}},\"native_mean_recall\":0.9891111111111112,\"queries\":450,\"short_native\":0},\"votes192\":{\"checkpoints\":{\"16\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"32\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"64\":{\"missing_prefixes\":0,\"observed\":448,\"qualified_prefixes\":448}},\"native_mean_recall\":0.9788888888888889,\"queries\":450,\"short_native\":1},\"votes310\":{\"checkpoints\":{\"16\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"32\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"64\":{\"missing_prefixes\":0,\"observed\":448,\"qualified_prefixes\":448}},\"native_mean_recall\":0.9482222222222222,\"queries\":450,\"short_native\":23},\"votes32\":{\"checkpoints\":{\"16\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"32\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"64\":{\"missing_prefixes\":0,\"observed\":448,\"qualified_prefixes\":448}},\"native_mean_recall\":0.9937777777777778,\"queries\":450,\"short_native\":0},\"votes527\":{\"checkpoints\":{\"16\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"32\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"64\":{\"missing_prefixes\":0,\"observed\":448,\"qualified_prefixes\":448}},\"native_mean_recall\":0.7897777777777777,\"queries\":450,\"short_native\":172},\"votes743\":{\"checkpoints\":{\"16\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"32\":{\"missing_prefixes\":0,\"observed\":450,\"qualified_prefixes\":450},\"64\":{\"missing_prefixes\":0,\"observed\":448,\"qualified_prefixes\":448}},\"native_mean_recall\":0.5348888888888889,\"queries\":450,\"short_native\":345}},\"prefix_opportunity\":{\"unfiltered\":{\"eligible_rows\":247286,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":80,\"partial\":0,\"preserving\":370,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":50,\"partial\":0,\"preserving\":400,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":25,\"partial\":0,\"preserving\":423,\"reached\":448,\"zero\":0}},\"queries\":450},\"votes108\":{\"eligible_rows\":49498,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":242,\"partial\":0,\"preserving\":208,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":172,\"partial\":0,\"preserving\":278,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":100,\"partial\":0,\"preserving\":348,\"reached\":448,\"zero\":0}},\"queries\":450},\"votes192\":{\"eligible_rows\":24871,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":327,\"partial\":0,\"preserving\":123,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":249,\"partial\":0,\"preserving\":201,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":152,\"partial\":0,\"preserving\":296,\"reached\":448,\"zero\":0}},\"queries\":450},\"votes310\":{\"eligible_rows\":12367,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":439,\"qualifying_count\":450,\"tenth_distance\":439,\"top10_new_since_previous\":0},\"losing\":382,\"partial\":11,\"preserving\":68,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":435,\"qualifying_count\":450,\"tenth_distance\":435,\"top10_new_since_previous\":433},\"losing\":289,\"partial\":15,\"preserving\":161,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":430,\"qualifying_count\":448,\"tenth_distance\":430,\"top10_new_since_previous\":426},\"losing\":188,\"partial\":18,\"preserving\":260,\"reached\":448,\"zero\":0}},\"queries\":450},\"votes32\":{\"eligible_rows\":123692,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":0},\"losing\":125,\"partial\":0,\"preserving\":325,\"reached\":450,\"zero\":0},\"32\":{\"feature_available\":{\"frontier_gap\":450,\"qualifying_count\":450,\"tenth_distance\":450,\"top10_new_since_previous\":450},\"losing\":81,\"partial\":0,\"preserving\":369,\"reached\":450,\"zero\":0},\"64\":{\"feature_available\":{\"frontier_gap\":448,\"qualifying_count\":448,\"tenth_distance\":448,\"top10_new_since_previous\":448},\"losing\":43,\"partial\":0,\"preserving\":405,\"reached\":448,\"zero\":0}},\"queries\":450},\"votes527\":{\"eligible_rows\":4948,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":307,\"qualifying_count\":450,\"tenth_distance\":307,\"top10_new_since_previous\":0},\"losing\":379,\"partial\":143,\"preserving\":71,\"reached\":450,\"zero\":1},\"32\":{\"feature_available\":{\"frontier_gap\":294,\"qualifying_count\":450,\"tenth_distance\":294,\"top10_new_since_previous\":281},\"losing\":309,\"partial\":156,\"preserving\":141,\"reached\":450,\"zero\":7},\"64\":{\"feature_available\":{\"frontier_gap\":287,\"qualifying_count\":448,\"tenth_distance\":287,\"top10_new_since_previous\":274},\"losing\":202,\"partial\":161,\"preserving\":246,\"reached\":448,\"zero\":6}},\"queries\":450},\"votes743\":{\"eligible_rows\":2475,\"prefixes\":{\"16\":{\"feature_available\":{\"frontier_gap\":124,\"qualifying_count\":450,\"tenth_distance\":124,\"top10_new_since_previous\":0},\"losing\":310,\"partial\":326,\"preserving\":140,\"reached\":450,\"zero\":22},\"32\":{\"feature_available\":{\"frontier_gap\":122,\"qualifying_count\":450,\"tenth_distance\":122,\"top10_new_since_previous\":104},\"losing\":222,\"partial\":328,\"preserving\":228,\"reached\":450,\"zero\":30},\"64\":{\"feature_available\":{\"frontier_gap\":110,\"qualifying_count\":448,\"tenth_distance\":110,\"top10_new_since_previous\":100},\"losing\":141,\"partial\":338,\"preserving\":307,\"reached\":448,\"zero\":29}},\"queries\":450}},\"runtime_profile\":{\"actions\":[\"continue\",\"stop\"],\"checkpoint_interval\":64,\"checkpoint_semantics\":\"expanded-neighborhood checkpoints16/32/64; previous scheduled checkpoint, not last collected checkpoint\",\"collection_groups\":[],\"features\":{\"frontier_gap\":{\"availability\":\"count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full\",\"collection_cost\":\"compiler-derived predicate/checkpoint dependency mask\",\"description\":\"\",\"group\":\"checkpoint_heap\",\"kind\":\"float\",\"name\":\"frontier_gap\",\"population\":\"query\",\"provenance\":\"server_observed\",\"scope\":\"query\",\"source\":\"extension\",\"stage\":\"runtime\",\"units\":\"count\"},\"qualifying_count\":{\"availability\":\"count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full\",\"collection_cost\":\"compiler-derived predicate/checkpoint dependency mask\",\"description\":\"\",\"group\":\"checkpoint_heap\",\"kind\":\"int\",\"name\":\"qualifying_count\",\"population\":\"query\",\"provenance\":\"server_observed\",\"scope\":\"query\",\"source\":\"extension\",\"stage\":\"runtime\",\"units\":\"count\"},\"tenth_distance\":{\"availability\":\"count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full\",\"collection_cost\":\"compiler-derived predicate/checkpoint dependency mask\",\"description\":\"\",\"group\":\"checkpoint_heap\",\"kind\":\"float\",\"name\":\"tenth_distance\",\"population\":\"query\",\"provenance\":\"server_observed\",\"scope\":\"query\",\"source\":\"extension\",\"stage\":\"runtime\",\"units\":\"count\"},\"top10_new_since_previous\":{\"availability\":\"count at reached checkpoint; tenth/gap only with full top10; turnover only when current and preceding scheduled top10 are full\",\"collection_cost\":\"compiler-derived predicate/checkpoint dependency mask\",\"description\":\"\",\"group\":\"checkpoint_heap\",\"kind\":\"int\",\"name\":\"top10_new_since_previous\",\"population\":\"query\",\"provenance\":\"server_observed\",\"scope\":\"query\",\"source\":\"extension\",\"stage\":\"runtime\",\"units\":\"count\"}},\"fingerprint\":\"abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47\",\"guidance\":\"\",\"name\":\"filtered-ann-partial-checkpoints/v2\",\"native_protocol\":\"\",\"native_registry_hash\":null,\"numeric_semantics\":\"int64_float64_strict\",\"policy_encoding\":\"filtered_ann_checkpoint_v2\",\"scripted_policy\":null,\"stopping_scope\":\"original noniterative search prefix; actual0..10 SQL results; no completion\",\"work_unit\":\"graph score/queue work\"},\"scope\":\"development\",\"shortlist_contract\":{\"error_radius\":0.035363846399260816,\"max_live_nominees\":3,\"point_model_precision_qualified\":false,\"qualification_receipt_sha256\":\"7cfb01f2d5bf3175d23ec411adeb2e3d92e5d09a46f4b69eb7c22bfe8f324f09\",\"regret_limit\":0.01,\"schema\":\"filtered-ann.uncertainty-shortlist.v1\"},\"uncertainty_shortlisting_enabled\":true}",
+          "is_error": false,
+          "tool_use_id": "toolu_01NJrmdM695VQjzh4AznbgiV",
+          "type": "tool_result"
+        }
+      ],
+      "role": "user"
+    },
+    {
+      "content": [
+        {
+          "text": "Preserving prefixes are plentiful for unfiltered and votes32. I'll look at a few cases to find separating features.",
+          "type": "text"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_01Y4YC7exJQKvmA2LbzqTW2i",
+          "input": {
+            "category": "preserving_partial_prefix",
+            "filter": "votes527",
+            "limit": 6
+          },
+          "name": "explain_cases",
+          "type": "tool_use"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_01LoktG3J6XrdygjkT7pzMBC",
+          "input": {
+            "category": "lossy_prefix",
+            "filter": "unfiltered",
+            "limit": 6
+          },
+          "name": "explain_cases",
+          "type": "tool_use"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_01PTfN57kH2VF8c3hoxTw8tN",
+          "input": {
+            "category": "qualified_full_prefix",
+            "filter": "unfiltered",
+            "limit": 6
+          },
+          "name": "explain_cases",
+          "type": "tool_use"
+        }
+      ],
+      "role": "assistant"
+    },
+    {
+      "content": [
+        {
+          "content": "{\"cases\":[{\"filter\":\"votes527\",\"fold\":2,\"group\":2,\"native_count\":4,\"native_recall\":0.4,\"observations\":{\"16\":{\"frontier_gap\":null,\"qualifying_count\":8,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":null,\"qualifying_count\":5,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"64\":{\"frontier_gap\":null,\"qualifying_count\":6,\"tenth_distance\":null,\"top10_new_since_previous\":null}},\"proofs\":{\"16\":{\"recall\":0.3,\"returned_count\":8},\"32\":{\"recall\":0.4,\"returned_count\":5},\"64\":{\"recall\":0.6,\"returned_count\":6}}},{\"filter\":\"votes527\",\"fold\":4,\"group\":6,\"native_count\":4,\"native_recall\":0.4,\"observations\":{\"16\":{\"frontier_gap\":null,\"qualifying_count\":4,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":null,\"qualifying_count\":5,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"64\":{\"frontier_gap\":null,\"qualifying_count\":5,\"tenth_distance\":null,\"top10_new_since_previous\":null}},\"proofs\":{\"16\":{\"recall\":0.1,\"returned_count\":4},\"32\":{\"recall\":0.4,\"returned_count\":5},\"64\":{\"recall\":0.5,\"returned_count\":5}}},{\"filter\":\"votes527\",\"fold\":3,\"group\":8,\"native_count\":5,\"native_recall\":0.5,\"observations\":{\"16\":{\"frontier_gap\":null,\"qualifying_count\":9,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":null,\"qualifying_count\":9,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"64\":{\"frontier_gap\":null,\"qualifying_count\":6,\"tenth_distance\":null,\"top10_new_since_previous\":null}},\"proofs\":{\"16\":{\"recall\":0.5,\"returned_count\":9},\"32\":{\"recall\":0.6,\"returned_count\":9},\"64\":{\"recall\":0.6,\"returned_count\":6}}},{\"filter\":\"votes527\",\"fold\":2,\"group\":10,\"native_count\":6,\"native_recall\":0.6,\"observations\":{\"16\":{\"frontier_gap\":-0.08921617269515991,\"qualifying_count\":12,\"tenth_distance\":0.5738686919212341,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":null,\"qualifying_count\":9,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"64\":{\"frontier_gap\":null,\"qualifying_count\":6,\"tenth_distance\":null,\"top10_new_since_previous\":null}},\"proofs\":{\"16\":{\"recall\":0.3,\"returned_count\":10},\"32\":{\"recall\":0.5,\"returned_count\":9},\"64\":{\"recall\":0.6,\"returned_count\":6}}},{\"filter\":\"votes527\",\"fold\":2,\"group\":12,\"native_count\":5,\"native_recall\":0.5,\"observations\":{\"16\":{\"frontier_gap\":null,\"qualifying_count\":6,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":null,\"qualifying_count\":4,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"64\":{\"frontier_gap\":null,\"qualifying_count\":6,\"tenth_distance\":null,\"top10_new_since_previous\":null}},\"proofs\":{\"16\":{\"recall\":0.1,\"returned_count\":6},\"32\":{\"recall\":0.4,\"returned_count\":4},\"64\":{\"recall\":0.5,\"returned_count\":6}}},{\"filter\":\"votes527\",\"fold\":1,\"group\":15,\"native_count\":0,\"native_recall\":0.0,\"observations\":{\"16\":{\"frontier_gap\":null,\"qualifying_count\":1,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":null,\"qualifying_count\":0,\"tenth_distance\":null,\"top10_new_since_previous\":null},\"64\":{\"frontier_gap\":null,\"qualifying_count\":0,\"tenth_distance\":null,\"top10_new_since_previous\":null}},\"proofs\":{\"16\":{\"recall\":0.1,\"returned_count\":1},\"32\":{\"recall\":0.0,\"returned_count\":0},\"64\":{\"recall\":0.0,\"returned_count\":0}}}]}",
+          "is_error": false,
+          "tool_use_id": "toolu_01Y4YC7exJQKvmA2LbzqTW2i",
+          "type": "tool_result"
+        },
+        {
+          "content": "{\"cases\":[{\"filter\":\"unfiltered\",\"fold\":2,\"group\":1,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.02253323793411255,\"qualifying_count\":640,\"tenth_distance\":0.42150700092315674,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.03613835573196411,\"qualifying_count\":640,\"tenth_distance\":0.42150700092315674,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.050745487213134766,\"qualifying_count\":640,\"tenth_distance\":0.4194152355194092,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.8,\"returned_count\":10},\"32\":{\"recall\":0.8,\"returned_count\":10},\"64\":{\"recall\":0.9,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":4,\"group\":4,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.013105630874633789,\"qualifying_count\":640,\"tenth_distance\":0.40786421298980713,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.043263912200927734,\"qualifying_count\":640,\"tenth_distance\":0.4076926112174988,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.05689150094985962,\"qualifying_count\":640,\"tenth_distance\":0.4076926112174988,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":0,\"group\":7,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.014374613761901855,\"qualifying_count\":640,\"tenth_distance\":0.34145236015319824,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.027783215045928955,\"qualifying_count\":641,\"tenth_distance\":0.3402137756347656,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.04452311992645264,\"qualifying_count\":641,\"tenth_distance\":0.3402137756347656,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":3,\"group\":13,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.06270492076873779,\"qualifying_count\":640,\"tenth_distance\":0.3535572290420532,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.0732736587524414,\"qualifying_count\":640,\"tenth_distance\":0.33798933029174805,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.10841608047485352,\"qualifying_count\":641,\"tenth_distance\":0.33798933029174805,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":4,\"group\":14,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.018507719039916992,\"qualifying_count\":640,\"tenth_distance\":0.28127479553222656,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.03166276216506958,\"qualifying_count\":640,\"tenth_distance\":0.28054165840148926,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.04790079593658447,\"qualifying_count\":640,\"tenth_distance\":0.28054165840148926,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":4,\"group\":17,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.027531981468200684,\"qualifying_count\":640,\"tenth_distance\":0.340130090713501,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.03860676288604736,\"qualifying_count\":640,\"tenth_distance\":0.33961284160614014,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.05850362777709961,\"qualifying_count\":640,\"tenth_distance\":0.33961284160614014,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}}]}",
+          "is_error": false,
+          "tool_use_id": "toolu_01LoktG3J6XrdygjkT7pzMBC",
+          "type": "tool_result"
+        },
+        {
+          "content": "{\"cases\":[{\"filter\":\"unfiltered\",\"fold\":0,\"group\":0,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.03616553544998169,\"qualifying_count\":640,\"tenth_distance\":0.3194066286087036,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.06709885597229004,\"qualifying_count\":640,\"tenth_distance\":0.3194066286087036,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.09543097019195557,\"qualifying_count\":640,\"tenth_distance\":0.3194066286087036,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":1.0,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":2,\"group\":1,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.02253323793411255,\"qualifying_count\":640,\"tenth_distance\":0.42150700092315674,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.03613835573196411,\"qualifying_count\":640,\"tenth_distance\":0.42150700092315674,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.050745487213134766,\"qualifying_count\":640,\"tenth_distance\":0.4194152355194092,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.8,\"returned_count\":10},\"32\":{\"recall\":0.8,\"returned_count\":10},\"64\":{\"recall\":0.9,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":2,\"group\":2,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.046575844287872314,\"qualifying_count\":640,\"tenth_distance\":0.34122222661972046,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.05778336524963379,\"qualifying_count\":640,\"tenth_distance\":0.34122222661972046,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.07180660963058472,\"qualifying_count\":640,\"tenth_distance\":0.34122222661972046,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":1.0,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":1,\"group\":3,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.11077284812927246,\"qualifying_count\":640,\"tenth_distance\":0.3708946704864502,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.12790560722351074,\"qualifying_count\":640,\"tenth_distance\":0.3708946704864502,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.14305397868156433,\"qualifying_count\":640,\"tenth_distance\":0.3708946704864502,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":1.0,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":4,\"group\":4,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.013105630874633789,\"qualifying_count\":640,\"tenth_distance\":0.40786421298980713,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.043263912200927734,\"qualifying_count\":640,\"tenth_distance\":0.4076926112174988,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.05689150094985962,\"qualifying_count\":640,\"tenth_distance\":0.4076926112174988,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"unfiltered\",\"fold\":0,\"group\":5,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.03873908519744873,\"qualifying_count\":641,\"tenth_distance\":0.3113325238227844,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.059364140033721924,\"qualifying_count\":641,\"tenth_distance\":0.3113325238227844,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.07864797115325928,\"qualifying_count\":641,\"tenth_distance\":0.3113325238227844,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":1.0,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}}]}",
+          "is_error": false,
+          "tool_use_id": "toolu_01PTfN57kH2VF8c3hoxTw8tN",
+          "type": "tool_result"
+        }
+      ],
+      "role": "user"
+    },
+    {
+      "content": [
+        {
+          "signature": "CAQSgAcKEQgTGAI4AUIJbmFycmF0aW9uEgwVIIZwlgGRySfAzjMaDHz6wLeiDMvruBydBSIwUCuXV4+6ajAFTorvxT/Ou1+1SWzNabPL/0SkRruWgPVMESA9b3wBqJrg8rOcBhg+KpwGnQIQOkVDQdgN2Y/KpEaYepqguIJLd8plqFZIz/D3ffqJ3STWInjtnGuIg333VEN0f1ObB0dcJhlbPgwy6ajCXy0d2OVuEiwSUOpTEqmAIbHMuytHB8c5Qo7q8g0JpIUwz8jgSDavTOWOlUwUB3cpjRxUuc7xkf6SgQYpwo6PUBK1HUFeEAJ9uzld3jWblJIlLUKYclon2ty19OSSSZmzGAd/zwTURHji2uVS0cVLfIjra5cJSqK5CmDJhe+GJXZUeQHOC9j1EIyHcNlNsZ2f9eLPMBg4xyHvhYEJlQVngAawKH3Luurjdv2+GMY7u0t+UBE/HBxHA28mEgFuwLMQcTeLnWWUl//F/YIdhw3/3Q2F8GQ/E0yLWmMysiJvupza3cNpFvPApv/enAsJTHX7Vgs/FJoovCVZfYgxs5OkOTTAB/vBfLa2H/dZQFNHdFGgDgxrU2HIQspbbtC6du3YKHOAXxIGDqliVrlc36BRcpJZgUFaUxDKVRYQWhLxiYUGqzdzv/LOwEE/370QmVl4p/Ny7BnvEqhbuojjgKzGF8zwNqcu6zCZcoLldJfuQNXoUgTdKS7/f0qqMg/LQ3JwI8b0ELG8n4BvuF9cJjhCsVqZzkWaYdLI1C8AvPibIIxQGNviSu4eYkVVKsxDhTijv2jWo4xZcbmhJ7geCMsVrA1S+7eDIfufueKz2rnLNITUhN5hgjb0Nf/48/QgLdwc6v+zl+t+pRLc5UiErxD+hozxTg1rvom3XfD0CMwOxr3iBQ/eq31xHG6uRQ41w/ZJlGoY5n1iOq1ZA+iT1h3t3UJHxu2qtC/3LB+hy5fh6MifaqmcefZy3X8SoagMievw+Rd5Ry652l0cwHmWWE/niZs5/vaYobZ/23OA7e45uAZfyr9/uIAxv3SY0qc63WJqUx6SU6vSD6TM1iLynVIy8o0Z2oNA1Kow+5XA1VMS8rhBAQP5m+WW4gmI7XElz4PyOjGemKJ+J+HKkNygGgq2MKh2S2/F2eQrMcbNbDvcIFSIYxUWQlvlso7A+jqNxsB0WLFyQp17Zj6pnlgIARgB",
+          "thinking": "I'm testing a stop at 64 for unfiltered and votes32, with checkpoint 32 under stricter conditions and a native-only baseline for the other filters next.\n\n",
+          "type": "thinking"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_012mKEFeo6VapC1NyoEcjSUT",
+          "input": {
+            "policies": [
+              {
+                "name": "turnover0_gap64",
+                "rationale": "No top10 turnover plus a wide frontier gap at cp64 suggests convergence.",
+                "rules": {
+                  "unfiltered": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.07
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ],
+                  "votes32": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.07
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ]
+                },
+                "schema": "fannagent.filtered-ann.v2"
+              },
+              {
+                "name": "turnover0_gap32_64",
+                "rationale": "Stricter gap at cp32, looser at cp64.",
+                "rules": {
+                  "unfiltered": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.12
+                        ]
+                      ],
+                      "cp": 32
+                    },
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.09
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ],
+                  "votes32": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.12
+                        ]
+                      ],
+                      "cp": 32
+                    },
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.09
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ]
+                },
+                "schema": "fannagent.filtered-ann.v2"
+              },
+              {
+                "name": "turnover0_only64",
+                "rationale": "Very conservative unfiltered-only stop.",
+                "rules": {
+                  "unfiltered": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.15
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ]
+                },
+                "schema": "fannagent.filtered-ann.v2"
+              }
+            ]
+          },
+          "name": "evaluate_candidates",
+          "type": "tool_use"
+        }
+      ],
+      "role": "assistant"
+    },
+    {
+      "content": [
+        {
+          "content": "{\"candidate_submissions_remaining\":6,\"evaluations\":[{\"candidate_id\":\"candidate-1\",\"cost_estimate\":{\"checkpoint\":32,\"filter\":\"unfiltered\",\"reason\":\"unsupported_observation_mask\",\"status\":\"unsupported_uncertainty_estimate\"},\"evaluation\":{\"counterexamples\":{\"unfiltered\":[{\"anonymous_group\":197,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.14736628532409668,\"qualifying_count\":640,\"tenth_distance\":0.4024578928947449,\"top10_new_since_previous\":0},\"fold\":3,\"native_recall\":1.0,\"recall\":0.9},{\"anonymous_group\":332,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.11238083243370056,\"qualifying_count\":640,\"tenth_distance\":0.421377956867218,\"top10_new_since_previous\":0},\"fold\":4,\"native_recall\":1.0,\"recall\":0.9},{\"anonymous_group\":399,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.19614127278327942,\"qualifying_count\":640,\"tenth_distance\":0.3690539598464966,\"top10_new_since_previous\":0},\"fold\":1,\"native_recall\":1.0,\"recall\":0.9}],\"votes32\":[{\"anonymous_group\":3,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.09140285849571228,\"qualifying_count\":309,\"tenth_distance\":0.42254579067230225,\"top10_new_since_previous\":0},\"fold\":1,\"native_recall\":1.0,\"recall\":0.9},{\"anonymous_group\":360,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.07288223505020142,\"qualifying_count\":348,\"tenth_distance\":0.42712342739105225,\"top10_new_since_previous\":0},\"fold\":3,\"native_recall\":1.0,\"recall\":0.9}]},\"latency_status\":\"not measured; never infer by subtracting fallback or equating work with time\",\"per_exposed_development_fold\":{\"0\":{\"losses\":0,\"queries\":630,\"stops\":108,\"unknown_stops\":0},\"1\":{\"losses\":3,\"queries\":630,\"stops\":95,\"unknown_stops\":0},\"2\":{\"losses\":2,\"queries\":630,\"stops\":89,\"unknown_stops\":0},\"3\":{\"losses\":2,\"queries\":630,\"stops\":98,\"unknown_stops\":0},\"4\":{\"losses\":1,\"queries\":630,\"stops\":106,\"unknown_stops\":0}},\"per_filter\":{\"unfiltered\":{\"losses\":6,\"mean_recall\":0.9951111111111107,\"native_mean_recall\":0.9964444444444442,\"queries\":450,\"stops\":311,\"unknown_stops\":0},\"votes108\":{\"losses\":0,\"mean_recall\":0.9891111111111108,\"native_mean_recall\":0.9891111111111108,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes192\":{\"losses\":0,\"mean_recall\":0.9788888888888884,\"native_mean_recall\":0.9788888888888884,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes310\":{\"losses\":0,\"mean_recall\":0.9482222222222219,\"native_mean_recall\":0.9482222222222219,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes32\":{\"losses\":2,\"mean_recall\":0.9933333333333331,\"native_mean_recall\":0.9937777777777776,\"queries\":450,\"stops\":185,\"unknown_stops\":0},\"votes527\":{\"losses\":0,\"mean_recall\":0.7897777777777784,\"native_mean_recall\":0.7897777777777784,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes743\":{\"losses\":0,\"mean_recall\":0.5348888888888887,\"native_mean_recall\":0.5348888888888887,\"queries\":450,\"stops\":0,\"unknown_stops\":0}},\"quality_preserves_raw_native640\":false,\"recall_losses\":8,\"rule_hash\":\"c1c99a6bbb806ceba7870496a78883ce99ef3120f3c730a557f5a482a73012a5\",\"runtime_profile\":\"abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47\",\"status\":\"evaluated\",\"unqualified_stops\":0},\"observation_plan\":{\"unfiltered\":{\"16\":0,\"32\":3,\"64\":15},\"votes108\":{\"16\":0,\"32\":0,\"64\":0},\"votes192\":{\"16\":0,\"32\":0,\"64\":0},\"votes310\":{\"16\":0,\"32\":0,\"64\":0},\"votes32\":{\"16\":0,\"32\":3,\"64\":15},\"votes527\":{\"16\":0,\"32\":0,\"64\":0},\"votes743\":{\"16\":0,\"32\":0,\"64\":0}},\"rule_hash\":\"c1c99a6bbb806ceba7870496a78883ce99ef3120f3c730a557f5a482a73012a5\",\"work_estimate\":{\"equal_scalar_means\":{\"feature_passes\":0.3325925925925926,\"membership_probes\":212.89555555555555,\"vector_calls\":9923.242222222223},\"per_filter_means\":{\"unfiltered\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":6276.8533333333335},\"votes108\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes192\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.715555555556},\"votes310\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.417777777779},\"votes32\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":8103.942222222222},\"votes527\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10286.04},\"votes743\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10280.613333333333}},\"status\":\"measured-prefix work proxy; not new-program latency\"}},{\"candidate_id\":\"candidate-2\",\"cost_estimate\":{\"engineering_error_radius\":0.035363846399260816,\"per_filter\":{\"unfiltered\":{\"ratio_interval\":[0.6354424841097497,0.7061701769082713],\"ratio_proxy\":0.6708063305090105},\"votes108\":{\"ratio_interval\":[0.9646361536007392,1.0353638463992607],\"ratio_proxy\":1.0},\"votes192\":{\"ratio_interval\":[0.9646361536007392,1.0353638463992607],\"ratio_proxy\":1.0},\"votes310\":{\"ratio_interval\":[0.9646361536007392,1.0353638463992607],\"ratio_proxy\":1.0},\"votes32\":{\"ratio_interval\":[0.8462535669734973,0.9169812597720189],\"ratio_proxy\":0.8816174133727581},\"votes527\":{\"ratio_interval\":[0.9646361536007392,1.0353638463992607],\"ratio_proxy\":1.0},\"votes743\":{\"ratio_interval\":[0.9646361536007392,1.0353638463992607],\"ratio_proxy\":1.0}},\"point_model_precision_qualified\":false,\"primary_ratio_interval\":[0.9439300197128501,1.0146577125113716],\"primary_ratio_proxy\":0.9792938661121109,\"status\":\"supported_uncertainty_shortlist_proxy\"},\"evaluation\":{\"counterexamples\":{\"unfiltered\":[{\"anonymous_group\":197,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.14736628532409668,\"qualifying_count\":640,\"tenth_distance\":0.4024578928947449,\"top10_new_since_previous\":0},\"fold\":3,\"native_recall\":1.0,\"recall\":0.9},{\"anonymous_group\":332,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.11238083243370056,\"qualifying_count\":640,\"tenth_distance\":0.421377956867218,\"top10_new_since_previous\":0},\"fold\":4,\"native_recall\":1.0,\"recall\":0.9},{\"anonymous_group\":399,\"checkpoint\":32,\"features\":{\"frontier_gap\":0.1882692575454712,\"qualifying_count\":640,\"tenth_distance\":0.3690539598464966,\"top10_new_since_previous\":0},\"fold\":1,\"native_recall\":1.0,\"recall\":0.9}],\"votes32\":[{\"anonymous_group\":3,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.09140285849571228,\"qualifying_count\":309,\"tenth_distance\":0.42254579067230225,\"top10_new_since_previous\":0},\"fold\":1,\"native_recall\":1.0,\"recall\":0.9}]},\"latency_status\":\"not measured; never infer by subtracting fallback or equating work with time\",\"per_exposed_development_fold\":{\"0\":{\"losses\":0,\"queries\":630,\"stops\":78,\"unknown_stops\":0},\"1\":{\"losses\":2,\"queries\":630,\"stops\":68,\"unknown_stops\":0},\"2\":{\"losses\":0,\"queries\":630,\"stops\":61,\"unknown_stops\":0},\"3\":{\"losses\":1,\"queries\":630,\"stops\":79,\"unknown_stops\":0},\"4\":{\"losses\":1,\"queries\":630,\"stops\":69,\"unknown_stops\":0}},\"per_filter\":{\"unfiltered\":{\"losses\":3,\"mean_recall\":0.9957777777777775,\"native_mean_recall\":0.9964444444444442,\"queries\":450,\"stops\":238,\"unknown_stops\":0},\"votes108\":{\"losses\":0,\"mean_recall\":0.9891111111111108,\"native_mean_recall\":0.9891111111111108,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes192\":{\"losses\":0,\"mean_recall\":0.9788888888888884,\"native_mean_recall\":0.9788888888888884,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes310\":{\"losses\":0,\"mean_recall\":0.9482222222222219,\"native_mean_recall\":0.9482222222222219,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes32\":{\"losses\":1,\"mean_recall\":0.9935555555555553,\"native_mean_recall\":0.9937777777777776,\"queries\":450,\"stops\":117,\"unknown_stops\":0},\"votes527\":{\"losses\":0,\"mean_recall\":0.7897777777777784,\"native_mean_recall\":0.7897777777777784,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes743\":{\"losses\":0,\"mean_recall\":0.5348888888888887,\"native_mean_recall\":0.5348888888888887,\"queries\":450,\"stops\":0,\"unknown_stops\":0}},\"quality_preserves_raw_native640\":false,\"recall_losses\":4,\"rule_hash\":\"7d6839725d7cb4e613c7976a5951428b796d9ef8861344af29e3d68f095cdf0d\",\"runtime_profile\":\"abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47\",\"status\":\"evaluated\",\"unqualified_stops\":0},\"observation_plan\":{\"unfiltered\":{\"16\":3,\"32\":15,\"64\":15},\"votes108\":{\"16\":0,\"32\":0,\"64\":0},\"votes192\":{\"16\":0,\"32\":0,\"64\":0},\"votes310\":{\"16\":0,\"32\":0,\"64\":0},\"votes32\":{\"16\":3,\"32\":15,\"64\":15},\"votes527\":{\"16\":0,\"32\":0,\"64\":0},\"votes743\":{\"16\":0,\"32\":0,\"64\":0}},\"rule_hash\":\"7d6839725d7cb4e613c7976a5951428b796d9ef8861344af29e3d68f095cdf0d\",\"work_estimate\":{\"equal_scalar_means\":{\"feature_passes\":0.48814814814814816,\"membership_probes\":312.472962962963,\"vector_calls\":10039.752222222223},\"per_filter_means\":{\"unfiltered\":{\"feature_passes\":2.7088888888888887,\"membership_probes\":1734.0066666666667,\"vector_calls\":6646.337777777778},\"votes108\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes192\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.715555555556},\"votes310\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.417777777779},\"votes32\":{\"feature_passes\":2.928888888888889,\"membership_probes\":1874.8377777777778,\"vector_calls\":8803.002222222221},\"votes527\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10286.04},\"votes743\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10280.613333333333}},\"status\":\"measured-prefix work proxy; not new-program latency\"}},{\"candidate_id\":\"candidate-3\",\"cost_estimate\":{\"checkpoint\":32,\"filter\":\"unfiltered\",\"reason\":\"unsupported_observation_mask\",\"status\":\"unsupported_uncertainty_estimate\"},\"evaluation\":{\"counterexamples\":{\"unfiltered\":[{\"anonymous_group\":399,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.19614127278327942,\"qualifying_count\":640,\"tenth_distance\":0.3690539598464966,\"top10_new_since_previous\":0},\"fold\":1,\"native_recall\":1.0,\"recall\":0.9}]},\"latency_status\":\"not measured; never infer by subtracting fallback or equating work with time\",\"per_exposed_development_fold\":{\"0\":{\"losses\":0,\"queries\":630,\"stops\":25,\"unknown_stops\":0},\"1\":{\"losses\":1,\"queries\":630,\"stops\":24,\"unknown_stops\":0},\"2\":{\"losses\":0,\"queries\":630,\"stops\":21,\"unknown_stops\":0},\"3\":{\"losses\":0,\"queries\":630,\"stops\":23,\"unknown_stops\":0},\"4\":{\"losses\":0,\"queries\":630,\"stops\":13,\"unknown_stops\":0}},\"per_filter\":{\"unfiltered\":{\"losses\":1,\"mean_recall\":0.996222222222222,\"native_mean_recall\":0.9964444444444442,\"queries\":450,\"stops\":106,\"unknown_stops\":0},\"votes108\":{\"losses\":0,\"mean_recall\":0.9891111111111108,\"native_mean_recall\":0.9891111111111108,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes192\":{\"losses\":0,\"mean_recall\":0.9788888888888884,\"native_mean_recall\":0.9788888888888884,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes310\":{\"losses\":0,\"mean_recall\":0.9482222222222219,\"native_mean_recall\":0.9482222222222219,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes32\":{\"losses\":0,\"mean_recall\":0.9937777777777776,\"native_mean_recall\":0.9937777777777776,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes527\":{\"losses\":0,\"mean_recall\":0.7897777777777784,\"native_mean_recall\":0.7897777777777784,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes743\":{\"losses\":0,\"mean_recall\":0.5348888888888887,\"native_mean_recall\":0.5348888888888887,\"queries\":450,\"stops\":0,\"unknown_stops\":0}},\"quality_preserves_raw_native640\":false,\"recall_losses\":1,\"rule_hash\":\"caa108a411438d955aa94fc5061e0fce724444af749498b064a031127c2db05b\",\"runtime_profile\":\"abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47\",\"status\":\"evaluated\",\"unqualified_stops\":0},\"observation_plan\":{\"unfiltered\":{\"16\":0,\"32\":3,\"64\":15},\"votes108\":{\"16\":0,\"32\":0,\"64\":0},\"votes192\":{\"16\":0,\"32\":0,\"64\":0},\"votes310\":{\"16\":0,\"32\":0,\"64\":0},\"votes32\":{\"16\":0,\"32\":0,\"64\":0},\"votes527\":{\"16\":0,\"32\":0,\"64\":0},\"votes743\":{\"16\":0,\"32\":0,\"64\":0}},\"rule_hash\":\"caa108a411438d955aa94fc5061e0fce724444af749498b064a031127c2db05b\",\"work_estimate\":{\"equal_scalar_means\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10287.53925925926},\"per_filter_means\":{\"unfiltered\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":8859.942222222222},\"votes108\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes192\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.715555555556},\"votes310\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.417777777779},\"votes32\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes527\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10286.04},\"votes743\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10280.613333333333}},\"status\":\"measured-prefix work proxy; not new-program latency\"}}]}",
+          "is_error": false,
+          "tool_use_id": "toolu_012mKEFeo6VapC1NyoEcjSUT",
+          "type": "tool_result"
+        }
+      ],
+      "role": "user"
+    },
+    {
+      "content": [
+        {
+          "signature": "CAQS2AcKEQgTGAI4AUIJbmFycmF0aW9uEgxEU4ue3B0iXDEQlEMaDKSaOKAtkXWNQCcSQiIwFklCPFVv1ieBocifSMDmNolYYdxzfhaXi3XIJmzwBg00dQLeMiPhqOkJKEJjOuJnKvQG9Iqee6NERAZ8COIJbFKzcMnBUjSVe+bcs1QxSz8k+JOdHMGisQ3hiQGHkZSqNZMWAFwaesKmZIZJhzLvtNLW31SR+RzQaqlcnhgqLZMpo8QBeDsRv4MEZUPcLTcr+No80o0YOYg+JWNjzFZ6+X5VZgk6eGISdFOO2pWFo04fDZW+OPIxORalhfYTk0pLVIAKFst1x9yz/oQEdRa/az39Oz2DUmeN5Vp3s/CwUnyZgtttBQ9NT8QPpBl4kby8d4kM6I2Ddd2I0t8vrY3PUXKq88fQ29lKLai/7U7T+UuyWhaaC4QbRvQItxVYojB8Jx9GH2ZyCDz+zzgXcdqHZf0ymhlnZ9uPUuR+nBzflGxIWFHKE8X9HVnCzFvePp1nRfionfVEUcXCxjNetBib79UE2zY8FA0Vo1+jr5nn9krXQHk0FYD0n+Xi7Lh3srMwLOl6P8uXpGYukFZoA7Y5ng5jjYT1mbXeAkLuXseN0DSGL+toDWV04N/z25EoLYdWOc8yKJeuMjmZ9+1x6gx23sSUHcNsyj5PBZXHnpKO/Z18JTAXNEt36TiDCvcmh3QQLSFN9IGbECmI5JU+iDiQqbBe8s8Ps1s2YszCNfFOLvdLf/WSOrEEnkH7LgyTsKby5OFGF96atoKlTSeB9EwLzSxWbjIYwGPUSDrFvA28+D/B3jKOjfbluX94cqDS211T+AAl/+Bm8Yi2Qjfxlo36FxvlAeqv6U7fm562jXCcAE1Jx7+9V7ryxHzRSxqlPiSWmRHYa/auJdKWWywY3m3Pme3RnSEZM2lXFBXEb23wIUle6j3FjEyMFUQHcq0joOgxLIUtdQwwJ32fZ/11mUTLUrXfznY315oSPyFSnPIU+YA7npvXBERQWhXaicjREwqiuoAeVUrXQbNStDjx3A+c8EdTlRsdkcGzhLKJuJOfQ9Kg/4WiAnufnDTOveLWf/BEPYLUZVox7FFYQZ+gvIt+isJqideMyDF1SPqOWLxqjhgzU4zhCaALig5K24c7Bck15t3uQ0iuI9gMKWftjCUCDsEjzsi1KG/nMpXhgDWsarnzWExv9tPv4q+MRfltYqdmhMd/H7ks9OIXgKMHQxH1K6loU3NA6IrBH7Ckgyqs4O9PX7k2wiRYZFxyiVJaCbrdnzEr8l9zVWZnhu0ht68aoQcQVhf/ur4YAQ==",
+          "thinking": "All three cases still lose some data, and the unfiltered group 399 has a large gap despite zero turnover and 0.9 recall, so I need a separating feature. I'm examining the lossy unfiltered cases at 64 next.\n\n",
+          "type": "thinking"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_01BCSrq5NHQLP6njWiX6oauM",
+          "input": {
+            "category": "lossy_prefix",
+            "filter": "group 399",
+            "limit": 3
+          },
+          "name": "explain_cases",
+          "type": "tool_use"
+        }
+      ],
+      "role": "assistant"
+    },
+    {
+      "content": [
+        {
+          "content": "{\"error\":\"bounded category/filter/limit required\"}",
+          "is_error": true,
+          "tool_use_id": "toolu_01BCSrq5NHQLP6njWiX6oauM",
+          "type": "tool_result"
+        }
+      ],
+      "role": "user"
+    },
+    {
+      "content": [
+        {
+          "text": "I'll try the lossy cases for votes32.",
+          "type": "text"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_016DrUtBzjoYKr4PPyBZixka",
+          "input": {
+            "category": "lossy_prefix",
+            "filter": "votes32",
+            "limit": 12
+          },
+          "name": "explain_cases",
+          "type": "tool_use"
+        }
+      ],
+      "role": "assistant"
+    },
+    {
+      "content": [
+        {
+          "content": "{\"cases\":[{\"filter\":\"votes32\",\"fold\":2,\"group\":2,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.014574110507965088,\"qualifying_count\":291,\"tenth_distance\":0.3732239603996277,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.03501766920089722,\"qualifying_count\":299,\"tenth_distance\":0.36398792266845703,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.049040913581848145,\"qualifying_count\":300,\"tenth_distance\":0.36398792266845703,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":1,\"group\":3,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.05912172794342041,\"qualifying_count\":330,\"tenth_distance\":0.42254579067230225,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.07625448703765869,\"qualifying_count\":330,\"tenth_distance\":0.42254579067230225,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.09140285849571228,\"qualifying_count\":309,\"tenth_distance\":0.42254579067230225,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":0.9,\"returned_count\":10},\"64\":{\"recall\":0.9,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":4,\"group\":4,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":-0.00022399425506591797,\"qualifying_count\":329,\"tenth_distance\":0.42119383811950684,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.033325374126434326,\"qualifying_count\":347,\"tenth_distance\":0.4176311492919922,\"top10_new_since_previous\":2},\"64\":{\"frontier_gap\":0.04695296287536621,\"qualifying_count\":334,\"tenth_distance\":0.4176311492919922,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.8,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":0,\"group\":7,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.011781036853790283,\"qualifying_count\":399,\"tenth_distance\":0.3440459370613098,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.02402406930923462,\"qualifying_count\":432,\"tenth_distance\":0.34397292137145996,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.0407639741897583,\"qualifying_count\":429,\"tenth_distance\":0.34397292137145996,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":4,\"group\":17,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.009972453117370605,\"qualifying_count\":331,\"tenth_distance\":0.35768961906433105,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.025439798831939697,\"qualifying_count\":327,\"tenth_distance\":0.3527798056602478,\"top10_new_since_previous\":2},\"64\":{\"frontier_gap\":0.04889446496963501,\"qualifying_count\":333,\"tenth_distance\":0.34922200441360474,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.7,\"returned_count\":10},\"32\":{\"recall\":0.9,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":3,\"group\":19,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.022204041481018066,\"qualifying_count\":305,\"tenth_distance\":0.40509486198425293,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.03347516059875488,\"qualifying_count\":337,\"tenth_distance\":0.4046561121940613,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.054304420948028564,\"qualifying_count\":339,\"tenth_distance\":0.4046561121940613,\"top10_new_since_previous\":0}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":1.0,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":2,\"group\":23,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.01914966106414795,\"qualifying_count\":371,\"tenth_distance\":0.42055177688598633,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.0358123779296875,\"qualifying_count\":377,\"tenth_distance\":0.4195767641067505,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.012205779552459717,\"qualifying_count\":378,\"tenth_distance\":0.4195437431335449,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.7,\"returned_count\":10},\"32\":{\"recall\":0.8,\"returned_count\":10},\"64\":{\"recall\":0.9,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":2,\"group\":32,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":-0.01082003116607666,\"qualifying_count\":270,\"tenth_distance\":0.4624951481819153,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.018549680709838867,\"qualifying_count\":275,\"tenth_distance\":0.4624951481819153,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.04520869255065918,\"qualifying_count\":269,\"tenth_distance\":0.45235657691955566,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.7,\"returned_count\":10},\"32\":{\"recall\":0.7,\"returned_count\":10},\"64\":{\"recall\":0.8,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":4,\"group\":38,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.005806684494018555,\"qualifying_count\":356,\"tenth_distance\":0.4229532480239868,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.013992667198181152,\"qualifying_count\":344,\"tenth_distance\":0.4208422303199768,\"top10_new_since_previous\":2},\"64\":{\"frontier_gap\":0.036230266094207764,\"qualifying_count\":346,\"tenth_distance\":0.42071014642715454,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.8,\"returned_count\":10},\"32\":{\"recall\":0.9,\"returned_count\":10},\"64\":{\"recall\":0.9,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":1,\"group\":40,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.0031542181968688965,\"qualifying_count\":243,\"tenth_distance\":0.403694748878479,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.026626944541931152,\"qualifying_count\":255,\"tenth_distance\":0.3990565538406372,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.040833890438079834,\"qualifying_count\":264,\"tenth_distance\":0.39862680435180664,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.8,\"returned_count\":10},\"32\":{\"recall\":0.9,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":3,\"group\":42,\"native_count\":10,\"native_recall\":0.9,\"observations\":{\"16\":{\"frontier_gap\":0.008047640323638916,\"qualifying_count\":339,\"tenth_distance\":0.5199426412582397,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.025123149156570435,\"qualifying_count\":325,\"tenth_distance\":0.5190134048461914,\"top10_new_since_previous\":1},\"64\":{\"frontier_gap\":0.033979564905166626,\"qualifying_count\":297,\"tenth_distance\":0.5176009237766266,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.6,\"returned_count\":10},\"32\":{\"recall\":0.7,\"returned_count\":10},\"64\":{\"recall\":0.8,\"returned_count\":10}}},{\"filter\":\"votes32\",\"fold\":0,\"group\":47,\"native_count\":10,\"native_recall\":1.0,\"observations\":{\"16\":{\"frontier_gap\":0.01606374979019165,\"qualifying_count\":318,\"tenth_distance\":0.3677031993865967,\"top10_new_since_previous\":null},\"32\":{\"frontier_gap\":0.028625309467315674,\"qualifying_count\":320,\"tenth_distance\":0.3677031993865967,\"top10_new_since_previous\":0},\"64\":{\"frontier_gap\":0.04382026195526123,\"qualifying_count\":336,\"tenth_distance\":0.3676139712333679,\"top10_new_since_previous\":1}},\"proofs\":{\"16\":{\"recall\":0.9,\"returned_count\":10},\"32\":{\"recall\":0.9,\"returned_count\":10},\"64\":{\"recall\":1.0,\"returned_count\":10}}}]}",
+          "is_error": false,
+          "tool_use_id": "toolu_016DrUtBzjoYKr4PPyBZixka",
+          "type": "tool_result"
+        }
+      ],
+      "role": "user"
+    },
+    {
+      "content": [
+        {
+          "signature": "CAQSlgkKEQgTGAI4AUIJbmFycmF0aW9uEgxY4cu3+r4V0gTJih4aDFWS9px3lNYW4ifr7yIwFtOkgld4sijTIutGu4Y37nBVorM8TzbBQhpQqB/AkQeuZCCzM3uC/Mq+X9PnapBaKrIIZBkN7pMKDg5VWO9n3qYjJBbb1kTko7nRbgQLmjIKmQbcfOekDsJypavSqoGtfa1VEzdc9vTsEqirg8i1P8BPeYNEcbgQviFkln//JN938+qTSbDDf1ADdNmU0w+9Fg+khBnebwTMjSlhZr321USCv7QoTzrOxKmPC6HbqlB7ayw/Q5djc3ZOJhgOT/OMVBaRW0a7D0o/nZ4Pb65ros+ILvqFARrQvuGqTzKE90jpFUqY0saPk9xkcpe6zN72zERqvhcZBmPMLYE62W/frm03Eqlp0VT/2niAwef80VlnrMaA7+pLsQZRa36Sjs1yAuzrBelwieuWnqULBS7Zz4SxKwyIpaaVrxcF/XMc/WCD8D9jv/B8S6GFFoPbZAYHfmUBLCg8QIMR6B0r+r6JRxgpZfonJJmGzy37BAsh330sI/g9CshoLLFOHDR0IviJJIwbR0zWvY/BJXtCmqrAq8aDgTYURVfHg4BvQxPWyfFs9mXCjm8CTqloFppjesjbitpvauf1qQS0msOU71gfwuxfxwPobqH89g1BQ1cHXt/tXjdpo12u+Ymew7UD2DTgqw0XFTJLEBR/0NHs5Of0Yg19C/lALdmQPNDQgH/shdBkifFqvfuOcUmWksNqo3TWiwfK4qxJl5JKzruJCFltMtZcIhcbA93rDwwZzMX9e2Ae73cHvxoI2Yo56euKfEWQyq6AusObXytZSfkeNAKHeHOsneMxcJi8IvlGq59j7FOZt0yS4Hd5NZgs2UR0atsGkpW7RQL9ludJxDzq04QERVVywHHeuJD19rkR86L56xuH2XjcVSbUMeAOiItzqUBrzlIbB4IGi+QmJIZE1i0I5OyQ8co/mEPSwUZcYpBXXW6QGo5ZcLgq/eUABrAoqqE61M4lddPeTlx10w043xdHJ8ymI1+z1ypnuHOrl3R+gXj/easHnFKw00+rPZ3nJMX0VDwvj0Sp573aGu/AXVSo/bP+zrhT5aExXHoZdzivXfkXjjkNCq1UD+JiO9/I4xq2toHb+/nxL9qPHXu2NUvFbxEO1wRFB2AydZyUnf7gk6tyaeqSWFv4MNq92Vo2c/FA1axo+pPRGUhQW59lRb0krQRtWYJEfXaY1kRous/Ya66szWq6o9r7gSRLdmHsdlE9SRVVbcQxrn+Tle9wfv6w6exxogOtQ+4QOWs2WhWwywxAXR0kptFLLtDta5oJ6HdwpBlqQ6Az55ISGs/aY0WzOpQ8gE05/VryycI90jg2L1rLYiBxMmS7n8ysaxbq2dth0M4qPjeL/0RvZmtw+1LLxwpGuaD9q/nSwASObJsbtw5Rioa34iUowL4J+IDViSc5kCY7jtxXjzNU7apiTSFyZ1cJMcj9PlGfjtwNWL6ubspD7MhMO7Zv6BH38HUrzGWuowkV0w7pObpEAcE4xlu3bY59JcMvGAE=",
+          "thinking": "A frontier gap alone doesn't separate the lossy groups, so I'm testing a looser gap with tenth-distance bounds and a cp64-only variant with a tighter tenth_distance.\n\n",
+          "type": "thinking"
+        },
+        {
+          "caller": {
+            "type": "direct"
+          },
+          "id": "toolu_01VHyXyr3hvm3sPQAocNBzW8",
+          "input": {
+            "policies": [
+              {
+                "name": "u_turn0_gap_td",
+                "rationale": "Unfiltered only: no turnover at cp64, wide gap, tenth_distance below 0.40 (groups 197/332/399 had td>=0.369-0.42).",
+                "rules": {
+                  "unfiltered": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.08
+                        ],
+                        [
+                          "tenth_distance",
+                          "<=",
+                          0.36
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ]
+                },
+                "schema": "fannagent.filtered-ann.v2"
+              },
+              {
+                "name": "u_v32_turn0_gap_td",
+                "rationale": "Unfiltered and votes32: cp64 zero turnover, gap>=0.08, tenth_distance<=0.36.",
+                "rules": {
+                  "unfiltered": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.08
+                        ],
+                        [
+                          "tenth_distance",
+                          "<=",
+                          0.36
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ],
+                  "votes32": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.08
+                        ],
+                        [
+                          "tenth_distance",
+                          "<=",
+                          0.36
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ]
+                },
+                "schema": "fannagent.filtered-ann.v2"
+              },
+              {
+                "name": "u_v32_gap_high",
+                "rationale": "Very high gap at cp64 with zero turnover for both low-cost filters.",
+                "rules": {
+                  "unfiltered": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.1
+                        ],
+                        [
+                          "tenth_distance",
+                          "<=",
+                          0.34
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ],
+                  "votes32": [
+                    {
+                      "conditions": [
+                        [
+                          "top10_new_since_previous",
+                          "<=",
+                          0
+                        ],
+                        [
+                          "frontier_gap",
+                          ">=",
+                          0.1
+                        ],
+                        [
+                          "tenth_distance",
+                          "<=",
+                          0.34
+                        ]
+                      ],
+                      "cp": 64
+                    }
+                  ]
+                },
+                "schema": "fannagent.filtered-ann.v2"
+              }
+            ]
+          },
+          "name": "evaluate_candidates",
+          "type": "tool_use"
+        }
+      ],
+      "role": "assistant"
+    },
+    {
+      "content": [
+        {
+          "content": "{\"candidate_submissions_remaining\":3,\"evaluations\":[{\"candidate_id\":\"candidate-4\",\"cost_estimate\":{\"checkpoint\":32,\"filter\":\"unfiltered\",\"reason\":\"unsupported_observation_mask\",\"status\":\"unsupported_uncertainty_estimate\"},\"evaluation\":{\"counterexamples\":{\"unfiltered\":[{\"anonymous_group\":411,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.08489054441452026,\"qualifying_count\":640,\"tenth_distance\":0.35665363073349,\"top10_new_since_previous\":0},\"fold\":2,\"native_recall\":1.0,\"recall\":0.9}]},\"latency_status\":\"not measured; never infer by subtracting fallback or equating work with time\",\"per_exposed_development_fold\":{\"0\":{\"losses\":0,\"queries\":630,\"stops\":40,\"unknown_stops\":0},\"1\":{\"losses\":0,\"queries\":630,\"stops\":41,\"unknown_stops\":0},\"2\":{\"losses\":1,\"queries\":630,\"stops\":34,\"unknown_stops\":0},\"3\":{\"losses\":0,\"queries\":630,\"stops\":44,\"unknown_stops\":0},\"4\":{\"losses\":0,\"queries\":630,\"stops\":40,\"unknown_stops\":0}},\"per_filter\":{\"unfiltered\":{\"losses\":1,\"mean_recall\":0.996222222222222,\"native_mean_recall\":0.9964444444444442,\"queries\":450,\"stops\":199,\"unknown_stops\":0},\"votes108\":{\"losses\":0,\"mean_recall\":0.9891111111111108,\"native_mean_recall\":0.9891111111111108,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes192\":{\"losses\":0,\"mean_recall\":0.9788888888888884,\"native_mean_recall\":0.9788888888888884,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes310\":{\"losses\":0,\"mean_recall\":0.9482222222222219,\"native_mean_recall\":0.9482222222222219,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes32\":{\"losses\":0,\"mean_recall\":0.9937777777777776,\"native_mean_recall\":0.9937777777777776,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes527\":{\"losses\":0,\"mean_recall\":0.7897777777777784,\"native_mean_recall\":0.7897777777777784,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes743\":{\"losses\":0,\"mean_recall\":0.5348888888888887,\"native_mean_recall\":0.5348888888888887,\"queries\":450,\"stops\":0,\"unknown_stops\":0}},\"quality_preserves_raw_native640\":false,\"recall_losses\":1,\"rule_hash\":\"ee849a991cf8f9cb762b27272479f403cc4f206b3c4830d568b6f16e5ca3311f\",\"runtime_profile\":\"abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47\",\"status\":\"evaluated\",\"unqualified_stops\":0},\"observation_plan\":{\"unfiltered\":{\"16\":0,\"32\":3,\"64\":15},\"votes108\":{\"16\":0,\"32\":0,\"64\":0},\"votes192\":{\"16\":0,\"32\":0,\"64\":0},\"votes310\":{\"16\":0,\"32\":0,\"64\":0},\"votes32\":{\"16\":0,\"32\":0,\"64\":0},\"votes527\":{\"16\":0,\"32\":0,\"64\":0},\"votes743\":{\"16\":0,\"32\":0,\"64\":0}},\"rule_hash\":\"ee849a991cf8f9cb762b27272479f403cc4f206b3c4830d568b6f16e5ca3311f\",\"work_estimate\":{\"equal_scalar_means\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10287.53925925926},\"per_filter_means\":{\"unfiltered\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":7809.328888888889},\"votes108\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes192\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.715555555556},\"votes310\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.417777777779},\"votes32\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes527\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10286.04},\"votes743\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10280.613333333333}},\"status\":\"measured-prefix work proxy; not new-program latency\"}},{\"candidate_id\":\"candidate-5\",\"cost_estimate\":{\"checkpoint\":32,\"filter\":\"unfiltered\",\"reason\":\"unsupported_observation_mask\",\"status\":\"unsupported_uncertainty_estimate\"},\"evaluation\":{\"counterexamples\":{\"unfiltered\":[{\"anonymous_group\":411,\"checkpoint\":64,\"features\":{\"frontier_gap\":0.08489054441452026,\"qualifying_count\":640,\"tenth_distance\":0.35665363073349,\"top10_new_since_previous\":0},\"fold\":2,\"native_recall\":1.0,\"recall\":0.9}]},\"latency_status\":\"not measured; never infer by subtracting fallback or equating work with time\",\"per_exposed_development_fold\":{\"0\":{\"losses\":0,\"queries\":630,\"stops\":62,\"unknown_stops\":0},\"1\":{\"losses\":0,\"queries\":630,\"stops\":59,\"unknown_stops\":0},\"2\":{\"losses\":1,\"queries\":630,\"stops\":41,\"unknown_stops\":0},\"3\":{\"losses\":0,\"queries\":630,\"stops\":56,\"unknown_stops\":0},\"4\":{\"losses\":0,\"queries\":630,\"stops\":58,\"unknown_stops\":0}},\"per_filter\":{\"unfiltered\":{\"losses\":1,\"mean_recall\":0.996222222222222,\"native_mean_recall\":0.9964444444444442,\"queries\":450,\"stops\":199,\"unknown_stops\":0},\"votes108\":{\"losses\":0,\"mean_recall\":0.9891111111111108,\"native_mean_recall\":0.9891111111111108,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes192\":{\"losses\":0,\"mean_recall\":0.9788888888888884,\"native_mean_recall\":0.9788888888888884,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes310\":{\"losses\":0,\"mean_recall\":0.9482222222222219,\"native_mean_recall\":0.9482222222222219,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes32\":{\"losses\":0,\"mean_recall\":0.9937777777777776,\"native_mean_recall\":0.9937777777777776,\"queries\":450,\"stops\":77,\"unknown_stops\":0},\"votes527\":{\"losses\":0,\"mean_recall\":0.7897777777777784,\"native_mean_recall\":0.7897777777777784,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes743\":{\"losses\":0,\"mean_recall\":0.5348888888888887,\"native_mean_recall\":0.5348888888888887,\"queries\":450,\"stops\":0,\"unknown_stops\":0}},\"quality_preserves_raw_native640\":false,\"recall_losses\":1,\"rule_hash\":\"8ac84a29d86a99db62ca8fe55aff0d8826fb369b5e757490b70c035417822792\",\"runtime_profile\":\"abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47\",\"status\":\"evaluated\",\"unqualified_stops\":0},\"observation_plan\":{\"unfiltered\":{\"16\":0,\"32\":3,\"64\":15},\"votes108\":{\"16\":0,\"32\":0,\"64\":0},\"votes192\":{\"16\":0,\"32\":0,\"64\":0},\"votes310\":{\"16\":0,\"32\":0,\"64\":0},\"votes32\":{\"16\":0,\"32\":3,\"64\":15},\"votes527\":{\"16\":0,\"32\":0,\"64\":0},\"votes743\":{\"16\":0,\"32\":0,\"64\":0}},\"rule_hash\":\"8ac84a29d86a99db62ca8fe55aff0d8826fb369b5e757490b70c035417822792\",\"work_estimate\":{\"equal_scalar_means\":{\"feature_passes\":0.3325925925925926,\"membership_probes\":212.89555555555555,\"vector_calls\":10158.011111111111},\"per_filter_means\":{\"unfiltered\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":7809.328888888889},\"votes108\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes192\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.715555555556},\"votes310\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.417777777779},\"votes32\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":9512.555555555555},\"votes527\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10286.04},\"votes743\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10280.613333333333}},\"status\":\"measured-prefix work proxy; not new-program latency\"}},{\"candidate_id\":\"candidate-6\",\"cost_estimate\":{\"checkpoint\":32,\"filter\":\"unfiltered\",\"reason\":\"unsupported_observation_mask\",\"status\":\"unsupported_uncertainty_estimate\"},\"evaluation\":{\"counterexamples\":{},\"latency_status\":\"not measured; never infer by subtracting fallback or equating work with time\",\"per_exposed_development_fold\":{\"0\":{\"losses\":0,\"queries\":630,\"stops\":40,\"unknown_stops\":0},\"1\":{\"losses\":0,\"queries\":630,\"stops\":42,\"unknown_stops\":0},\"2\":{\"losses\":0,\"queries\":630,\"stops\":29,\"unknown_stops\":0},\"3\":{\"losses\":0,\"queries\":630,\"stops\":35,\"unknown_stops\":0},\"4\":{\"losses\":0,\"queries\":630,\"stops\":30,\"unknown_stops\":0}},\"per_filter\":{\"unfiltered\":{\"losses\":0,\"mean_recall\":0.9964444444444442,\"native_mean_recall\":0.9964444444444442,\"queries\":450,\"stops\":135,\"unknown_stops\":0},\"votes108\":{\"losses\":0,\"mean_recall\":0.9891111111111108,\"native_mean_recall\":0.9891111111111108,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes192\":{\"losses\":0,\"mean_recall\":0.9788888888888884,\"native_mean_recall\":0.9788888888888884,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes310\":{\"losses\":0,\"mean_recall\":0.9482222222222219,\"native_mean_recall\":0.9482222222222219,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes32\":{\"losses\":0,\"mean_recall\":0.9937777777777776,\"native_mean_recall\":0.9937777777777776,\"queries\":450,\"stops\":41,\"unknown_stops\":0},\"votes527\":{\"losses\":0,\"mean_recall\":0.7897777777777784,\"native_mean_recall\":0.7897777777777784,\"queries\":450,\"stops\":0,\"unknown_stops\":0},\"votes743\":{\"losses\":0,\"mean_recall\":0.5348888888888887,\"native_mean_recall\":0.5348888888888887,\"queries\":450,\"stops\":0,\"unknown_stops\":0}},\"quality_preserves_raw_native640\":true,\"recall_losses\":0,\"rule_hash\":\"50284539a212321a2b387db5ed24a1c0e65bb6176152fe453085e338914f36f0\",\"runtime_profile\":\"abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47\",\"status\":\"evaluated\",\"unqualified_stops\":0},\"observation_plan\":{\"unfiltered\":{\"16\":0,\"32\":3,\"64\":15},\"votes108\":{\"16\":0,\"32\":0,\"64\":0},\"votes192\":{\"16\":0,\"32\":0,\"64\":0},\"votes310\":{\"16\":0,\"32\":0,\"64\":0},\"votes32\":{\"16\":0,\"32\":3,\"64\":15},\"votes527\":{\"16\":0,\"32\":0,\"64\":0},\"votes743\":{\"16\":0,\"32\":0,\"64\":0}},\"rule_hash\":\"50284539a212321a2b387db5ed24a1c0e65bb6176152fe453085e338914f36f0\",\"work_estimate\":{\"equal_scalar_means\":{\"feature_passes\":0.3325925925925926,\"membership_probes\":212.89555555555555,\"vector_calls\":10217.324814814814},\"per_filter_means\":{\"unfiltered\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":8587.982222222223},\"votes108\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.724444444444},\"votes192\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.715555555556},\"votes310\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10289.417777777779},\"votes32\":{\"feature_passes\":1.9955555555555555,\"membership_probes\":1277.3733333333332,\"vector_calls\":9868.437777777777},\"votes527\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10286.04},\"votes743\":{\"feature_passes\":0.0,\"membership_probes\":0.0,\"vector_calls\":10280.613333333333}},\"status\":\"measured-prefix work proxy; not new-program latency\"}}]}",
+          "is_error": false,
+          "tool_use_id": "toolu_01VHyXyr3hvm3sPQAocNBzW8",
+          "type": "tool_result"
+        }
+      ],
+      "role": "user"
+    },
+    {
+      "content": "{\"Messages_request_cap\":null,\"Messages_requests_so_far\":6,\"amendment\":\"This supersedes historical six-request/four-request allowances. \",\"candidate_submissions_remaining\":3,\"ceiling_usd\":\"15\",\"closing_tool_slot_reserved\":true,\"cost_support_note\":\"Unsupported masks remain runtime-valid but lack qualified \",\"cumulative_spend_usd\":\"0.244308\",\"host_protocol\":\"dollar-budget-v1\",\"instruction\":\"Continue bounded research or submit/abstain. There is no Messages-call ceiling. Keep all six filters; preserve raw-native recall; exact truth is scoring only; validation/test unavailable. Research quotas remain cumulative.\",\"measured_cost_supported_masks\":{\"unfiltered\":{\"16\":[0,3,8,9,11,15],\"32\":[0,8,9,11,15],\"64\":[0,8,9,11,15]},\"votes108\":{\"16\":[0,8,9,11,15],\"32\":[0,3,8,9,11,15],\"64\":[0,8,9,11,15]},\"votes192\":{\"16\":[0,8,9,11,15],\"32\":[0,3,8,9,11,15],\"64\":[0,8,9,11,15]},\"votes310\":{\"16\":[0,8,9,11,15],\"32\":[0,3,8,9,11,15],\"64\":[0,8,9,11,15]},\"votes32\":{\"16\":[0,3,8,9,11,15],\"32\":[0,3,8,9,11,15],\"64\":[0,8,9,11,15]},\"votes527\":{\"16\":[0,8,9,11,15],\"32\":[0,3,8,9,11,15],\"64\":[0,8,9,11,15]},\"votes743\":{\"16\":[0,8,9,11,15],\"32\":[0,8,9,11,15],\"64\":[0,8,9,11,15]}},\"phase\":\"research\",\"remaining_USD\":\"14.755692\",\"research_tool_slots_remaining\":3}",
+      "role": "user"
+    }
+  ],
+  "model": "claude-sonnet-5-5",
+  "output_config": {
+    "effort": "high"
+  },
+  "service_tier": "standard_only",
+  "system": "You are an offline researcher developing causal filtered-ANN stopping policies.\nUse all six scalar filter conditions plus unfiltered. Preserve each query's ACTUAL\nunguarded native640 recall. Short answers are scored as misses; exact search is\nan offline evaluator only and never repairs output. A95% absolute recall flag is\nnot an eligibility gate. Runtime policy features are qualifying_count,\ntenth_distance, frontier_gap, top10_new_since_previous at checkpoints16/32/64.\nMissing values make their tests false; partial/zero stops are allowed only through\nthe qualified profile. The compiler derives observation dependencies, including\nthe preceding scheduled checkpoint for turnover. No rule for a predicate means\nnative continuation without avoidable observation. No IDs/folds/outcomes/costs\nare permitted runtime features. Three ordered clauses/predicate and four ANDed\n>= or <= comparisons/clause, finite thresholds only. Policy format:\n{\"schema\":\"fannagent.filtered-ann.v2\",\"name\":\"...\",\"rules\":{\"votes32\":[\n{\"cp\":32,\"conditions\":[[\"qualifying_count\",\">=\",7]]}]},\"rationale\":\"...\"}.\nThis illustrates schema, not a recommended threshold. Choose your own hypotheses,\nfeatures and thresholds. Use inspection and exact full-development replay. The\ncost tool returns a qualified surrogate only when its cost-model checks pass;\notherwise cost ranking is unavailable. Measured plan facts and search-work replay\nremain diagnostic guidance, NOT actual latency of your new rule.\nRequire actual live cost and matched continue-only controls before a speed claim.\nDo not treat hindsight safe stops as an executable oracle. Prefer useful work\nsavings that repay observation/decision overhead; it is legal to continue on any\npredicate while retaining its contribution to the all-filter objective.\nThe cumulative dollar ceiling is$15 with NO Messages-request ceiling. Research limits remain12 domain tools and9 candidate submissions TOTAL, at most3 per batch. Invalid/duplicate/repair programs consume\nslots. Stop with explicit submit_or_abstain; an empty exploratory batch is not a\npermission for unbounded retries. Finalist selection is controller-enforced from\nqualified registered candidates. The uncertainty contract uses empirical\nengineering envelopes, not measured latency or future-program confidence\nintervals. It selects at most3 for M5 only when the conditional interval regret\nbound is at most one native percentage point; overlapping point estimates never\nbreak ties. Native or uncertainty-cap abstention is valid. Unsupported estimates\nand no-scalar-stop controls cannot be nominated. M5 must measure actual programs.\nAll folds are exposed development diagnostics, not independent holdouts. No\nvalidation/test access, hidden threshold fitter, shell, SQL or network tool exists.\nRetain failures and abstain when evidence does not support a candidate. A negative\nor inconclusive discovery is a valid result. Do not fabricate timing/control wins.\n\nThis is the real M4 development episode after uncertainty qualification. Point-model precision remains failed; supported engineering envelopes can still qualify conditional M5 experiment nomination. No live speedup is implied. Keep hypotheses/rationales concise and cite the available evidence. Stop before quota/context exhaustion; exhaustion without final submission is recorded as abstention with no extra rescue request.\n\nThe dollar-budget amendment supersedes historical call-count limits in the transcript. Follow the current host dollar/quota/phase notices. A funded closing step is reserved. In closing, submit_or_abstain is the only available tool; do not propose more candidates.\n",
+  "thinking": {
+    "type": "between_tools"
+  },
+  "tools": [
+    {
+      "description": "Frozen development scope/profile and qualified evidence/cost status.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {},
+        "required": [],
+        "type": "object"
+      },
+      "name": "inspect_workload"
+    },
+    {
+      "description": "At most12 anonymous development cases by an allowed diagnostic category. Never runtime inputs.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "enum": [
+              "short_native",
+              "qualified_full_prefix",
+              "missing_partial_prefix",
+              "qualified_partial_prefix",
+              "preserving_partial_prefix",
+              "zero_prefix",
+              "lossy_prefix"
+            ],
+            "type": "string"
+          },
+          "filter": {
+            "enum": [
+              "unfiltered",
+              "votes743",
+              "votes527",
+              "votes310",
+              "votes192",
+              "votes108",
+              "votes32"
+            ],
+            "type": "string"
+          },
+          "limit": {
+            "maximum": 12,
+            "minimum": 1,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "category",
+          "filter",
+          "limit"
+        ],
+        "type": "object"
+      },
+      "name": "explain_cases"
+    },
+    {
+      "description": "Compile/validate and replay at most3 causal DSL programs on all frozen development cases. Partial unknown prefixes fail evidence completeness.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "policies": {
+            "items": {
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "policies"
+        ],
+        "type": "object"
+      },
+      "name": "evaluate_candidates"
+    },
+    {
+      "description": "Read already-registered program quality/cost summaries; no new program/search.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "candidate_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 9,
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "candidate_ids"
+        ],
+        "type": "object"
+      },
+      "name": "compare_candidates"
+    },
+    {
+      "description": "Freeze the deterministic qualified shortlist (empty list means use controller ranking) or explicitly abstain. No holdout query.",
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "abstain": {
+            "type": "boolean"
+          },
+          "candidate_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 3,
+            "type": "array"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [],
+        "type": "object"
+      },
+      "name": "submit_or_abstain"
+    }
+  ]
+}

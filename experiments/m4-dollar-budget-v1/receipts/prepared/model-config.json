@@ -1,0 +1,13 @@
+{
+  "allowance_usd": "0",
+  "bound_verified": true,
+  "ceiling_usd": "15",
+  "input_token_bound": 1000000,
+  "input_usd_per_million": "2",
+  "max_attempts": 1,
+  "model": "claude-sonnet-5-5",
+  "output_limit_parameter": "max_tokens",
+  "output_token_limit": 6000,
+  "output_usd_per_million": "10",
+  "pricing_revision": "anthropic-sonnet-5-5-global-standard-2026-11-16"
+}

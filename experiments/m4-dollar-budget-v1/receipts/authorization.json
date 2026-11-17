@@ -1,0 +1,18 @@
+{
+  "ceiling_usd": "15",
+  "configuration_only_no_inference_invoked": true,
+  "contract_sha256": "e02b3a402f5375c799d56f6cc79e884347533e1250f0b15dfee384c2cb6982e3",
+  "evidence_hash": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "inherited_provider_permission": "Existing explicit Anthropic claude-sonnet-5-5 Messages/token-count authorization and development-only data scope; latest instruction removes the request-count allowances while retaining the cumulative dollar cap.",
+  "max_count_requests": null,
+  "max_output_tokens": 6000,
+  "max_requests": null,
+  "model": "claude-sonnet-5-5",
+  "package_sha256": "081dd13927c0621afc17259a78b5380b161ebb1b0c346fecb465fe3c4e328af7",
+  "prior_provider_authorization_sha256": "9ed3bfafad310e30fe17c0e724393467cd92f99aa4d89225abe2c12a737e8c4e",
+  "prior_spend_usd": "0.244308",
+  "recorded_utc": "2026-11-17T03:58:27.511699+00:00",
+  "spending_policy": "dollar_ceiling",
+  "status": "authorized",
+  "user_approval_record": "Reconfigure to $15 cap, clearly the request cap is far too conservative"
+}

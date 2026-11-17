@@ -1,0 +1,77 @@
+{
+  "M0": {
+    "job_id": "23303080",
+    "limits": "Current diagnostic shows counterbalanced reader/CPU/cycle-consistent Broad improvement with reduced work, and no native/continue graph-count mismatch. It does not uniquely identify the earlier allocation control anomaly or establish cross-allocation generalization.",
+    "receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
+    "status": "verified_attribution_resolved"
+  },
+  "M1": {
+    "export_correction": "local fold-lookup padding normalization; original sealed script/error preserved; typed evidence passes",
+    "job_id": "23376796",
+    "outcome_freeze_sha256": "7e2f4a2fb312b5d74ac5fe566db9da62e87b8d9ef20d132178a90c6db8550e27",
+    "receipt_sha256": "40cf8fcf245a8bc2a337a88aa8b2eadfcf26f1d8a3887ce2df05c097e845bee5",
+    "runtime_profile": "abf7e3234444d98d1fac2c2f6d94764f2dc9e19a37e634b2467f499723cc0a47",
+    "status": "verified_original_graph",
+    "upstream_status": "verified_original_graph_runtime_partial_prefix_labels_and_empirical_serving_cost_library"
+  },
+  "M2": {
+    "binding_receipt_sha256": "a9ca24a339b54a65f66237295768e987d6edfab6d93c787ebd6ed93acca4c326",
+    "cost_ranking_enabled": false,
+    "evidence_hash": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+    "old_M2_precision_qualification_remains_failed": true,
+    "partial_prefix_labels": 1496,
+    "point_cost_ranking_enabled": false,
+    "prefix_labels": 9436,
+    "receipt_sha256": "3ac6581d08a3556358ec267d3d8bb70cb8f3ddc2ebe1e0e8f6d617e14f73b0c5",
+    "shortlist_contract_hash": "7eb34cc11b75fbf2f6e5e6b763ce7e5407f6341faa1dd1a7634d3384608c6705",
+    "shortlist_qualification_sha256": "7cfb01f2d5bf3175d23ec411adeb2e3d92e5d09a46f4b69eb7c22bfe8f324f09",
+    "status": "qualified_uncertainty_shortlist_contract",
+    "uncertainty_shortlisting_enabled": true
+  },
+  "M3": {
+    "evidence_hash": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+    "external_requests": 0,
+    "receipt_sha256": "9b11e6b5a522443b0482bcaf81c6ed760812cd3a4f4e4ad8f3a6b5eff4417411",
+    "scripted_only": true,
+    "status": "passed_actual_bound_uncertainty_selection_and_abstention"
+  },
+  "date": "2026-11-16",
+  "execution_contract": {
+    "allowance_usd": "0",
+    "assistant_message_bytes": 524288,
+    "automatic_retries": false,
+    "billing_input_token_bound": 1000000,
+    "candidate_submissions": 9,
+    "ceiling_usd": "15",
+    "closing_reservation_usd": "2.06",
+    "count_preflight": "one_per_message",
+    "counted_input_token_limit": 900000,
+    "domain_tools": 12,
+    "headroom_bytes": 8192,
+    "max_count_requests": null,
+    "max_output_tokens": 6000,
+    "max_requests": null,
+    "maximum_reservation_usd": "2.06",
+    "prior_Messages_requests": 6,
+    "prior_spend_usd": "0.244308",
+    "remaining_USD": "14.755692",
+    "request_byte_bound": 8388608,
+    "reserved_closing_tools": 1,
+    "spending_policy": "dollar_ceiling",
+    "tool_result_block_bytes": 524288
+  },
+  "generation_blocked_by": [
+    "Concrete M4 payload/model/rates/transport freeze and new provider authorization"
+  ],
+  "local_research_qualification_ready": true,
+  "outcome_freeze_sha256": "b272314edc0141afea998b4315fbbe25b59830156ae0ed8cde22c32c4207cfa8",
+  "phase_prompt_hashes": {
+    "closing": "e4dbb5da9dc9283308c856498e0e2a1fce3bb6dd48a515790f2168a5876a5109",
+    "research": "b49afdea67010b224bf81b6d5b08bbbbd94fd81b62c2ce7052194aeafb9de143"
+  },
+  "provider_authorization": "user_requested_dollar_reconfiguration_not_yet_bound_to_package",
+  "provider_authorized": false,
+  "provider_calls": 0,
+  "schema": "filtered-ann-generation-gates.v2",
+  "validation_test_outcomes_opened": false
+}

@@ -1,0 +1,36 @@
+{
+  "SQL_searches": 0,
+  "ceiling_usd": "15",
+  "closing_tool_only": true,
+  "cumulative_submissions": 9,
+  "cumulative_tools": 10,
+  "fixture_policies_are_not_new_discovery_or_real_model_seeds": true,
+  "known_diagnostic_fixture_nominees": [
+    "candidate-7",
+    "candidate-8",
+    "candidate-9"
+  ],
+  "new_count_requests": 0,
+  "new_paid_requests": 0,
+  "original_outcome_unchanged": true,
+  "prior_candidates_retained": 6,
+  "prior_real_requests": 6,
+  "prior_real_spend_usd": "0.244308",
+  "request_ceiling": null,
+  "scripted_phases": [
+    {
+      "bytes": 85573,
+      "ordinal": 7,
+      "phase": "research"
+    },
+    {
+      "bytes": 100635,
+      "ordinal": 8,
+      "phase": "closing"
+    }
+  ],
+  "scripted_total_requests": 8,
+  "status": "passed_actual_bound_dollar_continuation_beyond_six_and_reserved_closure",
+  "synthetic_additional_spend_usd": "0.0008",
+  "validation_test_outcomes_opened": false
+}
