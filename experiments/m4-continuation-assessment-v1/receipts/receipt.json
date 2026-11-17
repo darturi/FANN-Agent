@@ -1,0 +1,1148 @@
+{
+  "SQL_searches": 0,
+  "all_count_estimates_equal_actual_input_usage": true,
+  "amended_preparation_artifacts_verified": 123,
+  "amended_source_files_verified": 12,
+  "audit_source_sha256": "167026ca810a207050c606b2412f66426aa40bcbdaf01b61b0575a213af691bf",
+  "authorization_sha256": "9ed3bfafad310e30fe17c0e724393467cd92f99aa4d89225abe2c12a737e8c4e",
+  "candidate_submissions": 6,
+  "candidates": [
+    {
+      "candidate_id": "candidate-1",
+      "compiled_artifact": "64cdcaefa65605dcaf3e31a3ece4bf49a131df34b6cc5d180ea1ba2b65ec49e6",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "cost_support_failures": [
+        {
+          "checkpoint": 32,
+          "filter": "unfiltered",
+          "needed_mask": 3,
+          "supported_masks": [
+            0,
+            8,
+            9,
+            11,
+            15
+          ]
+        }
+      ],
+      "equal_scalar_vector_calls_proxy": 9923.242222222223,
+      "independent_failure_cases": [
+        {
+          "anonymous_group": 197,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 332,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 399,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 411,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 413,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 436,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 3,
+          "checkpoint": 64,
+          "filter": "votes32"
+        },
+        {
+          "anonymous_group": 360,
+          "checkpoint": 64,
+          "filter": "votes32"
+        }
+      ],
+      "latency_measured": false,
+      "name": "turnover0_gap64",
+      "per_filter_losses": {
+        "unfiltered": 6,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 2,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 6,
+          "mean_recall": 0.9951111111111107,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 311,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 2,
+          "mean_recall": 0.9933333333333331,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 185,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 311,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 185,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_fold_quality": {
+        "0": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 108,
+          "unknown_stops": 0
+        },
+        "1": {
+          "losses": 3,
+          "queries": 630,
+          "stops": 95,
+          "unknown_stops": 0
+        },
+        "2": {
+          "losses": 2,
+          "queries": 630,
+          "stops": 89,
+          "unknown_stops": 0
+        },
+        "3": {
+          "losses": 2,
+          "queries": 630,
+          "stops": 98,
+          "unknown_stops": 0
+        },
+        "4": {
+          "losses": 1,
+          "queries": 630,
+          "stops": 106,
+          "unknown_stops": 0
+        }
+      },
+      "policy_rules_sha256": "2fb5b607ceecb1f00d20d65eaaf7c936655ac2811c618db16e18704ed8a9949b",
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 8,
+      "record_artifact": "67cd3e3bbf0510d1b9f172acb09e407383c76edbd6209b82f322ca648b3f08a6",
+      "rule_hash": "c1c99a6bbb806ceba7870496a78883ce99ef3120f3c730a557f5a482a73012a5",
+      "scalar_stops": 185,
+      "unfiltered_stops": 311
+    },
+    {
+      "candidate_id": "candidate-2",
+      "compiled_artifact": "731ef0bea070dcb3a79ecdf91bc014ecc773d659e4d39cf79c14a489b5403782",
+      "cost_status": "supported_uncertainty_shortlist_proxy",
+      "cost_support_failures": [],
+      "equal_scalar_vector_calls_proxy": 10039.752222222223,
+      "independent_failure_cases": [
+        {
+          "anonymous_group": 197,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 332,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 399,
+          "checkpoint": 32,
+          "filter": "unfiltered"
+        },
+        {
+          "anonymous_group": 3,
+          "checkpoint": 64,
+          "filter": "votes32"
+        }
+      ],
+      "latency_measured": false,
+      "name": "turnover0_gap32_64",
+      "per_filter_losses": {
+        "unfiltered": 3,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 1,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 3,
+          "mean_recall": 0.9957777777777775,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 238,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 1,
+          "mean_recall": 0.9935555555555553,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 117,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 238,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 117,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_fold_quality": {
+        "0": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 78,
+          "unknown_stops": 0
+        },
+        "1": {
+          "losses": 2,
+          "queries": 630,
+          "stops": 68,
+          "unknown_stops": 0
+        },
+        "2": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 61,
+          "unknown_stops": 0
+        },
+        "3": {
+          "losses": 1,
+          "queries": 630,
+          "stops": 79,
+          "unknown_stops": 0
+        },
+        "4": {
+          "losses": 1,
+          "queries": 630,
+          "stops": 69,
+          "unknown_stops": 0
+        }
+      },
+      "policy_rules_sha256": "17fe87af4dbb7d32dc7b0d735670f661137a00ff7be5d16e1be9581e4c7603ad",
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 4,
+      "record_artifact": "1294d3cc63c9f8e9658f4d0974573fcb1746de720cb454e81ec3b1fb63a1a779",
+      "rule_hash": "7d6839725d7cb4e613c7976a5951428b796d9ef8861344af29e3d68f095cdf0d",
+      "scalar_stops": 117,
+      "unfiltered_stops": 238
+    },
+    {
+      "candidate_id": "candidate-3",
+      "compiled_artifact": "fc08d7692937ed9f3ebdf119bdccfdf14fb0e7688f50ea50fa91029dadec3044",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "cost_support_failures": [
+        {
+          "checkpoint": 32,
+          "filter": "unfiltered",
+          "needed_mask": 3,
+          "supported_masks": [
+            0,
+            8,
+            9,
+            11,
+            15
+          ]
+        }
+      ],
+      "equal_scalar_vector_calls_proxy": 10287.53925925926,
+      "independent_failure_cases": [
+        {
+          "anonymous_group": 399,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        }
+      ],
+      "latency_measured": false,
+      "name": "turnover0_only64",
+      "per_filter_losses": {
+        "unfiltered": 1,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 1,
+          "mean_recall": 0.996222222222222,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 106,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 106,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_fold_quality": {
+        "0": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 25,
+          "unknown_stops": 0
+        },
+        "1": {
+          "losses": 1,
+          "queries": 630,
+          "stops": 24,
+          "unknown_stops": 0
+        },
+        "2": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 21,
+          "unknown_stops": 0
+        },
+        "3": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 23,
+          "unknown_stops": 0
+        },
+        "4": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 13,
+          "unknown_stops": 0
+        }
+      },
+      "policy_rules_sha256": "5bd4630e9665864c127761b50fd06b462c011461942901b1a0c9e5c15dba3589",
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 1,
+      "record_artifact": "07d71cec7a1f1e0ab31e05875d4c4e96bbe4c39eb46bf735e74b16ceb62bde3a",
+      "rule_hash": "caa108a411438d955aa94fc5061e0fce724444af749498b064a031127c2db05b",
+      "scalar_stops": 0,
+      "unfiltered_stops": 106
+    },
+    {
+      "candidate_id": "candidate-4",
+      "compiled_artifact": "49c423dc78bfc50c25ed4be6237928cd574d06e9dd6d6be5b0df32e8f61558f4",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "cost_support_failures": [
+        {
+          "checkpoint": 32,
+          "filter": "unfiltered",
+          "needed_mask": 3,
+          "supported_masks": [
+            0,
+            8,
+            9,
+            11,
+            15
+          ]
+        }
+      ],
+      "equal_scalar_vector_calls_proxy": 10287.53925925926,
+      "independent_failure_cases": [
+        {
+          "anonymous_group": 411,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        }
+      ],
+      "latency_measured": false,
+      "name": "u_turn0_gap_td",
+      "per_filter_losses": {
+        "unfiltered": 1,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 1,
+          "mean_recall": 0.996222222222222,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 199,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 199,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_fold_quality": {
+        "0": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 40,
+          "unknown_stops": 0
+        },
+        "1": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 41,
+          "unknown_stops": 0
+        },
+        "2": {
+          "losses": 1,
+          "queries": 630,
+          "stops": 34,
+          "unknown_stops": 0
+        },
+        "3": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 44,
+          "unknown_stops": 0
+        },
+        "4": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 40,
+          "unknown_stops": 0
+        }
+      },
+      "policy_rules_sha256": "ff99ea118b98d2ddfd5d98850cebe4a378267bf836620f722b8502957deec698",
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 1,
+      "record_artifact": "2e6540a1d2648d192c36529c477e4edda716285aabc751b97e41e6c88323feb4",
+      "rule_hash": "ee849a991cf8f9cb762b27272479f403cc4f206b3c4830d568b6f16e5ca3311f",
+      "scalar_stops": 0,
+      "unfiltered_stops": 199
+    },
+    {
+      "candidate_id": "candidate-5",
+      "compiled_artifact": "a61d4447a9015495ffaacf524c25c108d12c14a9159bfcad72a110605c718290",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "cost_support_failures": [
+        {
+          "checkpoint": 32,
+          "filter": "unfiltered",
+          "needed_mask": 3,
+          "supported_masks": [
+            0,
+            8,
+            9,
+            11,
+            15
+          ]
+        }
+      ],
+      "equal_scalar_vector_calls_proxy": 10158.011111111111,
+      "independent_failure_cases": [
+        {
+          "anonymous_group": 411,
+          "checkpoint": 64,
+          "filter": "unfiltered"
+        }
+      ],
+      "latency_measured": false,
+      "name": "u_v32_turn0_gap_td",
+      "per_filter_losses": {
+        "unfiltered": 1,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 1,
+          "mean_recall": 0.996222222222222,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 199,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 77,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 199,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 77,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_fold_quality": {
+        "0": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 62,
+          "unknown_stops": 0
+        },
+        "1": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 59,
+          "unknown_stops": 0
+        },
+        "2": {
+          "losses": 1,
+          "queries": 630,
+          "stops": 41,
+          "unknown_stops": 0
+        },
+        "3": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 56,
+          "unknown_stops": 0
+        },
+        "4": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 58,
+          "unknown_stops": 0
+        }
+      },
+      "policy_rules_sha256": "c4652f121e753279b74be640d8ddc424061e3b96e25a5621b5ebed5b436dabe0",
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 1,
+      "record_artifact": "b75e65e8fb93edd25b6ccc5b4417621193de20b529419e7f83ac0fb0ce825d42",
+      "rule_hash": "8ac84a29d86a99db62ca8fe55aff0d8826fb369b5e757490b70c035417822792",
+      "scalar_stops": 77,
+      "unfiltered_stops": 199
+    },
+    {
+      "candidate_id": "candidate-6",
+      "compiled_artifact": "eef4fa57c50c3cfe5376dd5a3643a25eb32e60d8e4da8b788dac2f815a7926a9",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "cost_support_failures": [
+        {
+          "checkpoint": 32,
+          "filter": "unfiltered",
+          "needed_mask": 3,
+          "supported_masks": [
+            0,
+            8,
+            9,
+            11,
+            15
+          ]
+        }
+      ],
+      "equal_scalar_vector_calls_proxy": 10217.324814814814,
+      "independent_failure_cases": [],
+      "latency_measured": false,
+      "name": "u_v32_gap_high",
+      "per_filter_losses": {
+        "unfiltered": 0,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 0,
+          "mean_recall": 0.9964444444444442,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 135,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 41,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 135,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 41,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_fold_quality": {
+        "0": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 40,
+          "unknown_stops": 0
+        },
+        "1": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 42,
+          "unknown_stops": 0
+        },
+        "2": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 29,
+          "unknown_stops": 0
+        },
+        "3": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 35,
+          "unknown_stops": 0
+        },
+        "4": {
+          "losses": 0,
+          "queries": 630,
+          "stops": 30,
+          "unknown_stops": 0
+        }
+      },
+      "policy_rules_sha256": "aff0841f8082e019f4346872210c6128732ef59d621631b3ad6a2054327e6a9e",
+      "quality_preserves_raw_native640": true,
+      "recall_losses": 0,
+      "record_artifact": "ad874b35980af13d7ce10e1c5995713575d1d57d3a431e48619c10a5090c9288",
+      "rule_hash": "50284539a212321a2b387db5ed24a1c0e65bb6176152fe453085e338914f36f0",
+      "scalar_stops": 41,
+      "unfiltered_stops": 135
+    }
+  ],
+  "ceiling_usd": "15",
+  "cumulative_domain_tools": 8,
+  "date": "2026-11-16",
+  "development_count_requests": 4,
+  "diagnostic_selection_only_not_model_submission": {
+    "admissible_intervals": {},
+    "best_attainable_bound": 0.0,
+    "candidate_ids": [],
+    "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+    "conditional_regret_bound": 0.0,
+    "exclusions": {
+      "candidate-1": "quality_or_structure_not_qualified",
+      "candidate-2": "quality_or_structure_not_qualified",
+      "candidate-3": "quality_or_structure_not_qualified",
+      "candidate-4": "quality_or_structure_not_qualified",
+      "candidate-5": "quality_or_structure_not_qualified",
+      "candidate-6": "uncertainty_estimate_unsupported"
+    },
+    "max_live_nominees": 3,
+    "no_performance_promotion": true,
+    "regret_limit": 0.01,
+    "schema": "filtered-ann.uncertainty-shortlist.v1",
+    "status": "certified_native_abstention"
+  },
+  "durable_artifacts_rehashed": 38,
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "exact_search_calls": 0,
+  "exact_truth_use": "Existing frozen offline recall labels only; no serving repair",
+  "execution_commit": "23ba475",
+  "feedback_slots": 8,
+  "final_submission_received": false,
+  "formal_M5_nominees": [],
+  "independently_replayed_query_filter_cases": 18900,
+  "interpretation": "Context/transport qualification succeeded. The bounded discovery yielded one zero-loss development policy but no cost-supported eligible nominee or final submission. No speedup or protected/general robustness claim follows.",
+  "last_batch_feedback_not_sent_to_model_due_to_request_limit": [
+    "candidate-4",
+    "candidate-5",
+    "candidate-6"
+  ],
+  "live_artifacts_sha256": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d.json": "016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/0619b8191818b6b766fc2173cb18fb1c7874be424b90be0bef45b7633d076ff0.json": "0619b8191818b6b766fc2173cb18fb1c7874be424b90be0bef45b7633d076ff0",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/1b2402b36e8f9ba59c49bc025a4bdd503348c2dca853dd117c2d7830d4577303.json": "1b2402b36e8f9ba59c49bc025a4bdd503348c2dca853dd117c2d7830d4577303",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/1bae453b867ad2d4bb38c09cdaf6506d16d9e1168a20330bb74f93ce9d0bbb40.json": "1bae453b867ad2d4bb38c09cdaf6506d16d9e1168a20330bb74f93ce9d0bbb40",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/3031aa67cbc39723a13e2cf9f29947efdeee096773b070050c272ef1874dd902.json": "3031aa67cbc39723a13e2cf9f29947efdeee096773b070050c272ef1874dd902",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/4528bd1d74fefd3150b6b38429cc60725f8b36a9b4297eb737a38b48f2fe6cee.json": "4528bd1d74fefd3150b6b38429cc60725f8b36a9b4297eb737a38b48f2fe6cee",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4.json": "52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/524224b68212eaaaef53f500d2d1b993cb0c90a2c5f5693c04f84faa73bc8dd0.json": "524224b68212eaaaef53f500d2d1b993cb0c90a2c5f5693c04f84faa73bc8dd0",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/56fc1eae95bf64be53cf531d51d9e6b713fa9f29ce66e9ae79472cf63b16f7ee.json": "56fc1eae95bf64be53cf531d51d9e6b713fa9f29ce66e9ae79472cf63b16f7ee",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/6316744b575f3754d460ac2a61dc4b32e9d39a346753a287bf8e7efb8510d219.json": "6316744b575f3754d460ac2a61dc4b32e9d39a346753a287bf8e7efb8510d219",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/67749f9a1de7e7708b3449d3ab1e09042fd44c98756ab59134d8d35ec7ff7c2c.json": "67749f9a1de7e7708b3449d3ab1e09042fd44c98756ab59134d8d35ec7ff7c2c",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/74a19b70a099a8e7771da6b4d68ac2e47604ad7fc569742771d3f92f88054377.json": "74a19b70a099a8e7771da6b4d68ac2e47604ad7fc569742771d3f92f88054377",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/85b4e8485cf7630ce0b7d6faef9bfce00731f16fc8fa790f1b9a6eb1b1659406.json": "85b4e8485cf7630ce0b7d6faef9bfce00731f16fc8fa790f1b9a6eb1b1659406",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/a84f3568843f8c576630001e8d2fe34e8ecde1927a98f12336071d80a8163b6e.json": "a84f3568843f8c576630001e8d2fe34e8ecde1927a98f12336071d80a8163b6e",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/bd6d9a67f629b644eda5465575dc36c8b72e0803afa76699c098eea47767c5a7.json": "bd6d9a67f629b644eda5465575dc36c8b72e0803afa76699c098eea47767c5a7",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8.json": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/f67ff75861292e92700fc6dace274e0e43d4c573729c40f215a9cd8700669471.json": "f67ff75861292e92700fc6dace274e0e43d4c573729c40f215a9cd8700669471",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/private/artifacts/f906d4f294917a692d26316eeed8ef3280028b818c774a60662930ca10a7fad1.json": "f906d4f294917a692d26316eeed8ef3280028b818c774a60662930ca10a7fad1",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/state.sqlite3": "8ffb948f2d5623181d94c639566cdb4e8ad58f8c0ded400da4114a5adbb1ce34",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/07d71cec7a1f1e0ab31e05875d4c4e96bbe4c39eb46bf735e74b16ceb62bde3a.json": "07d71cec7a1f1e0ab31e05875d4c4e96bbe4c39eb46bf735e74b16ceb62bde3a",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/1294d3cc63c9f8e9658f4d0974573fcb1746de720cb454e81ec3b1fb63a1a779.json": "1294d3cc63c9f8e9658f4d0974573fcb1746de720cb454e81ec3b1fb63a1a779",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/2d2f6108df9f6f5b646687993669a7d36fbd5eb984683f895298845e5eb94957.json": "2d2f6108df9f6f5b646687993669a7d36fbd5eb984683f895298845e5eb94957",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/2e6540a1d2648d192c36529c477e4edda716285aabc751b97e41e6c88323feb4.json": "2e6540a1d2648d192c36529c477e4edda716285aabc751b97e41e6c88323feb4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2.json": "3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/3a9afbaf90cfb04894e6253f7f8f35633e391ccaae4a98d48ef0d0a337f42cd6.json": "3a9afbaf90cfb04894e6253f7f8f35633e391ccaae4a98d48ef0d0a337f42cd6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/49c423dc78bfc50c25ed4be6237928cd574d06e9dd6d6be5b0df32e8f61558f4.json": "49c423dc78bfc50c25ed4be6237928cd574d06e9dd6d6be5b0df32e8f61558f4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/504492b8e1393ac41700f2ed5977a427bdc090ce4892f8e1a95e2062144f4acb.json": "504492b8e1393ac41700f2ed5977a427bdc090ce4892f8e1a95e2062144f4acb",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/64cdcaefa65605dcaf3e31a3ece4bf49a131df34b6cc5d180ea1ba2b65ec49e6.json": "64cdcaefa65605dcaf3e31a3ece4bf49a131df34b6cc5d180ea1ba2b65ec49e6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/67cd3e3bbf0510d1b9f172acb09e407383c76edbd6209b82f322ca648b3f08a6.json": "67cd3e3bbf0510d1b9f172acb09e407383c76edbd6209b82f322ca648b3f08a6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/731ef0bea070dcb3a79ecdf91bc014ecc773d659e4d39cf79c14a489b5403782.json": "731ef0bea070dcb3a79ecdf91bc014ecc773d659e4d39cf79c14a489b5403782",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/a61d4447a9015495ffaacf524c25c108d12c14a9159bfcad72a110605c718290.json": "a61d4447a9015495ffaacf524c25c108d12c14a9159bfcad72a110605c718290",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/ad874b35980af13d7ce10e1c5995713575d1d57d3a431e48619c10a5090c9288.json": "ad874b35980af13d7ce10e1c5995713575d1d57d3a431e48619c10a5090c9288",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/b607d0963037b0729881ea1b23ae02c7a5039f574af2b5336c77d188b0366065.json": "b607d0963037b0729881ea1b23ae02c7a5039f574af2b5336c77d188b0366065",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/b75e65e8fb93edd25b6ccc5b4417621193de20b529419e7f83ac0fb0ce825d42.json": "b75e65e8fb93edd25b6ccc5b4417621193de20b529419e7f83ac0fb0ce825d42",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/c18299e82f7c74ed498829b8093bb2cc1df409addae4c5df00964efe3fd350ef.json": "c18299e82f7c74ed498829b8093bb2cc1df409addae4c5df00964efe3fd350ef",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/c785e0fff3a051cfb7323a01f5554613c19d45c93d564d5c669d15536614e01f.json": "c785e0fff3a051cfb7323a01f5554613c19d45c93d564d5c669d15536614e01f",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/eef4fa57c50c3cfe5376dd5a3643a25eb32e60d8e4da8b788dac2f815a7926a9.json": "eef4fa57c50c3cfe5376dd5a3643a25eb32e60d8e4da8b788dac2f815a7926a9",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/ef42039cf352a9c59b13feed9e5302b6b7aa85de5281cc92d6e8fc2b93e8616e.json": "ef42039cf352a9c59b13feed9e5302b6b7aa85de5281cc92d6e8fc2b93e8616e",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/campaign/workspace/artifacts/fc08d7692937ed9f3ebdf119bdccfdf14fb0e7688f50ea50fa91029dadec3044.json": "fc08d7692937ed9f3ebdf119bdccfdf14fb0e7688f50ea50fa91029dadec3044",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/continuation-disposition.json": "e7c9e380a658664e8cfa97a2986882d7c9fb5fc173f2f06fb547d878513fac71",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/dispatch-preflight/model-overview.md": "0067a54f2d41feecd82eb7c5d34a9efdf96ac81fd90692b4408df8a03292deac",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/dispatch-preflight/model.json": "6b7ce4412b3cd83cd2753ddf91329385b655ad837cfba7a6d6c466e0b212e92d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/dispatch-preflight/pricing.md": "048ccb65c7aa39a16f8475d92bec1730bc9e42c63b79085e2f0f1e6e5f867cd1",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/dispatch-preflight/receipt.json": "ba788797430684c83cb9b9eccabc3dc8ab34beae04f3a87e1479a42e6aee534a",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-3/attempt.json": "850c4840242606c7bcbe56d073d890101b57522a581ad6e51f0fc3b5cdaf909d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-3/context-receipt.json": "9efd316220a499a28a83a11beae34e65dc04371ffb5eba14a382938c0ef8386b",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-3/http.json": "8cdc188048fad2da9ed68ced5df528134fb83675729cc4174e6c28c92a212192",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-3/request.json": "fbb403dc8eb7e67807f2f169cadcd086074f9344cda6ee6a7d8c688021653847",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-3/response.json": "9ed2895f7968ac226c4a0792172f5c8259d15af38993d272e249682e878c650f",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-4/attempt.json": "2aef3d35e26e8d16ff962224460136f8aacdabe0c1fff6a36d0e5af62c647141",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-4/context-receipt.json": "c89cf412f40ebea9eef8649f1d7713765d946990bba15222fe527d414a4326a1",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-4/http.json": "d1e195c5a22dfb19e88aee731bfb36e8e377c140587e0c0a336d7f2435eb789e",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-4/request.json": "71d5f39a93e9b1a6e4a9b6c83470cc9bbd9af560f8257f35c963227cdb08b5bd",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-4/response.json": "dfa72dcd535777ef7b77f8ffda1fb2bf25affb2b6804fe8e2192960fbe32ea15",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-5/attempt.json": "64d9081b3584c7f8558e3df9bf18ec13a4e29b4d066d1e6211641bc705974a58",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-5/context-receipt.json": "6a54986c2106c24525b9536cceef0b7f86d169fd874f1646171db33d22d6ed84",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-5/http.json": "c94e255bd9852a57b85fe378a7b25e8a40d691926f3dbaf55c62a37f7c584e79",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-5/request.json": "0bcfcb8fb00762fce8cf2473a176d0f8b375806f5f85400467f95addf67c315e",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-5/response.json": "2baaf5648d279f8047b9c116de42a2887d2187645b03c178a2974a76dcf83fcf",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-6/attempt.json": "572815b51309764cc05d5d235ba78efb434e8083957830f822299984b3776c7b",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-6/context-receipt.json": "ffbbb9b40e4cedc843db4e97b5f956acdede6084174bb1afe7c6831c0473e7fc",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-6/http.json": "d047c1accda43754aaaadca5ff1e9c2f112f16fd464f5f980569e47e5672b183",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-6/request.json": "395015481c47da704e09130997c9af5f6432f705a73ba6b0bb4396711a3ceadf",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/count-6/response.json": "295be73d753ae4b7056a456380e75759c9a5cf3a2664972bb5145147bbf2065d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-3/attempt.json": "1d1186d951afc92ee5fbb64ffa53a8b6ea185113c83276adc366909f616f9aba",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-3/http.json": "508efb3a2fc2354daa3b80a53274d6ee025b104ce49f69b27fd1239424539458",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-3/request.json": "016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-3/response.json": "d60fd5e1d10cedb1997f2bbd88914b3889eaf75d3f8bb819a4bfb5a719d0755a",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-4/attempt.json": "27add0730cc04f9a696f0df5879d366acf198809a18f0f78cec6f6f9b9bb5ad6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-4/http.json": "a9588e56c774378bab27fd3144b35f4e515b7d5c885bf3b964cf9165dc692711",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-4/request.json": "56fc1eae95bf64be53cf531d51d9e6b713fa9f29ce66e9ae79472cf63b16f7ee",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-4/response.json": "ce5e6231dd8add8db49a0d7d097f026dc23de5a5112e37d18324a567a2bbf0d3",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-5/attempt.json": "524fb27e6e21c251bd5b1ec68e8b59eea6f00f78aa5cc0249f27035f1c6f867d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-5/http.json": "f1f6b82ab6a8356648c9d7a86ba541803fc56573486ef71205eff394cf807919",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-5/request.json": "f67ff75861292e92700fc6dace274e0e43d4c573729c40f215a9cd8700669471",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-5/response.json": "7adafae8382d1321f1d9ce65229ef1a4489476a7fd317c3b7f175b6207d2f435",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-6/attempt.json": "6dd471a9898de0eefe729037f7a49ad414cae82a477d1855a5ac02fe339adbed",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-6/http.json": "3babe3f92fcf42d054a80042dc424340d7715c8d8fecddcd381984089d311fac",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-6/request.json": "6316744b575f3754d460ac2a61dc4b32e9d39a346753a287bf8e7efb8510d219",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/live-continuation/provider/message-6/response.json": "1ed9f14a64d29cefbadac8f7f92699ebf973cd20d74fc289645b6b18e7308a13"
+  },
+  "live_policy_timing_measured": false,
+  "new_Messages_requests": 4,
+  "new_input_tokens": 93425,
+  "new_output_tokens": 1866,
+  "new_spend_usd": "0.205510",
+  "new_tools": [
+    {
+      "argument_summary": {
+        "policies": 3
+      },
+      "arguments_sha256": "5042604730faac9aa209d0c12d26a74bc979554bcd1ebaf5d8d54edda6d3d28c",
+      "error": null,
+      "name": "evaluate_candidates",
+      "ordinal": 3,
+      "result_bytes": 13853
+    },
+    {
+      "argument_summary": {
+        "category": "lossy_prefix",
+        "filter": "group 399",
+        "limit": 3
+      },
+      "arguments_sha256": "608d08011f04e661083ad937c566407368c48f50613720a5625694aa7f4046cf",
+      "error": "bounded category/filter/limit required",
+      "name": "explain_cases",
+      "ordinal": 4,
+      "result_bytes": 152
+    },
+    {
+      "argument_summary": {
+        "category": "lossy_prefix",
+        "filter": "votes32",
+        "limit": 12
+      },
+      "arguments_sha256": "57f40cdb98ff49506272d908be2015c7289eda5701a2f7078427f30565a8bed7",
+      "error": null,
+      "name": "explain_cases",
+      "ordinal": 5,
+      "result_bytes": 8354
+    },
+    {
+      "argument_summary": {
+        "policies": 3
+      },
+      "arguments_sha256": "e45a675691f2dd8a381d067fa405972968edf9892dfff83449487a624e20e455",
+      "error": null,
+      "name": "evaluate_candidates",
+      "ordinal": 6,
+      "result_bytes": 11074
+    }
+  ],
+  "next_step": "Retain this closed outcome; expose filter enums, cost-support and remaining quotas before any future episode. Qualifying candidate-6's missing observation-only path would need a prospective development-only protocol amendment.",
+  "original_episode_unchanged": true,
+  "package_sha256": "d51f61d67b503a6ede42729f3f6ddd9913fbfd093e1fe93c8542b83215a43234",
+  "remaining_authorized_Messages_requests": 0,
+  "requests": [
+    {
+      "actual_usd": "0.041324",
+      "counted_input_tokens": 17172,
+      "input_tokens": 17172,
+      "ordinal": 3,
+      "output_tokens": 698,
+      "request_bytes": 42382,
+      "request_sha256": "016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d",
+      "response_sha256": "d60fd5e1d10cedb1997f2bbd88914b3889eaf75d3f8bb819a4bfb5a719d0755a",
+      "thinking_output_tokens": 84
+    },
+    {
+      "actual_usd": "0.049942",
+      "counted_input_tokens": 24056,
+      "input_tokens": 24056,
+      "ordinal": 4,
+      "output_tokens": 183,
+      "request_bytes": 58947,
+      "request_sha256": "56fc1eae95bf64be53cf531d51d9e6b713fa9f29ce66e9ae79472cf63b16f7ee",
+      "response_sha256": "ce5e6231dd8add8db49a0d7d097f026dc23de5a5112e37d18324a567a2bbf0d3",
+      "thinking_output_tokens": 83
+    },
+    {
+      "actual_usd": "0.049706",
+      "counted_input_tokens": 24268,
+      "input_tokens": 24268,
+      "ordinal": 5,
+      "output_tokens": 117,
+      "request_bytes": 60918,
+      "request_sha256": "f67ff75861292e92700fc6dace274e0e43d4c573729c40f215a9cd8700669471",
+      "response_sha256": "7adafae8382d1321f1d9ce65229ef1a4489476a7fd317c3b7f175b6207d2f435",
+      "thinking_output_tokens": 0
+    },
+    {
+      "actual_usd": "0.064538",
+      "counted_input_tokens": 27929,
+      "input_tokens": 27929,
+      "ordinal": 6,
+      "output_tokens": 868,
+      "request_bytes": 69571,
+      "request_sha256": "6316744b575f3754d460ac2a61dc4b32e9d39a346753a287bf8e7efb8510d219",
+      "response_sha256": "1ed9f14a64d29cefbadac8f7f92699ebf973cd20d74fc289645b6b18e7308a13",
+      "thinking_output_tokens": 150
+    }
+  ],
+  "retries": 0,
+  "schema": "filtered-ann.M4-continuation-assessment.v1",
+  "scope": {
+    "development_groups": 450,
+    "exact_scoring_only": true,
+    "scalar_filters": 6,
+    "unfiltered": true,
+    "validation_test_outcomes_opened": false
+  },
+  "status": "verified_six_request_episode_closed_one_zero_loss_policy_cost_unsupported_no_nominees",
+  "thinking_blocks_preserved_unchanged": true,
+  "total_Messages_requests": 6,
+  "total_input_tokens": 110859,
+  "total_output_tokens": 2259,
+  "total_spend_usd": "0.244308",
+  "uncertain_calls": 0,
+  "validation_test_outcomes_opened": false,
+  "zero_loss_candidates": [
+    "candidate-6"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-16",
+  "formal_M5_nominees": [],
+  "package_sha256": "d51f61d67b503a6ede42729f3f6ddd9913fbfd093e1fe93c8542b83215a43234",
+  "receipt_sha256": "1b744bdbb292815f7a292040764a140e976151c52c43cd5664ca7f0e99848001",
+  "receipt_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-context-amendment-v1/assessment-v1/receipt.json",
+  "schema": "filtered-ann.M4-continuation-outcome.v1",
+  "status": "verified_six_request_episode_closed_one_zero_loss_policy_cost_unsupported_no_nominees",
+  "total_Messages_requests": 6,
+  "total_spend_usd": "0.244308",
+  "validation_test_outcomes_opened": false,
+  "zero_loss_candidates": [
+    "candidate-6"
+  ]
+}
