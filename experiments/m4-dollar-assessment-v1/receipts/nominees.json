@@ -1,0 +1,144 @@
+{
+  "agent_submitted": true,
+  "development_only": true,
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "live_latency_measured": false,
+  "nominees": [
+    {
+      "candidate_id": "candidate-7",
+      "policy": {
+        "name": "u_v32_gap_td_noturn",
+        "rationale": "cp64 only, no turnover: wide gap and low tenth_distance, to stay in supported observation masks.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.1
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.34
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "992a54ec6d5ba92f7170ef78c310f5bde730531847a8cc01e6a28c9c870f5a8f",
+      "source_compiled_artifact": "f48ecf1a0c86b2c9ec9763faf4770f7e3088dbd005b48efa0451e740d6f19aba",
+      "source_record_artifact": "cf255a9be5584ca51b4105beb031d402e726df232cb0166bbfd390e662ee63e2"
+    },
+    {
+      "candidate_id": "candidate-8",
+      "policy": {
+        "name": "u_v32_gap_td_noturn_strict",
+        "rationale": "cp64 only, no turnover, stricter gap/td.",
+        "rules": {
+          "unfiltered": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 64
+            }
+          ],
+          "votes32": [
+            {
+              "conditions": [
+                [
+                  "frontier_gap",
+                  ">=",
+                  0.12
+                ],
+                [
+                  "tenth_distance",
+                  "<=",
+                  0.33
+                ]
+              ],
+              "cp": 64
+            }
+          ]
+        },
+        "schema": "fannagent.filtered-ann.v2"
+      },
+      "rule_hash": "8ba220eee385358cbad957c085494612792d6b6964319674be136847a9ca19e2",
+      "source_compiled_artifact": "69769a0d63544d8b58d67c4ee7608f54f9c7208cf292328211e20940fa552267",
+      "source_record_artifact": "c663cc51aec164708f5a717026ee568eda886075ddd0207b3e6c8b9b5a968f03"
+    }
+  ],
+  "schema": "filtered-ann.formally-submitted-development-nominees.v1",
+  "scope": {
+    "development_groups": 450,
+    "exact_scoring_only": true,
+    "scalar_filters": 6,
+    "unfiltered": true,
+    "validation_test_outcomes_opened": false
+  },
+  "selection_decision": {
+    "admissible_intervals": {
+      "candidate-7": [
+        0.9599384934090613,
+        1.030666186207583
+      ],
+      "candidate-8": [
+        0.9631348031045799,
+        1.0338624959031015
+      ]
+    },
+    "best_attainable_bound": 0.0,
+    "candidate_ids": [
+      "candidate-7",
+      "candidate-8"
+    ],
+    "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+    "conditional_regret_bound": 0.0,
+    "exclusions": {
+      "candidate-1": "quality_or_structure_not_qualified",
+      "candidate-2": "quality_or_structure_not_qualified",
+      "candidate-3": "quality_or_structure_not_qualified",
+      "candidate-4": "quality_or_structure_not_qualified",
+      "candidate-5": "quality_or_structure_not_qualified",
+      "candidate-6": "uncertainty_estimate_unsupported"
+    },
+    "max_live_nominees": 3,
+    "no_performance_promotion": true,
+    "regret_limit": 0.01,
+    "schema": "filtered-ann.uncertainty-shortlist.v1",
+    "status": "selected_for_M5"
+  },
+  "source_package_sha256": "081dd13927c0621afc17259a78b5380b161ebb1b0c346fecb465fe3c4e328af7",
+  "validation_test_outcomes_opened": false
+}

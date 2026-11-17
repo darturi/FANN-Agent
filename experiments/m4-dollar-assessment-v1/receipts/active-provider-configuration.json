@@ -1,0 +1,24 @@
+{
+  "actual_spend_usd": "0.403114",
+  "authorization_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/authorization.json",
+  "ceiling_usd": "15",
+  "configuration": "dollar_budget_v1",
+  "episode_terminal": true,
+  "formal_M5_nominees": [
+    "candidate-7",
+    "candidate-8"
+  ],
+  "max_count_requests": null,
+  "max_requests": null,
+  "new_inference_dispatched": true,
+  "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/m4-dollar-outcome-v1.json",
+  "package_sha256": "081dd13927c0621afc17259a78b5380b161ebb1b0c346fecb465fe3c4e328af7",
+  "package_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/package-freeze.json",
+  "remaining_USD": "14.596886",
+  "runner_workspace_path": "agent/experiments/m4-dollar-budget-v1/run.py",
+  "schema": "filtered-ann.active-provider-configuration.v1",
+  "spending_policy": "dollar_ceiling",
+  "terminal_state": "finalists_frozen_pending_live_measurement",
+  "total_Messages_requests": 8,
+  "validation_test_outcomes_opened": false
+}

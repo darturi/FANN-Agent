@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-16",
+  "formal_M5_nominees": [
+    "candidate-7",
+    "candidate-8"
+  ],
+  "nominees_sha256": "48bf2eca1a66950a68701cd89cd646daa499f9243223a6b9301ea7f2d9befef1",
+  "receipt_sha256": "87328f79ec8cd0354bc03111951763bda48863dde5bfae246f034ef3a6b36948",
+  "receipt_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/assessment-v1/receipt.json",
+  "schema": "filtered-ann.M4-dollar-outcome.v1",
+  "status": "verified_two_agent_submitted_zero_loss_cost_supported_M5_nominees",
+  "total_Messages_requests": 8,
+  "total_spend_usd": "0.403114",
+  "validation_test_outcomes_opened": false
+}

@@ -1,0 +1,899 @@
+{
+  "SQL_searches": 0,
+  "all_count_estimates_match_actual_usage": true,
+  "audit_source_sha256": "367e06dda5ae173c7464323871cbd0ef5e61f213a6125e87f6824ee448544103",
+  "candidate_submissions": 8,
+  "candidates": [
+    {
+      "candidate_id": "candidate-1",
+      "compiled_artifact": "64cdcaefa65605dcaf3e31a3ece4bf49a131df34b6cc5d180ea1ba2b65ec49e6",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "name": "turnover0_gap64",
+      "per_filter_losses": {
+        "unfiltered": 6,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 2,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 6,
+          "mean_recall": 0.9951111111111107,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 311,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 2,
+          "mean_recall": 0.9933333333333331,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 185,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 311,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 185,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": null,
+      "primary_ratio_proxy": null,
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 8,
+      "record_artifact": "67cd3e3bbf0510d1b9f172acb09e407383c76edbd6209b82f322ca648b3f08a6",
+      "rule_hash": "c1c99a6bbb806ceba7870496a78883ce99ef3120f3c730a557f5a482a73012a5"
+    },
+    {
+      "candidate_id": "candidate-2",
+      "compiled_artifact": "731ef0bea070dcb3a79ecdf91bc014ecc773d659e4d39cf79c14a489b5403782",
+      "cost_status": "supported_uncertainty_shortlist_proxy",
+      "name": "turnover0_gap32_64",
+      "per_filter_losses": {
+        "unfiltered": 3,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 1,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 3,
+          "mean_recall": 0.9957777777777775,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 238,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 1,
+          "mean_recall": 0.9935555555555553,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 117,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 238,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 117,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": [
+        0.9439300197128501,
+        1.0146577125113716
+      ],
+      "primary_ratio_proxy": 0.9792938661121109,
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 4,
+      "record_artifact": "1294d3cc63c9f8e9658f4d0974573fcb1746de720cb454e81ec3b1fb63a1a779",
+      "rule_hash": "7d6839725d7cb4e613c7976a5951428b796d9ef8861344af29e3d68f095cdf0d"
+    },
+    {
+      "candidate_id": "candidate-3",
+      "compiled_artifact": "fc08d7692937ed9f3ebdf119bdccfdf14fb0e7688f50ea50fa91029dadec3044",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "name": "turnover0_only64",
+      "per_filter_losses": {
+        "unfiltered": 1,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 1,
+          "mean_recall": 0.996222222222222,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 106,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 106,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": null,
+      "primary_ratio_proxy": null,
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 1,
+      "record_artifact": "07d71cec7a1f1e0ab31e05875d4c4e96bbe4c39eb46bf735e74b16ceb62bde3a",
+      "rule_hash": "caa108a411438d955aa94fc5061e0fce724444af749498b064a031127c2db05b"
+    },
+    {
+      "candidate_id": "candidate-4",
+      "compiled_artifact": "49c423dc78bfc50c25ed4be6237928cd574d06e9dd6d6be5b0df32e8f61558f4",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "name": "u_turn0_gap_td",
+      "per_filter_losses": {
+        "unfiltered": 1,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 1,
+          "mean_recall": 0.996222222222222,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 199,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 199,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": null,
+      "primary_ratio_proxy": null,
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 1,
+      "record_artifact": "2e6540a1d2648d192c36529c477e4edda716285aabc751b97e41e6c88323feb4",
+      "rule_hash": "ee849a991cf8f9cb762b27272479f403cc4f206b3c4830d568b6f16e5ca3311f"
+    },
+    {
+      "candidate_id": "candidate-5",
+      "compiled_artifact": "a61d4447a9015495ffaacf524c25c108d12c14a9159bfcad72a110605c718290",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "name": "u_v32_turn0_gap_td",
+      "per_filter_losses": {
+        "unfiltered": 1,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 1,
+          "mean_recall": 0.996222222222222,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 199,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 77,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 199,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 77,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": null,
+      "primary_ratio_proxy": null,
+      "quality_preserves_raw_native640": false,
+      "recall_losses": 1,
+      "record_artifact": "b75e65e8fb93edd25b6ccc5b4417621193de20b529419e7f83ac0fb0ce825d42",
+      "rule_hash": "8ac84a29d86a99db62ca8fe55aff0d8826fb369b5e757490b70c035417822792"
+    },
+    {
+      "candidate_id": "candidate-6",
+      "compiled_artifact": "eef4fa57c50c3cfe5376dd5a3643a25eb32e60d8e4da8b788dac2f815a7926a9",
+      "cost_status": "unsupported_uncertainty_estimate",
+      "name": "u_v32_gap_high",
+      "per_filter_losses": {
+        "unfiltered": 0,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 0,
+          "mean_recall": 0.9964444444444442,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 135,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 41,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 135,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 41,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": null,
+      "primary_ratio_proxy": null,
+      "quality_preserves_raw_native640": true,
+      "recall_losses": 0,
+      "record_artifact": "ad874b35980af13d7ce10e1c5995713575d1d57d3a431e48619c10a5090c9288",
+      "rule_hash": "50284539a212321a2b387db5ed24a1c0e65bb6176152fe453085e338914f36f0"
+    },
+    {
+      "candidate_id": "candidate-7",
+      "compiled_artifact": "f48ecf1a0c86b2c9ec9763faf4770f7e3088dbd005b48efa0451e740d6f19aba",
+      "cost_status": "supported_uncertainty_shortlist_proxy",
+      "name": "u_v32_gap_td_noturn",
+      "per_filter_losses": {
+        "unfiltered": 0,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 0,
+          "mean_recall": 0.9964444444444442,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 135,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 41,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 135,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 41,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": [
+        0.9599384934090613,
+        1.030666186207583
+      ],
+      "primary_ratio_proxy": 0.9953023398083222,
+      "quality_preserves_raw_native640": true,
+      "recall_losses": 0,
+      "record_artifact": "cf255a9be5584ca51b4105beb031d402e726df232cb0166bbfd390e662ee63e2",
+      "rule_hash": "992a54ec6d5ba92f7170ef78c310f5bde730531847a8cc01e6a28c9c870f5a8f"
+    },
+    {
+      "candidate_id": "candidate-8",
+      "compiled_artifact": "69769a0d63544d8b58d67c4ee7608f54f9c7208cf292328211e20940fa552267",
+      "cost_status": "supported_uncertainty_shortlist_proxy",
+      "name": "u_v32_gap_td_noturn_strict",
+      "per_filter_losses": {
+        "unfiltered": 0,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 0,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "per_filter_quality": {
+        "unfiltered": {
+          "losses": 0,
+          "mean_recall": 0.9964444444444442,
+          "native_mean_recall": 0.9964444444444442,
+          "queries": 450,
+          "stops": 102,
+          "unknown_stops": 0
+        },
+        "votes108": {
+          "losses": 0,
+          "mean_recall": 0.9891111111111108,
+          "native_mean_recall": 0.9891111111111108,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes192": {
+          "losses": 0,
+          "mean_recall": 0.9788888888888884,
+          "native_mean_recall": 0.9788888888888884,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes310": {
+          "losses": 0,
+          "mean_recall": 0.9482222222222219,
+          "native_mean_recall": 0.9482222222222219,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes32": {
+          "losses": 0,
+          "mean_recall": 0.9937777777777776,
+          "native_mean_recall": 0.9937777777777776,
+          "queries": 450,
+          "stops": 22,
+          "unknown_stops": 0
+        },
+        "votes527": {
+          "losses": 0,
+          "mean_recall": 0.7897777777777784,
+          "native_mean_recall": 0.7897777777777784,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        },
+        "votes743": {
+          "losses": 0,
+          "mean_recall": 0.5348888888888887,
+          "native_mean_recall": 0.5348888888888887,
+          "queries": 450,
+          "stops": 0,
+          "unknown_stops": 0
+        }
+      },
+      "per_filter_stops": {
+        "unfiltered": 102,
+        "votes108": 0,
+        "votes192": 0,
+        "votes310": 0,
+        "votes32": 22,
+        "votes527": 0,
+        "votes743": 0
+      },
+      "primary_ratio_interval": [
+        0.9631348031045799,
+        1.0338624959031015
+      ],
+      "primary_ratio_proxy": 0.9984986495038407,
+      "quality_preserves_raw_native640": true,
+      "recall_losses": 0,
+      "record_artifact": "c663cc51aec164708f5a717026ee568eda886075ddd0207b3e6c8b9b5a968f03",
+      "rule_hash": "8ba220eee385358cbad957c085494612792d6b6964319674be136847a9ca19e2"
+    }
+  ],
+  "ceiling_usd": "15",
+  "configured_artifacts_verified": 110,
+  "configured_sources_verified": 11,
+  "date": "2026-11-16",
+  "domain_tools": 10,
+  "durable_artifacts_rehashed": 50,
+  "ending_reason": "Agent explicitly submitted; no monetary or research quota was reached",
+  "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+  "exact_search_calls": 0,
+  "exact_truth_use": "Frozen offline recall labels; no serving repair",
+  "execution_authorization_sha256": "c39aaeed038e751293126fdcc4441b82af3035029961758c3aa828b40377d51f",
+  "execution_commit": "f85f9d6",
+  "final_submission_received": true,
+  "formal_M5_nominees": [
+    "candidate-7",
+    "candidate-8"
+  ],
+  "independent_scorer_source_sha256": "167026ca810a207050c606b2412f66426aa40bcbdaf01b61b0575a213af691bf",
+  "independently_scored_policy_query_filter_cases": 25200,
+  "live_artifacts_sha256": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d.json": "016421c73832218fad8d71326df976e813f7ac8b943ac5e65e601f108ee6db3d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/0619b8191818b6b766fc2173cb18fb1c7874be424b90be0bef45b7633d076ff0.json": "0619b8191818b6b766fc2173cb18fb1c7874be424b90be0bef45b7633d076ff0",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/1b2402b36e8f9ba59c49bc025a4bdd503348c2dca853dd117c2d7830d4577303.json": "1b2402b36e8f9ba59c49bc025a4bdd503348c2dca853dd117c2d7830d4577303",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/1bae453b867ad2d4bb38c09cdaf6506d16d9e1168a20330bb74f93ce9d0bbb40.json": "1bae453b867ad2d4bb38c09cdaf6506d16d9e1168a20330bb74f93ce9d0bbb40",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/3031aa67cbc39723a13e2cf9f29947efdeee096773b070050c272ef1874dd902.json": "3031aa67cbc39723a13e2cf9f29947efdeee096773b070050c272ef1874dd902",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/4528bd1d74fefd3150b6b38429cc60725f8b36a9b4297eb737a38b48f2fe6cee.json": "4528bd1d74fefd3150b6b38429cc60725f8b36a9b4297eb737a38b48f2fe6cee",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4.json": "52083e1b110e2b8c6f50e196d74f533d0a8d7097a529a21e4a872dbd35b93ab4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/524224b68212eaaaef53f500d2d1b993cb0c90a2c5f5693c04f84faa73bc8dd0.json": "524224b68212eaaaef53f500d2d1b993cb0c90a2c5f5693c04f84faa73bc8dd0",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/56fc1eae95bf64be53cf531d51d9e6b713fa9f29ce66e9ae79472cf63b16f7ee.json": "56fc1eae95bf64be53cf531d51d9e6b713fa9f29ce66e9ae79472cf63b16f7ee",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/6164ddd3a05b3813c3f55ee6c5ead433082701feea67e8939e1cfbd53e7d7ef6.json": "6164ddd3a05b3813c3f55ee6c5ead433082701feea67e8939e1cfbd53e7d7ef6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/6316744b575f3754d460ac2a61dc4b32e9d39a346753a287bf8e7efb8510d219.json": "6316744b575f3754d460ac2a61dc4b32e9d39a346753a287bf8e7efb8510d219",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/67749f9a1de7e7708b3449d3ab1e09042fd44c98756ab59134d8d35ec7ff7c2c.json": "67749f9a1de7e7708b3449d3ab1e09042fd44c98756ab59134d8d35ec7ff7c2c",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/74a19b70a099a8e7771da6b4d68ac2e47604ad7fc569742771d3f92f88054377.json": "74a19b70a099a8e7771da6b4d68ac2e47604ad7fc569742771d3f92f88054377",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/85b4e8485cf7630ce0b7d6faef9bfce00731f16fc8fa790f1b9a6eb1b1659406.json": "85b4e8485cf7630ce0b7d6faef9bfce00731f16fc8fa790f1b9a6eb1b1659406",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/91124e8b3f5d401cb154b888c638799efa2b8895ad48a7a91598a15b55f103af.json": "91124e8b3f5d401cb154b888c638799efa2b8895ad48a7a91598a15b55f103af",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/a84f3568843f8c576630001e8d2fe34e8ecde1927a98f12336071d80a8163b6e.json": "a84f3568843f8c576630001e8d2fe34e8ecde1927a98f12336071d80a8163b6e",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/b9c5125cd54845812ae2b262589cbe3abe9d8e3802596005fdc87bbdcf6ac81b.json": "b9c5125cd54845812ae2b262589cbe3abe9d8e3802596005fdc87bbdcf6ac81b",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/bd6d9a67f629b644eda5465575dc36c8b72e0803afa76699c098eea47767c5a7.json": "bd6d9a67f629b644eda5465575dc36c8b72e0803afa76699c098eea47767c5a7",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/c96390596251d31efd4f02458df76451819077caff338f7f9869c5aad349fa43.json": "c96390596251d31efd4f02458df76451819077caff338f7f9869c5aad349fa43",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/de6d4e968ca0c577e7c7ea413be3e088c02a80221aef0ac23a25a7638faded0b.json": "de6d4e968ca0c577e7c7ea413be3e088c02a80221aef0ac23a25a7638faded0b",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8.json": "e0f69f12b2b6c27b6de6ae25ce345b0f5cf45cf0a079f74745f701e8912a68b8",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/f67ff75861292e92700fc6dace274e0e43d4c573729c40f215a9cd8700669471.json": "f67ff75861292e92700fc6dace274e0e43d4c573729c40f215a9cd8700669471",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/f906d4f294917a692d26316eeed8ef3280028b818c774a60662930ca10a7fad1.json": "f906d4f294917a692d26316eeed8ef3280028b818c774a60662930ca10a7fad1",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/private/artifacts/fcb4d23dee54ef3dd28c28e13f5ccf131cdbf9c35eb30ec8bdbc03c6f81b5456.json": "fcb4d23dee54ef3dd28c28e13f5ccf131cdbf9c35eb30ec8bdbc03c6f81b5456",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/state.sqlite3": "c9f7673153b7aeba6abc2b8aa3f880e90ea07a0154455f39f1aa8e22cd7730ce",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/07d71cec7a1f1e0ab31e05875d4c4e96bbe4c39eb46bf735e74b16ceb62bde3a.json": "07d71cec7a1f1e0ab31e05875d4c4e96bbe4c39eb46bf735e74b16ceb62bde3a",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/1294d3cc63c9f8e9658f4d0974573fcb1746de720cb454e81ec3b1fb63a1a779.json": "1294d3cc63c9f8e9658f4d0974573fcb1746de720cb454e81ec3b1fb63a1a779",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/160103fedacce134d27cea33196f0fee01254aceaae7fec59207726121b03837.json": "160103fedacce134d27cea33196f0fee01254aceaae7fec59207726121b03837",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/2cdcc6f9b5d80cbdae7c3069aab84edfe5a40808df8cc372dec2b4f0c848c901.json": "2cdcc6f9b5d80cbdae7c3069aab84edfe5a40808df8cc372dec2b4f0c848c901",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/2d2f6108df9f6f5b646687993669a7d36fbd5eb984683f895298845e5eb94957.json": "2d2f6108df9f6f5b646687993669a7d36fbd5eb984683f895298845e5eb94957",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/2e6540a1d2648d192c36529c477e4edda716285aabc751b97e41e6c88323feb4.json": "2e6540a1d2648d192c36529c477e4edda716285aabc751b97e41e6c88323feb4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2.json": "3802fb2b208eb9340ce0f2b3358e88931707e642fd82af4f7f71f57aaf8da7f2",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/3a9afbaf90cfb04894e6253f7f8f35633e391ccaae4a98d48ef0d0a337f42cd6.json": "3a9afbaf90cfb04894e6253f7f8f35633e391ccaae4a98d48ef0d0a337f42cd6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/49c423dc78bfc50c25ed4be6237928cd574d06e9dd6d6be5b0df32e8f61558f4.json": "49c423dc78bfc50c25ed4be6237928cd574d06e9dd6d6be5b0df32e8f61558f4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/504492b8e1393ac41700f2ed5977a427bdc090ce4892f8e1a95e2062144f4acb.json": "504492b8e1393ac41700f2ed5977a427bdc090ce4892f8e1a95e2062144f4acb",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/64cdcaefa65605dcaf3e31a3ece4bf49a131df34b6cc5d180ea1ba2b65ec49e6.json": "64cdcaefa65605dcaf3e31a3ece4bf49a131df34b6cc5d180ea1ba2b65ec49e6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/67cd3e3bbf0510d1b9f172acb09e407383c76edbd6209b82f322ca648b3f08a6.json": "67cd3e3bbf0510d1b9f172acb09e407383c76edbd6209b82f322ca648b3f08a6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/69769a0d63544d8b58d67c4ee7608f54f9c7208cf292328211e20940fa552267.json": "69769a0d63544d8b58d67c4ee7608f54f9c7208cf292328211e20940fa552267",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/731ef0bea070dcb3a79ecdf91bc014ecc773d659e4d39cf79c14a489b5403782.json": "731ef0bea070dcb3a79ecdf91bc014ecc773d659e4d39cf79c14a489b5403782",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/a61d4447a9015495ffaacf524c25c108d12c14a9159bfcad72a110605c718290.json": "a61d4447a9015495ffaacf524c25c108d12c14a9159bfcad72a110605c718290",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/ad874b35980af13d7ce10e1c5995713575d1d57d3a431e48619c10a5090c9288.json": "ad874b35980af13d7ce10e1c5995713575d1d57d3a431e48619c10a5090c9288",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/b607d0963037b0729881ea1b23ae02c7a5039f574af2b5336c77d188b0366065.json": "b607d0963037b0729881ea1b23ae02c7a5039f574af2b5336c77d188b0366065",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/b75e65e8fb93edd25b6ccc5b4417621193de20b529419e7f83ac0fb0ce825d42.json": "b75e65e8fb93edd25b6ccc5b4417621193de20b529419e7f83ac0fb0ce825d42",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/c18299e82f7c74ed498829b8093bb2cc1df409addae4c5df00964efe3fd350ef.json": "c18299e82f7c74ed498829b8093bb2cc1df409addae4c5df00964efe3fd350ef",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/c663cc51aec164708f5a717026ee568eda886075ddd0207b3e6c8b9b5a968f03.json": "c663cc51aec164708f5a717026ee568eda886075ddd0207b3e6c8b9b5a968f03",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/c785e0fff3a051cfb7323a01f5554613c19d45c93d564d5c669d15536614e01f.json": "c785e0fff3a051cfb7323a01f5554613c19d45c93d564d5c669d15536614e01f",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/cf255a9be5584ca51b4105beb031d402e726df232cb0166bbfd390e662ee63e2.json": "cf255a9be5584ca51b4105beb031d402e726df232cb0166bbfd390e662ee63e2",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/eef4fa57c50c3cfe5376dd5a3643a25eb32e60d8e4da8b788dac2f815a7926a9.json": "eef4fa57c50c3cfe5376dd5a3643a25eb32e60d8e4da8b788dac2f815a7926a9",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/ef42039cf352a9c59b13feed9e5302b6b7aa85de5281cc92d6e8fc2b93e8616e.json": "ef42039cf352a9c59b13feed9e5302b6b7aa85de5281cc92d6e8fc2b93e8616e",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/f48ecf1a0c86b2c9ec9763faf4770f7e3088dbd005b48efa0451e740d6f19aba.json": "f48ecf1a0c86b2c9ec9763faf4770f7e3088dbd005b48efa0451e740d6f19aba",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/campaign/workspace/artifacts/fc08d7692937ed9f3ebdf119bdccfdf14fb0e7688f50ea50fa91029dadec3044.json": "fc08d7692937ed9f3ebdf119bdccfdf14fb0e7688f50ea50fa91029dadec3044",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/dispatch-preflight/model-overview.md": "0067a54f2d41feecd82eb7c5d34a9efdf96ac81fd90692b4408df8a03292deac",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/dispatch-preflight/model.json": "6b7ce4412b3cd83cd2753ddf91329385b655ad837cfba7a6d6c466e0b212e92d",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/dispatch-preflight/pricing.md": "048ccb65c7aa39a16f8475d92bec1730bc9e42c63b79085e2f0f1e6e5f867cd1",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/dispatch-preflight/receipt.json": "ba788797430684c83cb9b9eccabc3dc8ab34beae04f3a87e1479a42e6aee534a",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/disposition.json": "1f080aa3c13a80a906f9bf1e9933abaac1f3a718d8af56585f5e65b302ead787",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-7/attempt.json": "5453110f1b3013b914d3816dff70f6628790bc6b4805e19fa67fe1f4c50b0434",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-7/context-receipt.json": "c8de04032da85a3bf9a8985fbe21e28bbd5b4924b87de6afe436e8137a5d23af",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-7/http.json": "599971c1ed95a5dc1fbe1a43cfd17865e47f17d7be2d8a84b40d6e0ff7bcb9b7",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-7/request.json": "b980505b33ad55a7d6a754c53dc0b136b79ae613189112ae1b139196fba4dbbd",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-7/response.json": "99c8b998e36187d8d1b84bc618657ff08542c3709c0136c55a84604a2cb77855",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-8/attempt.json": "55bf36e8b164a537da4d9012044ec6543c8899bcab88f3aefbe29628470088be",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-8/context-receipt.json": "0f5e48a95f74b9da6d718f286c50572a7be10676809b69f53b24de0e689bd456",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-8/http.json": "70665d0846676141f661ecc55155fd2f09ccd75858d362fd9cbd3b3dc5a4cba9",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-8/request.json": "eb89dbb6b65f6810123f6912261a635d0443fb1876267bcab06f9c757cf550d4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/count-8/response.json": "58024f550906c096dfbdacd855e539ff3f4f9582fc0e4aae8b20b3c7a63f9330",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-7/attempt.json": "d33ce98c21fcb544118a0ee55e741cec287b31c1096446e9056c95a851198845",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-7/http.json": "44ee38424a640c147c40eaa3e76b002e905903cc9c530c8cadf04483ec468e99",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-7/request.json": "6164ddd3a05b3813c3f55ee6c5ead433082701feea67e8939e1cfbd53e7d7ef6",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-7/response.json": "86553f247797e806ba7be326fb7192b5d06dff868b2d2b1d90c0f96536a9adf3",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-8/attempt.json": "725c226f08d54d9669da1ff369a50c359d8d2bb71682aeb9bd5f46b01a3f28bb",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-8/http.json": "08030d068a945e644938010608ce09f4068c9a465bf791838444f4da1e3590e4",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-8/request.json": "c96390596251d31efd4f02458df76451819077caff338f7f9869c5aad349fa43",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/live-dollar-continuation/provider/message-8/response.json": "304c55d7aad5da8bc531c5820a0764579d247d5687904e1796fc792cb205498f"
+  },
+  "live_policy_latency_measured": false,
+  "new_Messages_requests": 2,
+  "new_count_requests": 2,
+  "new_spend_usd": "0.158806",
+  "next_step": "M5 development-only qualification and timing of both exact frozen nominees, native and matched continue-only controls across six filters and unfiltered",
+  "nominees_sha256": "48bf2eca1a66950a68701cd89cd646daa499f9243223a6b9301ea7f2d9befef1",
+  "nominees_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/assessment-v1/nominees.json",
+  "old_outcomes_unchanged": true,
+  "package_sha256": "081dd13927c0621afc17259a78b5380b161ebb1b0c346fecb465fe3c4e328af7",
+  "remaining_USD": "14.596886",
+  "request_ceiling": null,
+  "requests": [
+    {
+      "actual_usd": "0.075422",
+      "input_tokens": 34476,
+      "ordinal": 7,
+      "output_tokens": 647,
+      "request_bytes": 85582,
+      "request_sha256": "6164ddd3a05b3813c3f55ee6c5ead433082701feea67e8939e1cfbd53e7d7ef6",
+      "response_sha256": "86553f247797e806ba7be326fb7192b5d06dff868b2d2b1d90c0f96536a9adf3",
+      "thinking_output_tokens": 196
+    },
+    {
+      "actual_usd": "0.083384",
+      "input_tokens": 39252,
+      "ordinal": 8,
+      "output_tokens": 488,
+      "request_bytes": 97866,
+      "request_sha256": "c96390596251d31efd4f02458df76451819077caff338f7f9869c5aad349fa43",
+      "response_sha256": "304c55d7aad5da8bc531c5820a0764579d247d5687904e1796fc792cb205498f",
+      "thinking_output_tokens": 0
+    }
+  ],
+  "retries": 0,
+  "same_candidate6_and_candidate7_stop_decisions_on_development": true,
+  "schema": "filtered-ann.M4-dollar-assessment.v1",
+  "scope": {
+    "development_groups": 450,
+    "exact_scoring_only": true,
+    "scalar_filters": 6,
+    "unfiltered": true,
+    "validation_test_outcomes_opened": false
+  },
+  "selection_decision": {
+    "admissible_intervals": {
+      "candidate-7": [
+        0.9599384934090613,
+        1.030666186207583
+      ],
+      "candidate-8": [
+        0.9631348031045799,
+        1.0338624959031015
+      ]
+    },
+    "best_attainable_bound": 0.0,
+    "candidate_ids": [
+      "candidate-7",
+      "candidate-8"
+    ],
+    "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+    "conditional_regret_bound": 0.0,
+    "exclusions": {
+      "candidate-1": "quality_or_structure_not_qualified",
+      "candidate-2": "quality_or_structure_not_qualified",
+      "candidate-3": "quality_or_structure_not_qualified",
+      "candidate-4": "quality_or_structure_not_qualified",
+      "candidate-5": "quality_or_structure_not_qualified",
+      "candidate-6": "uncertainty_estimate_unsupported"
+    },
+    "max_live_nominees": 3,
+    "no_performance_promotion": true,
+    "regret_limit": 0.01,
+    "schema": "filtered-ann.uncertainty-shortlist.v1",
+    "status": "selected_for_M5"
+  },
+  "signed_history_preserved_unchanged": true,
+  "status": "verified_two_agent_submitted_zero_loss_cost_supported_M5_nominees",
+  "total_Messages_requests": 8,
+  "total_input_tokens": 184587,
+  "total_output_tokens": 3394,
+  "total_spend_usd": "0.403114",
+  "uncertain_calls": 0,
+  "validation_test_outcomes_opened": false
+}

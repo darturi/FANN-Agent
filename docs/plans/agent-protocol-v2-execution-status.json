@@ -4,7 +4,7 @@
     "generation_gates": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/protocol-v2-gates-after-M0.json",
     "job_id": "23303080",
     "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/reader-attribution-assessment-v1.json",
-    "proceed_next": "Use the configured dollar-governed continuation; no six/four request ceiling. Retain all history/debt and frozen scientific/cost-support gates.",
+    "proceed_next": "Prepare M5 development-only actual timing/recall kit for exact frozen nominees7/8, native and matched continue controls, retaining all six filters plus unfiltered",
     "receipt": "trials/fannagent-benchmark-evaluation-v1/reviews-small/reports/reader-attribution-assessment-23303080.json",
     "receipt_sha256": "ff34058b4707bfedba31cfb5ba9e91799868aab7927435508deb7627687aca79",
     "repeat_M0": false
@@ -256,6 +256,93 @@
     "status": "configured_qualified_dollar_cap_no_request_ceiling_no_new_inference",
     "validation_test_outcomes_opened": false
   },
+  "M4_dollar_execution": {
+    "SQL_searches": 0,
+    "all_count_estimates_match_actual_usage": true,
+    "candidate_submissions": 8,
+    "ceiling_usd": "15",
+    "configured_artifacts_verified": 110,
+    "configured_sources_verified": 11,
+    "domain_tools": 10,
+    "durable_artifacts_rehashed": 50,
+    "eligible_for_M5_development_measurement": true,
+    "ending_reason": "Agent explicitly submitted; no monetary or research quota was reached",
+    "evidence_identity": "5b025e2b11662f20bf68986bee06851727a353c6e991ba75da62a06116dce07d",
+    "exact_search_calls": 0,
+    "execution_authorization_sha256": "c39aaeed038e751293126fdcc4441b82af3035029961758c3aa828b40377d51f",
+    "execution_commit": "f85f9d6",
+    "final_submission_received": true,
+    "formal_M5_nominees": [
+      "candidate-7",
+      "candidate-8"
+    ],
+    "independently_scored_policy_query_filter_cases": 25200,
+    "live_policy_latency_measured": false,
+    "new_Messages_requests": 2,
+    "new_count_requests": 2,
+    "new_spend_usd": "0.158806",
+    "next_step": "M5 development-only qualification and timing of both exact frozen nominees, native and matched continue-only controls across six filters and unfiltered",
+    "nominees_sha256": "48bf2eca1a66950a68701cd89cd646daa499f9243223a6b9301ea7f2d9befef1",
+    "nominees_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/assessment-v1/nominees.json",
+    "old_outcomes_unchanged": true,
+    "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/m4-dollar-outcome-v1.json",
+    "package_sha256": "081dd13927c0621afc17259a78b5380b161ebb1b0c346fecb465fe3c4e328af7",
+    "performance_promoted": false,
+    "receipt": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/assessment-v1/receipt.json",
+    "receipt_sha256": "87328f79ec8cd0354bc03111951763bda48863dde5bfae246f034ef3a6b36948",
+    "remaining_USD": "14.596886",
+    "report": "experiments/m4-dollar-assessment-v1/REPORT.md",
+    "request_ceiling": null,
+    "retries": 0,
+    "same_candidate6_and_candidate7_stop_decisions_on_development": true,
+    "scope": {
+      "development_groups": 450,
+      "exact_scoring_only": true,
+      "scalar_filters": 6,
+      "unfiltered": true,
+      "validation_test_outcomes_opened": false
+    },
+    "selection_decision": {
+      "admissible_intervals": {
+        "candidate-7": [
+          0.9599384934090613,
+          1.030666186207583
+        ],
+        "candidate-8": [
+          0.9631348031045799,
+          1.0338624959031015
+        ]
+      },
+      "best_attainable_bound": 0.0,
+      "candidate_ids": [
+        "candidate-7",
+        "candidate-8"
+      ],
+      "certificate_universe": "Quality-preserving supported policies with scalar stops, plus native. Assumes costs in engineering envelopes and ideal M5 choice; excludes future measurement/allocation noise and unsupported programs.",
+      "conditional_regret_bound": 0.0,
+      "exclusions": {
+        "candidate-1": "quality_or_structure_not_qualified",
+        "candidate-2": "quality_or_structure_not_qualified",
+        "candidate-3": "quality_or_structure_not_qualified",
+        "candidate-4": "quality_or_structure_not_qualified",
+        "candidate-5": "quality_or_structure_not_qualified",
+        "candidate-6": "uncertainty_estimate_unsupported"
+      },
+      "max_live_nominees": 3,
+      "no_performance_promotion": true,
+      "regret_limit": 0.01,
+      "schema": "filtered-ann.uncertainty-shortlist.v1",
+      "status": "selected_for_M5"
+    },
+    "signed_history_preserved_unchanged": true,
+    "status": "verified_two_agent_submitted_zero_loss_cost_supported_M5_nominees",
+    "total_Messages_requests": 8,
+    "total_input_tokens": 184587,
+    "total_output_tokens": 3394,
+    "total_spend_usd": "0.403114",
+    "uncertain_calls": 0,
+    "validation_test_outcomes_opened": false
+  },
   "M4_execution": {
     "M5_nominees": 0,
     "SQL_searches": 0,
@@ -346,33 +433,41 @@
     "torch_submission_needed_now": false
   },
   "Torch_submissions_by_Codex": 0,
-  "actual_protocol_v2_generation_spend_usd": "0.244308",
+  "actual_protocol_v2_generation_spend_usd": "0.403114",
   "date": "2026-11-16",
-  "development_free_count_preflights": 4,
+  "development_free_count_preflights": 6,
   "plan_commit": "8937e9e",
   "provider_budget_policy": {
-    "actual_spend_usd": "0.244308",
+    "actual_spend_usd": "0.403114",
     "authorization_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/authorization.json",
     "ceiling_usd": "15",
     "configuration": "dollar_budget_v1",
+    "episode_terminal": true,
+    "formal_M5_nominees": [
+      "candidate-7",
+      "candidate-8"
+    ],
     "max_count_requests": null,
     "max_requests": null,
-    "new_inference_dispatched": false,
+    "new_inference_dispatched": true,
+    "outcome_freeze": "trials/fannagent-benchmark-evaluation-v1/reviews-small/freeze/m4-dollar-outcome-v1.json",
     "package_sha256": "081dd13927c0621afc17259a78b5380b161ebb1b0c346fecb465fe3c4e328af7",
     "package_workspace_path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/package-freeze.json",
-    "remaining_USD": "14.755692",
+    "remaining_USD": "14.596886",
     "runner_workspace_path": "agent/experiments/m4-dollar-budget-v1/run.py",
     "schema": "filtered-ann.active-provider-configuration.v1",
     "spending_policy": "dollar_ceiling",
+    "terminal_state": "finalists_frozen_pending_live_measurement",
+    "total_Messages_requests": 8,
     "validation_test_outcomes_opened": false
   },
-  "provider_metadata_GETs": 3,
-  "provider_requests": 6,
+  "provider_metadata_GETs": 4,
+  "provider_requests": 8,
   "receipt": "experiments/filtered-ann-protocol-v2/receipts/local-implementation-2026-11-14.json",
   "receipt_sha256": "f0ec9061539e25affc7bb34aab8d23df3a2eef0a7b70c912644cc47a92b95c87",
   "roadmap_update": {
-    "sha256": "d77582cc1f96f64f32ef1ceca7d2bbcd1b9efcf9d39423097ad8ab936993bec6",
-    "tracked_delta": "experiments/m4-dollar-budget-v1/README.md",
+    "sha256": "7b3f4de9ba5aa7b0a2b69b6a6dfc11dbad013908ca6d4504193715c9dbf90382",
+    "tracked_delta": "experiments/m4-dollar-assessment-v1/REPORT.md",
     "workspace_path": "research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md"
   },
   "schema": "fannagent.protocol-v2-execution-status.v1",
@@ -381,11 +476,11 @@
     "M1": "job23376796_original_graph_runtime_labels_and_empirical_cost_library_verified",
     "M2": "complete_actual_evidence_work_and_qualified_conditional_uncertainty_shortlist_point_precision_failure_preserved",
     "M3": "passed_real_bound_positive_interval_selection_abstention_and_61_tests_feedback_v2",
-    "M4": "closed_first_six_calls_preserved_dollar_governed_extension_configured_and_qualified_not_dispatched",
-    "M5": "not_run_no_formal_M4_nominees_missing_unfiltered_cost_support_requires_prospective_amendment",
+    "M4": "completed_eight_calls_0_403114_USD_two_formal_supported_zero_loss_development_nominees_frozen",
+    "M5": "pending_development_runtime_qualification_and_actual_policy_matched_control_timing_for_candidates7_8",
     "M6": "not_run_protected_outcomes_unopened"
   },
-  "status": "dollar_budget_reconfigured_no_request_ceiling_history_and_0_244308_USD_retained_no_new_inference",
+  "status": "M4_dollar_continuation_complete_two_formal_zero_loss_cost_supported_development_nominees_M5_pending",
   "synthetic_free_count_preflights": 1,
   "uncertainty_shortlist_assessment": {
     "M3": "passed_actual_bound_positive_and_abstention_paths",
