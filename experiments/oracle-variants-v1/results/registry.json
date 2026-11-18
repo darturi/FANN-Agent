@@ -1,0 +1,72 @@
+{
+  "agent_discovery_or_generalization_claim": false,
+  "benchmark_binding_sha256": "7e594233c21f697fafd965f1e19bd21a9c50783833711f787dd5877ee585d28e",
+  "cohorts": {
+    "full_workload": {
+      "artifacts": {
+        "oracle_constrained": {
+          "agent_dsl_expressible": false,
+          "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/artifacts-v1/policies/oracle_constrained-full_workload.json",
+          "sha256": "37d647525886f89331dc5596d41499101f10fc7e53d4e5b57155c7bf5d0d586e"
+        },
+        "oracle_feasible": {
+          "agent_dsl_expressible": true,
+          "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/artifacts-v1/policies/oracle_feasible-full_workload.json",
+          "sha256": "fa0ccc47e3c7fbea046e13445030a352178e999c3c27983c1f472a2752813a88"
+        },
+        "oracle_ideal": {
+          "agent_dsl_expressible": false,
+          "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/artifacts-v1/policies/oracle_ideal-full_workload.json",
+          "sha256": "b477a0bf244617d9dd82f6c83f2e6855590f3e8c415dd18ff1bc7029afc791e6"
+        }
+      },
+      "cases": 7000,
+      "search": {
+        "absolute_work_gap": 18329630,
+        "best_found_work_saved": 13621908,
+        "latency_optimality_proven": false,
+        "native_layer0_work": 70930650,
+        "work_optimality_proven": false,
+        "work_saved_percent": 19.204544156863076,
+        "work_saved_percent_upper_bound": 45.046165515189834,
+        "work_saved_upper_bound": 31951538
+      }
+    },
+    "heldout_test": {
+      "artifacts": {
+        "oracle_constrained": {
+          "agent_dsl_expressible": false,
+          "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/artifacts-v1/policies/oracle_constrained-heldout_test.json",
+          "sha256": "d6dac50ecac86476bb2b68a5741894706856fc2af4b59d1934e4ce908e812b8c"
+        },
+        "oracle_feasible": {
+          "agent_dsl_expressible": true,
+          "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/artifacts-v1/policies/oracle_feasible-heldout_test.json",
+          "sha256": "d968626140f3b9852e811586e1806f6c917ac8ba560733470052e1e9269f795b"
+        },
+        "oracle_ideal": {
+          "agent_dsl_expressible": false,
+          "path": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/artifacts-v1/policies/oracle_ideal-heldout_test.json",
+          "sha256": "fae858e1869ec79f654ad414ae003b345f86e9ab8ce3ea20cc4a73bb4cb926e5"
+        }
+      },
+      "cases": 1925,
+      "search": {
+        "absolute_work_gap": 2927261,
+        "best_found_work_saved": 5210724,
+        "latency_optimality_proven": false,
+        "native_layer0_work": 19309486,
+        "work_optimality_proven": false,
+        "work_saved_percent": 26.985306600082467,
+        "work_saved_percent_upper_bound": 42.145011006507374,
+        "work_saved_upper_bound": 8137985
+      }
+    }
+  },
+  "hindsight_fit": true,
+  "latency_optimality_proven": false,
+  "quality_gate": "per-case native Recall@10",
+  "raw_receipt_sha256": "d0faf893a4a3a5f8341c3cc20903334c4c52e02c330057ac1229cfd1c9d15d14",
+  "report_sha256": "fd9641942f777d24630cbdd29a23ddb8535d2a36148182e5be78c0b48d6c2a2c",
+  "schema": "fannagent.oracle-variants.artifacts.v1"
+}

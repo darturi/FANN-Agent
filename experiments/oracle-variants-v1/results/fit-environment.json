@@ -1,0 +1,10 @@
+{
+  "python_executable": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+  "python_version": "3.12.7 (v3.12.7:0b05ead877f, Sep 30 2024, 23:18:00) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "scipy_version": "1.16.3",
+  "highs_version": "1.8.0",
+  "highs_native_core_sha256": "46e0abec34fc0a0ec3285f3385058aabde7632dec86443cccd86bc7952234684",
+  "threads_per_fit": 1
+}

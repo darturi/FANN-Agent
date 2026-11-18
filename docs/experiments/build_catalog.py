@@ -142,7 +142,7 @@ def evidence_record(path, files, kind="saved evidence directory"):
             item = {"path": rel(q)}
             if name != "state.sqlite3":
                 item["sha256"] = sha(q)
-            if q.suffix == ".json" and q.stat().st_size < 8_000_000:
+            if q.suffix.lower() == ".json" and q.stat().st_size < 8_000_000:
                 try:
                     data = json.loads(q.read_text())
                     if isinstance(data, dict):
@@ -204,7 +204,10 @@ def scan():
             top_experiment = path.parent == ROOT / "agent/experiments"
             result_root = path.parent == ROOT / "trials/torch-reviews-results"
             attempt = bool(re.match(r"(?:run|execution|prepared|qualification|oracle-preflight|quiet|settings-screen|stopping-feasibility|policy-stall|docker-stability|sequential-fix|latency-fix-recheck)-", path.name))
-            verification_root = base in {"agent-pgvector/verification", "mini-bench/qualification", "research/agent-audit-2026-10-06"} and path == start
+            verification_root = path in {ROOT / "agent-pgvector/verification",
+                                        ROOT / "mini-bench/qualification",
+                                        ROOT / "research/agent-audit-2026-10-06"}
+            raw_log_directory = path.name == "logs" and any(f.endswith(".log") for f in fs)
             # Flat report/freeze/receipt collections get one searchable row per
             # file instead of an enormous row hiding distinct outcomes.
             flat = path.name in FLAT_METADATA_DIRS or path in {ROOT / "research", ROOT / "agent/docs/verification"}
@@ -215,7 +218,7 @@ def scan():
                     record["reproduction_reference"] = recipe(record["path"])
                     records.append(record)
                 found &= {"state.sqlite3"}
-            if found or top_trial or top_experiment or result_root or attempt or verification_root:
+            if found or top_trial or top_experiment or result_root or attempt or verification_root or raw_log_directory:
                 kind = "package or study family" if top_trial else "saved evidence directory"
                 if top_experiment:
                     kind = "experiment definition or preparation"
@@ -229,6 +232,9 @@ def scan():
                     kind = "agent conversation"
                 elif "state.sqlite3" in fs:
                     kind = "saved agent/database state"
+                if any(part.startswith(("scripted-", "no-network", "M3-")) or
+                       part in {"checks", "smokes", "fixtures"} for part in path.parts):
+                    kind = "engineering/synthetic verification"
                 records.append(evidence_record(path, fs, kind))
                 if verification_root:
                     records[-1]["additional_verification_files"] = [rel(path / f) for f in sorted(fs) if f.endswith((".json", ".log", ".md"))]
@@ -262,7 +268,7 @@ def main():
     records, archive_paths, exclusions = scan()
     data = {"schema_version": 2, "observed_at": stamp, "workspace_root": str(ROOT), "scope_roots": ROOTS,
             "scope_limit": "Saved workspace evidence only; remote-only/missing/deleted runs cannot be exhaustively enumerated. Blocks, analyses and fixtures are identified separately.",
-            "discovery_rules": "Case-insensitive report/status/receipt markers and named verification/review/freeze metadata; one row per file in reports/freeze/receipts, research documents and agent/docs/verification. Experiment definitions and top-level trial families are retained without implying execution. Raw JSONL/CSV/log files are linked, not interpreted or reanalyzed.",
+            "discovery_rules": "Case-insensitive report/status/receipt markers and named verification/review/freeze metadata; one row per file in reports/freeze/receipts, research documents and agent/docs/verification. Experiment definitions, top-level trial families and raw log directories are retained without implying successful execution. Raw JSONL/CSV/log files are linked, not interpreted or reanalyzed.",
             "excluded_directories": exclusions, "record_count": len(records),
             "journaled_experiment_count": sum(len(r.get("journaled_experiments", [])) for r in records), "records": records}
     (HERE / "run-inventory.json").write_text(json.dumps(data, indent=2) + "\n")

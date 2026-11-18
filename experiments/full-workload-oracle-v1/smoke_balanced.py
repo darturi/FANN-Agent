@@ -1,0 +1,155 @@
+"""Actual synthetic PostgreSQL end-to-end oracle; never benchmark performance evidence."""
+
+import json
+import os
+import shutil
+import subprocess
+from collections import Counter
+from pathlib import Path
+from types import SimpleNamespace
+
+import oracle_experiment
+import timing_followup
+from balanced_analyse import report
+from balanced_source import EVIDENCE, load_source
+from common import publish, sha, write
+from oracle_design import FILTERS
+from oracle_experiment import acquire, offline, timing
+from psycopg import connect
+from startup import start
+from timing_followup import evidence_counts
+
+
+class Backend:
+    def __init__(self, bundle, work):
+        self.state = {"source_manifest": {"settings": {}}}
+        self.conn = None
+
+    def _connect(self):
+        self.conn = connect("host=/tmp/socket dbname=postgres user=nobody", autocommit=True)
+        self.conn.execute("SELECT fannagent.bind_target('reviews','id','embedding','reviews_hnsw')")
+        return self.conn
+
+    def close(self):
+        if self.conn:
+            self.conn.close()
+
+
+def main():
+    os.sched_setaffinity(0, set(sorted(os.sched_getaffinity(0))[:4]))
+    Path("/tmp/socket").mkdir(mode=0o700)
+    Path("/tmp/pg_hba.conf").write_text("local all all trust\n")
+    subprocess.run(
+        ["/opt/postgresql/bin/initdb", "-D", "/tmp/pgdata", "-A", "trust", "-U", "nobody"],
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
+    start(Path("/tmp"))
+    here = Path("/qual")
+    output = here / "checks/balanced-smoke/source"
+    output.mkdir(mode=0o700, parents=True)
+    queries = []
+    roles = {}
+    for i in range(2):
+        for t in FILTERS:
+            suffix = "unfiltered" if t < 0 else "votes" + str(t)
+            q = {
+                "id": f"synthetic-v{i}-{suffix}",
+                "k": 10,
+                "vector": [0.3 + i * 0.03, 0.1, 0.8, 0.4, 0.9, 0.2, 0.6, 0.5],
+            }
+            if t >= 0:
+                q["filter"] = {"field": "totalvotes", "op": "gte", "value": t}
+            queries.append(q)
+            roles[q["id"]] = "test" if i else "development"
+    write(output / "query-roles.json", roles)
+    (output / "queries.jsonl").write_text("".join(json.dumps(q) + "\n" for q in queries))
+    args = SimpleNamespace(
+        bundle=Path("/tmp"), work=Path("/tmp"), output=output, ef=640, fixture=True, roles=roles
+    )
+    try:
+        with connect("host=/tmp/socket dbname=postgres user=nobody", autocommit=True) as keeper:
+            fixture = (
+                (here / "fixture.sql").read_text().replace("reviews_fixture_graph", "reviews_hnsw")
+            )
+            # Some filters have zero eligible rows; others have short populations.
+            fixture = fixture.replace("i<=10000 THEN 1000", "i<=0 THEN 1000")
+            fixture = fixture.replace("i<=20000 THEN 600", "i<=7 THEN 600")
+            fixture = fixture.replace("i<=30000 THEN 400", "i<=300 THEN 400")
+            keeper.execute(fixture + (here / "functions.sql").read_text())
+            keeper.execute("BEGIN ISOLATION LEVEL REPEATABLE READ")
+            keeper.execute("LOCK TABLE reviews IN SHARE MODE")
+            args.snapshot = keeper.execute("SELECT pg_export_snapshot()").fetchone()[0]
+            heap, index = keeper.execute(
+                "SELECT 'reviews'::regclass::oid,'reviews_hnsw'::regclass::oid"
+            ).fetchone()
+            rows = keeper.execute("SELECT ctid::text,total_votes FROM reviews").fetchall()
+            source = keeper.execute("SELECT id,total_votes FROM reviews").fetchall()
+            eligible = {t: {i for i, v in source if t < 0 or v >= t} for t in FILTERS}
+            for t in FILTERS:
+                publish(Path(f"/tmp/membership-{t}.bin"), heap, index, rows, t)
+            write(output / "eligibility.json", {str(t): sorted(ids) for t, ids in eligible.items()})
+            counter = Counter(total=0)
+            truths = offline(Backend, args, queries, eligible, counter)
+            choices = acquire(Backend, args, queries, eligible, truths, counter)
+            write(
+                output / "acquisition-counts.json",
+                {"used_records": evidence_counts(choices, len(queries))},
+            )
+            manifest = {
+                "job_id": "synthetic",
+                "files": {name: sha(output / name) for name in EVIDENCE},
+                "source_incomplete_charges": {},
+                "partial_quality_rows": 0,
+                "unobserved_reserved_charges": 474,
+                "prior_reserved_total": counter["total"] + 474,
+            }
+            manifest_path = output.parent / "source-acquisition.json"
+            write(manifest_path, manifest)
+            prior = output
+            output = prior.parent / "results"
+            output.mkdir(mode=0o700)
+            args.output = output
+            args.acquisition_path = prior
+            args.acquisition_manifest = manifest_path
+            for name in ("queries.jsonl", "query-roles.json", "eligibility.json"):
+                shutil.copyfile(prior / name, output / name)
+            counter = Counter(total=0)
+            oracle_experiment.reserve = timing_followup.reserve
+            load_source(Backend, args, queries, eligible, counter)
+            timing(Backend, args, queries, eligible, args.frozen_choices, counter)
+            args.window_ledger.finish(counter)
+            assert counter["timed_ann"] == 224 and counter["warmup_ann"] == 224
+            assert counter["previous_unobserved_reserved"] == 474
+            write(
+                output / "receipt.json",
+                {
+                    "status": "synthetic_only",
+                    "searches": dict(counter),
+                    "raw_sha256": {
+                        str(p.relative_to(output)): sha(p) for p in output.rglob("*") if p.is_file()
+                    },
+                },
+            )
+            report(output, output, fixture=True)
+            print(
+                "BALANCED_SMOKE_PASSED "
+                + json.dumps(
+                    {
+                        "cases": len(queries),
+                        "searches": dict(counter),
+                        "zero_population": len(eligible[743]) == 0,
+                        "partial_population": len(eligible[527]) == 7,
+                    }
+                ),
+                flush=True,
+            )
+    finally:
+        subprocess.run(
+            ["/opt/postgresql/bin/pg_ctl", "-D", "/tmp/pgdata", "-m", "fast", "-w", "stop"],
+            check=True,
+        )
+
+
+if __name__ == "__main__":
+    main()

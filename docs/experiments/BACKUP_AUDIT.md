@@ -1,28 +1,34 @@
 # Experiment archive backup audit
 
-Checked October 21, 2026, America/New_York. **No current independent backup of
-the experiment archives was verified.** Local integrity was checked; the
-historical Torch copies are plausible secondary copies whose current existence
-could not be authenticated. No archive was uploaded, moved or deleted in this
-audit, and no backup configuration was changed.
+Local archive integrity refreshed November 17, 2026, America/New_York, alongside
+the experiment index and run catalog. **No independent backup was verified by
+this refresh.** The destination, remote and cloud checks below were performed
+October 21 and were not repeated; their results are historical observations,
+not current destination status. No archive was uploaded, moved or deleted, and
+no backup configuration was changed.
 
 ## Verified local holdings
 
-[archive-manifest.json](archive-manifest.json) lists 207 archives, totaling
-19,666,947,473 bytes, under the inventory's pruned workspace roots. These include
+[archive-manifest.json](archive-manifest.json) now lists 373 archives, totaling
+22,045,221,476 bytes, under the inventory's expanded, pruned workspace roots. These include
 source/runtime/engineering archives as well as experiment results. Every file
-was streamed through SHA-256. All 36 archives with usable existing checksum
-sidecars match; none mismatched. The remaining 171 have inventory hashes but no
+was streamed through SHA-256 on November 17. All 159 archives with usable existing
+checksum sidecars match; none mismatched. The remaining 214 have inventory hashes but no
 usable sidecar for an independent earlier comparison. A checksum on the same
 disk protects identity checking, not recovery after disk loss.
 
-Seventeen result archives sit directly in `trials/torch-reviews-results/`.
-The latest full timing archive is present and matches
+The historical October 21 full timing archive remains present with manifest hash
 `f205d2c2b7a234539e3d3f0431de50c51a517d303bafc72650f4f706c2ed8ebe`.
-Its five independent-analysis files also match the hashes in the
+The October 21 audit also checked five independent-analysis files against the
 [postrun verification](../verification/frozen-proposals-timing-v1-runtime-fix-postrun.json).
 
-## Backup checks and evidence
+The refreshed manifest includes all eight downloaded benchmark returns through
+M1 job 23376796 and the sealed, unexecuted M5 kit. The kit matches its frozen
+SHA-256 `3c4a0bd267d743e7abff9790beff7a7af510bc350cf079dda1c45d24e984b3b1`.
+Archive integrity does not establish a successful experiment, destination
+retention, or a restore test. See the [current index](README.md) for outcomes.
+
+## Historical backup checks and evidence — October 21
 
 | Destination / mechanism | Read-only check | Observed result | Meaning |
 |---|---|---|---|
@@ -42,7 +48,10 @@ The saved `backup_source.py` scripts and database backup references preserve
 experimental source databases; their names do not establish a backup of all
 experiment archives.
 
-## Known gaps
+## Historical backup gaps to recheck
+
+These October 21 findings remain recorded for follow-up. The November 17
+documentation refresh does not recertify remote availability or backup coverage.
 
 - **Dispatch-overhead full results:** only
   `reviews-dispatch-overhead-20261020T152408Z.rhheoeyj-feedback.tar.gz` is local.

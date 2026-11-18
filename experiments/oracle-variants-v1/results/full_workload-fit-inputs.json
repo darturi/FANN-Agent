@@ -1,0 +1,13 @@
+{
+  "cohort": "full_workload",
+  "cases_sha256": "5ed8d7ecbdd5741845289a5f7a60c8791cd66c45751ff225a065ca68c52f1696",
+  "fitter_source_sha256": "0755fa6d49f4e39d5b82c759e60eb3e8cdbed04d45a119bef73c5e63226c25b2",
+  "validator_source_sha256": "d1997e4b7ca74bf58907d0ba0f05105a35d1190d26a57ef63a0540cfc7058d78",
+  "compiler_source_sha256": "197dcdbd41f22ac2d6c2a81ad4c7aa5d7204cae0e6f0a5b2f8687577c4f7f8dc",
+  "seconds_per_filter": 180.0,
+  "scipy_version": "1.16.3",
+  "python_version": "3.12.7 (v3.12.7:0b05ead877f, Sep 30 2024, 23:18:00) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "hindsight_fit": true,
+  "objective": "layer0 work saved, then rule complexity",
+  "latency_optimality_claim": false
+}

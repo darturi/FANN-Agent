@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "offline": true,
+  "diagnostic_programs": 2,
+  "generated_C_matches_existing_M5_controls": true,
+  "module_sha256": "17d8f5b5044cb438fcc7eaeb237ed25debed327086fee00fcc0c95a5fa2afa15",
+  "model_calls": 0,
+  "Torch_allocations": 0
+}

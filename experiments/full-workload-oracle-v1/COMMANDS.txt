@@ -1,0 +1,61 @@
+# 1. Mac: authenticate through the normal Torch password/MFA route.
+# The direct address and host key were verified in the user's authenticated
+# NYU Open OnDemand shell on November 17. Leave this connection open.
+ssh -M -S /private/tmp/fannagent-oracle-20261117 \
+  -o ControlPersist=6h -o StrictHostKeyChecking=yes \
+  -o HostKeyAlias=login.torch.hpc.nyu.edu \
+  -o UserKnownHostsFile=/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/connection/known_hosts-a3-v1 \
+  dar579@10.32.51.133
+
+# 2. Mac: use that authenticated master to upload the sealed archive.
+cd /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1
+shasum -a 256 -c full-workload-oracle-v1-r2.tar.gz.sha256
+scp -o ControlPath=/private/tmp/fannagent-oracle-20261117 \
+  -o HostKeyAlias=login.torch.hpc.nyu.edu \
+  full-workload-oracle-v1-r2.tar.gz full-workload-oracle-v1-r2.tar.gz.sha256 \
+  dar579@10.32.51.133:/home/dar579/
+
+# 3. Torch: execute inside a fresh scratch directory. Stop on any failure.
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c full-workload-oracle-v1-r2.tar.gz.sha256
+stage=/scratch/dar579/fannagent-benchmark-evaluation-v1/oracle-headroom-20261117-v1
+test ! -e "$stage"
+mkdir -p "$stage"
+tar -xzf full-workload-oracle-v1-r2.tar.gz -C "$stage"
+cd "$stage/full-workload-oracle-v1"
+bash submit.sh --check
+bash submit.sh --submit
+)
+
+# The submit script performs a full native backend/input preflight before
+# submitting one job. If it fails, preserve its logs and do not auto-retry.
+# A .submitted marker persists across an uncertain scheduler response.
+
+# 4. Torch: inspect the actual recorded job; do not submit a replacement.
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/oracle-headroom-20261117-v1/full-workload-oracle-v1
+job=$(cat job-id)
+/opt/slurm/bin/squeue --local -j "$job" -o '%.18i %.12T %.30R'
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+tail -n 10 "slurm-$job.out"
+
+# 5. Mac, after scheduler-confirmed completion: copy the concrete job return and
+# its checksum using the existing SSH master. Replace JOB_ID with the job-id.
+cd /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1
+mkdir return-JOB_ID
+scp -o ControlPath=/private/tmp/fannagent-oracle-20261117 \
+  -o HostKeyAlias=login.torch.hpc.nyu.edu \
+  dar579@10.32.51.133:/scratch/dar579/fannagent-benchmark-evaluation-v1/oracle-headroom-20261117-v1/full-workload-oracle-v1/run-JOB_ID/oracle-JOB_ID.tar.gz \
+  dar579@10.32.51.133:/scratch/dar579/fannagent-benchmark-evaluation-v1/oracle-headroom-20261117-v1/full-workload-oracle-v1/run-JOB_ID/oracle-JOB_ID.tar.gz.sha256 \
+  return-JOB_ID/
+cd return-JOB_ID
+shasum -a 256 -c oracle-JOB_ID.tar.gz.sha256
+tar -xzf oracle-JOB_ID.tar.gz
+cd /Users/danielarturi/Developer/JinyangLiWork
+agent/.venv/bin/python -B agent/experiments/full-workload-oracle-v1/analyse.py \
+  --results trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-JOB_ID/results \
+  --kit trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/kit-r2
+
+# Preserve scheduler status, failed/partial returns and the protected exposure
+# record. report.json is descriptive if any required control is inconclusive.

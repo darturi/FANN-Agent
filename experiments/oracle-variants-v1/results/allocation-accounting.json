@@ -1,0 +1,19 @@
+{
+  "aggregate_allocated_seconds": 9410,
+  "jobs": [
+    {
+      "cpus": 4,
+      "elapsed_seconds": 1809,
+      "exit_code": "0:0",
+      "job_id": "23604734",
+      "state": "COMPLETED"
+    },
+    {
+      "cpus": 4,
+      "elapsed_seconds": 7601,
+      "exit_code": "0:0",
+      "job_id": "23610319",
+      "state": "COMPLETED"
+    }
+  ]
+}

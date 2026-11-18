@@ -1,0 +1,34 @@
+{
+  "external_files": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23567950/results/receipt.json": {
+      "bytes": 5718,
+      "sha256": "670f731b54629ca5d6ce2071a7661cad933a8696f5c0d90e352cddd29a49d7e8"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/benchmark-kit-v1/binding.json": {
+      "bytes": 6706,
+      "sha256": "7e594233c21f697fafd965f1e19bd21a9c50783833711f787dd5877ee585d28e"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/capture-kit-v2/binding.json": {
+      "bytes": 4437,
+      "sha256": "e79607a301f39c2d9bf04701fdae37223e000b0defba31598189ee21a5be7bdc"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/completion.json": {
+      "bytes": 886,
+      "sha256": "b95af2b740600a10dddfe3bf465f4360aecacbd204d48b950f5d6aa65b29e8da"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23604734/oracle-variants-capture-23604734.tar.gz": {
+      "bytes": 5424626,
+      "sha256": "ba11cfa938176fbd2d8f554ec8d2eec0477ad1a9260d590a49d64b754fb985d9"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23604734/results/cases.jsonl": {
+      "bytes": 19436643,
+      "sha256": "5ed8d7ecbdd5741845289a5f7a60c8791cd66c45751ff225a065ca68c52f1696"
+    },
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23610319/oracle-variants-benchmark-23610319.tar.gz": {
+      "bytes": 35690122,
+      "sha256": "61e8d9de864fa0c974d88bda4b505fe217d988cc0779bee75cf2833abb7e1056"
+    }
+  },
+  "parent_commit": "3fea3a48fd995027c5e88c3fc28d33292111095a",
+  "schema": "fannagent.oracle-checkpoint.v1"
+}

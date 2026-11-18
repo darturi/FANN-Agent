@@ -1,0 +1,52 @@
+# Nothing in this file runs automatically. One allocation only, including diagnostics.
+# Mac: establish normal MFA-authenticated SSH. Host-key checking stays enabled.
+umask 077
+ssh -M -S /private/tmp/fannagent-torch-live-20261117 -o ControlPersist=8h -fN dar579@login.torch.hpc.nyu.edu
+
+# Mac: upload the sealed kit through that connection.
+cd /Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1
+shasum -a 256 -c kit.tar.gz.sha256
+scp -o ControlPath=/private/tmp/fannagent-torch-live-20261117 kit.tar.gz kit.tar.gz.sha256 dar579@login.torch.hpc.nyu.edu:/home/dar579/
+ssh -S /private/tmp/fannagent-torch-live-20261117 dar579@login.torch.hpc.nyu.edu
+
+# Torch: verify, extract into a fresh directory, check, and submit once.
+(
+set -euo pipefail
+cd /home/dar579
+sha256sum -c kit.tar.gz.sha256
+mkdir -p /scratch/dar579/fannagent-benchmark-evaluation-v1/torch-live-feedback-launch-v1
+test ! -e /scratch/dar579/fannagent-benchmark-evaluation-v1/torch-live-feedback-launch-v1/kit
+tar -xzf kit.tar.gz -C /scratch/dar579/fannagent-benchmark-evaluation-v1/torch-live-feedback-launch-v1
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/torch-live-feedback-launch-v1/kit
+bash submit.sh --check
+# The next line submits exactly one six-hour allocation, never a replacement.
+bash submit.sh --submit
+)
+
+# Torch: check scheduling and startup.
+cd /scratch/dar579/fannagent-benchmark-evaluation-v1/torch-live-feedback-launch-v1/kit
+job=$(cat job-id)
+/opt/slurm/bin/squeue --local -j "$job" -o "%.18i %.12T %.30R"
+/opt/slurm/bin/sacct --local -j "$job" -o JobIDRaw,State,ExitCode,Elapsed,MaxRSS
+
+# Mac, once running: qualify historical controls in the SAME allocation, without a model.
+cd /Users/danielarturi/Developer/JinyangLiWork
+agent/.venv/bin/python -B agent/experiments/torch-live-feedback-launch-v1/client.py \
+  --host dar579@login.torch.hpc.nyu.edu \
+  --ssh-control-path /private/tmp/fannagent-torch-live-20261117 \
+  --stage /scratch/dar579/fannagent-benchmark-evaluation-v1/torch-live-feedback-launch-v1/kit \
+  --output trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/qualification-receipts \
+  evaluate --policies trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/kit/diagnostic-policies.json
+
+# Use the same client options with operation `status` to inspect readiness.
+# Paid dispatch is blocked until these diagnostic controls qualify in this allocation.
+# Review agent-packet/review.json and first-request.json before a new paid episode.
+# The pending specification is not authorization and does not reset the old M4 allowance.
+# After actual matched authorization:
+# agent/.venv/bin/python -B agent/experiments/torch-live-feedback-launch-v1/run_agent.py run \
+#   --output trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/agent-packet \
+#   --approval PATH_TO_ACTUAL_MATCHED_AUTHORIZATION_JSON
+
+# Recover interrupted delivery with `result --identity ID`; never repeat evaluate/submit.
+# After termination preserve final sacct output, raw run-JOB directory and return archive/checksum.
+# Raw records remain on scratch if archiving is incomplete. Stop early with scancel and the job ID.

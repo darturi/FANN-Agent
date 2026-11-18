@@ -1,0 +1,43 @@
+{
+  "Torch_allocations": 0,
+  "conditions": [
+    -1,
+    743,
+    527,
+    310,
+    192,
+    108,
+    32
+  ],
+  "families_including_native": 6,
+  "fixture": "synthetic8d; not original graph or performance evidence",
+  "model_calls": 0,
+  "new_live_compile_module_sha256": "17d8f5b5044cb438fcc7eaeb237ed25debed327086fee00fcc0c95a5fa2afa15",
+  "programs": 5,
+  "queries": 28,
+  "raw_directory": "/private/tmp/torch-live-feedback-local-qualification-v1/sql-smoke/checks/smoke-shared/timing7",
+  "raw_sha256": {
+    "allowed-cpus.json": "bda4099a0548c5c40e07ccbd35284e55c41ed7003c0ff216f3f0f0532640a846",
+    "assignments.jsonl": "100ccc683b67bf75e061678977775f328a0867ecb33d2dc6a7b3da16391de0b8",
+    "attempts.json": "302863f2e3d4d9e1a2df5a26664376ef79aacb7c300fb4c0085d87b92844d6e3",
+    "eligibility.json": "851dfec4d0f98b92964c941544acac3ba3fe64a43ce5e76ea478308f52f2035d",
+    "exact-reference.jsonl": "8af34b2e20bf01482afa128d05524f00ca9e848e99b8d34111dc6973715d29ed",
+    "offline-reference-cost.json": "d83451e882148cb0b3e255cf89953611a4bb843c2923b206feb5235e226f1d18",
+    "quality-summary.json": "42bd44da47652bfd137822451a29759e99bfb3d205b8b800f8c241a78fe00ce5",
+    "quality.jsonl": "2c246db475de074c320bb6c06b1e15acccf79e0a2a1f19dcba23f1c0932d1100",
+    "setup.json": "e478e2cdf5f391354ebce2a23ce131e928609fae431670e8f42febc94d3ca2ba",
+    "timing.jsonl": "12270da6aee97481aa3198a1aa7f00c4eca815b180357e0438a933bf12a7e89a",
+    "warmup.jsonl": "f466998f48e99ae6b9578b8a7f74f933df59f685f4549f314ec6b93f790ddad0"
+  },
+  "searches": {
+    "capture": 28,
+    "forced_prefix": 84,
+    "native_bridge": 56,
+    "quality_ann": 140,
+    "reference_exact": 28,
+    "timed_ann": 1344,
+    "total": 3024,
+    "warmup_ann": 1344
+  },
+  "status": "passed"
+}

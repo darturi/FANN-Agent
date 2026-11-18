@@ -1,0 +1,32 @@
+{
+  "agent_discovery_or_generalization_claim": false,
+  "aggregate_allocation_cap_seconds": 21600,
+  "aggregate_max_seconds": 16209,
+  "automatic_retry": false,
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 20261118,
+  "cases": 7000,
+  "control_band": [
+    0.98,
+    1.02
+  ],
+  "control_interval": 0.9,
+  "cumulative_attempt_cap": 2000000,
+  "fresh_exact_queries": 0,
+  "heldout_cases": 1925,
+  "hindsight_fit": true,
+  "memory_gib": 48,
+  "physical_cpus": 4,
+  "provider_calls": 0,
+  "quality_gate": "per-case native recall; feasible-test gate applies to test cohort",
+  "quality_queries": 56000,
+  "readers": 8,
+  "rotations": 8,
+  "schema": "fannagent.oracle-variants.timing-plan.v1",
+  "source_elapsed_seconds": 1809,
+  "source_job": "23604734",
+  "source_reserved_attempts_carried": 49152,
+  "timed_queries": 448000,
+  "wall_limit_seconds": 14400,
+  "warmup_queries": 4480
+}

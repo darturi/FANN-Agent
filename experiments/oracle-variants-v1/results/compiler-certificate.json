@@ -1,0 +1,24 @@
+{
+  "unchanged_agent_validator": true,
+  "unchanged_agent_compiler": true,
+  "engine_changed_files": [
+    "src/compiled_v2.inc"
+  ],
+  "graph_algorithm_changed": false,
+  "baseline_engine_archive_sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+  "baseline_module_sha256": "8885768878b1e98b3f1bea5d870f52ad1d1e98f2c0df7cd733f82a3d09467615",
+  "compiler_sha256": "197dcdbd41f22ac2d6c2a81ad4c7aa5d7204cae0e6f0a5b2f8687577c4f7f8dc",
+  "policy_schema_sha256": "d1997e4b7ca74bf58907d0ba0f05105a35d1190d26a57ef63a0540cfc7058d78",
+  "generation_toolspec_sha256": "33f8bef9d7061d6edd5da99f338234eb4cc61bb0d30b7ad5f479a455a323a217",
+  "generation_controller_sha256": "8447d6dc95e5e85f0d3726691ef68713c4d0e662a014ebf73003515a4e521735",
+  "normal_generation_submission": "evaluate_candidates({policies: [policy]})",
+  "discovery_feedback_or_nomination_claim": false,
+  "compiled_source_hash": "458224320d5ab8bd2355cdbd521bd4174a8140bfcfaecd19aaebc58575d0ddb3",
+  "rule_hashes": {
+    "20": "f7ef517a93e7cb1de3e1196b611da004917f0ecd92666215879187738ba07530",
+    "30": "f7ef517a93e7cb1de3e1196b611da004917f0ecd92666215879187738ba07530",
+    "21": "cfa5ff0d1ba3e97f1794bde5c0a7c6fa305e24007b73c6679c2e3ddf7c42a604",
+    "31": "cfa5ff0d1ba3e97f1794bde5c0a7c6fa305e24007b73c6679c2e3ddf7c42a604",
+    "43": "b6d4a2778fe18144e2aabf5a4c3a5af3fa7ebc39639cad162e39a7169351a853"
+  }
+}

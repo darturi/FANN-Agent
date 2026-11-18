@@ -1,0 +1,366 @@
+{
+  "name": "oracle_feasible_heldout_test",
+  "rationale": "Evaluator-only hindsight fit in the agent's unchanged DSL.",
+  "rules": {
+    "unfiltered": [
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.448799192905426
+          ],
+          [
+            "tenth_distance",
+            ">=",
+            0.21610701084136963
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            0.05819600820541382
+          ]
+        ],
+        "cp": 16
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.4133684039115906
+          ],
+          [
+            "tenth_distance",
+            ">=",
+            0.39007019996643066
+          ],
+          [
+            "frontier_gap",
+            "<=",
+            0.06674665212631226
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            0.04150968790054321
+          ]
+        ],
+        "cp": 32
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.3877432346343994
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            0.04393357038497925
+          ],
+          [
+            "top10_new_since_previous",
+            "<=",
+            0
+          ]
+        ],
+        "cp": 64
+      }
+    ],
+    "votes108": [
+      {
+        "conditions": [
+          [
+            "frontier_gap",
+            ">=",
+            0.019351303577423096
+          ]
+        ],
+        "cp": 16
+      },
+      {
+        "conditions": [
+          [
+            "frontier_gap",
+            ">=",
+            0.02950763702392578
+          ]
+        ],
+        "cp": 32
+      },
+      {
+        "conditions": [
+          [
+            "qualifying_count",
+            ">=",
+            125
+          ],
+          [
+            "tenth_distance",
+            "<=",
+            0.38813233375549316
+          ],
+          [
+            "top10_new_since_previous",
+            "<=",
+            1
+          ]
+        ],
+        "cp": 64
+      }
+    ],
+    "votes192": [
+      {
+        "conditions": [
+          [
+            "frontier_gap",
+            ">=",
+            0.008113086223602295
+          ]
+        ],
+        "cp": 16
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.4240330457687378
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            0.01846975088119507
+          ]
+        ],
+        "cp": 32
+      },
+      {
+        "conditions": [
+          [
+            "frontier_gap",
+            ">=",
+            0.027254343032836914
+          ]
+        ],
+        "cp": 64
+      }
+    ],
+    "votes310": [
+      {
+        "conditions": [
+          [
+            "frontier_gap",
+            ">=",
+            -0.001658022403717041
+          ]
+        ],
+        "cp": 16
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.4134387969970703
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            0.0008572936058044434
+          ]
+        ],
+        "cp": 32
+      },
+      {
+        "conditions": [
+          [
+            "qualifying_count",
+            "<=",
+            70
+          ],
+          [
+            "qualifying_count",
+            ">=",
+            26
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            0.01695960760116577
+          ]
+        ],
+        "cp": 64
+      }
+    ],
+    "votes32": [
+      {
+        "conditions": [
+          [
+            "frontier_gap",
+            ">=",
+            0.04305845499038696
+          ]
+        ],
+        "cp": 16
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.34939002990722656
+          ]
+        ],
+        "cp": 32
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.4406176805496216
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            0.05069488286972046
+          ]
+        ],
+        "cp": 64
+      }
+    ],
+    "votes527": [
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.4039614200592041
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            -0.032929301261901855
+          ]
+        ],
+        "cp": 16
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.4644114375114441
+          ],
+          [
+            "tenth_distance",
+            ">=",
+            0.43318116664886475
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            -0.026691079139709473
+          ],
+          [
+            "top10_new_since_previous",
+            "<=",
+            2
+          ]
+        ],
+        "cp": 32
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.41263139247894287
+          ],
+          [
+            "tenth_distance",
+            ">=",
+            0.36886662244796753
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            -0.009189963340759277
+          ]
+        ],
+        "cp": 64
+      }
+    ],
+    "votes743": [
+      {
+        "conditions": [
+          [
+            "qualifying_count",
+            "<=",
+            12
+          ],
+          [
+            "tenth_distance",
+            "<=",
+            0.4592124819755554
+          ],
+          [
+            "tenth_distance",
+            ">=",
+            0.4240269660949707
+          ]
+        ],
+        "cp": 16
+      },
+      {
+        "conditions": [
+          [
+            "qualifying_count",
+            "<=",
+            39
+          ],
+          [
+            "qualifying_count",
+            ">=",
+            23
+          ],
+          [
+            "frontier_gap",
+            ">=",
+            -0.019852757453918457
+          ]
+        ],
+        "cp": 32
+      },
+      {
+        "conditions": [
+          [
+            "tenth_distance",
+            "<=",
+            0.4644443988800049
+          ],
+          [
+            "tenth_distance",
+            ">=",
+            0.41779059171676636
+          ],
+          [
+            "frontier_gap",
+            "<=",
+            -0.02350795269012451
+          ],
+          [
+            "top10_new_since_previous",
+            "<=",
+            3
+          ]
+        ],
+        "cp": 64
+      }
+    ]
+  },
+  "schema": "fannagent.filtered-ann.v2"
+}

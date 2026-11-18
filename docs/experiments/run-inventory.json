@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "observed_at": "2026-11-17T01:50:24-05:00",
+  "observed_at": "2026-11-17T01:57:51-05:00",
   "workspace_root": "/Users/danielarturi/Developer/JinyangLiWork",
   "scope_roots": [
     "trials",
@@ -15,7 +15,7 @@
     "release"
   ],
   "scope_limit": "Saved workspace evidence only; remote-only/missing/deleted runs cannot be exhaustively enumerated. Blocks, analyses and fixtures are identified separately.",
-  "discovery_rules": "Case-insensitive report/status/receipt markers and named verification/review/freeze metadata; one row per file in reports/freeze/receipts, research documents and agent/docs/verification. Experiment definitions and top-level trial families are retained without implying execution. Raw JSONL/CSV/log files are linked, not interpreted or reanalyzed.",
+  "discovery_rules": "Case-insensitive report/status/receipt markers and named verification/review/freeze metadata; one row per file in reports/freeze/receipts, research documents and agent/docs/verification. Experiment definitions, top-level trial families and raw log directories are retained without implying successful execution. Raw JSONL/CSV/log files are linked, not interpreted or reanalyzed.",
   "excluded_directories": [
     "agent/experiments/benchmark-evaluation-v1-checkpoint/workspace",
     "agent/experiments/feature-data-ablation-v1/__pycache__",
@@ -715,7 +715,7 @@
     "trials/torch-reviews-training-stops/__pycache__",
     "trials/torch-reviews-training-stops/inputs"
   ],
-  "record_count": 1857,
+  "record_count": 1891,
   "journaled_experiment_count": 15,
   "records": [
     {
@@ -3811,6 +3811,13 @@
       "reproduction_reference": "agent/README.md"
     },
     {
+      "path": "agent/experiments/m4-open-exploration-v1",
+      "kind": "experiment definition or preparation",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "agent/README.md"
+    },
+    {
       "path": "agent/experiments/m4-provider-episode-v1",
       "kind": "experiment definition or preparation",
       "evidence": [
@@ -6414,6 +6421,51 @@
       "journaled_experiments": []
     },
     {
+      "path": "research/agent-audit-2026-10-06",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "agent/docs/experiments/README.md",
+      "raw_artifacts": [
+        {
+          "path": "research/agent-audit-2026-10-06/container-tests.log",
+          "bytes": 98
+        },
+        {
+          "path": "research/agent-audit-2026-10-06/core-tests.log",
+          "bytes": 114
+        },
+        {
+          "path": "research/agent-audit-2026-10-06/harness-shim-verification.log",
+          "bytes": 806
+        },
+        {
+          "path": "research/agent-audit-2026-10-06/harness-tests.log",
+          "bytes": 37302
+        },
+        {
+          "path": "research/agent-audit-2026-10-06/native-qualification.log",
+          "bytes": 1333
+        },
+        {
+          "path": "research/agent-audit-2026-10-06/wheel-acceptance.log",
+          "bytes": 24755
+        }
+      ],
+      "additional_verification_files": [
+        "research/agent-audit-2026-10-06/container-tests.log",
+        "research/agent-audit-2026-10-06/core-audit-observations.json",
+        "research/agent-audit-2026-10-06/core-tests.log",
+        "research/agent-audit-2026-10-06/harness-shim-verification.log",
+        "research/agent-audit-2026-10-06/harness-tests.log",
+        "research/agent-audit-2026-10-06/manifest.json",
+        "research/agent-audit-2026-10-06/native-audit-observations.json",
+        "research/agent-audit-2026-10-06/native-qualification.log",
+        "research/agent-audit-2026-10-06/volume-audit-observations.json",
+        "research/agent-audit-2026-10-06/wheel-acceptance.log"
+      ]
+    },
+    {
       "path": "research/agent-literature-guidance-implementation-plan-2026-10-09.md",
       "kind": "report, decision or provenance receipt",
       "evidence": [
@@ -7926,7 +7978,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v1/scripted-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v1/scripted-campaign/state.sqlite3"
@@ -7953,7 +8005,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v2/scripted-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v2/scripted-campaign/state.sqlite3"
@@ -7980,7 +8032,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v3/scripted-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/development/protocol-v2-rehearsal-v3/scripted-campaign/state.sqlite3"
@@ -8043,7 +8095,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/receipt.json",
@@ -8059,7 +8111,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-campaign/state.sqlite3"
@@ -8071,7 +8123,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-cap-scenario",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-bound/actual-bound-cap-scenario/state.sqlite3"
@@ -8083,7 +8135,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/receipt.json",
@@ -8098,7 +8150,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/evidence-m2-v1/M3-positive-fixture/scripted-campaign/state.sqlite3"
@@ -9722,7 +9774,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/no-network-rehearsal",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/no-network-rehearsal/receipt.json",
@@ -9738,7 +9790,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/no-network-rehearsal/pending-approval-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/no-network-rehearsal/pending-approval-campaign/state.sqlite3"
@@ -9750,7 +9802,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/no-network-rehearsal/scripted-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-episode-v1/no-network-rehearsal/scripted-campaign/state.sqlite3"
@@ -10740,7 +10792,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/verifier-check.json",
@@ -10777,7 +10829,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/staging-draft",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/staging-draft/binding.json",
@@ -10819,7 +10871,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-attribution-startup-fix-v1/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-attribution-startup-fix-v1/checks/verifier-check.json",
@@ -10865,7 +10917,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-attribution-startup-fix-v1/checks/reviews-persistent-batch-native-v1",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-attribution-startup-fix-v1/checks/reviews-persistent-batch-native-v1/candidate-freeze.json",
@@ -10897,7 +10949,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-attribution-v1/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-attribution-v1/checks/verifier-check.json",
@@ -10956,7 +11008,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-guard-v1/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-guard-v1/checks/verification.json",
@@ -10981,7 +11033,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/local-verifier-check.json",
@@ -11035,7 +11087,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-shared/timing0",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-shared/timing0/quality-summary.json",
@@ -11058,7 +11110,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-shared/timing7",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-shared/timing7/quality-summary.json",
@@ -11093,7 +11145,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-shared/work7",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/smoke-shared/work7/work-summary.json",
@@ -11116,7 +11168,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/kit",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/kit/binding.json",
@@ -11135,7 +11187,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/results",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/results/host-exit.json",
@@ -11158,7 +11210,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/results/timing",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/results/timing/quality-summary.json",
@@ -11202,7 +11254,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/results/work",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m1-v1/checks/verifier-fixture/results/work/receipt.json",
@@ -11259,7 +11311,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/bound-reference-check.json",
@@ -11326,7 +11378,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/preflight-package/reviews-persistent-batch-native-v1",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/preflight-package/reviews-persistent-batch-native-v1/candidate-freeze.json",
@@ -11339,7 +11391,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/timing0",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/timing0/quality-summary.json",
@@ -11362,7 +11414,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/timing0.inherited-fixture",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/timing0.inherited-fixture/quality-summary.json",
@@ -11385,7 +11437,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/timing7",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/timing7/quality-summary.json",
@@ -11420,7 +11472,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/work7",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/smoke-shared/work7/work-summary.json",
@@ -11443,7 +11495,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/kit",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/kit/binding.json",
@@ -11469,7 +11521,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/results",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/results/host-exit.json",
@@ -11502,7 +11554,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/results/timing",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/results/timing/quality-summary.json",
@@ -11546,7 +11598,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/results/work",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-m5-v1/checks/verifier-fixture/results/work/receipt.json",
@@ -11597,7 +11649,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-unguarded-v1/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-unguarded-v1/checks/verifier-check.json",
@@ -11631,7 +11683,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime/checks",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime/checks/verification.json",
@@ -11783,7 +11835,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/receipt.json",
@@ -11799,7 +11851,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/state.sqlite3"
@@ -11811,7 +11863,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/cap-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/cap-bound-campaign/state.sqlite3"
@@ -11823,7 +11875,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/state.sqlite3"
@@ -11835,7 +11887,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/native-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/native-bound-campaign/state.sqlite3"
@@ -11847,7 +11899,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/positive-bound-campaign/state.sqlite3"
@@ -11859,7 +11911,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/unauthorized-provider-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/unauthorized-provider-bound-campaign/state.sqlite3"
@@ -11871,7 +11923,7 @@
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign",
-      "kind": "saved agent/database state",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound/positive-bound-campaign/state.sqlite3"
@@ -14669,7 +14721,7 @@
     },
     {
       "path": "trials/morevec-reviews-runtime-fixes/tests/fixtures",
-      "kind": "saved evidence directory",
+      "kind": "engineering/synthetic verification",
       "evidence": [
         {
           "path": "trials/morevec-reviews-runtime-fixes/tests/fixtures/README.md",
@@ -15958,6 +16010,23 @@
       ]
     },
     {
+      "path": "trials/torch-reviews-activation-timing-calibration-v1/returned/reviews-activation-calibration-v1-20261024T025706Z.c8557262/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-activation-timing-calibration-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-activation-timing-calibration-v1/returned/reviews-activation-calibration-v1-20261024T025706Z.c8557262/logs/block-0-20778104-0.log",
+          "bytes": 80360
+        },
+        {
+          "path": "trials/torch-reviews-activation-timing-calibration-v1/returned/reviews-activation-calibration-v1-20261024T025706Z.c8557262/logs/block-1-20778105-1.log",
+          "bytes": 80356
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-activation-timing-calibration-v1/torch-activation-timing-calibration-v1",
       "kind": "saved evidence directory",
       "evidence": [
@@ -16325,6 +16394,31 @@
       ]
     },
     {
+      "path": "trials/torch-reviews-admission-profile-identity-v1/returned/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-admission-profile-identity-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-admission-profile-identity-v1/returned/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/logs/block-0-20753185-0.log",
+          "bytes": 83975
+        },
+        {
+          "path": "trials/torch-reviews-admission-profile-identity-v1/returned/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/logs/block-1-20753186-1.log",
+          "bytes": 83976
+        },
+        {
+          "path": "trials/torch-reviews-admission-profile-identity-v1/returned/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/logs/block-2-20753187-2.log",
+          "bytes": 83976
+        },
+        {
+          "path": "trials/torch-reviews-admission-profile-identity-v1/returned/reviews-admission-profile-v1-20261023T193304Z.a2mfz4a0/logs/block-3-20753188-3.log",
+          "bytes": 83980
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-admission-profile-identity-v1/torch-admission-profile-identity-v1",
       "kind": "saved evidence directory",
       "evidence": [
@@ -16616,6 +16710,19 @@
       "reproduction_reference": "trials/torch-reviews-exact-topk-v1-catalog-fix/COMMANDS.txt"
     },
     {
+      "path": "trials/torch-reviews-exact-topk-v1-catalog-fix/returned/reviews-exact-topk-v1-catalog-fix-20261026T050859Z.jrmkwhuy/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-exact-topk-v1-catalog-fix/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-exact-topk-v1-catalog-fix/returned/reviews-exact-topk-v1-catalog-fix-20261026T050859Z.jrmkwhuy/logs/block-0-20949301-0.log",
+          "bytes": 160531
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-exact-topk-v1-catalog-fix/returned/reviews-exact-topk-v1-catalog-fix-20261026T050859Z.jrmkwhuy/run",
       "kind": "saved evidence directory",
       "evidence": [
@@ -16748,6 +16855,19 @@
       ],
       "recorded_outcome": "status=incomplete_or_failed",
       "reproduction_reference": "trials/torch-reviews-exact-topk-v1/COMMANDS.txt"
+    },
+    {
+      "path": "trials/torch-reviews-exact-topk-v1/returned/reviews-exact-topk-v1-20261026T032153Z.9khasec1/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-exact-topk-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-exact-topk-v1/returned/reviews-exact-topk-v1-20261026T032153Z.9khasec1/logs/block-0-20941363-0.log",
+          "bytes": 5449
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-exact-topk-v1/returned/reviews-exact-topk-v1-20261026T032153Z.9khasec1/run",
@@ -17093,6 +17213,27 @@
         {
           "path": "trials/torch-reviews-execution-cost-attribution-v1/returned/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/blocks/block-2/warmups.jsonl",
           "bytes": 3309590
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-execution-cost-attribution-v1/returned/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-execution-cost-attribution-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-execution-cost-attribution-v1/returned/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/logs/block-0-20686461-0.log",
+          "bytes": 94134
+        },
+        {
+          "path": "trials/torch-reviews-execution-cost-attribution-v1/returned/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/logs/block-1-20686462-1.log",
+          "bytes": 94135
+        },
+        {
+          "path": "trials/torch-reviews-execution-cost-attribution-v1/returned/reviews-execution-cost-v1-20261023T044408Z.a08qpwdi/logs/block-2-20686463-2.log",
+          "bytes": 94133
         }
       ]
     },
@@ -17798,6 +17939,23 @@
       ]
     },
     {
+      "path": "trials/torch-reviews-native-effort-frontier-v1/returned/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-native-effort-frontier-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-native-effort-frontier-v1/returned/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/logs/block-0-20845494-0.log",
+          "bytes": 83312
+        },
+        {
+          "path": "trials/torch-reviews-native-effort-frontier-v1/returned/reviews-native-effort-v1-20261025T014743Z.p_kspq5v/logs/block-1-20845495-1.log",
+          "bytes": 83310
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-native-effort-frontier-v1/torch-native-effort-frontier-v1",
       "kind": "saved evidence directory",
       "evidence": [
@@ -17960,6 +18118,19 @@
       ],
       "recorded_outcome": "No terminal status inferred; inspect linked evidence",
       "reproduction_reference": "trials/torch-reviews-native-effort-midpoint-v1/COMMANDS.txt"
+    },
+    {
+      "path": "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-native-effort-midpoint-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/logs/block-0-20898557-0.log",
+          "bytes": 59905
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-native-effort-midpoint-v1/returned/reviews-native-midpoint-v1-20261025T172357Z.ybpfkkki/run",
@@ -18197,6 +18368,19 @@
       ],
       "recorded_outcome": "status=incomplete_or_failed",
       "reproduction_reference": "trials/torch-reviews-partial-ann-v1-quota-fix/COMMANDS.txt"
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1-quota-fix/returned/reviews-partial-ann-v1-20261027T000432Z.9haq3pyt/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-partial-ann-v1-quota-fix/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-partial-ann-v1-quota-fix/returned/reviews-partial-ann-v1-20261027T000432Z.9haq3pyt/logs/block-0-21043219-0.log",
+          "bytes": 5301
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-partial-ann-v1-quota-fix/returned/reviews-partial-ann-v1-20261027T000432Z.9haq3pyt/run",
@@ -18437,6 +18621,19 @@
         {
           "path": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/local-checks.log",
           "bytes": 1762
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-partial-ann-v1-settings-fix/collection-recovery-2026-10-26/returned/reviews-partial-ann-v1-20261027T005510Z.q6rgxprs/logs/block-0-21048213-0.log",
+          "bytes": 56835
         }
       ]
     },
@@ -18995,6 +19192,19 @@
       "reproduction_reference": "trials/torch-reviews-partial-calibration-v1-launch-fix/COMMANDS.txt"
     },
     {
+      "path": "trials/torch-reviews-partial-calibration-v1-launch-fix/returned/reviews-partial-calibration-v1-launch-fix-20261027T185901Z.98dd224c/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-partial-calibration-v1-launch-fix/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-partial-calibration-v1-launch-fix/returned/reviews-partial-calibration-v1-launch-fix-20261027T185901Z.98dd224c/logs/block-0-21129331-0.log",
+          "bytes": 5471
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-partial-calibration-v1-launch-fix/returned/reviews-partial-calibration-v1-launch-fix-20261027T185901Z.98dd224c/run",
       "kind": "saved evidence directory",
       "evidence": [
@@ -19231,6 +19441,19 @@
       "reproduction_reference": "trials/torch-reviews-partial-calibration-v1-metadata-fix/COMMANDS.txt"
     },
     {
+      "path": "trials/torch-reviews-partial-calibration-v1-metadata-fix/returned/reviews-partial-calibration-v1-metadata-fix-20261028T000153Z.y1p9092a/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-partial-calibration-v1-metadata-fix/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-partial-calibration-v1-metadata-fix/returned/reviews-partial-calibration-v1-metadata-fix-20261028T000153Z.y1p9092a/logs/block-0-21159802-0.log",
+          "bytes": 5474
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-partial-calibration-v1-metadata-fix/returned/reviews-partial-calibration-v1-metadata-fix-20261028T000153Z.y1p9092a/run",
       "kind": "saved evidence directory",
       "evidence": [
@@ -19379,6 +19602,19 @@
       ],
       "recorded_outcome": "status=incomplete_or_failed",
       "reproduction_reference": "trials/torch-reviews-partial-calibration-v1/COMMANDS.txt"
+    },
+    {
+      "path": "trials/torch-reviews-partial-calibration-v1/returned/reviews-partial-calibration-v1-20261027T155119Z.6rd0lmkp/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-partial-calibration-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-partial-calibration-v1/returned/reviews-partial-calibration-v1-20261027T155119Z.6rd0lmkp/logs/block-0-21111616-0.log",
+          "bytes": 166
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-partial-calibration-v1/torch-partial-calibration-v1",
@@ -19868,6 +20104,27 @@
         {
           "path": "trials/torch-reviews-prepared-policy-lifecycle-v1/returned/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/blocks/block-2/warmups.jsonl",
           "bytes": 6647222
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-prepared-policy-lifecycle-v1/returned/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-prepared-policy-lifecycle-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-prepared-policy-lifecycle-v1/returned/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/logs/block-0-20736459-0.log",
+          "bytes": 83914
+        },
+        {
+          "path": "trials/torch-reviews-prepared-policy-lifecycle-v1/returned/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/logs/block-1-20736460-1.log",
+          "bytes": 83915
+        },
+        {
+          "path": "trials/torch-reviews-prepared-policy-lifecycle-v1/returned/reviews-prepared-policy-v1-20261023T161756Z.8uq_covr/logs/block-2-20736461-2.log",
+          "bytes": 83910
         }
       ]
     },
@@ -21293,6 +21550,31 @@
       "reproduction_reference": "trials/torch-reviews-collector-ab/README.md"
     },
     {
+      "path": "trials/torch-reviews-results/reviews-collector-ab-20261019T052849Z.Us5why/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-collector-ab/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-collector-ab-20261019T052849Z.Us5why/logs/build-20290881.log",
+          "bytes": 19146
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-collector-ab-20261019T052849Z.Us5why/logs/measure-20290882-0.log",
+          "bytes": 10743
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-collector-ab-20261019T052849Z.Us5why/logs/measure-20290884-1.log",
+          "bytes": 10750
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-collector-ab-20261019T052849Z.Us5why/logs/measure-20290884-2.log",
+          "bytes": 10744
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-results/reviews-dispatch-overhead-20261020T152408Z.rhheoeyj-analysis",
       "kind": "analysis of existing run",
       "evidence": [
@@ -21808,6 +22090,27 @@
       ]
     },
     {
+      "path": "trials/torch-reviews-results/reviews-ef-sweep-20261019T004327Z.dcFzo0/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-ef-sweep/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-ef-sweep-20261019T004327Z.dcFzo0/logs/measure-20278009-0.log",
+          "bytes": 9669
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-ef-sweep-20261019T004327Z.dcFzo0/logs/measure-20278011-1.log",
+          "bytes": 9672
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-ef-sweep-20261019T004327Z.dcFzo0/logs/measure-20278011-2.log",
+          "bytes": 9671
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y",
       "kind": "saved evidence directory",
       "evidence": [],
@@ -22041,6 +22344,31 @@
       ],
       "recorded_outcome": "stage=calibration-fitting; status=complete",
       "reproduction_reference": null
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": null,
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y/logs/acquire-0-20627108-0.log",
+          "bytes": 34617
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y/logs/acquire-1-20627109-1.log",
+          "bytes": 34619
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y/logs/build-20627107-4294967294.log",
+          "bytes": 4267
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y/logs/fit-20627113-4294967294.log",
+          "bytes": 7488
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-results/reviews-feature-data-ablation-v1-20261022T154122Z.duo0d70y/package",
@@ -22343,6 +22671,35 @@
       ]
     },
     {
+      "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": null,
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp/logs/acquire-20583884-4294967294.log",
+          "bytes": 28345
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp/logs/build-20583883-4294967294.log",
+          "bytes": 4265
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp/logs/first-20583885-0.log",
+          "bytes": 35581
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp/logs/remaining-20583886-1.log",
+          "bytes": 35583
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp/logs/remaining-20583886-2.log",
+          "bytes": 35591
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-results/reviews-four-condition-training-v1-20261022T032823Z.qx3frkhp/package",
       "kind": "saved evidence directory",
       "evidence": [
@@ -22607,6 +22964,27 @@
         {
           "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk/cohorts/cohort-0/blocks/block-2/warmups.jsonl",
           "bytes": 2235766
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk/cohorts/cohort-0/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-frozen-proposals-timing-v1-runtime-fix/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk/cohorts/cohort-0/logs/feedback-20546171-0.log",
+          "bytes": 121345
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk/cohorts/cohort-0/logs/feedback-20546172-1.log",
+          "bytes": 121340
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-confirmation-20261021T160807Z.n5yrz2mk/cohorts/cohort-0/logs/feedback-20546172-2.log",
+          "bytes": 121341
         }
       ]
     },
@@ -22891,6 +23269,27 @@
       ]
     },
     {
+      "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-0/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-frozen-proposals-timing-v1-runtime-fix/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-0/logs/feedback-20499703-0.log",
+          "bytes": 561381
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-0/logs/feedback-20499704-1.log",
+          "bytes": 561370
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-0/logs/feedback-20499704-2.log",
+          "bytes": 561383
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-1/analysis",
       "kind": "analysis of existing run",
       "evidence": [
@@ -23068,6 +23467,27 @@
         {
           "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-1/blocks/block-2/warmups.jsonl",
           "bytes": 10020789
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-1/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-frozen-proposals-timing-v1-runtime-fix/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-1/logs/feedback-20499787-0.log",
+          "bytes": 561384
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-1/logs/feedback-20499788-1.log",
+          "bytes": 561372
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-frozen-proposals-timing-v1-runtime-fix-training-20261021T044854Z.l3c__b58/cohorts/cohort-1/logs/feedback-20499788-2.log",
+          "bytes": 561381
         }
       ]
     },
@@ -23285,6 +23705,35 @@
       ],
       "recorded_outcome": "No terminal status inferred; inspect linked evidence",
       "reproduction_reference": "trials/torch-reviews-insertion-bypass-v1/README.md"
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-insertion-bypass-v1/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_/logs/build-20405110-4294967294.log",
+          "bytes": 4294
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_/logs/first-20405112-0.log",
+          "bytes": 4418
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_/logs/qualify-20405111-4294967294.log",
+          "bytes": 4577
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_/logs/remaining-20405113-1.log",
+          "bytes": 4408
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_/logs/remaining-20405113-2.log",
+          "bytes": 4411
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-results/reviews-insertion-bypass-20261020T064451Z.ycqo7_i_/qualification",
@@ -23576,6 +24025,27 @@
         {
           "path": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n/blocks/block-2/training-updated.jsonl",
           "bytes": 32027842
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-policy-feedback/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n/logs/feedback-20331444-0.log",
+          "bytes": 506524
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n/logs/feedback-20331445-1.log",
+          "bytes": 506524
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-policy-feedback-20261019T175419Z.g5ya3i5n/logs/feedback-20331445-2.log",
+          "bytes": 506527
         }
       ]
     },
@@ -23898,6 +24368,35 @@
       "reproduction_reference": "trials/torch-reviews-predicate-ablation-v1/README.md"
     },
     {
+      "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-predicate-ablation-v1/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru/logs/build-20363633-4294967294.log",
+          "bytes": 19095
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru/logs/first-20363635-0.log",
+          "bytes": 4412
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru/logs/qualify-20363634-4294967294.log",
+          "bytes": 4549
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru/logs/remaining-20363637-1.log",
+          "bytes": 4412
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru/logs/remaining-20363637-2.log",
+          "bytes": 4411
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-results/reviews-predicate-ablation-20261019T235922Z.ilxcioru/qualification",
       "kind": "saved evidence directory",
       "evidence": [
@@ -24049,6 +24548,27 @@
         {
           "path": "trials/torch-reviews-results/reviews-reference-20261018T234510Z.UA52vD/blocks/block-2/server.log",
           "bytes": 2837
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-reference-20261018T234510Z.UA52vD/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-reference-fix/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-reference-20261018T234510Z.UA52vD/logs/measure-20274416-0.log",
+          "bytes": 5475
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-reference-20261018T234510Z.UA52vD/logs/measure-20274417-1.log",
+          "bytes": 5476
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-reference-20261018T234510Z.UA52vD/logs/measure-20274417-2.log",
+          "bytes": 5473
         }
       ]
     },
@@ -24588,6 +25108,31 @@
       ]
     },
     {
+      "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-size-sweep/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/logs/measure-20281994-0.log",
+          "bytes": 13590
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/logs/measure-20281995-1.log",
+          "bytes": 13589
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/logs/measure-20281995-2.log",
+          "bytes": 13579
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/logs/prepare-20281993.log",
+          "bytes": 12037
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-results/reviews-size-sweep-20261019T021505Z.jbrSqB/preparation",
       "kind": "saved evidence directory",
       "evidence": [
@@ -24839,6 +25384,27 @@
         {
           "path": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d/blocks/block-2/training-updated.jsonl",
           "bytes": 32041745
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-training-stops-v2/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d/logs/feedback-20348795-0.log",
+          "bytes": 299311
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d/logs/feedback-20348796-1.log",
+          "bytes": 299300
+        },
+        {
+          "path": "trials/torch-reviews-results/reviews-training-stops-v2-20261019T205135Z.lvzjw42d/logs/feedback-20348796-2.log",
+          "bytes": 299308
         }
       ]
     },
@@ -25193,6 +25759,27 @@
         {
           "path": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/returned/pilot/reviews-selective-agent-v1-pilot-20261022T202240Z.j9ackcxc/blocks/block-2/warmups.jsonl",
           "bytes": 9252956
+        }
+      ]
+    },
+    {
+      "path": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/returned/pilot/reviews-selective-agent-v1-pilot-20261022T202240Z.j9ackcxc/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": null,
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/returned/pilot/reviews-selective-agent-v1-pilot-20261022T202240Z.j9ackcxc/logs/block-0-20643605-0.log",
+          "bytes": 97581
+        },
+        {
+          "path": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/returned/pilot/reviews-selective-agent-v1-pilot-20261022T202240Z.j9ackcxc/logs/block-1-20643607-1.log",
+          "bytes": 97582
+        },
+        {
+          "path": "trials/torch-reviews-selective-agent-v1/runs/20261022T192817Z-66ed81d6/returned/pilot/reviews-selective-agent-v1-pilot-20261022T202240Z.j9ackcxc/logs/block-2-20643608-2.log",
+          "bytes": 97582
         }
       ]
     },
@@ -27388,6 +27975,19 @@
       ],
       "recorded_outcome": "No terminal status inferred; inspect linked evidence",
       "reproduction_reference": null
+    },
+    {
+      "path": "trials/torch-reviews-startup-adaptive-fixture-cost-v1/profile-workspace/trials/torch-reviews-startup-attribution-v1-image-reference/returned/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": null,
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-startup-adaptive-fixture-cost-v1/profile-workspace/trials/torch-reviews-startup-attribution-v1-image-reference/returned/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo/logs/block-0-21459623-0.log",
+          "bytes": 5707
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-startup-adaptive-fixture-cost-v1/profile-workspace/trials/torch-reviews-startup-attribution-v1-image-reference/returned/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo/run",
@@ -29986,6 +30586,19 @@
       "reproduction_reference": "trials/torch-reviews-startup-attribution-v1-image-reference/COMMANDS.txt"
     },
     {
+      "path": "trials/torch-reviews-startup-attribution-v1-image-reference/returned/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-startup-attribution-v1-image-reference/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-startup-attribution-v1-image-reference/returned/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo/logs/block-0-21459623-0.log",
+          "bytes": 5707
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-startup-attribution-v1-image-reference/returned/reviews-startup-attribution-v1-image-reference-20261030T213446Z.cmd7zvbo/run",
       "kind": "saved evidence directory",
       "evidence": [
@@ -32064,6 +32677,19 @@
       ],
       "recorded_outcome": "status=incomplete_or_failed",
       "reproduction_reference": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/COMMANDS.txt"
+    },
+    {
+      "path": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/returned/reviews-startup-exact-vector-resource-v1-20261031T203754Z.0lyxk3k2/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/returned/reviews-startup-exact-vector-resource-v1-20261031T203754Z.0lyxk3k2/logs/block-0-21542975-0.log",
+          "bytes": 11470
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-startup-exact-vector-resource-v1-path-fix/returned/reviews-startup-exact-vector-resource-v1-20261031T203754Z.0lyxk3k2/run",
@@ -48231,6 +48857,19 @@
       "reproduction_reference": "trials/torch-reviews-startup-resource-stream-v1/COMMANDS.txt"
     },
     {
+      "path": "trials/torch-reviews-startup-resource-stream-v1/returned/reviews-startup-resource-stream-v1-20261028T151219Z.hmj9cwut/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-startup-resource-stream-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-startup-resource-stream-v1/returned/reviews-startup-resource-stream-v1-20261028T151219Z.hmj9cwut/logs/block-0-21224521-0.log",
+          "bytes": 5707
+        }
+      ]
+    },
+    {
       "path": "trials/torch-reviews-startup-resource-stream-v1/returned/reviews-startup-resource-stream-v1-20261028T151219Z.hmj9cwut/run",
       "kind": "saved evidence directory",
       "evidence": [
@@ -48589,6 +49228,19 @@
       ],
       "recorded_outcome": "No terminal status inferred; inspect linked evidence",
       "reproduction_reference": "trials/torch-reviews-startup-resource-v1/COMMANDS.txt"
+    },
+    {
+      "path": "trials/torch-reviews-startup-resource-v1/returned/reviews-startup-resource-v1-20261028T020546Z.zdsnk75c/logs",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/torch-reviews-startup-resource-v1/COMMANDS.txt",
+      "raw_artifacts": [
+        {
+          "path": "trials/torch-reviews-startup-resource-v1/returned/reviews-startup-resource-v1-20261028T020546Z.zdsnk75c/logs/block-0-21171789-0.log",
+          "bytes": 5482
+        }
+      ]
     },
     {
       "path": "trials/torch-reviews-startup-resource-v1/returned/reviews-startup-resource-v1-20261028T020546Z.zdsnk75c/run",
