@@ -1,0 +1,9 @@
+{
+  "cases": 7000,
+  "cases_sha256": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed",
+  "frames": 1104761,
+  "fresh_exact_queries": 0,
+  "full_causal_capture": true,
+  "reference_vm_verified": true,
+  "source_prefix_chains_verified": true
+}

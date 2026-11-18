@@ -1,0 +1,96 @@
+{
+  "binding_sha256": "9505713dc0709b725a974eb290da3ae0a8653a93dfb705860d73993755286b86",
+  "cases": 7000,
+  "data_index_before_after": true,
+  "elapsed_seconds": 1661.7692570040235,
+  "exact_serving_calls": 0,
+  "graph": {
+    "completed_Torch_index_reused": false,
+    "dataset_parquet_sha256": "06eae31a43ecfd63a647f6fa93a9c00bcb2350ca6fe2f2bcd35d007c13b2e4ee",
+    "dimension": 768,
+    "filter_eligible_rows": {
+      "unfiltered": 247286,
+      "votes108": 49498,
+      "votes32": 123692
+    },
+    "index_build": {
+      "ef_construction": 64,
+      "fresh_index_at_every_size": true,
+      "insertion_order": "ascending source_id",
+      "m": 16,
+      "maintenance_work_mem": "65536",
+      "max_parallel_maintenance_workers": 0
+    },
+    "index_bytes": 1012678656,
+    "index_filepath": "base/16384/264013",
+    "index_files": {
+      "264013": "dbc14b0912d7e9ad9cd4ddcf806cac081412e66b1861de7ce3629fd81e23b393"
+    },
+    "index_identity": "90f4a709ab3ee7ce40fe7630009b29d5646f6e1e80ceab8c2246cb970d803484",
+    "index_oid": 264013,
+    "row_count": 247286,
+    "source_arm64_index_reused": false,
+    "subset_ids_sha256": "a316caa7b4b5182028401195cb02f9813a3336d498b70248b2b32a3550c96c80",
+    "subset_seed": 20261019
+  },
+  "groups": 1000,
+  "heldout_cases": 1925,
+  "heldout_groups": 275,
+  "job_id": "23644126",
+  "limits": {
+    "cores": [
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        1,
+        23
+      ],
+      [
+        1,
+        24
+      ]
+    ],
+    "cpus": [
+      15,
+      31,
+      87,
+      88
+    ],
+    "memory_limit": 51539607552
+  },
+  "machine": "cs612.hpc.nyu.edu",
+  "module_sha256": "bff9799eb7735d2a06c81a2d91ff6f17dc8066dc8b570869cf1e880fc4093537",
+  "provider_calls": 0,
+  "raw_sha256": {
+    "ann-plan--1.json": "234240dd3450ffef58917bfd1774e49f27d32db49bb931c54eb43cae2f29e57a",
+    "ann-plan-108.json": "8cf8c13c9f2907052b6099c3546e14ae239708e4161b1e69fc84b31942fd93ee",
+    "ann-plan-192.json": "d16a0fe5e32b6bc0e69d7652e7165d1246f18bb08f7f48987bd579a1c4da9aac",
+    "ann-plan-310.json": "636e3f79ad507711fb555c09acdd5732b10f9ae05d4054842e26c4c5c4cda271",
+    "ann-plan-32.json": "4f06cb403065fc239a2c16bcf2c9ad81d5ce042dd218ea6be67cfa546d8ee62f",
+    "ann-plan-527.json": "710681dec5a4c0dc58bdd260cb9161d72ea4dc51521c5d0ae856d6c88e54852b",
+    "ann-plan-743.json": "038fa505f6575b9d726581434e0d035ba7bf313d71e95e0a9a1220af0d208739",
+    "attempts.json": "efaf06d8ea10708c173c9725d1ffb954d8fcb3b72b905873cc5e0f4d625199c2",
+    "capture-freeze.json": "9f94a46a7711444ca8fd593044a077ac94d4d17499483fa5b12621fa6799f8fa",
+    "cases.jsonl": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed",
+    "eligibility.json": "162d66684c17a753693e68108b4c45c6bf2cc97f9643e60cc8e88d37c9484ab5",
+    "exact-reference.jsonl": "5be0d69fcfa37102b0c9280cf2c6adc139d0a54b463f70bc5bcd7a8f42685821",
+    "exposure.json": "6fd326099cae71c6ae1d0c87e720a7c6e06e5651f746bfd76e8a2f20f81a0b48",
+    "membership-setup.json": "644ece808645c67d0704c73054ab9a49ca8656e37a641522257e51c07fee8e6d",
+    "private-startup.json": "00f5ffecd72f6d11a07d28cc338194d3aeca391f8c7c382a0cc071c9bddaa893",
+    "reservation-final.json": "1046942dd86a7f26b805ddf805891a1a4414f3fe64ef6b7a21ef0f4dddc935e3",
+    "reservation.json": "2cc05696a07417123489dcfa170abc193440b2718e06a9aa2d5de581c9a31981"
+  },
+  "searches": {
+    "broad_capture": 7000,
+    "canonical_capture": 7000,
+    "native_bridge": 14000,
+    "total": 28000
+  },
+  "status": "oracle_broad_capture_complete"
+}

@@ -1,0 +1,11 @@
+{
+  "budget_fallbacks": 14,
+  "cases": 14,
+  "fault_fallbacks": 28,
+  "fixture_only": true,
+  "queries": {
+    "total": 238
+  },
+  "status": "v3_native_fixture_passed",
+  "stops_before_16": 44
+}

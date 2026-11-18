@@ -1,0 +1,64 @@
+{
+  "tool": "evaluate_broad_candidates",
+  "arguments": {
+    "policy_paths": [
+      "oracle_feasible-broad-full_workload.json",
+      "oracle_feasible-broad-heldout_test.json"
+    ]
+  },
+  "result": {
+    "schema": "fannagent.broad-evaluation.v3",
+    "candidates": [
+      {
+        "policy_hash": "83d9556901eeae128febae0feeebea8e5910504195b3435249cafe87d462a325",
+        "artifact": "../trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/fit-v1/agent-registry/83d9556901eeae128febae0feeebea8e5910504195b3435249cafe87d462a325.json",
+        "metrics": {
+          "hindsight_certificate": {
+            "schema": "fannagent.broad-fit.v1",
+            "cohort": "full_workload",
+            "cases": 7000,
+            "policy_hash": "83d9556901eeae128febae0feeebea8e5910504195b3435249cafe87d462a325",
+            "cases_sha256": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed",
+            "fitter_sha256": "508d3b4685f4ac1b4d1c133e09b56cb16cb82e5cc02ada7b33f3aa2caeb72272",
+            "max_tree_depth": 28,
+            "stops": 6996,
+            "matches_ideal_checkpoint": 6994,
+            "budget_fallbacks": 0,
+            "recall_losses": 0,
+            "uses_only_actual_prefix_labels": true,
+            "hindsight_fit": true,
+            "optimality_proven": false,
+            "method": "checkpoint frontier thresholds with richer collision fallback",
+            "choices_sha256": "28985bffb3465946bb25cd38e8e59a0791f5558f7e63c8e9ddb5e181001aff24"
+          }
+        },
+        "table_bytes_upper_bound": 1120376
+      },
+      {
+        "policy_hash": "f09224e2f336f0f2f780546a2b5151c8f6dec4d78837cfab621a236292936b89",
+        "artifact": "../trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/fit-v1/agent-registry/f09224e2f336f0f2f780546a2b5151c8f6dec4d78837cfab621a236292936b89.json",
+        "metrics": {
+          "hindsight_certificate": {
+            "schema": "fannagent.broad-fit.v1",
+            "cohort": "heldout_test",
+            "cases": 1925,
+            "policy_hash": "f09224e2f336f0f2f780546a2b5151c8f6dec4d78837cfab621a236292936b89",
+            "cases_sha256": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed",
+            "fitter_sha256": "508d3b4685f4ac1b4d1c133e09b56cb16cb82e5cc02ada7b33f3aa2caeb72272",
+            "max_tree_depth": 28,
+            "stops": 1923,
+            "matches_ideal_checkpoint": 1924,
+            "budget_fallbacks": 0,
+            "recall_losses": 0,
+            "uses_only_actual_prefix_labels": true,
+            "hindsight_fit": true,
+            "optimality_proven": false,
+            "method": "checkpoint frontier thresholds with richer collision fallback",
+            "choices_sha256": "f843df8fbb53063eea83e544f56521b4ac6f41d97c0ad30d5ccaa7ac5d79901c"
+          }
+        },
+        "table_bytes_upper_bound": 329016
+      }
+    ]
+  }
+}

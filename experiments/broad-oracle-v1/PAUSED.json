@@ -1,0 +1,60 @@
+{
+  "status": "paused_by_user",
+  "reason": "User leaving internet; stop current work and preserve progress.",
+  "recorded_utc": "2026-11-18T23:26:30.744060+00:00",
+  "pre_implementation_commit": "795db05",
+  "completed": {
+    "capture_job": "23644126",
+    "capture_allocated_seconds": 1683,
+    "cases": 7000,
+    "checkpoint_frames": 1104761,
+    "full_fit_ideal_stop_matches": 6994,
+    "full_fit_cases": 7000,
+    "heldout_fit_ideal_stop_matches": 1924,
+    "heldout_fit_cases": 1925,
+    "intended_fit_recall_losses": 0,
+    "normal_agent_submissions_accepted": true
+  },
+  "benchmark": {
+    "job_id": "23648495",
+    "cancellation_requested": true,
+    "final_accounting_pending_verification": false,
+    "latency_results_complete": false,
+    "remote_stage": "/scratch/dar579/fannagent-benchmark-evaluation-v1/broad-oracle-benchmark-v1-20261118/broad-oracle-benchmark-v1",
+    "status": "cancelled_by_user",
+    "no_active_allocation": true,
+    "allocated_seconds": 120,
+    "conservative_elapsed_including_cleanup_seconds": 122,
+    "metadata_saved": "paused-checkpoint/benchmark-cancellation.json",
+    "raw_remote_results": "/scratch/dar579/fannagent-benchmark-evaluation-v1/broad-oracle-benchmark-v1-20261118/broad-oracle-benchmark-v1/run-23648495/results",
+    "results_metadata_present": [
+      "host-exit.json"
+    ]
+  },
+  "local_work": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1",
+  "resume_requirements": [
+    "Wait for explicit user resume.",
+    "Verify cancelled benchmark job accounting and collect any partial reservation/attempt records before a new allocation.",
+    "Carry capture spending plus cancelled benchmark time and durable reservations into the remaining six-hour/two-million envelope.",
+    "Use the frozen normal v3 policies; do not refit to partial timings.",
+    "Create a new explicitly resumed sealed comparison revision; original .submitted guard prevents resubmission.",
+    "Complete native frontier qualification, quality checks, shared timings, independent verification and reporting."
+  ],
+  "checkpoint_sha256": {
+    "agent-submission.json": "fe5b565aa581e210e9d0c65a7ef59eb7f895b9e202119ccb97b3655b5c6a8c89",
+    "capture-accounting.psv": "ac58425ec15cdaa9be736605c08f5c2d3b9462a3c021992f35c149c49b3f7cb9",
+    "capture-capture-freeze.json": "9f94a46a7711444ca8fd593044a077ac94d4d17499483fa5b12621fa6799f8fa",
+    "capture-host-exit.json": "9342d7e202a46aebb485dba4c7dcd53999ede2d7f5eb639ca5da2243bbbe189d",
+    "capture-receipt.json": "1f2a4e32d1f984819e430b1a501d7c53da32166c7f4b8c83763cbc567919a6ee",
+    "capture-reservation-final.json": "1046942dd86a7f26b805ddf805891a1a4414f3fe64ef6b7a21ef0f4dddc935e3",
+    "first-checkpoint-collisions.json": "92dd4e0635179c08fa364370e27736a0951cf9b16fbe2d0bdbe475af859637b3",
+    "full_workload-certificate.json": "0d889e93455a756678638c47bb973eb997a941687d31409b070ada5e070acf50",
+    "heldout_test-certificate.json": "87faf6184baa4276ffaeb30425831b5b8f11451d6f845c680a115e0d70e5b537",
+    "local-validation.json": "818fbaac2db95441f0466f52ccb1b1ac866e80cacd66cb1e2214e5ad3474eab2",
+    "native-fixture-receipt.json": "4b9ccfa2aea893837191fcddb8a7dd8f8909ad32648ec9ad249fc9966739191a",
+    "oracle_feasible-broad-full_workload.json": "acbf0ba2aea149f08637da37e509a088a012f2870a5ad79170b042c4c8cbd5c4",
+    "oracle_feasible-broad-heldout_test.json": "a029a7b0c52291366b58fe197c7ed784ac5a5abf33a43ee396f88719e066bcb5",
+    "source-verification.json": "b7340eedb5101079424bc102988b268ce429e48383610914289429421baa0fc4"
+  },
+  "conservative_allocated_seconds_consumed": 1805
+}
