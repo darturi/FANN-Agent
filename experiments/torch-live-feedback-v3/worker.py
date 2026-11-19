@@ -115,14 +115,16 @@ def serve(
         "started_epoch": time.time() - (deadline.clock() - deadline.start),
         "kit_sha256": sha(stage / "SHA256SUMS") if (stage / "SHA256SUMS").exists() else None,
         "qualified": False,
-        "attempts": 0,
+        "attempts": config.get("prior_attempts", 0),
         "completed_batches": 0,
-        "wall_seconds": 21600,
-        "admission_seconds": 18900,
-        "work_seconds": 20400,
+        "wall_seconds": config.get("wall_seconds", 21600),
+        "admission_seconds": deadline.admission_seconds,
+        "work_seconds": deadline.work_seconds,
+        "development_seconds": config.get("development_seconds", 10800),
         "idle_seconds": IDLE_SECONDS,
         "development_attempt_limit": ATTEMPT_LIMIT - FINAL_RESERVED_ATTEMPTS,
         "final_attempts_reserved": FINAL_RESERVED_ATTEMPTS,
+        "prior_allocated_seconds": config.get("prior_allocated_seconds", 0),
     }
     write(run / "state.json", state)
     last_active = clock()
@@ -131,7 +133,13 @@ def serve(
             deadline.admit()
             requests = sorted((run / "requests").glob("*/ready"))
             if not requests:
-                if clock() - last_active >= IDLE_SECONDS:
+                heartbeat = run / "controller-heartbeat.json"
+                active = False
+                if heartbeat.exists():
+                    record = read(heartbeat)
+                    age = time.time() - record["epoch"]
+                    active = record["job_id"] == state["job_id"] and -30 <= age < IDLE_SECONDS
+                if clock() - last_active >= IDLE_SECONDS and not active:
                     state["status"] = "stopped_idle"
                     break
                 sleep(2)
@@ -261,8 +269,10 @@ def main():
     signal.signal(signal.SIGTERM, stop)
     stage = args.stage.resolve()
     # Starts before image verification or extraction, so setup consumes the same clock.
-    deadline = Deadline()
     config = read(stage / "config.json")
+    deadline = Deadline(
+        work_seconds=config["work_seconds"], admission_seconds=config["admission_seconds"]
+    )
     job = os.environ["SLURM_JOB_ID"]
     if not job.isdigit() or os.environ.get("SLURM_RESTART_COUNT", "0") != "0":
         raise ValueError("fresh Slurm allocation required; no restart/requeue")

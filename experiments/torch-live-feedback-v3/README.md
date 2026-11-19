@@ -48,3 +48,13 @@ client receipt; never rerun a delivery whose outcome is unknown.
 The experiment is implemented and locally tested; measured results and final
 execution status will be recorded after collection. Large workspace, transcripts,
 native returns and sealed inputs live outside Git under the trial directory.
+
+Execution update, November 19: job **23741092** qualified the native path, then
+stopped at the old fifteen-minute idle limit while the model was fitting offline.
+No learned policy reached native evaluation, so there is no measured agent/oracle
+comparison yet. The 24 model calls cost $1.707958, with no unknown charges;
+1,262 allocated seconds and 256 query reservations remain charged. The raw
+return and discovery state are preserved. The heartbeat/resume repair has 31
+passing controller/language tests. A [bounded continuation](CONTINUATION.md) is
+prepared and requires approval for one additional allocation; it carries the
+same model ledger, conversation, workspace, compute time and query reservations.

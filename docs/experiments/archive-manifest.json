@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-11-19T11:35:16-05:00",
+  "observed_at": "2026-11-19T13:52:03-05:00",
   "scope": "Archives under the same pruned scan roots as run-inventory.json; runtime/dependency caches and private stores excluded",
-  "archive_count": 444,
-  "total_bytes": 23319428678,
+  "archive_count": 454,
+  "total_bytes": 23516496150,
   "checksum_counts": {
-    "no usable sidecar": 256,
-    "matches": 188
+    "no usable sidecar": 262,
+    "matches": 192
   },
   "archives": [
     {
@@ -2526,6 +2526,96 @@
       "sha256": "b13ffd969e3d42af42113e44efda26603a908f6df91baf145a9785116e9f2fe4",
       "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v1/kit.tar.gz.sha256",
       "expected_sha256": "b13ffd969e3d42af42113e44efda26603a908f6df91baf145a9785116e9f2fe4",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit.tar.gz",
+      "bytes": 61545991,
+      "sha256": "32f56c6d362cc5a77ef7230940aa568b350e28e2e88b954dc95dd7ab31526fe1",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit.tar.gz.sha256",
+      "expected_sha256": "32f56c6d362cc5a77ef7230940aa568b350e28e2e88b954dc95dd7ab31526fe1",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/prelaunch-v1/kit.tar.gz",
+      "bytes": 60427773,
+      "sha256": "4fc7668e0f4cfa58bad455e2d7bd7d05d69bbf2737cdd8067b1f90bdb428fb9d",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/prelaunch-v1/kit.tar.gz.sha256",
+      "expected_sha256": "4fc7668e0f4cfa58bad455e2d7bd7d05d69bbf2737cdd8067b1f90bdb428fb9d",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/return-23741092.tar.gz",
+      "bytes": 168755,
+      "sha256": "2442c9644252cf31c517d83534d1f4a64ee536cc2aafb7f7babaf23d5ef6f948",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/return-23741092.tar.gz.sha256",
+      "expected_sha256": "2442c9644252cf31c517d83534d1f4a64ee536cc2aafb7f7babaf23d5ef6f948",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit.tar.gz",
+      "bytes": 61552259,
+      "sha256": "c26eb825bda2b04a6e408602115b8037f695873aa96d71301837aed675066c3e",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit.tar.gz.sha256",
+      "expected_sha256": "c26eb825bda2b04a6e408602115b8037f695873aa96d71301837aed675066c3e",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },

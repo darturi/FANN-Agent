@@ -4,7 +4,7 @@ import sys
 import uuid
 from pathlib import Path
 
-from limits import digest, write
+from limits import digest, read, sha, write
 from workspace import ResearchWorkspace
 
 HERE = Path(__file__).resolve().parent
@@ -46,7 +46,8 @@ descriptive evaluation even if timing controls fail; report that failure, never 
 qualified win. Formal qualification requires the unchanged strict timing controls and
 improvement against native and matched continuation. No test outcomes are available to you.
 The host evaluates the frozen artifact once against the hindsight oracle afterward.
-The episode has a $15 ceiling, no fixed model/candidate quota, one six-hour allocation,
+The episode has a $15 cumulative ceiling, no fixed model/candidate quota,
+and six aggregate allocated hours.
 300000 durably reserved ANN requests, and no automatic retries/requeue. Compilation,
 waiting and offline research during the allocation consume its time. No tool extends it.
 Development admission ends after three allocated hours to reserve final comparison time.
@@ -112,6 +113,26 @@ class LiveTools:
             "performance_claim": False,
         }
         write(self.path, self.state)
+
+    @classmethod
+    def resume(cls, evidence, client, path, previous, workspace, image):
+        state = read(previous)
+        if state["terminal"] != "worker_stopped_or_admission_closed":
+            raise ValueError("only an audited administrative worker stop can resume")
+        if any(r["status"] != "complete" for r in state["receipts"].values()):
+            raise ValueError("uncertain tool deliveries require separate audit")
+        if Path(path).exists():
+            raise ValueError("resume output already exists")
+        obj = cls.__new__(cls)
+        obj.evidence, obj.client, obj.path = evidence, client, Path(path)
+        obj.workspace = ResearchWorkspace(workspace, image)
+        obj.state = state
+        obj.state.setdefault("administrative_resumes", []).append(
+            {"previous_state_sha256": sha(previous), "previous_terminal": state["terminal"]}
+        )
+        obj.state["terminal"] = None
+        write(obj.path, obj.state)
+        return obj
 
     def call(self, identity, operation, arguments):
         signature = digest({"operation": operation, "arguments": arguments})

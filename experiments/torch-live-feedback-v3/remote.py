@@ -37,6 +37,16 @@ OPTIONS = [
 ]
 
 
+def configure(work):
+    global WORK, HOST, PARENT, STAGE
+    WORK = Path(work).resolve()
+    path = WORK / "remote-stage.json"
+    if path.exists():
+        config = read(path)
+        HOST, PARENT = config["host"], config["parent"]
+        STAGE = PARENT + "/kit"
+
+
 def run(command, **kwargs):
     result = subprocess.run(command, capture_output=True, text=True, check=False, **kwargs)
     if result.returncode:
@@ -53,6 +63,26 @@ def client():
 
 
 def launch():
+    continuation = WORK / "continuation-plan.json"
+    if continuation.exists():
+        approval = WORK / "continuation-authorization.json"
+        if not approval.exists():
+            raise ValueError("additional allocation approval is pending; no upload or submission")
+        grant = read(approval)
+        if (
+            grant.get("status") != "authorized"
+            or grant.get("plan_sha256") != sha(continuation)
+            or not grant.get("user_approval_record")
+        ):
+            raise ValueError("additional allocation approval does not match the frozen plan")
+        plan = read(continuation)
+        for path, key in [
+            (WORK / "kit/SHA256SUMS", "kit_sha256"),
+            (WORK / "kit.tar.gz", "archive_sha256"),
+            (WORK / "remote-stage.json", "remote_stage_sha256"),
+        ]:
+            if sha(path) != plan[key]:
+                raise ValueError("approved continuation seal changed")
     if (WORK / "submission-intent.json").exists():
         raise ValueError(
             "submission already attempted; inspect job-id and accounting, never resubmit"
@@ -90,7 +120,10 @@ def launch():
                 "with oracle_feasible."
             ),
             "allocation_limit": 1,
-            "wall_seconds": 21600,
+            "wall_seconds": read(WORK / "kit/config.json")["wall_seconds"],
+            "prior_allocated_seconds": read(WORK / "kit/config.json").get(
+                "prior_allocated_seconds", 0
+            ),
             "attempt_limit": 300000,
             "automatic_retry": False,
         },
@@ -199,7 +232,9 @@ def collect():
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("operation", choices=("launch", "status", "qualify", "final", "collect"))
+    p.add_argument("--run", type=Path, default=WORK)
     a = p.parse_args()
+    configure(a.run)
     if a.operation == "launch":
         result = launch()
     elif a.operation == "status":

@@ -25,11 +25,22 @@ def dispatch(stage, operation, identity=None, payload=None):
     state["accepting_requests"] = (
         state["status"] == "running" and elapsed < state["admission_seconds"]
     )
-    state["accepting_development"] = state["accepting_requests"] and elapsed < DEVELOPMENT_SECONDS
+    state["accepting_development"] = state["accepting_requests"] and elapsed < state.get(
+        "development_seconds", DEVELOPMENT_SECONDS
+    )
     if state["job_id"] != job:
         raise ValueError("worker/submission identity differs")
     if operation == "status":
         return state
+    if operation == "heartbeat":
+        if not state["accepting_requests"] or state.get("final_started"):
+            raise ValueError("worker is closed; heartbeat cannot reopen it")
+        write(run / "controller-heartbeat.json", {"job_id": job, "epoch": time.time()})
+        return {
+            "status": "controller_active",
+            "job_id": job,
+            "work_remaining_seconds": state["work_remaining_seconds"],
+        }
     if not identity or not re.fullmatch(r"[0-9a-f]{32}", identity):
         raise ValueError("32-character request identity required")
     folder = run / "requests" / identity
@@ -86,7 +97,7 @@ def dispatch(stage, operation, identity=None, payload=None):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--stage", type=Path, required=True)
-    parser.add_argument("operation", choices=("status", "submit", "result"))
+    parser.add_argument("operation", choices=("status", "submit", "result", "heartbeat"))
     parser.add_argument("--identity")
     args = parser.parse_args()
     payload = None

@@ -4,16 +4,17 @@ Local archive integrity refreshed November 19, 2026, America/New_York, alongside
 the experiment index and run catalog. **No independent backup was verified by
 this refresh.** The destination, remote and cloud checks below were performed
 October 21 and were not repeated; their results are historical observations,
-not current destination status. No archive was uploaded, moved or deleted, and
-no backup configuration was changed.
+not current destination status. Hashing created no independent backup and changed
+no backup configuration. Experiment packaging and transfers are recorded separately
+in the [experiment log](README.md).
 
 ## Verified local holdings
 
-[archive-manifest.json](archive-manifest.json) now lists 444 archives, totaling
-23,319,428,678 bytes, under the inventory's expanded, pruned workspace roots. These include
+[archive-manifest.json](archive-manifest.json) now lists 454 archives, totaling
+23,516,496,150 bytes, under the inventory's expanded, pruned workspace roots. These include
 source/runtime/engineering archives as well as experiment results. Every file
-was streamed through SHA-256 on November 19. All 188 archives with usable existing
-checksum sidecars match; none mismatched. The remaining 256 have inventory hashes but no
+was streamed through SHA-256 on November 19. All 192 archives with usable existing
+checksum sidecars match; none mismatched. The remaining 262 have inventory hashes but no
 usable sidecar for an independent earlier comparison. A checksum on the same
 disk protects identity checking, not recovery after disk loss.
 
@@ -32,6 +33,11 @@ returns remain included. The cancelled broad job 23648495 has saved accounting
 and remote-path metadata rather than a completed local measurement archive.
 These are local integrity checks of collected artifacts; remote retention was
 not rechecked during this documentation task.
+The later v3 agent snapshot includes the verified idle-stopped return for job
+23741092 and its prepared continuation kit. No learned-policy result exists for
+that job; the sealed continuation is pending approval. The archive identity check
+does not back up the model transcript, mutable fitting workspace or raw return to
+an independent destination.
 Archive integrity does not establish a successful experiment, destination
 retention, or a restore test. See the [current index](README.md) for outcomes.
 

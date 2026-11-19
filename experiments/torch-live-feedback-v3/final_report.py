@@ -109,7 +109,8 @@ def analyze(run, output, draws=20000):
         "freeze_reason": freeze["reason"],
         "agent_policy_sha256": digest(freeze["policy"]),
         "native_attempts_charged": worker["attempts"],
-        "allocated_seconds": int(accounting.splitlines()[0].split("|")[4]),
+        "allocated_seconds": max(int(r.split("|")[4]) for r in accounting.splitlines() if r.strip())
+        + worker.get("prior_allocated_seconds", 0),
         "fresh_exact_queries": 0,
         "model_calls": len(disposition["budget"]["calls"]),
         "model_spend_usd": disposition["budget"]["committed_usd"],

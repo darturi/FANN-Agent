@@ -51,13 +51,21 @@ def write(path, value):
 
 
 class Deadline:
-    def __init__(self, *, clock=time.monotonic):
+    def __init__(
+        self,
+        *,
+        clock=time.monotonic,
+        work_seconds=WORK_SECONDS,
+        admission_seconds=ADMISSION_SECONDS,
+    ):
         self.clock = clock
         self.start = clock()
+        self.work_seconds = work_seconds
+        self.admission_seconds = admission_seconds
 
     def remaining(self):
-        return max(0, WORK_SECONDS - (self.clock() - self.start))
+        return max(0, self.work_seconds - (self.clock() - self.start))
 
     def admit(self):
-        if self.clock() - self.start >= ADMISSION_SECONDS:
-            raise TimeoutError("no new batch after 5h15m; this allocation is never extended")
+        if self.clock() - self.start >= self.admission_seconds:
+            raise TimeoutError("batch admission deadline reached; allocation is never extended")

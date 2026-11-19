@@ -1,0 +1,20 @@
+{
+  "status": "idle_stopped_return_independently_verified",
+  "job_id": "23741092",
+  "scheduler_state": "COMPLETED",
+  "scheduler_exit": "0:0",
+  "allocated_seconds": 1262,
+  "worker_outcome": "stopped_idle",
+  "quality_cases": 7,
+  "primary_timings": 112,
+  "known_ann_requests": 252,
+  "charged_ann_reservations": 256,
+  "learned_policies_evaluated": 0,
+  "model_calls": 24,
+  "model_spend_usd": "1.707958",
+  "unknown_model_charges": 0,
+  "liveness_request_registered": false,
+  "liveness_extra_queries": 0,
+  "final_workloads_measured": false,
+  "policy_performance_claim": false
+}

@@ -1,7 +1,7 @@
 # Master experiment index
 
 Updated: November 19, 2026, America/New_York. Saved work reviewed through the
-completed broader-language oracle comparison on November 19. This is the entry
+first v3 agent attempt and prepared continuation on November 19. This is the entry
 point for the saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
 paths are relative to this document and require the sibling workspace folders;
 cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data.
@@ -15,12 +15,12 @@ cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data
 - [Backup audit](BACKUP_AUDIT.md): verified local integrity, missing artifacts,
   remote-check results and outstanding backup coverage.
 
-The refreshed inventory contains 1,992 saved evidence records and 15 experiments
+The refreshed inventory contains 2,042 saved evidence records and 15 experiments
 registered inside saved agent journals. Locations include definitions, receipts,
 repeated blocks, analyses, packages and synthetic checks; they are not a count of
-independent scientific experiments. The 444 discovered archives include source,
-runtime, engineering and result archives, totaling 23,319,428,678 bytes. All 188
-with usable checksum sidecars match; 256 have no usable earlier sidecar. The
+independent scientific experiments. The 454 discovered archives include source,
+runtime, engineering and result archives, totaling 23,516,496,150 bytes. All 192
+with usable checksum sidecars match; 262 have no usable earlier sidecar. The
 October 21 inventory had 292 records and 207 archives. The increased record count
 reflects both later work and expanded discovery of Markdown reports, receipts,
 freezes and experiment definitions; it is not a count of new launches.
@@ -44,9 +44,10 @@ criteria below retain their original conclusions.
 | M2/M3 evidence and controller | Complete evidence bound. Both point-cost models fail their fixed precision limits; the separately qualified uncertainty-aware shortlist and bound positive/abstention rehearsals pass. | [M2/M3 report](../../experiments/m2-evidence-cost-v1/REPORT.md), [shortlist report](../../experiments/uncertainty-shortlist-v1/REPORT.md) |
 | M4 agent episode and amendments | Initial payload-limit abstention and six-call closed outcome preserved. Dollar-governed continuation formally submits candidates 7/8; eight cumulative Messages calls cost $0.403114 under the original $15 ceiling. Both nominees preserve development recall and have supported uncertain cost estimates; estimated costs are not measured speedups. | [Final M4 assessment](../../experiments/m4-dollar-assessment-v1/REPORT.md), [nominees](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/assessment-v1/nominees.json) |
 | M5 live policy/control comparison | Sealed for one user-submitted development job. Native startup preflight, original-graph qualification and actual timings remain pending. No final policy selected. | [M5 preparation report](../../experiments/m5-policy-qualification-v1/REPORT.md), [freeze](../../experiments/m5-policy-qualification-v1/receipts/M5-freeze.json), [SFTP upload](../../experiments/m5-policy-qualification-v1/SFTP-UPLOAD.txt), [Torch/return commands](../../experiments/m5-policy-qualification-v1/COMMANDS.txt) |
-| Live Torch feedback prototype | Local compiler, synthetic PostgreSQL and controller checks pass. No live-feedback allocation or provider episode is recorded; original-graph qualification remains pending. This is separate from M4/M5 and the oracle runs. | [Prototype status and boundaries](../../experiments/torch-live-feedback-v1/README.md), [verification](../../experiments/torch-live-feedback-v1/verification.json) |
+| Historical live Torch feedback v1 prototype | Local compiler, synthetic PostgreSQL and controller checks pass. That v1 prototype remains local-only; the separate v3 episode is recorded below. M4/M5 and oracle results retain their original scope. | [Prototype status and boundaries](../../experiments/torch-live-feedback-v1/README.md), [verification](../../experiments/torch-live-feedback-v1/verification.json) |
 | Earlier hindsight oracles | Count-preserving oracle and subsequent three-level v2 comparison completed on both cohorts. All intended-cohort recall gates pass; strict per-condition timing equivalence is not established. Preserve their separate quality gates and allocations. | [Count-preserving oracle](../../experiments/full-workload-oracle-v1/README.md), [three-level comparison](../../experiments/oracle-variants-v1/results/REPORT.md) |
 | Broader-language feasible oracle | Completed job 23719580 after preserved cancellation and failed qualification. One ordinary v3 policy per cohort saves a descriptive 64.95% on 1,925 test cases and 68.39% on 7,000 full-workload cases, versus 21.37% / 19.80% for the prior v2 policies rerun alongside it. Zero intended-cohort recall losses; timing controls fail the strict equivalence requirement. | [Verified comparison](../../experiments/broad-oracle-v1/results/REPORT.md), [accounting](../../experiments/broad-oracle-v1/results/accounting.json), [completed resume](../../experiments/broad-oracle-v1/RESUMED.json) |
+| V3 agent controller and discovery | Broader controller and isolated offline fitting are implemented; 31 tests pass. Job 23741092 qualifies the native path, then stops idle while the model is fitting, before any learned policy reaches native evaluation. This is censored, not an agent abstention or measured zero gain. A budget-carrying 5h38m continuation is sealed, pending approval for a second allocation. | [First-attempt report](../../experiments/torch-live-feedback-v3/results/REPORT.md), [idle-stop audit](../../experiments/torch-live-feedback-v3/checks/idle-stop-audit.json), [continuation plan](../../experiments/torch-live-feedback-v3/CONTINUATION.md) |
 
 The returned M5 archive and independent scheduler accounting remain the evidence
 gate for the frozen development nominees. The completed oracle diagnostic does
@@ -56,6 +57,7 @@ outcome. The historical three-request episode remains exhausted at $0.725544 and
 is separate from the M4 ledger; the oracle studies made no provider calls.
 
 See the [November 17–19 oracle log](#oracle-studies-and-broader-policy-language--november-1719-2026),
+the [November 19 v3 agent attempt](#v3-agent-controller-and-first-execution--november-19-2026),
 the [November 5–16 log additions](#experiment-log-update--november-516-2026),
 and the [benchmark roadmap](../../../research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md)
 for the longer narrative. Read dated later assessments when an older preparation
@@ -2927,9 +2929,41 @@ Use the [saved commands](../../experiments/broad-oracle-v1/COMMANDS.md) with the
 final `benchmark-kit-v3` to reproduce verification/analysis; launching fresh
 measurements is a separate operation.
 
-This log update refreshed only the local inventory and archive SHA-256 values.
-It ran no experiments and contacted no remote service. All 188 usable archive
-sidecars match; 256 other archives have newly observed inventory hashes without
+The earlier oracle-log update refreshed only local inventory and archive hashes;
+it ran no experiments or remote checks. Its 188 usable archive sidecars matched;
+256 other archives had newly observed inventory hashes without
 an earlier usable sidecar. Raw archives are not included in the documentation
 commit, and independent backup coverage was not verified; see the
 [backup audit](BACKUP_AUDIT.md).
+
+## V3 agent controller and first execution — November 19, 2026
+
+Recorded America/New_York. The user requested the broader v3 controller, an
+actual agent experiment, and comparison with the broad `oracle_feasible` on
+both cohorts. [Implementation](../../experiments/torch-live-feedback-v3/README.md)
+was checkpointed as `ba5149b`; a host-only TLS trust-store correction is
+`5f3f51b`. The controller accepts normal v3 artifacts and provides isolated
+offline Python fitting with NumPy. Only the 450 development groups / 3,150
+cases, thirteen causal observations and 142,258 executed-prefix labels enter
+the agent workspace. Oracle programs, protected outcomes, vectors and real
+query/neighbor IDs do not. One agent-selected policy is to be frozen and then
+applied to both the 1,925-case test subset and the 7,000-case full workload.
+The two saved broad oracle policies are to be rerun on the same final baseline.
+
+| Stage / exact identity | Outcome and limits | Evidence and reproduction |
+|---|---|---|
+| Local controller, compiler and PostgreSQL fixture | Typed v3 submission, workspace confinement, state/fault handling, reference audits and balanced timing pass. The successful fixture has 14 synthetic cases, eight families, 112 quality records and 448 timings / 1,076 total fixture queries. Preserve the initial excessive-capture test interruption and stdin-forwarding repair separately. Fixture times are not benchmark performance. | [Native fixture receipt](../../experiments/torch-live-feedback-v3/checks/native-fixture-receipt.json), [workspace receipt](../../experiments/torch-live-feedback-v3/checks/workspace-smoke.json), [local checks](../../experiments/torch-live-feedback-v3/verification.json), [source/recipe](../../experiments/torch-live-feedback-v3/README.md) |
+| Credential and pre-dispatch transport checks | An expired credential returns HTTP 401 on the model GET; the user replaces it through a hidden local prompt. A subsequent unpaid token-count attempt fails Python's default CA store before HTTP/paid reservation. The supervised correction uses the same verified certifi bundle as the successful provider preflight. Token counting passes with 1,947 tokens. Zero paid requests/charges in these failed preflights; no native timing/policy change. | [TLS repair audit](../../experiments/torch-live-feedback-v3/checks/provider-tls-repair.json), [private preflight records](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/), [sealed protocol](../../experiments/torch-live-feedback-v3/PROTOCOL.md) |
+| Job 23741092, native qualification | Scheduler COMPLETED/0:0, 1,262 seconds, four physical CPUs / 48 GiB. Qualification checks seven development cases across all conditions, preserving raw native recall/count, and retains 112 diagnostic timings. 252 actual ANN requests / 256 charged reservations, no fresh exact searches. Private cleanup, source hashes and returned archive verify. These continue-only probes do not demonstrate an agent policy benefit. | [Verified return/accounting](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/), [independent audit](../../experiments/torch-live-feedback-v3/checks/idle-stop-audit.json) |
+| Same allocation, actual model discovery and idle stop | 24 settled Sonnet 5.5 requests cost $1.707958 under the new $15 ledger; zero unknown charges. The model explores development evidence and writes fitting scripts. The old fifteen-minute worker idle rule expires during offline research; no learned policy has reached native evaluation or final selection. A late host liveness request is rejected before registration and issues no ANN queries. The attempt is infrastructure-censored, not an abstention or a zero-savings estimate. | [First-attempt report](../../experiments/torch-live-feedback-v3/results/REPORT.md), [audit](../../experiments/torch-live-feedback-v3/results/attempt-1.json), [saved conversation/scripts/workspace](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/) |
+| Heartbeat/resume repair and pending continuation | 31 tests cover liveness without deadline extension, read-only status, closed/frozen/uncertain-state rejection, receipt preservation and approval gating. The continuation preserves all spend, messages and fitting files. One additional allocation is bounded to 5h38m: at most 5:59:02 over both jobs, $15 cumulative model spend and 300,000 cumulative ANN reservations. $13.292042 remains. The initial one-allocation contract requires explicit approval for the second; none is dispatched by preparation. | [Prepared amendment](../../experiments/torch-live-feedback-v3/CONTINUATION.md), [verification](../../experiments/torch-live-feedback-v3/checks/continuation-verification.json), [sealed continuation](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/continuation-plan.json), [resume review](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/agent-packet/review.json) |
+
+The original one-allocation/six-hour cap, all unsuccessful stages and all
+consumption remain recorded. A fresh job cannot be inferred from a retry.
+The proposed continuation changes controller liveness and administrative resume
+only; v3 policy syntax, causal features, compiler/VM, quality gates, evidence,
+serving timers, controls and final cohorts remain unchanged. A heartbeat cannot
+reopen a closed worker or extend an allocation. No final test feedback has
+reached the agent and no latency comparison with `oracle_feasible` can yet be
+reported. The original broad-oracle percentages above remain a separate
+hindsight reference; they are not substituted for missing agent measurements.

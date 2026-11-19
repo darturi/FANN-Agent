@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "observed_at": "2026-11-19T11:35:16-05:00",
+  "observed_at": "2026-11-19T13:55:16-05:00",
   "workspace_root": "/Users/danielarturi/Developer/JinyangLiWork",
   "scope_roots": [
     "trials",
@@ -34,6 +34,8 @@
     "agent/experiments/pre-m1-checkpoint-2026-11-16/workspace",
     "agent/experiments/selective-agent-v1/__pycache__",
     "agent/experiments/torch-live-feedback-v1/__pycache__",
+    "agent/experiments/torch-live-feedback-v3/__pycache__",
+    "agent/experiments/torch-live-feedback-v3/tests/__pycache__",
     "agent/runs/learning-v1/candidates/workspace",
     "agent/runs/learning-v2/candidates/workspace",
     "release/acceptance final with spaces/container simulation run/private",
@@ -168,6 +170,14 @@
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/kit/measurement",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v1/kit/engine",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v1/kit/measurement",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/batch/engine",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/stage/engine",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/batch/engine",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/stage/engine",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet/live/campaign/private",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/engine",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/workspace",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/engine",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/ambiguous-bound-campaign/workspace",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/cap-bound-campaign/workspace",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1/M3-bound-v2/diagnostic-bound-campaign/workspace",
@@ -742,7 +752,7 @@
     "trials/torch-reviews-training-stops/__pycache__",
     "trials/torch-reviews-training-stops/inputs"
   ],
-  "record_count": 1992,
+  "record_count": 2042,
   "journaled_experiment_count": 15,
   "records": [
     {
@@ -5615,6 +5625,66 @@
       ],
       "recorded_outcome": "status=passed",
       "reproduction_reference": "agent/experiments/torch-live-feedback-v1/README.md"
+    },
+    {
+      "path": "agent/experiments/torch-live-feedback-v3",
+      "kind": "experiment definition or preparation",
+      "evidence": [
+        {
+          "path": "agent/experiments/torch-live-feedback-v3/PROTOCOL.md",
+          "sha256": "3cc9b264c0ba032452971bd3fd5437882c05a392a5f71b6e31b4b58da7a7f5da",
+          "headline": "# V3 agent discovery and frozen oracle comparison"
+        },
+        {
+          "path": "agent/experiments/torch-live-feedback-v3/README.md",
+          "sha256": "fae5e942200f86b7a14494b37fce782eb9eaa48f1bf4a3ce40c1420b265ddde1",
+          "headline": "# V3 agent with live Torch feedback"
+        },
+        {
+          "path": "agent/experiments/torch-live-feedback-v3/verification.json",
+          "sha256": "b0a441f6ed214a0e32375e2124a93bcaab5ba991ff9dbeb83b319311a0b2dae2",
+          "observed_fields": {
+            "status": "local_checks_passed_Torch_and_agent_execution_pending"
+          }
+        }
+      ],
+      "recorded_outcome": "status=local_checks_passed_Torch_and_agent_execution_pending",
+      "reproduction_reference": "agent/experiments/torch-live-feedback-v3/README.md"
+    },
+    {
+      "path": "agent/experiments/torch-live-feedback-v3/checks",
+      "kind": "engineering/synthetic verification",
+      "evidence": [
+        {
+          "path": "agent/experiments/torch-live-feedback-v3/checks/continuation-verification.json",
+          "sha256": "97f7bc3ea10df588298e0f84b048c58331960462b6bb78ccf959dfccd57c938f",
+          "observed_fields": {
+            "status": "continuation_prepared_pending_explicit_additional_allocation_approval"
+          }
+        },
+        {
+          "path": "agent/experiments/torch-live-feedback-v3/checks/native-fixture-receipt.json",
+          "sha256": "d8157a99149670973d5bf17e2cfc3096c763cd8046983d06b203afcd3670e64e",
+          "observed_fields": {
+            "status": "synthetic_v3_live_flow_passed"
+          }
+        }
+      ],
+      "recorded_outcome": "status=continuation_prepared_pending_explicit_additional_allocation_approval; status=synthetic_v3_live_flow_passed",
+      "reproduction_reference": "agent/experiments/torch-live-feedback-v3/README.md"
+    },
+    {
+      "path": "agent/experiments/torch-live-feedback-v3/results",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "agent/experiments/torch-live-feedback-v3/results/REPORT.md",
+          "sha256": "1c7687f7e5a6319bcfd0e7045d25be3e87d5522ef88a853c34c8cd5e41e6a8d4",
+          "headline": "# First v3 agent attempt: censored by idle shutdown"
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "agent/experiments/torch-live-feedback-v3/README.md"
     },
     {
       "path": "agent/experiments/uncertainty-shortlist-v1",
@@ -14814,6 +14884,834 @@
       ],
       "recorded_outcome": "status=current_model_and_rates_match_approved_contract",
       "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/PROTOCOL.md",
+          "sha256": "ef2ca1abab5e556cd20debcb9298025b89fd8db89bc2853f8a84cdc8ad0eadde",
+          "headline": "# Full-workload and held-out hindsight stopping oracle"
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/binding.json",
+          "sha256": "06bd6268253e4409ced9088726d514531a2298ad999491997f09d655672efa0d",
+          "observed_fields": {}
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/source-capture-freeze.json",
+          "sha256": "1b2ffeed49ad7f349b4a4ac117fd95abd5f45b1efaf695f8a6b93ea25ff631ca",
+          "observed_fields": {
+            "exact_serving_calls": 0
+          }
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/source-capture-receipt.json",
+          "sha256": "15bb57f5ec7c1f1a27bdfc559c3f3b9c7bbf1261e29528109d5d7a88f31739f8",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/PROTOCOL.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/native-reference.jsonl",
+          "bytes": 990749
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/queries.jsonl",
+          "bytes": 2158
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/source-cases.jsonl",
+          "bytes": 33778
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1/fixture/source-exact-reference.jsonl",
+          "bytes": 4040
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/receipt.json",
+          "sha256": "d8157a99149670973d5bf17e2cfc3096c763cd8046983d06b203afcd3670e64e",
+          "observed_fields": {
+            "status": "synthetic_v3_live_flow_passed"
+          }
+        }
+      ],
+      "recorded_outcome": "status=synthetic_v3_live_flow_passed",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/build-host.log",
+          "bytes": 0
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/native-host.log",
+          "bytes": 9963
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/PROTOCOL.md",
+          "sha256": "ef2ca1abab5e556cd20debcb9298025b89fd8db89bc2853f8a84cdc8ad0eadde",
+          "headline": "# Full-workload and held-out hindsight stopping oracle"
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/binding.json",
+          "sha256": "06bd6268253e4409ced9088726d514531a2298ad999491997f09d655672efa0d",
+          "observed_fields": {}
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/source-capture-freeze.json",
+          "sha256": "1b2ffeed49ad7f349b4a4ac117fd95abd5f45b1efaf695f8a6b93ea25ff631ca",
+          "observed_fields": {
+            "exact_serving_calls": 0
+          }
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/source-capture-receipt.json",
+          "sha256": "15bb57f5ec7c1f1a27bdfc559c3f3b9c7bbf1261e29528109d5d7a88f31739f8",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/PROTOCOL.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/native-reference.jsonl",
+          "bytes": 990749
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/queries.jsonl",
+          "bytes": 2158
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/source-cases.jsonl",
+          "bytes": 33778
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/source-exact-reference.jsonl",
+          "bytes": 4040
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/checks/live-v3-flow",
+      "kind": "engineering/synthetic verification",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/checks/live-v3-flow/receipt.json",
+          "sha256": "f2a42e5be42aebee774a004f7ceffe1da09cdf949ecc4dce3cf7c2036ade0351",
+          "observed_fields": {
+            "status": "synthetic_v3_live_flow_passed"
+          }
+        }
+      ],
+      "recorded_outcome": "status=synthetic_v3_live_flow_passed",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/PROTOCOL.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/checks/live-v3-flow/quality.jsonl",
+          "bytes": 97656
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/checks/live-v3-flow/reader-setup.jsonl",
+          "bytes": 2596
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v2/fixture/checks/live-v3-flow/timing.jsonl",
+          "bytes": 188892
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/provider-preflight-v1",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/provider-preflight-v1/failure.json",
+          "sha256": "6a228e6b92d4d6fd891910c27a9d1ef32dcdbe4bcbcdb7195575b822ef9b0ad4",
+          "observed_fields": {
+            "status": "model_GET_rejected_HTTP401"
+          }
+        }
+      ],
+      "recorded_outcome": "status=model_GET_rejected_HTTP401",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/provider-preflight-v2",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/provider-preflight-v2/receipt.json",
+          "sha256": "e11d1d7ecb771edb910a2e54772cc4aab5f72ad0b928b2570de5c78ac84e3939",
+          "observed_fields": {
+            "status": "current_model_and_rates_match_approved_contract"
+          }
+        }
+      ],
+      "recorded_outcome": "status=current_model_and_rates_match_approved_contract",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-run-tls-failure-v1.log",
+          "bytes": 3092
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-run-v2.log",
+          "bytes": 14121
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-run.log",
+          "bytes": 3092
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/collection.log",
+          "bytes": 369
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/launch.log",
+          "bytes": 249
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/qualification.log",
+          "bytes": 15372
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet/review.json",
+          "sha256": "437d4c93f822f3493abafa52e34278c9c52dd0fdae868146717f2af5b704fe64",
+          "observed_fields": {
+            "stage": "/scratch/dar579/fannagent-benchmark-evaluation-v1/agent-v3-20261119-v1/kit",
+            "status": "prepared_not_authorized"
+          }
+        }
+      ],
+      "recorded_outcome": "stage=/scratch/dar579/fannagent-benchmark-evaluation-v1/agent-v3-20261119-v1/kit; status=prepared_not_authorized",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet-tls-failure-v1",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet-tls-failure-v1/review.json",
+          "sha256": "5731565596d2af01dc2abc497ba0c43340a089c770990d3924a8b0523fe2c4c1",
+          "observed_fields": {
+            "stage": "/scratch/dar579/fannagent-benchmark-evaluation-v1/agent-v3-20261119-v1/kit",
+            "status": "prepared_not_authorized"
+          }
+        }
+      ],
+      "recorded_outcome": "stage=/scratch/dar579/fannagent-benchmark-evaluation-v1/agent-v3-20261119-v1/kit; status=prepared_not_authorized",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet-tls-failure-v1/live/campaign",
+      "kind": "saved agent/database state",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet-tls-failure-v1/live/campaign/state.sqlite3"
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md",
+      "journaled_experiments": []
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet-tls-failure-v1/live/provider-preflight",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet-tls-failure-v1/live/provider-preflight/receipt.json",
+          "sha256": "e11d1d7ecb771edb910a2e54772cc4aab5f72ad0b928b2570de5c78ac84e3939",
+          "observed_fields": {
+            "status": "current_model_and_rates_match_approved_contract"
+          }
+        }
+      ],
+      "recorded_outcome": "status=current_model_and_rates_match_approved_contract",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet/live/campaign",
+      "kind": "saved agent/database state",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet/live/campaign/state.sqlite3"
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md",
+      "journaled_experiments": []
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet/live/provider-preflight",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/agent-packet/live/provider-preflight/receipt.json",
+          "sha256": "e11d1d7ecb771edb910a2e54772cc4aab5f72ad0b928b2570de5c78ac84e3939",
+          "observed_fields": {
+            "status": "current_model_and_rates_match_approved_contract"
+          }
+        }
+      ],
+      "recorded_outcome": "status=current_model_and_rates_match_approved_contract",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/PROTOCOL.md",
+          "sha256": "3cc9b264c0ba032452971bd3fd5437882c05a392a5f71b6e31b4b58da7a7f5da",
+          "headline": "# V3 agent discovery and frozen oracle comparison"
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/README.md",
+          "sha256": "153af2df1006d1a290f37b37332bb4d02a28760bb1b0ad3496759197f68e75fb",
+          "headline": "# V3 agent with live Torch feedback"
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/verification.json",
+          "sha256": "b0a441f6ed214a0e32375e2124a93bcaab5ba991ff9dbeb83b319311a0b2dae2",
+          "observed_fields": {
+            "status": "local_checks_passed_Torch_and_agent_execution_pending"
+          }
+        }
+      ],
+      "recorded_outcome": "status=local_checks_passed_Torch_and_agent_execution_pending",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/full_workload-choices.jsonl",
+          "bytes": 2206188
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/heldout_test-choices.jsonl",
+          "bytes": 605708
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/queries.jsonl",
+          "bytes": 114590489
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/source-cases.jsonl",
+          "bytes": 437432014
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/source-exact-reference.jsonl",
+          "bytes": 2471516
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/checks",
+      "kind": "engineering/synthetic verification",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/checks/native-fixture-receipt.json",
+          "sha256": "d8157a99149670973d5bf17e2cfc3096c763cd8046983d06b203afcd3670e64e",
+          "observed_fields": {
+            "status": "synthetic_v3_live_flow_passed"
+          }
+        }
+      ],
+      "recorded_outcome": "status=synthetic_v3_live_flow_passed",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/kit/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/039b2b3d35284fce82bfdcf8242a3c3e",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/039b2b3d35284fce82bfdcf8242a3c3e/receipt.json",
+          "sha256": "fa4243c11893ce7ba0d90864423df07d2557289b50bd9460f129e665cc7c79a1",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/062c1445be9945e1a419fcaef22d7ab5",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/062c1445be9945e1a419fcaef22d7ab5/receipt.json",
+          "sha256": "f675818db6ffe0b5cdecc5c1ae0f84acd70706f0988b532cc7b61fe20502232a",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/0c6fe4994a31403eaba6f29ddfbef35e",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/0c6fe4994a31403eaba6f29ddfbef35e/receipt.json",
+          "sha256": "31c2a12b3117cf622f82927b3776a50a2332205819fb40c0c5430d7a4e8cbee0",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/17aaea14d76545289bad2fb65bdfbf18",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/17aaea14d76545289bad2fb65bdfbf18/receipt.json",
+          "sha256": "69136e05f4bbf674fff57824be0dea95412a77baf9f6f159da1d6b068e8da4a2",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/21bb37ed639c4e8fbaeeaad3d8eaac5d",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/21bb37ed639c4e8fbaeeaad3d8eaac5d/receipt.json",
+          "sha256": "ae85c318d465e27733cdb2aeb38422b00d863dd5bde9ed01bce34406ca8abf1c",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/22a029cfb4f9440c968ac81222ebc4ae",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/22a029cfb4f9440c968ac81222ebc4ae/receipt.json",
+          "sha256": "d9c819517b03430ddbd769816f4d3d418ab2af286809a6d4092f1f1ba34103e0",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/22d96aa8ae86442593f6f0d577b619c6",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/22d96aa8ae86442593f6f0d577b619c6/receipt.json",
+          "sha256": "4285babd8f9ecea5c752508bdd8e8d87b8374ca65b0a243aef0f11126d3d8513",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/2b3fb0b7e1b5424bb5e60f62e35ed83e",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/2b3fb0b7e1b5424bb5e60f62e35ed83e/receipt.json",
+          "sha256": "908a16ae81b558e4c2ff2d61e3c3b81384542573ca5bc64c0f2d475cae6835d0",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/3392ea63cd3645b98c61cafa64b19975",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/3392ea63cd3645b98c61cafa64b19975/receipt.json",
+          "sha256": "54d8d50c9d75304ae4fa2d890a5d2ced02460806d22b64d6024916bfb9d24b44",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/411b0871115643fc8d812c20b954a89d",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/411b0871115643fc8d812c20b954a89d/receipt.json",
+          "sha256": "1fe1d0c706db2fca205bae5cc8fcaafb34619b78b1b981dd51d4911821ce4dec",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/43ac7710854d443abd18535899ae90e9",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/43ac7710854d443abd18535899ae90e9/receipt.json",
+          "sha256": "9f4068aa28ffd2f03c1407f070a1bd5946ff66786e96972dda79b837a77c0294",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/515ed28f28b74878bab5574605a9ddd1",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/515ed28f28b74878bab5574605a9ddd1/receipt.json",
+          "sha256": "d8ce08f0028bffc96e2fdf09999a0754fad3e8265d08927da82a403dc162ab99",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/5e74416cb3ea410e9c2de5cfdbba8c15",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/5e74416cb3ea410e9c2de5cfdbba8c15/receipt.json",
+          "sha256": "3189429ed363d78e2dd5ccd6ff156ad1d3e54356235a87a0e118f6e67c258441",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/676e47e6944740f5984dfd644f85c6e9",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/676e47e6944740f5984dfd644f85c6e9/receipt.json",
+          "sha256": "b4e38cd2b40f91a35a5866a5a54d7ccb4be1efc51f53728483eadef5ea09d39e",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/76c29637e8bd4fcb8462a1ac204e9650",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/76c29637e8bd4fcb8462a1ac204e9650/receipt.json",
+          "sha256": "242546c2d447c38f52feaea791f232bf040964dc652c54b04aa9220c2784c7de",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/786eca469e8f42908514e6343b44ac85",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/786eca469e8f42908514e6343b44ac85/receipt.json",
+          "sha256": "ade3d0e6eb1d2711039ad485ff9d02d7afcffe6b210029e79e5b197cc0280170",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/7eca5a47d9474325a2ea87d0b5afaeb5",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/7eca5a47d9474325a2ea87d0b5afaeb5/receipt.json",
+          "sha256": "017a6d0b6fbaa0b0451aa26fb30104cf6e6d0238e3e84862e81c9936e0b5796b",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ae32f0c96bba491d867ebcdf2b16e146",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ae32f0c96bba491d867ebcdf2b16e146/receipt.json",
+          "sha256": "6865025668c9894b836f6f80e65e352085feab167cc0446369c840c4edc36520",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/bc288533a0ce45f1b2ca00311245e1b1",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/bc288533a0ce45f1b2ca00311245e1b1/receipt.json",
+          "sha256": "497f9a2b7e5320ee6d248eb268fdb230ef218aa305e3ed50c078b3fbf29d3c1b",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ca38fcb8ab6f47ccbbaa7e6167690fd4",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ca38fcb8ab6f47ccbbaa7e6167690fd4/receipt.json",
+          "sha256": "7dc6c260ad1b45296944e2036df269bcc19139e246e0fe413876c5bdf3a6ff5e",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/d28bc60bf8c84000ac9adbba48899dc3",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/d28bc60bf8c84000ac9adbba48899dc3/receipt.json",
+          "sha256": "ff1a74fd679d472eb3af9f78ca7947487a4837f55868ff2fc95235d8946686f6",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/d35e5bf731d947018c4eaca96384713d",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/d35e5bf731d947018c4eaca96384713d/receipt.json",
+          "sha256": "8b391ace704894fdddb1ce922c1822b6e16647b1f033254249721ac9debd7908",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/e9a70c51a09f4987877057e5669932af",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/e9a70c51a09f4987877057e5669932af/receipt.json",
+          "sha256": "dd38901ee86a65712f9aa8623f4efc90f35110a2e6c73789c0d5bc4151034a65",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/eaec1480daef487aa7461f69d5360b3f",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/eaec1480daef487aa7461f69d5360b3f/receipt.json",
+          "sha256": "81b53ae23344fc1d7d60e00f5fb61af84bab7ff1ec878e2686e37f3bf952ca70",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ef1bb1e320f3414abb723f34a5efca5b",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ef1bb1e320f3414abb723f34a5efca5b/receipt.json",
+          "sha256": "530a43d433cb3304c6377cbfe0adddbd0b1b31ba27c2d86669d5b43ee43ddd9b",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ffbffeb6b17449c7b3c194851c112e87",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/research-executions/ffbffeb6b17449c7b3c194851c112e87/receipt.json",
+          "sha256": "ec83733af21d935c1d874a42335392703a40f59eff264131d1b274b561b1f454",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092/host-exit.json",
+          "sha256": "1775035dc043dbbf1a4178d65cc044802c27d11762c3794e03fb764c1a552929",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092/requests/f7a30b4ed20446318795b6ee0419ec70/results",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092/requests/f7a30b4ed20446318795b6ee0419ec70/results/timing-freeze.json",
+          "sha256": "85e5f8c9d429c8bde323b71c11522d780b056fa4fb0e6e4b796f67a1d5ad4a95",
+          "observed_fields": {}
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092/requests/f7a30b4ed20446318795b6ee0419ec70/results/quality.jsonl",
+          "bytes": 32218
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092/requests/f7a30b4ed20446318795b6ee0419ec70/results/reader-setup.jsonl",
+          "bytes": 2778
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092/requests/f7a30b4ed20446318795b6ee0419ec70/results/server.log",
+          "bytes": 2098
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/return-23741092/run-23741092/requests/f7a30b4ed20446318795b6ee0419ec70/results/timing.jsonl",
+          "bytes": 56269
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2",
+      "kind": "saved evidence directory",
+      "evidence": [],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/agent-packet",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/agent-packet/review.json",
+          "sha256": "77c903d730cfef07c7c1d5119f9e6341972b278b676fa73d0aa59653e7b96fe5",
+          "observed_fields": {
+            "stage": "/scratch/dar579/fannagent-benchmark-evaluation-v1/agent-v3-20261119-v2/kit",
+            "status": "prepared_not_authorized"
+          }
+        }
+      ],
+      "recorded_outcome": "stage=/scratch/dar579/fannagent-benchmark-evaluation-v1/agent-v3-20261119-v2/kit; status=prepared_not_authorized",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/PROTOCOL.md",
+          "sha256": "3cc9b264c0ba032452971bd3fd5437882c05a392a5f71b6e31b4b58da7a7f5da",
+          "headline": "# V3 agent discovery and frozen oracle comparison"
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/README.md",
+          "sha256": "fae5e942200f86b7a14494b37fce782eb9eaa48f1bf4a3ce40c1420b265ddde1",
+          "headline": "# V3 agent with live Torch feedback"
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/verification.json",
+          "sha256": "b0a441f6ed214a0e32375e2124a93bcaab5ba991ff9dbeb83b319311a0b2dae2",
+          "observed_fields": {
+            "status": "local_checks_passed_Torch_and_agent_execution_pending"
+          }
+        }
+      ],
+      "recorded_outcome": "status=local_checks_passed_Torch_and_agent_execution_pending",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/README.md",
+      "raw_artifacts": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/full_workload-choices.jsonl",
+          "bytes": 2206188
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/heldout_test-choices.jsonl",
+          "bytes": 605708
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/queries.jsonl",
+          "bytes": 114590489
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/source-cases.jsonl",
+          "bytes": 437432014
+        },
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/source-exact-reference.jsonl",
+          "bytes": 2471516
+        }
+      ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/checks",
+      "kind": "engineering/synthetic verification",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/checks/native-fixture-receipt.json",
+          "sha256": "d8157a99149670973d5bf17e2cfc3096c763cd8046983d06b203afcd3670e64e",
+          "observed_fields": {
+            "status": "synthetic_v3_live_flow_passed"
+          }
+        }
+      ],
+      "recorded_outcome": "status=synthetic_v3_live_flow_passed",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit/README.md"
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1",
