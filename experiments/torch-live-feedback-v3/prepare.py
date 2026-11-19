@@ -36,7 +36,7 @@ def prepare(target):
     for p in BASE.glob("*.py"):
         shutil.copyfile(p, helpers / p.name)
     for p in HERE.iterdir():
-        if p.suffix in (".py", ".sh", ".md"):
+        if p.suffix in (".py", ".sh", ".md") or p.name == "model-profile.json":
             shutil.copyfile(p, kit / p.name)
     for name in [
         "queries.jsonl",

@@ -42,7 +42,7 @@ def prepare(previous, target):
         if sha(HERE / name) != sha(previous / "kit" / name):
             raise ValueError("native measurement behavior changed: " + name)
     for p in HERE.iterdir():
-        if p.suffix in (".py", ".sh", ".md"):
+        if p.suffix in (".py", ".sh", ".md") or p.name == "model-profile.json":
             shutil.copyfile(p, kit / p.name)
     config = read(kit / "config.json")
     config.update(

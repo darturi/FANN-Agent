@@ -17,6 +17,7 @@ import certifi
 from client import TorchClient
 from controller import SYSTEM, TOOLS, LiveTools
 from limits import canonical, digest, read, sha, write
+from model_profile import PROFILE, load_profile, verify_current_provider
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -26,12 +27,14 @@ from fannagent.config import ModelConfig  # noqa: E402
 from fannagent.store import Store  # noqa: E402
 
 STUDY = ROOT / "trials/fannagent-benchmark-evaluation-v1/reviews-small"
-OLD_CONTRACT = STUDY / "m4-episode-v1/prepared/episode-contract.json"
 
 
 def prepare(output, host, stage, kit, control_path=None, resume_from=None):
     output.mkdir(parents=True, exist_ok=False)
-    model = read(OLD_CONTRACT)["model_config"]
+    profile = load_profile()
+    model = profile["model_config"]
+    inference = profile["inference"]
+    api_version = profile["api_version"]
     workspace = kit.parent / "workspace"
     evidence = workspace / "evidence/summary.json"
     workspace_binding = read(kit.parent / "workspace-binding.json")
@@ -40,6 +43,9 @@ def prepare(output, host, stage, kit, control_path=None, resume_from=None):
     if resume_from:
         prior = read(resume_from / "review.json")
         model = prior["model_config"]
+        previous_request = read(resume_from / "first-request.json")
+        inference = {k: previous_request[k] for k in profile["inference"]}
+        api_version = prior.get("api_version", "2023-06-01")
         workspace = Path(prior["workspace"])
         evidence = Path(prior["evidence_path"])
         workspace_binding = prior["workspace_binding"]
@@ -73,10 +79,7 @@ def prepare(output, host, stage, kit, control_path=None, resume_from=None):
         "max_tokens": model["output_token_limit"],
         "system": SYSTEM,
         "tools": TOOLS,
-        "inference_geo": "global",
-        "service_tier": "standard_only",
-        "thinking": {"type": "between_tools"},
-        "output_config": {"effort": "high"},
+        **inference,
         "messages": [
             {
                 "role": "user",
@@ -108,10 +111,7 @@ def prepare(output, host, stage, kit, control_path=None, resume_from=None):
     # Bind the controller's transitive policy/store/budget and provider preflight sources too.
     source_files += list((ROOT / "agent/src/fannagent").rglob("*.py"))
     source_files += list((HERE.parent / "filtered-ann-protocol-v3/fannproto3").glob("*.py"))
-    source_files += [
-        HERE.parent / "m4-provider-episode-v1" / n
-        for n in ("preflight.py", "transport.py", "episode.py")
-    ]
+    source_files.append(PROFILE)
     review = {
         "schema": "fannagent.live-feedback-review.v3",
         "status": "prepared_not_authorized",
@@ -122,6 +122,9 @@ def prepare(output, host, stage, kit, control_path=None, resume_from=None):
         "known_hosts_sha256": sha(STUDY / "oracle-variants-v1/connection/known_hosts-b0-v1"),
         "kit_sha256": sha(kit / "SHA256SUMS"),
         "model_config": model,
+        "api_version": api_version,
+        "inference": inference,
+        "default_model_profile_sha256": sha(PROFILE),
         "evidence_path": str(evidence),
         "evidence_sha256": sha(evidence),
         "evidence_identity": digest(workspace_binding),
@@ -158,8 +161,9 @@ def prepare(output, host, stage, kit, control_path=None, resume_from=None):
 class Provider:
     automatic_retries = False
 
-    def __init__(self, output):
+    def __init__(self, output, api_version="2026-10-21"):
         self.output = output
+        self.api_version = api_version
         self.ordinal = 0
 
     def post(self, endpoint, payload, label):
@@ -184,7 +188,7 @@ class Provider:
                 headers={
                     "content-type": "application/json",
                     "x-api-key": credential,
-                    "anthropic-version": "2023-06-01",
+                    "anthropic-version": self.api_version,
                 },
             )
             response = connection.getresponse()
@@ -313,11 +317,14 @@ def run(prepared, approval_path):
         raise ValueError("reviewed prompt changed")
     output = prepared / "live"
     output.mkdir(mode=0o700, exist_ok=False)
-    # Official prices/model/account capability are rechecked with the established read-only code.
-    sys.path.insert(0, str(HERE.parent / "m4-provider-episode-v1"))
-    from transport import verify_current_provider
-
-    verify_current_provider(output / "provider-preflight")
+    request = read(prepared / "first-request.json")
+    inference = {
+        k: request[k] for k in ("thinking", "output_config", "inference_geo", "service_tier")
+    }
+    api_version = review.get("api_version", "2023-06-01")
+    verify_current_provider(
+        output / "provider-preflight", review["model_config"], api_version, inference
+    )
     resume = review.get("resume")
     store = Store(Path(resume["campaign"])) if resume else Store(output / "campaign", create=True)
     budget = Budget(store, ModelConfig.model_validate(review["model_config"]))
@@ -356,7 +363,7 @@ def run(prepared, approval_path):
         )
     else:
         tools = LiveTools(*tool_args, review["workspace"], review["research_image"])
-    provider = Provider(output)
+    provider = Provider(output, api_version)
     if resume:
         provider.ordinal = resume["calls"]
     try:

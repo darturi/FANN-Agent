@@ -20,8 +20,12 @@ process emits JSON; only the trusted compiler/VM runs policy logic in the
 database. Language/resource bounds are exactly v3's existing bounds. Native
 feature collection and VM work stay inside the serving timer.
 
-One fresh $15 model ledger uses the established Anthropic Sonnet 5.5 model and
-existing local credential route, after current official metadata/rate checks.
+The completed experiment used one fresh $15 ledger with Anthropic Sonnet 5.5.
+Subsequent fresh preparations default to Opus 5.5, adaptive thinking and high
+effort, as specified in `model-profile.json`, using the existing local credential
+route after current model-specific metadata/rate checks. The profile, API
+version, inference settings and spending terms are bound in each review. A
+resume preserves its original model and ledger. Preparation starts no episode.
 Anonymous development observations and measurements may be returned to that
 provider. There is no fixed total request/candidate quota. There is no automatic
 provider retry. Unknown charges stop for audit. The user's instruction to run

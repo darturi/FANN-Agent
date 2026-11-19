@@ -13,6 +13,19 @@ workspace. Discovery uses 450 development groups. Frozen evaluation reports both
 the 275-group test subset and all 1,000 vectors, alongside the saved full- and
 test-fitted broad oracles on one shared baseline.
 
+Future fresh preparations now default to **Claude Opus 5.5**, adaptive thinking,
+high effort and a 6,000-token total output limit, through
+[model-profile.json](model-profile.json). The model-specific preflight checks
+Opus access, supported inference settings, the one-million-token input bound,
+and current $4 / $20 per-million input/output rates before any future generation.
+The API version is bound in each review. Model settings and rates are included
+in the review's source hashes; a resume retains its original model, inference
+settings and ledger rather than silently changing an existing spending contract.
+The [configuration verification](checks/opus-config-verification.json) used
+unpaid metadata/document GETs and local tests, with zero new generations or
+Torch jobs. The completed measurements below used **Sonnet 5.5**. This model
+selection does not change the search prompt, quality gates or stopping logic.
+
 The initial protocol allowed one six-hour allocation, 300,000 charged ANN
 reservations and a $15 model ledger. After the idle-stopped first attempt, the
 user explicitly approved one [bounded continuation](CONTINUATION.md), carrying
