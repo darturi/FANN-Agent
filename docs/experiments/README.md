@@ -1,7 +1,8 @@
 # Master experiment index
 
 Updated: November 19, 2026, America/New_York. Saved work reviewed through the
-methodological correction and retirement of the seeded v3 workflow. This is the entry
+methodological correction, retirement of the seeded v3 workflow, and clean-start v4
+implementation (no new experiment). This is the entry
 point for the saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
 paths are relative to this document and require the sibling workspace folders;
 cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data.
@@ -22,7 +23,7 @@ Its live workflow is retired; no replacement has been run. See the
 - [Backup audit](BACKUP_AUDIT.md): verified local integrity, missing artifacts,
   remote-check results and outstanding backup coverage.
 
-The refreshed inventory contains 2,056 saved evidence records and 15 experiments
+The refreshed inventory contains 2,058 saved evidence records and 15 experiments
 registered inside saved agent journals. Locations include definitions, receipts,
 repeated blocks, analyses, packages and synthetic checks; they are not a count of
 independent scientific experiments. The 455 discovered archives include source,
@@ -55,6 +56,7 @@ criteria below retain their original conclusions.
 | Earlier hindsight oracles | Count-preserving oracle and subsequent three-level v2 comparison completed on both cohorts. All intended-cohort recall gates pass; strict per-condition timing equivalence is not established. Preserve their separate quality gates and allocations. | [Count-preserving oracle](../../experiments/full-workload-oracle-v1/README.md), [three-level comparison](../../experiments/oracle-variants-v1/results/REPORT.md) |
 | Broader-language feasible oracle | Completed job 23719580 after preserved cancellation and failed qualification. One ordinary v3 policy per cohort saves a descriptive 64.95% on 1,925 test cases and 68.39% on 7,000 full-workload cases, versus 21.37% / 19.80% for the prior v2 policies rerun alongside it. Zero intended-cohort recall losses; timing controls fail the strict equivalence requirement. | [Verified comparison](../../experiments/broad-oracle-v1/results/REPORT.md), [accounting](../../experiments/broad-oracle-v1/results/accounting.json), [completed resume](../../experiments/broad-oracle-v1/RESUMED.json) |
 | V3 agent controller and discovery | **Invalid for intended clean-start discovery; live workflow retired.** Jobs 23741092 / 23747524 started with measurements inherited from earlier oracle runs. The latency/quality record is retained as a seeded-development run, and clean-start discovery claims are withdrawn. No compliant replacement result exists. The Opus model preference does not fix the acquisition defect. | [Methodological erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md), [historical measurements](../../experiments/torch-live-feedback-v3/results/comparison-v1/REPORT.md), [original discovery receipt](../../experiments/torch-live-feedback-v3/results/agent-discovery.json) |
+| Clean-start v4 replacement | **Implemented; offline unit verification only. No experiment run.** Opus 5.5 starts with static task inputs and generic software, acquires and pays for its own development evidence, explores broad v3 programs, receives per-case feedback, and uses randomized controlled confirmation. Fresh initial seals, query/model ledgers, fixed clocks, stopping gates and a separate post-closure finalizer replace the seeded path. Native/container qualification and measured performance remain pending. | [Implementation and future execution recipe](../../experiments/torch-clean-start-v4/README.md), [offline verification](../../experiments/torch-clean-start-v4/checks/verification.json) |
 
 The returned M5 archive and independent scheduler accounting remain the evidence
 gate for the frozen development nominees. The completed oracle diagnostic does
@@ -69,6 +71,44 @@ the [November 5–16 log additions](#experiment-log-update--november-516-2026),
 and the [benchmark roadmap](../../../research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md)
 for the longer narrative. Read dated later assessments when an older preparation
 paragraph or roadmap header still describes a pending stage.
+
+## Clean-start workflow implementation — November 19, 2026
+
+The v4 replacement addresses the acquisition defect without reopening the retired
+v3 entrypoints. It creates an empty empirical workspace, fresh UUID and aliases,
+and a new Opus 5.5 adaptive/high conversation. It imports no prior observations,
+labels, native summaries, truth cache, fitted policy, coefficients or model
+history. The agent chooses and executes its own development acquisitions;
+fresh native references, exact scoring, forced prefix labels, warmups and timing
+repeats all consume the run's query allocation. Generic threshold, linear and
+tree fitters and custom offline NumPy/Python use only that run's observations.
+
+Exploratory quality failures now return per-case counterexamples without
+suppressing other candidates' timings. Feature-cost profiling, randomized
+native-bracketed repeated timing blocks and a larger fresh confirmation panel
+replace the small fixed screen. Confirmation checks recall and result counts on
+all development cases. Normal finish requires all-condition evidence, multiple
+rounds/structures and an explicit stopping rationale; resource or delivery
+failures produce an audited incomplete/native outcome. No candidate can be
+selected from a failed or inconclusive confirmation.
+
+The proposed envelope remains 300,000 ANN/exact queries, $15 model accounting and
+one six-hour worker, with four hours for discovery and separate final time. It
+allocates 145,000 queries to discovery and reserves 155,000 for one frozen
+held-out/full comparison (conservative final schedule: 148,212 queries).
+Context-sized Opus reservations replace the per-call full-context reservation;
+the token estimate plus margin is not a provider invoice guarantee. Unknown
+billing or native work remains charged and is never automatically retried.
+
+Oracle artifacts are attached by a separate finalizer only after model closure
+and an immutable agent freeze; final measurements cannot enter the agent's
+conversation. This implements a comparison workflow, **not a new result**.
+Only synthetic/unit verification was run. No provider, database, Docker,
+Torch/SSH or scheduler experiment was launched. Native build/startup/cleanup,
+control equivalence and performance remain unverified for the replacement.
+The old seeded results and numerical artifacts remain preserved under the
+methodological warning. The previously inspected test cohort is protected from
+this new agent, not restored to an untouched scientific holdout.
 
 ## Coverage and interpretation
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "observed_at": "2026-11-19T17:34:07-05:00",
+  "observed_at": "2026-11-19T18:52:09-05:00",
   "workspace_root": "/Users/danielarturi/Developer/JinyangLiWork",
   "scope_roots": [
     "trials",
@@ -21,6 +21,8 @@
     "agent/experiments/feature-data-ablation-v1/__pycache__",
     "agent/experiments/filtered-ann-protocol-v2/fannproto/__pycache__",
     "agent/experiments/filtered-ann-protocol-v2/tests/__pycache__",
+    "agent/experiments/filtered-ann-protocol-v3/fannproto3/__pycache__",
+    "agent/experiments/filtered-ann-protocol-v3/tests/__pycache__",
     "agent/experiments/four-condition-training-v1/__pycache__",
     "agent/experiments/m4-context-amendment-v1/__pycache__",
     "agent/experiments/m4-context-amendment-v1/tests/__pycache__",
@@ -33,6 +35,8 @@
     "agent/experiments/oracle-variants-v1/__pycache__",
     "agent/experiments/pre-m1-checkpoint-2026-11-16/workspace",
     "agent/experiments/selective-agent-v1/__pycache__",
+    "agent/experiments/torch-clean-start-v4/fannclean/__pycache__",
+    "agent/experiments/torch-clean-start-v4/tests/__pycache__",
     "agent/experiments/torch-live-feedback-v1/__pycache__",
     "agent/experiments/torch-live-feedback-v3/__pycache__",
     "agent/experiments/torch-live-feedback-v3/tests/__pycache__",
@@ -96,6 +100,7 @@
     "release/verified installation with spaces/host simulation run/private",
     "release/verified installation with spaces/host simulation run/workspace",
     "research/agent-audit-2026-10-06/__pycache__",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v3/__pycache__",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-runtime-v1/engine",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/capture-runtime-v1/engine",
     "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/capture-runtime-v3/engine",
@@ -752,7 +757,7 @@
     "trials/torch-reviews-training-stops/__pycache__",
     "trials/torch-reviews-training-stops/inputs"
   ],
-  "record_count": 2056,
+  "record_count": 2058,
   "journaled_experiment_count": 15,
   "records": [
     {
@@ -5519,6 +5524,34 @@
       ],
       "recorded_outcome": "No terminal status inferred; inspect linked evidence",
       "reproduction_reference": "agent/experiments/startup-resource-v1/README.md"
+    },
+    {
+      "path": "agent/experiments/torch-clean-start-v4",
+      "kind": "experiment definition or preparation",
+      "evidence": [
+        {
+          "path": "agent/experiments/torch-clean-start-v4/README.md",
+          "sha256": "9f5d79d28a085d171180a0f587ce9e38e37c05047bd4b03d6936779ad679dea0",
+          "headline": "# Clean-start policy discovery v4"
+        }
+      ],
+      "recorded_outcome": "No terminal status inferred; inspect linked evidence",
+      "reproduction_reference": "agent/experiments/torch-clean-start-v4/README.md"
+    },
+    {
+      "path": "agent/experiments/torch-clean-start-v4/checks",
+      "kind": "engineering/synthetic verification",
+      "evidence": [
+        {
+          "path": "agent/experiments/torch-clean-start-v4/checks/verification.json",
+          "sha256": "7b32c4847316f8e416faf2288c57e57954e7abef453b39f265e5a382337bf8dc",
+          "observed_fields": {
+            "status": "implementation_and_offline_unit_verification_only_no_experiment"
+          }
+        }
+      ],
+      "recorded_outcome": "status=implementation_and_offline_unit_verification_only_no_experiment",
+      "reproduction_reference": "agent/experiments/torch-clean-start-v4/README.md"
     },
     {
       "path": "agent/experiments/torch-live-feedback-launch-v1",

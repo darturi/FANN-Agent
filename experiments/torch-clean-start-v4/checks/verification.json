@@ -1,0 +1,61 @@
+{
+  "schema": "fannagent.clean-start-v4.implementation-verification.v1",
+  "status": "implementation_and_offline_unit_verification_only_no_experiment",
+  "checked_at": "2026-11-19T18:52:09.721413-05:00",
+  "implementation_base_commit": "13a95fe",
+  "model": "claude-opus-5-5",
+  "thinking": "adaptive",
+  "effort": "high",
+  "tests": {
+    "passed": 83,
+    "new_clean_start_tests": 35,
+    "retired_v3_and_broad_language_regressions": 48,
+    "command": ".venv/bin/pytest -q experiments/torch-clean-start-v4/tests experiments/torch-live-feedback-v3/tests experiments/filtered-ann-protocol-v3/tests"
+  },
+  "ruff": "passed",
+  "cli_help": "passed",
+  "external_work": {
+    "provider_requests": 0,
+    "paid_requests": 0,
+    "native_ann_queries": 0,
+    "native_exact_queries": 0,
+    "containers_started": 0,
+    "ssh_sessions": 0,
+    "scheduler_jobs": 0
+  },
+  "real_workload_prepared": false,
+  "real_run_authorization_created": false,
+  "native_container_qualification": "not_run_pending_separate_authorization",
+  "prior_seeded_workflow": "still_retired",
+  "original_v3_numerical_results_changed": false,
+  "verification_scope": "Synthetic backend/provider responses, pure compiler/VM unit checks, filesystem fixtures, and regression guards. No scientific performance result.",
+  "limitations": [
+    "New PostgreSQL/container deployment has not been executed.",
+    "Controlled latency, throughput, and completion within the wall-time envelope are unverified.",
+    "Count-token margins govern admission, not an absolute provider invoice guarantee.",
+    "The historical test cohort is isolated from this agent, not newly untouched."
+  ],
+  "source_sha256": {
+    "README.md": "9f5d79d28a085d171180a0f587ce9e38e37c05047bd4b03d6936779ad679dea0",
+    "fannclean/__init__.py": "10f8ebd95cdfda6303f332bc6cffafb2e1f73e813c4162ea3ecec8d06cd246a5",
+    "fannclean/__main__.py": "98347eee51c6e17986f90715634421e1294eefc31dfa7b647e9a03ce6aa9f3b5",
+    "fannclean/controller.py": "f22445f7854d68aacdb6075212424320f43d51c4b89eb18f654b2b74a4263d4d",
+    "fannclean/core.py": "a1bed7d11e18c01f431a06860d1d02525a65e63f150f551a932313fe4c225801",
+    "fannclean/deploy.py": "0945131ea74738dae00483cf7f769bc7f9f09ff6a959fb4176144da8e46f6021",
+    "fannclean/driver.py": "46565977ab4adb5914bbd39ead437208d40b21493d98c2673b961ca17b809828",
+    "fannclean/engine.py": "afc202c3bc48a4dfcb64ffaafeb09cef10696fde8f79d61ae00dcd3718a7db39",
+    "fannclean/fit.py": "21435e34dd2e993d6edabd528e8b2d92196c730a154d58479d5f9493adc0c447",
+    "fannclean/model.py": "698fbad4cc4cc3511b32966764ed58188d87f697d4048f8ea947016485d5bc5b",
+    "fannclean/postgres.py": "75206289c054143f9865851615f4fe4e0a4888f7c6f2da3b6b882f1234b345ad",
+    "fannclean/provider.py": "108e0348e8399f4c1c36b76c0c02ca3850512a8176020437c93d00eebc75aafd",
+    "fannclean/report.py": "b50b0face133bed7787b37fe7b3cccc16a243b85fd57da93bf28879593ff5093",
+    "fannclean/search.py": "46fd6f8f34380745b9c1681467cde00f10f617ad6fcffcc55e89525e5776ac98",
+    "fannclean/timing.py": "a2abdd6284480f79d7c8fb6d4ac7af2b24222715209de23588aacbb600250d7b",
+    "fannclean/transport.py": "606d6ca5d989b19117ac0e26c6d6b39bd915b4b5a5a1169f4eaafe6d5b097703",
+    "fannclean/worker.py": "951c27c7ac8ab71d6cb896671e6aec6b4a0459db66c13586b1d693bb33e96d19",
+    "tests/conftest.py": "e79f8cb308c4511f2277b61ec8e74932e116a33e8af7800db5a29db740104f2b",
+    "tests/test_core_engine.py": "1adfd053efd695c7f04c6dfcf19bb3b8fdeb7ebde9615b40506b25339eb5f235",
+    "tests/test_model_worker.py": "07d6618f666580cdcb55509ce13c39a01b8e90efb31663e408f59e5623315908",
+    "tests/test_search_deploy.py": "8fe6867bb16f45f61c2b053a6b5a238139d267e3515efe29d36524e06caf2eaa"
+  }
+}
