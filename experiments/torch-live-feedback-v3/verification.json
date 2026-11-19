@@ -1,0 +1,80 @@
+{
+  "actual_Torch_allocations": 0,
+  "actual_model_calls": 0,
+  "actual_provider_spend_usd": "0",
+  "date": "2026-11-19",
+  "lint": "passed",
+  "native_fixture": {
+    "build_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cases": 14,
+    "control_equivalence": false,
+    "families": 8,
+    "fixture_only": true,
+    "module_sha256": "7faa84f0c926400fe4a700f3ec3ea2fcf664f4ac70adbb5ed04b662a39090138",
+    "native_log_sha256": "c39d98e3032f001a27edfba94f6372c5f77ce891a971b38e6c8f98de3648d5b7",
+    "quality_losses": {
+      "candidate1": 10,
+      "candidate2": 4,
+      "candidate3": 0,
+      "empty": 0,
+      "matched1": 0,
+      "matched2": 0,
+      "matched3": 0,
+      "native640": 0
+    },
+    "quality_records": 112,
+    "searches": {
+      "capture_probe": 14,
+      "fixture_exact": 14,
+      "forced_prefix": 26,
+      "native_capture": 14,
+      "quality_ann": 112,
+      "timed_ann": 448,
+      "total": 1076,
+      "warmup_ann": 448
+    },
+    "status": "synthetic_v3_live_flow_passed",
+    "timing_records": 448
+  },
+  "prior_local_attempts": [
+    {
+      "disposition": "interrupted excessive observation-only fixture compilation; replaced by 16-checkpoint fixture probe; production language unchanged",
+      "path": "../trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/native-check-v1"
+    },
+    {
+      "disposition": "initial probe did not execute stdin; corrected --interactive and verified actual script output in v2",
+      "path": "../trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1/workspace-smoke.json"
+    }
+  ],
+  "schema": "fannagent.v3-agent-local-verification.v1",
+  "shell_syntax": "passed",
+  "source_sha256": {
+    "analysis.py": "b8092b90278af4c9b2fcea8f4170825d17d9ffa4af92b6fa2640e4b30c7cea8c",
+    "client.py": "3227104125a13c0b0a708e24e61945b8c502c414618b1388a70f23dc6d8bac8e",
+    "compile_batch.py": "aeaebadd0b6f546e603cccf627dc6db5191820eecae128e9e66e1dce06668336",
+    "controller.py": "47158ccb7f7f4067e479f09436117e7b3ab7f791353d8bc3c2edbaa4f0bbc791",
+    "final_report.py": "a426519f97387726bd0af0ed6c1a96b1dea916f0fcc88f5951d900c040f1ba1f",
+    "limits.py": "fe1b9cb4b39fb6cf631c13f0475302c0dda534c35b9abfb2dc453f33e998d59a",
+    "local_check.py": "4a450098122b0f6b14522c2a3003d5f68c862b068b4f708cd46bcdd58ad3ed31",
+    "mailbox.py": "a173670f3dd551863bc9cc50b75526914a7559222a60af057cacc4ace271143b",
+    "measurement.py": "464d7cc85f3cad82518e33c1ad1c83a1e7794b0af2d01b95f166babed2bf5478",
+    "native_batch.py": "45fd2ace4d981842491528a37edbe32bd371b411f960394480970f298dbf2884",
+    "prepare.py": "2ec30d5c853a9e7f94008a9822dbc8df574c069f4f32096e7fae507bfbc05be6",
+    "remote.py": "e46b955335a5703a8c5ce21caf064f5e28eeb03615dee58de86292ce6af03428",
+    "run_agent.py": "d8b7aa29aed39b7cb7ee6bed5d083f18f049f4b7cad04863fb6a8cafa2ba0a06",
+    "smoke_flow.py": "9dc45c342fc13c04815f8f69ebf08f63dae301370e01cf9b3504c4ef88a028d6",
+    "worker.py": "a9d1aad2c39fbad2994f7dd548a53908fa6fc29c3ffcc27962637fd7946cbc51",
+    "workspace.py": "e9d75ccc6ee048d5dbc9febfea0e1e65e2fb951832eb1a2a2cdb650cca31d796"
+  },
+  "status": "local_checks_passed_Torch_and_agent_execution_pending",
+  "unit_tests_passed": 22,
+  "workspace": {
+    "cases": 3150,
+    "evidence_read_only_verified": true,
+    "groups": 450,
+    "known_prefix_labels": 142258,
+    "oracle_policies_exposed": false,
+    "protected_rows": 0,
+    "script_execution_verified": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "execution_id": "22d96aa8ae86442593f6f0d577b619c6",
+  "exit_code": 0,
+  "output": "{\"status\": \"isolated_development_workspace_passed\", \"cases\": 3150, \"numpy\": \"2.5.3\"}\n",
+  "output_truncated": false,
+  "source_sha256": "8f45a2e0a577fe92214f40bd84bdeb9adc698d204558a6e2eba1bf36f2dccb16",
+  "policy_files": []
+}
