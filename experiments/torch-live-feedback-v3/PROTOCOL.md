@@ -1,5 +1,12 @@
 # V3 agent discovery and frozen oracle comparison
 
+**Historical seeded protocol, retired November 19, 2026.** This experiment gave
+the agent measurements from earlier runs and therefore does not test the
+required clean-start discovery setting. The description below documents what
+was done, rather than an admissible protocol for another run. See
+[METHODOLOGY-ERRATUM.md](METHODOLOGY-ERRATUM.md). All live entrypoints are disabled;
+a replacement acquisition protocol is not yet implemented.
+
 The user requested migration of the agent controller to the broad v3 language,
 an actual agent experiment, and comparison with the broad `oracle_feasible`.
 The prior controller and sealed historical experiments remain unchanged. This

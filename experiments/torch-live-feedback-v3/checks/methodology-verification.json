@@ -1,0 +1,38 @@
+{
+  "affected_jobs": [
+    "23741092",
+    "23747524"
+  ],
+  "clean_start_discovery_claims": "withdrawn",
+  "erratum_sha256": "87e91698e8dc8cb8e881800a24a0007b0c85eb72247a8778179032406b7978f6",
+  "initial_prior_feature_frames": 499121,
+  "initial_prior_prefix_labels": 142258,
+  "lint": "passed",
+  "local_tests_passed": 48,
+  "new_model_generations": 0,
+  "new_native_queries": 0,
+  "new_torch_jobs": 0,
+  "original_compact_artifacts_unchanged_and_verified": [
+    "REPORT.md",
+    "accounting.psv",
+    "agent-disposition.json",
+    "agent-freeze.json",
+    "agent-policy.json",
+    "report.json"
+  ],
+  "original_report_sha256": "7a4d6e73945a1bfadc71ce3131713bb5f0d2a7573b0316cac76da13ae72e949e",
+  "reason": "Agent initialized with empirical development evidence inherited from earlier oracle measurement runs.",
+  "replacement_clean_start_workflow_implemented": false,
+  "retired_entrypoints": [
+    "kit preparation",
+    "continuation preparation",
+    "model packet preparation",
+    "model execution",
+    "allocation launch",
+    "qualification dispatch",
+    "final comparison dispatch"
+  ],
+  "retirement_guard_sha256": "2d12fb17ca6ecec29c8a0d3d70edc6116e611b5ff6e433902c941d41d8c6f67f",
+  "status": "seeded_live_workflow_retired",
+  "valid_for_intended_clean_start_discovery": false
+}

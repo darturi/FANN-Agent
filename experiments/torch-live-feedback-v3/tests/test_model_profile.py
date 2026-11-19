@@ -97,6 +97,8 @@ def test_changed_opus_terms_or_unsupported_thinking_fail_before_dispatch(tmp_pat
 
 
 def fixture_kit(tmp_path, monkeypatch):
+    # Isolate model configuration assembly; real entrypoints must reject all live starts.
+    monkeypatch.setattr(run_agent, "require_live_workflow", lambda: None)
     study = tmp_path / "study"
     known = study / "oracle-variants-v1/connection/known_hosts-b0-v1"
     known.parent.mkdir(parents=True)

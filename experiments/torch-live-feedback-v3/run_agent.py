@@ -18,6 +18,7 @@ from client import TorchClient
 from controller import SYSTEM, TOOLS, LiveTools
 from limits import canonical, digest, read, sha, write
 from model_profile import PROFILE, load_profile, verify_current_provider
+from workflow_status import require_live_workflow
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -30,6 +31,7 @@ STUDY = ROOT / "trials/fannagent-benchmark-evaluation-v1/reviews-small"
 
 
 def prepare(output, host, stage, kit, control_path=None, resume_from=None):
+    require_live_workflow()
     output.mkdir(parents=True, exist_ok=False)
     profile = load_profile()
     model = profile["model_config"]
@@ -300,6 +302,7 @@ def drive(tools, store, budget, template, provider):
 
 
 def run(prepared, approval_path):
+    require_live_workflow()
     review = read(prepared / "review.json")
     approval = read(approval_path)
     if (

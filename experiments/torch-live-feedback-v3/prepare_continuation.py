@@ -6,11 +6,13 @@ import tarfile
 from pathlib import Path
 
 from limits import read, sha, write
+from workflow_status import require_live_workflow
 
 HERE = Path(__file__).resolve().parent
 
 
 def prepare(previous, target):
+    require_live_workflow()
     submission = read(previous / "submission.json")
     job = submission["job_id"]
     returned = previous / ("return-" + job)

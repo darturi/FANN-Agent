@@ -10,6 +10,7 @@ from pathlib import Path
 
 from client import TorchClient
 from limits import read, sha, write
+from workflow_status import require_live_workflow
 
 ROOT = Path(__file__).resolve().parents[3]
 WORK = ROOT / "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v1"
@@ -63,6 +64,7 @@ def client():
 
 
 def launch():
+    require_live_workflow()
     continuation = WORK / "continuation-plan.json"
     if continuation.exists():
         approval = WORK / "continuation-authorization.json"
@@ -147,6 +149,7 @@ def launch():
 
 
 def finalize():
+    require_live_workflow()
     folder = WORK / "agent-packet/live"
     state = read(folder / "tools.json")
     ids = state.get("nominees", [])
@@ -240,6 +243,7 @@ def main():
     elif a.operation == "status":
         result = client().call("status")
     elif a.operation == "qualify":
+        require_live_workflow()
         result = client().evaluate(
             read(WORK / "kit/diagnostic-policies.json"), mode="qualification"
         )

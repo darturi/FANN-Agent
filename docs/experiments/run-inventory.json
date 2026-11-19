@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "observed_at": "2026-11-19T15:47:44-05:00",
+  "observed_at": "2026-11-19T17:34:07-05:00",
   "workspace_root": "/Users/danielarturi/Developer/JinyangLiWork",
   "scope_roots": [
     "trials",
@@ -752,7 +752,7 @@
     "trials/torch-reviews-training-stops/__pycache__",
     "trials/torch-reviews-training-stops/inputs"
   ],
-  "record_count": 2054,
+  "record_count": 2056,
   "journaled_experiment_count": 15,
   "records": [
     {
@@ -5632,12 +5632,12 @@
       "evidence": [
         {
           "path": "agent/experiments/torch-live-feedback-v3/PROTOCOL.md",
-          "sha256": "3cc9b264c0ba032452971bd3fd5437882c05a392a5f71b6e31b4b58da7a7f5da",
+          "sha256": "fe607a85a54f47d3b0369c5a74ecc4fd697267ffcc70cf56d6f41ec7d271b594",
           "headline": "# V3 agent discovery and frozen oracle comparison"
         },
         {
           "path": "agent/experiments/torch-live-feedback-v3/README.md",
-          "sha256": "a532d43021d37c3755bc4c099aa3c4d84621570b297f514a65d99b25bd57629d",
+          "sha256": "68f8341e7070d743df1a8fdac7d2a280f2dee82d868c3f7e0f34153bd2489200",
           "headline": "# V3 agent with live Torch feedback"
         },
         {
@@ -5663,14 +5663,29 @@
           }
         },
         {
+          "path": "agent/experiments/torch-live-feedback-v3/checks/methodology-verification.json",
+          "sha256": "03b95df4f0d6f9e4247825c66dee9497ee49237ab013a988494e28445982a5d5",
+          "observed_fields": {
+            "reason": "Agent initialized with empirical development evidence inherited from earlier oracle measurement runs.",
+            "status": "seeded_live_workflow_retired"
+          }
+        },
+        {
           "path": "agent/experiments/torch-live-feedback-v3/checks/native-fixture-receipt.json",
           "sha256": "d8157a99149670973d5bf17e2cfc3096c763cd8046983d06b203afcd3670e64e",
           "observed_fields": {
             "status": "synthetic_v3_live_flow_passed"
           }
+        },
+        {
+          "path": "agent/experiments/torch-live-feedback-v3/checks/opus-config-verification.json",
+          "sha256": "df4537273cba482103a8829e0a0ea2db823a514ff8bfa3f2fc3fe3fae0eec451",
+          "observed_fields": {
+            "status": "current_model_and_rates_match_reviewed_profile"
+          }
         }
       ],
-      "recorded_outcome": "status=continuation_prepared_pending_explicit_additional_allocation_approval; status=synthetic_v3_live_flow_passed",
+      "recorded_outcome": "status=continuation_prepared_pending_explicit_additional_allocation_approval; status=seeded_live_workflow_retired; status=synthetic_v3_live_flow_passed; status=current_model_and_rates_match_reviewed_profile",
       "reproduction_reference": "agent/experiments/torch-live-feedback-v3/README.md"
     },
     {
@@ -5691,6 +5706,11 @@
       "kind": "saved evidence directory",
       "evidence": [
         {
+          "path": "agent/experiments/torch-live-feedback-v3/results/comparison-v1/README.md",
+          "sha256": "702d75b9de9c1e1334b804165a28a62aa269b886eab6d97b13daee8ba02fec1e",
+          "headline": "# Methodological status: historical seeded run"
+        },
+        {
           "path": "agent/experiments/torch-live-feedback-v3/results/comparison-v1/REPORT.md",
           "sha256": "74b1bf12359b1c98ccf43f5cbf323b2ae70bef88d870bc2a3fba40301e61ee60",
           "headline": "# V3 agent versus broad feasible oracle"
@@ -5704,7 +5724,7 @@
         }
       ],
       "recorded_outcome": "No terminal status inferred; inspect linked evidence",
-      "reproduction_reference": "agent/experiments/torch-live-feedback-v3/README.md"
+      "reproduction_reference": "agent/experiments/torch-live-feedback-v3/results/comparison-v1/README.md"
     },
     {
       "path": "agent/experiments/uncertainty-shortlist-v1",
@@ -15056,6 +15076,21 @@
       ]
     },
     {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/opus-config-check-v1/verified",
+      "kind": "saved evidence directory",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/opus-config-check-v1/verified/receipt.json",
+          "sha256": "015c4e2358f05283414ac3871885d6a176f6473a471e71d505fc2cf5d9f44e29",
+          "observed_fields": {
+            "status": "current_model_and_rates_match_reviewed_profile"
+          }
+        }
+      ],
+      "recorded_outcome": "status=current_model_and_rates_match_reviewed_profile",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
+    },
+    {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/provider-preflight-v1",
       "kind": "saved evidence directory",
       "evidence": [
@@ -15751,7 +15786,7 @@
         },
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/catalog-refresh.log",
-          "bytes": 0
+          "bytes": 118
         },
         {
           "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/collection.log",
@@ -15969,6 +16004,21 @@
           "bytes": 81423426
         }
       ]
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/search-analysis-v1",
+      "kind": "analysis of existing run",
+      "evidence": [
+        {
+          "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/search-analysis-v1/summary.json",
+          "sha256": "3d210de8f0fad886139707ccf3d95daab6a9168d19f12be3e751b12f526cbb9b",
+          "observed_fields": {
+            "status": "posthoc_saved_artifact_analysis"
+          }
+        }
+      ],
+      "recorded_outcome": "status=posthoc_saved_artifact_analysis",
+      "reproduction_reference": "trials/fannagent-benchmark-evaluation-v1/README.md"
     },
     {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/uncertainty-shortlist-v1",

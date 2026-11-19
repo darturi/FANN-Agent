@@ -104,6 +104,11 @@ def analyze(run, output, draws=20000):
     disposition = read(run / "agent-packet/live/disposition.json")
     report = {
         "schema": "fannagent.agent-v3-oracle-comparison.v1",
+        "experimental_validity": {
+            "starting_condition": "seeded_with_prior_run_measurements",
+            "valid_for_intended_clean_start_discovery": False,
+            "clean_start_discovery_claims": "withdrawn",
+        },
         "job_id": job,
         "cohorts": cohorts,
         "agent_disposition": disposition,
@@ -136,6 +141,8 @@ def analyze(run, output, draws=20000):
     shutil.copyfile(returned / "accounting.psv", output / "accounting.psv")
     lines = [
         "# V3 agent versus broad feasible oracle",
+        "",
+        "**Methodological correction: the agent started with measurements from prior experimental runs. This historical seeded run is invalid for the intended clean-start discovery experiment; claims about discovery from that starting condition are withdrawn. Raw measurements are preserved.**",
         "",
         f"Job {job}; frozen development-only agent outcome: **{disposition['status']}**.",
         "",

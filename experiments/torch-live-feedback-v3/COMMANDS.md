@@ -1,5 +1,10 @@
 # Saved execution and analysis
 
+**The live workflow is retired because it seeds the agent with prior-run
+measurements.** The commands below document historical execution and offline
+reanalysis only. Read the [methodological correction](METHODOLOGY-ERRATUM.md);
+reanalysis cannot convert this run into a clean-start discovery experiment.
+
 Run from the `agent` repository. Native execution used source `d1d4321` and the
 sealed continuation kit; later report/documentation edits did not change that
 kit. The bound source, prompt, authorization, model conversation and receipts

@@ -104,7 +104,7 @@ def test_resume_rejects_final_decisions_and_uncertain_deliveries(tmp_path, termi
     "grant",
     [None, {"status": "authorized", "plan_sha256": "wrong", "user_approval_record": "fixture"}],
 )
-def test_continuation_cannot_upload_or_launch_without_matching_approval(
+def test_retired_continuation_cannot_upload_or_launch_regardless_of_old_approval(
     tmp_path, monkeypatch, grant
 ):
     import remote
@@ -118,5 +118,5 @@ def test_continuation_cannot_upload_or_launch_without_matching_approval(
         pytest.fail("remote operation before matching approval")
 
     monkeypatch.setattr(remote, "ssh", forbidden)
-    with pytest.raises(ValueError, match="approval"):
+    with pytest.raises(ValueError, match="retired"):
         remote.launch()

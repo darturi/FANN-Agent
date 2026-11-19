@@ -9,6 +9,7 @@ import tarfile
 from pathlib import Path
 
 from limits import SCHEMA, digest, read, sha, write
+from workflow_status import require_live_workflow
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -23,6 +24,7 @@ def rows(p):
 
 
 def prepare(target):
+    require_live_workflow()
     target.mkdir(parents=True)
     kit = target / "kit"
     kit.mkdir()

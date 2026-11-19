@@ -1,10 +1,17 @@
 # Master experiment index
 
 Updated: November 19, 2026, America/New_York. Saved work reviewed through the
-completed v3 agent/oracle comparison on November 19. This is the entry
+methodological correction and retirement of the seeded v3 workflow. This is the entry
 point for the saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
 paths are relative to this document and require the sibling workspace folders;
 cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data.
+
+**Methodological correction, November 19:** the v3 agent started with cached
+development measurements from earlier oracle runs. It is invalid for the
+intended clean-start discovery experiment, and claims about discovery from that
+starting condition are withdrawn. The raw seeded-run record remains preserved.
+Its live workflow is retired; no replacement has been run. See the
+[erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md).
 
 - [Complete saved-run catalog](RUN_CATALOG.md): individual attempts, failures,
   agent conversations, measurement blocks, analyses and engineering checks.
@@ -15,7 +22,7 @@ cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data
 - [Backup audit](BACKUP_AUDIT.md): verified local integrity, missing artifacts,
   remote-check results and outstanding backup coverage.
 
-The refreshed inventory contains 2,054 saved evidence records and 15 experiments
+The refreshed inventory contains 2,056 saved evidence records and 15 experiments
 registered inside saved agent journals. Locations include definitions, receipts,
 repeated blocks, analyses, packages and synthetic checks; they are not a count of
 independent scientific experiments. The 455 discovered archives include source,
@@ -47,7 +54,7 @@ criteria below retain their original conclusions.
 | Historical live Torch feedback v1 prototype | Local compiler, synthetic PostgreSQL and controller checks pass. That v1 prototype remains local-only; the separate v3 episode is recorded below. M4/M5 and oracle results retain their original scope. | [Prototype status and boundaries](../../experiments/torch-live-feedback-v1/README.md), [verification](../../experiments/torch-live-feedback-v1/verification.json) |
 | Earlier hindsight oracles | Count-preserving oracle and subsequent three-level v2 comparison completed on both cohorts. All intended-cohort recall gates pass; strict per-condition timing equivalence is not established. Preserve their separate quality gates and allocations. | [Count-preserving oracle](../../experiments/full-workload-oracle-v1/README.md), [three-level comparison](../../experiments/oracle-variants-v1/results/REPORT.md) |
 | Broader-language feasible oracle | Completed job 23719580 after preserved cancellation and failed qualification. One ordinary v3 policy per cohort saves a descriptive 64.95% on 1,925 test cases and 68.39% on 7,000 full-workload cases, versus 21.37% / 19.80% for the prior v2 policies rerun alongside it. Zero intended-cohort recall losses; timing controls fail the strict equivalence requirement. | [Verified comparison](../../experiments/broad-oracle-v1/results/REPORT.md), [accounting](../../experiments/broad-oracle-v1/results/accounting.json), [completed resume](../../experiments/broad-oracle-v1/RESUMED.json) |
-| V3 agent controller and discovery | Broader controller and isolated fitting implemented; 31 tests pass. After preserved idle stop 23741092, explicitly approved continuation 23747524 completes. One development-selected policy has −0.46% / −1.78% descriptive held-out/full savings, against the saved broad oracles rerun alongside it at 66.32% / 64.87%. Zero agent recall/count losses; strict timing controls fail. 32 cumulative model calls cost $2.797810; both jobs use 6,049 seconds and 248,800 reservations. | [Verified comparison](../../experiments/torch-live-feedback-v3/results/comparison-v1/REPORT.md), [discovery receipt](../../experiments/torch-live-feedback-v3/results/agent-discovery.json), [first attempt](../../experiments/torch-live-feedback-v3/results/REPORT.md), [approved continuation](../../experiments/torch-live-feedback-v3/CONTINUATION.md) |
+| V3 agent controller and discovery | **Invalid for intended clean-start discovery; live workflow retired.** Jobs 23741092 / 23747524 started with measurements inherited from earlier oracle runs. The latency/quality record is retained as a seeded-development run, and clean-start discovery claims are withdrawn. No compliant replacement result exists. The Opus model preference does not fix the acquisition defect. | [Methodological erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md), [historical measurements](../../experiments/torch-live-feedback-v3/results/comparison-v1/REPORT.md), [original discovery receipt](../../experiments/torch-live-feedback-v3/results/agent-discovery.json) |
 
 The returned M5 archive and independent scheduler accounting remain the evidence
 gate for the frozen development nominees. The completed oracle diagnostic does
@@ -2937,6 +2944,15 @@ commit, and independent backup coverage was not verified; see the
 [backup audit](BACKUP_AUDIT.md).
 
 ## V3 agent controller and first execution — November 19, 2026
+
+**Superseding interpretation:** this section records a seeded-development
+experiment, not independent clean-start discovery. The initial workspace reused
+142,258 prefix labels and 499,121 feature frames from prior oracle acquisitions.
+The resulting agent/oracle gap and model behavior do not establish performance
+or limitations under the user's required starting condition. All live paths are
+now disabled. The [erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md)
+preserves the failure and defines the corrected starting condition; no new
+experiment is launched by this correction.
 
 Recorded America/New_York. The user requested the broader v3 controller, an
 actual agent experiment, and comparison with the broad `oracle_feasible` on

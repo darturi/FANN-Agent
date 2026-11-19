@@ -1,5 +1,12 @@
 # V3 agent with live Torch feedback
 
+**Retired: this workflow initialized the agent with prior-run measurements and
+does not satisfy the intended clean-start experiment. Discovery claims from
+that starting condition are withdrawn.** See the
+[methodological erratum](METHODOLOGY-ERRATUM.md). New preparation, generation and
+native dispatch are disabled. A compliant replacement is not implemented.
+The historical measurements below remain preserved as a seeded-development run.
+
 This is the new broad-language controller. Historical v1/v2 controllers and
 sealed experiment inputs remain available for reproduction. The model can use
 isolated offline Python fitting scripts, submit normal v3 JSON artifacts, get
@@ -13,7 +20,7 @@ workspace. Discovery uses 450 development groups. Frozen evaluation reports both
 the 275-group test subset and all 1,000 vectors, alongside the saved full- and
 test-fitted broad oracles on one shared baseline.
 
-Future fresh preparations now default to **Claude Opus 5.5**, adaptive thinking,
+The stored future model preference is **Claude Opus 5.5**, adaptive thinking,
 high effort and a 6,000-token total output limit, through
 [model-profile.json](model-profile.json). The model-specific preflight checks
 Opus access, supported inference settings, the one-million-token input bound,
@@ -25,6 +32,7 @@ The [configuration verification](checks/opus-config-verification.json) used
 unpaid metadata/document GETs and local tests, with zero new generations or
 Torch jobs. The completed measurements below used **Sonnet 5.5**. This model
 selection does not change the search prompt, quality gates or stopping logic.
+It does not make this retired acquisition workflow suitable for a new run.
 
 The initial protocol allowed one six-hour allocation, 300,000 charged ANN
 reservations and a $15 model ledger. After the idle-stopped first attempt, the
@@ -35,6 +43,9 @@ reserved for final comparison. No automatic retry or requeue occurs. The model
 and credentials stay local; Torch runs trusted compilation and ANN evaluation.
 
 From the `agent` repository:
+
+The preparation command below is retained as a historical recipe and now fails
+with the retirement reason. Local tests remain available.
 
 ```sh
 .venv/bin/python -B -m pytest experiments/torch-live-feedback-v3/tests -q
