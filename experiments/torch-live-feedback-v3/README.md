@@ -13,11 +13,13 @@ workspace. Discovery uses 450 development groups. Frozen evaluation reports both
 the 275-group test subset and all 1,000 vectors, alongside the saved full- and
 test-fitted broad oracles on one shared baseline.
 
-The run is capped at one six-hour allocation, 300,000 charged ANN reservations
-and a new $15 model ledger. Native queries reserve durable windows before
-execution. The final comparison receives a 225,000-attempt reservation before
-development admission. No automatic retry or requeue occurs. The model and
-credentials stay local; Torch runs only trusted compilation and ANN evaluation.
+The initial protocol allowed one six-hour allocation, 300,000 charged ANN
+reservations and a $15 model ledger. After the idle-stopped first attempt, the
+user explicitly approved one [bounded continuation](CONTINUATION.md), carrying
+all spend, queries and allocated time. Both jobs stay under six aggregate hours.
+Native queries reserve durable windows before execution, with 225,000 attempts
+reserved for final comparison. No automatic retry or requeue occurs. The model
+and credentials stay local; Torch runs trusted compilation and ANN evaluation.
 
 From the `agent` repository:
 
@@ -45,16 +47,40 @@ model. `remote.py collect` requires terminal scheduler accounting and verifies
 the returned archive. Read-only request recovery uses the identity in the local
 client receipt; never rerun a delivery whose outcome is unknown.
 
-The experiment is implemented and locally tested; measured results and final
-execution status will be recorded after collection. Large workspace, transcripts,
-native returns and sealed inputs live outside Git under the trial directory.
-
-Execution update, November 19: job **23741092** qualified the native path, then
+The experiment completed on November 19, 2026. Job **23741092** qualified the native path, then
 stopped at the old fifteen-minute idle limit while the model was fitting offline.
-No learned policy reached native evaluation, so there is no measured agent/oracle
-comparison yet. The 24 model calls cost $1.707958, with no unknown charges;
-1,262 allocated seconds and 256 query reservations remain charged. The raw
-return and discovery state are preserved. The heartbeat/resume repair has 31
-passing controller/language tests. A [bounded continuation](CONTINUATION.md) is
-prepared and requires approval for one additional allocation; it carries the
-same model ledger, conversation, workspace, compute time and query reservations.
+No learned policy reached native evaluation in that attempt. Its 24 model calls,
+$1.707958, 1,262 allocated seconds and 256 reservations remain recorded in the
+[first-attempt report](results/REPORT.md). The heartbeat/resume repair has 31
+passing controller/language tests.
+
+Approved continuation **23747524** completed with exit 0. The same agent made
+32 cumulative model calls costing **$2.797810**, measured three development
+candidates, and selected `candidate-2` (`fgap-margin-narrow`). It stopped with
+budget remaining. This single frozen policy uses frontier-gap thresholds at
+checkpoint 64 for votes108 and checkpoint 32 for votes32, continuing natively
+otherwise. It stopped on 145 / 3,150 development cases, 105 / 1,925 held-out
+cases and 351 / 7,000 full-workload cases. It had zero recall or result-count
+losses on both final cohorts.
+
+| Cohort | Agent savings | Broad `oracle_feasible` savings | Gap |
+|---|---:|---:|---:|
+| Held-out: 1,925 cases | −0.46% | 66.32% | 66.77 pp |
+| Full: 7,000 cases | −1.78% | 64.87% | 66.66 pp |
+
+Negative savings indicate higher measured latency. Strict per-condition control
+equivalence failed for both cohorts; these estimates are descriptive. The
+agent's held-out conditional 95% savings interval includes zero. The oracle has
+zero intended-cohort recall losses; the full oracle has three result-count
+reductions, recorded separately. The agent used development only, while each
+oracle was hindsight-fitted to its reported cohort. This episode does not
+exhaust the v3 language or establish an agent discovery limit.
+
+Both allocations used **6,049 seconds / 21,600** and **248,800 / 300,000** charged
+ANN reservations, with zero fresh exact searches and no automatic retries.
+The final comparison contains 42,000 quality records and 168,000 timing records.
+See the [verified report](results/comparison-v1/REPORT.md),
+[discovery receipt](results/agent-discovery.json), and
+[independent return audit](checks/continuation-postrun.json), with
+[saved commands](COMMANDS.md). Large workspaces, transcripts, native returns
+and sealed inputs remain outside Git under the sibling trial directory.

@@ -39,6 +39,7 @@ def analyze(run, output, draws=20000):
         assert sha(final / "results" / name) == expected, name
     binding = read(final / "batch-binding.json")
     assert response["module_sha256"] == binding["module_sha256"]
+    assert sha(final / "timing-module.so") == binding["module_sha256"]
     assert sha(final / "compiled-programs.json") == binding["programs_sha256"]
     request = read(final / "request.json")
     freeze = read(run / "final-freeze.json")
@@ -121,7 +122,7 @@ def analyze(run, output, draws=20000):
         "raw_final_quality_sha256": sha(final / "results/quality.jsonl"),
         "raw_final_timing_sha256": sha(final / "results/timing.jsonl"),
         "limitations": [
-            "One allocation; conditional intervals omit adaptive selection and allocation variability.",
+            "One final measurement allocation; conditional intervals omit adaptive selection and allocation variability. The earlier idle-stopped allocation remains charged.",
             "Oracle fits use their reported cohort; agent discovery sees development only.",
             "Full workload includes development; research design follows prior protected oracle exposure.",
             "Recall failures and failed equivalence controls prevent qualifying a preserving latency win.",
@@ -156,6 +157,22 @@ def analyze(run, output, draws=20000):
     lines += [
         "",
         "A recall-loss count above zero means the agent did not preserve native quality on that cohort. Its measured latency is diagnostic. Failed control equivalence makes estimates descriptive, not certified speedups or numerical ceilings.",
+        "",
+        "| Cohort / intended arm | Mean request latency | Conditional 95% savings interval | Recall-loss cases | Result-count-loss cases | Early stops |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for name, label in [("heldout_test", "Test"), ("full_workload", "Full")]:
+        c = cohorts[name]
+        oracle = "oracle_test" if name == "heldout_test" else "oracle_full"
+        for family, arm in [("native640", "native"), ("agent", "agent"), (oracle, "oracle_feasible")]:
+            v = c["aggregates"]["all_seven"][family]
+            interval = v["conditional95_savings_interval"]
+            lines.append(
+                f"| {label} / {arm} | {v['mean_ms']:.4f} ms | [{interval[0]:.2f}%, {interval[1]:.2f}%] | {c['quality_loss_cases'][family]} | {c['result_count_loss_cases'][family]} | {sum(c['stop_counts'][family].values())} |"
+            )
+    lines += [
+        "",
+        "Oracle quality is assessed on its fitted cohort. The test-fitted oracle's behavior outside the test subset remains in the raw full-workload records, but is not the full-cohort oracle comparison. Result-count preservation is reported separately from recall preservation.",
         "",
         "The JSON retains native/agent/oracle means, both seven-condition and six-filter aggregates, per-condition results, result-count losses, conditional intervals and control failures.",
         "",

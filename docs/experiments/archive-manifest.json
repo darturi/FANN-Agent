@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-11-19T13:52:03-05:00",
+  "observed_at": "2026-11-19T15:47:44-05:00",
   "scope": "Archives under the same pruned scan roots as run-inventory.json; runtime/dependency caches and private stores excluded",
-  "archive_count": 454,
-  "total_bytes": 23516496150,
+  "archive_count": 455,
+  "total_bytes": 23552337387,
   "checksum_counts": {
     "no usable sidecar": 262,
-    "matches": 192
+    "matches": 193
   },
   "archives": [
     {
@@ -2616,6 +2616,15 @@
       "sha256": "c26eb825bda2b04a6e408602115b8037f695873aa96d71301837aed675066c3e",
       "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/kit.tar.gz.sha256",
       "expected_sha256": "c26eb825bda2b04a6e408602115b8037f695873aa96d71301837aed675066c3e",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/return-23747524/return-23747524.tar.gz",
+      "bytes": 35841237,
+      "sha256": "275514bf37098c26d2f01b0f40a1cf09d9b2ef0678224a1e3e33920aa41df7c3",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v3/run-v2/return-23747524/return-23747524.tar.gz.sha256",
+      "expected_sha256": "275514bf37098c26d2f01b0f40a1cf09d9b2ef0678224a1e3e33920aa41df7c3",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },

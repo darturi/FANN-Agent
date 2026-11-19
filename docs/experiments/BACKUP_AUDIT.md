@@ -10,10 +10,10 @@ in the [experiment log](README.md).
 
 ## Verified local holdings
 
-[archive-manifest.json](archive-manifest.json) now lists 454 archives, totaling
-23,516,496,150 bytes, under the inventory's expanded, pruned workspace roots. These include
+[archive-manifest.json](archive-manifest.json) now lists 455 archives, totaling
+23,552,337,387 bytes, under the inventory's expanded, pruned workspace roots. These include
 source/runtime/engineering archives as well as experiment results. Every file
-was streamed through SHA-256 on November 19. All 192 archives with usable existing
+was streamed through SHA-256 on November 19. All 193 archives with usable existing
 checksum sidecars match; none mismatched. The remaining 262 have inventory hashes but no
 usable sidecar for an independent earlier comparison. A checksum on the same
 disk protects identity checking, not recovery after disk loss.
@@ -34,10 +34,13 @@ and remote-path metadata rather than a completed local measurement archive.
 These are local integrity checks of collected artifacts; remote retention was
 not rechecked during this documentation task.
 The later v3 agent snapshot includes the verified idle-stopped return for job
-23741092 and its prepared continuation kit. No learned-policy result exists for
-that job; the sealed continuation is pending approval. The archive identity check
-does not back up the model transcript, mutable fitting workspace or raw return to
-an independent destination.
+23741092, its sealed continuation kit, and the completed, explicitly approved
+continuation return for job 23747524. The new 35,841,237-byte return archive
+matches its sidecar; raw batch/module hashes, final outputs and schedule are
+independently checked in the [postrun audit](../../experiments/torch-live-feedback-v3/checks/continuation-postrun.json).
+The first job remains censored before learned-policy measurement. The archive
+identity check does not back up the model transcript, mutable fitting workspace
+or raw return to an independent destination.
 Archive integrity does not establish a successful experiment, destination
 retention, or a restore test. See the [current index](README.md) for outcomes.
 
