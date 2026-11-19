@@ -1,0 +1,26 @@
+{
+  "schema": "fannagent.broad-oracle.failed-stage.v1",
+  "job_id": "23716630",
+  "accounting": "23716630|FAILED|1:0|00:03:25|205|\n23716630.batch|FAILED|1:0|00:03:25|205|5640K\n23716630.extern|COMPLETED|0:0|00:03:27|207|\n23716630.0|FAILED|1:0|00:03:23|203|8683736K\n",
+  "conservative_allocated_seconds": 207,
+  "reservation": {
+    "source_charged": 28672,
+    "reserved_total": 29696,
+    "actual_total_at_reservation": 28672,
+    "window": 1024,
+    "reservations": 1,
+    "cap": 2000000
+  },
+  "extra_reserved_queries_charged": 1024,
+  "actual_ann_query_count_known": false,
+  "actual_ann_query_count_bounds": [
+    1,
+    1024
+  ],
+  "quality_or_latency_samples_collected": false,
+  "raw_archive_sha256": "e5b0b2840fff70aa1c12e5d4cd8edf6cb02152f8560a5afbd92ce9005e8ac6cc",
+  "raw_results": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23716630/results",
+  "stderr_sha256": "5deed8af8b5c93714da2a68c80b1c1cee13b6aef2949ceb3d4aa5b24a94db498",
+  "automatic_retry": false,
+  "supervised_validation_repair": true
+}

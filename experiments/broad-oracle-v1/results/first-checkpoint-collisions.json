@@ -1,0 +1,332 @@
+{
+  "schema": "fannagent.first-checkpoint-collisions.v1",
+  "cases_sha256": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed",
+  "prefixes_sha256": "61985cd4a9040a9887fb8c21bc05a15828d840acc18dd16ce108c4792a95be23",
+  "source_sha256": "947209a1dcfcf1d9b4768c4337e9cc0d4aa0c8cb8d14153c00f78e2b916826ed",
+  "cohorts": {
+    "full_workload": {
+      "mismatches": [
+        {
+          "id": "reviews-clean-v0196-votes743",
+          "ideal_checkpoint": 1,
+          "broader_checkpoint": 16,
+          "inputs_and_count_units": [
+            743,
+            1,
+            93,
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0,
+            94,
+            null,
+            null,
+            null,
+            188
+          ],
+          "native_recall": 0.0,
+          "unsafe_twins": [
+            {
+              "id": "reviews-clean-v0115-votes743",
+              "prefix_recall": 0.0,
+              "role": "excluded_historical",
+              "native_recall": 0.3
+            },
+            {
+              "id": "reviews-clean-v0595-votes743",
+              "prefix_recall": 0.0,
+              "role": "validation",
+              "native_recall": 0.9
+            },
+            {
+              "id": "reviews-clean-v0675-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.3
+            },
+            {
+              "id": "reviews-clean-v0879-votes743",
+              "prefix_recall": 0.0,
+              "role": "test",
+              "native_recall": 0.2
+            }
+          ]
+        },
+        {
+          "id": "reviews-clean-v0249-votes743",
+          "ideal_checkpoint": 1,
+          "broader_checkpoint": 16,
+          "inputs_and_count_units": [
+            743,
+            1,
+            64,
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0,
+            65,
+            null,
+            null,
+            null,
+            130
+          ],
+          "native_recall": 0.0,
+          "unsafe_twins": [
+            {
+              "id": "reviews-clean-v0261-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.4
+            },
+            {
+              "id": "reviews-clean-v0631-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.2
+            },
+            {
+              "id": "reviews-clean-v0666-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.3
+            },
+            {
+              "id": "reviews-clean-v0881-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 1.0
+            }
+          ]
+        },
+        {
+          "id": "reviews-clean-v0575-votes743",
+          "ideal_checkpoint": 1,
+          "broader_checkpoint": 16,
+          "inputs_and_count_units": [
+            743,
+            1,
+            89,
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0,
+            90,
+            null,
+            null,
+            null,
+            180
+          ],
+          "native_recall": 0.0,
+          "unsafe_twins": [
+            {
+              "id": "reviews-clean-v0054-votes743",
+              "prefix_recall": 0.0,
+              "role": "excluded_historical",
+              "native_recall": 1.0
+            },
+            {
+              "id": "reviews-clean-v0584-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.4
+            },
+            {
+              "id": "reviews-clean-v0918-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.2
+            }
+          ]
+        },
+        {
+          "id": "reviews-clean-v0582-votes743",
+          "ideal_checkpoint": 1,
+          "broader_checkpoint": 16,
+          "inputs_and_count_units": [
+            743,
+            1,
+            92,
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0,
+            93,
+            null,
+            null,
+            null,
+            186
+          ],
+          "native_recall": 0.0,
+          "unsafe_twins": [
+            {
+              "id": "reviews-clean-v0110-votes743",
+              "prefix_recall": 0.0,
+              "role": "excluded_historical",
+              "native_recall": 1.0
+            },
+            {
+              "id": "reviews-clean-v0430-votes743",
+              "prefix_recall": 0.0,
+              "role": "test",
+              "native_recall": 1.0
+            },
+            {
+              "id": "reviews-clean-v0581-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 1.0
+            }
+          ]
+        },
+        {
+          "id": "reviews-clean-v0604-votes743",
+          "ideal_checkpoint": 1,
+          "broader_checkpoint": 16,
+          "inputs_and_count_units": [
+            743,
+            1,
+            94,
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0,
+            95,
+            null,
+            null,
+            null,
+            190
+          ],
+          "native_recall": 0.0,
+          "unsafe_twins": [
+            {
+              "id": "reviews-clean-v0146-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.2
+            },
+            {
+              "id": "reviews-clean-v0229-votes743",
+              "prefix_recall": 0.0,
+              "role": "validation",
+              "native_recall": 1.0
+            },
+            {
+              "id": "reviews-clean-v0231-votes743",
+              "prefix_recall": 0.0,
+              "role": "test",
+              "native_recall": 0.1
+            },
+            {
+              "id": "reviews-clean-v0377-votes743",
+              "prefix_recall": 0.0,
+              "role": "validation",
+              "native_recall": 0.1
+            }
+          ]
+        },
+        {
+          "id": "reviews-clean-v0663-votes743",
+          "ideal_checkpoint": 1,
+          "broader_checkpoint": 16,
+          "inputs_and_count_units": [
+            743,
+            1,
+            94,
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0,
+            95,
+            null,
+            null,
+            null,
+            190
+          ],
+          "native_recall": 0.0,
+          "unsafe_twins": [
+            {
+              "id": "reviews-clean-v0146-votes743",
+              "prefix_recall": 0.0,
+              "role": "development",
+              "native_recall": 0.2
+            },
+            {
+              "id": "reviews-clean-v0229-votes743",
+              "prefix_recall": 0.0,
+              "role": "validation",
+              "native_recall": 1.0
+            },
+            {
+              "id": "reviews-clean-v0231-votes743",
+              "prefix_recall": 0.0,
+              "role": "test",
+              "native_recall": 0.1
+            },
+            {
+              "id": "reviews-clean-v0377-votes743",
+              "prefix_recall": 0.0,
+              "role": "validation",
+              "native_recall": 0.1
+            }
+          ]
+        }
+      ],
+      "all_have_unsafe_first_checkpoint_twin": true
+    },
+    "heldout_test": {
+      "mismatches": [
+        {
+          "id": "reviews-clean-v0663-votes743",
+          "ideal_checkpoint": 1,
+          "broader_checkpoint": 16,
+          "inputs_and_count_units": [
+            743,
+            1,
+            94,
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0,
+            95,
+            null,
+            null,
+            null,
+            190
+          ],
+          "native_recall": 0.0,
+          "unsafe_twins": [
+            {
+              "id": "reviews-clean-v0231-votes743",
+              "prefix_recall": 0.0,
+              "role": "test",
+              "native_recall": 0.1
+            }
+          ]
+        }
+      ],
+      "all_have_unsafe_first_checkpoint_twin": true
+    }
+  },
+  "scope": "Only the first scheduled checkpoint. Identical declared inputs, initial zero state and collection fuel charges imply identical decisions for any deterministic v3 policy. No claim about later checkpoints or latency optimality."
+}

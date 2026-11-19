@@ -1,0 +1,23 @@
+{
+  "protocol_tests": {
+    "v3_and_fitter": 14,
+    "v2": 61,
+    "status": "passed"
+  },
+  "base_tests": {
+    "initial_passed": 209,
+    "socket_bind_sandbox_failures": 2,
+    "targeted_socket_tests_with_permission_passed": 2,
+    "integration_deselected": 1
+  },
+  "native_fixture_receipt": "fixture-v2/checks/v3-smoke/receipt.json",
+  "native_fixture_queries": 238,
+  "native_fixture_cases": 14,
+  "canonical_projection_tests_passed": 6,
+  "independent_native_projection_fixture": {
+    "cases": 14,
+    "frames": 1043,
+    "ann_queries": 14,
+    "status": "passed"
+  }
+}

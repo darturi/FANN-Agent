@@ -1,0 +1,7 @@
+{
+  "status": "broad_capture_and_prefix_features_verified",
+  "cases": 7000,
+  "frames": 1104761,
+  "known_prefix_feature_checks": 325640,
+  "cases_sha256": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed"
+}

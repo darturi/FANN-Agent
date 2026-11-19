@@ -39,3 +39,17 @@ core with a neutral module name: the frozen backend disallows importing the
 researcher's `fannagent` package before loading its own pinned dependencies.
 Fitting occurs offline with the public package and actual agent submission
 adapter; this neutral native import does not change the language or compiler.
+
+The completed run is job `23719580`, sealed in `benchmark-kit-v3`. Its explicit
+resume used `prepare_resume.py`, then a supervised canonical-projection repair
+used `prepare_repair.py`; `launch_resume.py --revision v3` verifies and hard-links
+unchanged input bytes from the earlier remote stage and overlays only changed
+control files. It submits once. All prior time and the failed reservation window
+remain charged. `remote.py collect_failed` preserves failed evidence separately.
+
+For monitoring or collecting this revision, set `FANNAGENT_SSH_CONTROL_PATH` to
+an authenticated master and pass `--record benchmark-v3-submission.json` to
+`remote.py`. For reporting, use the v3 kit with `broad_analyse.py --kit ...` and
+`finalize.py --kit ...`. Preserve the failed control results; do not repeat a
+comparison to obtain favorable equivalence tests. Both the seven-condition and
+six-filter aggregates are exported in `results/report.json`.

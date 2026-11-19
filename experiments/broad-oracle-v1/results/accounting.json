@@ -1,0 +1,41 @@
+{
+  "checkpoint_commit": "795db05",
+  "capture_allocated_seconds": 1683,
+  "benchmark_allocated_seconds": 5771,
+  "prior_cancelled_allocated_seconds": 122,
+  "prior_failed_allocated_seconds": 207,
+  "total_allocated_seconds": 7783,
+  "allocated_seconds_cap": 21600,
+  "physical_cpus": 4,
+  "memory_gib": 48,
+  "fresh_ann_queries": null,
+  "known_completed_stage_ann_queries": 463192,
+  "failed_stage_reserved_queries_charged": 1024,
+  "fresh_ann_query_count_bounds": [
+    463193,
+    464216
+  ],
+  "charged_ann_reservations": 464896,
+  "ann_reservation_cap": 2000000,
+  "provider_calls": 0,
+  "fresh_exact_queries": 0,
+  "automatic_retries": 0,
+  "explicit_user_resumes": 1,
+  "supervised_validation_repairs": 1,
+  "raw_evidence": {
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23644126/results/receipt.json": "1f2a4e32d1f984819e430b1a501d7c53da32166c7f4b8c83763cbc567919a6ee",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23644126/results/cases.jsonl": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23719580/results/receipt.json": "52b17cb678e67c23cb0db0bc440671ee8d3b412fed70e848961864e0a6d5de9b",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23719580/results/quality.jsonl": "461f98eb0a96e8d8081a340c3e2840d4535d102a72ac57249476eba54af3ca85",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23719580/results/timing.jsonl": "3d7bdc75d874f8ea07ea18cee646bbbe48ecdec92a1300f1ab801253aa0fea82",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v3/binding.json": "692780eccf3daa01e486fb4474c0bee2582ea76f28fa4c602f543d90d5c46ddc",
+    "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v3/oracle-module.so": "02b7223a09897ca911b182bb4bd022bbcd0cc9736f4bd5c48cbc834d79849ce2"
+  },
+  "source_hashes": {
+    "agent/src/fannagent/api/broad_policy.py": "8130cdd574c62094dcad83a67bec9d8f249dd74a7ca0d46a81bfb1af04ff0a63",
+    "agent/experiments/broad-oracle-v1/fit_broad.py": "508d3b4685f4ac1b4d1c133e09b56cb16cb82e5cc02ada7b33f3aa2caeb72272",
+    "agent/experiments/broad-oracle-v1/broad_benchmark.py": "e70b90d9a7149a97d642fcdb228f92bac663a60ec194b81a0f36474e8df1be0e",
+    "agent/experiments/broad-oracle-v1/broad_analyse.py": "1dc548341f0169846b6f2f8e53a318095fbf477412e3881f6927a7acd3692ec9",
+    "agent/experiments/filtered-ann-protocol-v3/fannproto3/compiler.py": "0cc8468a285eb678d9d8c5287636131c3d8f7b065691eff2e3de21b1d68ea91c"
+  }
+}

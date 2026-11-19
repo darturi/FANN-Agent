@@ -1,0 +1,55 @@
+{
+  "compiler_semantics": "float64; short circuit; query-local bounded state",
+  "features": [
+    "checkpoint",
+    "layer0_distance_evaluations",
+    "qualifying_count",
+    "tenth_distance",
+    "frontier_gap",
+    "top10_new_since_previous",
+    "first_distance",
+    "fifth_distance",
+    "frontier_distance",
+    "retained_count",
+    "previous_qualifying_count",
+    "previous_tenth_distance",
+    "previous_frontier_gap"
+  ],
+  "nodes": 85792,
+  "programs": 28,
+  "schema": "fannagent.broad-compiler.v3",
+  "source_sha256": "b7a62705d305ba8887c6ef779086833575e47c7fa30939e27bf6ed615af0f0f9",
+  "table_bytes_upper_bound": 2897888,
+  "bindings": [
+    {
+      "arm": 60,
+      "force_continue": false,
+      "policy_hash": "83d9556901eeae128febae0feeebea8e5910504195b3435249cafe87d462a325",
+      "table_bytes_upper_bound": 1120376
+    },
+    {
+      "arm": 70,
+      "force_continue": true,
+      "policy_hash": "83d9556901eeae128febae0feeebea8e5910504195b3435249cafe87d462a325",
+      "table_bytes_upper_bound": 1120376
+    },
+    {
+      "arm": 61,
+      "force_continue": false,
+      "policy_hash": "f09224e2f336f0f2f780546a2b5151c8f6dec4d78837cfab621a236292936b89",
+      "table_bytes_upper_bound": 329016
+    },
+    {
+      "arm": 71,
+      "force_continue": true,
+      "policy_hash": "f09224e2f336f0f2f780546a2b5151c8f6dec4d78837cfab621a236292936b89",
+      "table_bytes_upper_bound": 329016
+    },
+    {
+      "arm": 85,
+      "force_continue": false,
+      "policy_hash": "8cdb35daf3c7052fa38dea8e5d32367d7ed8ccd7bcf578c1ad4c7116e297257e",
+      "table_bytes_upper_bound": 0
+    }
+  ]
+}

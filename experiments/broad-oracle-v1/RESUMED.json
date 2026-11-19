@@ -1,5 +1,5 @@
 {
-  "status": "active_after_supervised_validation_repair",
+  "status": "complete",
   "resumed_utc": "2026-11-19T14:07:09.279552+00:00",
   "frozen_fit_commit": "b32d618",
   "source_capture_job_id": "23644126",
@@ -27,11 +27,34 @@
   "kit": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v3",
   "policies_refitted": false,
   "primary_measurement_code_changed": false,
-  "latency_results_complete": false,
+  "latency_results_complete": true,
   "prior_failed_job_id": "23716630",
   "prior_failed_allocated_seconds": 207,
   "prior_failed_reserved_window_charged": 1024,
   "total_source_reserved_attempts_carried": 29696,
   "primary_timing_ast_changed": false,
-  "validation_projection_repaired": true
+  "validation_projection_repaired": true,
+  "independent_verification_passed": true,
+  "all_intended_cohort_recall_gates_passed": true,
+  "timing_control_equivalence_established": false,
+  "interpretation": "descriptive hindsight estimates; control equivalence not established",
+  "total_allocated_seconds": 7783,
+  "charged_ann_reservations": 464896,
+  "ssh_connection_closed": true,
+  "active_benchmark_jobs": 0,
+  "results": "results/REPORT.md",
+  "measured_savings": {
+    "full_workload": {
+      "oracle_constrained": 54.99932022824563,
+      "oracle_feasible_broad": 68.39196105201052,
+      "oracle_feasible_narrow": 19.79508802411796,
+      "oracle_ideal": 67.48480498629523
+    },
+    "heldout_test": {
+      "oracle_constrained": 53.27988137926904,
+      "oracle_feasible_broad": 64.94662373463433,
+      "oracle_feasible_narrow": 21.37340653672981,
+      "oracle_ideal": 65.89338692000459
+    }
+  }
 }

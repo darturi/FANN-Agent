@@ -74,14 +74,24 @@ def plot(report, target):
         fontsize=15,
         fontweight="bold",
     )
+    controls_pass = all(r["all_condition_controls_pass"] for r in report["cohorts"].values())
     fig.text(
         0.02,
+        0.055,
+        "Descriptive estimates: timing controls did not establish ±2% equivalence."
+        if not controls_pass
+        else "Timing controls established ±2% equivalence.",
+        fontsize=9,
+        color="#7b4926" if not controls_pass else "#4d5c63",
+    )
+    fig.text(
         0.02,
-        "Equal weight over seven conditions. Whiskers: conditional 95% vector-cluster intervals. Policies fitted with hindsight.",
+        0.015,
+        "Seven conditions. Whiskers: conditional 95% vector-cluster intervals. Policies fitted with hindsight.",
         fontsize=9,
         color="#4d5c63",
     )
-    fig.tight_layout(rect=(0, 0.065, 1, 0.93), w_pad=2.5)
+    fig.tight_layout(rect=(0, 0.13, 1, 0.93), w_pad=2.5)
     fig.savefig(target / "oracle-comparison.png", dpi=180)
     fig.savefig(target / "oracle-comparison.svg")
     plt.close(fig)
@@ -96,6 +106,10 @@ def main():
     parser.add_argument("--fit", type=Path, required=True)
     parser.add_argument("--kit", type=Path, default=WORK / "benchmark-kit-v1")
     args = parser.parse_args()
+    args.capture = args.capture.resolve(strict=True)
+    args.results = args.results.resolve(strict=True)
+    args.fit = args.fit.resolve(strict=True)
+    args.kit = args.kit.resolve(strict=True)
     kit = args.kit
     report = read(args.results / "report.json")
     cap_seconds = allocated(args.capture.parent / "accounting.psv")
@@ -237,6 +251,8 @@ def main():
     lines += [
         "",
         "Fresh measurements share one balanced allocation and native baseline. Savings use the ratio of mean latency, equally weighted over all seven conditions. The historical narrow-policy values were 27.20% held-out and 17.98% full; the table reruns those same policies in the new comparison.",
+        "",
+        "Strict control equivalence failed in both cohorts. Treat these as descriptive hindsight estimates. Unresolved timing bias prevents interpreting the broader full-workload policy's apparent lead over the ideal oracle as a real advantage. The broader interface expands expressions, causal feature access, and checkpoints beyond 16/32/64; its gains reflect all three changes.",
         "",
         "![Oracle comparison](oracle-comparison.png)",
         "",

@@ -1,0 +1,22 @@
+{
+  "cases": 7000,
+  "compiled_v2_sha256": "74172fa84ef5890bb903352df69438599f97a44c32416a5bee235b688ae34e9c",
+  "compiled_v3_sha256": "f82c4fa755b23a00f08cb6cabb8904189242c5c2ce528fcf42262afb9b7d0334",
+  "families": [
+    "native640",
+    "oracle_ideal",
+    "oracle_constrained",
+    "oracle_feasible_full",
+    "oracle_feasible_test",
+    "broad_full",
+    "broad_test",
+    "matched_broad_full",
+    "matched_broad_test",
+    "empty_v2",
+    "empty_v3",
+    "native_clone"
+  ],
+  "quality_sha256": "461f98eb0a96e8d8081a340c3e2840d4535d102a72ac57249476eba54af3ca85",
+  "source_cases_sha256": "b7bd9dd9f9f2a114434534a4370062139548cc78c12125a820117ffcbde6d0ed",
+  "timing_started": false
+}

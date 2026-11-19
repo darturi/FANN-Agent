@@ -1,0 +1,9 @@
+{
+  "actual_total": 464888,
+  "cap": 2000000,
+  "charged_total": 464896,
+  "reservations": 425,
+  "source_charged": 29696,
+  "unused_charged": 8,
+  "window": 1024
+}

@@ -1,0 +1,154 @@
+{
+  "all_frontier_values_match": true,
+  "all_prefix_chains_match": true,
+  "all_work_values_match": true,
+  "boundary_roundoff_events": 196,
+  "boundary_roundoff_max_abs": 1.1920928955078125e-07,
+  "canonical_projection": "max(0,min(2,canonical_raw_cosine))",
+  "cases": 7000,
+  "frames": 1104761,
+  "roundoff_envelope": 1e-06,
+  "roundoff_examples": [
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 2,
+      "id": "reviews-clean-v0001-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 3,
+      "id": "reviews-clean-v0053-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 8,
+      "id": "reviews-clean-v0072-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 1,
+      "id": "reviews-clean-v0120-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 6,
+      "id": "reviews-clean-v0129-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 3,
+      "id": "reviews-clean-v0257-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 3,
+      "id": "reviews-clean-v0339-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 2,
+      "id": "reviews-clean-v0342-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 2,
+      "id": "reviews-clean-v0392-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 4,
+      "id": "reviews-clean-v0475-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 2,
+      "id": "reviews-clean-v0543-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 2,
+      "id": "reviews-clean-v0566-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 1,
+      "id": "reviews-clean-v0583-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 1,
+      "id": "reviews-clean-v0584-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 1,
+      "id": "reviews-clean-v0595-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 4,
+      "id": "reviews-clean-v0600-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 46,
+      "id": "reviews-clean-v0636-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 1,
+      "id": "reviews-clean-v0660-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 1,
+      "id": "reviews-clean-v0663-unfiltered"
+    },
+    {
+      "canonical_projected_frontier": 0.0,
+      "canonical_raw_frontier": -1.1920928955078125e-07,
+      "captured_frontier": 0,
+      "checkpoint": 3,
+      "id": "reviews-clean-v0665-unfiltered"
+    }
+  ],
+  "separate_canonical_execution": true
+}

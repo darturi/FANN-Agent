@@ -31,10 +31,15 @@ checkpoint. Feature/VM costs remain inside each serving request's timer.
 
 Read [PROTOCOL.md](PROTOCOL.md) for scope, gates, resource budgets and control
 interpretation, [COMMANDS.md](COMMANDS.md) for reproduction, and
-[RESUMED.json](RESUMED.json) for the explicitly resumed comparison. The prior
-pause remains recorded in [PAUSED.json](PAUSED.json). Latency measurements are
-pending for job `23719580`; frozen policies are unchanged. The failed canonical
-validation attempt and its full reservation/time charge are preserved. The
-corrected check applies the existing native cosine projection.
+[results/REPORT.md](results/REPORT.md) for the verified numerical comparison.
+The broader feasible policies measured 64.95% held-out and 68.39% full-workload
+latency savings, versus 21.37% and 19.80% for the same prior narrow policies in
+the fresh comparison. Timing controls did not establish ±2% equivalence, so the
+reported values are descriptive hindsight estimates. Both intended-cohort
+native recall gates passed; full-workload result count declined in three cases.
+The prior pause and explicit resume remain in [PAUSED.json](PAUSED.json) and
+[RESUMED.json](RESUMED.json). Failed qualification and its complete reservation/
+time charge are retained. The corrected comparison applies the existing native
+cosine projection; frozen policies and the primary timing method were unchanged.
 Large raw returns and sealed kits remain outside Git under
 `trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1`.
