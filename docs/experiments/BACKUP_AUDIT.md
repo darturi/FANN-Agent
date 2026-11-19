@@ -1,6 +1,6 @@
 # Experiment archive backup audit
 
-Local archive integrity refreshed November 17, 2026, America/New_York, alongside
+Local archive integrity refreshed November 19, 2026, America/New_York, alongside
 the experiment index and run catalog. **No independent backup was verified by
 this refresh.** The destination, remote and cloud checks below were performed
 October 21 and were not repeated; their results are historical observations,
@@ -9,11 +9,11 @@ no backup configuration was changed.
 
 ## Verified local holdings
 
-[archive-manifest.json](archive-manifest.json) now lists 373 archives, totaling
-22,045,221,476 bytes, under the inventory's expanded, pruned workspace roots. These include
+[archive-manifest.json](archive-manifest.json) now lists 444 archives, totaling
+23,319,428,678 bytes, under the inventory's expanded, pruned workspace roots. These include
 source/runtime/engineering archives as well as experiment results. Every file
-was streamed through SHA-256 on November 17. All 159 archives with usable existing
-checksum sidecars match; none mismatched. The remaining 214 have inventory hashes but no
+was streamed through SHA-256 on November 19. All 188 archives with usable existing
+checksum sidecars match; none mismatched. The remaining 256 have inventory hashes but no
 usable sidecar for an independent earlier comparison. A checksum on the same
 disk protects identity checking, not recovery after disk loss.
 
@@ -22,9 +22,16 @@ The historical October 21 full timing archive remains present with manifest hash
 The October 21 audit also checked five independent-analysis files against the
 [postrun verification](../verification/frozen-proposals-timing-v1-runtime-fix-postrun.json).
 
-The refreshed manifest includes all eight downloaded benchmark returns through
+The refreshed manifest retains the eight downloaded benchmark returns through
 M1 job 23376796 and the sealed, unexecuted M5 kit. The kit matches its frozen
 SHA-256 `3c4a0bd267d743e7abff9790beff7a7af510bc350cf079dda1c45d24e984b3b1`.
+It also includes count-preserving oracle returns 23544718 / 23558871 / 23567950,
+three-level oracle returns 23604734 / 23610319, and broad-language oracle returns
+23644126 / 23716630 / 23719580, with their source and runtime packages. Failed
+returns remain included. The cancelled broad job 23648495 has saved accounting
+and remote-path metadata rather than a completed local measurement archive.
+These are local integrity checks of collected artifacts; remote retention was
+not rechecked during this documentation task.
 Archive integrity does not establish a successful experiment, destination
 retention, or a restore test. See the [current index](README.md) for outcomes.
 
@@ -50,7 +57,7 @@ experiment archives.
 
 ## Historical backup gaps to recheck
 
-These October 21 findings remain recorded for follow-up. The November 17
+These October 21 findings remain recorded for follow-up. The November 19
 documentation refresh does not recertify remote availability or backup coverage.
 
 - **Dispatch-overhead full results:** only

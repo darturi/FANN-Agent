@@ -1,8 +1,8 @@
 # Master experiment index
 
-Updated: November 17, 2026, America/New_York. Saved work reviewed through
-November 16, including the current M5 upload handoff. This is the entry point for the
-saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
+Updated: November 19, 2026, America/New_York. Saved work reviewed through the
+completed broader-language oracle comparison on November 19. This is the entry
+point for the saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
 paths are relative to this document and require the sibling workspace folders;
 cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data.
 
@@ -15,24 +15,27 @@ cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data
 - [Backup audit](BACKUP_AUDIT.md): verified local integrity, missing artifacts,
   remote-check results and outstanding backup coverage.
 
-The refreshed inventory contains 1,891 saved evidence records and 15 experiments
+The refreshed inventory contains 1,992 saved evidence records and 15 experiments
 registered inside saved agent journals. Locations include definitions, receipts,
 repeated blocks, analyses, packages and synthetic checks; they are not a count of
-independent scientific experiments. The 373 discovered archives include source,
-runtime, engineering and result archives, totaling 22,045,221,476 bytes. All 159
-with usable checksum sidecars match; 214 have no usable earlier sidecar. The
+independent scientific experiments. The 444 discovered archives include source,
+runtime, engineering and result archives, totaling 23,319,428,678 bytes. All 188
+with usable checksum sidecars match; 256 have no usable earlier sidecar. The
 October 21 inventory had 292 records and 207 archives. The increased record count
 reflects both later work and expanded discovery of Markdown reports, receipts,
 freezes and experiment definitions; it is not a count of new launches.
 
-## Current study status — November 17, 2026
+## Current study status — November 19, 2026
 
 The active benchmark study uses raw ANN outputs with **exact search for offline
 scoring only**. All six scalar filters plus unfiltered remain in scope. The
-450 development / 150 validation / 275 test / 125 historical-exclusion split is
-frozen; validation and test outcomes remain unopened in the latest assessments.
-Earlier completion-guard results and older timing criteria below are historical
-records, with their original conclusions preserved.
+450 development / 150 validation / 275 test / 125 historical-exclusion split
+remains the recorded split. The separately authorized hindsight studies have now
+exposed outcomes for the 275-vector test cohort and the full 1,000-vector
+workload, including validation and historical groups. Their fitted-cohort results
+measure hypothetical policy capacity; they are not an untouched test of an agent
+trained on development data. Earlier completion-guard results and older timing
+criteria below retain their original conclusions.
 
 | Stage | Latest recorded disposition | Authoritative evidence |
 |---|---|---|
@@ -41,14 +44,20 @@ records, with their original conclusions preserved.
 | M2/M3 evidence and controller | Complete evidence bound. Both point-cost models fail their fixed precision limits; the separately qualified uncertainty-aware shortlist and bound positive/abstention rehearsals pass. | [M2/M3 report](../../experiments/m2-evidence-cost-v1/REPORT.md), [shortlist report](../../experiments/uncertainty-shortlist-v1/REPORT.md) |
 | M4 agent episode and amendments | Initial payload-limit abstention and six-call closed outcome preserved. Dollar-governed continuation formally submits candidates 7/8; eight cumulative Messages calls cost $0.403114 under the original $15 ceiling. Both nominees preserve development recall and have supported uncertain cost estimates; estimated costs are not measured speedups. | [Final M4 assessment](../../experiments/m4-dollar-assessment-v1/REPORT.md), [nominees](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/m4-dollar-budget-v1/assessment-v1/nominees.json) |
 | M5 live policy/control comparison | Sealed for one user-submitted development job. Native startup preflight, original-graph qualification and actual timings remain pending. No final policy selected. | [M5 preparation report](../../experiments/m5-policy-qualification-v1/REPORT.md), [freeze](../../experiments/m5-policy-qualification-v1/receipts/M5-freeze.json), [SFTP upload](../../experiments/m5-policy-qualification-v1/SFTP-UPLOAD.txt), [Torch/return commands](../../experiments/m5-policy-qualification-v1/COMMANDS.txt) |
+| Live Torch feedback prototype | Local compiler, synthetic PostgreSQL and controller checks pass. No live-feedback allocation or provider episode is recorded; original-graph qualification remains pending. This is separate from M4/M5 and the oracle runs. | [Prototype status and boundaries](../../experiments/torch-live-feedback-v1/README.md), [verification](../../experiments/torch-live-feedback-v1/verification.json) |
+| Earlier hindsight oracles | Count-preserving oracle and subsequent three-level v2 comparison completed on both cohorts. All intended-cohort recall gates pass; strict per-condition timing equivalence is not established. Preserve their separate quality gates and allocations. | [Count-preserving oracle](../../experiments/full-workload-oracle-v1/README.md), [three-level comparison](../../experiments/oracle-variants-v1/results/REPORT.md) |
+| Broader-language feasible oracle | Completed job 23719580 after preserved cancellation and failed qualification. One ordinary v3 policy per cohort saves a descriptive 64.95% on 1,925 test cases and 68.39% on 7,000 full-workload cases, versus 21.37% / 19.80% for the prior v2 policies rerun alongside it. Zero intended-cohort recall losses; timing controls fail the strict equivalence requirement. | [Verified comparison](../../experiments/broad-oracle-v1/results/REPORT.md), [accounting](../../experiments/broad-oracle-v1/results/accounting.json), [completed resume](../../experiments/broad-oracle-v1/RESUMED.json) |
 
-The next evidence gate is the returned M5 archive and independent scheduler
-accounting. Native remains a valid outcome. No held-out, replicated, or final
-5% practical latency benefit has been established. The historical three-request
-episode remains exhausted at $0.725544 and is separate from the current M4 ledger.
+The returned M5 archive and independent scheduler accounting remain the evidence
+gate for the frozen development nominees. The completed oracle diagnostic does
+not qualify those nominees or establish agent discovery, unseen-query benefit,
+replicated latency benefit, or a certified latency ceiling. Native remains a valid
+outcome. The historical three-request episode remains exhausted at $0.725544 and
+is separate from the M4 ledger; the oracle studies made no provider calls.
 
-See the [November 5–16 log additions](#experiment-log-update--november-516-2026)
-for intervening work and the [benchmark roadmap](../../../research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md)
+See the [November 17–19 oracle log](#oracle-studies-and-broader-policy-language--november-1719-2026),
+the [November 5–16 log additions](#experiment-log-update--november-516-2026),
+and the [benchmark roadmap](../../../research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md)
 for the longer narrative. Read dated later assessments when an older preparation
 paragraph or roadmap header still describes a pending stage.
 
@@ -108,7 +117,9 @@ reading or reanalyzing saved results.
 All Torch names below are exact saved campaign identifiers. Unless otherwise
 specified, remote results originated under `/home/dar579/torch-reviews-results/`.
 Remote locations are historical provenance; current existence was not verified
-because noninteractive SSH authentication failed during the backup audit.
+during this documentation refresh. The October 21 backup audit's failed
+noninteractive SSH check remains historical; later oracle collection is recorded
+separately below and does not recertify current remote retention.
 
 | Campaign / experiment | Result and limits | Results and artifacts | Reproduction reference |
 |---|---|---|---|
@@ -2725,8 +2736,200 @@ Use the [submission/status/return commands](../../experiments/m5-policy-qualific
 and the sealed verifier/analyzer for the returned result. Local fixture times
 and replay checks are not M5 original-graph measurements.
 
-Latest disposition: two formal development nominees, no final selected policy,
-no demonstrated held-out or replicated latency benefit, and no validation/test
-outcome access. The next record should identify the actual M5 job, scheduler
+Disposition recorded on November 16: two formal development nominees, no final
+selected policy, no demonstrated held-out or replicated latency benefit, and no
+validation/test outcome access. The next record should identify the actual M5 job, scheduler
 result, returned hashes, complete quality/timing/work reconstruction and its
 scientific disposition, including a negative or inconclusive outcome if needed.
+The separately authorized oracle studies below subsequently exposed outcomes;
+they do not change the recorded M4/M5 disposition.
+
+## Oracle studies and broader policy language — November 17–19, 2026
+
+Reconciled November 19, America/New_York, from committed reports, frozen policy
+artifacts, scheduler accounting and collected raw returns. The question was how
+much latency could hypothetically be saved with hindsight on both the frozen
+275-vector test subset (1,925 query/filter cases) and all 1,000 benchmark vectors
+(7,000 cases). The cohorts overlap. Each includes six scalar filters plus
+unfiltered on the original 247,286-row cosine graph, k=10, native ef=640 and
+iterative scans off. Exact references are offline scoring inputs only.
+
+### Definitions, deployment and exposure
+
+| Variant | Hindsight freedom | Runtime policy requirement |
+|---|---|---|
+| `oracle_ideal` | Choose the earliest safe reached checkpoint independently for each case. | Evaluator-only choice table, with routing outside the request timer and no policy feature/VM cost. |
+| `oracle_constrained` | Choose independently per case from checkpoints 16/32/64 or native continuation. | Same action menu as v2; still a free hindsight lookup rather than one causal agent policy. |
+| `oracle_feasible`, narrow v2 | Fit one complete policy on the reported cohort's outcomes. | Ordinary `fannagent.filtered-ann.v2` artifact: at most three ascending clauses per filter, four AND comparisons per clause, and four causal features. |
+| `oracle_feasible`, broad v3 | Fit one complete policy on the reported cohort's outcomes. | Ordinary `fannagent.broad-stop.v3` artifact, submitted through the agent adapter and executed by its trusted compiler/VM. |
+
+There is **one fixed feasible policy per cohort**, with seven filter-specific
+programs inside each artifact. All queries in a filter share that program. The
+full-workload policy is applied to all 7,000 cases; the separate test-fitted policy
+is applied to all 1,925 test cases. Neither selects a policy by query ID. Both are
+frozen before timing. The agent can hypothetically emit these exact accepted
+artifacts; this does not demonstrate that an autonomous agent discovers them
+from its usual feedback or that they generalize.
+
+The opt-in [v3 interface](../../experiments/filtered-ann-protocol-v3/README.md)
+replaces the old rule shape with typed Boolean/arithmetic expression graphs,
+checkpoint schedules from 1 to 4,096, thirteen causal features and bounded
+query-local registers. The public [validator](../../src/fannagent/api/broad_policy.py)
+and [compiler](../../experiments/filtered-ann-protocol-v3/fannproto3/compiler.py)
+limit source to 8 MiB, expression nodes to 131,072, depth to 64, tables to 4 MiB,
+registers to 32 and fuel to 16 million per query; these fits use two million.
+Runtime inputs exclude query IDs, truth labels and future observations, and the
+VM has no I/O or index mutation. Faults or fuel exhaustion continue natively.
+The fitted trees can distinguish and memorize finite-cohort causal observations
+through fine thresholds. Broader savings reflect expanded expressions, features
+and checkpoints together, rather than an isolated change in rule syntax.
+
+The original count-preserving oracle required both native Recall@10 and result
+count. The later three-level and broad comparisons use the actual agent gate:
+zero per-case native Recall@10 losses, with short outputs scored as misses and
+count reductions reported separately. Hindsight exposure of the test and full
+workloads is authorized for this diagnostic. No oracle labels were added to the
+ordinary agent feedback service, and these cohorts must not be described as an
+untouched confirmatory test after fitting on their outcomes.
+
+### Earlier oracle runs and retained amendments
+
+Dates below use America/New_York; the first source submission was November 17
+at 21:31 (November 18 at 02:31 UTC). Saved source, amendments and reproduction
+commands are in [full-workload-oracle-v1](../../experiments/full-workload-oracle-v1/README.md)
+and [oracle-variants-v1](../../experiments/oracle-variants-v1/README.md).
+
+| Date / exact job | Question and recorded outcome | Saved evidence |
+|---|---|---|
+| November 17–18, 23544718 | Initial count-preserving acquisition: all 7,000 exact references and 4,256 complete choices acquired. Deliberately interrupted before primary timing to replace expensive durable per-query bookkeeping; scheduler FAILED is retained. | [Source return](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23544718/), [submission](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/submission.json) |
+| November 18, 23558871 | Frozen bookkeeping follow-up completes the remaining 2,744 choices and 23,225 fresh validation queries. Deliberately stopped before primary timing when eight repetitions would exceed the remaining aggregate budget; FAILED and all charges retained. | [Follow-up return](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23558871/), [amendment](../../experiments/full-workload-oracle-v1/FOLLOWUP-PROTOCOL.md) |
+| November 18, 23567950 | Uniform four-repetition schedule completes 112,000 timing records and all 7,000 frozen choices verify. No native recall or result-count losses. Strict all-condition timing controls remain inconclusive. | [Final return/report](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23567950/results/), [timing amendment](../../experiments/full-workload-oracle-v1/BALANCED-PROTOCOL.md), [commands](../../experiments/full-workload-oracle-v1/COMMANDS.txt) |
+| November 18, 23604734 | Three-level comparison captures complete actual prefix evidence; COMPLETED/0:0 in 1,809 seconds. | [Capture return](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23604734/) |
+| November 18, 23610319 | Three-level comparison completes 56,000 quality requests and 448,000 primary timings; COMPLETED/0:0 in 7,601 seconds. Both feasible artifacts pass the unchanged v2 compiler and intended-cohort recall gate. | [Timing return](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23610319/), [committed report](../../experiments/oracle-variants-v1/results/REPORT.md), [commands](../../experiments/oracle-variants-v1/COMMANDS.md) |
+
+The count-preserving study measured 65.28% test and 66.06% full-workload savings,
+with 18,716 total allocated seconds and 493,388 charged reservations across all
+three jobs. The later recall-only v2 comparison measured ideal/constrained/feasible
+savings of 67.52% / 54.67% / 27.20% on test and 68.25% / 55.12% / 17.98% on full.
+Its two jobs consumed 9,410 allocated seconds, 557,403 actual ANN requests and
+558,080 charged reservations. Neither study established strict timing-control
+equivalence. These are separate historical measurements; the comparison below
+reruns the same narrow policies alongside the broader policies on a fresh shared
+allocation. All consumed time, failures and earlier estimates remain recorded.
+
+### Broad v3 capture, pause, failure and completed comparison
+
+The existing work was committed as `795db05` before implementation, as requested.
+`b32d618` checkpoints the implementation and frozen fits at the user-requested
+pause; `75c5752` records the resumed comparison, canonical-projection repair and
+carried costs; `7ee2df1` records the verified final results. The original engine,
+v2 policies and historical reports remain preserved. The experiment's
+[protocol](../../experiments/broad-oracle-v1/PROTOCOL.md),
+[reproduction commands](../../experiments/broad-oracle-v1/COMMANDS.md),
+[pause](../../experiments/broad-oracle-v1/PAUSED.json) and
+[completed resume](../../experiments/broad-oracle-v1/RESUMED.json) bind this sequence.
+
+| Date / exact job | Question and recorded outcome | Saved evidence |
+|---|---|---|
+| November 18, 23644126 | Capture the expanded causal interface on the original graph. COMPLETED/0:0, 1,683 allocated seconds; 7,000 cases and 1,104,761 checkpoint frames captured, with native outputs and complete prefix chains verified. | [Capture return/accounting](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23644126/), [source verification](../../experiments/broad-oracle-v1/results/source-verification.json) |
+| November 18, 23648495 | First timing allocation cancelled at the user's explicit pause, before any experiment ANN request or reservation. Root elapsed 120 seconds; conservative charge 122 includes cleanup. No final timing result. | [Cancellation and remote raw location](../../experiments/broad-oracle-v1/paused-checkpoint/benchmark-cancellation.json), [saved accounting](../../experiments/broad-oracle-v1/results/prior-cancelled-accounting.json) |
+| November 19, 23716630 | Explicitly resumed frozen comparison fails independent canonical-frontier validation before quality/timing. FAILED/1:0; root elapsed 205 seconds, conservative charge 207. Entire 1,024-query window charged; actual failed-stage queries unknown within 1–1,024. | [Failed raw return/accounting](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23716630/), [retained failure charge](../../experiments/broad-oracle-v1/results/prior-failed-accounting.json) |
+| November 19, 23719580 | Corrected validation applies the existing native cosine projection. COMPLETED/0:0 in 5,771 allocated seconds. All checkpoint frontier/work and prefix checks, 84,000 quality checks and 336,000 timings independently reconstruct. | [Final raw return/accounting](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23719580/), [qualification](../../experiments/broad-oracle-v1/results/frontier-qualification.json), [final report](../../experiments/broad-oracle-v1/results/REPORT.md) |
+
+The failed check compared raw canonical cosine values with the native collector's
+already-clipped [0,2] values. The separate reference correction applies that
+existing projection, requires agreement within 1e-12 after projection and permits
+boundary corrections no larger than 1e-6. All 1,104,761 frames pass; 196 boundary
+roundoff events have maximum magnitude 1.1920928955078125e-7. The native module,
+frozen policies and primary timing method did not change. See the
+[projection fixture](../../experiments/broad-oracle-v1/results/frontier-projection-fixture.json)
+and [qualification evidence](../../experiments/broad-oracle-v1/results/frontier-qualification.json).
+The failed run is retained rather than treated as an absent attempt.
+
+### Fresh latency comparison and quality
+
+Savings below are ratios of mean complete-request latency, equally weighted over
+all seven conditions, from one balanced allocation and shared native baseline.
+Each of twelve families has four measurements per case, one on each reader,
+with mirrored ordering. Feature collection and VM execution are inside the
+primary timer; ideal/constrained choice routing is outside it and reported
+separately. No outliers or samples were removed.
+
+| Oracle | Test subset: 1,925 cases | Full workload: 7,000 cases |
+|---|---:|---:|
+| `oracle_ideal` | 65.89% | 67.48% |
+| `oracle_constrained` | 53.28% | 55.00% |
+| `oracle_feasible`, narrow v2 | 21.37% | 19.80% |
+| `oracle_feasible`, broad v3 | 64.95% | 68.39% |
+
+| Broad v3 summary | Test subset | Full workload |
+|---|---:|---:|
+| Native mean request latency | 11.647 ms | 11.933 ms |
+| Broad feasible mean request latency | 4.083 ms | 3.772 ms |
+| Saving, conditional 95% interval | 63.01–66.84% | 67.34–69.41% |
+| Gain over narrow feasible | 43.57 pp | 48.60 pp |
+| Stops | 1,923 | 6,996 |
+| Matches ideal stop | 1,924 / 1,925 | 6,994 / 7,000 |
+| Per-case native Recall@10 losses | 0 | 0 |
+| Returned-result-count reductions | 0 | 3 |
+
+All four variants have zero intended-cohort native recall losses. On full, ideal,
+constrained, narrow and broad have 3 / 2 / 0 / 3 result-count reductions; test has
+none. The seven stop mismatches across the overlapping cohorts delay checkpoint
+1 to 16. Their first permitted observations, including collection fuel charge,
+are identical to unsafe peers in the same fitted cohort; the current causal
+interface cannot distinguish them safely at checkpoint 1. The
+[collision proof](../../experiments/broad-oracle-v1/results/first-checkpoint-collisions.json)
+retains the evidence. Outside the test fitting cohort, the test-fitted policies
+lose recall on 147 narrow and 2,353 broad cases out of 5,075. This transfer
+diagnostic prevents interpreting fitted-cohort preservation as generalization.
+
+For the six filtered conditions alone, ideal / constrained / narrow / broad
+savings are 61.62% / 48.21% / 14.28% / 60.56% on test and
+63.49% / 50.21% / 13.43% / 64.69% on full. Per-condition values and both aggregate
+definitions are retained in [report.json](../../experiments/broad-oracle-v1/results/report.json).
+
+**Strict timing-control equivalence is not established in either cohort.** The
+90% intervals for every condition's native-clone and empty-language controls must
+all lie within ±2%; this requirement failed. These savings are descriptive
+hindsight estimates, not certified numerical ceilings. The broad full-workload
+policy's apparent 0.91-point lead over ideal reflects unresolved timing bias and
+does not show that it beats the ideal oracle. The 20,000 fixed-seed vector-cluster
+bootstrap draws condition on frozen fitted policies and one allocation, omitting
+fitting uncertainty and variability across allocations. Best-found feasible
+policies and earliest-safe work stops do not prove a mathematical wall-clock
+optimum. No comparison was repeated to obtain favorable controls.
+
+### Accounting, artifacts and reproduction
+
+The broad study's recorded aggregate charge is 7,783 allocated seconds, including
+the cancelled and failed allocations, under 21,600 seconds. Four physical CPUs
+and 48 GiB were requested per allocation. Completed stages issued 463,192 known
+ANN requests; the failed stage adds 1–1,024 unknown requests, giving physical-count
+bounds of 463,193–464,216. All 464,896 reservations remain charged under the
+two-million cap, including unused and failed-stage windows. There were zero
+provider calls, fresh exact queries or automatic retries, one explicit user
+resume and one supervised validation revision. SSH was closed after collection;
+the completion record reports no active benchmark jobs. See
+[accounting.json](../../experiments/broad-oracle-v1/results/accounting.json) for
+source hashes, resource counts and raw evidence identities.
+
+The committed [result directory](../../experiments/broad-oracle-v1/results/)
+contains the numerical report and plots, both ordinary policy JSON artifacts,
+fit/compiler certificates, agent submission receipt, source and frontier
+qualification, timing plan, resource accounting and `SHA256SUMS`. The
+[full policy](../../experiments/broad-oracle-v1/results/oracle_feasible-broad-full_workload.json)
+and [test policy](../../experiments/broad-oracle-v1/results/oracle_feasible-broad-heldout_test.json)
+are the artifacts the agent could hypothetically produce. Raw returns, failed
+logs, frozen kits and fitting inputs remain outside Git in the
+[trial directory](../../../trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/).
+Use the [saved commands](../../experiments/broad-oracle-v1/COMMANDS.md) with the
+final `benchmark-kit-v3` to reproduce verification/analysis; launching fresh
+measurements is a separate operation.
+
+This log update refreshed only the local inventory and archive SHA-256 values.
+It ran no experiments and contacted no remote service. All 188 usable archive
+sidecars match; 256 other archives have newly observed inventory hashes without
+an earlier usable sidecar. Raw archives are not included in the documentation
+commit, and independent backup coverage was not verified; see the
+[backup audit](BACKUP_AUDIT.md).

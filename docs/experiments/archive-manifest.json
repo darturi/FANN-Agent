@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "observed_at": "2026-11-17T01:50:24-05:00",
+  "observed_at": "2026-11-19T11:35:16-05:00",
   "scope": "Archives under the same pruned scan roots as run-inventory.json; runtime/dependency caches and private stores excluded",
-  "archive_count": 373,
-  "total_bytes": 22045221476,
+  "archive_count": 444,
+  "total_bytes": 23319428678,
   "checksum_counts": {
-    "no usable sidecar": 214,
-    "matches": 159
+    "no usable sidecar": 256,
+    "matches": 188
   },
   "archives": [
     {
@@ -1540,6 +1540,393 @@
       "backup_status": "local bytes verified; independent backup not verified"
     },
     {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v1/engine-sources.tar.gz",
+      "bytes": 553700,
+      "sha256": "5f3ae3f884d7196843640ed57ff746c75db81c8e4c1bcb11dd327a6085f94479",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v2/engine-sources.tar.gz",
+      "bytes": 553700,
+      "sha256": "5f3ae3f884d7196843640ed57ff746c75db81c8e4c1bcb11dd327a6085f94479",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v3/engine-sources.tar.gz",
+      "bytes": 553700,
+      "sha256": "5f3ae3f884d7196843640ed57ff746c75db81c8e4c1bcb11dd327a6085f94479",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v3/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v1.tar.gz",
+      "bytes": 111892741,
+      "sha256": "0eb3c467e04678a860584e834b30f90d2aa898aec85efa023bbd870db10d51db",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v1.tar.gz.sha256",
+      "expected_sha256": "0eb3c467e04678a860584e834b30f90d2aa898aec85efa023bbd870db10d51db",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v2-overlay.tar.gz",
+      "bytes": 9180,
+      "sha256": "98145b360dfbf910b2685f8ef7318eb42fc7fb8d8b6c4c079bc1fd3ab9af0e35",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v2-overlay.tar.gz.sha256",
+      "expected_sha256": "98145b360dfbf910b2685f8ef7318eb42fc7fb8d8b6c4c079bc1fd3ab9af0e35",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v2.tar.gz",
+      "bytes": 111896041,
+      "sha256": "a4744f86957a9af4b833f0d8cbb20b8258fac5e18d0942cb3c6fd154a2cf55c0",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v2.tar.gz.sha256",
+      "expected_sha256": "a4744f86957a9af4b833f0d8cbb20b8258fac5e18d0942cb3c6fd154a2cf55c0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v3-overlay.tar.gz",
+      "bytes": 17981,
+      "sha256": "75dbbbd9e4ff4aee6aaa5597ae19ceb0644a76a79ed5b3425a079adf1d6d2bba",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v3-overlay.tar.gz.sha256",
+      "expected_sha256": "75dbbbd9e4ff4aee6aaa5597ae19ceb0644a76a79ed5b3425a079adf1d6d2bba",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v3.tar.gz",
+      "bytes": 111900869,
+      "sha256": "53ccef5f5bc29d730fe4c9dfba031d48f29fef251fdf74d4f5a3014d968fa0c9",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-benchmark-v3.tar.gz.sha256",
+      "expected_sha256": "53ccef5f5bc29d730fe4c9dfba031d48f29fef251fdf74d4f5a3014d968fa0c9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-capture-v1.tar.gz",
+      "bytes": 59555053,
+      "sha256": "114af5a630433f152b9b324a351e62e0ae24eeab785ba9367e49583f48189898",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/broad-oracle-capture-v1.tar.gz.sha256",
+      "expected_sha256": "114af5a630433f152b9b324a351e62e0ae24eeab785ba9367e49583f48189898",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/capture-kit-v1/engine-sources.tar.gz",
+      "bytes": 194292,
+      "sha256": "109804487ebcd185e924712865d2660f046de3db0b2310c85a72efd874ec36e4",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/capture-kit-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/fixture-v2/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/fixture-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23644126/broad-oracle-capture-23644126.tar.gz",
+      "bytes": 49391150,
+      "sha256": "3bc57e0c5d392f29670c6693df813b8c49997170abf28ed542e1ada8f13d0a1a",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23644126/broad-oracle-capture-23644126.tar.gz.sha256",
+      "expected_sha256": "3bc57e0c5d392f29670c6693df813b8c49997170abf28ed542e1ada8f13d0a1a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23716630/broad-oracle-benchmark-23716630.tar.gz",
+      "bytes": 2043039,
+      "sha256": "e5b0b2840fff70aa1c12e5d4cd8edf6cb02152f8560a5afbd92ce9005e8ac6cc",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23716630/broad-oracle-benchmark-23716630.tar.gz.sha256",
+      "expected_sha256": "e5b0b2840fff70aa1c12e5d4cd8edf6cb02152f8560a5afbd92ce9005e8ac6cc",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23719580/broad-oracle-benchmark-23719580.tar.gz",
+      "bytes": 88358197,
+      "sha256": "91118def29e19d32df11ffaaf9a045f774dd698470fc05b54f73c2e1d530b46c",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/return-23719580/broad-oracle-benchmark-23719580.tar.gz.sha256",
+      "expected_sha256": "91118def29e19d32df11ffaaf9a045f774dd698470fc05b54f73c2e1d530b46c",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/balanced-kit-v1/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/balanced-kit-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/balanced-kit-v2/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/balanced-kit-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/balanced-kit-v3/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/balanced-kit-v3/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/followup-code-v1/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/followup-code-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/full-workload-oracle-v1-r2.tar.gz",
+      "bytes": 11529442,
+      "sha256": "4e13c2256431f1e8babbc7a9978c4270c8543f2017a96d50173a7027627c9c3a",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/full-workload-oracle-v1-r2.tar.gz.sha256",
+      "expected_sha256": "4e13c2256431f1e8babbc7a9978c4270c8543f2017a96d50173a7027627c9c3a",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/full-workload-oracle-v1.tar.gz",
+      "bytes": 11169313,
+      "sha256": "f39a7fcf8881808a6a35f2fe8868c518db8906b0aa8c1c726f503ed8ac4781f0",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/full-workload-oracle-v1.tar.gz.sha256",
+      "expected_sha256": "f39a7fcf8881808a6a35f2fe8868c518db8906b0aa8c1c726f503ed8ac4781f0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/kit/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "7a0233b587451243b24dcba8394d79b751c1f21b064c721b0a42063b4966cb9e",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/kit/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/kit-r2/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/kit-r2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-balanced-v1.tar.gz",
+      "bytes": 11542863,
+      "sha256": "5f4d18359c035f5b3ccb38e83d02514d800684d346783f081edaaee10aaf7653",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-balanced-v1.tar.gz.sha256",
+      "expected_sha256": "5f4d18359c035f5b3ccb38e83d02514d800684d346783f081edaaee10aaf7653",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-balanced-v2.tar.gz",
+      "bytes": 11545106,
+      "sha256": "de35f021f62db59213fcd150b10ea707eaa9582a91410d5272784be7bdeab650",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-balanced-v2.tar.gz.sha256",
+      "expected_sha256": "de35f021f62db59213fcd150b10ea707eaa9582a91410d5272784be7bdeab650",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-balanced-v3.tar.gz",
+      "bytes": 11545184,
+      "sha256": "4083f36f80e1be4234a7c9bd0e25bebf91f1db29672dd3a2e7e3df1f67849021",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-balanced-v3.tar.gz.sha256",
+      "expected_sha256": "4083f36f80e1be4234a7c9bd0e25bebf91f1db29672dd3a2e7e3df1f67849021",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-followup-code-v1.tar.gz",
+      "bytes": 11541591,
+      "sha256": "2b5ad1546b3580342952b9253ad455e72c1fe9de207b0592cac958df14ea396b",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-followup-code-v1.tar.gz.sha256",
+      "expected_sha256": "2b5ad1546b3580342952b9253ad455e72c1fe9de207b0592cac958df14ea396b",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-followup-sealed-v1.tar.gz",
+      "bytes": 11546345,
+      "sha256": "135772aa77ba3d948205f8dc1d8be1343212405df3a9a61e8c3023af774a4196",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-followup-sealed-v1.tar.gz.sha256",
+      "expected_sha256": "135772aa77ba3d948205f8dc1d8be1343212405df3a9a61e8c3023af774a4196",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-followup-v1/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/oracle-followup-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23544718/oracle-23544718.tar.gz",
+      "bytes": 41326541,
+      "sha256": "fa6c88f180560dfb9a91e9454a904bb28d0257c3b33b267e3afbd3c7383ec3e9",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23544718/oracle-23544718.tar.gz.sha256",
+      "expected_sha256": "fa6c88f180560dfb9a91e9454a904bb28d0257c3b33b267e3afbd3c7383ec3e9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23558871/oracle-followup-23558871.tar.gz",
+      "bytes": 132999102,
+      "sha256": "62c130668650e4eb4d71ef4d6ab86e015511a92257c8edcb08bf70f85ec6c526",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23558871/oracle-followup-23558871.tar.gz.sha256",
+      "expected_sha256": "62c130668650e4eb4d71ef4d6ab86e015511a92257c8edcb08bf70f85ec6c526",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23567950/oracle-balanced-23567950.tar.gz",
+      "bytes": 140109541,
+      "sha256": "f57b2331a0da089c933aa0f995f88f9668f34b18725db2f9acb7fc3e4a69feee",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/full-workload-oracle-v1/return-23567950/oracle-balanced-23567950.tar.gz.sha256",
+      "expected_sha256": "f57b2331a0da089c933aa0f995f88f9668f34b18725db2f9acb7fc3e4a69feee",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/kits/agent-policy-qualification-v1/engine-source.tar.gz",
       "bytes": 116925,
       "sha256": "48666b5a39c1cd9f3f56ded78a83f782dba971ff5f1603f5e6dbfe01be580cfb",
@@ -1801,6 +2188,195 @@
       "backup_status": "local bytes verified; independent backup not verified"
     },
     {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/benchmark-kit-v1/engine-sources.tar.gz",
+      "bytes": 120884,
+      "sha256": "c52dedd184e02867ef842454e4809947e096ad18296a46f2194ca5ce2d0ed98c",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/benchmark-kit-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/capture-kit-v1/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/capture-kit-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/capture-kit-v2/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/capture-kit-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-persistent-v1/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-persistent-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-persistent-v2/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-persistent-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-runtime-v1/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-runtime-v1/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-runtime-v2/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-runtime-v2/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-runtime-v3/engine-sources.tar.gz",
+      "bytes": 121495,
+      "sha256": "fb7f9f13fd62111c0cd3cf37e7122e0d2be3816b7449f5115bbd49243f072387",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/fixture-runtime-v3/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/oracle-variants-benchmark-v1.tar.gz",
+      "bytes": 62481185,
+      "sha256": "52e5964d3474152750abdf1cc54ad6bef2bc9b470fe58540669e99352fbde066",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/oracle-variants-benchmark-v1.tar.gz.sha256",
+      "expected_sha256": "52e5964d3474152750abdf1cc54ad6bef2bc9b470fe58540669e99352fbde066",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/oracle-variants-capture-v1.tar.gz",
+      "bytes": 59142925,
+      "sha256": "d469c4a6cf570cab844822b8705c87fe3effa20c4efa56db5453d347599c5784",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/oracle-variants-capture-v1.tar.gz.sha256",
+      "expected_sha256": "d469c4a6cf570cab844822b8705c87fe3effa20c4efa56db5453d347599c5784",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/oracle-variants-capture-v2.tar.gz",
+      "bytes": 59142932,
+      "sha256": "d977e2c23eae4a8a5eb108731ffaf9aa1b56ac580c6e87a0467d310c28a894e3",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/oracle-variants-capture-v2.tar.gz.sha256",
+      "expected_sha256": "d977e2c23eae4a8a5eb108731ffaf9aa1b56ac580c6e87a0467d310c28a894e3",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23604734/oracle-variants-capture-23604734.tar.gz",
+      "bytes": 5424626,
+      "sha256": "ba11cfa938176fbd2d8f554ec8d2eec0477ad1a9260d590a49d64b754fb985d9",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23604734/oracle-variants-capture-23604734.tar.gz.sha256",
+      "expected_sha256": "ba11cfa938176fbd2d8f554ec8d2eec0477ad1a9260d590a49d64b754fb985d9",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23610319/oracle-variants-benchmark-23610319.tar.gz",
+      "bytes": 35690122,
+      "sha256": "61e8d9de864fa0c974d88bda4b505fe217d988cc0779bee75cf2833abb7e1056",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/oracle-variants-v1/return-23610319/oracle-variants-benchmark-23610319.tar.gz.sha256",
+      "expected_sha256": "61e8d9de864fa0c974d88bda4b505fe217d988cc0779bee75cf2833abb7e1056",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
       "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/returns/qualification-22635567.tar.gz",
       "bytes": 2376880,
       "sha256": "afbd7b5dec020bc004e92f0063c5181f768f6a0f79d46515989f372fa2698c45",
@@ -1896,6 +2472,69 @@
       "sha256": "c605d9a5f71c6b2f6762cebb43347efb209b6e49e2f54a96b54215b8b431b9e0",
       "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/runtime-agent-v1/checks/staging-draft.tar.gz.sha256",
       "expected_sha256": "c605d9a5f71c6b2f6762cebb43347efb209b6e49e2f54a96b54215b8b431b9e0",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/final-job-receipts/return-23454959.tar.gz",
+      "bytes": 2941964,
+      "sha256": "c8630d1a5324699880af649d2c654f29518f3be8014213c3f7aa0fc36e2d449b",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/final-job-receipts/return-23454959.tar.gz.sha256",
+      "expected_sha256": "c8630d1a5324699880af649d2c654f29518f3be8014213c3f7aa0fc36e2d449b",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/kit/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/kit.tar.gz",
+      "bytes": 7949216,
+      "sha256": "52b13633ec61616017b4e9a7863dee30ed7a24244cecf4e234741f4d35d19c01",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/kit.tar.gz.sha256",
+      "expected_sha256": "52b13633ec61616017b4e9a7863dee30ed7a24244cecf4e234741f4d35d19c01",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/return-23491903.tar.gz",
+      "bytes": 11224599,
+      "sha256": "68d40579c8e41db510c530671b620ed2901130cab82354fdd9f5c2a089446cea",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-launch-v1/return-23491903.tar.gz.sha256",
+      "expected_sha256": "68d40579c8e41db510c530671b620ed2901130cab82354fdd9f5c2a089446cea",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v1/kit/original-package.tar.gz",
+      "bytes": 3282426,
+      "sha256": "fafd770b56133d8c5ff1a6cf1ad4f1eb2c709f7fd5670a13e31b42db84263263",
+      "checksum_sidecar": null,
+      "expected_sha256": null,
+      "checksum_status": "no usable sidecar",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v1/kit.tar.gz",
+      "bytes": 7947457,
+      "sha256": "b13ffd969e3d42af42113e44efda26603a908f6df91baf145a9785116e9f2fe4",
+      "checksum_sidecar": "trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-live-feedback-v1/kit.tar.gz.sha256",
+      "expected_sha256": "b13ffd969e3d42af42113e44efda26603a908f6df91baf145a9785116e9f2fe4",
+      "checksum_status": "matches",
+      "backup_status": "local bytes verified; independent backup not verified"
+    },
+    {
+      "path": "trials/m5-return-23434879/qualification-23434879.tar.gz",
+      "bytes": 16330824,
+      "sha256": "5faecee4426f573f33b9f15f9e5f443d7af0833daa29a56002445d0fac749e58",
+      "checksum_sidecar": "trials/m5-return-23434879/qualification-23434879.tar.gz.sha256",
+      "expected_sha256": "5faecee4426f573f33b9f15f9e5f443d7af0833daa29a56002445d0fac749e58",
       "checksum_status": "matches",
       "backup_status": "local bytes verified; independent backup not verified"
     },
