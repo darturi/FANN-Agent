@@ -31,7 +31,10 @@ checkpoint. Feature/VM costs remain inside each serving request's timer.
 
 Read [PROTOCOL.md](PROTOCOL.md) for scope, gates, resource budgets and control
 interpretation, [COMMANDS.md](COMMANDS.md) for reproduction, and
-[PAUSED.json](PAUSED.json) for the safe pause checkpoint. Final latency results
-are pending; the benchmark allocation was cancelled at the user's request.
+[RESUMED.json](RESUMED.json) for the explicitly resumed comparison. The prior
+pause remains recorded in [PAUSED.json](PAUSED.json). Latency measurements are
+pending for job `23719580`; frozen policies are unchanged. The failed canonical
+validation attempt and its full reservation/time charge are preserved. The
+corrected check applies the existing native cosine projection.
 Large raw returns and sealed kits remain outside Git under
 `trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1`.

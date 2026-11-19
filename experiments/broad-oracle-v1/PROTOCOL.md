@@ -10,8 +10,13 @@ and simultaneous updates of at most 32 query-local numeric registers. It may
 declare any ascending checkpoint schedule in 1..4096. Thirteen declared causal
 features cover checkpoint/work, eligible count, first/fifth/tenth distance,
 frontier distance/gap, retained count and previous-frame/turnover information.
-Frontier distance is the nearest pending candidate's cosine distance. Checkpoint
-indices are the original canonical expanded-neighborhood boundaries targeting
+Frontier distance is the nearest pending candidate's cosine distance.
+The native collector projects finite cosine distances into [0,2]. The canonical
+logger preserves raw `1 + negative_inner_product` values, so independent checks
+apply that same native projection, accepting only boundary roundoff within
+1e-6 and requiring agreement within 1e-12 after projection. Raw values and
+projection events are retained; scale or checkpoint mismatches still fail.
+Checkpoint indices are the original canonical expanded-neighborhood boundaries targeting
 successive blocks of 64 newly scored layer-zero distances; indices are not exact
 work counts. V3 admits earlier and later boundaries than 16/32/64, so gains can
 reflect both a broader action schedule and greater rule capacity.

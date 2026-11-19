@@ -94,13 +94,18 @@ def main():
     parser.add_argument("--capture", type=Path, required=True)
     parser.add_argument("--results", type=Path, required=True)
     parser.add_argument("--fit", type=Path, required=True)
+    parser.add_argument("--kit", type=Path, default=WORK / "benchmark-kit-v1")
     args = parser.parse_args()
-    kit = WORK / "benchmark-kit-v1"
+    kit = args.kit
     report = read(args.results / "report.json")
     cap_seconds = allocated(args.capture.parent / "accounting.psv")
     bench_seconds = allocated(args.results.parent / "accounting.psv")
-    assert cap_seconds == read(kit / "timing-plan.json")["source_elapsed_seconds"]
-    assert cap_seconds + bench_seconds <= 21600
+    plan = read(kit / "timing-plan.json")
+    assert cap_seconds == plan["source_elapsed_seconds"]
+    prior_seconds = plan.get("prior_cancelled_elapsed_seconds", 0)
+    failed_seconds = plan.get("prior_failed_elapsed_seconds", 0)
+    total_seconds = cap_seconds + prior_seconds + failed_seconds + bench_seconds
+    assert total_seconds <= 21600
     receipt = read(args.results / "receipt.json")
     budget = read(args.results / "reservation-final.json")
     assert budget["charged_total"] <= 2000000 and receipt["provider_calls"] == 0
@@ -115,8 +120,32 @@ def main():
         shutil.copyfile(args.results / name, target / name)
     shutil.copyfile(args.capture.parent / "accounting.psv", target / "capture-accounting.psv")
     shutil.copyfile(args.results.parent / "accounting.psv", target / "benchmark-accounting.psv")
+    if prior_seconds:
+        cancelled = read(kit / "prior-cancelled-accounting.json")
+        assert (
+            max(int(r.split("|")[4]) for r in cancelled["accounting"].splitlines()) == prior_seconds
+        )
+        shutil.copyfile(
+            kit / "prior-cancelled-accounting.json", target / "prior-cancelled-accounting.json"
+        )
+        shutil.copyfile(kit / "resume-plan.json", target / "resume-plan.json")
+    if failed_seconds:
+        failure = read(kit / "prior-failed-accounting.json")
+        assert (
+            max(int(r.split("|")[4]) for r in failure["accounting"].splitlines()) == failed_seconds
+        )
+        shutil.copyfile(
+            kit / "prior-failed-accounting.json", target / "prior-failed-accounting.json"
+        )
+        shutil.copyfile(
+            kit / "frontier-projection-fixture.json", target / "frontier-projection-fixture.json"
+        )
     for p in args.fit.iterdir():
-        if p.is_file() and not p.name.endswith("-choices.jsonl"):
+        if (
+            p.is_file()
+            and not p.name.endswith("-choices.jsonl")
+            and p.name != "causal-collisions.json"
+        ):
             shutil.copyfile(p, target / p.name)
     shutil.copyfile(WORK / "checks/local-validation.json", target / "local-validation.json")
     shutil.copyfile(
@@ -129,21 +158,34 @@ def main():
         {k: v for k, v in b.items() if k not in ("policy", "plans")} for b in compiled["bindings"]
     ]
     (target / "compiler-certificate.json").write_text(json.dumps(certificate, indent=2) + "\n")
-    actual = receipt["searches"]["total"] - receipt["searches"].get("previous_unused_reserved", 0)
+    failed_charge = receipt["searches"].get("prior_failed_reserved", 0)
+    actual = (
+        receipt["searches"]["total"]
+        - receipt["searches"].get("previous_unused_reserved", 0)
+        - failed_charge
+    )
+    count_bounds = [actual + int(bool(failed_charge)), actual + failed_charge]
     accounting = {
         "checkpoint_commit": "795db05",
         "capture_allocated_seconds": cap_seconds,
         "benchmark_allocated_seconds": bench_seconds,
-        "total_allocated_seconds": cap_seconds + bench_seconds,
+        "prior_cancelled_allocated_seconds": prior_seconds,
+        "prior_failed_allocated_seconds": failed_seconds,
+        "total_allocated_seconds": total_seconds,
         "allocated_seconds_cap": 21600,
         "physical_cpus": 4,
         "memory_gib": 48,
-        "fresh_ann_queries": actual,
+        "fresh_ann_queries": actual if not failed_charge else None,
+        "known_completed_stage_ann_queries": actual,
+        "failed_stage_reserved_queries_charged": failed_charge,
+        "fresh_ann_query_count_bounds": count_bounds,
         "charged_ann_reservations": budget["charged_total"],
         "ann_reservation_cap": 2000000,
         "provider_calls": 0,
         "fresh_exact_queries": 0,
         "automatic_retries": 0,
+        "explicit_user_resumes": int(bool(prior_seconds)),
+        "supervised_validation_repairs": int(bool(failed_seconds)),
         "raw_evidence": {
             str(p.relative_to(ROOT)): sha(p)
             for p in (
@@ -249,6 +291,7 @@ def main():
             f"| {label} | {cert['stops']} | {cert['matches_ideal_checkpoint']} / {cert['cases']} | {sum(r['recall_losses'] for r in q.values())} | {sum(r['result_count_losses'] for r in q.values())} | {'Passed' if row['all_condition_controls_pass'] else 'Not established'} |"
         )
     transfers = report["test_policy_outside_cohort_recall_losses"]
+    qualification = report["qualification"]
     lines += [
         "",
         f"Outside the held-out fitting cohort, test-fitted recall losses are retained: narrow {transfers['narrow']}, broad {transfers['broad']} / 5,075 cases. The quality gate applies to each policy's intended cohort.",
@@ -257,9 +300,11 @@ def main():
         "",
         "All source cases and full prefix chains were bridged on the original graph. An independent canonical execution verified frontier/work at every captured checkpoint. Before timing, all 84,000 family/case outputs and compiled decisions were checked. Timing retained 336,000 requests: four samples per family/case, with every family on every reader. Feature collection and VM execution are inside the primary timer; ideal lookup routing is outside. No samples or outliers were removed.",
         "",
+        f"The canonical logger retains raw floating-point cosine values while the native collector clips them into [0,2]. Qualification checks the existing native projection, requiring agreement within 1e-12 and boundary corrections no larger than 1e-6. All {qualification['frames']:,} checkpoint observations passed; {qualification.get('boundary_roundoff_events', 0):,} boundary roundoff events were recorded (maximum {qualification.get('boundary_roundoff_max_abs', 0):.3g}). The initial unprojected comparison failed before quality/timing; its evidence and entire reservation are retained. This repair did not change the native module, fitted policies or primary timing method.",
+        "",
         "Uncertainty uses 20,000 fixed-seed vector-cluster draws, conditional on the fitted policies and one allocation. Strict control equivalence requires every condition's 90% interval for each empty-language/native-clone control inside ±2%. Where that fails, treat the table as descriptive estimates. Bootstrap intervals omit fitting uncertainty and variability between allocations.",
         "",
-        f"New runs used {cap_seconds + bench_seconds:,} allocated seconds, {actual:,} fresh ANN requests and {budget['charged_total']:,} charged reservations, within the predeclared six-hour/two-million envelope. Four physical CPUs and 48 GiB per allocation; zero provider calls, fresh exact queries or automatic retries.",
+        f"New runs used {total_seconds:,} allocated seconds, including {prior_seconds} seconds from the user-cancelled allocation and {failed_seconds} seconds from failed qualification. Completed stages issued {actual:,} known ANN requests; the failed stage adds between {int(bool(failed_charge))} and {failed_charge:,} requests, with its entire reserved window charged. All {budget['charged_total']:,} charged reservations and allocated time remain within the predeclared six-hour/two-million envelope. The user explicitly resumed after pausing; frozen policies and the primary timing method were unchanged. Four physical CPUs and 48 GiB per allocation; zero provider calls, fresh exact queries or automatic retries.",
         "",
         "See `report.json` for condition-level quality, savings, uncertainty and control results; `accounting.json` for hashes and raw evidence locations; normal policy JSON, fit certificates and `agent-submission.json` for deployment artifacts. Raw archives remain outside Git.",
         "",

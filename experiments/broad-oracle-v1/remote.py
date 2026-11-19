@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 import shlex
 import subprocess
 import tarfile
@@ -11,7 +12,10 @@ from prepare_capture import WORK, sha
 TARGET = "dar579@10.32.51.120"
 OPTIONS = [
     "-o",
-    "ControlPath=/private/tmp/fannagent-broad-oracle-20261118-v4",
+    "ControlPath="
+    + os.environ.get(
+        "FANNAGENT_SSH_CONTROL_PATH", "/private/tmp/fannagent-broad-oracle-20261118-v4"
+    ),
     "-o",
     "BatchMode=yes",
     "-o",
@@ -36,10 +40,13 @@ def remote(command):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=("launch", "adopt", "monitor", "collect"))
+    parser.add_argument(
+        "action", choices=("launch", "adopt", "monitor", "collect", "collect_failed")
+    )
     parser.add_argument("stage", choices=("capture", "benchmark"))
+    parser.add_argument("--record", help="Existing submission record name within the work folder")
     args = parser.parse_args()
-    record = WORK / (args.stage + "-submission.json")
+    record = WORK / (args.record or args.stage + "-submission.json")
     if args.action == "adopt":
         # Reconnect to a completed submission after a client-side staging timeout.
         # This action is read-only on Torch and never submits or retries a job.
@@ -125,10 +132,16 @@ def main():
         script = (
             "from pathlib import Path; import json; s=Path("
             + repr(stage)
-            + "); print(json.dumps({n:(s/n).read_text().splitlines()[-8:] "
+            + "); logs={n:(s/n).read_text().splitlines()[-8:] "
             + "if (s/n).exists() else [] for n in "
             + repr(["slurm-" + job + ".out", "slurm-" + job + ".err"])
-            + "}))"
+            + "}; r=s/"
+            + repr("run-" + job)
+            + "/'results'; p=r/'reservation.json'; "
+            + "logs['reservation']=json.loads(p.read_text()) if p.exists() else None; "
+            + "logs['files']={n:(r/n).stat().st_size for n in "
+            + "('quality.jsonl','timing.jsonl','frontier-qualification.json','receipt.json') "
+            + "if (r/n).exists()}; print(json.dumps(logs))"
         )
         value = {
             "accounting": accounting.strip().splitlines(),
@@ -137,7 +150,13 @@ def main():
         (WORK / (args.stage + "-latest.json")).write_text(json.dumps(value, indent=2) + "\n")
         print(json.dumps(value))
         return
-    assert accounting.splitlines()[0].split("|")[1:3] == ["COMPLETED", "0:0"], accounting
+    failed_evidence = args.action == "collect_failed"
+    if failed_evidence:
+        assert (
+            accounting.splitlines()[0].split("|")[1].startswith(("FAILED", "CANCELLED", "TIMEOUT"))
+        ), accounting
+    else:
+        assert accounting.splitlines()[0].split("|")[1:3] == ["COMPLETED", "0:0"], accounting
     target = WORK / ("return-" + job)
     target.mkdir()
     archive = "broad-oracle-" + args.stage + "-" + job + ".tar.gz"
@@ -156,6 +175,20 @@ def main():
     with tarfile.open(target / archive) as handle:
         handle.extractall(target, filter="data")
     (target / "accounting.psv").write_text(accounting)
+    if failed_evidence:
+        for suffix in ("out", "err"):
+            name = "slurm-" + job + "." + suffix
+            (target / name).write_text(remote(shlex.join(["cat", stage + "/" + name])))
+        print(
+            json.dumps(
+                {
+                    "return": str(target),
+                    "status": "failed_evidence_preserved",
+                    "inventory": sorted(p.name for p in (target / "results").iterdir()),
+                }
+            )
+        )
+        return
     receipt = json.loads((target / "results/receipt.json").read_text())
     assert json.loads((target / "results/host-exit.json").read_text()) == {
         "job_id": job,

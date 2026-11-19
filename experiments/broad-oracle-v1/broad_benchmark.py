@@ -10,6 +10,7 @@ from time import perf_counter_ns
 
 from broad_contract import compile_graph
 from broad_support import replay_graph, verify_audit
+from canonical_features import cosine_projection
 from common import capture, matches, sha, threshold, write
 from m5_experiment import expected_program
 from oracle_design import FILTERS, prefix_chain, prefix_signature, require, validate_output
@@ -137,6 +138,13 @@ def offline(Backend, args, queries, eligible, counter):
     counter.update(source["searches"])
     counter["previous_unused_reserved"] = budget["charged_total"] - counter["total"]
     counter["total"] = budget["charged_total"]
+    previous_failure = HERE / "prior-failed-accounting.json"
+    if previous_failure.exists():
+        failure = json.loads(previous_failure.read_text())
+        charged = failure["extra_reserved_queries_charged"]
+        require(charged == 1024, "unexpected failed-stage reservation charge")
+        counter["prior_failed_reserved"] = charged
+        counter["total"] += charged
     args.window_ledger = WindowLedger(args.output, counter["total"])
     shutil.copyfile(HERE / "source-exact-reference.jsonl", args.output / "exact-reference.jsonl")
     return {r["id"]: r["output"] for r in rows(HERE / "source-exact-reference.jsonl")}
@@ -145,6 +153,9 @@ def offline(Backend, args, queries, eligible, counter):
 def acquire(Backend, args, queries, eligible, truths, counter):
     # Independently qualify the cheap frontier input at every checkpoint.
     checked = 0
+    boundary_roundoff_events = 0
+    boundary_roundoff_max_abs = 0.0
+    roundoff_examples = []
     for t in FILTERS:
         with session(Backend, args) as c, bind(c, args, t, len(eligible[t]), 0):
             for index, q in enumerate(q for q in queries if threshold(q) == t):
@@ -163,11 +174,52 @@ def acquire(Backend, args, queries, eligible, truths, counter):
                 )
                 for frame in row["frames"]:
                     old = canonical["states"][frame["checkpoint"]]
-                    a, b = frame["values"][8], old["features"].get("frontier_distance_min")
-                    require(
-                        a == b or a is not None and b is not None and abs(a - b) < 1e-12,
-                        "canonical frontier differs",
-                    )
+                    a, raw = frame["values"][8], old["features"].get("frontier_distance_min")
+                    try:
+                        b = cosine_projection(raw)
+                        require(
+                            a == b or a is not None and b is not None and abs(a - b) < 1e-12,
+                            "canonical frontier projection differs",
+                        )
+                    except ValueError:
+                        write(
+                            args.output / "frontier-mismatch.json",
+                            {
+                                "id": q["id"],
+                                "checkpoint": frame["checkpoint"],
+                                "captured_frontier": a,
+                                "canonical_raw_frontier": raw,
+                                "counter": dict(counter),
+                                "canonical_state": old,
+                            },
+                        )
+                        raise
+                    if raw != b:
+                        boundary_roundoff_events += 1
+                        boundary_roundoff_max_abs = max(boundary_roundoff_max_abs, abs(raw - b))
+                        if len(roundoff_examples) < 20:
+                            roundoff_examples.append(
+                                {
+                                    "id": q["id"],
+                                    "checkpoint": frame["checkpoint"],
+                                    "captured_frontier": a,
+                                    "canonical_raw_frontier": raw,
+                                    "canonical_projected_frontier": b,
+                                }
+                            )
+                        if boundary_roundoff_events == 1:
+                            write(
+                                args.output / "frontier-roundoff-first.json", roundoff_examples[0]
+                            )
+                            print(
+                                json.dumps(
+                                    {
+                                        "phase": "frontier_projection_roundoff",
+                                        "example": roundoff_examples[0],
+                                    }
+                                ),
+                                flush=True,
+                            )
                     require(
                         frame["values"][1] == old["actual_layer0_distances"],
                         "qualification work differs",
@@ -193,6 +245,11 @@ def acquire(Backend, args, queries, eligible, truths, counter):
             "all_frontier_values_match": True,
             "all_work_values_match": True,
             "separate_canonical_execution": True,
+            "canonical_projection": "max(0,min(2,canonical_raw_cosine))",
+            "roundoff_envelope": 1e-6,
+            "boundary_roundoff_events": boundary_roundoff_events,
+            "boundary_roundoff_max_abs": boundary_roundoff_max_abs,
+            "roundoff_examples": roundoff_examples,
         },
     )
     with (args.output / "quality.jsonl").open("x") as output:

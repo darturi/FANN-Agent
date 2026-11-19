@@ -1,0 +1,37 @@
+{
+  "status": "active_after_supervised_validation_repair",
+  "resumed_utc": "2026-11-19T14:07:09.279552+00:00",
+  "frozen_fit_commit": "b32d618",
+  "source_capture_job_id": "23644126",
+  "prior_cancelled_job_id": "23648495",
+  "prior_conservative_allocated_seconds": 2012,
+  "prior_extra_ann_queries": 0,
+  "prior_extra_ann_reservations": 0,
+  "submission": {
+    "stage": "/scratch/dar579/fannagent-benchmark-evaluation-v1/broad-oracle-benchmark-v3-20261119/broad-oracle-benchmark-v3",
+    "job_id": "23719580",
+    "input_binding_sha256": "692780eccf3daa01e486fb4474c0bee2582ea76f28fa4c602f543d90d5c46ddc",
+    "overlay_sha256": "75dbbbd9e4ff4aee6aaa5597ae19ceb0644a76a79ed5b3425a079adf1d6d2bba",
+    "full_local_archive_sha256": "53ccef5f5bc29d730fe4c9dfba031d48f29fef251fdf74d4f5a3014d968fa0c9",
+    "native_preflight": {
+      "status": "oracle_native_startup_preflight_passed",
+      "backend": "Backend",
+      "module_sha256": "02b7223a09897ca911b182bb4bd022bbcd0cc9736f4bd5c48cbc834d79849ce2",
+      "searches": 0
+    },
+    "explicit_user_resume": true,
+    "prior_cancelled_job_id": "23648495",
+    "revision": "v3",
+    "prior_failed_job_id": "23716630"
+  },
+  "kit": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/broad-oracle-v1/benchmark-kit-v3",
+  "policies_refitted": false,
+  "primary_measurement_code_changed": false,
+  "latency_results_complete": false,
+  "prior_failed_job_id": "23716630",
+  "prior_failed_allocated_seconds": 207,
+  "prior_failed_reserved_window_charged": 1024,
+  "total_source_reserved_attempts_carried": 29696,
+  "primary_timing_ast_changed": false,
+  "validation_projection_repaired": true
+}

@@ -44,6 +44,54 @@ def verify(results, kit):
     assert receipt["binding_sha256"] == sha(kit / "binding.json")
     assert receipt["module_sha256"] == sha(kit / "oracle-module.so")
     binding = read(kit / "binding.json")
+    plan = read(kit / "timing-plan.json")
+    if plan.get("explicit_user_resume"):
+        resumed = read(kit / "resume-plan.json")
+        cancelled = read(kit / "prior-cancelled-accounting.json")
+        assert resumed["explicit_user_resume"] and resumed["no_partial_timings_used"]
+        assert cancelled["job_id"] == plan["prior_cancelled_job_id"] == "23648495"
+        assert "CANCELLED" in cancelled["accounting"].splitlines()[0]
+        prior_seconds = max(int(r.split("|")[4]) for r in cancelled["accounting"].splitlines())
+        assert prior_seconds == plan["prior_cancelled_elapsed_seconds"] == 122
+        assert cancelled["result_inventory"] == ["exposure.json", "host-exit.json"]
+        assert all(
+            cancelled["results_metadata"][n] is None
+            for n in (
+                "attempts.json",
+                "reservation.json",
+                "reservation.pending",
+                "reservation-final.json",
+            )
+        )
+        assert resumed["prior_extra_ann_attempts"] == resumed["prior_extra_ann_reservations"] == 0
+        for name, digest in resumed["policy_and_measurement_inputs_unchanged"].items():
+            assert sha(kit / name) == digest, name
+        assert plan["aggregate_max_seconds"] <= plan["aggregate_allocation_cap_seconds"] == 21600
+        assert receipt["prior_cancelled_elapsed_seconds"] == prior_seconds
+        assert receipt["explicit_user_resume"]
+    prior_failed_charge = 0
+    if plan.get("supervised_validation_repair"):
+        from prepare_repair import measurement_ast
+
+        failure = read(kit / "prior-failed-accounting.json")
+        resumed = read(kit / "resume-plan.json")
+        assert failure["job_id"] == plan["prior_failed_job_id"] == "23716630"
+        assert failure["accounting"].splitlines()[0].split("|")[1:3] == ["FAILED", "1:0"]
+        assert max(int(r.split("|")[4]) for r in failure["accounting"].splitlines()) == 207
+        assert (
+            receipt["prior_failed_elapsed_seconds"] == plan["prior_failed_elapsed_seconds"] == 207
+        )
+        prior_failed_charge = failure["extra_reserved_queries_charged"]
+        assert prior_failed_charge == plan["prior_failed_extra_reserved_queries"] == 1024
+        assert not failure["quality_or_latency_samples_collected"]
+        original = kit.parent / "benchmark-kit-v2/broad_benchmark.py"
+        assert sha(original) == resumed["prior_benchmark_source_sha256"]
+        assert sha(kit / "broad_benchmark.py") == resumed["repaired_benchmark_source_sha256"]
+        assert (
+            measurement_ast(original)
+            == measurement_ast(kit / "broad_benchmark.py")
+            == resumed["primary_measurement_ast_unchanged"]
+        )
     assert receipt["graph"] == binding["graph"] and receipt["data_index_before_after"]
     assert (
         receipt["fresh_exact_queries"]
@@ -69,7 +117,11 @@ def verify(results, kit):
     )
     frontier = read(results / "frontier-qualification.json")
     assert frontier["cases"] == 7000 and frontier["all_prefix_chains_match"]
+    assert frontier["frames"] == read(kit / "source-capture-freeze.json")["frames"]
     assert frontier["all_frontier_values_match"] and frontier["all_work_values_match"]
+    if plan.get("supervised_validation_repair"):
+        assert frontier["canonical_projection"] == "max(0,min(2,canonical_raw_cosine))"
+        assert frontier["boundary_roundoff_max_abs"] <= frontier["roundoff_envelope"] == 1e-6
     queries = list(rows(kit / "queries.jsonl"))
     qmap = {q["id"]: q for q in queries}
     cases = {r["id"]: r for r in rows(kit / "source-cases.jsonl")}
@@ -188,6 +240,8 @@ def verify(results, kit):
     budget = read(kit / "source-capture-budget.json")
     counts = dict(read(kit / "source-capture-receipt.json")["searches"])
     counts["previous_unused_reserved"] = budget["charged_total"] - counts["total"]
+    if prior_failed_charge:
+        counts["prior_failed_reserved"] = prior_failed_charge
     counts.update(quality_ann=84000, timed_ann=336000, warmup_ann=3360, frontier_qualification=7000)
     transfer = sum(
         r["checkpoint"] > 0 and r["role"] != "test"
@@ -200,7 +254,7 @@ def verify(results, kit):
     assert receipt["searches"] == read(results / "attempts.json") == counts
     final = read(results / "reservation-final.json")
     assert (
-        final["source_charged"] == budget["charged_total"]
+        final["source_charged"] == budget["charged_total"] + prior_failed_charge
         and final["actual_total"] == counts["total"]
     )
     assert final["charged_total"] <= final["cap"] == 2000000
@@ -222,6 +276,8 @@ def report(results, kit):
         "bootstrap_seed": 20261118,
         "scope": "Vector-cluster uncertainty conditional on fitted policies and one allocation",
         "cohorts": {},
+        "qualification": read(results / "frontier-qualification.json"),
+        "analysis_environment": {"python": sys.version, "numpy": np.__version__},
     }
     for cohort in ("full_workload", "heldout_test"):
         selected = [
