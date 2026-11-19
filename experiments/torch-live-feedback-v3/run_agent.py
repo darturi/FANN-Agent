@@ -13,6 +13,7 @@ import sys
 from decimal import Decimal
 from pathlib import Path
 
+import certifi
 from client import TorchClient
 from controller import SYSTEM, TOOLS, LiveTools
 from limits import canonical, digest, read, sha, write
@@ -122,7 +123,9 @@ class Provider:
             raise ValueError("existing Anthropic credential unavailable")
         write(self.output / (label + "-request.json"), payload)
         connection = http.client.HTTPSConnection(
-            "api.anthropic.com", timeout=180, context=ssl.create_default_context()
+            "api.anthropic.com",
+            timeout=180,
+            context=ssl.create_default_context(cafile=certifi.where()),
         )
         try:
             connection.request(

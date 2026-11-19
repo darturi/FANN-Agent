@@ -1,0 +1,16 @@
+{
+  "TLS_verification_disabled": false,
+  "allocation_reused": "23741092",
+  "automatic_retries": 0,
+  "ceiling_usd": "15",
+  "frozen_evidence_or_prompt_changed": false,
+  "native_kit_changed": false,
+  "native_runtime_or_primary_timer_changed": false,
+  "prior_committed_usd": "0",
+  "prior_paid_requests": 0,
+  "prior_review_sha256": "5731565596d2af01dc2abc497ba0c43340a089c770990d3924a8b0523fe2c4c1",
+  "prior_uncertain_calls": 0,
+  "status": "supervised_host_only_CA_trust_repair_before_paid_dispatch",
+  "successful_unpaid_token_count": 1947,
+  "supervised_transport_revisions": 1
+}
