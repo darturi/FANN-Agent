@@ -1,9 +1,10 @@
-# Declined clean-start replacement
+# Approved clean-start replacement
 
-Status: **user declined on November 19, 2026; do not launch**.
+Status: **user approved on November 19, 2026; one bounded replacement authorized**.
 
-The replacement remains unstarted. No authorization or second paid episode was
-created. The proposal below is retained as an audit record.
+The user corrected the earlier decline: “Sorry what I meant to say is do run
+replacement.” This supersedes the decline. A fresh empty workspace is authorized
+under the bounds below; the failed conversation and observations are not resumed.
 
 The user requested “one clean-start Opus 5.5 experiment.” That episode started
 from a verified empty workspace, then failed before candidate evaluation when

@@ -1,15 +1,19 @@
 {
-  "status": "user_declined_not_started",
-  "user_instruction": "Do not run replacement",
+  "status": "approved_replacement_running",
+  "user_instruction": "Sorry what I meant to say is do run replacement",
   "decision_date": "2026-11-19",
   "run_id": "c3735ec6f1b14fbabfde895c0d9892d4",
-  "authorization": false,
-  "worker_started": false,
+  "authorization": true,
+  "worker_started": true,
   "paid_calls": 0,
   "ann_or_exact_queries": 0,
   "previous_allocation_ended": true,
   "previous_job": "23795553",
   "total_model_charged_usd": "1.228968",
   "total_queries_charged": 55650,
-  "total_allocated_seconds": 4891
+  "total_allocated_seconds": 4891,
+  "supersedes": "user_declined_not_started",
+  "job_id": "23800555",
+  "initial_empirical_records": 0,
+  "inherited_messages": 0
 }
