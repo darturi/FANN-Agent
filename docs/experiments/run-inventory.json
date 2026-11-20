@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "observed_at": "2026-11-19T22:43:30-05:00",
+  "observed_at": "2026-11-19T22:47:42-05:00",
   "workspace_root": "/Users/danielarturi/Developer/JinyangLiWork",
   "scope_roots": [
     "trials",
@@ -5545,7 +5545,7 @@
       "evidence": [
         {
           "path": "agent/experiments/torch-clean-start-v4/README.md",
-          "sha256": "8a1b8fe6716c275b73c9de3a9f2c57ae5cbdd90ff288fbc79dc346de3a8f65fa",
+          "sha256": "fa8ce8e34e0afc0529af353122ffd9395dbd625a7aea65cc93456b217e42c036",
           "headline": "# Clean-start policy discovery v4"
         }
       ],
@@ -5574,6 +5574,13 @@
           }
         },
         {
+          "path": "agent/experiments/torch-clean-start-v4/checks/replacement-outcome.json",
+          "sha256": "511005ecad4eb643011c71313843258d44703746c3c4b33c45cdbbb787d4420a",
+          "observed_fields": {
+            "status": "user_declined_not_started"
+          }
+        },
+        {
           "path": "agent/experiments/torch-clean-start-v4/checks/verification.json",
           "sha256": "7b32c4847316f8e416faf2288c57e57954e7abef453b39f265e5a382337bf8dc",
           "observed_fields": {
@@ -5581,7 +5588,7 @@
           }
         }
       ],
-      "recorded_outcome": "status=infrastructure_failure_before_candidate_evaluation; status=failed_timing_gate_before_paid_run; status=implementation_and_offline_unit_verification_only_no_experiment",
+      "recorded_outcome": "status=infrastructure_failure_before_candidate_evaluation; status=failed_timing_gate_before_paid_run; status=user_declined_not_started; status=implementation_and_offline_unit_verification_only_no_experiment",
       "reproduction_reference": "agent/experiments/torch-clean-start-v4/README.md"
     },
     {

@@ -1,0 +1,15 @@
+{
+  "status": "user_declined_not_started",
+  "user_instruction": "Do not run replacement",
+  "decision_date": "2026-11-19",
+  "run_id": "c3735ec6f1b14fbabfde895c0d9892d4",
+  "authorization": false,
+  "worker_started": false,
+  "paid_calls": 0,
+  "ann_or_exact_queries": 0,
+  "previous_allocation_ended": true,
+  "previous_job": "23795553",
+  "total_model_charged_usd": "1.228968",
+  "total_queries_charged": 55650,
+  "total_allocated_seconds": 4891
+}

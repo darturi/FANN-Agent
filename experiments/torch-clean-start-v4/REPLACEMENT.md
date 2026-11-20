@@ -1,6 +1,9 @@
-# Prepared clean-start replacement
+# Declined clean-start replacement
 
-Status: **prepared only; approval required before a second paid episode**.
+Status: **user declined on November 19, 2026; do not launch**.
+
+The replacement remains unstarted. No authorization or second paid episode was
+created. The proposal below is retained as an audit record.
 
 The user requested “one clean-start Opus 5.5 experiment.” That episode started
 from a verified empty workspace, then failed before candidate evaluation when

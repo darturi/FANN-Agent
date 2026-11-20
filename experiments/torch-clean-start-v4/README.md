@@ -5,7 +5,8 @@ passed. The first clean-start Opus episode failed on a shared-filesystem stale
 handle during a heartbeat read, after 16 model calls, $1.228968 and 518 native/exact
 queries. It evaluated no candidate and produced no learned policy or final
 comparison. All requests settled and the model closed. The failed episode remains
-preserved; no automatic replacement or conversation resume is authorized.
+preserved. The user declined the prepared replacement on November 19, 2026;
+no second episode was launched.
 
 Control-file reads now reopen on bounded ESTALE retries; native operations,
 provider requests and uncertain deliveries are never retried. Heartbeat state is
