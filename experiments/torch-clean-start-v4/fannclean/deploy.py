@@ -82,12 +82,71 @@ def software_tree(source, target):
         raise ValueError("unexpected benchmark prewarm implementation")
 
 
+def recorded_assets(stage):
+    """Load only the pinned static asset bindings from a previously prepared package."""
+    stage = Path(stage).resolve()
+    seal = read(stage / "package-seal.json")
+    fields = ("deployment.json", "private/snapshot-seal.json", "private/backend.json")
+    engine = stage / "private/engine"
+    files = {p.relative_to(stage).as_posix() for p in engine.rglob("*") if p.is_file()}
+    expected = {rel for rel in seal if rel.startswith("private/engine/")}
+    if not files or files != expected:
+        raise ValueError("recorded engine source differs from its static package seal")
+    for rel in (*fields, *sorted(files)):
+        path = stage / rel
+        if path.is_symlink() or sha(path) != seal.get(rel):
+            raise ValueError("recorded static asset differs from package seal: " + rel)
+    deployment, snapshot_seal, backend = (read(stage / rel) for rel in fields)
+    if (
+        not Path(deployment["image"]).is_absolute()
+        or not Path(deployment["snapshot"]).is_absolute()
+    ):
+        raise ValueError("recorded runtime and snapshot paths must be absolute")
+    if not re.fullmatch(r"[0-9a-f]{64}", deployment["image_sha256"]) or not snapshot_seal:
+        raise ValueError("recorded worker assets require content identities")
+    return deployment, snapshot_seal, backend.get("database_user"), engine
+
+
 def package(
-    root, cases, engine_source, snapshot, image, research_image, limits=None, *, database_user=None
+    root,
+    cases,
+    engine_source,
+    snapshot,
+    image,
+    research_image,
+    limits=None,
+    *,
+    database_user=None,
+    comparison=None,
+    asset_stage=None,
 ):
     """Offline preparation only. No Docker, database, provider or scheduler invocation."""
-    root, snapshot, image = Path(root), Path(snapshot).resolve(), Path(image).resolve()
-    root = root.resolve()
+    root = Path(root).resolve()
+    if asset_stage is not None:
+        if any(
+            v is not None for v in (engine_source, snapshot, image, research_image, database_user)
+        ):
+            raise ValueError("choose a recorded static asset stage or provide explicit assets")
+        deployment, snapshot_seal, database_user, engine_source = recorded_assets(asset_stage)
+        research_image = deployment["research_image"]
+        snapshot = Path(deployment["snapshot"])
+    else:
+        if any(v is None for v in (engine_source, snapshot, image, research_image)):
+            raise ValueError("engine source, snapshot and both runtime images are required")
+        snapshot, image = Path(snapshot).resolve(), Path(image).resolve()
+        if not (snapshot / "PG_VERSION").is_file() or (snapshot / "postmaster.pid").exists():
+            raise ValueError("a stopped static PostgreSQL snapshot directory is required")
+        if any(p.is_symlink() for p in snapshot.rglob("*")):
+            raise ValueError("snapshot links are not allowed")
+        deployment = {
+            "image": str(image),
+            "image_sha256": sha(image),
+            "snapshot": str(snapshot),
+            "research_image": research_image,
+        }
+        snapshot_seal = {
+            str(p.relative_to(snapshot)): sha(p) for p in snapshot.rglob("*") if p.is_file()
+        }
     if any(
         root.is_relative_to(Path(p).resolve()) or Path(p).resolve().is_relative_to(root)
         for p in (engine_source, snapshot, EXPERIMENT, PROJECT / "src")
@@ -95,11 +154,7 @@ def package(
         raise ValueError("output must be separate from static source/input trees")
     if not re.fullmatch(r"sha256:[0-9a-f]{64}", research_image):
         raise ValueError("offline research image must be pinned by digest")
-    if not (snapshot / "PG_VERSION").is_file() or (snapshot / "postmaster.pid").exists():
-        raise ValueError("a stopped static PostgreSQL snapshot directory is required")
-    if any(p.is_symlink() for p in snapshot.rglob("*")):
-        raise ValueError("snapshot links are not allowed")
-    task = prepare(root, cases, limits)
+    task = prepare(root, cases, limits, comparison=comparison)
     code = root / "code"
     if (PROJECT / "host-vendor").is_dir():
         shutil.copytree(
@@ -108,9 +163,9 @@ def package(
             ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
         )
     shutil.copytree(
-        EXPERIMENT,
-        code / "experiments/torch-clean-start-v4",
-        ignore=shutil.ignore_patterns("__pycache__", "tests", "checks", "*.pyc"),
+        EXPERIMENT / "fannclean",
+        code / "experiments/torch-clean-start-v4/fannclean",
+        ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
     )
     shutil.copytree(
         PROJECT / "src/fannagent",
@@ -135,20 +190,9 @@ def package(
     if database_user:
         backend["database_user"] = database_user
     write(root / "private/backend.json", backend)
-    write(
-        root / "deployment.json",
-        {
-            "image": str(image),
-            "image_sha256": sha(image),
-            "snapshot": str(snapshot),
-            "research_image": research_image,
-        },
-    )
+    write(root / "deployment.json", deployment)
     # Snapshot identity covers every byte, not a past measurement-derived summary.
-    write(
-        root / "private/snapshot-seal.json",
-        {str(p.relative_to(snapshot)): sha(p) for p in snapshot.rglob("*") if p.is_file()},
-    )
+    write(root / "private/snapshot-seal.json", snapshot_seal)
     seal_initial(root)
     inputs = [p for p in root.rglob("*") if p.is_file() and p.name != "package-seal.json"]
     write(root / "package-seal.json", {p.relative_to(root).as_posix(): sha(p) for p in inputs})
@@ -187,7 +231,8 @@ def compile_request(root, directory, payload):
         ]:
             raise ValueError("final compiler requires the independently frozen policy")
         for name in ("oracle_full", "oracle_test"):
-            assigned[name] = (refs[name], False)
+            if name in refs:
+                assigned[name] = (refs[name], False)
     arms = {name: 60 + i for i, name in enumerate(assigned)}
     entries = [
         {"arm": arms[name], "policy": p, "force_continue": f} for name, (p, f) in assigned.items()
@@ -212,6 +257,28 @@ def compile_request(root, directory, payload):
     )
 
 
+def verify_runtime_assets(root):
+    root = Path(root)
+    config = read(root / "deployment.json")
+    if sha(config["image"]) != config["image_sha256"]:
+        raise ValueError("runtime image changed")
+    snapshot = Path(config["snapshot"])
+    if not (snapshot / "PG_VERSION").is_file() or (snapshot / "postmaster.pid").exists():
+        raise ValueError("the bound snapshot must be stopped")
+    expected = read(root / "private/snapshot-seal.json")
+    observed = {}
+    for path in snapshot.rglob("*"):
+        if path.is_symlink():
+            raise ValueError("snapshot links are not allowed")
+        if path.is_file():
+            name = path.relative_to(snapshot).as_posix()
+            if name not in expected or sha(path) != expected[name]:
+                raise ValueError("static snapshot changed: " + name)
+            observed[name] = expected[name]
+    if observed != expected:
+        raise ValueError("static snapshot is missing sealed files")
+
+
 class ContainerExecutor:
     def __init__(self, root):
         self.root = Path(root).resolve()
@@ -220,11 +287,7 @@ class ContainerExecutor:
         begun = time.monotonic()
         root = self.root
         config = read(root / "deployment.json")
-        if sha(config["image"]) != config["image_sha256"]:
-            raise ValueError("runtime image changed")
-        for rel, h in read(root / "private/snapshot-seal.json").items():
-            if sha(Path(config["snapshot"]) / rel) != h:
-                raise ValueError("static snapshot changed")
+        verify_runtime_assets(root)
         directory = root / "private/builds" / identity
         directory.mkdir(parents=True, exist_ok=False)
         write(directory / "payload.json", payload)

@@ -17,8 +17,13 @@ def analyze(root):
         raise ValueError("partial final returns cannot yield a comparison")
     quality, timing = read(directory / "quality.json"), read(directory / "timing.json")
     cases = read(root / "private/cases.json")
+    paired = config.get("comparison")
+    if paired:
+        cases = [c for c in cases if c["role"] == "test"]
     primary = [r for r in timing if r["phase"] == "sample"]
-    expected_families = {"candidate:0", "matched:0", "clone", "empty", "oracle_full", "oracle_test"}
+    expected_families = {"candidate:0", "matched:0", "clone", "empty"}
+    if not paired:
+        expected_families.update(("oracle_full", "oracle_test"))
     if {r["family"] for r in primary} != expected_families:
         raise ValueError("incomplete final timing families")
     for family in expected_families:
@@ -43,10 +48,16 @@ def analyze(root):
         "limitations": [
             "Single allocation; intervals condition on the selected policy and "
             "omit adaptive selection and allocation variability.",
-            "Hindsight oracle references were fitted on their reported cohorts; "
-            "the agent acquired development evidence only.",
-            "Full workload includes development cases. Recall and result-count "
-            "preservation are assessed separately.",
+            *(
+                []
+                if paired
+                else [
+                    "Hindsight oracle references were fitted on their reported cohorts; "
+                    "the agent acquired development evidence only.",
+                    "Full workload includes development cases. Recall and result-count "
+                    "preservation are assessed separately.",
+                ]
+            ),
             "Every quality case receives a compiled/reference VM decision audit. "
             "Independent forced-prefix output checks use predeclared 16-vector "
             "panels per policy/cohort; raw quality and timing still cover every case.",
@@ -58,12 +69,16 @@ def analyze(root):
         "ann_queries": sum(r["operations"].get("ann", 0) for r in ledger["requests"].values()),
         "exact_queries": sum(r["operations"].get("exact", 0) for r in ledger["requests"].values()),
         "unsettled_requests": sum(r["status"] != "settled" for r in ledger["requests"].values()),
+        "discovery_queries": sum(
+            v["actual"] for k, v in ledger["requests"].items() if k != identity
+        ),
     }
-    for scope in ("held_out", "full"):
+    for scope in ("held_out",) if paired else ("held_out", "full"):
         selected = [r for r in cases if scope == "full" or r["role"] == "test"]
         handles = {r["handle"] for r in selected}
         oracle = "oracle_test" if scope == "held_out" else "oracle_full"
         families = {"candidate:0", "matched:0", "clone", "empty", oracle}
+        families &= expected_families
         scope_hash = digest(sorted(handles))
         samples = [
             {**r, "declared_handles_sha256": scope_hash}
@@ -74,7 +89,7 @@ def analyze(root):
             samples, limits.bootstrap_draws, limits.control_tolerance, int(identity[:8], 16)
         )
         outcomes = {}
-        for family in ("candidate:0", oracle):
+        for family in ("candidate:0",) if paired else ("candidate:0", oracle):
             rows = [r for r in quality if r["handle"] in handles and r["family"] == family]
             if len(rows) != len(handles) or {r["handle"] for r in rows} != handles:
                 raise ValueError("incomplete/duplicate final quality cohort")
@@ -92,7 +107,6 @@ def analyze(root):
                 "strict_quality_pass": not (recall_losses or count_losses or faults),
             }
         agent = estimates["families"]["candidate:0"]["all"]
-        reference = estimates["families"][oracle]["all"]
         qualified = (
             estimates["controls_pass"]
             and outcomes["candidate:0"]["strict_quality_pass"]
@@ -106,13 +120,17 @@ def analyze(root):
             "quality": outcomes,
             "timing": estimates,
             "qualified_agent_win": bool(qualified),
-            "gap_percentage_points": (
-                reference["savings_percent"] - agent["savings_percent"]
-                if "savings_percent" in reference and "savings_percent" in agent
-                else None
-            ),
-            "oracle_is_strict_quality_comparator": outcomes[oracle]["strict_quality_pass"],
             "latency_descriptive_if_controls_fail": True,
         }
+        if not paired:
+            reference = estimates["families"][oracle]["all"]
+            result["cohorts"][scope].update(
+                gap_percentage_points=(
+                    reference["savings_percent"] - agent["savings_percent"]
+                    if "savings_percent" in reference and "savings_percent" in agent
+                    else None
+                ),
+                oracle_is_strict_quality_comparator=outcomes[oracle]["strict_quality_pass"],
+            )
     write(root / "private/final-report.json", result)
     return result

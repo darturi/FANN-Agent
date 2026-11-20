@@ -117,15 +117,23 @@ def validate_cases(cases):
         raise ValueError("each query group must include all seven conditions")
 
 
-def prepare(root, cases, limits=None):
+def prepare(root, cases, limits=None, *, comparison=None):
     """Creates no observations, baseline results, labels, cache, journal or candidate."""
     root = Path(root)
     validate_cases(cases)
     limits = limits or Limits()
     run_id = uuid.uuid4().hex
+    paired = None
+    if comparison is not None:
+        from .comparison import prepare_design
+
+        paired = prepare_design(comparison, cases)
     # Handles are regenerated so past source IDs cannot be used as empirical side channels.
     groups = sorted({r["group"] for r in cases})
-    secrets.SystemRandom().shuffle(groups)
+    if paired is None:
+        secrets.SystemRandom().shuffle(groups)
+    else:
+        groups.sort(key=lambda group: digest([paired["seed"], group]))
     aliases = {g: f"q{i:04d}" for i, g in enumerate(groups)}
     private = []
     for r in cases:
@@ -141,6 +149,8 @@ def prepare(root, cases, limits=None):
     # Two randomized-pair blocks; test oracle only on test cases.
     # Full-cohort quality and VM audit, with 16-group independent output panels.
     final_worst = 26 * n + 5 * nt + 512
+    if paired:
+        final_worst = 22 * nt + 10 * len(FILTERS)
     if final_worst > limits.final_reserve:
         raise ValueError(f"final schedule needs {final_worst} reserved queries")
     root.mkdir(parents=True, exist_ok=False, mode=0o700)
@@ -163,7 +173,12 @@ def prepare(root, cases, limits=None):
     write(root / "private/cases.json", private)
     write(
         root / "config.json",
-        {"run_id": run_id, "limits": asdict(limits), "final_worst": final_worst},
+        {
+            "run_id": run_id,
+            "limits": asdict(limits),
+            "final_worst": final_worst,
+            **({"comparison": paired} if paired else {}),
+        },
     )
     return task
 

@@ -12,7 +12,7 @@ from pathlib import Path
 
 import certifi
 
-from .controller import SYSTEM, TOOLS, Controller, empty_policy
+from .controller import SYSTEM, Controller, empty_policy
 from .core import Limits, canonical, digest, read, write
 from .provider import verify_current_provider
 from .transport import require_authorization
@@ -169,6 +169,9 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
     require_authorization(root)
     config = read(root / "config.json")
     limits = Limits(**config["limits"])
+    comparison = config.get("comparison")
+    if comparison and comparison["arm"] != "agent":
+        raise ValueError("model can run only in the sealed agent arm")
     host = root / "host"
     if host.exists():
         raise ValueError(
@@ -177,6 +180,34 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
     host.mkdir()
     money = Money(host / "model-ledger.json", config["run_id"], limits.model_usd)
     controller = Controller(root, client, money.status)
+    system = SYSTEM
+    if comparison:
+        system += (
+            "\nThe controller starts by collecting a common fresh development panel. "
+            "Use fit_batch for cheap grouped first-stop feedback. Prioritize follow-up "
+            "measurements where candidates disagree, where early stops could save work, "
+            "and where apparent convergence hid a recall loss. Propose alternate policies "
+            "when the same-run evidence supports them. Call evaluate with policy_paths only "
+            "to use the reserved development screening panel. Read same-run artifacts "
+            "for detail. The controller periodically restarts model context at a "
+            "completed tool boundary using a compact state. Record hypotheses and "
+            "next steps using plan_search so they survive that transition."
+        )
+    if controller.revision:
+        system += (
+            "\nThis is a single agent-directed experiment. Explore high-upside policies "
+            "and preserve useful early stops while refining the risky regions. "
+            "Exploratory recall and count losses are expected signals for the next experiment. "
+            "Use investigate_stop to measure the failing case and comparable successful "
+            "stops at the original checkpoint and later checkpoints. Check recovery using "
+            "measured prefixes because recall can vary nonmonotonically. Use evaluate_revision "
+            "to test a targeted policy change alongside its parent on other development "
+            "groups. Try alternate runtime features or guarded later stops where evidence "
+            "supports them. Before voluntary abstention with resources left, investigate "
+            "a measured failed stop if any and test a linked revision. Preserve resources "
+            "for full confirmation. The strict recall and count requirements apply to the "
+            "policy you freeze and its final evaluation."
+        )
     messages = [
         {
             "role": "user",
@@ -189,7 +220,7 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
     write(
         host / "initial-conversation.json",
         {
-            "system": SYSTEM,
+            "system": system,
             "messages": messages,
             "run_id": config["run_id"],
             "inherited_messages": 0,
@@ -197,12 +228,23 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
     )
     reason = "incomplete"
     started = clock()
+    history = []
+    bootstrap_receipt = {}
+    calls_in_phase = 0
     try:
         worker = client.status()
         if worker.get("status") != "running" or worker.get("run_id") != config["run_id"]:
             raise ValueError("model cannot run without its matching fresh worker")
         qualify(host / "provider-check", RATES, API_VERSION, INFERENCE)
         provider = provider or Provider()
+        if comparison:
+            from .comparison import bootstrap
+
+            bootstrap_receipt = bootstrap(controller, comparison)
+            write(host / "comparison-bootstrap.json", bootstrap_receipt)
+            messages.append(
+                {"role": "user", "content": canonical(controller.compact_state()).decode()}
+            )
         while not controller.state["terminal"]:
             resources = client.status()
             if resources.get("status") != "running":
@@ -219,8 +261,8 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
             identity = uuid.uuid4().hex
             payload = {
                 "model": MODEL,
-                "system": SYSTEM,
-                "tools": TOOLS,
+                "system": system,
+                "tools": controller.tools,
                 "messages": messages,
                 **INFERENCE,
             }
@@ -243,6 +285,7 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
             answer = provider.post("/v1/messages", payload, min(600, remaining - 30))
             write(host / "calls" / identity / "response.json", answer)
             money.settle(identity, answer["usage"])
+            calls_in_phase += 1
             if answer.get("model") != MODEL:
                 raise ValueError("provider returned a different model")
             # Preserve thinking/signature blocks byte-for-byte as JSON values.
@@ -279,9 +322,23 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
             if not results:
                 break
             messages.append({"role": "user", "content": results})
-            write(host / "conversation.json", messages)
+            write(host / "conversation.json", history + messages)
             if not controller.state["terminal"]:
                 client.call("heartbeat")
+                if (
+                    comparison
+                    and calls_in_phase >= 6
+                    and len(results) == sum(item["type"] == "tool_use" for item in content)
+                ):
+                    history.extend(messages)
+                    messages = [
+                        {
+                            "role": "user",
+                            "content": "Continue this same research run from the current state.\n"
+                            + canonical(controller.compact_state()).decode(),
+                        }
+                    ]
+                    calls_in_phase = 0
         if controller.state["terminal"]:
             reason = controller.state["terminal"]["status"]
     except Exception as error:
@@ -293,7 +350,7 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
     finally:
         money.state["closed"] = True
         money.save()
-        write(host / "conversation.json", messages)
+        write(host / "conversation.json", history + messages)
         if not (host / "freeze.json").exists():
             write(
                 host / "freeze.json",
@@ -315,6 +372,14 @@ def run(root, client, *, provider=None, qualify=verify_current_provider, clock=t
             "model_closed": True,
             "freeze_sha256": digest(read(host / "freeze.json")),
             **money.status(),
+            **(
+                {
+                    "model_calls": len(money.state["calls"]),
+                    "initial_handles_sha256": bootstrap_receipt.get("initial_handles_sha256"),
+                }
+                if comparison
+                else {}
+            ),
         }
         write(host / "model-closed.json", result)
     return result

@@ -8,7 +8,7 @@ import time
 from pathlib import Path
 
 from .core import Limits, digest, read, verify_initial, write
-from .deploy import ContainerExecutor, verify_package, verify_running_code
+from .deploy import ContainerExecutor, verify_package, verify_running_code, verify_runtime_assets
 from .engine import Engine
 from .transport import require_authorization
 
@@ -78,23 +78,29 @@ def dispatch(root, operation, identity=None, payload=None):
         ):
             raise ValueError("discovery request uncertain; cannot finalize")
         validate(freeze["policy"])
-        for key in ("oracle_full", "oracle_test"):
-            validate(payload[key])
+        paired = read(root / "config.json").get("comparison")
+        oracles = {}
+        if not paired:
+            for key in ("oracle_full", "oracle_test"):
+                oracles[key] = validate(payload[key])
+        elif {"oracle_full", "oracle_test"} & payload.keys():
+            raise ValueError("paired benchmark accepts only the frozen candidate")
         write(
             root / "private/comparison.json",
             {
                 "agent_freeze_sha256": digest(freeze),
-                "oracle_full": payload["oracle_full"],
-                "oracle_test": payload["oracle_test"],
+                **oracles,
             },
         )
         write(root / "private/final-freeze.json", freeze)
         return {"status": "frozen", "run_id": s["run_id"], "freeze_sha256": digest(freeze)}
     if operation == "report":
-        from .report import analyze
-
         if s["status"] != "completed_frozen_comparison":
             raise ValueError("no complete frozen comparison available")
+        if read(root / "config.json").get("comparison"):
+            return read(root / "private/final-report.json")
+        from .report import analyze
+
         return analyze(root)
     if operation == "heartbeat":
         if s["status"] != "running":
@@ -160,6 +166,8 @@ def serve(root, *, executor=None, clock=time.time, sleep=time.sleep):
     require_authorization(root)
     verify_package(root)
     verify_initial(root)
+    if executor is None:
+        verify_runtime_assets(root)
     # Never adopt an earlier worker/cache, including a cache with edited run-id fields.
     for name in ("worker.json", "query-ledger.json", "cache", "requests", "builds"):
         if (root / "private" / name).exists():

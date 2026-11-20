@@ -3,7 +3,7 @@
 import math
 from pathlib import Path
 
-from fannagent.api.broad_policy import FEATURES, validate
+from fannagent.api.broad_policy import DECIDE, FEATURES, feature_mask, sum_masks, validate
 
 from .core import Ledger, Limits, canonical, digest, read, write
 
@@ -71,6 +71,8 @@ class Engine:
 
     def selection(self, payload):
         if payload["kind"] in ("confirm", "final"):
+            if payload["kind"] == "final" and read(self.root / "config.json").get("comparison"):
+                return [r for r in self.cases.values() if r["role"] == "test"]
             return [
                 r
                 for r in self.cases.values()
@@ -175,16 +177,23 @@ class Engine:
         self.ledger.reserve(identity, worst, final)
         evidence, raw_quality, acquisition_diagnostics = [], [], []
         program_bindings = bindings(payload)
+        oracles = []
         if final:
             refs = read(self.root / "private/comparison.json")
             if refs["agent_freeze_sha256"] != digest(read(frozen)):
                 raise ValueError("oracle comparison attached before/differently from freeze")
             for name in ("oracle_full", "oracle_test"):
-                validate(refs[name])
-                program_bindings[name] = (refs[name], False)
+                if name in refs:
+                    validate(refs[name])
+                    program_bindings[name] = (refs[name], False)
+                    oracles.append(name)
+
+        def oracle_families(case):
+            return [f for f in oracles if f != "oracle_test" or case["role"] == "test"]
+
         prefix_panels = {}
         if final:
-            for family in ("candidate:0", "oracle_full", "oracle_test"):
+            for family in ("candidate:0", *oracles):
                 eligible = [c for c in cases if family != "oracle_test" or c["role"] == "test"]
                 prefix_panels[family] = sorted(
                     {c["group"] for c in eligible},
@@ -264,7 +273,7 @@ class Engine:
                 values = frame.get("values", [])
                 if len(values) != len(FEATURES):
                     raise ValueError("causal observation has the wrong schema")
-                return {
+                record = {
                     "run_id": self.run_id,
                     "request_id": identity,
                     "query_ordinal": result["query_ordinal"],
@@ -287,8 +296,18 @@ class Engine:
                     "exhausted": result.get("exhausted", False),
                     "policy_hash": result.get("policy_hash"),
                 }
+                if kind == "acquisition":
+                    record["collected_features"] = sorted(
+                        {"checkpoint", "layer0_distance_evaluations", *payload["features"]}
+                    )
+                    if not record["fault"] and not record["exhausted"]:
+                        record["last_reached_checkpoint"] = result["frames"][-1]["checkpoint"]
+                return record
 
             if payload["kind"] in ("acquire", "profile"):
+                requested_mask = DECIDE | sum_masks(
+                    feature_mask(["feature", name]) for name in payload["features"]
+                )
                 for case in cases:
                     ref = baseline(case)
                     captured = query(case, "capture", audit=True)
@@ -304,6 +323,10 @@ class Engine:
                         }
                     )
                     for frame in captured["frames"]:
+                        # The native adapter always returns the audit mask. Some synthetic
+                        # adapters used for testing omit it.
+                        if frame.get("mask", requested_mask) & requested_mask != requested_mask:
+                            raise ValueError("capture omitted a requested collector dependency")
                         if frame.get("fault") or frame.get("exhausted"):
                             continue
                         stopped = query(case, "forced", checkpoint=frame["checkpoint"])
@@ -326,10 +349,7 @@ class Engine:
                 for case in cases:
                     ref = baseline(case)
                     families_for_case = [f"candidate:{i}" for i in range(len(payload["policies"]))]
-                    if final:
-                        families_for_case += ["oracle_full"] + (
-                            ["oracle_test"] if case["role"] == "test" else []
-                        )
+                    families_for_case += oracle_families(case)
                     for family in families_for_case:
                         actual = query(case, family, audit=True)
                         cp = actual["checkpoint"]
@@ -416,11 +436,7 @@ class Engine:
                             for f in (f"candidate:{i}", f"matched:{i}")
                         ]
                         + ["clone", "empty"]
-                        + (
-                            ["oracle_full"] + (["oracle_test"] if c["role"] == "test" else [])
-                            if final
-                            else []
-                        )
+                        + oracle_families(c)
                     )
 
             def timed(case, family, reader):
@@ -483,4 +499,10 @@ class Engine:
             }
             result["final_complete"] = True
         write(request_dir / "response.json", result)
+        if final and read(self.root / "config.json").get("comparison"):
+            from .report import analyze
+
+            # NumPy is available in the pinned native runtime, including on workers
+            # whose login interpreter cannot analyze timings.
+            analyze(self.root)
         return result

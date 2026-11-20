@@ -232,6 +232,80 @@ is for future runs; it was not applied retrospectively to the episode or its
 frozen comparison. The original qualification's frame/VM checks were insufficient
 to detect this collector-request bug. See `checks/acquisition-helper-regression.json`.
 
+## Agent-only revision experiment
+
+The experiment tests whether the agent can turn measured recall or result-count
+losses into a faster policy that passes strict qualification. One Opus run starts
+with the original Reviews catalog and fixed roles. It measures a new 60-vector
+development sample across all seven filters. The agent chooses every follow-up
+measurement and can use batch fitting or propose its own stopping rules. Seed 7
+fixes the sample and aliases for this episode. The workspace starts empty.
+
+1. Screen several plausible policies and record their first-stop quality, work,
+   and measured latency. Lossy candidates provide development evidence.
+2. For a measured miss, use `investigate_stop` to remeasure the failing policy's
+   checkpoint and the agent's chosen later checkpoints. The tool also samples up
+   to two successful stops on the same filter near the failing checkpoint when
+   available. It records actual forced-prefix outcomes and causal observations.
+3. State a targeted hypothesis and use `evaluate_revision` to run the changed
+   policy and its parent on the same development panel. The panel excludes the
+   parent's exploratory screen and all investigated groups. It prioritizes
+   previously unmeasured groups and records how many were available.
+4. Confirm the strongest candidate on all 3,150 development cases and controlled
+   latency against native and matched continuation. With resources left, a run
+   that observed a failed stop must investigate one and screen a linked revision
+   before voluntarily abstaining. Report an incomplete or resource-limited exit
+   when the controller cannot complete discovery.
+5. Freeze the outcome and close the model. Evaluate once on the original
+   1,925 protected test cases. Report strict recall and count losses, early-stop
+   coverage, latency and its interval, controls, query use, and model spend.
+   Use 5% latency savings as a reporting reference.
+
+The proposed ceilings are $15 for model accounting, 60,000 discovery queries,
+and 45,000 reserved test-phase queries, with four hours for discovery and six
+hours total. The worst-case test reservation is 42,420 queries. Native controls,
+warmups and exact references count towards the query limits. The
+`agent_revision` mode uses `run-agent` and `finalize` without oracle files.
+
+`prepare --static-asset-stage PATH` can seal the package locally from an existing
+package's verified static engine, snapshot manifest and runtime pins. Worker
+startup verifies the runtime and stopped snapshot on Torch. Historical
+observations, policies and conversations are excluded. Preparing the package
+creates no authorization or scheduler submission.
+
+## Paired clean-start comparison
+
+Both arms use the same static Reviews vectors and the same development, validation,
+test, and historical roles. A seed changes the development sampling order and aliases.
+Each arm has its own run ID, starts with empty observations and policies, and executes
+its own references and prefix measurements. The protected test cases are scored only
+after the policy is frozen and the research session is closed.
+
+Prepare each arm with the ordinary static assets and `--comparison-plan PLAN.json`.
+For example, use the following design with seeds 7, 17, and 29, once with each
+value of `arm`:
+
+```json
+{"arm":"scripted","seed":7,"initial_groups":60,"followup_groups":60,"screen_groups":24}
+```
+
+The scripted arm uses `run-scripted` and the assisted arm uses `run-agent`.
+Both acquire the same starting panel across all seven filters, use the same
+query limits, and reserve the same native screening panel. The scripted arm
+collects the prespecified follow-up sample, screens the fitted portfolio, and
+confirms its best eligible candidate. The agent chooses its own follow-up
+measurements and can call the same `fit_batch` tool or write a policy itself.
+Grouped replay scores the first stop and reports incomplete prefix evidence
+explicitly. Work saved in replay is a lower bound from later observed
+checkpoints. Controlled native timing determines latency improvement.
+
+Use `finalize` without oracle artifacts for each paired arm. The output is
+`host/final-report.json`. The command `compare REPORT ...` checks that each seed
+has both arms with matching initial samples, static inputs, runtime assets,
+and limits, then reports quality, timing, queries, and model spending. All
+seeds in the comparison must use the same static cohort and split. The
+strict recall and result-count gates apply across all tested cases.
+
 ## Verification and remaining limits
 
 Run `pytest -q experiments/torch-clean-start-v4/tests` with the repository's Python

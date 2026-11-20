@@ -1,6 +1,7 @@
 """Generic, data-free threshold/linear/tree synthesis. Only caller-supplied observations."""
 
 import hashlib
+from collections import defaultdict
 
 import numpy as np
 
@@ -68,12 +69,14 @@ def predict(node, values):
 
 
 def classifier(x, y, features, method, depth, min_leaf, costs):
-    if method not in ("threshold", "linear", "tree"):
-        raise ValueError("method must be threshold, linear, or tree")
+    if method not in ("fixed", "threshold", "linear", "tree"):
+        raise ValueError("method must be fixed, threshold, linear, or tree")
     if len(y) < min_leaf or not y.any():
         return False
     if y.all():
         return True
+    if method == "fixed":
+        return False
     if method == "tree":
         return tree(x, y, features, depth, min_leaf, costs)
     if method == "threshold":
@@ -112,6 +115,71 @@ def classifier(x, y, features, method, depth, min_leaf, costs):
     return ["and", guard, ["gt", expression, threshold]]
 
 
+def first_stop_feedback(cases, decisions, checkpoints):
+    by_filter = defaultdict(list)
+    counterexamples = []
+    for (condition, group), frames in sorted(cases.items()):
+        outcome = {
+            "stops": 0,
+            "unknown": 0,
+            "recall_losses": 0,
+            "count_losses": 0,
+            "observed_work_saved": 0,
+        }
+        for checkpoint in checkpoints:
+            key = (condition, group, checkpoint)
+            if key not in decisions:
+                reached_native_end = any(
+                    checkpoint in row.get("observation_schedule", [])
+                    and row.get("last_reached_checkpoint", checkpoint) < checkpoint
+                    for row in frames.values()
+                )
+                outcome["unknown"] = int(not reached_native_end)
+                break
+            if not decisions[key]:
+                continue
+            row = frames[checkpoint]
+            label = row["label"]
+            outcome.update(
+                stops=1,
+                recall_losses=int(not label["safe"]),
+                count_losses=int(not label["count_preserving"]),
+            )
+            work = row["features"].get("layer0_distance_evaluations")
+            later_work = [
+                r["features"].get("layer0_distance_evaluations")
+                for point, r in frames.items()
+                if point > checkpoint
+            ]
+            if work is not None:
+                outcome["observed_work_saved"] = (
+                    max([work, *(v for v in later_work if v is not None)]) - work
+                )
+            if (outcome["recall_losses"] or outcome["count_losses"]) and len(counterexamples) < 8:
+                counterexamples.append(
+                    {
+                        "group": group,
+                        "filter": condition,
+                        "checkpoint": checkpoint,
+                        "label": label,
+                        "native_recall": row.get("native_recall"),
+                        "native_count": row.get("native_count"),
+                    }
+                )
+            break
+        by_filter[condition].append(outcome)
+
+    def summarize(outcomes):
+        keys = ("stops", "unknown", "recall_losses", "count_losses", "observed_work_saved")
+        return {"cases": len(outcomes), **{k: sum(r[k] for r in outcomes) for k in keys}}
+
+    return {
+        "all": summarize([r for outcomes in by_filter.values() for r in outcomes]),
+        "by_filter": {str(t): summarize(outcomes) for t, outcomes in by_filter.items()},
+        "counterexamples": counterexamples,
+    }
+
+
 def fit(
     records, *, run_id, method, features, checkpoints, depth=6, min_leaf=4, costs=None, folds=5
 ):
@@ -140,14 +208,25 @@ def fit(
             raise ValueError(
                 "previous/turnover features require the identical observation schedule"
             )
-    programs, validation = {}, []
-    for t in sorted({r["filter"] for r in records}):
+    requested = set(features)
+    cases = defaultdict(dict)
+    for row in records:
+        if (
+            row.get("kind", "acquisition") == "acquisition"
+            and row.get("label") is not None
+            and not row.get("fault")
+            and not row.get("exhausted")
+            and requested <= set(row.get("collected_features", row["features"]))
+        ):
+            cases[row["filter"], row["group"]][row["checkpoint"]] = row
+    programs, validation, decisions = {}, [], {}
+    for t in sorted({condition for condition, _ in cases}):
         nodes = []
         for cp in checkpoints:
             selected = [
-                r
-                for r in records
-                if r["filter"] == t and r["checkpoint"] == cp and r.get("label") is not None
+                frames[cp]
+                for (condition, _), frames in sorted(cases.items())
+                if condition == t and cp in frames
             ]
             if not selected:
                 nodes.append((cp, False))
@@ -178,6 +257,7 @@ def fit(
                     np.array(selected, dtype=object)[test], y[test], strict=True
                 ):
                     fired = bool(predict(model, r["features"]))
+                    decisions[t, r["group"], cp] = fired
                     stops += fired
                     false_stops += fired and not positive
             model = classifier(x, y, features, method, depth, min_leaf, costs or {})
@@ -215,6 +295,45 @@ def fit(
     return {
         "policy": policy,
         "validation": validation,
+        "first_stop": first_stop_feedback(cases, decisions, checkpoints),
         "native_validation_required": True,
         "excluded_incompatible_schedule_records": excluded,
     }
+
+
+def fit_batch(records, *, run_id, checkpoints, features):
+    """Rank a small prospective portfolio using same-run first-stop feedback."""
+    if not 1 <= len(checkpoints) <= 12 or not features:
+        raise ValueError("supply one to twelve checkpoints and at least one declared feature")
+    if checkpoints != sorted(set(checkpoints)):
+        raise ValueError("checkpoints must be sorted and unique")
+    settings = [(f"fixed-{point}", "fixed", ["checkpoint"], [point], 1) for point in checkpoints]
+    settings += [
+        ("threshold", "threshold", features, checkpoints, 1),
+        ("tree", "tree", features, checkpoints, 2),
+    ]
+    ranked = []
+    for name, method, inputs, points, depth in settings:
+        answer = fit(
+            records,
+            run_id=run_id,
+            method=method,
+            features=inputs,
+            checkpoints=points,
+            depth=depth,
+            min_leaf=4,
+        )
+        ranked.append({"name": name, "policy": answer["policy"], **answer["first_stop"]})
+
+    def rank(item):
+        result = item["all"]
+        return (
+            not result["stops"],
+            result["recall_losses"] + result["count_losses"],
+            result["unknown"] / max(1, result["cases"]),
+            -result["observed_work_saved"],
+            -result["stops"],
+            item["name"],
+        )
+
+    return sorted(ranked, key=rank)

@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .core import Limits, read, verify_initial, write
+from .core import Limits, digest, read, verify_initial, write
 from .deploy import package, verify_package, verify_running_code
 from .transport import Client, require_authorization
 
@@ -15,13 +15,17 @@ def main():
     prep = sub.add_parser("prepare", help="Offline only: seal static task and data-free software")
     prep.add_argument("--root", type=Path, required=True)
     prep.add_argument("--cases", type=Path, required=True)
-    prep.add_argument("--engine-source", type=Path, required=True)
-    prep.add_argument("--snapshot", type=Path, required=True)
-    prep.add_argument("--runtime-image", type=Path, required=True)
-    prep.add_argument("--research-image", required=True)
+    prep.add_argument("--engine-source", type=Path)
+    prep.add_argument("--snapshot", type=Path)
+    prep.add_argument("--runtime-image", type=Path)
+    prep.add_argument("--research-image")
+    prep.add_argument("--static-asset-stage", type=Path, help="Reuse only sealed static asset pins")
     prep.add_argument("--limits", type=Path)
     prep.add_argument("--database-user")
-    for name in ("run-agent", "finalize", "status"):
+    prep.add_argument("--comparison-plan", type=Path)
+    pair = sub.add_parser("compare", help="Compare independently finalized paired run reports")
+    pair.add_argument("reports", nargs="+", type=Path)
+    for name in ("run-agent", "run-scripted", "finalize", "status"):
         q = sub.add_parser(name)
         q.add_argument(
             "--root",
@@ -35,8 +39,8 @@ def main():
         q.add_argument("--control-path", type=Path)
         q.add_argument("--host-key-alias")
         if name == "finalize":
-            q.add_argument("--oracle-full", type=Path, required=True)
-            q.add_argument("--oracle-test", type=Path, required=True)
+            q.add_argument("--oracle-full", type=Path)
+            q.add_argument("--oracle-test", type=Path)
     a = p.parse_args()
     if a.command == "prepare":
         task = package(
@@ -48,6 +52,8 @@ def main():
             a.research_image,
             Limits(**read(a.limits)) if a.limits else Limits(),
             database_user=a.database_user,
+            comparison=read(a.comparison_plan) if a.comparison_plan else None,
+            asset_stage=a.static_asset_stage,
         )
         print(
             json.dumps(
@@ -60,6 +66,11 @@ def main():
                 }
             )
         )
+        return
+    if a.command == "compare":
+        from .comparison import compare_reports
+
+        print(json.dumps(compare_reports([read(p) for p in a.reports])))
         return
     root = a.root.resolve()
     client = Client(
@@ -74,17 +85,25 @@ def main():
         answer = client.status()
     else:
         require_authorization(root)
-        if a.command == "run-agent":
+        config = read(root / "config.json")
+        paired = config.get("comparison")
+        if a.command in ("run-agent", "run-scripted"):
+            from .comparison import run_scripted
             from .model import run
 
             verify_initial(root)
             verify_package(root)
             verify_running_code(root)
-            answer = run(root, client)
+            answer = (run if a.command == "run-agent" else run_scripted)(root, client)
         else:
             closed, freeze = read(root / "host/model-closed.json"), read(root / "host/freeze.json")
             if closed.get("model_closed") is not True:
                 raise ValueError("model must be closed before any oracle file is read")
+            oracle_paths = (a.oracle_full, a.oracle_test)
+            if paired and any(oracle_paths):
+                raise ValueError("paired comparison finalization does not take oracle artifacts")
+            if not paired and not all(oracle_paths):
+                raise ValueError("historic oracle finalization requires both oracle artifacts")
             if (root / "host/finalization-started.json").exists():
                 raise ValueError(
                     "finalization already attempted; retrieve existing identity, never retry"
@@ -97,8 +116,14 @@ def main():
                 payload={
                     "freeze": freeze,
                     "model_closed": closed,
-                    "oracle_full": read(a.oracle_full),
-                    "oracle_test": read(a.oracle_test),
+                    **(
+                        {}
+                        if paired
+                        else {
+                            "oracle_full": read(a.oracle_full),
+                            "oracle_test": read(a.oracle_test),
+                        }
+                    ),
                 },
             )
             completed = client.action(
@@ -114,6 +139,25 @@ def main():
                     break
                 time.sleep(0.25)
             answer = client.call("report")
+            if paired:
+                software = read(root / "package-seal.json")
+                answer["comparison"] = {
+                    **paired,
+                    "limits": config["limits"],
+                    "initial_handles_sha256": closed.get("initial_handles_sha256"),
+                    "assets_sha256": digest(
+                        {
+                            path: value
+                            for path, value in software.items()
+                            if path.startswith(("private/engine/", "code/"))
+                            or path == "private/snapshot-seal.json"
+                        }
+                    ),
+                    "runtime_image_sha256": read(root / "deployment.json")["image_sha256"],
+                    "research_image": read(root / "deployment.json")["research_image"],
+                    "model_calls": closed.get("model_calls", 0),
+                    "model_charged_usd": closed["model_charged_usd"],
+                }
             write(root / "host/final-report.json", answer)
     print(json.dumps(answer))
 
