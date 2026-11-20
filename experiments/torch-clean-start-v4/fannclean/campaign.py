@@ -39,7 +39,7 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
     qc = [c for c in development if c["group"] in groups]
     qroot = parent / "qualification-stage"
     qlimits = Limits(
-        query_cap=57000 - local_queries,
+        query_cap=67000 - local_queries,
         final_reserve=7000,
         wall_seconds=21600,
         discovery_seconds=14400,
@@ -71,7 +71,7 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
             "kind": "screen",
             "handles": [c["handle"] for c in qcases],
             "policies": [empty()],
-            "blocks": 6,
+            "blocks": 4,
         }
         measured = executor(uuid.uuid4().hex, controls, 1800)
         if any(
@@ -91,10 +91,10 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
             measured2 = executor(uuid.uuid4().hex, {**controls, "blocks": 2}, 1800)
             requests.append(measured2["request_id"])
             joined = []
-            for offset, response in ((0, measured), (6, measured2)):
+            for offset, response in ((0, measured), (4, measured2)):
                 for row in response["samples"]:
                     if row["phase"] == "sample":
-                        joined.append({**row, "block": row["block"] + offset, "declared_blocks": 8})
+                        joined.append({**row, "block": row["block"] + offset, "declared_blocks": 6})
             command = [
                 "/share/apps/apptainer/bin/apptainer",
                 "exec",
@@ -136,7 +136,7 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
             raise ValueError(
                 "real-graph negative controls did not qualify; no model experiment started"
             )
-        if qcharged > 50000:
+        if qcharged > 60000:
             raise ValueError("qualification exceeded its total query envelope")
         remaining = int(21600 - prior_seconds - (time.time() - started) - 120)
         if remaining <= 10800:
@@ -145,7 +145,7 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
             )
         limits = Limits(
             query_cap=300000 - qcharged,
-            final_reserve=211000,
+            final_reserve=195000,
             wall_seconds=remaining,
             discovery_seconds=min(14400, remaining - 7200),
         )

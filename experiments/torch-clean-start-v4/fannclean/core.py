@@ -48,7 +48,7 @@ def write(path, value):
 @dataclass(frozen=True)
 class Limits:
     query_cap: int = 300000
-    final_reserve: int = 211000
+    final_reserve: int = 195000
     model_usd: str = "15"
     wall_seconds: int = 21600
     discovery_seconds: int = 14400
@@ -128,7 +128,8 @@ def prepare(root, cases, limits=None):
         )
     n, nt = len(private), sum(r["role"] == "test" for r in private)
     # Two randomized-pair blocks; test oracle only on test cases.
-    final_worst = 28 * n + 6 * nt + 512
+    # Full-cohort quality and VM audit, with 16-group independent output panels.
+    final_worst = 26 * n + 5 * nt + 512
     if final_worst > limits.final_reserve:
         raise ValueError(f"final schedule needs {final_worst} reserved queries")
     root.mkdir(parents=True, exist_ok=False, mode=0o700)

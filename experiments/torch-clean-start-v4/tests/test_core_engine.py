@@ -272,9 +272,9 @@ def test_declared_full_workload_leaves_real_cold_acquisition_budget(tmp_path):
     task = prepare(root, cases)
     assert len(task["queries"]) == 3150
     config = read(root / "config.json")
-    assert config["final_worst"] == 208062
-    assert config["limits"]["final_reserve"] == 211000
-    assert config["limits"]["query_cap"] - config["limits"]["final_reserve"] == 89000
+    assert config["final_worst"] == 192137
+    assert config["limits"]["final_reserve"] == 195000
+    assert config["limits"]["query_cap"] - config["limits"]["final_reserve"] == 105000
 
 
 def test_batched_progress_crash_still_holds_full_durable_query_reservation(tmp_path):
@@ -391,3 +391,39 @@ def test_randomized_native_pairs_remove_multistep_cache_order_bias():
         ratio = sum(r["request_ns"] for r in samples) / sum(r["native_ns"] for r in samples)
         assert 0.98 < ratio < 1.02
         assert all(abs(r["query_ordinal"] - r["native_ordinal"]) == 1 for r in samples)
+
+
+def test_final_checks_entire_cohorts_with_bounded_independent_prefix_panels(tmp_path):
+    cases = [
+        {
+            "handle": f"{g}-{t}",
+            "group": str(g),
+            "role": "development" if g < 20 else "test",
+            "filter": t,
+            "vector": [float(g)],
+        }
+        for g in range(40)
+        for t in FILTERS
+    ]
+    root = tmp_path / "final-panels"
+    task = prepare(root, cases)
+    freeze = {"policy": policy(), "run_id": task["run_id"]}
+    write(root / "private/final-freeze.json", freeze)
+    write(
+        root / "private/comparison.json",
+        {"agent_freeze_sha256": digest(freeze), "oracle_full": policy(), "oracle_test": policy()},
+    )
+    result = process(root, request("final", cases, handles=[]))
+    assert result["final_complete"]
+    directory = root / "private/requests" / result["request_id"]
+    quality = read(directory / "quality.json")
+    assert len(quality) == 2 * 280 + 140
+    assert sum(r["independent_forced_prefix_audit"] for r in quality) == 3 * 16 * 7
+    assert all(
+        r["recall"] == r["native_recall"] and r["count"] == r["native_count"] for r in quality
+    )
+    samples = [r for r in read(directory / "timing.json") if r["phase"] == "sample"]
+    assert len([r for r in samples if r["family"] == "candidate:0"]) == 2 * 280
+    assert len([r for r in samples if r["family"] == "oracle_test"]) == 2 * 140
+    ledger = read(root / "private/query-ledger.json")
+    assert ledger["charged"] <= read(root / "config.json")["final_worst"]

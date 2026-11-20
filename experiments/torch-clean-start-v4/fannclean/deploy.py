@@ -21,6 +21,23 @@ static bool V2ForceContinue(int arm) { return false; }
 static bool V2Decision(int arm,int filter,int cp,int count,double tenth,double gap,
  int turnover,bool full,bool hasgap,bool hasturn) { return false; }
 """
+PREWARM = """
+/* Trusted benchmark setup only; no policy can invoke this function. */
+#include "storage/bufmgr.h"
+PG_FUNCTION_INFO_V1(fannclean_prewarm_index);
+Datum fannclean_prewarm_index(PG_FUNCTION_ARGS) {
+ Relation rel=index_open(PG_GETARG_OID(0),AccessShareLock);
+ BlockNumber count=RelationGetNumberOfBlocks(rel);
+ for(BlockNumber block=0;block<count;block++) {
+  Buffer buffer;
+  CHECK_FOR_INTERRUPTS();
+  buffer=ReadBufferExtended(rel,MAIN_FORKNUM,block,RBM_NORMAL,NULL);
+  ReleaseBuffer(buffer);
+ }
+ index_close(rel,AccessShareLock);
+ PG_RETURN_INT64((int64)count);
+}
+"""
 
 
 def software_tree(source, target):
@@ -59,6 +76,10 @@ def software_tree(source, target):
     if n != 1 and text.count("(arm != 10 && !FannbenchV3ArmDeclared(arm))") != 1:
         raise ValueError("legacy-arm isolation patch did not match exactly")
     p.write_text(text)
+    if "PG_FUNCTION_INFO_V1(fannclean_prewarm_index);" not in text:
+        p.write_text(text + PREWARM)
+    elif not text.endswith(PREWARM):
+        raise ValueError("unexpected benchmark prewarm implementation")
 
 
 def package(

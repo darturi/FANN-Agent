@@ -179,6 +179,15 @@ class Engine:
             for name in ("oracle_full", "oracle_test"):
                 validate(refs[name])
                 program_bindings[name] = (refs[name], False)
+        prefix_panels = {}
+        if final:
+            for family in ("candidate:0", "oracle_full", "oracle_test"):
+                eligible = [c for c in cases if family != "oracle_test" or c["role"] == "test"]
+                prefix_panels[family] = sorted(
+                    {c["group"] for c in eligible},
+                    key=lambda g: digest([self.run_id, "independent-prefix-panel", family, g]),
+                )[:16]
+            write(request_dir / "independent-prefix-panels.json", prefix_panels)
         with (
             self.ledger.checkpoint_on_exit(),
             self.factory(program_bindings, request_dir) as backend,
@@ -321,11 +330,12 @@ class Engine:
                     for family in families_for_case:
                         actual = query(case, family, audit=True)
                         cp = actual["checkpoint"]
-                        wanted = (
-                            ref["native"]
-                            if not cp
-                            else query(case, "forced", checkpoint=cp)["output"]
+                        forced_audit = bool(
+                            cp and (not final or case["group"] in prefix_panels[family])
                         )
+                        wanted = ref["native"] if not cp else actual["output"]
+                        if forced_audit:
+                            wanted = query(case, "forced", checkpoint=cp)["output"]
                         if actual["output"] != wanted:
                             raise ValueError("compiled decision/output audit failed")
                         record = {
@@ -340,6 +350,7 @@ class Engine:
                             "filter": case["filter"],
                             "family": family,
                             "checkpoint": cp,
+                            "independent_forced_prefix_audit": forced_audit,
                             "recall": score(actual["output"], ref["truth"]),
                             "native_recall": ref["native_recall"],
                             "count": len(actual["output"]),

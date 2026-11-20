@@ -25,6 +25,8 @@ from .core import FILTERS, digest, read, sha, write
 
 FUNCTIONS = """
 CREATE SCHEMA IF NOT EXISTS fannagent;
+CREATE OR REPLACE FUNCTION fannagent.prewarm_index(regclass) RETURNS bigint
+AS '$libdir/vector','fannclean_prewarm_index' LANGUAGE C STRICT VOLATILE;
 CREATE OR REPLACE FUNCTION fannagent.study_attach(regclass,regclass,integer,integer,integer)
 RETURNS integer AS '$libdir/vector','fannbench_confirm_attach' LANGUAGE C STRICT VOLATILE;
 CREATE OR REPLACE FUNCTION fannagent.confirm_last() RETURNS integer
@@ -173,7 +175,7 @@ class Postgres:
                     f"-k {socket} -c listen_addresses='' -c port=55432 "
                     "-c max_parallel_workers_per_gather=0 -c autovacuum=off "
                     "-c shared_preload_libraries='' -c session_preload_libraries='' "
-                    "-c local_preload_libraries=''",
+                    "-c local_preload_libraries='' -c shared_buffers=4GB",
                     "-w",
                     "start",
                 ],
@@ -198,6 +200,18 @@ class Postgres:
                     "snapshot contains non-task tables; no prior empirical tables allowed"
                 )
             self.keeper.execute(FUNCTIONS)
+            prewarmed = self.keeper.execute(
+                "SELECT fannagent.prewarm_index('public.reviews_hnsw'::regclass)"
+            ).fetchone()[0]
+            write(
+                self.directory / "buffer-warmup.json",
+                {
+                    "shared_buffers": self.keeper.execute("SHOW shared_buffers").fetchone()[0],
+                    "index_blocks_read": prewarmed,
+                    "purpose": "static index cache preparation outside SQL request timing",
+                    "ann_or_exact_queries": 0,
+                },
+            )
             self.stack.enter_context(self.keeper.transaction())
             self.keeper.execute("SET TRANSACTION ISOLATION LEVEL REPEATABLE READ")
             self.keeper.execute("LOCK TABLE public.reviews IN SHARE MODE NOWAIT")

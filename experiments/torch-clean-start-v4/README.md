@@ -42,16 +42,19 @@ that clock, rather than rebuilding them between timed statements.
 | Resource | Proposed limit |
 |---|---:|
 | Total ANN + exact queries, including labels, warmups and controls | 300,000 |
-| Discovery allocation before qualification costs | 89,000 |
-| Reserved final allocation | 211,000 |
+| Discovery allocation before qualification costs | 105,000 |
+| Reserved final allocation | 195,000 |
 | Model accounting ceiling | $15 |
 | Worker wall time / discovery time | 6 hours / 4 hours |
 | Offline research action | 240 seconds, 2 GiB, 1 CPU, 128 processes |
 
 For the recorded 1,000-vector split (450 development, 150 validation, 275 test,
 125 historical exclusions), the conservative final envelope is
-`28 × 7000 + 6 × 1925 + 512 = 208,062` queries. This covers fresh references,
-agent/oracle quality checks, two randomized timing blocks and warmups. The test
+`26 × 7000 + 5 × 1925 + 512 = 192,137` queries. This covers fresh references,
+agent/oracle quality checks, two randomized timing blocks and warmups. Every
+quality case receives a reference VM decision audit; independent forced-prefix
+output checks use a fixed 16-vector panel per policy/cohort. This avoids repeating
+already qualified prefix semantics on every case and reserves more discovery queries. The test
 oracle is evaluated only on its fitted test cohort. Existing same-run development
 references can reduce actual final use. The final reservation cannot be borrowed
 by discovery. Qualification costs are subtracted from discovery. Engineering
@@ -65,13 +68,17 @@ identical executions: one warmup could not justify always measuring native first
 The revised method removes that fixed positional advantage without assuming a
 warmup plateau. All pair orders, ordinals, warmups and measurements are retained.
 Negative controls still require per-condition equivalence within two percent.
+The private PostgreSQL server uses a 4 GiB buffer pool, with every static HNSW
+index page read into that pool before query measurements. The trusted read-only
+setup helper records its block count; policies cannot invoke it. This makes cache
+preparation explicit and equal for all arms. The original snapshot is unchanged.
 The fixed measurement order from both failed qualifications is retained in its
 historical raw records and is not pooled with the revised design.
 
 The full worst-case request reservation is durable before database work starts.
 Progress and query records checkpoint every 64 attempts and at normal completion;
 an interruption retains the full reservation until cleanup is verified. The
-qualification ceiling is 50,000 queries, including every earlier failed attempt
+qualification ceiling is 60,000 queries, including every earlier failed attempt
 and the 672-query native-only repeat diagnostic; the overall 300,000 ceiling is
 unchanged. Qualification costs reduce the agent's discovery allowance.
 

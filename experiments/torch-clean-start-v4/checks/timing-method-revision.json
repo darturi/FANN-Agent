@@ -1,0 +1,86 @@
+{
+  "status": "randomized_pair_revision_pending_original_graph_controls",
+  "native_correctness_previously_passed": true,
+  "paid_calls_so_far": 0,
+  "model_experiments_so_far": 0,
+  "failed_qualification_jobs": [
+    23787542,
+    23790842
+  ],
+  "second_failure_queries": 13986,
+  "second_failure_clone_ratio": 0.7024530155710945,
+  "second_failure_empty_ratio": 0.702294975251288,
+  "diagnostic_queries": 672,
+  "native_repeat_curve": [
+    {
+      "repetition": 0,
+      "mean_ms": 165.98030173214286,
+      "median_ms": 14.874642999999999
+    },
+    {
+      "repetition": 1,
+      "mean_ms": 15.086028589285714,
+      "median_ms": 9.817703000000002
+    },
+    {
+      "repetition": 2,
+      "mean_ms": 13.28645605357143,
+      "median_ms": 9.208547
+    },
+    {
+      "repetition": 3,
+      "mean_ms": 7.607145571428571,
+      "median_ms": 6.106946000000001
+    },
+    {
+      "repetition": 4,
+      "mean_ms": 6.3730980892857145,
+      "median_ms": 5.8142765
+    },
+    {
+      "repetition": 5,
+      "mean_ms": 6.071333553571429,
+      "median_ms": 5.4500455
+    },
+    {
+      "repetition": 6,
+      "mean_ms": 5.834746732142857,
+      "median_ms": 5.1666625
+    },
+    {
+      "repetition": 7,
+      "mean_ms": 5.711230785714286,
+      "median_ms": 5.338196
+    },
+    {
+      "repetition": 8,
+      "mean_ms": 5.601993375,
+      "median_ms": 5.224605
+    },
+    {
+      "repetition": 9,
+      "mean_ms": 5.4709970892857145,
+      "median_ms": 5.0835115
+    },
+    {
+      "repetition": 10,
+      "mean_ms": 5.389014875,
+      "median_ms": 4.998663
+    },
+    {
+      "repetition": 11,
+      "mean_ms": 5.307303410714286,
+      "median_ms": 4.936825
+    }
+  ],
+  "source_commit": "73400f1",
+  "regression_tests_passed": 88,
+  "timing_revision": "Adjacent randomized native/arm pairs, same reader, randomized arm/case order, charged native warmup. No fixed earlier-native position. Two final blocks.",
+  "total_query_limit": 300000,
+  "qualification_query_limit": 50000,
+  "final_reserve": 211000,
+  "qualification_data_for_agent": false,
+  "all_failed_timing_blocks_retained": true,
+  "old_and_new_timing_samples_pooled": false,
+  "raw_evidence": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-clean-start-v4/campaign-v3"
+}

@@ -47,6 +47,9 @@ def analyze(root):
             "the agent acquired development evidence only.",
             "Full workload includes development cases. Recall and result-count "
             "preservation are assessed separately.",
+            "Every quality case receives a compiled/reference VM decision audit. "
+            "Independent forced-prefix output checks use predeclared 16-vector "
+            "panels per policy/cohort; raw quality and timing still cover every case.",
         ],
     }
     ledger = read(root / "private/query-ledger.json")
@@ -83,6 +86,9 @@ def analyze(root):
                 "count_loss_cases": count_losses,
                 "resource_fault_cases": faults,
                 "stopped_cases": sum(r["checkpoint"] > 0 for r in rows),
+                "independent_forced_prefix_audits": sum(
+                    r.get("independent_forced_prefix_audit", False) for r in rows
+                ),
                 "strict_quality_pass": not (recall_losses or count_losses or faults),
             }
         agent = estimates["families"]["candidate:0"]["all"]
