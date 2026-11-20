@@ -212,7 +212,7 @@ def test_controls_and_confirmation_gate(stage, cases):
 
 def test_warmups_are_charged_and_predeclared_partial_blocks_rejected(stage, cases):
     answer = process(stage, request("profile", cases))
-    assert answer["ledger"]["charged"] == 14 * 5 + 14 * 12 + 56
+    assert answer["ledger"]["charged"] == 14 * 5 + 14 * 14 + 56
     records = answer["samples"]
     assert sum(r["phase"] == "warmup" for r in records) == 56
     assert answer["timing"]["families"]["capture"]["all"]["savings_percent"] == 0
@@ -272,9 +272,9 @@ def test_declared_full_workload_leaves_real_cold_acquisition_budget(tmp_path):
     task = prepare(root, cases)
     assert len(task["queries"]) == 3150
     config = read(root / "config.json")
-    assert config["final_worst"] == 162212
-    assert config["limits"]["final_reserve"] == 165000
-    assert config["limits"]["query_cap"] - config["limits"]["final_reserve"] == 135000
+    assert config["final_worst"] == 208062
+    assert config["limits"]["final_reserve"] == 211000
+    assert config["limits"]["query_cap"] - config["limits"]["final_reserve"] == 89000
 
 
 def test_batched_progress_crash_still_holds_full_durable_query_reservation(tmp_path):
@@ -322,7 +322,8 @@ def test_per_case_warmup_removes_false_noop_speedup_from_cold_first_baseline():
     records = measure(cases, lambda _: ["clone", "empty"], execute, 1, 2)
     samples = [r for r in records if r["phase"] == "sample"]
     assert any(r["case_warmup_ns"] == 400 for r in samples)
-    assert all(r["native_before_ns"] == r["native_after_ns"] == 100 for r in samples)
+    assert all(r["native_ns"] == 100 for r in samples)
+    assert {tuple(r["pair_order"]).index("native") for r in samples} == {0, 1}
     summary = summarize(records, draws=64)
     assert summary["controls_pass"]
     assert summary["families"]["clone"]["all"]["ratio"] == 1
@@ -361,3 +362,32 @@ def test_final_is_single_attempt_with_private_oracles_only_after_freeze(stage, c
         .splitlines()
     ]
     assert len(saved) == answer["ledger"]["charged"]
+
+
+def test_randomized_native_pairs_remove_multistep_cache_order_bias():
+    from collections import defaultdict
+
+    from fannclean.timing import measure
+
+    cases = [
+        {"handle": str(g), "group": str(g), "filter": -1, "role": "development"}
+        for g in range(2000)
+    ]
+    positions = defaultdict(int)
+    ordinal = 0
+    curve = [400, 180, 160, 120, 110, 105, 102, 101, 100]
+
+    def execute(case, family, reader):
+        nonlocal ordinal
+        key = case["handle"], reader
+        pos = positions[key]
+        positions[key] += 1
+        ordinal += 1
+        return {"request_ns": curve[min(pos, len(curve) - 1)], "query_ordinal": ordinal}
+
+    rows = measure(cases, lambda _: ["clone", "empty"], execute, 81, 2)
+    for family in ("clone", "empty"):
+        samples = [r for r in rows if r.get("phase") == "sample" and r["family"] == family]
+        ratio = sum(r["request_ns"] for r in samples) / sum(r["native_ns"] for r in samples)
+        assert 0.98 < ratio < 1.02
+        assert all(abs(r["query_ordinal"] - r["native_ordinal"]) == 1 for r in samples)

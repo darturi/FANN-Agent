@@ -1,0 +1,23 @@
+{
+  "status": "failed_timing_gate_before_paid_run",
+  "source_commit": "f934358",
+  "job_ids": [
+    "23787352",
+    "23787542"
+  ],
+  "prior_allocated_seconds": 943,
+  "local_qualification_queries": 868,
+  "torch_qualification_queries": 12166,
+  "total_qualification_queries": 13034,
+  "provider_calls": 0,
+  "model_experiments": 0,
+  "clone_ratio": 0.7060873788760691,
+  "empty_ratio": 0.7141341593553495,
+  "cause": "Cold first native call made identical warm arms appear about 30 percent faster.",
+  "repair_commit": "698faa6",
+  "repair": "Charged per-case native warmup before both baseline bracket calls; full request reservation retained with batched progress journaling.",
+  "all_old_blocks_retained": true,
+  "artifact_sha256": "0f6afb4363801db54a85b27e9520ece1fed41b159759084d141a9078d4c4a393",
+  "raw_evidence": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-clean-start-v4/campaign-v1/qualification-audit",
+  "agent_received_qualification_evidence": false
+}

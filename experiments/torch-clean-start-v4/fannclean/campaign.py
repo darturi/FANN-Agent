@@ -39,8 +39,8 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
     qc = [c for c in development if c["group"] in groups]
     qroot = parent / "qualification-stage"
     qlimits = Limits(
-        query_cap=36000 - local_queries,
-        final_reserve=6000,
+        query_cap=57000 - local_queries,
+        final_reserve=7000,
         wall_seconds=21600,
         discovery_seconds=14400,
     )
@@ -136,7 +136,7 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
             raise ValueError(
                 "real-graph negative controls did not qualify; no model experiment started"
             )
-        if qcharged > 30000:
+        if qcharged > 50000:
             raise ValueError("qualification exceeded its total query envelope")
         remaining = int(21600 - prior_seconds - (time.time() - started) - 120)
         if remaining <= 10800:
@@ -145,7 +145,7 @@ def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0)
             )
         limits = Limits(
             query_cap=300000 - qcharged,
-            final_reserve=165000,
+            final_reserve=211000,
             wall_seconds=remaining,
             discovery_seconds=min(14400, remaining - 7200),
         )

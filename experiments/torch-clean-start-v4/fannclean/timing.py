@@ -1,4 +1,4 @@
-"""Native-bracketed, randomized repeated blocks; retain every sample and control."""
+"""Adjacent randomized native/arm pairs; retain every sample and control."""
 
 import random
 from collections import defaultdict
@@ -43,17 +43,16 @@ def measure(cases, families, execute, seed, blocks=2):
         for case in order:
             arms = list(families(case))
             rng.shuffle(arms)
-            # Same reader for the whole bracket. Reader/core effects cannot rank arms.
+            # Keep both members of each randomized pair on the same reader.
             reader = block % 4
-            # Warm this exact query's buffer working set before BOTH baseline
-            # measurements. Otherwise the first baseline can price cache misses
-            # that no subsequent arm pays, producing fake savings for no-ops.
             warm = execute(case, "native", reader)
-            before = execute(case, "native", reader)
-            within = [(arm, execute(case, arm, reader)) for arm in arms]
-            after = execute(case, "native", reader)
-            baseline = (before["request_ns"] + after["request_ns"]) / 2
-            for arm, result in within:
+            for arm in arms:
+                # Cache settling takes several executions on the real graph.
+                # Never always put the baseline at the earlier/slower position.
+                order = ["native", arm]
+                rng.shuffle(order)
+                pair = {name: execute(case, name, reader) for name in order}
+                result, native = pair[arm], pair["native"]
                 records.append(
                     {
                         "phase": "sample",
@@ -65,14 +64,13 @@ def measure(cases, families, execute, seed, blocks=2):
                         "reader": reader,
                         "family": arm,
                         "request_ns": result["request_ns"],
-                        "native_ns": baseline,
-                        "native_before_ns": before["request_ns"],
-                        "native_after_ns": after["request_ns"],
+                        "native_ns": native["request_ns"],
+                        "native_ordinal": native["query_ordinal"],
+                        "pair_order": order,
+                        "measurement_design": "adjacent_randomized_pair_v1",
                         "query_ordinal": result["query_ordinal"],
-                        "native_before_ordinal": before["query_ordinal"],
                         "case_warmup_ns": warm["request_ns"],
                         "case_warmup_ordinal": warm["query_ordinal"],
-                        "native_after_ordinal": after["query_ordinal"],
                         "declared_blocks": blocks,
                         "declared_handles_sha256": declaration_hashes[arm],
                     }

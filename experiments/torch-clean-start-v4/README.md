@@ -2,7 +2,7 @@
 
 Status: native correctness and research-container isolation qualified locally;
 original-graph timing requalification is pending. **No Opus experiment has been
-run.** The initial real-graph timing gate rejected a cold-first baseline bias
+run.** Two real-graph timing attempts rejected a multi-step cache-settling bias
 before any paid model call. All qualification attempts and costs are retained.
 The seeded v3 live workflow remains disabled and its historical results remain
 unchanged.
@@ -23,7 +23,7 @@ frozen, a separate finalizer can attach the two existing cohort-fitted
 | Evidence acquisition | Agent chooses cases, conditions, checkpoints, and feature bundles. The worker executes fresh native and exact references and actual forced prefixes. It labels only executed prefixes; continuing to native never labels an earlier prefix safe. Same-run references may be reused with producer-query provenance. |
 | Feedback | Per-case recall, result counts, resource failures, causal counterexamples, and every timing sample remain available in read-only evidence files. Compact tool replies avoid flooding the model. A lossy candidate does not suppress other candidates' feedback. |
 | Feature cost | Agent can profile requested feature bundles with force-continuation and controls. Single-query acquisition timings are explicitly diagnostic. Complete SQL execution and result-materialization latency is the optimization target. |
-| Timing | Predeclared 2–6 blocks, randomized case/arm order, one reader/core per bracket, native measurements before/after each case, charged warmups, native clone, empty program, and matched continuation. Group/block bootstrap and per-condition control checks retain all samples. Failed controls are inconclusive. |
+| Timing | Predeclared 2–6 blocks, randomized case/arm order, one reader/core per adjacent native/arm pair, randomized order within each pair, charged warmups, native clone, empty program, and matched continuation. Group/block bootstrap and per-condition control checks retain all samples. Failed controls are inconclusive. |
 | Stopping | Normal finish requires evidence across all seven conditions, at least two completed evaluation rounds and two program structures, plus a substantive stopping report. A selected policy must preserve recall and result count on every development case and show controlled confirmation benefit over native and matched continuation. |
 | Budgets/liveness | Query envelopes checked before dispatch, durable reservations/debits, no blind retries, exact scoring and warmups charged, separate discovery/final reservations, context-sized model reservations, bounded research containers, heartbeats around model/tool work, fixed discovery and total clocks. Uncertain work stays charged. |
 
@@ -42,15 +42,15 @@ that clock, rather than rebuilding them between timed statements.
 | Resource | Proposed limit |
 |---|---:|
 | Total ANN + exact queries, including labels, warmups and controls | 300,000 |
-| Discovery allocation before qualification costs | 135,000 |
-| Reserved final allocation | 165,000 |
+| Discovery allocation before qualification costs | 89,000 |
+| Reserved final allocation | 211,000 |
 | Model accounting ceiling | $15 |
 | Worker wall time / discovery time | 6 hours / 4 hours |
 | Offline research action | 240 seconds, 2 GiB, 1 CPU, 128 processes |
 
 For the recorded 1,000-vector split (450 development, 150 validation, 275 test,
 125 historical exclusions), the conservative final envelope is
-`22 × 7000 + 4 × 1925 + 512 = 162,212` queries. This covers fresh references,
+`28 × 7000 + 6 × 1925 + 512 = 208,062` queries. This covers fresh references,
 agent/oracle quality checks, two randomized timing blocks and warmups. The test
 oracle is evaluated only on its fitted test cohort. Existing same-run development
 references can reduce actual final use. The final reservation cannot be borrowed
@@ -58,12 +58,22 @@ by discovery. Qualification costs are subtracted from discovery. Engineering
 allocation failures also consume the same six-hour cumulative wall allowance;
 neither experiment restarts nor budget resets are implemented.
 
-Each timed case receives an explicit full native warmup before both baseline
-measurements. Its ordinal and time remain in the raw records, and the warmup is
-charged. This addresses the cache bias detected by identical-query controls.
+Each timed case receives one charged native warmup. Each arm is then compared
+with an immediately adjacent native execution; their order is randomized, as is
+arm order. Original-graph diagnostics showed that latency kept falling over many
+identical executions: one warmup could not justify always measuring native first.
+The revised method removes that fixed positional advantage without assuming a
+warmup plateau. All pair orders, ordinals, warmups and measurements are retained.
+Negative controls still require per-condition equivalence within two percent.
+The fixed measurement order from both failed qualifications is retained in its
+historical raw records and is not pooled with the revised design.
+
 The full worst-case request reservation is durable before database work starts.
 Progress and query records checkpoint every 64 attempts and at normal completion;
-an interruption retains the full reservation until cleanup is verified.
+an interruption retains the full reservation until cleanup is verified. The
+qualification ceiling is 50,000 queries, including every earlier failed attempt
+and the 672-query native-only repeat diagnostic; the overall 300,000 ceiling is
+unchanged. Qualification costs reduce the agent's discovery allowance.
 
 Opus admission uses a fresh token-count estimate plus a margin of the greater of
 1,024 tokens or 10%, with the requested maximum output reserved at the reviewed
@@ -191,7 +201,7 @@ parity, membership format, and final freeze privacy.
 
 The PostgreSQL/container path passed local native output, feature, state, fault,
 fuel, forced-prefix parity and cleanup checks. The original Torch graph passed
-acquisition and cleanup, but its first timing controls failed. Revised timing
+acquisition and cleanup, but two timing controls failed. Revised timing
 controls, throughput and completion within the envelope still need qualification
 under the current run authorization. Improved search tools and Opus do not guarantee reaching the
 hindsight oracle. Labels and feature collection now have a real acquisition cost;

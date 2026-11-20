@@ -39,8 +39,9 @@ on the preceding DECLARED checkpoint; never mix observations from other schedule
 
 Exploratory quality failures return per-case counterexamples and do not suppress
 other candidates' feedback. Timings use independently randomized same-reader blocks
-with native brackets, matched continuation, clone and empty controls. Failed controls
-mean INCONCLUSIVE, not a winning point estimate. Request another predeclared block
+with adjacent randomized native pairs, matched continuation, clone and empty
+controls. Failed controls mean INCONCLUSIVE, not a winning point estimate.
+Request another predeclared block
 batch or refine the strategy when justified by the remaining resources.
 
 Before a policy can be frozen, confirm it on ALL development cases for zero native

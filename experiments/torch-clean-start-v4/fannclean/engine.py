@@ -126,7 +126,7 @@ class Engine:
             ):
                 raise ValueError("only declared causal features may be requested")
             return cases, 2 * missing + len(cases) * (1 + len(cps)) + (
-                12 * len(cases) + 8 * len(conditions) if kind == "profile" else 0
+                14 * len(cases) + 8 * len(conditions) if kind == "profile" else 0
             )
         policies = payload["policies"]
         if (
@@ -146,7 +146,7 @@ class Engine:
         # At most native+truth, candidate+independent forced-prefix per candidate, then brackets.
         timed = min(len(cases), 96 * 7) if kind == "confirm" else len(cases)
         return cases, 2 * missing + len(cases) * 2 * len(policies) + blocks * timed * (
-            5 + 2 * len(policies)
+            5 + 4 * len(policies)
         ) + blocks * len(conditions) * (3 + 2 * len(policies))
 
     def process(self, identity, payload):

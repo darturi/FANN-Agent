@@ -29,7 +29,7 @@ def status(root):
     development = read(root / "agent/task.json")["queries"]
     cached = {p.name for p in (root / "private/cache").glob("*.json")}
     missing = sum(digest(c["handle"]) + ".json" not in cached for c in development)
-    minimum_confirmation = 2 * missing + 2 * len(development) + 14 * min(len(development), 672) + 70
+    minimum_confirmation = 2 * missing + 2 * len(development) + 18 * min(len(development), 672) + 70
     return {
         **s,
         "discovery_seconds_remaining": max(0, limits.discovery_seconds - elapsed),
@@ -37,7 +37,7 @@ def status(root):
         "discovery_queries_remaining": max(
             0, limits.query_cap - limits.final_reserve - ledger["charged"]
         ),
-        "minimum_action_queries": 42,
+        "minimum_action_queries": 50,
         "minimum_confirmation_queries": minimum_confirmation,
         "queries_charged": ledger["charged"],
         "final_reserved": limits.final_reserve,
