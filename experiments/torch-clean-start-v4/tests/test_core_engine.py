@@ -467,3 +467,25 @@ def test_stale_control_file_reads_reopen_without_retrying_other_failures(tmp_pat
     with pytest.raises(PermissionError):
         core.read(p)
     assert len(delays) == 8
+
+
+def test_capture_keeps_requested_collectors_when_checkpoint_is_constant_folded():
+    from fannclean.engine import capture_policy
+
+    from fannagent.api.broad_policy import (
+        COUNT,
+        DISTANCE,
+        FRONTIER,
+        PREVIOUS,
+        TURNOVER,
+        compile_graph,
+    )
+
+    artifact = capture_policy([4, 8], list(FEATURES))
+    graph = compile_graph(artifact)
+    required = COUNT | DISTANCE | FRONTIER | PREVIOUS | TURNOVER
+    for program in graph["programs"].values():
+        for step in program["steps"].values():
+            assert step["mask"] & required == required
+    partial = compile_graph(capture_policy([4], ["checkpoint", "qualifying_count"]))
+    assert partial["programs"]["unfiltered"]["steps"][4]["mask"] & COUNT

@@ -1,0 +1,21 @@
+{
+  "status": "fixed_after_model_closure_for_future_runs",
+  "source_commit": "a1fe405",
+  "cause": "capture_policy ORs availability predicates; specialize(checkpoint) folds available(checkpoint) to true and removes other feature dependencies.",
+  "affected_requests": [
+    "8b24d651a21b4345b70a9881e516c323",
+    "4aedcc322493417b8a80738f0af63c80"
+  ],
+  "affected_observations": 203,
+  "prefix_labels_still_executed_and_valid": true,
+  "missing_feature_fields": true,
+  "agent_workaround": "Agent independently requested bundles excluding checkpoint; later requests collected requested nonconstant features.",
+  "coordinator_advice_to_model": false,
+  "runtime_source_changed": false,
+  "candidate_quality_and_final_comparison_use_actual_native_outputs": true,
+  "fix": "AND availability predicates preserve all requested feature dependencies after checkpoint specialization.",
+  "regression_tests_passed": 92,
+  "fix_applied_to_executed_episode": false,
+  "executed_source_commit": "a1fe405",
+  "qualification_gap": "Initial qualification checked frame shape and VM parity but did not assert every requested collector mask survived specialization."
+}

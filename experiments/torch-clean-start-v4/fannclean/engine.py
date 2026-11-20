@@ -22,7 +22,10 @@ def empty():
 def capture_policy(points, features):
     root = ["available", ["feature", features[0]]]
     for feature in features[1:]:
-        root = ["or", root, ["available", ["feature", feature]]]
+        # The capture arm always continues, so its decision is irrelevant.
+        # AND preserves other requested dependencies when available(checkpoint)
+        # specializes to True. OR would fold the whole collector to a constant.
+        root = ["and", root, ["available", ["feature", feature]]]
     return {
         **empty(),
         "name": "requested-observations",

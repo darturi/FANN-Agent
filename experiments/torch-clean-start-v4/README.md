@@ -204,6 +204,22 @@ If delivery is uncertain, retrieve the **existing** UUID recorded under
 logs, reservations and cleanup receipts remain private for an audit. There is no
 automatic continuation, experiment restart, or second final attempt.
 
+## Acquisition-helper correction after the replacement episode
+
+The executed replacement used source `a1fe405`. Its initial requests with
+`checkpoint` first in the feature list specialized the collector predicate to a
+constant, leaving other feature fields uncollected. The 203 affected prefix labels
+still came from executed forced prefixes. The agent identified missing values and
+independently requested a bundle excluding `checkpoint`, which collected the
+nonconstant features. No coordinator advice or runtime source change was applied.
+
+After model closure, the helper was changed to AND availability predicates so
+checkpoint specialization preserves every requested collector dependency. A
+regression now checks all collector masks, and all 92 regressions pass. This fix
+is for future runs; it was not applied retrospectively to the episode or its
+frozen comparison. The original qualification's frame/VM checks were insufficient
+to detect this collector-request bug. See `checks/acquisition-helper-regression.json`.
+
 ## Verification and remaining limits
 
 Run `pytest -q experiments/torch-clean-start-v4/tests` with the repository's Python
