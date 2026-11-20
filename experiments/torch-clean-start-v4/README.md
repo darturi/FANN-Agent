@@ -1,13 +1,25 @@
 # Clean-start policy discovery v4
 
-Status: native correctness, sandbox isolation and original-graph timing controls
-passed. The first clean-start Opus episode failed on a shared-filesystem stale
-handle during a heartbeat read, after 16 model calls, $1.228968 and 518 native/exact
-queries. It evaluated no candidate and produced no learned policy or final
-comparison. All requests settled and the model closed. The failed episode remains
-preserved. The user corrected the initial decline and approved one bounded replacement on
-November 19, 2026. The fresh replacement is running as job 23800555, with no
-observations or conversation imported from the failed episode.
+Status: **completed November 20, 2026; Opus voluntarily abstained**. Native
+correctness, sandbox isolation and original-graph timing controls passed. The
+first paid episode failed on a shared-filesystem stale handle before candidate
+evaluation; its 16 calls, $1.228968 and 518 queries remain preserved. The user
+explicitly approved one fresh empty replacement, job 23800555, with no evidence
+or conversation imported from the failed episode.
+
+The replacement acquired 3,957 actual prefix observations across 74 development
+vectors and evaluated two candidates, both with recall losses. Neither reached
+full confirmation. The global frozen outcome is native continuation: **0%
+operational savings on both cohorts**. Existing `oracle_feasible` policies rerun
+unchanged saved **67.67% held-out / 68.03% full** under passing final timing
+controls. The full oracle has three result-count losses despite preserving
+recall; it fails the agent's strict count requirement. The held-out oracle
+preserves both. See the [completed comparison](results/comparison-v1/REPORT.md).
+
+All requests settled and cleanup passed. Including qualification and the failed
+episode, use was $11.616176, 255,134 queries and 12,219 allocated seconds, within
+the original caps. The replacement's executed source is `a1fe405`; the later
+capture-helper fix `e623c4e` was not applied retrospectively.
 
 Control-file reads now reopen on bounded ESTALE retries; native operations,
 provider requests and uncertain deliveries are never retried. Heartbeat state is
@@ -230,11 +242,12 @@ stopping, query/model budgets, no retry, liveness, source neutralization, VM aud
 parity, membership format, and final freeze privacy.
 
 The PostgreSQL/container path passed local native output, feature, state, fault,
-fuel, forced-prefix parity and cleanup checks. The original Torch graph passed
-acquisition and cleanup, but two timing controls failed. Revised timing
-controls, throughput and completion within the envelope still need qualification
-under the current run authorization. Improved search tools and Opus do not guarantee reaching the
-hindsight oracle. Labels and feature collection now have a real acquisition cost;
+fuel, forced-prefix parity and cleanup checks. Earlier original-graph timing
+qualifications failed and remain preserved. Revised controls passed on the
+resident graph, and the final comparison completed with all controls passing
+within the envelope. Qualification missed the collector-request defect described
+above. Improved search tools and Opus did not reach the hindsight oracle in this
+episode. Labels and feature collection have a real acquisition cost;
 the hindsight oracle has cohort-wide labels the agent must earn. Single-allocation
 intervals omit adaptive selection and allocation variability. The historical
 held-out cohort has already been examined by earlier hindsight studies; it is

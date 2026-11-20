@@ -1,0 +1,32 @@
+{
+  "caps": {
+    "allocated_seconds": 21600,
+    "model_usd": "15",
+    "queries": 300000
+  },
+  "previous_qualification_and_failed_episode": {
+    "allocated_seconds": 4891,
+    "model_usd": "1.228968",
+    "queries": 55650
+  },
+  "replacement": {
+    "allocated_seconds": 7328,
+    "ann_queries": 192484,
+    "discovery_queries": 8565,
+    "exact_queries": 7000,
+    "final_queries": 190919,
+    "job_id": "23800555",
+    "model_usd": "10.387208",
+    "queries": 199484,
+    "status": "COMPLETED"
+  },
+  "stop_was_voluntary": true,
+  "total": {
+    "allocated_seconds": 12219,
+    "model_usd": "11.616176",
+    "queries": 255134
+  },
+  "unsettled_requests": 0,
+  "unused_replacement_discovery_queries": 40785,
+  "unused_shared_model_usd": "3.383824"
+}

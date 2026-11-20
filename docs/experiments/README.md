@@ -1,8 +1,8 @@
 # Master experiment index
 
-Updated: November 19, 2026, America/New_York. Saved work reviewed through the
+Updated: November 20, 2026, America/New_York. Saved work reviewed through the
 methodological correction, retirement of the seeded v3 workflow, and clean-start v4
-qualification and the first failed clean-start episode. This is the entry
+qualification, first failed episode and completed approved replacement. This is the entry
 point for the saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
 paths are relative to this document and require the sibling workspace folders;
 cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data.
@@ -11,8 +11,9 @@ cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data
 development measurements from earlier oracle runs. It is invalid for the
 intended clean-start discovery experiment, and claims about discovery from that
 starting condition are withdrawn. The raw seeded-run record remains preserved.
-Its live workflow is retired. The first clean replacement episode failed before
-candidate evaluation; it produced no replacement performance result. See the
+Its live workflow is retired. The first clean-start episode failed before
+candidate evaluation. The approved fresh replacement voluntarily abstained, and
+its frozen native/oracle comparison is reported below. See the
 [erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md).
 
 - [Complete saved-run catalog](RUN_CATALOG.md): individual attempts, failures,
@@ -24,10 +25,10 @@ candidate evaluation; it produced no replacement performance result. See the
 - [Backup audit](BACKUP_AUDIT.md): verified local integrity, missing artifacts,
   remote-check results and outstanding backup coverage.
 
-The refreshed inventory contains 2,082 saved evidence records and 15 experiments
+The refreshed inventory contains 2,110 saved evidence records and 15 experiments
 registered inside saved agent journals. Locations include definitions, receipts,
 repeated blocks, analyses, packages and synthetic checks; they are not a count of
-independent scientific experiments. It now discovers 467 archives. The most recent
+independent scientific experiments. It now discovers 469 archives. The most recent
 full archive hash audit covered 455 source,
 runtime, engineering and result archives, totaling 23,552,337,387 bytes. All 193
 with usable checksum sidecars match; 262 have no usable earlier sidecar. The
@@ -35,7 +36,7 @@ October 21 inventory had 292 records and 207 archives. The increased record coun
 reflects both later work and expanded discovery of Markdown reports, receipts,
 freezes and experiment definitions; it is not a count of new launches.
 
-## Current study status — November 19, 2026
+## Current study status — November 20, 2026
 
 The active benchmark study uses raw ANN outputs with **exact search for offline
 scoring only**. All six scalar filters plus unfiltered remain in scope. The
@@ -57,8 +58,8 @@ criteria below retain their original conclusions.
 | Historical live Torch feedback v1 prototype | Local compiler, synthetic PostgreSQL and controller checks pass. That v1 prototype remains local-only; the separate v3 episode is recorded below. M4/M5 and oracle results retain their original scope. | [Prototype status and boundaries](../../experiments/torch-live-feedback-v1/README.md), [verification](../../experiments/torch-live-feedback-v1/verification.json) |
 | Earlier hindsight oracles | Count-preserving oracle and subsequent three-level v2 comparison completed on both cohorts. All intended-cohort recall gates pass; strict per-condition timing equivalence is not established. Preserve their separate quality gates and allocations. | [Count-preserving oracle](../../experiments/full-workload-oracle-v1/README.md), [three-level comparison](../../experiments/oracle-variants-v1/results/REPORT.md) |
 | Broader-language feasible oracle | Completed job 23719580 after preserved cancellation and failed qualification. One ordinary v3 policy per cohort saves a descriptive 64.95% on 1,925 test cases and 68.39% on 7,000 full-workload cases, versus 21.37% / 19.80% for the prior v2 policies rerun alongside it. Zero intended-cohort recall losses; timing controls fail the strict equivalence requirement. | [Verified comparison](../../experiments/broad-oracle-v1/results/REPORT.md), [accounting](../../experiments/broad-oracle-v1/results/accounting.json), [completed resume](../../experiments/broad-oracle-v1/RESUMED.json) |
-| V3 agent controller and discovery | **Invalid for intended clean-start discovery; live workflow retired.** Jobs 23741092 / 23747524 started with measurements inherited from earlier oracle runs. The latency/quality record is retained as a seeded-development run, and clean-start discovery claims are withdrawn. No compliant replacement result exists. The Opus model preference does not fix the acquisition defect. | [Methodological erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md), [historical measurements](../../experiments/torch-live-feedback-v3/results/comparison-v1/REPORT.md), [original discovery receipt](../../experiments/torch-live-feedback-v3/results/agent-discovery.json) |
-| Clean-start v4 replacement | **Native/container and original-graph timing qualified; first paid episode failed on shared-filesystem I/O before candidate evaluation.** Verified empty Opus 5.5 start; 16 calls, $1.228968 and 518 queries acquired 203 observations across three development vectors. No learned policy or latency comparison. Bounded stale-read recovery passed 91 regressions and a cross-node test with nine real stale handles. The user corrected the decline and approved one empty replacement, now running as job 23800555 within the remaining shared caps. | [Native qualification](../../experiments/torch-clean-start-v4/checks/native-container-torch.json), [failed episode](../../experiments/torch-clean-start-v4/checks/first-episode-failure.json), [repair](../../experiments/torch-clean-start-v4/checks/metadata-read-recovery.json), [prepared replacement](../../experiments/torch-clean-start-v4/REPLACEMENT.md) |
+| V3 agent controller and discovery | **Invalid for intended clean-start discovery; live workflow retired.** Jobs 23741092 / 23747524 started with measurements inherited from earlier oracle runs. The latency/quality record is retained as a seeded-development run, and clean-start discovery claims are withdrawn. The clean v4 disposition appears below; changing the model alone does not fix inherited evidence. | [Methodological erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md), [historical measurements](../../experiments/torch-live-feedback-v3/results/comparison-v1/REPORT.md), [original discovery receipt](../../experiments/torch-live-feedback-v3/results/agent-discovery.json) |
+| Clean-start v4 replacement | **Completed with voluntary abstention: 0% operational agent savings.** First paid filesystem failure preserved; the explicitly approved empty replacement, job 23800555, acquired 3,957 observations across 74 development vectors, evaluated two unsafe candidates and attempted no full confirmation. Fresh unchanged feasible-oracle reruns saved **67.67% held-out / 68.03% full** with passing timing controls. Full oracle has three count losses despite zero recall losses; held-out preserves both. Global use $11.616176 / 255,134 queries / 12,219 allocated seconds, all within caps. Capture-helper defect affected 203 feature frames; agent found a workaround, and the future fix was made after model closure. | [Completed comparison](../../experiments/torch-clean-start-v4/results/comparison-v1/REPORT.md), [raw audit](../../experiments/torch-clean-start-v4/results/comparison-v1/audit.json), [accounting](../../experiments/torch-clean-start-v4/results/comparison-v1/accounting.json), [native qualification](../../experiments/torch-clean-start-v4/checks/native-container-torch.json), [first failure](../../experiments/torch-clean-start-v4/checks/first-episode-failure.json) |
 
 The returned M5 archive and independent scheduler accounting remain the evidence
 gate for the frozen development nominees. The completed oracle diagnostic does
@@ -73,6 +74,51 @@ the [November 5–16 log additions](#experiment-log-update--november-516-2026),
 and the [benchmark roadmap](../../../research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md)
 for the longer narrative. Read dated later assessments when an older preparation
 paragraph or roadmap header still describes a pending stage.
+
+## Clean-start Opus replacement result — November 20, 2026
+
+The user explicitly corrected the initial decline and authorized one fresh
+replacement. UUID `c3735ec6f1b14fbabfde895c0d9892d4`, job 23800555, executed
+sealed source `a1fe405` from a verified empty empirical workspace and new
+`claude-opus-5-5` adaptive/high conversation. No failed-episode, qualification or
+oracle observations, policies, thresholds or messages were imported.
+
+Opus made 38 settled paid calls ($10.387208), acquired 3,957 actual prefix
+observations across 74 of 450 development vectors, and evaluated two candidate
+structures. A depth-3 tree lost recall on three of 14 screened cases; a gap-margin
+rule lost recall on one of 98 unseen-development cases. Both timing screens
+also failed controls. Neither reached the full development confirmation gate.
+Opus voluntarily abstained with 40,785 discovery queries and $3.383824 of shared
+model budget unused. Its approximate stopping-report counts are superseded by
+the actual journals. Growing input context accounted for 93.1% of model cost.
+
+After verified model closure and freeze, the finalizer opened the existing two
+cohort-fitted feasible-oracle artifacts and reran them unchanged. The same global
+native-outcome artifact was used on both cohorts: **0% operational agent savings**.
+Oracle savings were **67.67%** on 1,925 held-out cases (95% interval
+65.96–69.38%) and **68.03%** on 7,000 full cases (67.13–68.91%). All overall and
+per-filter clone/empty timing control gates passed. No final feedback went to
+the model. The full oracle preserved recall but had three result-count losses;
+it does not satisfy the agent's stricter quality gate. The held-out oracle
+preserved both recall and count. Neither is a certified globally optimal policy.
+
+The executed capture helper lost nonconstant collector dependencies when a
+`checkpoint` availability predicate specialized to true. This affected features
+on 203 initial observations; their actual forced-prefix labels remained valid.
+The agent detected the null features itself and requested a working bundle.
+No coordinator hint or runtime patch was supplied. Qualification had missed the
+requested-collector mask check. After model closure, `e623c4e` repaired the helper
+and added that regression; all 92 regressions passed. The recorded episode and
+frozen comparison still use the original executed source.
+
+The final audit verifies 15,925 complete quality rows, 73,850 primary timing rows
+over two blocks, all nine query requests settled, complete journal ordinals and
+private database cleanup. The replacement used 199,484 queries and 7,328
+allocated seconds. Including qualification and the preserved failed first
+episode, totals were **$11.616176, 255,134 queries and 12,219 allocated seconds
+(3h23m39s)**, within $15 / 300,000 / six hours. Slurm reports `COMPLETED`, exit
+`0:0`; the allocation was released. No additional model episode or final attempt
+was launched. See the [comparison and raw evidence map](../../experiments/torch-clean-start-v4/results/comparison-v1/REPORT.md).
 
 ## Clean-start qualification and failed episode — November 19, 2026
 
@@ -110,13 +156,14 @@ cumulative queries are 55,650. The job's completed scheduler state describes its
 supervisor exit, not a successful agent episode.
 
 A new UUID and sealed zero-evidence package were prepared under the remaining
-$13.771032, 244,350 queries and cumulative six-hour ceiling. No authorization,
-worker or second paid conversation has started. The original request specified
+$13.771032, 244,350 queries and cumulative six-hour ceiling. At preparation no
+authorization, worker or second paid conversation had started. The original request specified
 one experiment, so the [concrete replacement plan](../../experiments/torch-clean-start-v4/REPLACEMENT.md)
 was initially declined, then explicitly approved by correction on November 19.
-Job 23800555 now runs UUID `c3735ec6f1b14fbabfde895c0d9892d4` from a verified
-empty journal and fresh conversation. No failed-episode or qualification evidence
-is imported, and the original shared caps are unchanged. Original
+Job 23800555 subsequently ran UUID `c3735ec6f1b14fbabfde895c0d9892d4` from a verified
+empty journal and fresh conversation; its completed result is recorded above.
+No failed-episode or qualification evidence was imported, and the original shared caps
+were unchanged. Original
 seeded-v3 artifacts remain unchanged and invalid for
 clean-start discovery claims. The implementation-only entry below predates this
 qualification and failed episode.

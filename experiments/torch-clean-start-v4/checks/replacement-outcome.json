@@ -1,19 +1,49 @@
 {
-  "status": "approved_replacement_running",
+  "status": "completed_abstained_and_frozen_comparison",
   "user_instruction": "Sorry what I meant to say is do run replacement",
   "decision_date": "2026-11-19",
   "run_id": "c3735ec6f1b14fbabfde895c0d9892d4",
   "authorization": true,
   "worker_started": true,
-  "paid_calls": 0,
-  "ann_or_exact_queries": 0,
+  "paid_calls": 38,
+  "ann_or_exact_queries": 199484,
   "previous_allocation_ended": true,
   "previous_job": "23795553",
-  "total_model_charged_usd": "1.228968",
-  "total_queries_charged": 55650,
-  "total_allocated_seconds": 4891,
+  "total_model_charged_usd": "11.616176",
+  "total_queries_charged": 255134,
+  "total_allocated_seconds": 12219,
   "supersedes": "user_declined_not_started",
   "job_id": "23800555",
   "initial_empirical_records": 0,
-  "inherited_messages": 0
+  "inherited_messages": 0,
+  "completion_date": "2026-11-20",
+  "source_commit": "a1fe405",
+  "all_requests_settled": true,
+  "cleanup_verified": true,
+  "worker_status": "completed_frozen_comparison",
+  "scheduler_status": "COMPLETED",
+  "model_disposition": "abstained",
+  "resource_exit": false,
+  "final_request_id": "aec5e58c34d8432a9237a544da72359e",
+  "freeze_sha256": "dc435b8d468ce8377d2de6a68b1409acf87cbdd3e4f0c20e1e4260c6271147a9",
+  "agent_operational_savings_percent": {
+    "held_out": 0,
+    "full": 0
+  },
+  "oracle_savings_percent": {
+    "held_out": 67.67092681675315,
+    "full": 68.02886403564654
+  },
+  "final_timing_controls_pass": {
+    "held_out": true,
+    "full": true
+  },
+  "oracle_count_loss_cases": {
+    "held_out": 0,
+    "full": 3
+  },
+  "replacement_model_charged_usd": "10.387208",
+  "report": "../results/comparison-v1/REPORT.md",
+  "future_capture_fix_commit": "e623c4e",
+  "future_fix_applied_to_episode": false
 }

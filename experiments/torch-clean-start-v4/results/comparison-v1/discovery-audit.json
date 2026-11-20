@@ -1,0 +1,31 @@
+{
+  "status": "model_closed_abstained",
+  "run_id": "c3735ec6f1b14fbabfde895c0d9892d4",
+  "model_calls": 38,
+  "settled_calls": 38,
+  "input_tokens": 2418442,
+  "output_tokens": 35672,
+  "input_usd": "9.673768",
+  "output_usd": "0.713440",
+  "model_usd": "10.387208",
+  "tools": {
+    "finish": 1,
+    "research_python": 25,
+    "acquire": 4,
+    "plan_search": 2,
+    "profile_features": 2,
+    "evaluate": 4,
+    "inspect_state": 1,
+    "list_queries": 1,
+    "fit_policy": 1
+  },
+  "research_actions": 25,
+  "research_errors": 4,
+  "observations": 3957,
+  "observed_vector_groups": 74,
+  "evaluation_rounds": 2,
+  "candidate_count": 2,
+  "full_confirmation_attempts": 0,
+  "frozen_outcome": "abstained",
+  "model_report_group_count_is_estimate": true
+}

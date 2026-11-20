@@ -1,0 +1,206 @@
+{
+  "archives_sha256": {
+    "final-compiled-module.tar.gz": "1b38df22efc6a6082623eb081b04cde12d322cf02f67411fb4f3758014d3608b",
+    "final-returns.tar.gz": "f23b55e64732a60179e2836007b0398e7cf76d47e20c9b2a8c011927ef8f11d1"
+  },
+  "compiled_module": {
+    "arms": {
+      "candidate:0": 61,
+      "empty": 60,
+      "matched:0": 62,
+      "oracle_full": 63,
+      "oracle_test": 64
+    },
+    "manifest_hash": "fa6ee5110ad5d79837d0d5dea3c7a7b55f49663418fc947bd58f7483426b92b0",
+    "sha256": "5337ed3d9344a63a9040818c64fa634df8c53452ee2397c364071bace0f0e216"
+  },
+  "final_request_id": "aec5e58c34d8432a9237a544da72359e",
+  "freeze_sha256": "dc435b8d468ce8377d2de6a68b1409acf87cbdd3e4f0c20e1e4260c6271147a9",
+  "journals": {
+    "4aedcc322493417b8a80738f0af63c80": {
+      "families": {
+        "capture": 7,
+        "exact": 7,
+        "forced": 63,
+        "native": 7
+      },
+      "rows": 84
+    },
+    "7d37956b56b949018d7a550a8c2b9774": {
+      "families": {
+        "capture": 350,
+        "exact": 350,
+        "forced": 3423,
+        "native": 350
+      },
+      "rows": 4473
+    },
+    "860ae0792ab849b2a1b2df848ebc7fc6": {
+      "families": {
+        "candidate:0": 56,
+        "clone": 42,
+        "empty": 42,
+        "forced": 14,
+        "matched:0": 42,
+        "native": 154
+      },
+      "rows": 350
+    },
+    "8b24d651a21b4345b70a9881e516c323": {
+      "families": {
+        "capture": 98,
+        "clone": 70,
+        "empty": 70,
+        "exact": 28,
+        "forced": 140,
+        "native": 266
+      },
+      "rows": 672
+    },
+    "9626008d08cb47269158c4c39b246715": {
+      "families": {
+        "candidate:0": 308,
+        "clone": 210,
+        "empty": 210,
+        "exact": 98,
+        "forced": 56,
+        "matched:0": 210,
+        "native": 1092
+      },
+      "rows": 2184
+    },
+    "aec5e58c34d8432a9237a544da72359e": {
+      "families": {
+        "candidate:0": 21014,
+        "clone": 14014,
+        "empty": 14014,
+        "exact": 6486,
+        "forced": 224,
+        "matched:0": 14014,
+        "native": 94350,
+        "oracle_full": 21014,
+        "oracle_test": 5789
+      },
+      "rows": 190919
+    },
+    "c36972cfa7ba4676b06499ee45602175": {
+      "families": {
+        "capture": 98,
+        "clone": 70,
+        "empty": 70,
+        "exact": 28,
+        "forced": 252,
+        "native": 266
+      },
+      "rows": 784
+    },
+    "ce1e68c66cb640379f7186fa263cbb61": {
+      "families": {
+        "capture": 1,
+        "exact": 1,
+        "forced": 3,
+        "native": 1
+      },
+      "rows": 6
+    },
+    "e2bb6c0dcf5741e9a7eb4935b7737757": {
+      "families": {
+        "capture": 2,
+        "exact": 2,
+        "forced": 6,
+        "native": 2
+      },
+      "rows": 12
+    }
+  },
+  "no_native_or_provider_dispatch": true,
+  "oracle_count_loss_cases": [
+    {
+      "checkpoint": 98,
+      "count": 9,
+      "exhausted": false,
+      "family": "oracle_full",
+      "fault": false,
+      "filter": 527,
+      "group": "q0081",
+      "handle": "q0081-v527",
+      "independent_forced_prefix_audit": false,
+      "native_count": 10,
+      "native_recall": 0.7,
+      "query_ordinal": 3618,
+      "recall": 0.7,
+      "request_id": "aec5e58c34d8432a9237a544da72359e",
+      "role": "development",
+      "run_id": "c3735ec6f1b14fbabfde895c0d9892d4"
+    },
+    {
+      "checkpoint": 101,
+      "count": 6,
+      "exhausted": false,
+      "family": "oracle_full",
+      "fault": false,
+      "filter": 527,
+      "group": "q0808",
+      "handle": "q0808-v527",
+      "independent_forced_prefix_audit": false,
+      "native_count": 7,
+      "native_recall": 0.6,
+      "query_ordinal": 16988,
+      "recall": 0.6,
+      "request_id": "aec5e58c34d8432a9237a544da72359e",
+      "role": "validation",
+      "run_id": "c3735ec6f1b14fbabfde895c0d9892d4"
+    },
+    {
+      "checkpoint": 61,
+      "count": 7,
+      "exhausted": false,
+      "family": "oracle_full",
+      "fault": false,
+      "filter": 310,
+      "group": "q0013",
+      "handle": "q0013-v310",
+      "independent_forced_prefix_audit": false,
+      "native_count": 9,
+      "native_recall": 0.5,
+      "query_ordinal": 22970,
+      "recall": 0.5,
+      "request_id": "aec5e58c34d8432a9237a544da72359e",
+      "role": "validation",
+      "run_id": "c3735ec6f1b14fbabfde895c0d9892d4"
+    }
+  ],
+  "panels": {
+    "candidate:0": {
+      "0": 7000,
+      "1": 7000
+    },
+    "clone": {
+      "0": 7000,
+      "1": 7000
+    },
+    "empty": {
+      "0": 7000,
+      "1": 7000
+    },
+    "matched:0": {
+      "0": 7000,
+      "1": 7000
+    },
+    "oracle_full": {
+      "0": 7000,
+      "1": 7000
+    },
+    "oracle_test": {
+      "0": 1925,
+      "1": 1925
+    }
+  },
+  "primary_timing_rows": 73850,
+  "quality_rows": 15925,
+  "raw_trial": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-clean-start-v4/replacement-prepared-v1",
+  "run_id": "c3735ec6f1b14fbabfde895c0d9892d4",
+  "source_commit": "a1fe405",
+  "status": "passed_complete_saved_returns",
+  "timing_rows_including_arm_warmups": 73948
+}
