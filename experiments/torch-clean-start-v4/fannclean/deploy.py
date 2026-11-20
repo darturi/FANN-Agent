@@ -80,6 +80,12 @@ def package(
         raise ValueError("snapshot links are not allowed")
     task = prepare(root, cases, limits)
     code = root / "code"
+    if (PROJECT / "host-vendor").is_dir():
+        shutil.copytree(
+            PROJECT / "host-vendor",
+            code / "host-vendor",
+            ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
+        )
     shutil.copytree(
         EXPERIMENT,
         code / "experiments/torch-clean-start-v4",
