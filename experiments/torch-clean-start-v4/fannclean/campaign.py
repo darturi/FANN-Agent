@@ -25,7 +25,7 @@ REQUEST = (
 )
 
 
-def run(parent, snapshot, image, research_image, local_queries):
+def run(parent, snapshot, image, research_image, local_queries, prior_seconds=0):
     parent = Path(parent).resolve()
     job = os.environ["SLURM_JOB_ID"]
     started = time.time()
@@ -138,7 +138,7 @@ def run(parent, snapshot, image, research_image, local_queries):
             )
         if qcharged > 15000:
             raise ValueError("qualification exceeded its total query envelope")
-        remaining = int(21600 - (time.time() - started) - 120)
+        remaining = int(21600 - prior_seconds - (time.time() - started) - 120)
         if remaining <= 10800:
             raise ValueError(
                 "qualification left too little time for a useful independent experiment"
@@ -174,6 +174,7 @@ def run(parent, snapshot, image, research_image, local_queries):
                 "qualification_queries": qcharged,
                 "provider_usd_limit": "15",
                 "wall_seconds_including_qualification_limit": 21600,
+                "prior_bootstrap_allocation_seconds": prior_seconds,
             },
         )
         initial = parent / "initial-package.tar.gz"
@@ -256,8 +257,16 @@ def main():
     p.add_argument("--image", type=Path, required=True)
     p.add_argument("--research-image", required=True)
     p.add_argument("--local-qualification-queries", type=int, required=True)
+    p.add_argument("--prior-allocation-seconds", type=int, default=0)
     a = p.parse_args()
-    run(a.parent, a.snapshot, a.image, a.research_image, a.local_qualification_queries)
+    run(
+        a.parent,
+        a.snapshot,
+        a.image,
+        a.research_image,
+        a.local_qualification_queries,
+        a.prior_allocation_seconds,
+    )
 
 
 if __name__ == "__main__":
