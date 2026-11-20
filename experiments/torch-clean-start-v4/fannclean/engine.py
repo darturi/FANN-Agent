@@ -62,7 +62,9 @@ class Engine:
         config = read(self.root / "config.json")
         self.run_id, self.limits = config["run_id"], Limits(**config["limits"])
         self.cases = {r["handle"]: r for r in read(self.root / "private/cases.json")}
-        self.ledger = Ledger(self.root / "private/query-ledger.json", self.limits, self.run_id)
+        self.ledger = Ledger(
+            self.root / "private/query-ledger.json", self.limits, self.run_id, checkpoint_every=64
+        )
 
     def selection(self, payload):
         if payload["kind"] in ("confirm", "final"):
@@ -124,7 +126,7 @@ class Engine:
             ):
                 raise ValueError("only declared causal features may be requested")
             return cases, 2 * missing + len(cases) * (1 + len(cps)) + (
-                10 * len(cases) + 8 * len(conditions) if kind == "profile" else 0
+                12 * len(cases) + 8 * len(conditions) if kind == "profile" else 0
             )
         policies = payload["policies"]
         if (
@@ -144,7 +146,7 @@ class Engine:
         # At most native+truth, candidate+independent forced-prefix per candidate, then brackets.
         timed = min(len(cases), 96 * 7) if kind == "confirm" else len(cases)
         return cases, 2 * missing + len(cases) * 2 * len(policies) + blocks * timed * (
-            4 + 2 * len(policies)
+            5 + 2 * len(policies)
         ) + blocks * len(conditions) * (3 + 2 * len(policies))
 
     def process(self, identity, payload):
@@ -177,7 +179,11 @@ class Engine:
             for name in ("oracle_full", "oracle_test"):
                 validate(refs[name])
                 program_bindings[name] = (refs[name], False)
-        with self.factory(program_bindings, request_dir) as backend:
+        with (
+            self.ledger.checkpoint_on_exit(),
+            self.factory(program_bindings, request_dir) as backend,
+            (request_dir / "queries.jsonl").open("ab", buffering=262144) as journal,
+        ):
             reference_memory = {}
 
             def query(case, family, reader=0, audit=False, checkpoint=None):
@@ -189,21 +195,21 @@ class Engine:
                     raise ValueError("invalid native timer")
                 result["query_ordinal"] = ordinal
                 # Preserve completed measurements even when a later query/cleanup fails.
-                with (request_dir / "queries.jsonl").open("ab") as stream:
-                    stream.write(
-                        canonical(
-                            {
-                                "handle": case["handle"],
-                                "family": family,
-                                "reader": reader,
-                                "forced_checkpoint": checkpoint,
-                                "result": result,
-                            }
-                        )
-                        + b"\n"
+                journal.write(
+                    canonical(
+                        {
+                            "handle": case["handle"],
+                            "family": family,
+                            "reader": reader,
+                            "forced_checkpoint": checkpoint,
+                            "result": result,
+                        }
                     )
-                    stream.flush()
-                    __import__("os").fsync(stream.fileno())
+                    + b"\n"
+                )
+                if ordinal % 64 == 0:
+                    journal.flush()
+                    __import__("os").fsync(journal.fileno())
                 return result
 
             def baseline(case):
@@ -430,6 +436,8 @@ class Engine:
                 )
             write(request_dir / "quality.json", raw_quality)
             write(request_dir / "timing.json", timing)
+            journal.flush()
+            __import__("os").fsync(journal.fileno())
         self.ledger.settle(identity, backend.cleanup_verified)
         result = {
             "run_id": self.run_id,

@@ -248,12 +248,12 @@ def test_query_budget_rejection_happens_before_compilation_or_queueing(stage, ca
     active(stage)
     config = read(stage / "config.json")
     ledger = Ledger(stage / "private/query-ledger.json", Limits(), config["run_id"])
-    ledger.reserve("spent", 144999)
+    ledger.reserve("spent", 134999)
     for _ in range(1):
         # Settle a synthetic already-issued debit without running any query.
         ledger.tick("spent", "ann")
     s = read(ledger.path)
-    s["requests"]["spent"]["actual"] = 144999
+    s["requests"]["spent"]["actual"] = 134999
     write(ledger.path, s)
     ledger.settle("spent", True)
     identity = uuid.uuid4().hex

@@ -45,6 +45,10 @@ def measure(cases, families, execute, seed, blocks=2):
             rng.shuffle(arms)
             # Same reader for the whole bracket. Reader/core effects cannot rank arms.
             reader = block % 4
+            # Warm this exact query's buffer working set before BOTH baseline
+            # measurements. Otherwise the first baseline can price cache misses
+            # that no subsequent arm pays, producing fake savings for no-ops.
+            warm = execute(case, "native", reader)
             before = execute(case, "native", reader)
             within = [(arm, execute(case, arm, reader)) for arm in arms]
             after = execute(case, "native", reader)
@@ -66,6 +70,8 @@ def measure(cases, families, execute, seed, blocks=2):
                         "native_after_ns": after["request_ns"],
                         "query_ordinal": result["query_ordinal"],
                         "native_before_ordinal": before["query_ordinal"],
+                        "case_warmup_ns": warm["request_ns"],
+                        "case_warmup_ordinal": warm["query_ordinal"],
                         "native_after_ordinal": after["query_ordinal"],
                         "declared_blocks": blocks,
                         "declared_handles_sha256": declaration_hashes[arm],

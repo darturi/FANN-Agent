@@ -1,9 +1,11 @@
 # Clean-start policy discovery v4
 
-Status: implementation and offline unit verification only. **No experiment has
-been run.** No provider request, database query, SSH session, container, or Slurm
-allocation was started while implementing this replacement. The seeded v3 live
-workflow remains disabled and its historical results remain unchanged.
+Status: native correctness and research-container isolation qualified locally;
+original-graph timing requalification is pending. **No Opus experiment has been
+run.** The initial real-graph timing gate rejected a cold-first baseline bias
+before any paid model call. All qualification attempts and costs are retained.
+The seeded v3 live workflow remains disabled and its historical results remain
+unchanged.
 
 This controller uses `claude-opus-5-5`, adaptive thinking, high effort, and up to
 16,000 output tokens per request (including reasoning). It discovers one ordinary
@@ -40,19 +42,28 @@ that clock, rather than rebuilding them between timed statements.
 | Resource | Proposed limit |
 |---|---:|
 | Total ANN + exact queries, including labels, warmups and controls | 300,000 |
-| Discovery allocation | 145,000 |
-| Reserved final allocation | 155,000 |
+| Discovery allocation before qualification costs | 135,000 |
+| Reserved final allocation | 165,000 |
 | Model accounting ceiling | $15 |
 | Worker wall time / discovery time | 6 hours / 4 hours |
 | Offline research action | 240 seconds, 2 GiB, 1 CPU, 128 processes |
 
 For the recorded 1,000-vector split (450 development, 150 validation, 275 test,
 125 historical exclusions), the conservative final envelope is
-`20 × 7000 + 4 × 1925 + 512 = 148,212` queries. This covers fresh references,
+`22 × 7000 + 4 × 1925 + 512 = 162,212` queries. This covers fresh references,
 agent/oracle quality checks, two randomized timing blocks and warmups. The test
 oracle is evaluated only on its fitted test cohort. Existing same-run development
 references can reduce actual final use. The final reservation cannot be borrowed
-by discovery. No continuation allocation or budget reset is implemented.
+by discovery. Qualification costs are subtracted from discovery. Engineering
+allocation failures also consume the same six-hour cumulative wall allowance;
+neither experiment restarts nor budget resets are implemented.
+
+Each timed case receives an explicit full native warmup before both baseline
+measurements. Its ordinal and time remain in the raw records, and the warmup is
+charged. This addresses the cache bias detected by identical-query controls.
+The full worst-case request reservation is durable before database work starts.
+Progress and query records checkpoint every 64 attempts and at normal completion;
+an interruption retains the full reservation until cleanup is verified.
 
 Opus admission uses a fresh token-count estimate plus a margin of the greater of
 1,024 tokens or 10%, with the requested maximum output reserved at the reviewed
@@ -178,10 +189,11 @@ prefix labels, per-case feedback, timing completeness, quality/control gates,
 stopping, query/model budgets, no retry, liveness, source neutralization, VM audit
 parity, membership format, and final freeze privacy.
 
-The new PostgreSQL/container path has **not** been executed or qualified on Torch.
-Its build compatibility, snapshot startup/cleanup, timing controls, throughput
-and completion within the envelope need verification during a separately
-authorized run. Improved search tools and Opus do not guarantee reaching the
+The PostgreSQL/container path passed local native output, feature, state, fault,
+fuel, forced-prefix parity and cleanup checks. The original Torch graph passed
+acquisition and cleanup, but its first timing controls failed. Revised timing
+controls, throughput and completion within the envelope still need qualification
+under the current run authorization. Improved search tools and Opus do not guarantee reaching the
 hindsight oracle. Labels and feature collection now have a real acquisition cost;
 the hindsight oracle has cohort-wide labels the agent must earn. Single-allocation
 intervals omit adaptive selection and allocation variability. The historical

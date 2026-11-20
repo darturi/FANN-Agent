@@ -212,7 +212,7 @@ def test_controls_and_confirmation_gate(stage, cases):
 
 def test_warmups_are_charged_and_predeclared_partial_blocks_rejected(stage, cases):
     answer = process(stage, request("profile", cases))
-    assert answer["ledger"]["charged"] == 14 * 5 + 14 * 10 + 56
+    assert answer["ledger"]["charged"] == 14 * 5 + 14 * 12 + 56
     records = answer["samples"]
     assert sum(r["phase"] == "warmup" for r in records) == 56
     assert answer["timing"]["families"]["capture"]["all"]["savings_percent"] == 0
@@ -272,9 +272,60 @@ def test_declared_full_workload_leaves_real_cold_acquisition_budget(tmp_path):
     task = prepare(root, cases)
     assert len(task["queries"]) == 3150
     config = read(root / "config.json")
-    assert config["final_worst"] == 148212
-    assert config["limits"]["final_reserve"] == 155000
-    assert config["limits"]["query_cap"] - config["limits"]["final_reserve"] == 145000
+    assert config["final_worst"] == 162212
+    assert config["limits"]["final_reserve"] == 165000
+    assert config["limits"]["query_cap"] - config["limits"]["final_reserve"] == 135000
+
+
+def test_batched_progress_crash_still_holds_full_durable_query_reservation(tmp_path):
+    path = tmp_path / "ledger.json"
+    ledger = Ledger(path, Limits(), "run", checkpoint_every=64)
+    ledger.reserve("request", 1000)
+    for _ in range(7):
+        ledger.tick("request", "ann")
+    saved = read(path)
+    assert saved["charged"] == 1000 and saved["requests"]["request"]["actual"] == 0
+    # Simulate loss of all in-memory progress. The ceiling protection survives.
+    restarted = Ledger(path, Limits(), "run", checkpoint_every=64)
+    with pytest.raises(ValueError, match="uncertain"):
+        restarted.reserve("duplicate", 1)
+    ledger.settle("request", True)
+    assert read(path)["charged"] == 7
+    assert read(path)["requests"]["request"]["actual"] == 7
+
+
+def test_batched_progress_flushes_caught_failures_without_releasing_reservation(tmp_path):
+    ledger = Ledger(tmp_path / "ledger.json", Limits(), "run", checkpoint_every=64)
+    ledger.reserve("request", 1000)
+    with pytest.raises(RuntimeError):
+        with ledger.checkpoint_on_exit():
+            ledger.tick("request", "ann")
+            raise RuntimeError("known failure")
+    assert read(ledger.path)["requests"]["request"]["actual"] == 1
+    assert read(ledger.path)["charged"] == 1000
+
+
+def test_per_case_warmup_removes_false_noop_speedup_from_cold_first_baseline():
+    from fannclean.timing import measure
+
+    cases = [
+        {"handle": f"h{i}", "group": f"g{i}", "filter": -1, "role": "development"} for i in range(4)
+    ]
+    previous, ordinal = {}, [0]
+
+    def execute(case, family, reader):
+        cold = previous.get(reader) != case["handle"]
+        previous[reader] = case["handle"]
+        ordinal[0] += 1
+        return {"request_ns": 400 if cold else 100, "query_ordinal": ordinal[0]}
+
+    records = measure(cases, lambda _: ["clone", "empty"], execute, 1, 2)
+    samples = [r for r in records if r["phase"] == "sample"]
+    assert any(r["case_warmup_ns"] == 400 for r in samples)
+    assert all(r["native_before_ns"] == r["native_after_ns"] == 100 for r in samples)
+    summary = summarize(records, draws=64)
+    assert summary["controls_pass"]
+    assert summary["families"]["clone"]["all"]["ratio"] == 1
 
 
 def test_final_is_single_attempt_with_private_oracles_only_after_freeze(stage, cases):

@@ -6,6 +6,7 @@ import math
 import os
 import secrets
 import uuid
+from contextlib import contextmanager
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
@@ -47,7 +48,7 @@ def write(path, value):
 @dataclass(frozen=True)
 class Limits:
     query_cap: int = 300000
-    final_reserve: int = 155000
+    final_reserve: int = 165000
     model_usd: str = "15"
     wall_seconds: int = 21600
     discovery_seconds: int = 14400
@@ -127,7 +128,7 @@ def prepare(root, cases, limits=None):
         )
     n, nt = len(private), sum(r["role"] == "test" for r in private)
     # Two independent native-bracketed timing blocks; test oracle only on test cases.
-    final_worst = 20 * n + 4 * nt + 512
+    final_worst = 22 * n + 4 * nt + 512
     if final_worst > limits.final_reserve:
         raise ValueError(f"final schedule needs {final_worst} reserved queries")
     root.mkdir(parents=True, exist_ok=False, mode=0o700)
@@ -209,8 +210,11 @@ def verify_initial(root):
 class Ledger:
     """Serialized worker: persist reservation before work and a debit before each query."""
 
-    def __init__(self, path, limits, run_id):
+    def __init__(self, path, limits, run_id, checkpoint_every=1):
         self.path, self.limits = Path(path), limits
+        if type(checkpoint_every) is not int or checkpoint_every < 1:
+            raise ValueError("positive progress checkpoint interval required")
+        self.checkpoint_every, self.pending = checkpoint_every, None
         if not self.path.exists():
             write(self.path, {"run_id": run_id, "charged": 0, "requests": {}})
         if read(self.path).get("run_id") != run_id:
@@ -245,18 +249,36 @@ class Ledger:
         write(self.path, s)
 
     def tick(self, identity, operation):
-        s = read(self.path)
+        s = self.pending if self.pending is not None else read(self.path)
         r = s["requests"][identity]
         if r["status"] != "open" or r["actual"] >= r["reserved"]:
             raise ValueError("request query envelope exhausted")
         r["actual"] += 1
         r["operations"][operation] = r["operations"].get(operation, 0) + 1
-        write(self.path, s)
+        self.pending = s
+        if r["actual"] % self.checkpoint_every == 0:
+            self.flush()
         return r["actual"]
+
+    def flush(self):
+        if self.pending is not None:
+            write(self.path, self.pending)
+            self.pending = None
+
+    @contextmanager
+    def checkpoint_on_exit(self):
+        # The entire request remains charged at its durable worst case until
+        # verified cleanup. A hard kill loses at most a progress checkpoint,
+        # never its reservation or the protection of the total query ceiling.
+        try:
+            yield
+        finally:
+            self.flush()
 
     def settle(self, identity, cleanup_verified):
         if not cleanup_verified:
             raise ValueError("do not release uncertain queries before verified cleanup")
+        self.flush()
         s = read(self.path)
         r = s["requests"][identity]
         if r["status"] != "open":
