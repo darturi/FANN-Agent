@@ -234,13 +234,23 @@ def test_packaging_neutralizes_prior_compiled_tables_and_copies_no_empirical_fil
     image = tmp_path / "runtime.sif"
     image.write_bytes(b"synthetic static image; never executed")
     root = tmp_path / "package"
-    task = package(root, input_cases, source, snapshot, image, "sha256:" + "a" * 64)
+    task = package(
+        root,
+        input_cases,
+        source,
+        snapshot,
+        image,
+        "sha256:" + "a" * 64,
+        database_user="fixture_admin",
+    )
+    assert read(root / "private/backend.json")["database_user"] == "fixture_admin"
     assert task["queries"]
     verify_package(root)
     verify_running_code(root)
     assert not (root / "host").exists()
     assert not (root / "private/query-ledger.json").exists()
     assert not (root / "private/comparison.json").exists()
+    software_tree(root / "private/engine", tmp_path / "twice-neutralized")
     assert sorted(p.name for p in (root / "agent/api").iterdir()) == ["broad_contract.py", "fit.py"]
     assert not (root / "agent/evidence/observations.jsonl").read_bytes()
     (root / "private/engine/src/compiled_v2.inc").write_text("tampered")

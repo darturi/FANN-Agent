@@ -1,0 +1,41 @@
+{
+  "status": "passed_synthetic_native_correctness",
+  "emulated_amd64_not_latency_qualification": true,
+  "provider_calls": 0,
+  "queries_charged": 868,
+  "captured_prefix_labels": 56,
+  "probe_results": {
+    "candidate:0": {
+      "cases": 14,
+      "stops": 12,
+      "faults": 0,
+      "exhaustions": 0
+    },
+    "candidate:1": {
+      "cases": 14,
+      "stops": 14,
+      "faults": 0,
+      "exhaustions": 0
+    },
+    "candidate:2": {
+      "cases": 14,
+      "stops": 0,
+      "faults": 14,
+      "exhaustions": 0
+    },
+    "candidate:3": {
+      "cases": 14,
+      "stops": 0,
+      "faults": 0,
+      "exhaustions": 14
+    }
+  },
+  "cleanup_verified": true,
+  "qualification_data_for_agent": false,
+  "known_zero_query_mount_failure_preserved": true,
+  "source_base_commit": "fa6b914",
+  "paid_model_experiment_started": false,
+  "original_graph_qualification": "pending_on_Torch",
+  "raw_evidence": "/Users/danielarturi/Developer/JinyangLiWork/trials/fannagent-benchmark-evaluation-v1/reviews-small/torch-clean-start-v4/qualification-v1",
+  "regression_tests_passed": 84
+}

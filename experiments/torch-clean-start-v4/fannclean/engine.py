@@ -6,7 +6,6 @@ from pathlib import Path
 from fannagent.api.broad_policy import FEATURES, validate
 
 from .core import Ledger, Limits, canonical, digest, read, write
-from .timing import measure, summarize
 
 
 def empty():
@@ -149,6 +148,8 @@ class Engine:
         ) + blocks * len(conditions) * (3 + 2 * len(policies))
 
     def process(self, identity, payload):
+        from .timing import measure, summarize
+
         cases, worst = self.validate_request(payload)
         final = payload["kind"] == "final"
         frozen = self.root / "private/final-freeze.json"

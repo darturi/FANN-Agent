@@ -280,3 +280,27 @@ def test_transport_returns_known_rejection_without_polling_or_retry(stage, tmp_p
     client.call = call
     assert client.action({"kind": "acquire"})["status"] == "rejected"
     assert calls == ["submit"]
+
+
+def test_torch_transport_keeps_pinned_host_alias_and_strict_verification(tmp_path):
+    import json
+    from types import SimpleNamespace
+
+    commands = []
+
+    def invoke(command, **kwargs):
+        commands.append(command)
+        return SimpleNamespace(returncode=0, stdout=json.dumps({"status": "not_started"}))
+
+    client = Client(
+        "/private/stage",
+        tmp_path / "mailbox",
+        host="user@10.0.0.1",
+        known_hosts=tmp_path / "known_hosts",
+        host_key_alias="login.torch.hpc.nyu.edu",
+        control_path="/tmp/verified-socket",
+        invoke=invoke,
+    )
+    assert client.status()["status"] == "not_started"
+    assert "HostKeyAlias=login.torch.hpc.nyu.edu" in commands[0]
+    assert "StrictHostKeyChecking=yes" in commands[0]

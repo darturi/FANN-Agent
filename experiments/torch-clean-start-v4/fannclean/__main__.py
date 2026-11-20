@@ -20,6 +20,7 @@ def main():
     prep.add_argument("--runtime-image", type=Path, required=True)
     prep.add_argument("--research-image", required=True)
     prep.add_argument("--limits", type=Path)
+    prep.add_argument("--database-user")
     for name in ("run-agent", "finalize", "status"):
         q = sub.add_parser(name)
         q.add_argument(
@@ -32,6 +33,7 @@ def main():
         q.add_argument("--ssh-host")
         q.add_argument("--known-hosts", type=Path)
         q.add_argument("--control-path", type=Path)
+        q.add_argument("--host-key-alias")
         if name == "finalize":
             q.add_argument("--oracle-full", type=Path, required=True)
             q.add_argument("--oracle-test", type=Path, required=True)
@@ -45,6 +47,7 @@ def main():
             a.runtime_image,
             a.research_image,
             Limits(**read(a.limits)) if a.limits else Limits(),
+            database_user=a.database_user,
         )
         print(
             json.dumps(
@@ -65,6 +68,7 @@ def main():
         host=a.ssh_host,
         known_hosts=a.known_hosts,
         control_path=a.control_path,
+        host_key_alias=a.host_key_alias,
     )
     if a.command == "status":
         answer = client.status()

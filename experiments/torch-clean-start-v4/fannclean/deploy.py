@@ -56,12 +56,14 @@ def software_tree(source, target):
         r" && !FannbenchV3ArmDeclared\(arm\)\)"
     )
     text, n = re.subn(pattern, "(arm != 10 && !FannbenchV3ArmDeclared(arm))", text)
-    if n != 1:
+    if n != 1 and text.count("(arm != 10 && !FannbenchV3ArmDeclared(arm))") != 1:
         raise ValueError("legacy-arm isolation patch did not match exactly")
     p.write_text(text)
 
 
-def package(root, cases, engine_source, snapshot, image, research_image, limits=None):
+def package(
+    root, cases, engine_source, snapshot, image, research_image, limits=None, *, database_user=None
+):
     """Offline preparation only. No Docker, database, provider or scheduler invocation."""
     root, snapshot, image = Path(root), Path(snapshot).resolve(), Path(image).resolve()
     root = root.resolve()
@@ -103,6 +105,8 @@ def package(root, cases, engine_source, snapshot, image, research_image, limits=
         "database": "torch_reviews",
         "pg_ctl": "/opt/postgresql/bin/pg_ctl",
     }
+    if database_user:
+        backend["database_user"] = database_user
     write(root / "private/backend.json", backend)
     write(
         root / "deployment.json",
@@ -208,7 +212,8 @@ class ContainerExecutor:
             "--bind",
             f"{root / 'code'}:/code:ro",
             "--env",
-            "PYTHONPATH=/code/experiments/torch-clean-start-v4:/code/src:/code/experiments/filtered-ann-protocol-v3",
+            "PYTHONPATH=/code/experiments/torch-clean-start-v4:/code/src:"
+            "/code/experiments/filtered-ann-protocol-v3:/opt/torch-reviews/vendor",
             "--env",
             "PYTHONDONTWRITEBYTECODE=1",
             "--env",

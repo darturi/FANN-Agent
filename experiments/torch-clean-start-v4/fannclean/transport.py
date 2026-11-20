@@ -13,7 +13,15 @@ from .core import canonical, digest, read, write
 
 class Client:
     def __init__(
-        self, root, output, *, host=None, known_hosts=None, control_path=None, invoke=subprocess.run
+        self,
+        root,
+        output,
+        *,
+        host=None,
+        known_hosts=None,
+        control_path=None,
+        host_key_alias=None,
+        invoke=subprocess.run,
     ):
         self.root, self.output, self.host, self.invoke = str(root), Path(output), host, invoke
         self.options = []
@@ -32,6 +40,8 @@ class Client:
             ]
             if control_path:
                 self.options += ["-S", str(control_path)]
+            if host_key_alias:
+                self.options += ["-o", "HostKeyAlias=" + host_key_alias]
         self.output.mkdir(parents=True, exist_ok=True)
 
     def call(self, operation, identity=None, payload=None):

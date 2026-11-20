@@ -136,6 +136,7 @@ class Postgres:
 
     def __enter__(self):
         from psycopg import connect
+        from psycopg.conninfo import make_conninfo
 
         config = read(self.root / "private/backend.json")
         self.config = config
@@ -150,6 +151,9 @@ class Postgres:
             raise ValueError("snapshot must be a stopped, regular-file-only static database")
         shutil.copytree(snapshot, self.pgdata)
         os.chmod(self.pgdata, 0o700)
+        # The disposable server has no TCP listener. Its socket lives inside this
+        # user's private request directory; the source snapshot is never edited.
+        (self.pgdata / "pg_hba.conf").write_text("local all all trust\n")
         socket = self.work / "socket"
         socket.mkdir()
         self.pg_ctl = config.get("pg_ctl", "/opt/postgresql/bin/pg_ctl")
@@ -178,7 +182,12 @@ class Postgres:
                 capture_output=True,
             )
             self.started = True
-            self.dsn = f"host={socket} port=55432 dbname={config.get('database', 'torch_reviews')}"
+            self.dsn = make_conninfo(
+                host=str(socket),
+                port=55432,
+                dbname=config.get("database", "torch_reviews"),
+                user=config.get("database_user"),
+            )
             self.keeper = self.stack.enter_context(connect(self.dsn, autocommit=True))
             tables = self.keeper.execute(
                 "SELECT schemaname,tablename FROM pg_tables "
