@@ -427,3 +427,43 @@ def test_final_checks_entire_cohorts_with_bounded_independent_prefix_panels(tmp_
     assert len([r for r in samples if r["family"] == "oracle_test"]) == 2 * 140
     ledger = read(root / "private/query-ledger.json")
     assert ledger["charged"] <= read(root / "config.json")["final_worst"]
+
+
+def test_stale_control_file_reads_reopen_without_retrying_other_failures(tmp_path, monkeypatch):
+    import errno
+    from pathlib import Path
+
+    from fannclean import core
+
+    p = tmp_path / "heartbeat.json"
+    write(p, {"run_id": "fresh", "epoch": 11})
+    original = Path.read_text
+    attempts = []
+    delays = []
+
+    def transient(path, *args, **kwargs):
+        attempts.append(path)
+        if len(attempts) < 4:
+            raise OSError(errno.ESTALE, "synthetic atomic replacement")
+        return original(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "read_text", transient)
+    monkeypatch.setattr(core.time, "sleep", delays.append)
+    assert core.read(p) == {"run_id": "fresh", "epoch": 11}
+    assert len(attempts) == 4 and delays == [0.01, 0.03, 0.1]
+
+    def permanent(*args, **kwargs):
+        raise OSError(errno.ESTALE, "persistent shared filesystem fault")
+
+    monkeypatch.setattr(Path, "read_text", permanent)
+    with pytest.raises(OSError, match="persistent"):
+        core.read(p)
+    assert len(delays) == 8
+
+    def denied(*args, **kwargs):
+        raise PermissionError(errno.EACCES, "denied")
+
+    monkeypatch.setattr(Path, "read_text", denied)
+    with pytest.raises(PermissionError):
+        core.read(p)
+    assert len(delays) == 8

@@ -1,10 +1,12 @@
 """Strict static task inputs, empty initial workspaces and durable query budgets."""
 
+import errno
 import hashlib
 import json
 import math
 import os
 import secrets
+import time
 import uuid
 from contextlib import contextmanager
 from dataclasses import asdict, dataclass
@@ -31,7 +33,16 @@ def sha(path):
 
 
 def read(path):
-    return json.loads(Path(path).read_text())
+    # Atomic replacement on a shared filesystem can invalidate an already-open
+    # inode. Reopen only this idempotent read; never retry a native/API operation.
+    delays = (0.01, 0.03, 0.1, 0.3, 1.0)
+    for attempt in range(len(delays) + 1):
+        try:
+            return json.loads(Path(path).read_text())
+        except OSError as error:
+            if error.errno != errno.ESTALE or attempt == len(delays):
+                raise
+            time.sleep(delays[attempt])
 
 
 def write(path, value):

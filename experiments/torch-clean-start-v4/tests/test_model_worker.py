@@ -304,3 +304,24 @@ def test_torch_transport_keeps_pinned_host_alias_and_strict_verification(tmp_pat
     assert client.status()["status"] == "not_started"
     assert "HostKeyAlias=login.torch.hpc.nyu.edu" in commands[0]
     assert "StrictHostKeyChecking=yes" in commands[0]
+
+
+def test_worker_reports_control_io_failure_instead_of_false_deadline(stage, monkeypatch):
+    import errno
+
+    authorize(stage)
+    original = worker.read
+
+    def broken_heartbeat(path):
+        if path.name == "heartbeat.json":
+            raise OSError(errno.ESTALE, "persistent control read fault")
+        return original(path)
+
+    monkeypatch.setattr(worker, "read", broken_heartbeat)
+    with pytest.raises(OSError, match="control read"):
+        worker.serve(stage, executor=lambda *a: pytest.fail("no native dispatch"), clock=lambda: 0)
+    state = original(stage / "private/worker.json")
+    assert state["status"] == "stopped_worker_error"
+    assert state["error_type"] == "OSError"
+    assert state["native_or_api_retry"] is False
+    assert not (stage / "private/query-ledger.json").exists()

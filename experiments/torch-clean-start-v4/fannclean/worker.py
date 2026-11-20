@@ -177,10 +177,12 @@ def serve(root, *, executor=None, clock=time.time, sleep=time.sleep):
             waiting = sorted((root / "private/queue").glob("*/ready"))
             if not waiting:
                 heartbeat = root / "private/heartbeat.json"
-                active = (
-                    heartbeat.exists()
-                    and read(heartbeat).get("run_id") == state["run_id"]
-                    and clock() - read(heartbeat)["epoch"] < 900
+                try:
+                    current_heartbeat = read(heartbeat)
+                except FileNotFoundError:
+                    current_heartbeat = {}
+                active = current_heartbeat.get("run_id") == state["run_id"] and (
+                    clock() - current_heartbeat["epoch"] < 900
                 )
                 if clock() - last > 900 and not active:
                     state["status"] = "stopped_idle"
@@ -225,6 +227,14 @@ def serve(root, *, executor=None, clock=time.time, sleep=time.sleep):
                 state["status"] = "stopped_action_failure"
                 break
             last = clock()
+    except BaseException as error:
+        state.update(
+            status="stopped_worker_error",
+            error_type=type(error).__name__,
+            error=str(error),
+            native_or_api_retry=False,
+        )
+        raise
     finally:
         if state["status"] == "running":
             state["status"] = "stopped_deadline"

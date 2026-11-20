@@ -1,11 +1,16 @@
 # Clean-start policy discovery v4
 
-Status: native correctness and research-container isolation qualified locally;
-original-graph timing requalification is pending. **No Opus experiment has been
-run.** Two real-graph timing attempts rejected a multi-step cache-settling bias
-before any paid model call. All qualification attempts and costs are retained.
-The seeded v3 live workflow remains disabled and its historical results remain
-unchanged.
+Status: native correctness, sandbox isolation and original-graph timing controls
+passed. The first clean-start Opus episode failed on a shared-filesystem stale
+handle during a heartbeat read, after 16 model calls, $1.228968 and 518 native/exact
+queries. It evaluated no candidate and produced no learned policy or final
+comparison. All requests settled and the model closed. The failed episode remains
+preserved; no automatic replacement or conversation resume is authorized.
+
+Control-file reads now reopen on bounded ESTALE retries; native operations,
+provider requests and uncertain deliveries are never retried. Heartbeat state is
+read once per loop. Persistent worker exceptions receive their own error status
+instead of being mislabeled as deadlines.
 
 This controller uses `claude-opus-5-5`, adaptive thinking, high effort, and up to
 16,000 output tokens per request (including reasoning). It discovers one ordinary
