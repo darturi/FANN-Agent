@@ -2,7 +2,7 @@
 
 Updated: November 19, 2026, America/New_York. Saved work reviewed through the
 methodological correction, retirement of the seeded v3 workflow, and clean-start v4
-implementation (no new experiment). This is the entry
+qualification and the first failed clean-start episode. This is the entry
 point for the saved JinyangLiWork experiment history, including unsuccessful runs. Artifact
 paths are relative to this document and require the sibling workspace folders;
 cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data.
@@ -11,7 +11,8 @@ cloning FANN-Agent alone does not download `trials/`, `harness/` or the raw data
 development measurements from earlier oracle runs. It is invalid for the
 intended clean-start discovery experiment, and claims about discovery from that
 starting condition are withdrawn. The raw seeded-run record remains preserved.
-Its live workflow is retired; no replacement has been run. See the
+Its live workflow is retired. The first clean replacement episode failed before
+candidate evaluation; it produced no replacement performance result. See the
 [erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md).
 
 - [Complete saved-run catalog](RUN_CATALOG.md): individual attempts, failures,
@@ -23,10 +24,11 @@ Its live workflow is retired; no replacement has been run. See the
 - [Backup audit](BACKUP_AUDIT.md): verified local integrity, missing artifacts,
   remote-check results and outstanding backup coverage.
 
-The refreshed inventory contains 2,058 saved evidence records and 15 experiments
+The refreshed inventory contains 2,082 saved evidence records and 15 experiments
 registered inside saved agent journals. Locations include definitions, receipts,
 repeated blocks, analyses, packages and synthetic checks; they are not a count of
-independent scientific experiments. The 455 discovered archives include source,
+independent scientific experiments. It now discovers 467 archives. The most recent
+full archive hash audit covered 455 source,
 runtime, engineering and result archives, totaling 23,552,337,387 bytes. All 193
 with usable checksum sidecars match; 262 have no usable earlier sidecar. The
 October 21 inventory had 292 records and 207 archives. The increased record count
@@ -56,7 +58,7 @@ criteria below retain their original conclusions.
 | Earlier hindsight oracles | Count-preserving oracle and subsequent three-level v2 comparison completed on both cohorts. All intended-cohort recall gates pass; strict per-condition timing equivalence is not established. Preserve their separate quality gates and allocations. | [Count-preserving oracle](../../experiments/full-workload-oracle-v1/README.md), [three-level comparison](../../experiments/oracle-variants-v1/results/REPORT.md) |
 | Broader-language feasible oracle | Completed job 23719580 after preserved cancellation and failed qualification. One ordinary v3 policy per cohort saves a descriptive 64.95% on 1,925 test cases and 68.39% on 7,000 full-workload cases, versus 21.37% / 19.80% for the prior v2 policies rerun alongside it. Zero intended-cohort recall losses; timing controls fail the strict equivalence requirement. | [Verified comparison](../../experiments/broad-oracle-v1/results/REPORT.md), [accounting](../../experiments/broad-oracle-v1/results/accounting.json), [completed resume](../../experiments/broad-oracle-v1/RESUMED.json) |
 | V3 agent controller and discovery | **Invalid for intended clean-start discovery; live workflow retired.** Jobs 23741092 / 23747524 started with measurements inherited from earlier oracle runs. The latency/quality record is retained as a seeded-development run, and clean-start discovery claims are withdrawn. No compliant replacement result exists. The Opus model preference does not fix the acquisition defect. | [Methodological erratum](../../experiments/torch-live-feedback-v3/METHODOLOGY-ERRATUM.md), [historical measurements](../../experiments/torch-live-feedback-v3/results/comparison-v1/REPORT.md), [original discovery receipt](../../experiments/torch-live-feedback-v3/results/agent-discovery.json) |
-| Clean-start v4 replacement | **Implemented; offline unit verification only. No experiment run.** Opus 5.5 starts with static task inputs and generic software, acquires and pays for its own development evidence, explores broad v3 programs, receives per-case feedback, and uses randomized controlled confirmation. Fresh initial seals, query/model ledgers, fixed clocks, stopping gates and a separate post-closure finalizer replace the seeded path. Native/container qualification and measured performance remain pending. | [Implementation and future execution recipe](../../experiments/torch-clean-start-v4/README.md), [offline verification](../../experiments/torch-clean-start-v4/checks/verification.json) |
+| Clean-start v4 replacement | **Native/container and original-graph timing qualified; first paid episode failed on shared-filesystem I/O before candidate evaluation.** Verified empty Opus 5.5 start; 16 calls, $1.228968 and 518 queries acquired 203 observations across three development vectors. No learned policy or latency comparison. Bounded stale-read recovery passed 91 regressions and a cross-node test with nine real stale handles. An empty replacement is prepared; a second paid episode requires approval. | [Native qualification](../../experiments/torch-clean-start-v4/checks/native-container-torch.json), [failed episode](../../experiments/torch-clean-start-v4/checks/first-episode-failure.json), [repair](../../experiments/torch-clean-start-v4/checks/metadata-read-recovery.json), [prepared replacement](../../experiments/torch-clean-start-v4/REPLACEMENT.md) |
 
 The returned M5 archive and independent scheduler accounting remain the evidence
 gate for the frozen development nominees. The completed oracle diagnostic does
@@ -71,6 +73,49 @@ the [November 5–16 log additions](#experiment-log-update--november-516-2026),
 and the [benchmark roadmap](../../../research/fannagent-benchmark-evaluation-roadmap-2026-11-10.md)
 for the longer narrative. Read dated later assessments when an older preparation
 paragraph or roadmap header still describes a pending stage.
+
+## Clean-start qualification and failed episode — November 19, 2026
+
+Native compilation, feature/state/fault/fuel parity, forced-prefix output checks,
+cleanup and the data-free research sandbox passed. Original-graph qualification
+caught a serious cache-order bias: fixed early native brackets made identical
+queries appear about 30% faster. A single warmup did not remove the multi-step
+settling effect. All failed blocks and their resource costs remain retained.
+
+The frozen correction uses adjacent randomized native/arm pairs on the same
+reader, randomized case/arm order, a 4 GiB PostgreSQL buffer pool and explicit
+read-only preparation of all 123,618 fixed index pages. Job 23795553 passed every
+overall and condition-level clone/empty equivalence gate. Overall ratios were
+0.99954 and 1.00023. These are qualification controls, not agent savings.
+Qualification and diagnostics consumed 55,132 ANN/exact attempts, including the
+868-query local native fixture.
+
+The fresh Opus 5.5 episode `d43d4d315df04a53a87af8f8dcd44568` had zero inherited
+observations, policies, scratch or messages. It acquired 203 prefix observations
+across three development vectors and all seven filters, using its own geometric
+pilot and a refined checkpoint schedule. Before any candidate evaluation, the
+worker hit `OSError: [Errno 116] Stale file handle` reading its atomically replaced
+heartbeat file. The old error path incorrectly labeled this a deadline. The
+closed episode cost $1.228968 over 16 settled model calls and 518 settled ANN/exact
+attempts. It produced no learned policy; no oracle artifact was opened or final
+comparison executed.
+
+Commit `a1fe405` adds bounded reopening of safe control-file reads, a single
+heartbeat snapshot and explicit worker-error classification. Native/provider
+operations and uncertain deliveries are never retried. All 91 regressions pass.
+A cross-node test completed 5,000 reads during 301 atomic replacements, recovering
+nine real stale handles plus three injected faults, with zero ANN/provider calls.
+The failed allocation has ended. Cumulative allocated time is 4,891 seconds;
+cumulative queries are 55,650. The job's completed scheduler state describes its
+supervisor exit, not a successful agent episode.
+
+A new UUID and sealed zero-evidence package are prepared under the remaining
+$13.771032, 244,350 queries and cumulative six-hour ceiling. No authorization,
+worker or second paid conversation has started. The original request specified
+one experiment, so the [concrete replacement plan](../../experiments/torch-clean-start-v4/REPLACEMENT.md)
+requires approval. Original seeded-v3 artifacts remain unchanged and invalid for
+clean-start discovery claims. The implementation-only entry below predates this
+qualification and failed episode.
 
 ## Clean-start workflow implementation — November 19, 2026
 

@@ -1,0 +1,13 @@
+{
+  "actual_stale": 9,
+  "completed_reads": 5000,
+  "injected_stale": 3,
+  "native_queries": 0,
+  "provider_calls": 0,
+  "read_attempts": 5012,
+  "source_commit": "a1fe405",
+  "status": "passed_concurrent_atomic_control_reads",
+  "versions_observed": 50,
+  "regression_tests_passed": 91,
+  "replacement_started": false
+}
